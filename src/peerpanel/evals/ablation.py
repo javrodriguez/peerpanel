@@ -17,8 +17,8 @@ import networkx as nx
 from pydantic import BaseModel
 
 from peerpanel.embeddings import store
-from peerpanel.embeddings.pipeline import ci_chunks
 from peerpanel.graph.build import load_graph
+from peerpanel.graph.pipeline import chunks_for, embedding_fixture_path
 from peerpanel.graph.summaries import CommunityReport
 from peerpanel.providers.base import EmbedProvider
 from peerpanel.retrieval import (
@@ -91,13 +91,13 @@ def _rungs(
     }
 
 
-def load_ci_artifacts(
-    root: Path,
+def load_artifacts(
+    root: Path, corpus: str = "ci"
 ) -> tuple[nx.Graph[str], dict[str, int], list[CommunityReport]]:
-    graph = load_graph(root / "artifacts" / "ci" / "graph.json")
-    communities = json.loads((root / "artifacts" / "ci" / "communities.json").read_text())
+    graph = load_graph(root / "artifacts" / corpus / "graph.json")
+    communities = json.loads((root / "artifacts" / corpus / "communities.json").read_text())
     assignment = {n: int(c) for n, c in communities["1.0"].items()}
-    summaries_path = root / "artifacts" / "ci" / "summaries.json"
+    summaries_path = root / "artifacts" / corpus / "summaries.json"
     reports = [
         CommunityReport.model_validate(r)
         for r in json.loads(summaries_path.read_text())
@@ -106,9 +106,11 @@ def load_ci_artifacts(
     return graph, assignment, reports
 
 
-def run_ablation(root: Path, embedder: EmbedProvider, k: int = K) -> AblationReport:
-    """Run every rung on every case over the CI corpus artifacts."""
-    manifest_rel = Path("corpus") / "ci.manifest.json"
+def run_ablation(
+    root: Path, embedder: EmbedProvider, k: int = K, corpus: str = "ci"
+) -> AblationReport:
+    """Run every rung on every case over one corpus's artifacts."""
+    manifest_rel = Path("corpus") / ("ci.manifest.json" if corpus == "ci" else "demo.manifest.json")
     all_cases: list[QueryCase] = build_cases(root, manifest_rel)
     from peerpanel.corpus.models import CorpusManifest
 
@@ -122,11 +124,11 @@ def run_ablation(root: Path, embedder: EmbedProvider, k: int = K) -> AblationRep
         for c in all_cases
         if not (set(c.excluded_docs) & corpus_pmcids)
     }
-    chunk_ids, vectors = store.load(root / "fixtures" / "ci_embeddings.npz")
-    chunks, _ = ci_chunks(root)
+    chunk_ids, vectors = store.load(embedding_fixture_path(root, corpus))
+    chunks = chunks_for(root, corpus)
     if [c.chunk_id for c in chunks] != chunk_ids:
         raise RuntimeError("embedding fixture is stale relative to the corpus chunking")
-    graph, assignment, reports = load_ci_artifacts(root)
+    graph, assignment, reports = load_artifacts(root, corpus)
     allowed = rates_allowed(cases)
     results: list[RungResult] = []
     for case in cases:

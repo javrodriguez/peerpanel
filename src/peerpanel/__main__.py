@@ -69,14 +69,22 @@ def _embeddings(args: list[str]) -> int:
     return 1
 
 
+def _corpus_arg(args: list[str]) -> str:
+    return args[args.index("--corpus") + 1] if "--corpus" in args else "ci"
+
+
 def _graph(args: list[str]) -> int:
     root = Path.cwd()
     sub = args[0] if args else "build"
+    corpus = _corpus_arg(args)
     if sub == "build":
-        from peerpanel.graph.pipeline import ci_graph_build
-        from peerpanel.providers import OllamaOpenAIChat
+        from peerpanel.graph.pipeline import graph_build, write_demo_embedding_fixture
+        from peerpanel.providers import OllamaNativeEmbed, OllamaOpenAIChat
 
-        result = ci_graph_build(root, OllamaOpenAIChat("llama3.1:8b"))
+        if corpus == "demo":
+            digest = write_demo_embedding_fixture(root, OllamaNativeEmbed())
+            print(f"demo embedding fixture written, sha256 {digest}")
+        result = graph_build(root, OllamaOpenAIChat("llama3.1:8b"), corpus=corpus)
         print(json.dumps(result, indent=1, sort_keys=True))
         truncated = result.get("truncated_chunks")
         if isinstance(truncated, int) and truncated:
@@ -87,10 +95,10 @@ def _graph(args: list[str]) -> int:
         from peerpanel.graph.summaries import summarise_communities
         from peerpanel.providers import OllamaOpenAIChat
 
-        graph = load_graph(root / "artifacts" / "ci" / "graph.json")
-        communities = json.loads((root / "artifacts" / "ci" / "communities.json").read_text())
+        graph = load_graph(root / "artifacts" / corpus / "graph.json")
+        communities = json.loads((root / "artifacts" / corpus / "communities.json").read_text())
         provider = OllamaOpenAIChat("llama3.1:8b")
-        cache = root / "fixtures" / "summaries" / "ci"
+        cache = root / "fixtures" / "summaries" / corpus
         all_reports: list[dict[str, object]] = []
         for resolution, assignment in communities.items():
             typed = {n: int(c) for n, c in assignment.items()}
@@ -99,7 +107,7 @@ def _graph(args: list[str]) -> int:
             )
             all_reports.extend(r.model_dump() for r in reports)
             print(f"resolution {resolution}: {len(reports)} community reports")
-        out = root / "artifacts" / "ci" / "summaries.json"
+        out = root / "artifacts" / corpus / "summaries.json"
         out.write_text(json.dumps(all_reports, indent=1, sort_keys=True) + "\n")
         truncated = sum(1 for r in all_reports if bool(r.get("truncated")))
         if truncated:
@@ -126,8 +134,9 @@ def main(argv: list[str] | None = None) -> int:
         from peerpanel.evals.ablation import render_table, run_ablation
         from peerpanel.providers import OllamaNativeEmbed
 
-        report = run_ablation(Path.cwd(), OllamaNativeEmbed())
-        out = Path.cwd() / "artifacts" / "ci" / "ablation.json"
+        corpus = _corpus_arg(rest)
+        report = run_ablation(Path.cwd(), OllamaNativeEmbed(), corpus=corpus)
+        out = Path.cwd() / "artifacts" / corpus / "ablation.json"
         out.write_text(report.model_dump_json(indent=1) + "\n")
         print(render_table(report))
         print(f"ablation: full report -> {out}")
