@@ -44,7 +44,9 @@ manuscripts to language models, and this system would do exactly that.
 - **Exclusion is exact for the graph, approximate for summary wording.** When a manuscript is
   reviewed, its published twin's chunks leave the index and the knowledge graph is *rebuilt* for
   that run with the twin's extractions withheld (a pure merge over cached extractions plus seeded
-  Leiden — measured at ~0.15 s, so the exact thing is affordable). Chunk-level retrieval and
+  Leiden — measured at ~0.2 s, so the exact thing is affordable). On the CI corpus that removes
+  131 entities and additionally strips twin-contributed weight from 38 edges joining entities
+  that both survive — the part node-filtering cannot reach. Chunk-level retrieval and
   `graphrag-local` therefore carry no residue at all. Community summary *text*, however, is a
   model artifact generated once over the whole corpus, so `graphrag-global` — which ranks over
   that text — can still be influenced by a document it may not retrieve. Regenerating summaries

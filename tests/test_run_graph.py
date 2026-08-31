@@ -29,9 +29,10 @@ class TestRunGraphRebuild:
         assert withheld > 0
         assert graph.number_of_nodes() > 0
         assert assignment
-        # A pure merge over cached extractions plus seeded Leiden — the claim that
-        # per-run exclusion is affordable rests on this staying small.
-        assert elapsed < 30
+        # A pure merge over cached extractions plus seeded Leiden, measured at ~0.2s.
+        # The bound is loose enough never to flake on a slow runner and tight enough
+        # to fail loudly if a model call is ever reintroduced into this path.
+        assert elapsed < 5
 
     def test_rebuild_removes_twin_only_entities_and_their_edges(self) -> None:
         full, _fa, withheld_none = build_run_graph(ROOT, "ci", set())
@@ -39,11 +40,28 @@ class TestRunGraphRebuild:
         assert withheld_none == 0
         assert withheld > 0
         assert run.number_of_nodes() < full.number_of_nodes()
-        # The part post-hoc node filtering cannot reach: edges lose the weight the
-        # excluded text contributed, so more edges go than nodes alone would explain.
-        assert full.number_of_edges() - run.number_of_edges() > (
-            full.number_of_nodes() - run.number_of_nodes()
+        assert full.number_of_nodes() - run.number_of_nodes() == 131
+        assert full.number_of_edges() - run.number_of_edges() == 1247
+
+    def test_rebuild_strips_twin_weight_from_surviving_edges(self) -> None:
+        """The part post-hoc node filtering structurally cannot reach.
+
+        These 38 edges join two entities that BOTH legitimately survive; the
+        excluded text had inflated the weight of the link between them. Filtering
+        nodes leaves that inflation in place — only a rebuild removes it.
+        """
+        full, _a, _w = build_run_graph(ROOT, "ci", set())
+        run, _b, _w2 = build_run_graph(ROOT, "ci", {TWIN})
+        lighter = [
+            (a, b)
+            for a, b in run.edges()
+            if run.edges[a, b]["weight"] < full.edges[a, b]["weight"]
+        ]
+        assert len(lighter) == 38
+        removed = sum(
+            full.edges[a, b]["weight"] - run.edges[a, b]["weight"] for a, b in lighter
         )
+        assert round(removed, 2) == 21.25
 
     def test_rebuild_agrees_with_live_nodes_on_which_entities_survive(self) -> None:
         """Two independent mechanisms, one answer — a contract-drift check."""
