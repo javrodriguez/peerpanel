@@ -21,7 +21,9 @@ FOCUS = (
     "replication, quantification, whether stated methods support the stated conclusions"
 )
 
-_METHODS_HEADING = re.compile(r"^\s*(methods|materials and methods|experimental)", re.IGNORECASE | re.MULTILINE)
+_METHODS_HEADING = re.compile(
+    r"^\s*(methods|materials and methods|experimental)", re.IGNORECASE | re.MULTILINE
+)
 
 
 def methods_queries(manuscript_text: str, title: str) -> list[str]:
