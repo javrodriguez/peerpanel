@@ -83,11 +83,29 @@ def _graph(args: list[str]) -> int:
             print(f"graph build: {truncated} chunk(s) recorded as truncated", file=sys.stderr)
         return 0
     if sub == "summaries":
-        print(
-            "peerpanel graph summaries: not built yet — it lands at checkpoint C2/T2.3.",
-            file=sys.stderr,
-        )
-        return 3
+        from peerpanel.graph.build import load_graph
+        from peerpanel.graph.summaries import summarise_communities
+        from peerpanel.providers import OllamaOpenAIChat
+
+        graph = load_graph(root / "artifacts" / "ci" / "graph.json")
+        communities = json.loads((root / "artifacts" / "ci" / "communities.json").read_text())
+        provider = OllamaOpenAIChat("llama3.1:8b")
+        cache = root / "fixtures" / "summaries" / "ci"
+        all_reports: list[dict[str, object]] = []
+        for resolution, assignment in communities.items():
+            typed = {n: int(c) for n, c in assignment.items()}
+            reports = summarise_communities(
+                graph, typed, float(resolution), provider, cache_dir=cache
+            )
+            all_reports.extend(r.model_dump() for r in reports)
+            print(f"resolution {resolution}: {len(reports)} community reports")
+        out = root / "artifacts" / "ci" / "summaries.json"
+        out.write_text(json.dumps(all_reports, indent=1, sort_keys=True) + "\n")
+        truncated = sum(1 for r in all_reports if bool(r.get("truncated")))
+        if truncated:
+            print(f"graph summaries: {truncated} report(s) truncated", file=sys.stderr)
+        print(f"graph summaries: {len(all_reports)} reports -> {out}")
+        return 0
     print(f"graph: unknown subcommand {sub!r} (build | summaries)", file=sys.stderr)
     return 2
 
@@ -104,6 +122,16 @@ def main(argv: list[str] | None = None) -> int:
         return _embeddings(rest)
     if command == "graph":
         return _graph(rest)
+    if command == "ablation":
+        from peerpanel.evals.ablation import render_table, run_ablation
+        from peerpanel.providers import OllamaNativeEmbed
+
+        report = run_ablation(Path.cwd(), OllamaNativeEmbed())
+        out = Path.cwd() / "artifacts" / "ci" / "ablation.json"
+        out.write_text(report.model_dump_json(indent=1) + "\n")
+        print(render_table(report))
+        print(f"ablation: full report -> {out}")
+        return 0
     if command not in PLANNED:
         print(f"peerpanel: unknown command {command!r}", file=sys.stderr)
         return 2
