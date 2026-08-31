@@ -26,12 +26,17 @@ def _sha8(text: str) -> str:
 
 
 def chunk_document(
-    doc_id: str, text: str, *, target_words: int = 300, overlap_paras: int = 1
+    doc_id: str, text: str, *, target_words: int = 900, overlap_paras: int = 1
 ) -> list[Chunk]:
     """Pack paragraphs into ~target_words windows, overlapping by whole paragraphs.
 
     Deterministic for identical input; chunk ids carry a content hash so any
     text drift is visible in every downstream artifact.
+
+    The 900-word default (~1200 tokens) is a measured cost decision, not taste:
+    graph extraction pays one LLM call per chunk, and one chunking is shared by
+    extraction, embeddings and retrieval so entity->chunk->vector joins stay on
+    one id space (DECISIONS.md D7 has the arithmetic).
     """
     paras = [p.strip() for p in _PARA_SPLIT.split(text) if p.strip()]
     chunks: list[Chunk] = []

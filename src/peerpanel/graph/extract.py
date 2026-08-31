@@ -28,7 +28,7 @@ from peerpanel.text.chunks import Chunk
 
 from .models import ENTITY_TYPES, ChunkExtraction, Entity, Relation
 
-PROMPT_VERSION = 2  # v2: entity/relation caps in the prompt
+PROMPT_VERSION = 3  # v3: caps enforced in the SCHEMA (maxItems), not just asked
 
 MAX_ENTITIES = 12
 MAX_RELATIONS = 12
@@ -50,6 +50,7 @@ EXTRACTION_SCHEMA: dict[str, Any] = {
     "properties": {
         "entities": {
             "type": "array",
+            "maxItems": MAX_ENTITIES,  # enforced by constrained decoding, not just asked
             "items": {
                 "type": "object",
                 "properties": {
@@ -61,6 +62,7 @@ EXTRACTION_SCHEMA: dict[str, Any] = {
         },
         "relations": {
             "type": "array",
+            "maxItems": MAX_RELATIONS,
             "items": {
                 "type": "object",
                 "properties": {
