@@ -1,0 +1,22 @@
+# The private evaluator record — never part of this repo (it holds its own nested git repo)
+gauntlet/
+
+# Fetched demo-scale corpus documents (pinned by corpus/demo.manifest.json; fetch with `make corpus`)
+corpus/demo/
+
+# Derived indexes and run artifacts (regenerate with `make graph` / `make summaries`)
+artifacts/
+
+# Secrets — never committed anywhere
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+dist/
+build/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/

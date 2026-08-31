@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.14"
+      - name: Install
+        run: uv sync --dev
+      - name: Lint
+        run: uv run ruff check src tests
+      - name: Types
+        run: uv run mypy
+      - name: Tests (deterministic — no network, no Ollama; live layers are
+              proven by captured real runs, see README)
+        run: uv run pytest -m "not network and not ollama"
