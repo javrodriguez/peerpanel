@@ -6,8 +6,8 @@
 # Full reproduction of the demo scale, in order:
 #   make corpus && make demo-index && make demo-summaries && make ablation && make demo
 
-.PHONY: quickstart demo demo-replay demo-index demo-summaries corpus embeddings \
-        graph summaries ablation eval review test lint
+.PHONY: quickstart demo demo-replay demo-index demo-summaries corpus corpus-verify \
+        embeddings query-embeddings graph summaries ablation ablation-demo eval review test lint
 
 ## --- Tier 1: deterministic, from committed bytes ---
 
@@ -52,9 +52,18 @@ demo-index:
 demo-summaries:
 	uv run python -m peerpanel graph summaries --corpus demo --resolution 1.0
 
-## The retrieval ablation ladder over the demo corpus.
+## The retrieval ablation ladder — CI corpus, from committed bytes, no model needed.
 ablation:
+	uv run python -m peerpanel ablation --corpus ci
+
+## The same ladder at demo scale (needs the fetched demo corpus).
+ablation-demo:
 	uv run python -m peerpanel ablation --corpus demo
+
+## Regenerate the committed query-embedding fixture against the live embedder.
+query-embeddings:
+	uv run python -m peerpanel ablation --corpus ci --live
+	uv run python -m peerpanel ablation --corpus demo --live
 
 ## Review one manuscript with the full panel (MANUSCRIPT=<stem>).
 MANUSCRIPT ?= met17-auxotroph

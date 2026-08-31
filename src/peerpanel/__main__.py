@@ -146,14 +146,28 @@ def main(argv: list[str] | None = None) -> int:
     if command == "graph":
         return _graph(rest)
     if command == "ablation":
+        from peerpanel.embeddings.query_cache import CachedQueryEmbedder
         from peerpanel.evals.ablation import render_table, run_ablation
-        from peerpanel.providers import OllamaNativeEmbed
 
         corpus = _corpus_arg(rest)
-        report = run_ablation(Path.cwd(), OllamaNativeEmbed(), corpus=corpus)
-        out = Path.cwd() / "artifacts" / corpus / "ablation.json"
+        # Committed query vectors by default, so this runs from a clean clone with
+        # no model; --live regenerates them against the real embedder.
+        live = None
+        if "--live" in rest:
+            from peerpanel.providers import OllamaNativeEmbed
+
+            live = OllamaNativeEmbed()
+        embedder = CachedQueryEmbedder(Path.cwd(), live=live)
+        report = run_ablation(Path.cwd(), embedder, corpus=corpus)
+        if live is not None:
+            digest = embedder.save(live.name)
+            print(f"query-embedding fixture written, sha256 {digest}")
+        # results/ is TRACKED: a measurement nobody can see is not published.
+        out = Path.cwd() / "results" / f"ablation-{corpus}.json"
+        out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(report.model_dump_json(indent=1) + "\n")
-        print(render_table(report))
+        table = render_table(report)
+        print(table)
         print(f"ablation: full report -> {out}")
         return 0
     if command == "demo":
@@ -180,7 +194,8 @@ def main(argv: list[str] | None = None) -> int:
             baseline_provider=OllamaOpenAIChat("llama3.1:8b"),
             corpus=corpus,
         )
-        out = Path.cwd() / "artifacts" / corpus / "planted_eval.json"
+        out = Path.cwd() / "results" / f"planted-eval-{corpus}.json"
+        out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(planted_report.model_dump_json(indent=1) + "\n")
         print(render_planted(planted_report))
         print(f"eval: full report -> {out}")

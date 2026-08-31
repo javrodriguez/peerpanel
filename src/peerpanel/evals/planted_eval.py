@@ -13,11 +13,13 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
+from peerpanel.corpus.models import CorpusManifest
 from peerpanel.embeddings import store
 from peerpanel.evals.baseline import run_baseline
 from peerpanel.evals.planted import detect, plant_errors
 from peerpanel.graph.pipeline import chunks_for, embedding_fixture_path
 from peerpanel.manuscripts.store import read_manuscript
+from peerpanel.manuscripts.twins import load_twins
 from peerpanel.orchestration.panel import PanelProviders, run_panel
 from peerpanel.providers import OllamaNativeEmbed
 from peerpanel.providers.base import ChatProvider
@@ -31,10 +33,13 @@ class SystemResult(BaseModel):
     total_tokens: int
     wall_s: float
     detail: str
+    excluded_docs: list[str]  # what this arm's index withheld
+    dropped_chunks: int  # and how many chunks that actually removed
 
 
 class PlantedEvalReport(BaseModel):
     manuscript: str
+    twin_in_corpus: bool  # was there anything to exclude at all?
     n_errors: int
     error_kinds: dict[str, str]  # error_id -> kind
     results: list[SystemResult]
@@ -42,11 +47,12 @@ class PlantedEvalReport(BaseModel):
 
 
 NOTE = (
-    "Errors are planted in a manuscript held out of the retrieval corpus, so no "
-    "unperturbed original is retrievable. Detection requires a finding to NAME the "
-    "planted token, which under-credits a described-but-unquoted catch — read the "
-    "numbers as a floor. Both systems ran on the same corpus, the same retrieval "
-    "budget and approximately the same token spend."
+    "Both arms search the SAME index with the SAME exclusions: the manuscript's own "
+    "published twin is withheld from both, because a twin states every planted fact "
+    "correctly and whichever arm could retrieve it would be handed the answer key. "
+    "Detection requires a finding to NAME the planted token, which under-credits a "
+    "described-but-unquoted catch — read the numbers as a floor. Both arms ran on the "
+    "same retrieval budget and approximately the same token spend."
 )
 
 
@@ -58,6 +64,9 @@ def run_planted_eval(
     corpus: str = "demo",
 ) -> PlantedEvalReport:
     header, body = read_manuscript(manuscript_path)
+    excluded = load_twins(root / "manuscripts" / "twins.json").excluded_pmcids(
+        header.preprint_doi
+    )
     planted = plant_errors(body, manuscript_path.name)
     planted_path = root / "artifacts" / corpus / f"planted-{manuscript_path.stem}.json"
     planted_path.parent.mkdir(parents=True, exist_ok=True)
@@ -82,7 +91,19 @@ def run_planted_eval(
 
     chunks = chunks_for(root, corpus)
     _chunk_ids, vectors = store.load(embedding_fixture_path(root, corpus))
-    index = Index.build(chunks, vectors.astype("float32"))
+    # The baseline MUST withhold exactly what the panel withheld. Handing one arm the
+    # manuscript's published twin — which states every planted fact correctly — would
+    # not be an equal-compute comparison, it would be an answer key.
+    index = Index.build(chunks, vectors.astype("float32"), exclude_docs=excluded)
+    manifest_rel = "ci.manifest.json" if corpus == "ci" else "demo.manifest.json"
+    twin_present = bool(
+        excluded & CorpusManifest.load(root / "corpus" / manifest_rel).pmcids()
+    )
+    if twin_present and not index.dropped_chunk_count:
+        raise RuntimeError(
+            f"{header.preprint_doi}: the baseline index withheld nothing while the twin "
+            "is a corpus member — the arms would not be comparable"
+        )
     chunk_texts = {c.chunk_id: c.text for c in chunks}
     # The baseline gets the strong non-graph rung (RRF hybrid) — the graph is the
     # panel's advantage to demonstrate, not a handicap to impose on the baseline.
@@ -103,7 +124,9 @@ def run_planted_eval(
     )
     baseline_wall = time.monotonic() - t1
 
-    def _result(name: str, texts: list[str], tokens: int, wall: float, detail: str) -> SystemResult:
+    def _result(
+        name: str, texts: list[str], tokens: int, wall: float, detail: str, dropped: int
+    ) -> SystemResult:
         hit = [e.error_id for e in planted.errors if detect(e, texts)]
         return SystemResult(
             system=name,
@@ -112,10 +135,13 @@ def run_planted_eval(
             total_tokens=tokens,
             wall_s=round(wall, 1),
             detail=detail,
+            excluded_docs=sorted(excluded),
+            dropped_chunks=dropped,
         )
 
     return PlantedEvalReport(
         manuscript=manuscript_path.name,
+        twin_in_corpus=twin_present,
         n_errors=len(planted.errors),
         error_kinds={e.error_id: e.kind for e in planted.errors},
         results=[
@@ -123,10 +149,12 @@ def run_planted_eval(
                 "panel", panel_texts, review.total_tokens, panel_wall,
                 f"{len(review.reviewer_outputs)} reviewers · {len(review.verdicts)} claims "
                 f"verified · {len(review.deterministic_findings)} deterministic findings",
+                index.dropped_chunk_count,
             ),
             _result(
                 "single-agent-equal-compute", baseline.finding_texts, baseline.total_tokens,
                 baseline_wall, f"{baseline.samples} self-consistency samples",
+                index.dropped_chunk_count,
             ),
         ],
         note=NOTE,
@@ -134,8 +162,14 @@ def run_planted_eval(
 
 
 def render_table(report: PlantedEvalReport) -> str:
+    exclusion = (
+        f"twin withheld from both arms ({report.results[0].dropped_chunks} chunks)"
+        if report.twin_in_corpus
+        else "subject held out of the corpus entirely — nothing to withhold"
+    )
     lines = [
         f"Planted-error detection · {report.manuscript} · {report.n_errors} errors",
+        f"  exclusion: {exclusion}",
         "",
         f"  {'system':28s} {'detected':>10s} {'tokens':>9s} {'wall_s':>8s}  detail",
     ]

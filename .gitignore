@@ -4,7 +4,10 @@ gauntlet/
 # Fetched demo-scale corpus documents (pinned by corpus/demo.manifest.json; fetch with `make corpus`)
 corpus/demo/
 
-# Derived indexes and run artifacts (regenerate with `make graph` / `make summaries`)
+# Derived indexes and run artifacts — bulky and regenerable from the committed
+# extraction/summary caches. The MEASUREMENTS they produce are NOT ignored:
+# they live in results/, which is tracked, because a number nobody can see is
+# not a published result.
 artifacts/
 
 # Secrets — never committed anywhere

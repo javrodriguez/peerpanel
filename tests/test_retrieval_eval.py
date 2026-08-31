@@ -16,9 +16,11 @@ from peerpanel.evals import (
     rates_allowed,
     recall_at_k,
 )
+from peerpanel.manuscripts.twins import load_twins
 from peerpanel.retrieval.base import RetrievalHit
 
 ROOT = Path(__file__).resolve().parents[1]
+TWINS = load_twins(ROOT / "manuscripts" / "twins.json").twins
 
 
 def _hits(*chunk_ids: str) -> list[RetrievalHit]:
@@ -67,12 +69,18 @@ class TestRealCases:
         assert len(cases) == 3
         by_doi = {c.preprint_doi: c for c in cases}
         met17 = by_doi["10.1101/2023.05.18.541364"]
-        # The twin is corpus/ci's showcase pin, and it IS cited-adjacent —
-        # the exclusion must have removed it from the relevant set.
+        # The twin is corpus/ci's showcase pin: it must be named as excluded and it
+        # must not appear among the documents the case counts as relevant.
         assert "PMC10729969" in met17.excluded_docs
         assert "PMC10729969" not in met17.relevant_docs
         for case in cases:
-            assert case.excluded_docs, "empty exclusion is the vacuous state (N3)"
+            # `case.excluded_docs` cannot be empty — excluded_pmcids() RAISES on an
+            # unknown DOI rather than returning an empty set — so asserting it is
+            # non-empty proves nothing. What is falsifiable, and what matters, is
+            # that the exclusion names this manuscript's own twin and no other's.
+            twin = {t.pmcid for t in TWINS if t.preprint_doi == case.preprint_doi}
+            assert set(case.excluded_docs) == twin
+            assert not set(case.excluded_docs) & set(case.relevant_docs)
             assert case.query.startswith(
                 ("When is an auxotroph", "Fission yeast", "Acidification by nitrogen")
             )

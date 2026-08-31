@@ -1,0 +1,15 @@
+{
+ "cached_before": 0,
+ "chunks": 948,
+ "communities_per_resolution": {
+  "0.3": 49,
+  "1.0": 66,
+  "3.0": 103
+ },
+ "corpus": "demo",
+ "edges": 55146,
+ "extraction_wall_s": 22991.4,
+ "nodes": 6722,
+ "provider": "ollama-openai:llama3.1:8b",
+ "truncated_chunks": 0
+}

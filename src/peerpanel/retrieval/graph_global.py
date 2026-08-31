@@ -5,9 +5,16 @@ Two faces, honestly separated:
   query, expand the top communities to their members' chunks (Index-filtered).
   This is what the ablation ladder scores.
 - answer(): the LLM face — map-reduce over the top-ranked reports (rank
-  deterministically, reduce with the model), used by the prior-work reviewer.
-  Honest miniaturization of Microsoft's all-report LLM map, and documented as
-  such where it is claimed.
+  deterministically, reduce with the model). Honest miniaturization of
+  Microsoft's all-report LLM map.
+
+  NOT WIRED INTO THE PANEL, deliberately. The novelty reviewer uses search(),
+  which returns chunks the index has already filtered. answer() instead passes
+  community report TEXT to a model, and reports are generated once over the
+  whole corpus — so on a run with exclusions it would feed the reviewer prose
+  derived from the very document being withheld. It therefore refuses to run
+  when the index excludes anything, rather than leaving that trap for whoever
+  wires it next.
 """
 
 from __future__ import annotations
@@ -80,6 +87,13 @@ class GraphGlobalRetriever:
     def answer(
         self, query: str, provider: ChatProvider, top: int = TOP_COMMUNITIES
     ) -> GlobalAnswer:
+        if self._index.excluded_docs:
+            raise RuntimeError(
+                "graph-global answer() reads community report text, which is generated "
+                "once over the whole corpus and can therefore describe an excluded "
+                f"document ({sorted(self._index.excluded_docs)}). Use search(), which "
+                "returns index-filtered chunks, or regenerate reports for this run."
+            )
         ranked = [r for r, s in self.ranked_reports(query)[:top] if s > 0]
         if not ranked:
             return GlobalAnswer(answer="No relevant communities found.", community_ids=[])

@@ -70,3 +70,16 @@ So the exact thing is affordable and the approximation was never needed: `build_
 `live_nodes()` is kept as a second line of defence and as a cross-check: a test asserts the two mechanisms agree exactly on which entities survive.
 **The residual is now narrow and accurately priced:** community summary TEXT is an LLM artifact generated once over the full corpus, so `graph-global`, which ranks over that text, is the one mode where an excluded document can still influence wording. Everything chunk-level and `graph-local` carry no residual at all.
 Note also what the non-empty-exclusion assertion does and does not prove: it shows the exclusion SET is non-empty, not that anything was removed. The assertion is now `dropped_chunk_count > 0` — by this repo's own D6 argument, an assertion that passes when the mechanism is a no-op is an untested mechanism wearing a passing test.
+
+## D11 — The same failure shape, three times: assertions that pass on a no-op
+Three separate defects in this build shared one shape — a check that could not fail when the thing it guarded stopped working.
+(1) The self-exclusion law was asserted as "the exclusion SET is non-empty", which passes when exclusion removes nothing; now `dropped_chunk_count > 0`.
+(2) That strengthened assertion immediately earned its keep by catching a real defect of its own: the planted-error subject is held out by construction, so nothing drops, and the check had to learn the difference between *nothing to exclude* and *exclusion failed*.
+(3) Worst of the three, found by a peer session's reviewer: no test imported `run_ablation`, `run_panel` or `run_planted_eval` at all, so every exclusion guard in the orchestration layer could be deleted with a green suite — demonstrated by mutation (five guards disabled, 252 passed → 252 passed, identical).
+The standing rule this leaves: **an invariant is only defended where a test drives the real entry point.** Toy-fixture sweeps and data-membership pins are worth having, but they do not defend orchestration, and a suite that stays green through a mutation of the mechanism is measuring something other than the mechanism.
+
+## D12 — Both evaluation arms must withhold the same documents
+The planted-error evaluation built the panel's index with exclusions and the baseline's without.
+Latent rather than active — the shipped subject's twin is not a corpus member — but the published NOTE claimed "no unperturbed original is retrievable", which was false for both in-scope manuscripts, and D8 schedules exactly the corpus change that would have made the default case contaminated.
+Measured on the committed demo corpus before the fix: the baseline's top three chunks for MET17 were the manuscript's own published twin (scores 64.7 / 46.1 / 45.0), which states every planted fact correctly — the answer key, handed to one arm only.
+Both arms now build from the same twin lookup, the run refuses if the subject's twin is a corpus member and the baseline index dropped nothing, and each arm's exclusion state is recorded in the report rather than described in prose.

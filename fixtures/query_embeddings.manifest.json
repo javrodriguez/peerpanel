@@ -1,0 +1,8 @@
+{
+ "provider": "ollama-native-embed:nomic-embed-text",
+ "n_queries": 2,
+ "dim": 768,
+ "dtype": "float16",
+ "sha256": "3fb4d17444adca16f8c90eaf804022c116639677134ce07f20cb4113b7458baf",
+ "regenerate": "make query-embeddings"
+}

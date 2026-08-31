@@ -49,8 +49,16 @@ manuscripts to language models, and this system would do exactly that.
   that both survive — the part node-filtering cannot reach. Chunk-level retrieval and
   `graphrag-local` therefore carry no residue at all. Community summary *text*, however, is a
   model artifact generated once over the whole corpus, so `graphrag-global` — which ranks over
-  that text — can still be influenced by a document it may not retrieve. Regenerating summaries
-  per run would cost roughly an hour of local model time per manuscript, and is not done.
+  that text — can still be influenced by a document it may not retrieve. **Measured, not
+  hand-waved:** on the MET17 run the top community scores 286.5 with the real reports and 272.6
+  once entity names evidenced only by the excluded twin are scrubbed — roughly 5% inflation from
+  names alone, and a floor, since the summary prose stays contaminated either way. The concrete
+  case is sharper than the number: that report reads *"The genes MET17 and HSU1 play crucial
+  roles…"*, and HSU1 appears in this corpus only in the excluded twin — it is the manuscript's own
+  finding, reaching the ranking through a summary. Regenerating summaries per run would cost
+  roughly an hour of local model time per manuscript and is not done; the LLM face of global
+  search (`answer()`, which would put that prose in front of a reviewer) instead refuses to run
+  when anything is excluded.
 - **A stale corpus, deliberately.** The corpus is a pinned snapshot with per-document md5s, not a
   live search. The demo therefore re-runs identically next year and cannot see anything published
   after the snapshot. That trade is the point: reproducible verdicts over current ones.

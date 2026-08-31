@@ -9,6 +9,7 @@ from .retrieval_eval import (
     per_item_hits,
     rates_allowed,
     recall_at_k,
+    recall_ceiling_at_k,
 )
 
 __all__ = [
@@ -20,4 +21,5 @@ __all__ = [
     "per_item_hits",
     "rates_allowed",
     "recall_at_k",
+    "recall_ceiling_at_k",
 ]

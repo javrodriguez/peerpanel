@@ -40,6 +40,7 @@ from .retrieval_eval import (
     per_item_hits,
     rates_allowed,
     recall_at_k,
+    recall_ceiling_at_k,
 )
 
 K = 10
@@ -55,6 +56,7 @@ class RungResult(BaseModel):
     latency_ms: float
     hits: list[tuple[str, int | None]]  # (relevant doc, rank or None)
     recall_at_k: float | None
+    recall_ceiling_at_k: float | None  # the best recall@k achievable for this case
     ndcg_at_k: float | None
 
 
@@ -95,16 +97,45 @@ def _rungs(
 def load_artifacts(
     root: Path, corpus: str = "ci"
 ) -> tuple[nx.Graph[str], dict[str, int], list[CommunityReport]]:
-    graph = load_graph(root / "artifacts" / corpus / "graph.json")
-    communities = json.loads((root / "artifacts" / corpus / "communities.json").read_text())
-    assignment = {n: int(c) for n, c in communities["1.0"].items()}
+    """Graph, community assignment and reports for a corpus.
+
+    Derived artifacts under `artifacts/` are gitignored because they are bulky
+    and regenerable, so a clean clone has none of them. Everything they contain
+    is reconstructed here from the COMMITTED caches — the same road quickstart
+    takes — which is what lets a stranger reproduce every retrieval number with
+    no model and no prior run.
+    """
+    graph_path = root / "artifacts" / corpus / "graph.json"
+    communities_path = root / "artifacts" / corpus / "communities.json"
+    if graph_path.exists() and communities_path.exists():
+        graph = load_graph(graph_path)
+        assignment = {n: int(c) for n, c in json.loads(communities_path.read_text())["1.0"].items()}
+    else:
+        graph, assignment, _withheld = build_run_graph(root, corpus, set())
     summaries_path = root / "artifacts" / corpus / "summaries.json"
+    if summaries_path.exists():
+        raw = json.loads(summaries_path.read_text())
+    else:
+        raw = _reports_from_cache(root, corpus, graph, assignment)
     reports = [
         CommunityReport.model_validate(r)
-        for r in json.loads(summaries_path.read_text())
+        for r in raw
         if float(r.get("resolution", 0)) == 1.0
     ]
     return graph, assignment, reports
+
+
+def _reports_from_cache(
+    root: Path, corpus: str, graph: nx.Graph[str], assignment: dict[str, int]
+) -> list[dict[str, object]]:
+    """Community reports from the committed summary cache — never a model call."""
+    from peerpanel.graph.run_graph import _CacheOnly
+    from peerpanel.graph.summaries import summarise_communities
+
+    reports = summarise_communities(
+        graph, assignment, 1.0, _CacheOnly(), cache_dir=root / "fixtures" / "summaries" / corpus
+    )
+    return [r.model_dump() for r in reports]
 
 
 def run_ablation(
@@ -154,6 +185,9 @@ def run_ablation(
                     latency_ms=round(latency_ms, 1),
                     hits=per_item_hits(ranking, relevant, k=k * 3),
                     recall_at_k=round(recall_at_k(ranking, relevant, k), 4) if allowed else None,
+                    recall_ceiling_at_k=(
+                        round(recall_ceiling_at_k(relevant, k), 4) if allowed else None
+                    ),
                     ndcg_at_k=round(ndcg_at_k(ranking, relevant, k), 4) if allowed else None,
                 )
             )
@@ -174,7 +208,7 @@ def render_table(report: AblationReport) -> str:
         f"Ablation over {report.corpus_manifest} · {report.n_cases} cases · "
         f"aggregate relevant {report.aggregate_relevant} · "
         + (
-            f"recall@{report.k}/NDCG@{report.k} reported"
+            f"recall@{report.k} (shown against its achievable ceiling) / NDCG@{report.k}"
             if report.rates_reported
             else "below the N>=20 gate — per-item hits only, no rates"
         )
@@ -191,7 +225,12 @@ def render_table(report: AblationReport) -> str:
         line = f"  {rung_name:16s} hits {found}/{total} · p_mean latency {latency:7.1f}ms"
         if report.rates_reported:
             recall = sum(row.recall_at_k or 0 for row in rows) / len(rows)
+            ceiling = sum(row.recall_ceiling_at_k or 0 for row in rows) / len(rows)
             ndcg = sum(row.ndcg_at_k or 0 for row in rows) / len(rows)
-            line += f" · recall@{report.k} {recall:.3f} · ndcg@{report.k} {ndcg:.3f}"
+            share = recall / ceiling if ceiling else 0.0
+            line += (
+                f" · recall@{report.k} {recall:.3f}/{ceiling:.3f} ceiling ({share:.0%}) "
+                f"· ndcg@{report.k} {ndcg:.3f}"
+            )
         lines.append(line)
     return "\n".join(lines)

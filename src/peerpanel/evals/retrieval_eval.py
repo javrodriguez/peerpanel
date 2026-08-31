@@ -44,6 +44,11 @@ def build_cases(root: Path, corpus_manifest: Path) -> list[QueryCase]:
         if entry is None:
             raise KeyError(f"no ground truth recorded for {header.preprint_doi}")
         excluded = twins.excluded_pmcids(header.preprint_doi)
+        # `- excluded` is defence-in-depth, not a load-bearing guard: a paper does
+        # not cite its own published form, so this subtracts nothing today (verified
+        # against ground_truth.json for all three twins). It stays so that a future
+        # ground-truth source that DOES include self-citations cannot silently put a
+        # manuscript's own twin into its relevant set.
         relevant = (set(entry["cited_pmcids"]) & corpus_pmcids) - excluded
         query = f"{header.title}. " + " ".join(body.split()[:QUERY_BODY_WORDS])
         cases.append(
@@ -78,6 +83,21 @@ def recall_at_k(ranking: list[str], relevant: set[str], k: int) -> float:
     if not relevant:
         return 0.0
     return len(set(ranking[:k]) & relevant) / len(relevant)
+
+
+def recall_ceiling_at_k(relevant: set[str], k: int) -> float:
+    """The best recall@k any system could achieve here.
+
+    A top-k list cannot contain more than k documents, so with |relevant| > k
+    recall@k is capped at k/|relevant| — 0.357 with 28 relevant documents and
+    k=10. Reporting a raw recall@k against that ceiling reads as mediocre
+    performance when it may be perfect, so every recall figure ships beside
+    its ceiling. NDCG@k needs no such caveat: its ideal-DCG denominator is
+    already computed over min(k, |relevant|).
+    """
+    if not relevant:
+        return 0.0
+    return min(k, len(relevant)) / len(relevant)
 
 
 def ndcg_at_k(ranking: list[str], relevant: set[str], k: int) -> float:

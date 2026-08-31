@@ -5,6 +5,7 @@ can be violated, not just where it is expected to hold)."""
 from __future__ import annotations
 
 import numpy as np
+import pytest
 from numpy.typing import NDArray
 
 from peerpanel.graph.build import build_graph
@@ -16,6 +17,7 @@ from peerpanel.retrieval import (
     GraphGlobalRetriever,
     GraphLocalRetriever,
     Index,
+    RetrievalHit,
     VectorRetriever,
     rrf,
 )
@@ -79,11 +81,28 @@ def _assignment() -> dict[str, int]:
     return {"met4": 0, "sulfur metabolism": 0, "rna sequencing": 1}
 
 
+class _RrfHybrid:
+    """The fused rung as the ablation actually runs it — an absolute swept over
+    'every mode' has to include the mode built by combining two others."""
+
+    name = "rrf-hybrid"
+
+    def __init__(self, index: Index) -> None:
+        self._bm25 = BM25Retriever(index)
+        self._vector = VectorRetriever(index, _StubEmbed([1.0, 0.0, 0.0]))
+
+    def search(self, query: str, k: int = 10) -> list[RetrievalHit]:
+        return rrf(
+            [self._bm25.search(query, k=k * 2), self._vector.search(query, k=k * 2)], k=k
+        )
+
+
 def _all_modes(index: Index) -> list[object]:
     graph = _graph()
     return [
         BM25Retriever(index),
         VectorRetriever(index, _StubEmbed([1.0, 0.0, 0.0])),
+        _RrfHybrid(index),
         GraphLocalRetriever(index, graph, embedder=None),  # type: ignore[arg-type]
         GraphGlobalRetriever(index, graph, _reports(), _assignment()),  # type: ignore[arg-type]
     ]
@@ -148,9 +167,19 @@ class _StubChat:
 
 
 class TestGlobalAnswer:
-    def test_answer_cites_communities(self) -> None:
-        index = Index.build(CHUNKS, exclude_docs={"docTwin"})
+    def test_answer_cites_communities_when_nothing_is_excluded(self) -> None:
+        index = Index.build(CHUNKS)  # no exclusions: report text is safe to read
         retriever = GraphGlobalRetriever(index, _graph(), _reports(), _assignment())  # type: ignore[arg-type]
         out = retriever.answer("how are sulfur pathways regulated", _StubChat())
         assert out.community_ids == [0]
         assert "Met4" in out.answer
+
+    def test_answer_refuses_to_read_report_text_on_an_excluded_run(self) -> None:
+        """Community reports are written once over the whole corpus, so their text
+        can describe a document this run is withholding. search() is index-filtered
+        and stays available; answer() refuses rather than leaking through prose."""
+        index = Index.build(CHUNKS, exclude_docs={"docTwin"})
+        retriever = GraphGlobalRetriever(index, _graph(), _reports(), _assignment())  # type: ignore[arg-type]
+        with pytest.raises(RuntimeError, match="docTwin"):
+            retriever.answer("how are sulfur pathways regulated", _StubChat())
+        assert retriever.search("Met4 sulfur metabolism", k=5)  # the safe face still works

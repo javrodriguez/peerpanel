@@ -1,0 +1,58 @@
+{
+ "corpus_manifest": "corpus/ci.manifest.json",
+ "n_cases": 1,
+ "skipped_cases": {
+  "10.1101/2024.06.19.598224": "twin not a member of this corpus — no valid run",
+  "10.1101/2025.05.04.652101": "twin not a member of this corpus — no valid run"
+ },
+ "aggregate_relevant": 0,
+ "rates_reported": false,
+ "k": 10,
+ "results": [
+  {
+   "rung": "bm25",
+   "case_doi": "10.1101/2023.05.18.541364",
+   "latency_ms": 5.1,
+   "hits": [],
+   "recall_at_k": null,
+   "recall_ceiling_at_k": null,
+   "ndcg_at_k": null
+  },
+  {
+   "rung": "vector",
+   "case_doi": "10.1101/2023.05.18.541364",
+   "latency_ms": 0.2,
+   "hits": [],
+   "recall_at_k": null,
+   "recall_ceiling_at_k": null,
+   "ndcg_at_k": null
+  },
+  {
+   "rung": "rrf-hybrid",
+   "case_doi": "10.1101/2023.05.18.541364",
+   "latency_ms": 4.1,
+   "hits": [],
+   "recall_at_k": null,
+   "recall_ceiling_at_k": null,
+   "ndcg_at_k": null
+  },
+  {
+   "rung": "graphrag-local",
+   "case_doi": "10.1101/2023.05.18.541364",
+   "latency_ms": 749.1,
+   "hits": [],
+   "recall_at_k": null,
+   "recall_ceiling_at_k": null,
+   "ndcg_at_k": null
+  },
+  {
+   "rung": "graphrag-global",
+   "case_doi": "10.1101/2023.05.18.541364",
+   "latency_ms": 2.3,
+   "hits": [],
+   "recall_at_k": null,
+   "recall_ceiling_at_k": null,
+   "ndcg_at_k": null
+  }
+ ]
+}
