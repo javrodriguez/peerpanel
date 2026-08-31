@@ -73,7 +73,7 @@ class TestDemoCandidates:
 class TestDemoManifest:
     """Pins on the committed demo manifest (D8 scope: MET17 + biopolymer)."""
 
-    RUN_TWINS = {"PMC10729969", "PMC12628781"}
+    RUN_TWINS = frozenset({"PMC10729969", "PMC12628781"})
     DEFERRED_TWIN = "PMC11918387"
 
     def _manifest(self) -> CorpusManifest:
