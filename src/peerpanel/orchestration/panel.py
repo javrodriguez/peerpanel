@@ -38,6 +38,7 @@ from peerpanel.agents.schemas import (
 from peerpanel.embeddings import store
 from peerpanel.evals.ablation import load_artifacts
 from peerpanel.graph.pipeline import chunks_for, embedding_fixture_path
+from peerpanel.graph.run_graph import build_run_graph
 from peerpanel.manuscripts.store import read_manuscript
 from peerpanel.manuscripts.twins import load_twins
 from peerpanel.providers.base import ChatProvider, TokenLedger
@@ -148,14 +149,24 @@ def run_panel(
     if [c.chunk_id for c in chunks] != chunk_ids:
         raise RuntimeError("embedding fixture stale relative to the corpus chunking")
     index = Index.build(chunks, vectors.astype("float32"), exclude_docs=excluded)
-    if not index.excluded_docs:
+    if not index.dropped_chunk_count:
+        # A non-empty exclusion SET proves nothing; this proves the mechanism removed
+        # something. An assertion that passes when exclusion is a no-op is an untested
+        # mechanism wearing a passing test.
         raise RuntimeError(
-            f"empty exclusion set for {header.preprint_doi} — no valid run (N3/D8)"
+            f"exclusion removed no chunks for {header.preprint_doi} — no valid run (N3/D8)"
         )
-    graph, assignment, reports = load_artifacts(root, corpus)
+    # The graph is REBUILT with the excluded document's extractions withheld (exact,
+    # ~0.1s) rather than filtered after the fact — that removes the edge weight the
+    # excluded text contributed, which filtering cannot reach (DECISIONS D10).
+    graph, _run_assignment, _withheld = build_run_graph(root, corpus, excluded)
+    # Community REPORTS are keyed to the full-corpus partition, so global search
+    # keeps that assignment for report lookup while expanding membership through
+    # the per-run graph — a node the rebuild removed cannot be expanded into.
+    _full_graph, full_assignment, reports = load_artifacts(root, corpus)
     chunk_texts = {c.chunk_id: c.text for c in chunks}
     local = GraphLocalRetriever(index, graph, embedder=None)
-    global_ = GraphGlobalRetriever(index, graph, reports, assignment)
+    global_ = GraphGlobalRetriever(index, graph, reports, full_assignment)
 
     with ThreadPoolExecutor(max_workers=2) as pool:  # blind, parallel
         methods_future = pool.submit(

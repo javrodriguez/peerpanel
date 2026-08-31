@@ -41,12 +41,14 @@ manuscripts to language models, and this system would do exactly that.
   ground truth exist at all — and it means retrieval numbers are measured on a corpus that was
   constructed to contain the answers. Read them as a comparison *between rungs*, never as an
   estimate of real-world retrieval difficulty.
-- **Exclusion is not a per-run graph rebuild.** When a manuscript is reviewed, its published
-  twin's chunks are dropped from the index and every entity evidenced *only* by that twin is
-  removed from the graph for that run. What survives is the edge weight the excluded text
-  contributed to entities that are *also* evidenced elsewhere. Removing that residue would mean
-  rebuilding the knowledge graph once per manuscript (6.4 hours at demo scale), so it is carried
-  and stated instead.
+- **Exclusion is exact for the graph, approximate for summary wording.** When a manuscript is
+  reviewed, its published twin's chunks leave the index and the knowledge graph is *rebuilt* for
+  that run with the twin's extractions withheld (a pure merge over cached extractions plus seeded
+  Leiden — measured at ~0.15 s, so the exact thing is affordable). Chunk-level retrieval and
+  `graphrag-local` therefore carry no residue at all. Community summary *text*, however, is a
+  model artifact generated once over the whole corpus, so `graphrag-global` — which ranks over
+  that text — can still be influenced by a document it may not retrieve. Regenerating summaries
+  per run would cost roughly an hour of local model time per manuscript, and is not done.
 - **A stale corpus, deliberately.** The corpus is a pinned snapshot with per-document md5s, not a
   live search. The demo therefore re-runs identically next year and cannot see anything published
   after the snapshot. That trade is the point: reproducible verdicts over current ones.

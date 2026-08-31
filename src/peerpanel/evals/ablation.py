@@ -19,6 +19,7 @@ from pydantic import BaseModel
 from peerpanel.embeddings import store
 from peerpanel.graph.build import load_graph
 from peerpanel.graph.pipeline import chunks_for, embedding_fixture_path
+from peerpanel.graph.run_graph import build_run_graph
 from peerpanel.graph.summaries import CommunityReport
 from peerpanel.providers.base import EmbedProvider
 from peerpanel.retrieval import (
@@ -128,13 +129,18 @@ def run_ablation(
     chunks = chunks_for(root, corpus)
     if [c.chunk_id for c in chunks] != chunk_ids:
         raise RuntimeError("embedding fixture is stale relative to the corpus chunking")
-    graph, assignment, reports = load_artifacts(root, corpus)
+    _full_graph, assignment, reports = load_artifacts(root, corpus)
     allowed = rates_allowed(cases)
     results: list[RungResult] = []
     for case in cases:
         index = Index.build(chunks, vectors.astype("float32"), exclude_docs=set(case.excluded_docs))
-        if not index.excluded_docs:
-            raise RuntimeError(f"empty exclusion set for {case.preprint_doi} (N3 law)")
+        if not index.dropped_chunk_count:
+            raise RuntimeError(f"exclusion removed no chunks for {case.preprint_doi} (N3 law)")
+        # Exact per-run graph: the excluded document's extractions are withheld from
+        # the merge, so its edge-weight contribution disappears too (D10).
+        graph, _run_assignment, _withheld = build_run_graph(
+            root, corpus, set(case.excluded_docs)
+        )
         relevant = set(case.relevant_docs)
         for rung_name, search in _rungs(index, graph, reports, assignment, embedder).items():
             t0 = time.monotonic()
