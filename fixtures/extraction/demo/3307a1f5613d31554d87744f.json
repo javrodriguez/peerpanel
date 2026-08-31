@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13515494:3:eda472d1",
+ "entities": [
+  {
+   "name": "extraction procedure",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "samples",
+   "type": "chemical"
+  },
+  {
+   "name": "standards",
+   "type": "chemical"
+  },
+  {
+   "name": "norvaline internal standard solution",
+   "type": "chemical"
+  },
+  {
+   "name": "sonicated wine sample",
+   "type": "chemical"
+  },
+  {
+   "name": "Amino acids",
+   "type": "chemical"
+  },
+  {
+   "name": "solid-phase extraction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sorbent tip",
+   "type": "chemical"
+  },
+  {
+   "name": "1-propanol/H2O washing solution",
+   "type": "chemical"
+  },
+  {
+   "name": "aqueous NaOH solution",
+   "type": "chemical"
+  },
+  {
+   "name": "1-propanol/3-picoline solution",
+   "type": "chemical"
+  },
+  {
+   "name": "Agilent 6890 gas chromatograph",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "samples"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "standards"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "norvaline internal standard solution"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "sonicated wine sample"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "Amino acids"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "solid-phase extraction"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "sorbent tip"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "1-propanol/H2O washing solution"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "aqueous NaOH solution"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "1-propanol/3-picoline solution"
+  },
+  {
+   "source": "extraction procedure",
+   "predicate": "involved",
+   "target": "Agilent 6890 gas chromatograph"
+  }
+ ],
+ "truncated": false
+}

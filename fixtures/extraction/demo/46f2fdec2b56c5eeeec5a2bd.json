@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514516:18:bd7994bc",
+ "entities": [
+  {
+   "name": "COR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SDH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VMA5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PICST_79236",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NUO20",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "COX4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NBM8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UQC2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "COX10",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PICST_90638",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATP16",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

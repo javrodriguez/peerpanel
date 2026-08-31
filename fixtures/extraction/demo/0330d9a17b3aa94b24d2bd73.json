@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC6912988:2:2c1b75ce",
+ "entities": [
+  {
+   "name": "StringTie2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "StringTie",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Scallop",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FLAIR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ToFU",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TAPIS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SQANTI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TranscriptClean",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Traphlor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PacBio Iso-Seq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ONT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Illumina RNA-seq",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "StringTie2",
+   "predicate": "more accurate than",
+   "target": "Scallop"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "faster than",
+   "target": "FLAIR"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "uses less memory than",
+   "target": "FLAIR"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "has higher sensitivity than",
+   "target": "Scallop"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "has higher precision than",
+   "target": "Scallop"
+  }
+ ],
+ "truncated": false
+}

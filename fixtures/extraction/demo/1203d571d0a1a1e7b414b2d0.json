@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13453879:7:3a0b1597",
+ "entities": [
+  {
+   "name": "RPT-A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RPT-B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RPT-C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Aw",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "volatile compound classes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "aliphatics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "aldehydes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "alcohols",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ketones",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "aromatics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "terpenoids",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Eurotium cristatum",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

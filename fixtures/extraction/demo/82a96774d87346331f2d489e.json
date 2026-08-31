@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC12278674:2:cfacf5b3",
+ "entities": [
+  {
+   "name": "ROS",
+   "type": "chemical"
+  },
+  {
+   "name": "H2O2",
+   "type": "chemical"
+  },
+  {
+   "name": "O2−",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen peroxide",
+   "type": "chemical"
+  },
+  {
+   "name": "superoxide",
+   "type": "chemical"
+  },
+  {
+   "name": "protein cysteine thiols",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfenylation",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathionylation",
+   "type": "chemical"
+  },
+  {
+   "name": "disulfide bonds",
+   "type": "chemical"
+  },
+  {
+   "name": "ATP–citrate lyase",
+   "type": "chemical"
+  },
+  {
+   "name": "acetyl-CoA carboxylase",
+   "type": "chemical"
+  },
+  {
+   "name": "AMPK",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "protein cysteine thiols",
+   "predicate": "oxidize",
+   "target": "sulfenylation"
+  },
+  {
+   "source": "protein cysteine thiols",
+   "predicate": "oxidize",
+   "target": "glutathionylation"
+  },
+  {
+   "source": "protein cysteine thiols",
+   "predicate": "oxidize",
+   "target": "disulfide bonds"
+  }
+ ],
+ "truncated": false
+}

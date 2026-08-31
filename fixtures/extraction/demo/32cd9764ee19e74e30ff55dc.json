@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC7382830:3:5b1c8237",
+ "entities": [
+  {
+   "name": "Sankey diagrams",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Escherichia coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "ALEdb",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ALE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Transcription units",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "operons",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "COGs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pathways",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "regulon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DAG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mutation set",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mutation information",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Transcription units",
+   "predicate": "regulate",
+   "target": "operons"
+  },
+  {
+   "source": "ALEdb",
+   "predicate": "provide",
+   "target": "mutation information"
+  }
+ ],
+ "truncated": false
+}

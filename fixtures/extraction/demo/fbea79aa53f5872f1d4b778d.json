@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC7470746:19:762ac86a",
+ "entities": [
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "GS-SG",
+   "type": "chemical"
+  },
+  {
+   "name": "gsh1−",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met10−",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lys−",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OD600",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "flow cytometry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WY2509",
+   "type": "organism"
+  },
+  {
+   "name": "WY1604",
+   "type": "organism"
+  },
+  {
+   "name": "WY1335",
+   "type": "organism"
+  },
+  {
+   "name": "WY2429",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "gsh1−",
+   "predicate": "increases_with",
+   "target": "GSH"
+  },
+  {
+   "source": "gsh1−",
+   "predicate": "increases_with",
+   "target": "GS-SG"
+  },
+  {
+   "source": "met10−",
+   "predicate": "can_use",
+   "target": "GSH"
+  },
+  {
+   "source": "met10−",
+   "predicate": "can_use",
+   "target": "GS-SG"
+  },
+  {
+   "source": "lys−",
+   "predicate": "has_concentration",
+   "target": "GSH"
+  },
+  {
+   "source": "lys−",
+   "predicate": "has_concentration",
+   "target": "GS-SG"
+  },
+  {
+   "source": "lys−",
+   "predicate": "has_release_rate",
+   "target": "GSH"
+  }
+ ],
+ "truncated": false
+}

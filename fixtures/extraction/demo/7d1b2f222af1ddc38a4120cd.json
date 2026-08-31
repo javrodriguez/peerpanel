@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC11974387:7:2a296411",
+ "entities": [
+  {
+   "name": "cytoplasmic acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "PDC-negative strains",
+   "type": "organism"
+  },
+  {
+   "name": "Threonine aldolase",
+   "type": "chemical"
+  },
+  {
+   "name": "glycine",
+   "type": "chemical"
+  },
+  {
+   "name": "acetaldehyde",
+   "type": "chemical"
+  },
+  {
+   "name": "pyruvate",
+   "type": "chemical"
+  },
+  {
+   "name": "Pfl",
+   "type": "chemical"
+  },
+  {
+   "name": "formate",
+   "type": "chemical"
+  },
+  {
+   "name": "Cit1",
+   "type": "chemical"
+  },
+  {
+   "name": "Ach1",
+   "type": "chemical"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "PO/PTA pathway",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cytoplasmic acetyl-CoA",
+   "predicate": "is produced by",
+   "target": "Threonine aldolase"
+  },
+  {
+   "source": "cytoplasmic acetyl-CoA",
+   "predicate": "is produced by",
+   "target": "Pfl"
+  },
+  {
+   "source": "cytoplasmic acetyl-CoA",
+   "predicate": "is produced by",
+   "target": "PO/PTA pathway"
+  },
+  {
+   "source": "PDC-negative strains",
+   "predicate": "accumulate",
+   "target": "pyruvate"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC7873862:1:2e150e06",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon sources",
+   "type": "chemical"
+  },
+  {
+   "name": "lignocellulosic biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "hexoses",
+   "type": "chemical"
+  },
+  {
+   "name": "pentoses",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "p-coumaric acid",
+   "type": "chemical"
+  },
+  {
+   "name": "bisabolene",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produce",
+   "target": "carotenoids"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "accumulate",
+   "target": "lipids"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "utilize",
+   "target": "hexoses"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "utilize",
+   "target": "pentoses"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "utilize",
+   "target": "glucose"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "utilize",
+   "target": "xylose"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produce",
+   "target": "bisabolene"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC12278674:5:23d2751d",
+ "entities": [
+  {
+   "name": "Nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "Ceramides",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphatidylcholines",
+   "type": "chemical"
+  },
+  {
+   "name": "PEs",
+   "type": "chemical"
+  },
+  {
+   "name": "TGs",
+   "type": "chemical"
+  },
+  {
+   "name": "Polyunsaturated fatty acyls",
+   "type": "chemical"
+  },
+  {
+   "name": "Desaturases",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "Sphingolipid metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Fatty acid biosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Glycerophospholipid catabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Oleaginous yeast",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "Ceramides"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "Phosphatidylcholines"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "PEs"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "TGs"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "Polyunsaturated fatty acyls"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "Desaturases"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "NADH"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "Sphingolipid metabolism"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "Fatty acid biosynthesis"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "Glycerophospholipid catabolism"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "affects",
+   "target": "Oleaginous yeast"
+  }
+ ],
+ "truncated": false
+}

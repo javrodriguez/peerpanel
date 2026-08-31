@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13456448:9:667a3aa9",
+ "entities": [
+  {
+   "name": "A. nidulans",
+   "type": "organism"
+  },
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "Scedosporium apiospermum",
+   "type": "organism"
+  },
+  {
+   "name": "Lomentospora prolificans",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus species",
+   "type": "organism"
+  },
+  {
+   "name": "A. niger",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium aurantiacum",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium boydii",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium minutisporum",
+   "type": "organism"
+  },
+  {
+   "name": "Zonneveld",
+   "type": "organism"
+  },
+  {
+   "name": "α-1,3 glucanase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "α-1,3 glucan metabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

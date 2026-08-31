@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC6912988:8:ced52c7c",
+ "entities": [
+  {
+   "name": "Third-generation sequencing technologies",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PacBio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Oxford Nanopore",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "sequencing instruments",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "error profile",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "insertion",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "deletions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "second-generation errors",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "substitutions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "splice sites",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mis-alignments",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "spurious edges",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Third-generation sequencing technologies",
+   "predicate": "has_error_profile",
+   "target": "error profile"
+  },
+  {
+   "source": "Third-generation sequencing technologies",
+   "predicate": "uses",
+   "target": "PacBio"
+  },
+  {
+   "source": "Third-generation sequencing technologies",
+   "predicate": "uses",
+   "target": "Oxford Nanopore"
+  },
+  {
+   "source": "error profile",
+   "predicate": "consists_of",
+   "target": "insertion"
+  },
+  {
+   "source": "error profile",
+   "predicate": "consists_of",
+   "target": "deletions"
+  },
+  {
+   "source": "second-generation errors",
+   "predicate": "consists_of",
+   "target": "substitutions"
+  },
+  {
+   "source": "splice sites",
+   "predicate": "is_affected_by",
+   "target": "mis-alignments"
+  },
+  {
+   "source": "splice sites",
+   "predicate": "is_affected_by",
+   "target": "spurious edges"
+  }
+ ],
+ "truncated": false
+}

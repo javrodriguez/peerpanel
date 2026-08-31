@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC5484544:12:4a3e1072",
+ "entities": [
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "BY4741",
+   "type": "organism"
+  },
+  {
+   "name": "plasmids",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cell growth",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sch9Δ",
+   "type": "organism"
+  },
+  {
+   "name": "JW 04 039",
+   "type": "organism"
+  },
+  {
+   "name": "EUROSCARF",
+   "type": "organism"
+  },
+  {
+   "name": "Multiscan GO Microplate Spectrophotometer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thermo Scientific",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ImageJ",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Yeast",
+   "predicate": "has_strain",
+   "target": "BY4741"
+  },
+  {
+   "source": "BY4741",
+   "predicate": "has_plasmid",
+   "target": "plasmids"
+  },
+  {
+   "source": "sch9Δ",
+   "predicate": "has_mutant",
+   "target": "JW 04 039"
+  },
+  {
+   "source": "Multiscan GO Microplate Spectrophotometer",
+   "predicate": "uses",
+   "target": "Thermo Scientific"
+  }
+ ],
+ "truncated": false
+}

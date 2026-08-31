@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13450573:5:654b9150",
+ "entities": [
+  {
+   "name": "WGCNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "iDEP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BY4742",
+   "type": "organism"
+  },
+  {
+   "name": "XH7",
+   "type": "organism"
+  },
+  {
+   "name": "CEN.PK113–7D",
+   "type": "organism"
+  },
+  {
+   "name": "BY4741",
+   "type": "organism"
+  },
+  {
+   "name": "ScY01",
+   "type": "organism"
+  },
+  {
+   "name": "ScY",
+   "type": "organism"
+  },
+  {
+   "name": "NFRI 3155",
+   "type": "organism"
+  },
+  {
+   "name": "NFRI 3236",
+   "type": "organism"
+  },
+  {
+   "name": "S288c",
+   "type": "organism"
+  },
+  {
+   "name": "K9",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

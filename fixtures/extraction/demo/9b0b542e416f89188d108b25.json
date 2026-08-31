@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC9763685:12:2cfb4e14",
+ "entities": [
+  {
+   "name": "Metabolic modeling",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yeast8",
+   "type": "organism"
+  },
+  {
+   "name": "ecYeastGEM_batch",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "COBRApy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yll058w",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "O-acetylhomoserine",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Fe-EDTA",
+   "type": "chemical"
+  },
+  {
+   "name": "Flagship Labs",
+   "type": "organism"
+  },
+  {
+   "name": "Data4Cure",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "MET15",
+   "predicate": "encoded_by",
+   "target": "MET15"
+  },
+  {
+   "source": "Fe-EDTA",
+   "predicate": "chelates",
+   "target": "H2S"
+  },
+  {
+   "source": "ecYeastGEM_batch",
+   "predicate": "is_variant_of",
+   "target": "Yeast8"
+  },
+  {
+   "source": "COBRApy",
+   "predicate": "is_used_by",
+   "target": "ecYeastGEM_batch"
+  }
+ ],
+ "truncated": false
+}

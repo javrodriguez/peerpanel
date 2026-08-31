@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13524880:2:0c7c699e",
+ "entities": [
+  {
+   "name": "T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "Leishmania",
+   "type": "organism"
+  },
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAT10.1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAT2.4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LdAAP3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCF T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "BSF parasites",
+   "type": "organism"
+  },
+  {
+   "name": "SDM79",
+   "type": "chemical"
+  },
+  {
+   "name": "BCAA",
+   "type": "chemical"
+  },
+  {
+   "name": "phosphate group",
+   "type": "chemical"
+  },
+  {
+   "name": "serine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "T. brucei",
+   "predicate": "has_phosphorylation_site",
+   "target": "AAT10.2"
+  },
+  {
+   "source": "PCF T. brucei",
+   "predicate": "has_phosphorylation_site",
+   "target": "AAT10.2"
+  },
+  {
+   "source": "T. brucei",
+   "predicate": "has_phosphorylation_site",
+   "target": "AAT10.1"
+  },
+  {
+   "source": "PCF T. brucei",
+   "predicate": "has_phosphorylation_site",
+   "target": "AAT10.1"
+  },
+  {
+   "source": "T. brucei",
+   "predicate": "has_phosphorylation_site",
+   "target": "AAT2.4"
+  }
+ ],
+ "truncated": false
+}

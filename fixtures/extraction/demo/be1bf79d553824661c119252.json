@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC1409804:4:a0677b6f",
+ "entities": [
+  {
+   "name": "protein search",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "putative translation start site",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "translation start site",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "start site",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "probability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "site increases",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "approximately factor",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "0.773.2⋅10−4⋅10.23≈10462 MathType@MTEF@5@5@+=feaafiart1ev1aaatCvAUfKttLearuWrP9MDH5MBPbIqV92AaeXatLxBI9gBaebbnrfifHhDYfgasaacH8akY",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "compatible gene structure",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "maximum - posteriori gene structure",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Penalty",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gene parts",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "putative translation start site"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "translation start site"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "start site"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "probability"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "site increases"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "approximately factor"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "0.773.2⋅10−4⋅10.23≈10462 MathType@MTEF@5@5@+=feaafiart1ev1aaatCvAUfKttLearuWrP9MDH5MBPbIqV92AaeXatLxBI9gBaebbnrfifHhDYfgasaacH8akY"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "compatible gene structure"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "maximum - posteriori gene structure"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "Penalty"
+  },
+  {
+   "source": "protein search",
+   "predicate": "has",
+   "target": "gene parts"
+  }
+ ],
+ "truncated": false
+}

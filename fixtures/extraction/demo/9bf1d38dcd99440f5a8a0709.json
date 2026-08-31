@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13524880:1:f820be6f",
+ "entities": [
+  {
+   "name": "T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "Leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "Isoleucine",
+   "type": "chemical"
+  },
+  {
+   "name": "Valine",
+   "type": "chemical"
+  },
+  {
+   "name": "Leishmania",
+   "type": "organism"
+  },
+  {
+   "name": "Trypanosoma cruzi",
+   "type": "organism"
+  },
+  {
+   "name": "BCAA",
+   "type": "chemical"
+  },
+  {
+   "name": "TCA cycle",
+   "type": "chemical"
+  },
+  {
+   "name": "Acetate",
+   "type": "chemical"
+  },
+  {
+   "name": "Threonine",
+   "type": "chemical"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "AAT6",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "T. brucei",
+   "predicate": "is_auxotrophic_for",
+   "target": "BCAA"
+  }
+ ],
+ "truncated": false
+}

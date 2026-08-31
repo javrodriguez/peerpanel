@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC10832132:6:375f867f",
+ "entities": [
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetGO3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GO",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "homo sapiens",
+   "type": "organism"
+  },
+  {
+   "name": "mus musculus",
+   "type": "organism"
+  },
+  {
+   "name": "drosophila melanogaster",
+   "type": "organism"
+  },
+  {
+   "name": "CAFA4",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein function annotation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "long-tail problem",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "functional annotation",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_improved_performance",
+   "target": "protein function annotation"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_contributed_to_solving",
+   "target": "long-tail problem"
+  },
+  {
+   "source": "DeepGOPlus",
+   "predicate": "has_decline_in_performance",
+   "target": "protein function annotation"
+  },
+  {
+   "source": "NetGO3",
+   "predicate": "has_decline_in_performance",
+   "target": "protein function annotation"
+  },
+  {
+   "source": "PFmulDL",
+   "predicate": "has_improved_performance",
+   "target": "protein function annotation"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_improved_performance",
+   "target": "functional annotation"
+  }
+ ],
+ "truncated": false
+}

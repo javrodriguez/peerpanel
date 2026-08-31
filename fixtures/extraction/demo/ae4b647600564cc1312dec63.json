@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC6912988:7:7b2726a3",
+ "entities": [
+  {
+   "name": "StringTie2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "StringTie1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "COL1A1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PacBio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Oxford Nanopore",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Illumina",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SRR534291",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "fetal lung fibroblasts",
+   "type": "organism"
+  },
+  {
+   "name": "splice graph",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bit-vector representation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "sparse bit-vector data structure",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "third-generation sequencing technologies",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "StringTie2",
+   "predicate": "builds_on",
+   "target": "StringTie1"
+  },
+  {
+   "source": "StringTie1",
+   "predicate": "uses",
+   "target": "bit-vector representation"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "replaces",
+   "target": "bit-vector representation"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "builds",
+   "target": "sparse bit-vector data structure"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC12628781:6:b05e7d96",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "yeast cell aggregates",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "stained extracellular material",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cationic dye alcian blue",
+   "type": "chemical"
+  },
+  {
+   "name": "anionic polysaccharide",
+   "type": "chemical"
+  },
+  {
+   "name": "chemical fingerprints",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "potential biopolymers",
+   "type": "chemical"
+  },
+  {
+   "name": "crude extracts",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTIR analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "dry EPS samples",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "functional groups",
+   "type": "chemical"
+  },
+  {
+   "name": "material",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produces",
+   "target": "yeast cell aggregates"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produces",
+   "target": "stained extracellular material"
+  },
+  {
+   "source": "cationic dye alcian blue",
+   "predicate": "interacts",
+   "target": "anionic polysaccharide"
+  },
+  {
+   "source": "chemical fingerprints",
+   "predicate": "determines",
+   "target": "potential biopolymers"
+  },
+  {
+   "source": "FTIR analysis",
+   "predicate": "analyzes",
+   "target": "dry EPS samples"
+  },
+  {
+   "source": "FTIR analysis",
+   "predicate": "identifies",
+   "target": "functional groups"
+  },
+  {
+   "source": "FTIR analysis",
+   "predicate": "identifies",
+   "target": "material"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has",
+   "target": "chemical fingerprints"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has",
+   "target": "potential biopolymers"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has",
+   "target": "crude extracts"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has",
+   "target": "FTIR analysis"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has",
+   "target": "dry EPS samples"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13462271:8:82e22a6a",
+ "entities": [
+  {
+   "name": "DNA Pol α",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol1 protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "parental histone H3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H4 recycling",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "DNA replication",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pol2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol ε",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol δ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dpb3/Dpb4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol32",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol31-Pol32",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DNA Pol α",
+   "predicate": "reduces protein stability",
+   "target": "Pol1 protein"
+  },
+  {
+   "source": "DNA Pol α",
+   "predicate": "reduces expression",
+   "target": "Pol1 protein"
+  },
+  {
+   "source": "DNA Pol α",
+   "predicate": "leads to altered parental histone H3-H4 recycling",
+   "target": "H4 recycling"
+  },
+  {
+   "source": "Pol2",
+   "predicate": "can affect parental histone partitioning",
+   "target": "parental histone H3"
+  },
+  {
+   "source": "Pol3",
+   "predicate": "can compromise histone chaperone activity",
+   "target": "Pol32"
+  }
+ ],
+ "truncated": false
+}

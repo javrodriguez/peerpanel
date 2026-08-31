@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13467452:3:9dd4a72b",
+ "entities": [
+  {
+   "name": "β-cell",
+   "type": "organism"
+  },
+  {
+   "name": "CR",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "diabetes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "T2DM",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pancreatic β-cell physiology",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mitochondrial metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "oxidative stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "inflammation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "insulin secretory function",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose responsiveness",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "β-cell",
+   "predicate": "has dysfunction",
+   "target": "diabetes"
+  },
+  {
+   "source": "CR",
+   "predicate": "maintains",
+   "target": "glucose responsiveness"
+  },
+  {
+   "source": "CR",
+   "predicate": "has effects",
+   "target": "pancreatic β-cell physiology"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13504229:4:578363c2",
+ "entities": [
+  {
+   "name": "recombinant Kex2p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Western blot",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "crude sample",
+   "type": "chemical"
+  },
+  {
+   "name": "electrophoresis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gel",
+   "type": "chemical"
+  },
+  {
+   "name": "PVDF",
+   "type": "chemical"
+  },
+  {
+   "name": "methanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Transfer Buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "Ponceau S",
+   "type": "chemical"
+  },
+  {
+   "name": "PBS",
+   "type": "chemical"
+  },
+  {
+   "name": "Blocking Buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "ECL kit",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "recombinant Kex2p",
+   "predicate": "verified_by",
+   "target": "Western blot"
+  },
+  {
+   "source": "Western blot",
+   "predicate": "performed_on",
+   "target": "crude sample"
+  }
+ ],
+ "truncated": false
+}

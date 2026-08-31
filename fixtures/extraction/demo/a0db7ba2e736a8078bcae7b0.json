@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC10204961:8:e85d47e7",
+ "entities": [
+  {
+   "name": "acetate",
+   "type": "chemical"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "plasma membrane",
+   "type": "organism"
+  },
+  {
+   "name": "cells",
+   "type": "organism"
+  },
+  {
+   "name": "ACS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "ICL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MLS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CRC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FAS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PEPCK",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_metabolism",
+   "target": "acetate"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "uses",
+   "target": "ACS"
+  },
+  {
+   "source": "ACS",
+   "predicate": "produces",
+   "target": "acetyl-CoA"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "ICL1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "MLS"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "CRC"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "PDH"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "FAS"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "PEPCK"
+  }
+ ],
+ "truncated": false
+}

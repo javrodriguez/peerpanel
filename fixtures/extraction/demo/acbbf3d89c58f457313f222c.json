@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13524880:18:a1ee751b",
+ "entities": [
+  {
+   "name": "PCF T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "PBS",
+   "type": "chemical"
+  },
+  {
+   "name": "SDM-80",
+   "type": "chemical"
+  },
+  {
+   "name": "arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "BCAA",
+   "type": "chemical"
+  },
+  {
+   "name": "FragPipe",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TriTrypDB-68_TbruceiTREU927",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Proteomics & Mass Spectrometry Core Facility",
+   "type": "organism"
+  },
+  {
+   "name": "University of Bern",
+   "type": "organism"
+  },
+  {
+   "name": "BioMedical Research",
+   "type": "organism"
+  },
+  {
+   "name": "ProteomeXchange Consortium",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PCF T. brucei",
+   "predicate": "was grown in",
+   "target": "PBS"
+  },
+  {
+   "source": "PCF T. brucei",
+   "predicate": "was resuspended in",
+   "target": "SDM-80"
+  },
+  {
+   "source": "SDM-80",
+   "predicate": "contained",
+   "target": "lysine"
+  },
+  {
+   "source": "PCF T. brucei",
+   "predicate": "was washed in",
+   "target": "PBS"
+  },
+  {
+   "source": "PCF T. brucei",
+   "predicate": "was processed by",
+   "target": "Proteomics & Mass Spectrometry Core Facility"
+  }
+ ],
+ "truncated": false
+}

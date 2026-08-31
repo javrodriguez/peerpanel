@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC10729969:10:57c72ef9",
+ "entities": [
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET25",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "S288C",
+   "type": "organism"
+  },
+  {
+   "name": "RM11",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "has_auxotrophy",
+   "target": "sulfate"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "requires_sulfide",
+   "target": "sulfide"
+  },
+  {
+   "source": "HSU1",
+   "predicate": "has_weak_activity",
+   "target": "sulfide"
+  },
+  {
+   "source": "HSU1",
+   "predicate": "supports_cell_growth",
+   "target": "met17Δ"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "exhibits_leaky_auxotrophy",
+   "target": "sulfate"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "grows_on",
+   "target": "sulfate"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "grows_on",
+   "target": "sulfide"
+  },
+  {
+   "source": "HSU1",
+   "predicate": "has_pleiotropic_role",
+   "target": "sulfate"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "experiences_favorable_sulfide_regimes",
+   "target": "sulfide"
+  }
+ ],
+ "truncated": false
+}

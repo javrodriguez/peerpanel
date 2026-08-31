@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13514516:15:ebcfa794",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "high-yield strain",
+   "type": "organism"
+  },
+  {
+   "name": "low-yield strain",
+   "type": "organism"
+  },
+  {
+   "name": "original strain",
+   "type": "organism"
+  },
+  {
+   "name": "pyruvate metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ribosomal processes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "steroid biosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "oxidative phosphorylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "S-adenosylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "SAM",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "high-yield strain",
+   "predicate": "has",
+   "target": "pyruvate metabolism"
+  },
+  {
+   "source": "high-yield strain",
+   "predicate": "has",
+   "target": "ribosomal processes"
+  },
+  {
+   "source": "high-yield strain",
+   "predicate": "has",
+   "target": "steroid biosynthesis"
+  },
+  {
+   "source": "high-yield strain",
+   "predicate": "has",
+   "target": "oxidative phosphorylation"
+  },
+  {
+   "source": "high-yield strain",
+   "predicate": "has",
+   "target": "cysteine"
+  },
+  {
+   "source": "high-yield strain",
+   "predicate": "has",
+   "target": "methionine"
+  },
+  {
+   "source": "high-yield strain",
+   "predicate": "has",
+   "target": "S-adenosylmethionine"
+  },
+  {
+   "source": "high-yield strain",
+   "predicate": "has",
+   "target": "SAM"
+  },
+  {
+   "source": "low-yield strain",
+   "predicate": "has",
+   "target": "pyruvate metabolism"
+  },
+  {
+   "source": "low-yield strain",
+   "predicate": "has",
+   "target": "ribosomal processes"
+  },
+  {
+   "source": "low-yield strain",
+   "predicate": "has",
+   "target": "steroid biosynthesis"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13513244:7:89f8526c",
+ "entities": [
+  {
+   "name": "YARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Charcot–Marie–Tooth disease",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NARS disease",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tRNATyr",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "human",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "mouse",
+   "type": "organism"
+  },
+  {
+   "name": "G41R",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "E196K",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "E196Q",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YARS1",
+   "predicate": "has_variant",
+   "target": "G41R"
+  },
+  {
+   "source": "YARS1",
+   "predicate": "has_variant",
+   "target": "E196K"
+  },
+  {
+   "source": "YARS1",
+   "predicate": "has_variant",
+   "target": "E196Q"
+  },
+  {
+   "source": "YARS1",
+   "predicate": "has_pathogenic_variant",
+   "target": "G41R"
+  },
+  {
+   "source": "YARS1",
+   "predicate": "has_pathogenic_variant",
+   "target": "E196K"
+  },
+  {
+   "source": "YARS1",
+   "predicate": "has_pathogenic_variant",
+   "target": "E196Q"
+  }
+ ],
+ "truncated": false
+}

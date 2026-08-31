@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC10440040:17:1e1d5ad6",
+ "entities": [
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylitol",
+   "type": "chemical"
+  },
+  {
+   "name": "HPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JASCO UV/RI HPLC system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JASCO",
+   "type": "organism"
+  },
+  {
+   "name": "Easton",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Phenomenex",
+   "type": "organism"
+  },
+  {
+   "name": "guard column",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "5 mM H2SO4",
+   "type": "chemical"
+  },
+  {
+   "name": "eluent",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "glucose",
+   "predicate": "analyzed_by",
+   "target": "HPLC"
+  },
+  {
+   "source": "xylose",
+   "predicate": "analyzed_by",
+   "target": "HPLC"
+  },
+  {
+   "source": "xylitol",
+   "predicate": "analyzed_by",
+   "target": "HPLC"
+  },
+  {
+   "source": "JASCO UV/RI HPLC system",
+   "predicate": "used_for",
+   "target": "glucose"
+  },
+  {
+   "source": "JASCO UV/RI HPLC system",
+   "predicate": "used_for",
+   "target": "xylose"
+  },
+  {
+   "source": "JASCO UV/RI HPLC system",
+   "predicate": "used_for",
+   "target": "xylitol"
+  },
+  {
+   "source": "JASCO",
+   "predicate": "made_by",
+   "target": "JASCO UV/RI HPLC system"
+  },
+  {
+   "source": "Easton",
+   "predicate": "located_in",
+   "target": "USA"
+  },
+  {
+   "source": "Phenomenex",
+   "predicate": "made_by",
+   "target": "guard column"
+  },
+  {
+   "source": "5 mM H2SO4",
+   "predicate": "used_as",
+   "target": "eluent"
+  }
+ ],
+ "truncated": false
+}

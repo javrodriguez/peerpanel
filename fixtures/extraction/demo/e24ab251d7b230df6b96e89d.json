@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC9757880:17:0962b1a9",
+ "entities": [
+  {
+   "name": "Roland G Roberts",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Biology",
+   "type": "organism"
+  },
+  {
+   "name": "Markus",
+   "type": "organism"
+  },
+  {
+   "name": "Carvunis lab",
+   "type": "organism"
+  },
+  {
+   "name": "Hsu1",
+   "type": "chemical"
+  },
+  {
+   "name": "YLL058W",
+   "type": "chemical"
+  },
+  {
+   "name": "YNB yeast nitrogen broth",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Biology editorial staff",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Roland G Roberts",
+   "predicate": "is",
+   "target": "PLOS Biology"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13450573:21:18563653",
+ "entities": [
+  {
+   "name": "PANTHER",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsp104",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mi",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Muruganujan",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Thomas",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Niemira",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Wu",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ribeiro",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Robinson",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sanchez",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sherman",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Shui",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

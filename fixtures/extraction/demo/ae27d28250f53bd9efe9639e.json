@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13510017:9:dc034d9c",
+ "entities": [
+  {
+   "name": "Low DO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "High DO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WRS analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ribosome biogenesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "rRNA processing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cytoplasmic translation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ribosomal subunit assembly",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sulfur metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein synthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "detoxification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "oxidoreductase activity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "redox-buffering-associated pathways",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Low DO",
+   "predicate": "enriched_in",
+   "target": "ribosome biogenesis"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "enriched_in",
+   "target": "rRNA processing"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "enriched_in",
+   "target": "cytoplasmic translation"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "enriched_in",
+   "target": "ribosomal subunit assembly"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "enriched_in",
+   "target": "sulfur metabolism"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "enriched_in",
+   "target": "protein synthesis"
+  },
+  {
+   "source": "High DO",
+   "predicate": "enriched_in",
+   "target": "detoxification"
+  },
+  {
+   "source": "High DO",
+   "predicate": "enriched_in",
+   "target": "oxidoreductase activity"
+  },
+  {
+   "source": "High DO",
+   "predicate": "enriched_in",
+   "target": "redox-buffering-associated pathways"
+  }
+ ],
+ "truncated": false
+}

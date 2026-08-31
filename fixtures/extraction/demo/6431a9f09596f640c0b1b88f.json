@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13462271:0:d510cd02",
+ "entities": [
+  {
+   "name": "Nucleic Acids Res",
+   "type": "organism"
+  },
+  {
+   "name": "Oxford University Press",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "DNA polymerase α",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA polymerase δ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA polymerase ε",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol δ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol ε",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H2A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H2B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H3",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nucleic Acids Res",
+   "predicate": "published",
+   "target": "Oxford University Press"
+  },
+  {
+   "source": "Oxford University Press",
+   "predicate": "published",
+   "target": "Nucleic Acids Res"
+  },
+  {
+   "source": "DNA polymerase α",
+   "predicate": "uses",
+   "target": "Pol δ"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC7382830:11:2781326a",
+ "entities": [
+  {
+   "name": "mutations",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "key mutations",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "regulatory feature annotations",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "genes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "operons",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "functional annotations",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ALE experiments",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L-serine tolerance",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CRP regulon",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GcvA regulon",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glycine cleavage system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glycerol metabolism",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mutations",
+   "predicate": "connected_to",
+   "target": "regulatory feature annotations"
+  },
+  {
+   "source": "mutations",
+   "predicate": "connected_to",
+   "target": "genes"
+  },
+  {
+   "source": "mutations",
+   "predicate": "connected_to",
+   "target": "operons"
+  },
+  {
+   "source": "mutations",
+   "predicate": "connected_to",
+   "target": "functional annotations"
+  },
+  {
+   "source": "mutations",
+   "predicate": "connected_to",
+   "target": "ALE experiments"
+  },
+  {
+   "source": "mutations",
+   "predicate": "connected_to",
+   "target": "L-serine tolerance"
+  },
+  {
+   "source": "mutations",
+   "predicate": "involved_in",
+   "target": "CRP regulon"
+  },
+  {
+   "source": "mutations",
+   "predicate": "involved_in",
+   "target": "GcvA regulon"
+  },
+  {
+   "source": "mutations",
+   "predicate": "involved_in",
+   "target": "glycine cleavage system"
+  },
+  {
+   "source": "mutations",
+   "predicate": "involved_in",
+   "target": "glycerol metabolism"
+  }
+ ],
+ "truncated": false
+}

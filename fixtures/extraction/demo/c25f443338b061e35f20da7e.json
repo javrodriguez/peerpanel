@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13450799:25:0732b1ce",
+ "entities": [
+  {
+   "name": "Nakanishi R",
+   "type": "organism"
+  },
+  {
+   "name": "Horie H",
+   "type": "organism"
+  },
+  {
+   "name": "Kaneko Y",
+   "type": "organism"
+  },
+  {
+   "name": "Harashima S",
+   "type": "organism"
+  },
+  {
+   "name": "phosphorylation status",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lactic acid tolerance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Appl Environ Microbiol",
+   "type": "organism"
+  },
+  {
+   "name": "10.1128 / AEM.04241",
+   "type": "organism"
+  },
+  {
+   "name": "PMC4018848",
+   "type": "organism"
+  },
+  {
+   "name": "Kawahata M",
+   "type": "organism"
+  },
+  {
+   "name": "Masaki K",
+   "type": "organism"
+  },
+  {
+   "name": "Fujii T",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nakanishi R",
+   "predicate": "studied",
+   "target": "phosphorylation status"
+  },
+  {
+   "source": "Horie H",
+   "predicate": "studied",
+   "target": "lactic acid tolerance"
+  },
+  {
+   "source": "Kaneko Y",
+   "predicate": "studied",
+   "target": "Appl Environ Microbiol"
+  },
+  {
+   "source": "Harashima S",
+   "predicate": "studied",
+   "target": "10.1128 / AEM.04241"
+  },
+  {
+   "source": "Kawahata M",
+   "predicate": "studied",
+   "target": "PMC4018848"
+  },
+  {
+   "source": "Masaki K",
+   "predicate": "studied",
+   "target": "Fujii T"
+  }
+ ],
+ "truncated": false
+}

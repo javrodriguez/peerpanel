@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC10832132:14:a6cd6217",
+ "entities": [
+  {
+   "name": "AUPRC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fmax",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CAFA",
+   "type": "chemical"
+  },
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GO",
+   "type": "chemical"
+  },
+  {
+   "name": "HSPA1A",
+   "type": "chemical"
+  },
+  {
+   "name": "HSPA2",
+   "type": "chemical"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetGO3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PROFEAT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CAFA4",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "CAFA4"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "PROFEAT"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "DeepGOPlus"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "NetGO3"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "PFmulDL"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "CAFA4"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "PROFEAT"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "DeepGOPlus"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "NetGO3"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "use",
+   "target": "PFmulDL"
+  }
+ ],
+ "truncated": false
+}

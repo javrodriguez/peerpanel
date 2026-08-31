@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13517252:18:2edcdbf4",
+ "entities": [
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Fishmeal",
+   "type": "chemical"
+  },
+  {
+   "name": "Amino acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "Vitamin",
+   "type": "chemical"
+  },
+  {
+   "name": "Antioxidant",
+   "type": "chemical"
+  },
+  {
+   "name": "Nutritional-Balancing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Digestibility",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Growth",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Physiological responses",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Performance",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lysine",
+   "predicate": "is associated with",
+   "target": "methionine"
+  }
+ ],
+ "truncated": false
+}

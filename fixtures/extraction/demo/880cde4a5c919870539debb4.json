@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC11618413:8:ef6ce4ae",
+ "entities": [
+  {
+   "name": "B. subtilis",
+   "type": "organism"
+  },
+  {
+   "name": "V. fischeri",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "curli fibers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "biofilm matrix",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "amyloid fibers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Direct Red",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nile Red",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ThioT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ATR-FTIR spectroscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CD spectroscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "intrinsic fluorescence analysis",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "B. subtilis",
+   "predicate": "has biofilm",
+   "target": "biofilm matrix"
+  },
+  {
+   "source": "B. subtilis",
+   "predicate": "produces",
+   "target": "curli fibers"
+  },
+  {
+   "source": "V. fischeri",
+   "predicate": "has biofilm",
+   "target": "biofilm matrix"
+  },
+  {
+   "source": "Direct Red",
+   "predicate": "interacts with",
+   "target": "curli fibers"
+  },
+  {
+   "source": "Nile Red",
+   "predicate": "interacts with",
+   "target": "curli fibers"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC7334043:6:ce712c34",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Bacillus subtilis",
+   "type": "organism"
+  },
+  {
+   "name": "Marinobacter aquaeolei VT8",
+   "type": "organism"
+  },
+  {
+   "name": "Gibberella fujikuroi",
+   "type": "organism"
+  },
+  {
+   "name": "Gallus gallus",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium",
+   "type": "organism"
+  },
+  {
+   "name": "malic enzyme",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Acc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Dag1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DGAT1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "malic enzyme"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Acc1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Dag1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "DGAT1"
+  }
+ ],
+ "truncated": false
+}

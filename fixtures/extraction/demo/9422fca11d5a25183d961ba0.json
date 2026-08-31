@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7334043:4:c59313fb",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "promoter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "terminator",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "selection marker",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "reporter gene",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA polymerase III",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "virus 2A sequence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNAi",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NLS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HIS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PGPD1 promoter",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_promoter",
+   "target": "promoter"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_terminator",
+   "target": "terminator"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_selection_marker",
+   "target": "selection marker"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_reporter_gene",
+   "target": "reporter gene"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_RNA_polymerase_III",
+   "target": "RNA polymerase III"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_virus_2A_sequence",
+   "target": "virus 2A sequence"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_RNAi",
+   "target": "RNAi"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_NLS",
+   "target": "NLS"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_YFP",
+   "target": "YFP"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_HIS",
+   "target": "HIS"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_PGPD1_promoter",
+   "target": "PGPD1 promoter"
+  },
+  {
+   "source": "promoter",
+   "predicate": "regulates",
+   "target": "reporter gene"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC9487109:0:8766af07",
+ "entities": [
+  {
+   "name": "Vitamin B9",
+   "type": "chemical"
+  },
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Milano Bicocca",
+   "type": "organism"
+  },
+  {
+   "name": "Paola Branduardi",
+   "type": "organism"
+  },
+  {
+   "name": "Mastella Luca",
+   "type": "organism"
+  },
+  {
+   "name": "Beltrani Tiziana",
+   "type": "organism"
+  },
+  {
+   "name": "Labra Massimo",
+   "type": "organism"
+  },
+  {
+   "name": "Stephen DeFelici",
+   "type": "organism"
+  },
+  {
+   "name": "BMC",
+   "type": "organism"
+  },
+  {
+   "name": "ENEA",
+   "type": "organism"
+  },
+  {
+   "name": "University of Milano Bicocca",
+   "type": "organism"
+  },
+  {
+   "name": "Italy",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Vitamin B9",
+   "predicate": "produced_by",
+   "target": "Scheffersomyces stipitis"
+  }
+ ],
+ "truncated": false
+}

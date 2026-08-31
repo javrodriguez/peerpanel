@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC7690147:8:1e34e223",
+ "entities": [
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "ZHK",
+   "type": "organism"
+  },
+  {
+   "name": "Pearl River",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Guangzhou City",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Guangdong Province",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "China",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GenBank Accession number",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MT012072",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Erlenmeyer baffle flasks",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YEPD medium",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast extract",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "peptone",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "is isolated from",
+   "target": "Pearl River"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "is cultured in",
+   "target": "Erlenmeyer baffle flasks"
+  },
+  {
+   "source": "GenBank Accession number",
+   "predicate": "is of",
+   "target": "MT012072"
+  }
+ ],
+ "truncated": false
+}

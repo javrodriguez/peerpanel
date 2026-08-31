@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC7470746:23:aafdb14c",
+ "entities": [
+  {
+   "name": "Black Queen Hypothesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "dependencies",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "adaptive gene loss",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mBio",
+   "type": "organism"
+  },
+  {
+   "name": "Plugge CM",
+   "type": "organism"
+  },
+  {
+   "name": "Eekert MHA van",
+   "type": "organism"
+  },
+  {
+   "name": "Dolfing J",
+   "type": "organism"
+  },
+  {
+   "name": "Schraa G",
+   "type": "organism"
+  },
+  {
+   "name": "Exocellular electron transfer",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "anaerobic microbial communities",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Environ Microbiol",
+   "type": "organism"
+  },
+  {
+   "name": "10.1111 / j.1462 - 2920.2006.00989.x",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Black Queen Hypothesis",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  },
+  {
+   "source": "Black Queen Hypothesis",
+   "predicate": "has adaptive gene loss",
+   "target": "adaptive gene loss"
+  },
+  {
+   "source": "mBio",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  },
+  {
+   "source": "Plugge CM",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  },
+  {
+   "source": "Eekert MHA van",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  },
+  {
+   "source": "Dolfing J",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  },
+  {
+   "source": "Schraa G",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  },
+  {
+   "source": "Exocellular electron transfer",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  },
+  {
+   "source": "anaerobic microbial communities",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  },
+  {
+   "source": "Environ Microbiol",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  },
+  {
+   "source": "10.1111 / j.1462 - 2920.2006.00989.x",
+   "predicate": "has dependency",
+   "target": "dependencies"
+  }
+ ],
+ "truncated": false
+}

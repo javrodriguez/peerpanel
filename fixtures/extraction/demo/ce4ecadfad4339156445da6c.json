@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13510017:5:d15f4af0",
+ "entities": [
+  {
+   "name": "ALT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "REF",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cond",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mut",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "replicate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "VR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "emmeans",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glmmTMB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "STAR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DESeq2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DBY12007",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

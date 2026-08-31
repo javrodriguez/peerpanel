@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13419736:0:819021a0",
+ "entities": [
+  {
+   "name": "bioRxiv",
+   "type": "organism"
+  },
+  {
+   "name": "Cold Spring Harbor Laboratory Preprints",
+   "type": "organism"
+  },
+  {
+   "name": "Restrepo Santiago Yori",
+   "type": "organism"
+  },
+  {
+   "name": "Martin Andreas",
+   "type": "organism"
+  },
+  {
+   "name": "University of California at Berkeley",
+   "type": "organism"
+  },
+  {
+   "name": "California Institute for Quantitative Biosciences",
+   "type": "organism"
+  },
+  {
+   "name": "Howard Hughes Medical Institute",
+   "type": "organism"
+  },
+  {
+   "name": "26S proteasome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "site-specific photocrosslinking",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ubiquitin-Proteasome System",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "E3 ubiquitin ligases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "E2 ubiquitin conjugating enzymes",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "bioRxiv",
+   "predicate": "published_by",
+   "target": "Cold Spring Harbor Laboratory Preprints"
+  },
+  {
+   "source": "Restrepo Santiago Yori",
+   "predicate": "conceptualization",
+   "target": "site-specific photocrosslinking"
+  },
+  {
+   "source": "Restrepo Santiago Yori",
+   "predicate": "methodology",
+   "target": "site-specific photocrosslinking"
+  },
+  {
+   "source": "Restrepo Santiago Yori",
+   "predicate": "investigation",
+   "target": "site-specific photocrosslinking"
+  },
+  {
+   "source": "Restrepo Santiago Yori",
+   "predicate": "writing_original_draft",
+   "target": "site-specific photocrosslinking"
+  },
+  {
+   "source": "Restrepo Santiago Yori",
+   "predicate": "writing_review_editing",
+   "target": "site-specific photocrosslinking"
+  },
+  {
+   "source": "Martin Andreas",
+   "predicate": "conceptualization",
+   "target": "site-specific photocrosslinking"
+  },
+  {
+   "source": "Martin Andreas",
+   "predicate": "methodology",
+   "target": "site-specific photocrosslinking"
+  },
+  {
+   "source": "Martin Andreas",
+   "predicate": "writing_original_draft",
+   "target": "site-specific photocrosslinking"
+  },
+  {
+   "source": "Martin Andreas",
+   "predicate": "writing_review_editing",
+   "target": "site-specific photocrosslinking"
+  },
+  {
+   "source": "Martin Andreas",
+   "predicate": "supervision",
+   "target": "site-specific photocrosslinking"
+  }
+ ],
+ "truncated": false
+}

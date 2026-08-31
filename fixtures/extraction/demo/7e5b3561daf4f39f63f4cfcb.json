@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13515494:4:a192f651",
+ "entities": [
+  {
+   "name": "Internal Pressure",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Alcohol Content",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Residual Sugar Concentration",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cell Count",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Multiplication Factor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cell Viability",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tirage Sugars",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Carbon Dioxide",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bottle Pressure",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yeast Population",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Free Amino Acids",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Volatile Organic Compounds",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Internal Pressure",
+   "predicate": "increased",
+   "target": "Bottle Pressure"
+  },
+  {
+   "source": "Alcohol Content",
+   "predicate": "increased",
+   "target": "Residual Sugar Concentration"
+  },
+  {
+   "source": "Tirage Sugars",
+   "predicate": "consumed",
+   "target": "Alcohol Content"
+  },
+  {
+   "source": "Carbon Dioxide",
+   "predicate": "accumulated",
+   "target": "Bottle Pressure"
+  },
+  {
+   "source": "Yeast Population",
+   "predicate": "proliferated",
+   "target": "Cell Count"
+  },
+  {
+   "source": "Yeast Population",
+   "predicate": "declined",
+   "target": "Cell Viability"
+  },
+  {
+   "source": "Free Amino Acids",
+   "predicate": "accumulated",
+   "target": "Alcohol Content"
+  },
+  {
+   "source": "Volatile Organic Compounds",
+   "predicate": "accumulated",
+   "target": "Bottle Pressure"
+  }
+ ],
+ "truncated": false
+}

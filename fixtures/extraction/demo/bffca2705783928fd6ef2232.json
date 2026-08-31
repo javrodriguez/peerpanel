@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13524880:8:1c3210a9",
+ "entities": [
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "BCAA",
+   "type": "chemical"
+  },
+  {
+   "name": "SDM79S",
+   "type": "chemical"
+  },
+  {
+   "name": "SDM79",
+   "type": "chemical"
+  },
+  {
+   "name": "eYFP",
+   "type": "chemical"
+  },
+  {
+   "name": "YDR544",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "RNAi",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "plasma membrane",
+   "type": "organism"
+  },
+  {
+   "name": "flagellar pocket",
+   "type": "organism"
+  },
+  {
+   "name": "N-terminal domain",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AAT10.2",
+   "predicate": "has_mRNA_levels",
+   "target": "BCAA"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "has_mRNA_levels",
+   "target": "SDM79S"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "has_mRNA_levels",
+   "target": "SDM79"
+  }
+ ],
+ "truncated": false
+}

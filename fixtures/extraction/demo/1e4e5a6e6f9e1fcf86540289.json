@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC6912988:1:b8c2418c",
+ "entities": [
+  {
+   "name": "StringTie",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sailfish",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Salmon",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kallisto",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "StringTie1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ToFU",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TAPIS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SQANTI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TranscriptClean",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FLAIR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Traphlor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PacBio",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

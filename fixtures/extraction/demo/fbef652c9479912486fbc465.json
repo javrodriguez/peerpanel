@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13515273:1:7be73205",
+ "entities": [
+  {
+   "name": "Pichia manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "P. manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "sodium benzoate",
+   "type": "chemical"
+  },
+  {
+   "name": "potassium sorbate",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur dioxide",
+   "type": "chemical"
+  },
+  {
+   "name": "oregano",
+   "type": "organism"
+  },
+  {
+   "name": "thyme",
+   "type": "organism"
+  },
+  {
+   "name": "chili sauce",
+   "type": "chemical"
+  },
+  {
+   "name": "soybean paste",
+   "type": "chemical"
+  },
+  {
+   "name": "fermented foods",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "carvacrol",
+   "predicate": "inhibits",
+   "target": "Pichia manshurica"
+  }
+ ],
+ "truncated": false
+}

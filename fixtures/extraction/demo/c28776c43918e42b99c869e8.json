@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13450573:2:f20c9bd2",
+ "entities": [
+  {
+   "name": "yeast culture",
+   "type": "organism"
+  },
+  {
+   "name": "MJ Research PTC200",
+   "type": "chemical"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SacCer3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S cerevisiae",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNA",
+   "type": "chemical"
+  },
+  {
+   "name": "DNase",
+   "type": "chemical"
+  },
+  {
+   "name": "polyA+",
+   "type": "chemical"
+  },
+  {
+   "name": "Illumina HiSeq 1000",
+   "type": "chemical"
+  },
+  {
+   "name": "FastQC",
+   "type": "chemical"
+  },
+  {
+   "name": "Trimmomatic V0.32",
+   "type": "chemical"
+  },
+  {
+   "name": "Bowtie2",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "USA",
+   "predicate": "made_in",
+   "target": "MJ Research PTC200"
+  },
+  {
+   "source": "RNA",
+   "predicate": "treated_with",
+   "target": "DNase"
+  },
+  {
+   "source": "polyA+",
+   "predicate": "isolated_from",
+   "target": "RNA"
+  }
+ ],
+ "truncated": false
+}

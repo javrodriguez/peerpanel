@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC3923900:3:8bf67914",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "C. curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "malt extract/soytone medium",
+   "type": "chemical"
+  },
+  {
+   "name": "FTIR microspectroscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "beta-glucans",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acids",
+   "type": "chemical"
+  },
+  {
+   "name": "protein secondary structure",
+   "type": "chemical"
+  },
+  {
+   "name": "nucleic acid phosphodiester groups",
+   "type": "chemical"
+  },
+  {
+   "name": "phospholipids",
+   "type": "chemical"
+  },
+  {
+   "name": "carbohydrates",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_lipid_production",
+   "target": "lipid production"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has_lipid_production",
+   "target": "lipid production"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_lipid_production",
+   "target": "lipid production"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_beta-glucans",
+   "target": "beta-glucans"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has_beta-glucans",
+   "target": "beta-glucans"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_beta-glucans",
+   "target": "beta-glucans"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_fatty_acids",
+   "target": "fatty acids"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has_fatty_acids",
+   "target": "fatty acids"
+  }
+ ],
+ "truncated": false
+}

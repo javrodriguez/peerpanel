@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13467452:0:7e0e1d67",
+ "entities": [
+  {
+   "name": "Sirtuins",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Caloric Restriction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pancreas",
+   "type": "organism"
+  },
+  {
+   "name": "β-Cell Function",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Longevity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zgutka Katarzyna",
+   "type": "organism"
+  },
+  {
+   "name": "Mikołajek-Bedner Wioletta",
+   "type": "organism"
+  },
+  {
+   "name": "Szumilas Kamila",
+   "type": "organism"
+  },
+  {
+   "name": "Tarnowski Maciej",
+   "type": "organism"
+  },
+  {
+   "name": "Bruzzone Santina",
+   "type": "organism"
+  },
+  {
+   "name": "Multidisciplinary Digital Publishing Institute",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sirtuins",
+   "predicate": "mediates",
+   "target": "Caloric Restriction"
+  },
+  {
+   "source": "Caloric Restriction",
+   "predicate": "influences",
+   "target": "Pancreas"
+  },
+  {
+   "source": "Pancreas",
+   "predicate": "regulates",
+   "target": "β-Cell Function"
+  },
+  {
+   "source": "Sirtuins",
+   "predicate": "regulates",
+   "target": "Metabolism"
+  },
+  {
+   "source": "Sirtuins",
+   "predicate": "regulates",
+   "target": "Longevity"
+  }
+ ],
+ "truncated": false
+}

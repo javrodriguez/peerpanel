@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13484205:0:7031bbdf",
+ "entities": [
+  {
+   "name": "bioRxiv",
+   "type": "organism"
+  },
+  {
+   "name": "Cold Spring Harbor Laboratory Preprints",
+   "type": "organism"
+  },
+  {
+   "name": "Lucas Dyer",
+   "type": "organism"
+  },
+  {
+   "name": "Jennifer T. Krystosek",
+   "type": "organism"
+  },
+  {
+   "name": "Sean A. Martin",
+   "type": "organism"
+  },
+  {
+   "name": "Cameron Williams",
+   "type": "organism"
+  },
+  {
+   "name": "Leah Chaney Winner",
+   "type": "organism"
+  },
+  {
+   "name": "Ali Asif",
+   "type": "organism"
+  },
+  {
+   "name": "Surabhi Chowdhary",
+   "type": "organism"
+  },
+  {
+   "name": "David Pincus",
+   "type": "organism"
+  },
+  {
+   "name": "Hsf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sis1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

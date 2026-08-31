@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC9157227:8:766be736",
+ "entities": [
+  {
+   "name": "pGPD1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pADH2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtYB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tHS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KU70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "insUP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "insD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "G418",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NAT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BLE",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pGPD1",
+   "predicate": "has_promoter",
+   "target": "pGPD1"
+  },
+  {
+   "source": "pADH2",
+   "predicate": "has_promoter",
+   "target": "pADH2"
+  },
+  {
+   "source": "G418",
+   "predicate": "has_resistance",
+   "target": "G418"
+  },
+  {
+   "source": "NAT",
+   "predicate": "has_resistance",
+   "target": "NAT"
+  },
+  {
+   "source": "BLE",
+   "predicate": "has_resistance",
+   "target": "BLE"
+  }
+ ],
+ "truncated": false
+}

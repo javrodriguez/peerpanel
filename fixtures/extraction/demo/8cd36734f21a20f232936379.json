@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13517252:15:5b98f208",
+ "entities": [
+  {
+   "name": "nutritional equivalence",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "low-fishmeal feeds",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "outcome domains",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nutrient digestibility",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "retention",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "physiological and metabolic status",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "intestinal condition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "immune and antioxidant responses",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "advanced validation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "disease",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "product-quality",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "outcome domains"
+  },
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "nutrient digestibility"
+  },
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "retention"
+  },
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "physiological and metabolic status"
+  },
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "intestinal condition"
+  },
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "immune and antioxidant responses"
+  },
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "advanced validation"
+  },
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "stress"
+  },
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "disease"
+  },
+  {
+   "source": "nutritional equivalence",
+   "predicate": "requires",
+   "target": "product-quality"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC10158836:3:9308d4aa",
+ "entities": [
+  {
+   "name": "SGD",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "GO Consortium",
+   "type": "organism"
+  },
+  {
+   "name": "Alliance of Genome Resources",
+   "type": "organism"
+  },
+  {
+   "name": "GenBank",
+   "type": "organism"
+  },
+  {
+   "name": "NCBI Gene",
+   "type": "organism"
+  },
+  {
+   "name": "UniProtKB",
+   "type": "organism"
+  },
+  {
+   "name": "RNACentral",
+   "type": "organism"
+  },
+  {
+   "name": "National Human Genome Research Institute",
+   "type": "organism"
+  },
+  {
+   "name": "National Institutes of Health",
+   "type": "organism"
+  },
+  {
+   "name": "Ashburner",
+   "type": "organism"
+  },
+  {
+   "name": "Ball",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SGD",
+   "predicate": "partner",
+   "target": "GO Consortium"
+  },
+  {
+   "source": "SGD",
+   "predicate": "partner",
+   "target": "Alliance of Genome Resources"
+  },
+  {
+   "source": "SGD",
+   "predicate": "authority",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "SGD",
+   "predicate": "authority",
+   "target": "GenBank"
+  },
+  {
+   "source": "SGD",
+   "predicate": "authority",
+   "target": "NCBI Gene"
+  },
+  {
+   "source": "SGD",
+   "predicate": "authority",
+   "target": "UniProtKB"
+  },
+  {
+   "source": "SGD",
+   "predicate": "authority",
+   "target": "RNACentral"
+  }
+ ],
+ "truncated": false
+}

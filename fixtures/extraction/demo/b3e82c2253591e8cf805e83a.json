@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC10440040:16:d55280d1",
+ "entities": [
+  {
+   "name": "Invitrogen Easy-DNA gDNA Purification Kit",
+   "type": "chemical"
+  },
+  {
+   "name": "Thermo Fisher",
+   "type": "organism"
+  },
+  {
+   "name": "high molecular weight genomic DNA",
+   "type": "chemical"
+  },
+  {
+   "name": "gDNA",
+   "type": "chemical"
+  },
+  {
+   "name": "overnight culture",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "BOT",
+   "type": "organism"
+  },
+  {
+   "name": "YPD medium",
+   "type": "chemical"
+  },
+  {
+   "name": "long-read sequencing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Quantification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "extracted gDNA",
+   "type": "chemical"
+  },
+  {
+   "name": "Qubit v3 fluorometer",
+   "type": "chemical"
+  },
+  {
+   "name": "MinION sequencer",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Invitrogen Easy-DNA gDNA Purification Kit",
+   "predicate": "extract",
+   "target": "high molecular weight genomic DNA"
+  },
+  {
+   "source": "BOT",
+   "predicate": "grown in",
+   "target": "YPD medium"
+  },
+  {
+   "source": "Invitrogen Easy-DNA gDNA Purification Kit",
+   "predicate": "used for",
+   "target": "high molecular weight genomic DNA"
+  },
+  {
+   "source": "Qubit v3 fluorometer",
+   "predicate": "used for",
+   "target": "Quantification"
+  },
+  {
+   "source": "MinION sequencer",
+   "predicate": "used for",
+   "target": "long-read sequencing"
+  },
+  {
+   "source": "BOT",
+   "predicate": "used for",
+   "target": "long-read sequencing"
+  },
+  {
+   "source": "Invitrogen Easy-DNA gDNA Purification Kit",
+   "predicate": "extract",
+   "target": "gDNA"
+  },
+  {
+   "source": "BOT",
+   "predicate": "grown in",
+   "target": "YPD medium"
+  },
+  {
+   "source": "BOT",
+   "predicate": "used for",
+   "target": "long-read sequencing"
+  },
+  {
+   "source": "BOT",
+   "predicate": "grown in",
+   "target": "YPD medium"
+  },
+  {
+   "source": "BOT",
+   "predicate": "used for",
+   "target": "long-read sequencing"
+  },
+  {
+   "source": "BOT",
+   "predicate": "grown in",
+   "target": "YPD medium"
+  }
+ ],
+ "truncated": false
+}

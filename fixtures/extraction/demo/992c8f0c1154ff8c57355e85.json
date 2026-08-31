@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC10832132:4:66755301",
+ "entities": [
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetGO3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DiamondBLAST",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGOCNN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TALE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetGO2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "4th critical assessment",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CAFA4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SwissProt",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_performance_enhancement",
+   "target": "DeepGOPlus"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_performance_enhancement",
+   "target": "PFmulDL"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_performance_enhancement",
+   "target": "NetGO3"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_performance_enhancement",
+   "target": "DiamondBLAST"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_performance_enhancement",
+   "target": "DeepGO"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_performance_enhancement",
+   "target": "DeepGOCNN"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_performance_enhancement",
+   "target": "TALE"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_performance_enhancement",
+   "target": "NetGO2"
+  }
+ ],
+ "truncated": false
+}

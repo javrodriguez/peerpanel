@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC8116571:12:2ba7afc5",
+ "entities": [
+  {
+   "name": "R. toruloides CCT 7815",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "C5-Birch",
+   "type": "chemical"
+  },
+  {
+   "name": "Bonturi et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "hemicellulosic sugarcane bagasse hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "genes",
+   "type": "chemical"
+  },
+  {
+   "name": "inhibitors",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid accumulation",
+   "type": "chemical"
+  },
+  {
+   "name": "K. marxianus CBS 6556",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis CBS 5773",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi DSM 70295",
+   "type": "organism"
+  },
+  {
+   "name": "Liu et al.",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "consumed",
+   "target": "xylose"
+  },
+  {
+   "source": "Bonturi et al.",
+   "predicate": "adapted",
+   "target": "R. toruloides CCT 7815"
+  }
+ ],
+ "truncated": false
+}

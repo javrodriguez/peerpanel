@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC8116571:6:ab2a9c01",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides CCT 7815",
+   "type": "organism"
+  },
+  {
+   "name": "Scheffersomyces stipitis CBS 5773",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi DSM 70295",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces marxianus CBS 6556",
+   "type": "organism"
+  },
+  {
+   "name": "hemicellulosic hydrolysate C5-Birch",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "arabinose",
+   "type": "chemical"
+  },
+  {
+   "name": "mannose",
+   "type": "chemical"
+  },
+  {
+   "name": "acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "arabitol",
+   "type": "chemical"
+  },
+  {
+   "name": "xylitol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides CCT 7815",
+   "predicate": "consumes",
+   "target": "glucose"
+  },
+  {
+   "source": "Rhodotorula toruloides CCT 7815",
+   "predicate": "consumes",
+   "target": "xylose"
+  },
+  {
+   "source": "Rhodotorula toruloides CCT 7815",
+   "predicate": "consumes",
+   "target": "arabinose"
+  },
+  {
+   "source": "Rhodotorula toruloides CCT 7815",
+   "predicate": "consumes",
+   "target": "mannose"
+  },
+  {
+   "source": "Rhodotorula toruloides CCT 7815",
+   "predicate": "consumes",
+   "target": "acetic acid"
+  },
+  {
+   "source": "Scheffersomyces stipitis CBS 5773",
+   "predicate": "consumes",
+   "target": "glucose"
+  },
+  {
+   "source": "Scheffersomyces stipitis CBS 5773",
+   "predicate": "consumes",
+   "target": "xylose"
+  },
+  {
+   "source": "Scheffersomyces stipitis CBS 5773",
+   "predicate": "consumes",
+   "target": "arabinose"
+  },
+  {
+   "source": "Scheffersomyces stipitis CBS 5773",
+   "predicate": "consumes",
+   "target": "mannose"
+  },
+  {
+   "source": "Scheffersomyces stipitis CBS 5773",
+   "predicate": "consumes",
+   "target": "acetic acid"
+  },
+  {
+   "source": "Lipomyces starkeyi DSM 70295",
+   "predicate": "consumes",
+   "target": "glucose"
+  },
+  {
+   "source": "Lipomyces starkeyi DSM 70295",
+   "predicate": "consumes",
+   "target": "xylose"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC8620231:5:08d6134d",
+ "entities": [
+  {
+   "name": "TSEBRA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EVidenceModeler",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EVM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BRAKER1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BRAKER2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ProtHint",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Trinity",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PASA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "VARUS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DIAMOND",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GitHub",
+   "type": "other"
+  },
+  {
+   "name": "A. thaliana",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "TSEBRA",
+   "predicate": "compared_to",
+   "target": "EVM"
+  }
+ ],
+ "truncated": false
+}

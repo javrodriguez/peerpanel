@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7470746:7:02a19a43",
+ "entities": [
+  {
+   "name": "lysine-limited lys− cells",
+   "type": "organism"
+  },
+  {
+   "name": "lys−",
+   "type": "organism"
+  },
+  {
+   "name": "lys−orgS−",
+   "type": "organism"
+  },
+  {
+   "name": "GSX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GSH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lyp1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ecm21",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rsp5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DISOMY14",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "methionine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "met6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met13",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

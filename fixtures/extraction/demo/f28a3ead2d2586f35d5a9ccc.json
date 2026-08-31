@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC9757880:19:c34a9e02",
+ "entities": [
+  {
+   "name": "Roland G Roberts",
+   "type": "organism"
+  },
+  {
+   "name": "Mark Siegal",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Biology",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  },
+  {
+   "name": "Creative Commons Attribution License",
+   "type": "organism"
+  },
+  {
+   "name": "Editorial Manager",
+   "type": "organism"
+  },
+  {
+   "name": "biologypress@plos.org",
+   "type": "organism"
+  },
+  {
+   "name": "Embargo Policy",
+   "type": "organism"
+  },
+  {
+   "name": "Open Access publishing",
+   "type": "organism"
+  },
+  {
+   "name": "Roli",
+   "type": "organism"
+  },
+  {
+   "name": "yeast cells",
+   "type": "organism"
+  },
+  {
+   "name": "homocysteine synthase",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Roland G Roberts",
+   "predicate": "is",
+   "target": "PLOS Biology"
+  },
+  {
+   "source": "Roland G Roberts",
+   "predicate": "is",
+   "target": "PLOS"
+  },
+  {
+   "source": "Roland G Roberts",
+   "predicate": "is",
+   "target": "Open Access publishing"
+  },
+  {
+   "source": "Roland G Roberts",
+   "predicate": "is",
+   "target": "Roli"
+  },
+  {
+   "source": "Roland G Roberts",
+   "predicate": "is",
+   "target": "PLOS Biology"
+  }
+ ],
+ "truncated": false
+}

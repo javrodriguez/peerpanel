@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC5484544:0:c70f12a6",
+ "entities": [
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "pH homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "longevity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "vacuoles",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Wilms Tobias",
+   "type": "organism"
+  },
+  {
+   "name": "Swinnen Erwin",
+   "type": "organism"
+  },
+  {
+   "name": "Eskes Elja",
+   "type": "organism"
+  },
+  {
+   "name": "De Virgilio Claudio",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sch9",
+   "predicate": "regulates",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "controls",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "regulates",
+   "target": "longevity"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "involved_in",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "involved_in",
+   "target": "longevity"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "interacts_with",
+   "target": "V-ATPase"
+  }
+ ],
+ "truncated": false
+}

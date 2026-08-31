@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC7470746:13:ab0ec240",
+ "entities": [
+  {
+   "name": "turbidostat",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pump",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "OD",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "LED",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "phototransistor",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "op-amp",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "converter",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "buffer",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "scale",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "chemostat",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "medium",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "vessel",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "LED",
+   "predicate": "measures",
+   "target": "OD"
+  },
+  {
+   "source": "phototransistor",
+   "predicate": "measures",
+   "target": "OD"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC10729969:6:89967919",
+ "entities": [
+  {
+   "name": "Met17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YLL058W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CYS3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STR3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ICR7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S288C",
+   "type": "organism"
+  },
+  {
+   "name": "BY4741",
+   "type": "organism"
+  },
+  {
+   "name": "RM11",
+   "type": "organism"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "pyridoxal phosphate",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met17",
+   "predicate": "has_dependency",
+   "target": "pyridoxal phosphate"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "is_equivalent_to",
+   "target": "HSU1"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13467452:11:9ac99684",
+ "entities": [
+  {
+   "name": "SIRT3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SIRT4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SIRT5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SIRT6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "prenatal testosterone",
+   "type": "chemical"
+  },
+  {
+   "name": "pancreatic beta cells",
+   "type": "organism"
+  },
+  {
+   "name": "aged female offspring",
+   "type": "organism"
+  },
+  {
+   "name": "islets",
+   "type": "organism"
+  },
+  {
+   "name": "cyclic AMP",
+   "type": "chemical"
+  },
+  {
+   "name": "ATP",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "insulin",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SIRT3",
+   "predicate": "expression",
+   "target": "pancreatic beta cells"
+  },
+  {
+   "source": "SIRT3",
+   "predicate": "overexpression",
+   "target": "islets"
+  },
+  {
+   "source": "prenatal testosterone",
+   "predicate": "exposure",
+   "target": "pancreatic beta cells"
+  }
+ ],
+ "truncated": false
+}

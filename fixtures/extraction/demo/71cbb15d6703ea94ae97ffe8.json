@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC9825514:5:e3ea486f",
+ "entities": [
+  {
+   "name": "UniProtKB",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "BLAST",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Align",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SwissBioPics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProt",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PDB",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AlphaFold",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProtKB/Swiss-Prot",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProtKB/TrEMBL",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Gene Ontology",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProtKB entry",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProtKB entry page",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "UniProtKB",
+   "predicate": "has_tool",
+   "target": "BLAST"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_tool",
+   "target": "Align"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_visualisation",
+   "target": "SwissBioPics"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_data_source",
+   "target": "PDB"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_data_source",
+   "target": "AlphaFold"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_database",
+   "target": "UniProtKB/Swiss-Prot"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_database",
+   "target": "UniProtKB/TrEMBL"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_ontology",
+   "target": "Gene Ontology"
+  },
+  {
+   "source": "UniProtKB entry",
+   "predicate": "has_visualisation",
+   "target": "UniProtKB entry page"
+  },
+  {
+   "source": "UniProtKB entry page",
+   "predicate": "has_tool",
+   "target": "BLAST"
+  },
+  {
+   "source": "UniProtKB entry page",
+   "predicate": "has_tool",
+   "target": "Align"
+  },
+  {
+   "source": "UniProtKB entry page",
+   "predicate": "has_visualisation",
+   "target": "SwissBioPics"
+  }
+ ],
+ "truncated": false
+}

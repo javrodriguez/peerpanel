@@ -1,0 +1,31 @@
+{
+ "chunk_id": "PMC10729969:19:dc4abdf9",
+ "entities": [
+  {
+   "name": "Luke Smith",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PLOS Biology",
+   "type": "organism"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Roli",
+   "type": "organism"
+  },
+  {
+   "name": "Roland Roberts",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS ONE",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

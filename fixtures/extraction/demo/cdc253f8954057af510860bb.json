@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC11102182:7:61df56b5",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "IFO0880",
+   "type": "organism"
+  },
+  {
+   "name": "nitrogen starvation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid accumulation phenotype",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipidome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glycerophospholipid pool",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "storage lipids",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "batch culture conditions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "growth conditions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nitrogen levels",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "time",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid profiles",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has phenotype",
+   "target": "lipid accumulation phenotype"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "exposed to",
+   "target": "nitrogen starvation"
+  },
+  {
+   "source": "lipidome",
+   "predicate": "remodels",
+   "target": "glycerophospholipid pool"
+  },
+  {
+   "source": "nitrogen levels",
+   "predicate": "decreases",
+   "target": "time"
+  },
+  {
+   "source": "lipid profiles",
+   "predicate": "converges",
+   "target": "lipidome"
+  }
+ ],
+ "truncated": false
+}

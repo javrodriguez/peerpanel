@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13453879:8:0ffb66ba",
+ "entities": [
+  {
+   "name": "Papiliotrema",
+   "type": "organism"
+  },
+  {
+   "name": "Hannaella",
+   "type": "organism"
+  },
+  {
+   "name": "Toxicocladosporium",
+   "type": "organism"
+  },
+  {
+   "name": "Cytospora",
+   "type": "organism"
+  },
+  {
+   "name": "α-ionone",
+   "type": "chemical"
+  },
+  {
+   "name": "β-ionone",
+   "type": "chemical"
+  },
+  {
+   "name": "terpinen-4-ol",
+   "type": "chemical"
+  },
+  {
+   "name": "α-terpineol",
+   "type": "chemical"
+  },
+  {
+   "name": "3-caranol",
+   "type": "chemical"
+  },
+  {
+   "name": "bornylene",
+   "type": "chemical"
+  },
+  {
+   "name": "E)-linalool oxide",
+   "type": "chemical"
+  },
+  {
+   "name": "α-bisabolol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Papiliotrema",
+   "predicate": "correlated_with",
+   "target": "α-ionone"
+  },
+  {
+   "source": "Papiliotrema",
+   "predicate": "correlated_with",
+   "target": "β-ionone"
+  },
+  {
+   "source": "Papiliotrema",
+   "predicate": "correlated_with",
+   "target": "terpinen-4-ol"
+  },
+  {
+   "source": "Papiliotrema",
+   "predicate": "correlated_with",
+   "target": "α-terpineol"
+  },
+  {
+   "source": "Papiliotrema",
+   "predicate": "correlated_with",
+   "target": "3-caranol"
+  },
+  {
+   "source": "Papiliotrema",
+   "predicate": "correlated_with",
+   "target": "bornylene"
+  },
+  {
+   "source": "Papiliotrema",
+   "predicate": "correlated_with",
+   "target": "E)-linalool oxide"
+  },
+  {
+   "source": "Papiliotrema",
+   "predicate": "correlated_with",
+   "target": "α-bisabolol"
+  },
+  {
+   "source": "Hannaella",
+   "predicate": "correlated_with",
+   "target": "α-ionone"
+  },
+  {
+   "source": "Hannaella",
+   "predicate": "correlated_with",
+   "target": "β-ionone"
+  },
+  {
+   "source": "Hannaella",
+   "predicate": "correlated_with",
+   "target": "terpinen-4-ol"
+  },
+  {
+   "source": "Hannaella",
+   "predicate": "correlated_with",
+   "target": "α-terpineol"
+  }
+ ],
+ "truncated": false
+}

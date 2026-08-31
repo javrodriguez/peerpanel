@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13413155:2:929d0e41",
+ "entities": [
+  {
+   "name": "Alternaria brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "Nicotiana benthamiana",
+   "type": "organism"
+  },
+  {
+   "name": "B. oleracea var. italica",
+   "type": "organism"
+  },
+  {
+   "name": "Koch",
+   "type": "organism"
+  },
+  {
+   "name": "Stemphylium vesicarium",
+   "type": "organism"
+  },
+  {
+   "name": "broccoli",
+   "type": "organism"
+  },
+  {
+   "name": "fungicides",
+   "type": "chemical"
+  },
+  {
+   "name": "fungicide sensitivity assays",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pathogenicity assays",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "multilocus gene sequencing",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phylogenetic analysis",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "B. oleracea var. italica",
+   "predicate": "is host to",
+   "target": "Alternaria brassicicola"
+  },
+  {
+   "source": "Stemphylium vesicarium",
+   "predicate": "is used as outgroup in",
+   "target": "phylogenetic analysis"
+  }
+ ],
+ "truncated": false
+}

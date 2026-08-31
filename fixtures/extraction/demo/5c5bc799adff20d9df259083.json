@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13470552:0:b5a66005",
+ "entities": [
+  {
+   "name": "Sheng Peng",
+   "type": "organism"
+  },
+  {
+   "name": "Sun Mengna",
+   "type": "organism"
+  },
+  {
+   "name": "Wang Xinyue",
+   "type": "organism"
+  },
+  {
+   "name": "Bai Lizhe",
+   "type": "organism"
+  },
+  {
+   "name": "Cao Hong",
+   "type": "organism"
+  },
+  {
+   "name": "Li Dan",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "Endoplasmic reticulum",
+   "type": "organism"
+  },
+  {
+   "name": "Vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "Golgi",
+   "type": "organism"
+  },
+  {
+   "name": "Endosome",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

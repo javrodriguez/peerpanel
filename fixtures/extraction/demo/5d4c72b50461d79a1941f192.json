@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13515494:1:0f2faf10",
+ "entities": [
+  {
+   "name": "Sparkling wines",
+   "type": "chemical"
+  },
+  {
+   "name": "Grapes",
+   "type": "chemical"
+  },
+  {
+   "name": "Musts",
+   "type": "chemical"
+  },
+  {
+   "name": "Base wines",
+   "type": "chemical"
+  },
+  {
+   "name": "OIV",
+   "type": "organism"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Amino acids",
+   "type": "chemical"
+  },
+  {
+   "name": "Peptides",
+   "type": "chemical"
+  },
+  {
+   "name": "Polysaccharides",
+   "type": "chemical"
+  },
+  {
+   "name": "Lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Carbon dioxide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sparkling wines",
+   "predicate": "produced from",
+   "target": "Grapes"
+  }
+ ],
+ "truncated": false
+}

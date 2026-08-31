@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13514516:16:ebe9da87",
+ "entities": [
+  {
+   "name": "R.W.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H.Z.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Y.Z.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S.L.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "T.P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J.Z.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L.Z.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "qPCR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YPX",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R.W.",
+   "predicate": "conceptualization",
+   "target": "H.Z."
+  },
+  {
+   "source": "R.W.",
+   "predicate": "methodology",
+   "target": "H.Z."
+  },
+  {
+   "source": "R.W.",
+   "predicate": "validation",
+   "target": "H.Z."
+  },
+  {
+   "source": "R.W.",
+   "predicate": "formal analysis",
+   "target": "H.Z."
+  },
+  {
+   "source": "R.W.",
+   "predicate": "investigation",
+   "target": "H.Z."
+  },
+  {
+   "source": "R.W.",
+   "predicate": "data curation",
+   "target": "H.Z."
+  },
+  {
+   "source": "R.W.",
+   "predicate": "writing",
+   "target": "H.Z."
+  },
+  {
+   "source": "R.W.",
+   "predicate": "supervision",
+   "target": "H.Z."
+  },
+  {
+   "source": "R.W.",
+   "predicate": "funding acquisition",
+   "target": "H.Z."
+  },
+  {
+   "source": "H.Z.",
+   "predicate": "conceptualization",
+   "target": "R.W."
+  },
+  {
+   "source": "H.Z.",
+   "predicate": "methodology",
+   "target": "R.W."
+  },
+  {
+   "source": "H.Z.",
+   "predicate": "validation",
+   "target": "R.W."
+  }
+ ],
+ "truncated": false
+}

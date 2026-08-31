@@ -1,0 +1,15 @@
+{
+ "chunk_id": "PMC13462271:9:2828eb1f",
+ "entities": [
+  {
+   "name": "GSE327335",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GEO",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

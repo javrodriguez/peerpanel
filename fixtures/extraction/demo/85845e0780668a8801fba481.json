@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC12628781:4:a9f0cea0",
+ "entities": [
+  {
+   "name": "EPS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "CCT0783",
+   "type": "organism"
+  },
+  {
+   "name": "Hamidi",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wang",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Braker3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CLEAN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NCBI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UniProt",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Julia",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hisat2",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_strain",
+   "target": "CCT0783"
+  },
+  {
+   "source": "Hamidi",
+   "predicate": "has_method",
+   "target": "EPS"
+  },
+  {
+   "source": "Wang",
+   "predicate": "has_method",
+   "target": "EPS"
+  },
+  {
+   "source": "Braker3",
+   "predicate": "has_method",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has_method",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "CLEAN",
+   "predicate": "has_method",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "NCBI",
+   "predicate": "has_method",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_method",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "Julia",
+   "predicate": "has_method",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "Hisat2",
+   "predicate": "has_method",
+   "target": "R. toruloides"
+  }
+ ],
+ "truncated": false
+}

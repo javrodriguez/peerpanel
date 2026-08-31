@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13450573:16:34dd48ab",
+ "entities": [
+  {
+   "name": "Gibney et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "BY4742",
+   "type": "organism"
+  },
+  {
+   "name": "Pab1p",
+   "type": "chemical"
+  },
+  {
+   "name": "Ydl199cp",
+   "type": "chemical"
+  },
+  {
+   "name": "Hor7p",
+   "type": "chemical"
+  },
+  {
+   "name": "Sho1p",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Davidson",
+   "type": "chemical"
+  },
+  {
+   "name": "Schiestl",
+   "type": "chemical"
+  },
+  {
+   "name": "Ragon",
+   "type": "chemical"
+  },
+  {
+   "name": "Mühlhofer",
+   "type": "chemical"
+  },
+  {
+   "name": "Martínez de Marañón",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

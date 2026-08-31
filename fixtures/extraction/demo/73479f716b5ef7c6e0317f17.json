@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC5826700:5:261c309c",
+ "entities": [
+  {
+   "name": "PKA",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "TORC1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Sch9",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pHc",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pHv",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "adenylate cyclase Cyr1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ras",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Arf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gtr1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Vph1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PKA",
+   "predicate": "activates",
+   "target": "TORC1"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "activates",
+   "target": "Sch9"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "senses",
+   "target": "pHc"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "activates",
+   "target": "PKA"
+  },
+  {
+   "source": "PKA",
+   "predicate": "provides feedback",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "adenylate cyclase Cyr1",
+   "predicate": "enhances affinity",
+   "target": "cAMP"
+  }
+ ],
+ "truncated": false
+}

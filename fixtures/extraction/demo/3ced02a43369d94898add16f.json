@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC4125178:2:96304129",
+ "entities": [
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "A. niger",
+   "type": "organism"
+  },
+  {
+   "name": "P. italicum",
+   "type": "organism"
+  },
+  {
+   "name": "NaHS",
+   "type": "chemical"
+  },
+  {
+   "name": "DCHF-DA",
+   "type": "chemical"
+  },
+  {
+   "name": "DCHF",
+   "type": "chemical"
+  },
+  {
+   "name": "DCF",
+   "type": "chemical"
+  },
+  {
+   "name": "SOD",
+   "type": "chemical"
+  },
+  {
+   "name": "CAT",
+   "type": "chemical"
+  },
+  {
+   "name": "A. niger mycelium",
+   "type": "organism"
+  },
+  {
+   "name": "PDA",
+   "type": "chemical"
+  },
+  {
+   "name": "PMSF",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "H2S",
+   "predicate": "inhibit",
+   "target": "A. niger"
+  },
+  {
+   "source": "H2S",
+   "predicate": "inhibit",
+   "target": "P. italicum"
+  },
+  {
+   "source": "NaHS",
+   "predicate": "fumigate",
+   "target": "A. niger"
+  },
+  {
+   "source": "NaHS",
+   "predicate": "fumigate",
+   "target": "P. italicum"
+  },
+  {
+   "source": "SOD",
+   "predicate": "have activity",
+   "target": "A. niger mycelium"
+  },
+  {
+   "source": "CAT",
+   "predicate": "have activity",
+   "target": "A. niger mycelium"
+  },
+  {
+   "source": "A. niger mycelium",
+   "predicate": "express",
+   "target": "SOD"
+  },
+  {
+   "source": "A. niger mycelium",
+   "predicate": "express",
+   "target": "CAT"
+  }
+ ],
+ "truncated": false
+}

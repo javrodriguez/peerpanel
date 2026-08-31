@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC9757880:15:8674955e",
+ "entities": [
+  {
+   "name": "Hydrogen sulfide utilization enzyme",
+   "type": "chemical"
+  },
+  {
+   "name": "Hsu1-GFP",
+   "type": "chemical"
+  },
+  {
+   "name": "Y-PER Yeast Protein Extraction Reagent",
+   "type": "chemical"
+  },
+  {
+   "name": "Thermo Fisher",
+   "type": "organism"
+  },
+  {
+   "name": "EDTA",
+   "type": "chemical"
+  },
+  {
+   "name": "Potassium phosphate buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "Pyridoxal 5'-phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "Sigma",
+   "type": "organism"
+  },
+  {
+   "name": "OAS",
+   "type": "chemical"
+  },
+  {
+   "name": "OAHS",
+   "type": "chemical"
+  },
+  {
+   "name": "NaHS",
+   "type": "chemical"
+  },
+  {
+   "name": "Ellman's reagent",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

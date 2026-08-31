@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC12628781:11:d7e1fc60",
+ "entities": [
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "biopolymer",
+   "type": "chemical"
+  },
+  {
+   "name": "NDP sugars",
+   "type": "chemical"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "NP11",
+   "type": "organism"
+  },
+  {
+   "name": "IFO0880",
+   "type": "organism"
+  },
+  {
+   "name": "CCT0783",
+   "type": "organism"
+  },
+  {
+   "name": "NSTs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glycosyltransferases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "manosyltransferases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC35",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TPT",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "glucose",
+   "predicate": "converts_to",
+   "target": "biopolymer"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "NSTs"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "glycosyltransferases"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "manosyltransferases"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "SLC35"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "TPT"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "NSTs"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "glycosyltransferases"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "manosyltransferases"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "SLC35"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "TPT"
+  }
+ ],
+ "truncated": false
+}

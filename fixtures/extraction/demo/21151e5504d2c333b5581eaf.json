@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC7953724:5:f028d493",
+ "entities": [
+  {
+   "name": "Crude glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "Oleaginous yeasts",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Cunninghamella echinulata",
+   "type": "organism"
+  },
+  {
+   "name": "Cutaneotrichosporon curvatum",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "Trichosporon fermentans",
+   "type": "organism"
+  },
+  {
+   "name": "Gong et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "Shen et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "Chatzifragou et al.",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Crude glycerol",
+   "predicate": "is problematic substrate for",
+   "target": "Oleaginous yeasts"
+  },
+  {
+   "source": "Oleaginous yeasts",
+   "predicate": "show substantial growth in",
+   "target": "Crude glycerol"
+  },
+  {
+   "source": "Lipomyces",
+   "predicate": "show low tolerance to",
+   "target": "Crude glycerol"
+  }
+ ],
+ "truncated": false
+}

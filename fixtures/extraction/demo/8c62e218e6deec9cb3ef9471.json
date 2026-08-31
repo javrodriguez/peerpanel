@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13515273:8:1b6ed314",
+ "entities": [
+  {
+   "name": "Carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "Pichia manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia membranifaciens",
+   "type": "organism"
+  },
+  {
+   "name": "Fusarium graminearum",
+   "type": "organism"
+  },
+  {
+   "name": "HISAT2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HISAT-genotype",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Limma",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EdgeR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RPKM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TPM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DAD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Q",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Carvacrol",
+   "predicate": "has_antimicrobial_properties",
+   "target": "Fusarium graminearum"
+  },
+  {
+   "source": "Carvacrol",
+   "predicate": "has_antimicrobial_properties",
+   "target": "Pichia manshurica"
+  },
+  {
+   "source": "Carvacrol",
+   "predicate": "has_antimicrobial_properties",
+   "target": "Pichia membranifaciens"
+  }
+ ],
+ "truncated": false
+}

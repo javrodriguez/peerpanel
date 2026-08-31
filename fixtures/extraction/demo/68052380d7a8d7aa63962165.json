@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC12278674:17:950e93a4",
+ "entities": [
+  {
+   "name": "global protein abundance data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "raw TMT reporter ion intensities",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "corresponding peptides",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "1 % false discovery rate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FDR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "filtering",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "multiple plexes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "normalization",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "site level PTM data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TMT reporter ion intensities",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "peptides",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "global protein abundance data",
+   "predicate": "was_acquired_by",
+   "target": "raw TMT reporter ion intensities"
+  }
+ ],
+ "truncated": false
+}

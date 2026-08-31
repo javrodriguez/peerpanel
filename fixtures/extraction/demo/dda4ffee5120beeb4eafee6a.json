@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10204961:18:4093fe4e",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "acetate",
+   "type": "chemical"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "ATP",
+   "type": "chemical"
+  },
+  {
+   "name": "Pentose Phosphate Pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tricarboxylic Acid Cycle",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DAD-2/LXR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S2 Table",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S5 Fig",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has flux",
+   "target": "NADPH"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has flux",
+   "target": "NADH"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has ATP turnover",
+   "target": "ATP"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has NADPH turnover",
+   "target": "NADPH"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has NADH turnover",
+   "target": "NADH"
+  }
+ ],
+ "truncated": false
+}

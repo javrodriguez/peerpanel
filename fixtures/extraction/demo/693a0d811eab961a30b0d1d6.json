@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13501320:6:39c59178",
+ "entities": [
+  {
+   "name": "NGL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PAU23",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RAD27",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PHB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GIDEON",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ILP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LocalCut",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mani et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "Yu and Cowen",
+   "type": "chemical"
+  },
+  {
+   "name": "Gallant et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "Fong et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "Horlbeck et al.",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

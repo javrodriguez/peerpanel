@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC9763685:1:d1fc5f15",
+ "entities": [
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "SAM",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Met15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met25",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yll058w",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "O-acetyl-l-homoserine",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "homocysteine",
+   "predicate": "is produced by",
+   "target": "O-acetyl-l-homoserine"
+  },
+  {
+   "source": "homocysteine",
+   "predicate": "is converted to",
+   "target": "methionine"
+  },
+  {
+   "source": "homocysteine",
+   "predicate": "is converted to",
+   "target": "cysteine"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "contains",
+   "target": "Met15"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "contains",
+   "target": "Met17"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "contains",
+   "target": "Met25"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "contains",
+   "target": "Yll058w"
+  }
+ ],
+ "truncated": false
+}

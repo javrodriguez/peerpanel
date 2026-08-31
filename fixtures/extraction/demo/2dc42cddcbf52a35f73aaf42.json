@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC7470746:8:22c68234",
+ "entities": [
+  {
+   "name": "nutrient–growth dysregulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "organosulfurs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lys– cells",
+   "type": "organism"
+  },
+  {
+   "name": "adenine-limited ade– cells",
+   "type": "organism"
+  },
+  {
+   "name": "GSX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GSH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Opt1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gex1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gex2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gxa1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ycf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bpt1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "nutrient–growth dysregulation",
+   "predicate": "triggers",
+   "target": "organosulfurs"
+  },
+  {
+   "source": "lys– cells",
+   "predicate": "release",
+   "target": "organosulfurs"
+  },
+  {
+   "source": "adenine-limited ade– cells",
+   "predicate": "release",
+   "target": "organosulfurs"
+  },
+  {
+   "source": "GSX",
+   "predicate": "released",
+   "target": "GSH"
+  },
+  {
+   "source": "GSH",
+   "predicate": "released",
+   "target": "GSX"
+  }
+ ],
+ "truncated": false
+}

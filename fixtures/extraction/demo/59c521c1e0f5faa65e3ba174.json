@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514516:1:9fdc0948",
+ "entities": [
+  {
+   "name": "Bioethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Sugarcane bagasse",
+   "type": "chemical"
+  },
+  {
+   "name": "Lignocellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Pachysolen tannophilus",
+   "type": "organism"
+  },
+  {
+   "name": "Candida shehatae",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia segobiensis",
+   "type": "organism"
+  },
+  {
+   "name": "Brettanomyces",
+   "type": "organism"
+  },
+  {
+   "name": "Thermoanaerobacter ethanolicus",
+   "type": "organism"
+  },
+  {
+   "name": "Paecilomyces",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7873862:0:6c7a81e9",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Kim Joonhoon",
+   "type": "organism"
+  },
+  {
+   "name": "Coradetti Samuel T.",
+   "type": "organism"
+  },
+  {
+   "name": "Kim Young-Mo",
+   "type": "organism"
+  },
+  {
+   "name": "Gao Yuqian",
+   "type": "organism"
+  },
+  {
+   "name": "Yaegashi Junko",
+   "type": "organism"
+  },
+  {
+   "name": "Zucker Jeremy D.",
+   "type": "organism"
+  },
+  {
+   "name": "Munoz Nathalie",
+   "type": "organism"
+  },
+  {
+   "name": "Zink Erika M.",
+   "type": "organism"
+  },
+  {
+   "name": "Burnum-Johnson Kristin E.",
+   "type": "organism"
+  },
+  {
+   "name": "Baker Scott E.",
+   "type": "organism"
+  },
+  {
+   "name": "Simmons Blake A.",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

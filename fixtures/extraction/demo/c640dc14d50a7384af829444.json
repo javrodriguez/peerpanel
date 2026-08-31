@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC7953724:3:80c88c19",
+ "entities": [
+  {
+   "name": "R. toruloides CBS 14",
+   "type": "organism"
+  },
+  {
+   "name": "R. glutinis CBS 3044",
+   "type": "organism"
+  },
+  {
+   "name": "CG",
+   "type": "chemical"
+  },
+  {
+   "name": "HH",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "cell dry weight",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FT-NIR-based method",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hemicellulose hydrolysate additive",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon source",
+   "type": "chemical"
+  },
+  {
+   "name": "C/N ratio",
+   "type": "chemical"
+  },
+  {
+   "name": "HH10CG55",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides CBS 14",
+   "predicate": "consumed",
+   "target": "glycerol"
+  },
+  {
+   "source": "R. toruloides CBS 14",
+   "predicate": "produced",
+   "target": "lipid"
+  },
+  {
+   "source": "R. glutinis CBS 3044",
+   "predicate": "consumed",
+   "target": "glycerol"
+  },
+  {
+   "source": "R. glutinis CBS 3044",
+   "predicate": "produced",
+   "target": "lipid"
+  },
+  {
+   "source": "HH10CG55",
+   "predicate": "carbon source",
+   "target": "R. toruloides CBS 14"
+  },
+  {
+   "source": "HH10CG55",
+   "predicate": "carbon source",
+   "target": "R. glutinis CBS 3044"
+  },
+  {
+   "source": "CG",
+   "predicate": "carbon source",
+   "target": "R. toruloides CBS 14"
+  },
+  {
+   "source": "CG",
+   "predicate": "carbon source",
+   "target": "R. glutinis CBS 3044"
+  },
+  {
+   "source": "HH",
+   "predicate": "carbon source",
+   "target": "R. toruloides CBS 14"
+  },
+  {
+   "source": "HH",
+   "predicate": "carbon source",
+   "target": "R. glutinis CBS 3044"
+  }
+ ],
+ "truncated": false
+}

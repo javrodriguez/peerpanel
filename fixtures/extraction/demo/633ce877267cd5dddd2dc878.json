@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13450573:18:5cfce8c0",
+ "entities": [
+  {
+   "name": "Table S6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DEGs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Heat Ramp and Heat Shock RNA-seq",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Transcriptomes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "expression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "chromosomal coding genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "stringent selection threshold",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "adjusted p-value (padj)",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ORF status",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Table S7",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Table S6",
+   "predicate": "contains",
+   "target": "DEGs"
+  },
+  {
+   "source": "Table S6",
+   "predicate": "defined_by",
+   "target": "stringent selection threshold"
+  },
+  {
+   "source": "Table S6",
+   "predicate": "based_on",
+   "target": "chromosomal coding genes"
+  },
+  {
+   "source": "Table S6",
+   "predicate": "includes",
+   "target": "ORF status"
+  }
+ ],
+ "truncated": false
+}

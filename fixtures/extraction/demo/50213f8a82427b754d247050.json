@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13470552:8:2165b2b2",
+ "entities": [
+  {
+   "name": "lipid droplets",
+   "type": "organism"
+  },
+  {
+   "name": "peroxisomes",
+   "type": "organism"
+  },
+  {
+   "name": "autophagy-related structures",
+   "type": "organism"
+  },
+  {
+   "name": "BODIPY",
+   "type": "chemical"
+  },
+  {
+   "name": "TAG",
+   "type": "chemical"
+  },
+  {
+   "name": "heat stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "H2O2",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Yca1-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Aif1-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "2GFP-Mmi1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lipid droplets",
+   "predicate": "has_abundance",
+   "target": "TAG"
+  },
+  {
+   "source": "heat stress",
+   "predicate": "causes_redistribution",
+   "target": "Yca1-2GFP"
+  },
+  {
+   "source": "acetic acid",
+   "predicate": "causes_redistribution",
+   "target": "Yca1-2GFP"
+  },
+  {
+   "source": "H2O2",
+   "predicate": "causes_redistribution",
+   "target": "Yca1-2GFP"
+  },
+  {
+   "source": "ethanol",
+   "predicate": "causes_redistribution",
+   "target": "Yca1-2GFP"
+  }
+ ],
+ "truncated": false
+}

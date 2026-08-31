@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC7191244:1:76cf3963",
+ "entities": [
+  {
+   "name": "Rhodosporidium babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "Golubev",
+   "type": "organism"
+  },
+  {
+   "name": "Moscow region",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Russia",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Aureobasidium",
+   "type": "organism"
+  },
+  {
+   "name": "Bullera",
+   "type": "organism"
+  },
+  {
+   "name": "Candida",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus",
+   "type": "organism"
+  },
+  {
+   "name": "Debaryomyces",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia",
+   "type": "organism"
+  },
+  {
+   "name": "Pseudozyma",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium babjevae",
+   "predicate": "is characterized by",
+   "target": "Golubev"
+  },
+  {
+   "source": "Rhodosporidium babjevae",
+   "predicate": "has preliminary monosaccharide composition",
+   "target": "Golubev"
+  },
+  {
+   "source": "Rhodosporidium babjevae",
+   "predicate": "has molecular weight",
+   "target": "Golubev"
+  },
+  {
+   "source": "Rhodosporidium babjevae",
+   "predicate": "has water holding capacity",
+   "target": "Golubev"
+  },
+  {
+   "source": "Rhodosporidium babjevae",
+   "predicate": "has antioxidant and emulsifying activity",
+   "target": "Golubev"
+  },
+  {
+   "source": "Rhodosporidium babjevae",
+   "predicate": "has potential in biotechnology",
+   "target": "Golubev"
+  },
+  {
+   "source": "Golubev",
+   "predicate": "determined preliminary monosaccharide composition of",
+   "target": "Rhodosporidium babjevae"
+  },
+  {
+   "source": "Golubev",
+   "predicate": "characterized Rhodosporidium babjevae",
+   "target": "Moscow region"
+  },
+  {
+   "source": "Golubev",
+   "predicate": "determined molecular weight of",
+   "target": "Rhodosporidium babjevae"
+  },
+  {
+   "source": "Golubev",
+   "predicate": "determined water holding capacity of",
+   "target": "Rhodosporidium babjevae"
+  }
+ ],
+ "truncated": false
+}

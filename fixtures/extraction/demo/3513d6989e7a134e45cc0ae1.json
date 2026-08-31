@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13413155:1:77555dd7",
+ "entities": [
+  {
+   "name": "Alternaria",
+   "type": "organism"
+  },
+  {
+   "name": "A. brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "Brassicaceae",
+   "type": "organism"
+  },
+  {
+   "name": "Alt a1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GPD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CAL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Koch",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Botrytis cinerea",
+   "type": "organism"
+  },
+  {
+   "name": "Nicotiana benthamiana",
+   "type": "organism"
+  },
+  {
+   "name": "Camalexin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jasmonic acid",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Alternaria",
+   "predicate": "has_molecular_marker",
+   "target": "Alt a1"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_molecular_marker",
+   "target": "GPD"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_molecular_marker",
+   "target": "ATPase"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_molecular_marker",
+   "target": "CAL"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_pathogenicity",
+   "target": "Koch"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_pathogenicity",
+   "target": "Botrytis cinerea"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_pathogenicity",
+   "target": "Camalexin"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_pathogenicity",
+   "target": "Jasmonic acid"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_pathogenicity",
+   "target": "A. brassicicola"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_pathogenicity",
+   "target": "Brassicaceae"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_pathogenicity",
+   "target": "Nicotiana benthamiana"
+  },
+  {
+   "source": "Alternaria",
+   "predicate": "has_pathogenicity",
+   "target": "Camalexin"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC9825514:0:456e249c",
+ "entities": [
+  {
+   "name": "UniProt",
+   "type": "organism"
+  },
+  {
+   "name": "Nucleic Acids Res",
+   "type": "organism"
+  },
+  {
+   "name": "Oxford University Press",
+   "type": "organism"
+  },
+  {
+   "name": "European Molecular Biology Laboratory",
+   "type": "organism"
+  },
+  {
+   "name": "European Bioinformatics Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Wellcome Genome Campus",
+   "type": "organism"
+  },
+  {
+   "name": "Georgetown University Medical Center",
+   "type": "organism"
+  },
+  {
+   "name": "University of Delaware",
+   "type": "organism"
+  },
+  {
+   "name": "SIB Swiss Institute of Bioinformatics",
+   "type": "organism"
+  },
+  {
+   "name": "Bateman Alex",
+   "type": "organism"
+  },
+  {
+   "name": "Martin Maria-Jesus",
+   "type": "organism"
+  },
+  {
+   "name": "Orchard Sandra",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "UniProt",
+   "predicate": "has_contribution",
+   "target": "Bateman Alex"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_contribution",
+   "target": "Martin Maria-Jesus"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_contribution",
+   "target": "Orchard Sandra"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_publisher",
+   "target": "Oxford University Press"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_publisher",
+   "target": "European Molecular Biology Laboratory"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_publisher",
+   "target": "European Bioinformatics Institute"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_publisher",
+   "target": "Wellcome Genome Campus"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_publisher",
+   "target": "Georgetown University Medical Center"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_publisher",
+   "target": "University of Delaware"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_publisher",
+   "target": "SIB Swiss Institute of Bioinformatics"
+  }
+ ],
+ "truncated": false
+}

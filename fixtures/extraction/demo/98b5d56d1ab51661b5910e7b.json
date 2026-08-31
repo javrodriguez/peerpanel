@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13524880:16:8b9812cd",
+ "entities": [
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MluI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SP6 mMessage mMachine transcription kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Invitrogen/Thermo Fisher",
+   "type": "organism"
+  },
+  {
+   "name": "X. laevis oocytes",
+   "type": "organism"
+  },
+  {
+   "name": "Lower Franconia",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EcoCyte Bioscience",
+   "type": "organism"
+  },
+  {
+   "name": "Barth’s solution",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ND96 buffer solution",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gentamycin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TEVC setup",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AAT10.2",
+   "predicate": "expressed_in",
+   "target": "X. laevis oocytes"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "injected_with",
+   "target": "cRNA"
+  },
+  {
+   "source": "cRNA",
+   "predicate": "synthesized_by",
+   "target": "SP6 mMessage mMachine transcription kit"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "measured_by",
+   "target": "TEVC setup"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "exported_by",
+   "target": "Barth’s solution"
+  }
+ ],
+ "truncated": false
+}

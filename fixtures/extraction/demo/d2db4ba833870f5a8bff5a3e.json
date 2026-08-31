@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC10832132:7:457b989d",
+ "entities": [
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetGO3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CAFA4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "homo sapiens",
+   "type": "organism"
+  },
+  {
+   "name": "mus musculus",
+   "type": "organism"
+  },
+  {
+   "name": "drosophila melanogaster",
+   "type": "organism"
+  },
+  {
+   "name": "bos taurus",
+   "type": "organism"
+  },
+  {
+   "name": "camellia sinensis",
+   "type": "organism"
+  },
+  {
+   "name": "canis lupus familiaris",
+   "type": "organism"
+  },
+  {
+   "name": "gallus gallus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DeepGOPlus",
+   "predicate": "performed_worse_than",
+   "target": "AnnoPRO"
+  },
+  {
+   "source": "PFmulDL",
+   "predicate": "performed_worse_than",
+   "target": "AnnoPRO"
+  },
+  {
+   "source": "homo sapiens",
+   "predicate": "has_orthologs_with",
+   "target": "mus musculus"
+  },
+  {
+   "source": "homo sapiens",
+   "predicate": "has_orthologs_with",
+   "target": "drosophila melanogaster"
+  },
+  {
+   "source": "mus musculus",
+   "predicate": "has_orthologs_with",
+   "target": "homo sapiens"
+  },
+  {
+   "source": "mus musculus",
+   "predicate": "has_orthologs_with",
+   "target": "drosophila melanogaster"
+  },
+  {
+   "source": "drosophila melanogaster",
+   "predicate": "has_orthologs_with",
+   "target": "homo sapiens"
+  },
+  {
+   "source": "drosophila melanogaster",
+   "predicate": "has_orthologs_with",
+   "target": "mus musculus"
+  }
+ ],
+ "truncated": false
+}

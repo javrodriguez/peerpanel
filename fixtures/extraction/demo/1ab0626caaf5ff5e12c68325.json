@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13467452:14:0d740a94",
+ "entities": [
+  {
+   "name": "sirtuins",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "resveratrol",
+   "type": "chemical"
+  },
+  {
+   "name": "SIRT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pancreatic β-cells",
+   "type": "organism"
+  },
+  {
+   "name": "INS-1E cells",
+   "type": "organism"
+  },
+  {
+   "name": "human islets",
+   "type": "organism"
+  },
+  {
+   "name": "NGN3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SFRP4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Glut2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glucokinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pdx-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hnf-1α",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sirtuins",
+   "predicate": "activation",
+   "target": "resveratrol"
+  },
+  {
+   "source": "resveratrol",
+   "predicate": "activation",
+   "target": "SIRT1"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "regulation",
+   "target": "pancreatic β-cells"
+  },
+  {
+   "source": "resveratrol",
+   "predicate": "protection",
+   "target": "pancreatic β-cells"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "activation",
+   "target": "NGN3"
+  },
+  {
+   "source": "NGN3",
+   "predicate": "regulation",
+   "target": "pancreatic β-cells"
+  },
+  {
+   "source": "SFRP4",
+   "predicate": "marker",
+   "target": "pancreatic β-cells"
+  }
+ ],
+ "truncated": false
+}

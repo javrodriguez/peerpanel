@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10729969:14:16052918",
+ "entities": [
+  {
+   "name": "YPD plates",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol stocks",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast Nitrogen Base",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "uracil",
+   "type": "chemical"
+  },
+  {
+   "name": "histidine",
+   "type": "chemical"
+  },
+  {
+   "name": "leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "sodium sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "NaHS",
+   "type": "chemical"
+  },
+  {
+   "name": "Na2S",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

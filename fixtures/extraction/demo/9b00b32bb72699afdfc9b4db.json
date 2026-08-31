@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13419736:9:4e213e9d",
+ "entities": [
+  {
+   "name": "Endogenous 20S core peptidase",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yeast strain",
+   "type": "organism"
+  },
+  {
+   "name": "FLAG tag",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PRE1 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "4 subunit",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yeast cells",
+   "type": "organism"
+  },
+  {
+   "name": "YPD media",
+   "type": "chemical"
+  },
+  {
+   "name": "GF buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "Liquid nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "Cryogenic mill",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast lysate powder",
+   "type": "chemical"
+  },
+  {
+   "name": "Anti-FLAG IgG resin",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Endogenous 20S core peptidase",
+   "predicate": "purified from",
+   "target": "Yeast strain"
+  },
+  {
+   "source": "Yeast strain",
+   "predicate": "carrying",
+   "target": "FLAG tag"
+  },
+  {
+   "source": "FLAG tag",
+   "predicate": "added to",
+   "target": "PRE1 gene"
+  },
+  {
+   "source": "PRE1 gene",
+   "predicate": "codes for",
+   "target": "4 subunit"
+  },
+  {
+   "source": "Yeast cells",
+   "predicate": "grown to saturation in",
+   "target": "YPD media"
+  },
+  {
+   "source": "YPD media",
+   "predicate": "contains",
+   "target": "GF buffer"
+  },
+  {
+   "source": "Yeast lysate powder",
+   "predicate": "resuspended in",
+   "target": "GF buffer"
+  }
+ ],
+ "truncated": false
+}

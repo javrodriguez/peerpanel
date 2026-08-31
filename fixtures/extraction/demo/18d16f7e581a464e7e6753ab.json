@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC8164748:6:a30b8604",
+ "entities": [
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "basidiomycetous strains",
+   "type": "organism"
+  },
+  {
+   "name": "ascomycetous strains",
+   "type": "organism"
+  },
+  {
+   "name": "R. babjevae DVBPG 8058",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi CBS 1807",
+   "type": "organism"
+  },
+  {
+   "name": "furfural",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenes",
+   "type": "chemical"
+  },
+  {
+   "name": "CBS",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "ferment",
+   "target": "xylose"
+  },
+  {
+   "source": "R. babjevae DVBPG 8058",
+   "predicate": "accumulate",
+   "target": "lipid"
+  },
+  {
+   "source": "carotenes",
+   "predicate": "be produced",
+   "target": "R. babjevae DVBPG 8058"
+  }
+ ],
+ "truncated": false
+}

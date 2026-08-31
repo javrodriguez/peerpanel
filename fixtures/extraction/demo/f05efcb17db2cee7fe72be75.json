@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13456448:11:bab7af64",
+ "entities": [
+  {
+   "name": "Thomas - Rüddel",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pletz M Kurzai O Bloos F Risk factors",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li X Sholeh M Moghadam MA Ostadrahimi M Hosseini SS Global prevalence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yue H Hu J Xu X Liu Q Carbon dioxide",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jakab Á",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Antal K Emri T Effects",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sims W Effect",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sasani E Khodavaisy S Agha Kuchak Afshari S Darabian S Aala F Rezaie S Pseudohyphae formation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wilson HB Lorenz MC Candida",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Santos ALS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Galdino ACM Mello TP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pentland DR Davis J Mühlschlegel FA Gourlay CW CO2",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

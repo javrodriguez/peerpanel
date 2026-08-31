@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13517252:13:25a106d3",
+ "entities": [
+  {
+   "name": "Regulatory Status",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Safety Considerations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Upper Safe Limits",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nutritional-balancing strategies",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "enzymes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hydrolysates",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fermented products",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "marine-derived ingredients",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "probiotics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "taurine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Regulatory Status",
+   "predicate": "has",
+   "target": "Safety Considerations"
+  },
+  {
+   "source": "Regulatory Status",
+   "predicate": "has",
+   "target": "Upper Safe Limits"
+  },
+  {
+   "source": "lysine",
+   "predicate": "has",
+   "target": "methionine"
+  },
+  {
+   "source": "lysine",
+   "predicate": "has",
+   "target": "taurine"
+  }
+ ],
+ "truncated": false
+}

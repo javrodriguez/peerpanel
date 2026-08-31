@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC8164748:9:a3213340",
+ "entities": [
+  {
+   "name": "Galbe M Zacchi G Pretreatment",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "efficient utilization",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lignocellulosic materials Biomass Bioenerg",
+   "type": "organism"
+  },
+  {
+   "name": "N Brandenburg",
+   "type": "organism"
+  },
+  {
+   "name": "component",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Sci Rep",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ratledge C Yeasts",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid production 1988 London Portland Press Ltd.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li Q Du W Liu D Perspectives",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "microbial oils",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "biodiesel production Appl Microbiol Biotechnol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Knothe G Dependence",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Galbe M Zacchi G Pretreatment",
+   "predicate": "uses",
+   "target": "efficient utilization"
+  },
+  {
+   "source": "efficient utilization",
+   "predicate": "produces",
+   "target": "lignocellulosic materials Biomass Bioenerg"
+  },
+  {
+   "source": "N Brandenburg",
+   "predicate": "is",
+   "target": "component"
+  },
+  {
+   "source": "Sci Rep",
+   "predicate": "uses",
+   "target": "Ratledge C Yeasts"
+  },
+  {
+   "source": "Ratledge C Yeasts",
+   "predicate": "uses",
+   "target": "lipid production 1988 London Portland Press Ltd."
+  },
+  {
+   "source": "Li Q Du W Liu D Perspectives",
+   "predicate": "uses",
+   "target": "microbial oils"
+  },
+  {
+   "source": "microbial oils",
+   "predicate": "produces",
+   "target": "biodiesel production Appl Microbiol Biotechnol"
+  },
+  {
+   "source": "Knothe G Dependence",
+   "predicate": "uses",
+   "target": "biodiesel production Appl Microbiol Biotechnol"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC9763685:6:b33f61aa",
+ "entities": [
+  {
+   "name": "YLL058W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "telomere",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chromosome XII",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cluster",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfur metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "STR2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YML082W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MetY",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hanseniaspora",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YLL058W",
+   "predicate": "located near",
+   "target": "telomere"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "transcriptionally regulated by",
+   "target": "Met4"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "has direct role in",
+   "target": "sulfur metabolism"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "has two close paralogs",
+   "target": "STR2"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "has two close paralogs",
+   "target": "YML082W"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "has structural similarity to",
+   "target": "MetY"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "is critical for growth in the absence of",
+   "target": "Met15"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "is a less efficient homocysteine synthase",
+   "target": "Met15"
+  }
+ ],
+ "truncated": false
+}

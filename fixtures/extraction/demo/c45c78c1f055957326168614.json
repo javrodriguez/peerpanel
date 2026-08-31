@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC10204961:7:2c95b7ab",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylitol",
+   "type": "chemical"
+  },
+  {
+   "name": "xylitol dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "xylulokinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "transketolase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XPK pathway",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "D-arabinitol",
+   "type": "chemical"
+  },
+  {
+   "name": "D-xylulose",
+   "type": "chemical"
+  },
+  {
+   "name": "arabinitol dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "L-xylulose reductase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "D-ribulokinase",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "metabolizes",
+   "target": "xylose"
+  },
+  {
+   "source": "xylitol dehydrogenase",
+   "predicate": "converts",
+   "target": "xylitol"
+  },
+  {
+   "source": "arabinitol dehydrogenase",
+   "predicate": "converts",
+   "target": "D-arabinitol"
+  }
+ ],
+ "truncated": false
+}

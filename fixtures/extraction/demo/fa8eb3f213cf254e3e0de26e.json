@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC9757880:5:ccf4ed94",
+ "entities": [
+  {
+   "name": "Hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Met17p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17Δ cells",
+   "type": "organism"
+  },
+  {
+   "name": "Sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Hydrosulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Hydrogen sulfide (H2S)",
+   "type": "chemical"
+  },
+  {
+   "name": "Sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "7-azido-4-methylcoumarin (AzMC)",
+   "type": "chemical"
+  },
+  {
+   "name": "7-amino-4-methylcoumarin (AMC)",
+   "type": "chemical"
+  },
+  {
+   "name": "Ammonium sulfate",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hydrogen sulfide",
+   "predicate": "presence",
+   "target": "met17Δ cells"
+  },
+  {
+   "source": "Met17p",
+   "predicate": "independent",
+   "target": "homocysteine"
+  },
+  {
+   "source": "Sulfide",
+   "predicate": "overflow",
+   "target": "met17Δ cells"
+  },
+  {
+   "source": "Hydrogen sulfide",
+   "predicate": "utilization",
+   "target": "sulfur"
+  },
+  {
+   "source": "Hydrogen sulfide",
+   "predicate": "production",
+   "target": "met17Δ cells"
+  },
+  {
+   "source": "Hydrogen sulfide",
+   "predicate": "uptake",
+   "target": "met17Δ cells"
+  },
+  {
+   "source": "7-azido-4-methylcoumarin (AzMC)",
+   "predicate": "reduction",
+   "target": "7-amino-4-methylcoumarin (AMC)"
+  }
+ ],
+ "truncated": false
+}

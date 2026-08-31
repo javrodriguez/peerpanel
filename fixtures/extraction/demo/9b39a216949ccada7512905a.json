@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13514516:3:4b0fe53b",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "60Co",
+   "type": "chemical"
+  },
+  {
+   "name": "YPX medium",
+   "type": "chemical"
+  },
+  {
+   "name": "30 °C",
+   "type": "chemical"
+  },
+  {
+   "name": "180 rpm",
+   "type": "chemical"
+  },
+  {
+   "name": "logarithmic phase",
+   "type": "chemical"
+  },
+  {
+   "name": "cells",
+   "type": "chemical"
+  },
+  {
+   "name": "centrifugation",
+   "type": "chemical"
+  },
+  {
+   "name": "12,000 rpm",
+   "type": "chemical"
+  },
+  {
+   "name": "5 min",
+   "type": "chemical"
+  },
+  {
+   "name": "sterile physiological saline",
+   "type": "chemical"
+  },
+  {
+   "name": "physiological saline",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis",
+   "predicate": "mutagenized by",
+   "target": "60Co"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grown in",
+   "target": "YPX medium"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "harvested by",
+   "target": "centrifugation"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "washed with",
+   "target": "sterile physiological saline"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "resuspended in",
+   "target": "physiological saline"
+  }
+ ],
+ "truncated": false
+}

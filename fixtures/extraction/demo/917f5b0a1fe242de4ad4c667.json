@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13453879:12:c45536d6",
+ "entities": [
+  {
+   "name": "P. flavescens RPT",
+   "type": "organism"
+  },
+  {
+   "name": "tea metabolites",
+   "type": "chemical"
+  },
+  {
+   "name": "P. flavescens RPT enzymes",
+   "type": "chemical"
+  },
+  {
+   "name": "realistic storage condition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "microbial metabolic activity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "tea flavor metabolites",
+   "type": "chemical"
+  },
+  {
+   "name": "P. flavescens RPT",
+   "type": "organism"
+  },
+  {
+   "name": "non-inoculated controls",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "NPF",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "25 °C",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "10 months",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Enzymatic assays",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "P. flavescens RPT",
+   "predicate": "regulate",
+   "target": "tea metabolites"
+  },
+  {
+   "source": "P. flavescens RPT",
+   "predicate": "produce",
+   "target": "P. flavescens RPT enzymes"
+  }
+ ],
+ "truncated": false
+}

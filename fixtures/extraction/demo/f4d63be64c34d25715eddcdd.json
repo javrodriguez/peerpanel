@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC12628781:9:b6430d3e",
+ "entities": [
+  {
+   "name": "EPS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "urea",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "peptone",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen supply",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "DCW",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pH",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "C:N ratio",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "amino acids",
+   "type": "chemical"
+  },
+  {
+   "name": "inorganic nitrogen metabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "EPS",
+   "predicate": "produced_by",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "yeast",
+   "predicate": "supplied",
+   "target": "peptone"
+  }
+ ],
+ "truncated": false
+}

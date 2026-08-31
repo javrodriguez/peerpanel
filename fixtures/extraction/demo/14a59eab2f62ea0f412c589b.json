@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13524880:11:3538472f",
+ "entities": [
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAT6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "trypanothione",
+   "type": "chemical"
+  },
+  {
+   "name": "polyamines",
+   "type": "chemical"
+  },
+  {
+   "name": "BCAA",
+   "type": "chemical"
+  },
+  {
+   "name": "aromatic amino acids",
+   "type": "chemical"
+  },
+  {
+   "name": "T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "tsetse fly",
+   "type": "organism"
+  },
+  {
+   "name": "PCF cells",
+   "type": "organism"
+  },
+  {
+   "name": "BSF T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "SDM79",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AAT10.2",
+   "predicate": "is_imported_by",
+   "target": "BCAA"
+  },
+  {
+   "source": "methionine",
+   "predicate": "is_recycled_by",
+   "target": "aromatic amino acids"
+  },
+  {
+   "source": "trypanothione",
+   "predicate": "is_synthesized_from",
+   "target": "methionine"
+  },
+  {
+   "source": "BCAA",
+   "predicate": "are_imported_by",
+   "target": "AAT10.2"
+  },
+  {
+   "source": "aromatic amino acids",
+   "predicate": "are_imported_by",
+   "target": "AAT6"
+  },
+  {
+   "source": "tsetse fly",
+   "predicate": "contains",
+   "target": "BCAA"
+  },
+  {
+   "source": "PCF cells",
+   "predicate": "are_starved",
+   "target": "BCAA"
+  },
+  {
+   "source": "SDM79",
+   "predicate": "contains",
+   "target": "BCAA"
+  }
+ ],
+ "truncated": false
+}

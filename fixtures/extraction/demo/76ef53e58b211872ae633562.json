@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC11974387:2:92c0a4c3",
+ "entities": [
+  {
+   "name": "Ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Pyruvate",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "ATP",
+   "type": "chemical"
+  },
+  {
+   "name": "Pdc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pdc5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pdc6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pdc2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Adh1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Acetaldehyde",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Ethanol",
+   "predicate": "is produced by",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "Glucose",
+   "predicate": "is converted to",
+   "target": "Ethanol"
+  },
+  {
+   "source": "Pdc1",
+   "predicate": "regulates the expression of",
+   "target": "Pdc5"
+  },
+  {
+   "source": "Pdc2",
+   "predicate": "regulates the expression of",
+   "target": "Pdc1"
+  },
+  {
+   "source": "Pdc2",
+   "predicate": "regulates the expression of",
+   "target": "Pdc5"
+  },
+  {
+   "source": "Adh1",
+   "predicate": "catalyzes the reduction of",
+   "target": "Acetaldehyde"
+  },
+  {
+   "source": "Pdc1",
+   "predicate": "has a very high expression level",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "Pdc6",
+   "predicate": "cannot be transcribed",
+   "target": "Glucose"
+  },
+  {
+   "source": "Pdc1",
+   "predicate": "has a major role",
+   "target": "S. cerevisiae"
+  }
+ ],
+ "truncated": false
+}

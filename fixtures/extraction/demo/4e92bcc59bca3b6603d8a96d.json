@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514516:6:61fef0a4",
+ "entities": [
+  {
+   "name": "high-yield strain 31.1",
+   "type": "organism"
+  },
+  {
+   "name": "wild-type strain",
+   "type": "organism"
+  },
+  {
+   "name": "low-yield strain",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pachysolen tannophilus",
+   "type": "organism"
+  },
+  {
+   "name": "Spathaspora passalidarum",
+   "type": "organism"
+  },
+  {
+   "name": "Zymomonas mobilis",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis CBS 5576",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis UFMG-CM-Y2303",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis UFMG-CM-Y2108",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

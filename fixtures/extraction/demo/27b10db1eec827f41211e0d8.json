@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13517252:5:4fd0d2c2",
+ "entities": [
+  {
+   "name": "Exploratory Subgroup Analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "taxonomic or production group",
+   "type": "chemical"
+  },
+  {
+   "name": "life stage",
+   "type": "chemical"
+  },
+  {
+   "name": "primary diet matrix",
+   "type": "chemical"
+  },
+  {
+   "name": "24 representative performance comparisons",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "descriptive forest plots",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "groups",
+   "type": "chemical"
+  },
+  {
+   "name": "two studies",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "estimable effects",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "study - level classification",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Study counts",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "comparison counts",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Exploratory Subgroup Analysis",
+   "predicate": "defined_by",
+   "target": "taxonomic or production group"
+  },
+  {
+   "source": "Exploratory Subgroup Analysis",
+   "predicate": "defined_by",
+   "target": "life stage"
+  },
+  {
+   "source": "Exploratory Subgroup Analysis",
+   "predicate": "defined_by",
+   "target": "primary diet matrix"
+  }
+ ],
+ "truncated": false
+}

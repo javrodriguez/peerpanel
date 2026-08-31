@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC6402699:24:bb818381",
+ "entities": [
+  {
+   "name": "L−A+",
+   "type": "organism"
+  },
+  {
+   "name": "A−L+",
+   "type": "organism"
+  },
+  {
+   "name": "CoSMO",
+   "type": "organism"
+  },
+  {
+   "name": "WY1335",
+   "type": "organism"
+  },
+  {
+   "name": "WY1340",
+   "type": "organism"
+  },
+  {
+   "name": "WY1342",
+   "type": "organism"
+  },
+  {
+   "name": "WY1657",
+   "type": "organism"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "SD",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "chemical"
+  },
+  {
+   "name": "agarose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CoSMO",
+   "predicate": "has_metabolite_concentration",
+   "target": "lysine"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "has_metabolite_concentration",
+   "target": "hypoxanthine"
+  }
+ ],
+ "truncated": false
+}

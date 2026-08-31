@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13456448:6:410202f2",
+ "entities": [
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "C. tropicalis",
+   "type": "organism"
+  },
+  {
+   "name": "GlcNAc",
+   "type": "chemical"
+  },
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "white cells",
+   "type": "organism"
+  },
+  {
+   "name": "opaque cells",
+   "type": "organism"
+  },
+  {
+   "name": "host",
+   "type": "organism"
+  },
+  {
+   "name": "environment",
+   "type": "organism"
+  },
+  {
+   "name": "cAMP",
+   "type": "chemical"
+  },
+  {
+   "name": "Ptc2",
+   "type": "chemical"
+  },
+  {
+   "name": "Hsp90",
+   "type": "chemical"
+  },
+  {
+   "name": "C. auris",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. albicans",
+   "predicate": "has_opaque_state",
+   "target": "opaque cells"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_white_state",
+   "target": "white cells"
+  },
+  {
+   "source": "C. tropicalis",
+   "predicate": "has_opaque_state",
+   "target": "GlcNAc"
+  }
+ ],
+ "truncated": false
+}

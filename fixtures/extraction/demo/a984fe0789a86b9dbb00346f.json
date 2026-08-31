@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC4125178:7:7a092c9e",
+ "entities": [
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "baker's yeast",
+   "type": "organism"
+  },
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "R. oryzae",
+   "type": "organism"
+  },
+  {
+   "name": "A. niger",
+   "type": "organism"
+  },
+  {
+   "name": "Paenibacillus sp.",
+   "type": "organism"
+  },
+  {
+   "name": "Glycera dibranchiate",
+   "type": "organism"
+  },
+  {
+   "name": "mammalian cells",
+   "type": "organism"
+  },
+  {
+   "name": "SOD",
+   "type": "chemical"
+  },
+  {
+   "name": "CAT",
+   "type": "chemical"
+  },
+  {
+   "name": "NaHS",
+   "type": "chemical"
+  },
+  {
+   "name": "ROS",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "H2S",
+   "predicate": "has_toxicity",
+   "target": "baker's yeast"
+  },
+  {
+   "source": "H2S",
+   "predicate": "has_toxicity",
+   "target": "C. albicans"
+  },
+  {
+   "source": "H2S",
+   "predicate": "has_toxicity",
+   "target": "R. oryzae"
+  },
+  {
+   "source": "H2S",
+   "predicate": "increases_intracellular_ROS",
+   "target": "A. niger"
+  }
+ ],
+ "truncated": false
+}

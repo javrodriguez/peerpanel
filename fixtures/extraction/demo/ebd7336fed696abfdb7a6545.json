@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13413155:10:1c7c409e",
+ "entities": [
+  {
+   "name": "PVX-Bax",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "N. benthamiana",
+   "type": "organism"
+  },
+  {
+   "name": "Agrobacterium tumefaciens",
+   "type": "organism"
+  },
+  {
+   "name": "PVX binary vector",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "indicated genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "A. brassicicola isolate Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "Fluxapyroxad",
+   "type": "chemical"
+  },
+  {
+   "name": "Prochloraz",
+   "type": "chemical"
+  },
+  {
+   "name": "Difenoconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "Tebuconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "Hexaconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "Fluopyram",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PVX-Bax",
+   "predicate": "expressed_by",
+   "target": "PVX binary vector"
+  },
+  {
+   "source": "A. brassicicola isolate Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "Fluxapyroxad"
+  },
+  {
+   "source": "A. brassicicola isolate Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "Prochloraz"
+  },
+  {
+   "source": "A. brassicicola isolate Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "Difenoconazole"
+  },
+  {
+   "source": "A. brassicicola isolate Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "Tebuconazole"
+  },
+  {
+   "source": "A. brassicicola isolate Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "Hexaconazole"
+  },
+  {
+   "source": "A. brassicicola isolate Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "Fluopyram"
+  }
+ ],
+ "truncated": false
+}

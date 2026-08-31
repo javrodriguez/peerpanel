@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC5484544:14:ebd3f8a8",
+ "entities": [
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pRS315-Vph1-GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Vma5-RFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sch9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "V-ATPase deficient mutants",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pRS415-GFP-Sch9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pRS316-mCherry-Pho8",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Leica DM 4000B fluorescence microscope",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Leica DFC 300G camera",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bio-Rad",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thermo Scientific",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Merck Millipore",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

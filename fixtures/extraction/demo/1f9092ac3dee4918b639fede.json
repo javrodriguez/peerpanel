@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC11618413:1:39c35aa1",
+ "entities": [
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "S. typhimurium",
+   "type": "organism"
+  },
+  {
+   "name": "curli fibers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "amyloid fibers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "biofilm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "K12",
+   "type": "organism"
+  },
+  {
+   "name": "W3110",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "tryptone",
+   "type": "chemical"
+  },
+  {
+   "name": "agar",
+   "type": "chemical"
+  },
+  {
+   "name": "Direct Red",
+   "type": "chemical"
+  },
+  {
+   "name": "Pontamine Fast Scarlett",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "E. coli",
+   "predicate": "produce",
+   "target": "curli fibers"
+  },
+  {
+   "source": "E. coli",
+   "predicate": "produce",
+   "target": "amyloid fibers"
+  },
+  {
+   "source": "E. coli",
+   "predicate": "grow",
+   "target": "biofilm"
+  },
+  {
+   "source": "biofilm",
+   "predicate": "have",
+   "target": "curli fibers"
+  }
+ ],
+ "truncated": false
+}

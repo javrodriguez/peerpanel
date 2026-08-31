@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13485822:0:0563ec6f",
+ "entities": [
+  {
+   "name": "Malassezia pachydermatis",
+   "type": "organism"
+  },
+  {
+   "name": "ketoconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "ERG3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG24",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG25",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ribosome biogenesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "amino acid biosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "central carbon metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ubiquitin ligases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNA polymerase II regulators",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ketoconazole",
+   "predicate": "induces_stress",
+   "target": "Malassezia pachydermatis"
+  },
+  {
+   "source": "ketoconazole",
+   "predicate": "induces_transcriptional_response",
+   "target": "ERG3"
+  },
+  {
+   "source": "ketoconazole",
+   "predicate": "induces_transcriptional_response",
+   "target": "ERG5"
+  },
+  {
+   "source": "ketoconazole",
+   "predicate": "induces_transcriptional_response",
+   "target": "ERG11"
+  },
+  {
+   "source": "ketoconazole",
+   "predicate": "induces_transcriptional_response",
+   "target": "ERG24"
+  },
+  {
+   "source": "ketoconazole",
+   "predicate": "induces_transcriptional_response",
+   "target": "ERG25"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_transcriptional_response",
+   "target": "ribosome biogenesis"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_transcriptional_response",
+   "target": "amino acid biosynthesis"
+  }
+ ],
+ "truncated": false
+}

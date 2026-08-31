@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC9487109:9:adcf2a66",
+ "entities": [
+  {
+   "name": "Merck",
+   "type": "chemical"
+  },
+  {
+   "name": "Ultrapure H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "THF",
+   "type": "chemical"
+  },
+  {
+   "name": "5MTHF",
+   "type": "chemical"
+  },
+  {
+   "name": "5FTHF",
+   "type": "chemical"
+  },
+  {
+   "name": "Patring",
+   "type": "organism"
+  },
+  {
+   "name": "activated charcoal",
+   "type": "chemical"
+  },
+  {
+   "name": "rat serum",
+   "type": "chemical"
+  },
+  {
+   "name": "polyglutamyl-folate deconjugation",
+   "type": "chemical"
+  },
+  {
+   "name": "folic acid vitamers",
+   "type": "chemical"
+  },
+  {
+   "name": "Waters ACQUITY UPLC system",
+   "type": "chemical"
+  },
+  {
+   "name": "Waters Xevo G2-XS QTof Mass Spectrometer",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Merck",
+   "predicate": "purchased",
+   "target": "Ultrapure H2O"
+  },
+  {
+   "source": "Merck",
+   "predicate": "purchased",
+   "target": "THF"
+  },
+  {
+   "source": "Patring",
+   "predicate": "adapted",
+   "target": "polyglutamyl-folate deconjugation"
+  },
+  {
+   "source": "activated charcoal",
+   "predicate": "added",
+   "target": "rat serum"
+  },
+  {
+   "source": "Waters ACQUITY UPLC system",
+   "predicate": "used",
+   "target": "folic acid vitamers"
+  },
+  {
+   "source": "Waters Xevo G2-XS QTof Mass Spectrometer",
+   "predicate": "used",
+   "target": "folic acid vitamers"
+  },
+  {
+   "source": "Patring",
+   "predicate": "protocol",
+   "target": "polyglutamyl-folate deconjugation"
+  },
+  {
+   "source": "activated charcoal",
+   "predicate": "reacted",
+   "target": "rat serum"
+  }
+ ],
+ "truncated": false
+}

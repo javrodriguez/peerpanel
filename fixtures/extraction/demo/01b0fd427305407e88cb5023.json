@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC9763685:11:241c96ec",
+ "entities": [
+  {
+   "name": "YLL058W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STR2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YML082W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "FY4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "colony size database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "growthcurver",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bio2mds",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HMMER",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MUSCLE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kruskal-Wallis test",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YLL058W",
+   "predicate": "has_homolog",
+   "target": "STR2"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "has_homolog",
+   "target": "YML082W"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "has_homolog",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "FY4",
+   "predicate": "has_relative_colony_size",
+   "target": "colony size database"
+  }
+ ],
+ "truncated": false
+}

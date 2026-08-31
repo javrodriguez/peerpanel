@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC5968551:2:7f200886",
+ "entities": [
+  {
+   "name": "glucose·H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "NH4)2SO4",
+   "type": "chemical"
+  },
+  {
+   "name": "Na2HPO4",
+   "type": "chemical"
+  },
+  {
+   "name": "KH2PO4",
+   "type": "chemical"
+  },
+  {
+   "name": "MgSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "CaCl2·2H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "FeSO4·7H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnSO4·7H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "MnSO4·H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "H2SO4",
+   "type": "chemical"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Pi-limited lipid production medium",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "glucose·H2O",
+   "predicate": "contained in",
+   "target": "Pi-limited lipid production medium"
+  },
+  {
+   "source": "NH4)2SO4",
+   "predicate": "contained in",
+   "target": "Pi-limited lipid production medium"
+  },
+  {
+   "source": "Na2HPO4",
+   "predicate": "contained in",
+   "target": "Pi-limited lipid production medium"
+  },
+  {
+   "source": "MgSO4",
+   "predicate": "contained in",
+   "target": "Pi-limited lipid production medium"
+  }
+ ],
+ "truncated": false
+}

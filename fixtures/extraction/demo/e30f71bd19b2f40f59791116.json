@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13501320:8:5c61b1d0",
+ "entities": [
+  {
+   "name": "GIDEON",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DI weighting scheme",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LocalCut",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Costanzo et al.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OG-Str",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Liany-ILP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BPMs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TSA1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "POL32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RAD51",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RAD57",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TKL1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GIDEON",
+   "predicate": "identifies",
+   "target": "BPMs"
+  },
+  {
+   "source": "GIDEON",
+   "predicate": "outperforms",
+   "target": "LocalCut"
+  },
+  {
+   "source": "GIDEON",
+   "predicate": "outperforms",
+   "target": "Liany-ILP"
+  },
+  {
+   "source": "LocalCut",
+   "predicate": "identifies",
+   "target": "BPMs"
+  },
+  {
+   "source": "Liany-ILP",
+   "predicate": "identifies",
+   "target": "BPMs"
+  },
+  {
+   "source": "TSA1",
+   "predicate": "interacts_with",
+   "target": "POL32"
+  },
+  {
+   "source": "RAD51",
+   "predicate": "interacts_with",
+   "target": "RAD57"
+  }
+ ],
+ "truncated": false
+}

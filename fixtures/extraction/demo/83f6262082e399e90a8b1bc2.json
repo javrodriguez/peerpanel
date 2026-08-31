@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC11618413:10:3a66934b",
+ "entities": [
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "curli amyloid fibers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "nutrient availability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bacterial cell membranes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipopolysaccharides (LPS)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "extracellular DNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphoethanolamine-cellulose",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CsgA units",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "amyloid curli",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "biofilm",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "water",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "agar",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "E. coli",
+   "predicate": "produce",
+   "target": "curli amyloid fibers"
+  },
+  {
+   "source": "nutrient availability",
+   "predicate": "affect",
+   "target": "curli amyloid fibers"
+  }
+ ],
+ "truncated": false
+}

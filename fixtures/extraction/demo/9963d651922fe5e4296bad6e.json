@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC7873862:7:ab4b6fb2",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "biomass reaction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolic network reconstruction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "draft metabolic model",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "flux balance analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "biomass production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "DNA composition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "RNA composition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "amino acid composition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid composition",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "biomass reaction",
+   "predicate": "has_component",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "biomass reaction",
+   "predicate": "has_component",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "metabolic network reconstruction",
+   "predicate": "includes",
+   "target": "biomass reaction"
+  },
+  {
+   "source": "draft metabolic model",
+   "predicate": "includes",
+   "target": "metabolic network reconstruction"
+  },
+  {
+   "source": "flux balance analysis",
+   "predicate": "applies_to",
+   "target": "draft metabolic model"
+  },
+  {
+   "source": "biomass production",
+   "predicate": "is_target_of",
+   "target": "flux balance analysis"
+  },
+  {
+   "source": "lipid production",
+   "predicate": "is_target_of",
+   "target": "flux balance analysis"
+  },
+  {
+   "source": "DNA composition",
+   "predicate": "is_target_of",
+   "target": "flux balance analysis"
+  },
+  {
+   "source": "RNA composition",
+   "predicate": "is_target_of",
+   "target": "flux balance analysis"
+  },
+  {
+   "source": "amino acid composition",
+   "predicate": "is_target_of",
+   "target": "flux balance analysis"
+  },
+  {
+   "source": "lipid composition",
+   "predicate": "is_target_of",
+   "target": "flux balance analysis"
+  }
+ ],
+ "truncated": false
+}

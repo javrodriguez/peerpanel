@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC7873862:9:cf185945",
+ "entities": [
+  {
+   "name": "p-coumarate",
+   "type": "chemical"
+  },
+  {
+   "name": "protocatechuate",
+   "type": "chemical"
+  },
+  {
+   "name": "3-oxoadipate",
+   "type": "chemical"
+  },
+  {
+   "name": "4-hydroxybenzoate",
+   "type": "chemical"
+  },
+  {
+   "name": "vanillate",
+   "type": "chemical"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "P. putida",
+   "type": "organism"
+  },
+  {
+   "name": "p-coumaroyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "3S-(4-hydroxyphenyl)-3-hydroxy-propanoyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "4-hydroxybenzoyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "FOX2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "POT1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "p-coumarate",
+   "predicate": "degraded_to",
+   "target": "protocatechuate"
+  },
+  {
+   "source": "protocatechuate",
+   "predicate": "degraded_to",
+   "target": "3-oxoadipate"
+  },
+  {
+   "source": "p-coumarate",
+   "predicate": "degraded_by",
+   "target": "FOX2"
+  },
+  {
+   "source": "p-coumarate",
+   "predicate": "degraded_by",
+   "target": "POT1"
+  }
+ ],
+ "truncated": false
+}

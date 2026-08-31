@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13453879:3:9fc2014b",
+ "entities": [
+  {
+   "name": "RPT",
+   "type": "chemical"
+  },
+  {
+   "name": "Zhao",
+   "type": "organism"
+  },
+  {
+   "name": "Moisture sorption isotherms",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PDB",
+   "type": "chemical"
+  },
+  {
+   "name": "Glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "NaCl",
+   "type": "chemical"
+  },
+  {
+   "name": "Sucrose",
+   "type": "chemical"
+  },
+  {
+   "name": "Resazurin",
+   "type": "chemical"
+  },
+  {
+   "name": "Konica Minolta CM-5",
+   "type": "chemical"
+  },
+  {
+   "name": "Agilent 5400 system",
+   "type": "chemical"
+  },
+  {
+   "name": "Origin 2024b",
+   "type": "chemical"
+  },
+  {
+   "name": "VicoMeter Instruments",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "RPT",
+   "predicate": "has_sorption_isotherm",
+   "target": "Moisture sorption isotherms"
+  }
+ ],
+ "truncated": false
+}

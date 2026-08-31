@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13413155:0:ef4bc1e4",
+ "entities": [
+  {
+   "name": "Alternaria brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "Qi Chunyan",
+   "type": "organism"
+  },
+  {
+   "name": "Zeng Rong",
+   "type": "organism"
+  },
+  {
+   "name": "Li Guangqing",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Liqing",
+   "type": "organism"
+  },
+  {
+   "name": "Yang Jian",
+   "type": "organism"
+  },
+  {
+   "name": "Xie Zhujie",
+   "type": "organism"
+  },
+  {
+   "name": "Barna Balazs",
+   "type": "organism"
+  },
+  {
+   "name": "Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "broccoli",
+   "type": "organism"
+  },
+  {
+   "name": "black spot disease",
+   "type": "organism"
+  },
+  {
+   "name": "necrotrophic pathogen",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Alternaria brassicicola",
+   "predicate": "causes",
+   "target": "black spot disease"
+  },
+  {
+   "source": "Alternaria brassicicola",
+   "predicate": "is a",
+   "target": "necrotrophic pathogen"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13471478:17:8c87f45a",
+ "entities": [
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CFTR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CRL4CRBN",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CRL7Fbxw8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CRL3KLHL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AQP2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KLHL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WNK1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WNK4",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SLC26A4",
+   "predicate": "interacts_with",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "degraded_by",
+   "target": "CRL4CRBN"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "degraded_by",
+   "target": "CRL7Fbxw8"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "degraded_by",
+   "target": "CRL3KLHL3"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "regulates",
+   "target": "WNK1"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "regulates",
+   "target": "WNK4"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "interacts_with",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "interacts_with",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "interacts_with",
+   "target": "SLC26A4"
+  }
+ ],
+ "truncated": false
+}

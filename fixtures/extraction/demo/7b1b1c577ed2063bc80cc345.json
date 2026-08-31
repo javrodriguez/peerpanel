@@ -1,0 +1,69 @@
+{
+ "chunk_id": "PMC7470746:6:6249ad72",
+ "entities": [
+  {
+   "name": "lys−",
+   "type": "organism"
+  },
+  {
+   "name": "lys−orgS−",
+   "type": "organism"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "organosulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "rapamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "ATG5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lys−orgS−atg5−",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lys−",
+   "predicate": "has_fitness_advantage_over",
+   "target": "lys−orgS−"
+  },
+  {
+   "source": "lys−orgS−",
+   "predicate": "has_fitness_advantage_over",
+   "target": "lys−"
+  },
+  {
+   "source": "lys−orgS−",
+   "predicate": "behaves_similarly_to",
+   "target": "lys−"
+  },
+  {
+   "source": "lys−orgS−",
+   "predicate": "is_rescued_by",
+   "target": "rapamycin"
+  },
+  {
+   "source": "lys−orgS−",
+   "predicate": "has_deletion",
+   "target": "ATG5"
+  }
+ ],
+ "truncated": false
+}

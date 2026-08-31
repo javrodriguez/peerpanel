@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC11701741:3:3b55102d",
+ "entities": [
+  {
+   "name": "Orthologous groups",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OGs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "last common ancestor",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UniProt",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Gene Ontology terms",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "InterPro protein domains",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "COG functional categories",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KEGG pathways",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "enzyme EC numbers",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OrthoDB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OrthoLoger",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Orthologous groups",
+   "predicate": "represent",
+   "target": "last common ancestor"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "contain",
+   "target": "Orthologous groups"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "contain",
+   "target": "OGs"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "contain",
+   "target": "genes"
+  }
+ ],
+ "truncated": false
+}

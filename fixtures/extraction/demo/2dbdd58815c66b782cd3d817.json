@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC10398944:4:b6ad800b",
+ "entities": [
+  {
+   "name": "xylose catabolic enzymes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OE-Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_11990",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_9588",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_11924",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HGT-1/2 homologs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "WT strain",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "xylose catabolic enzymes",
+   "predicate": "increased expression",
+   "target": "OE-Pnt1"
+  }
+ ],
+ "truncated": false
+}

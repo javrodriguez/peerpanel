@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC5968551:8:71165f99",
+ "entities": [
+  {
+   "name": "Pi",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LC-Q/TOF MS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cells",
+   "type": "organism"
+  },
+  {
+   "name": "metabolites",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cold methanol",
+   "type": "chemical"
+  },
+  {
+   "name": "quality control",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "principal components analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "partial least-squares-discriminant analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLS-DA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "orthogonal partial least-squares-discriminant analysis",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13450799:14:ca9169e8",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Haa1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ixr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SIC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP26",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YGP1-3HA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "bar1Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "puf5Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "haa1Δ",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YGP1",
+   "predicate": "expressed_in",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Puf5",
+   "predicate": "regulates",
+   "target": "YGP1"
+  },
+  {
+   "source": "Haa1",
+   "predicate": "regulates",
+   "target": "YGP1"
+  },
+  {
+   "source": "Ixr1",
+   "predicate": "regulates",
+   "target": "YGP1"
+  },
+  {
+   "source": "RNR1",
+   "predicate": "co-regulated_with",
+   "target": "YGP1"
+  },
+  {
+   "source": "SIC1",
+   "predicate": "co-regulated_with",
+   "target": "YGP1"
+  },
+  {
+   "source": "HSP26",
+   "predicate": "co-regulated_with",
+   "target": "YGP1"
+  },
+  {
+   "source": "YGP1-3HA",
+   "predicate": "expressed_in",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "bar1Δ",
+   "predicate": "mutated",
+   "target": "YGP1"
+  },
+  {
+   "source": "puf5Δ",
+   "predicate": "mutated",
+   "target": "YGP1"
+  },
+  {
+   "source": "haa1Δ",
+   "predicate": "mutated",
+   "target": "YGP1"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "regulated_by",
+   "target": "Puf5"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515280:4:ed168e64",
+ "entities": [
+  {
+   "name": "lactating jenny",
+   "type": "organism"
+  },
+  {
+   "name": "MCON",
+   "type": "chemical"
+  },
+  {
+   "name": "MYE",
+   "type": "chemical"
+  },
+  {
+   "name": "SPSS Statistics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shapiro–Wilk test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Levene’s test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mann–Whitney U test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Progenesis QI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HMDB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "METLIN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Majorbio in-house database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R package ropls",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

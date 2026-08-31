@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13510017:12:baaf0678",
+ "entities": [
+  {
+   "name": "Intracellular ROS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Antioxidant enzyme activity",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Glutathione redox state",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "8-oxoguanine abundance",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Low DO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ROS pressure",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mixed transcriptome-fidelity response model",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Inferred redox-state framework",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Direct ROS measurement",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Oxidized-ribonucleoside quantification",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Matched DNA/RNA sequencing",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Direct RNA sequencing",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Intracellular ROS",
+   "predicate": "causes",
+   "target": "Antioxidant enzyme activity"
+  },
+  {
+   "source": "Antioxidant enzyme activity",
+   "predicate": "reduces",
+   "target": "Intracellular ROS"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "causes",
+   "target": "ROS pressure"
+  },
+  {
+   "source": "ROS pressure",
+   "predicate": "causes",
+   "target": "Mixed transcriptome-fidelity response model"
+  },
+  {
+   "source": "Mixed transcriptome-fidelity response model",
+   "predicate": "is",
+   "target": "Inferred redox-state framework"
+  },
+  {
+   "source": "Direct ROS measurement",
+   "predicate": "measures",
+   "target": "Intracellular ROS"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "is",
+   "target": "Low DO"
+  },
+  {
+   "source": "ROS pressure",
+   "predicate": "is",
+   "target": "ROS pressure"
+  }
+ ],
+ "truncated": false
+}

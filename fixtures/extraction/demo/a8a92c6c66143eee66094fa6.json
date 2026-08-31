@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC4125178:1:e5f5e590",
+ "entities": [
+  {
+   "name": "Aspergillus niger",
+   "type": "organism"
+  },
+  {
+   "name": "Penicillium italicum",
+   "type": "organism"
+  },
+  {
+   "name": "Hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Salmonella typhimurium",
+   "type": "organism"
+  },
+  {
+   "name": "Staphylococcus aureus",
+   "type": "organism"
+  },
+  {
+   "name": "Lai et al.",
+   "type": "organism"
+  },
+  {
+   "name": "Marsh",
+   "type": "organism"
+  },
+  {
+   "name": "Hu et al.",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Rhizopus oryzae",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

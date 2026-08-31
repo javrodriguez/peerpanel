@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC9157227:5:19a50550",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "CCT7815",
+   "type": "organism"
+  },
+  {
+   "name": "Nora et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "peptone",
+   "type": "chemical"
+  },
+  {
+   "name": "polyethylene glycol",
+   "type": "chemical"
+  },
+  {
+   "name": "PEG",
+   "type": "chemical"
+  },
+  {
+   "name": "salmon sperm DNA",
+   "type": "chemical"
+  },
+  {
+   "name": "G418",
+   "type": "chemical"
+  },
+  {
+   "name": "NAT",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "grown in",
+   "target": "YPD"
+  }
+ ],
+ "truncated": false
+}

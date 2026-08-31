@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13450573:17:9fe46fbe",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "heat shock",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "heat ramp",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bulk transcriptomic datasets",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WGCNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "transcriptome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "molecular states",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "single-cell level",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "stationary-phase cultures",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "physiological scope",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nutrient limitation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "environmental stress",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "exhibits",
+   "target": "heat shock"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "exhibits",
+   "target": "heat ramp"
+  },
+  {
+   "source": "bulk transcriptomic datasets",
+   "predicate": "uses",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "WGCNA",
+   "predicate": "applies_to",
+   "target": "bulk transcriptomic datasets"
+  },
+  {
+   "source": "transcriptome",
+   "predicate": "is_affect_by",
+   "target": "heat shock"
+  },
+  {
+   "source": "transcriptome",
+   "predicate": "is_affect_by",
+   "target": "heat ramp"
+  },
+  {
+   "source": "molecular states",
+   "predicate": "is_affect_by",
+   "target": "heat shock"
+  },
+  {
+   "source": "molecular states",
+   "predicate": "is_affect_by",
+   "target": "heat ramp"
+  },
+  {
+   "source": "stationary-phase cultures",
+   "predicate": "uses",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "nutrient limitation",
+   "predicate": "is_affect_by",
+   "target": "heat shock"
+  },
+  {
+   "source": "nutrient limitation",
+   "predicate": "is_affect_by",
+   "target": "heat ramp"
+  },
+  {
+   "source": "environmental stress",
+   "predicate": "is_affect_by",
+   "target": "heat shock"
+  }
+ ],
+ "truncated": false
+}

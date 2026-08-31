@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC3563226:1:ab9a6a1e",
+ "entities": [
+  {
+   "name": "URA3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KlURA3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CaURA3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HIS3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HIS5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LEU2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KlLEU2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LYS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TRP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADE1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADE2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET15",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514482:5:7e3040f3",
+ "entities": [
+  {
+   "name": "F. yunnanensis",
+   "type": "organism"
+  },
+  {
+   "name": "Strain Z68",
+   "type": "organism"
+  },
+  {
+   "name": "Calcium chloride",
+   "type": "chemical"
+  },
+  {
+   "name": "Magnesium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "Ferrous sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "Potassium dihydrogen phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "Calcium carbonate",
+   "type": "chemical"
+  },
+  {
+   "name": "pH 4.5",
+   "type": "chemical"
+  },
+  {
+   "name": "pH 7.0",
+   "type": "chemical"
+  },
+  {
+   "name": "pH 10.0",
+   "type": "chemical"
+  },
+  {
+   "name": "20 °C",
+   "type": "chemical"
+  },
+  {
+   "name": "25 °C",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC10832132:0:be06c910",
+ "entities": [
+  {
+   "name": "Genome Biology",
+   "type": "organism"
+  },
+  {
+   "name": "Zheng Lingyan",
+   "type": "organism"
+  },
+  {
+   "name": "Shi Shuiyang",
+   "type": "organism"
+  },
+  {
+   "name": "Lu Mingkun",
+   "type": "organism"
+  },
+  {
+   "name": "Fang Pan",
+   "type": "organism"
+  },
+  {
+   "name": "Pan Ziqi",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Hongning",
+   "type": "organism"
+  },
+  {
+   "name": "Zhou Zhimeng",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Hanyu",
+   "type": "organism"
+  },
+  {
+   "name": "Mou Minjie",
+   "type": "organism"
+  },
+  {
+   "name": "Huang Shijie",
+   "type": "organism"
+  },
+  {
+   "name": "Tao Lin",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zheng Lingyan",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Shi Shuiyang",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Lu Mingkun",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Fang Pan",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Pan Ziqi",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Zhang Hongning",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Zhou Zhimeng",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Zhang Hanyu",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Mou Minjie",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Huang Shijie",
+   "predicate": "author",
+   "target": "Genome Biology"
+  },
+  {
+   "source": "Tao Lin",
+   "predicate": "author",
+   "target": "Genome Biology"
+  }
+ ],
+ "truncated": false
+}

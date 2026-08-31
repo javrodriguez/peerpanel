@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13471478:1:2ebaf569",
+ "entities": [
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chloride",
+   "type": "chemical"
+  },
+  {
+   "name": "iodide",
+   "type": "chemical"
+  },
+  {
+   "name": "bicarbonate",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "oxalate",
+   "type": "chemical"
+  },
+  {
+   "name": "formate",
+   "type": "chemical"
+  },
+  {
+   "name": "endolymph",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ZBTB16",
+   "predicate": "binds_to",
+   "target": "SLC26A4"
+  }
+ ],
+ "truncated": false
+}

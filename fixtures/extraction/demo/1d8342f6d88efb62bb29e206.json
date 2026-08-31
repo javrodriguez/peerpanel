@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514482:7:b4e902cb",
+ "entities": [
+  {
+   "name": "Z68",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Illumina",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PacBio",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FTR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "F. yunnanensis",
+   "type": "organism"
+  },
+  {
+   "name": "F. fennae",
+   "type": "organism"
+  },
+  {
+   "name": "F. velutipes",
+   "type": "organism"
+  },
+  {
+   "name": "Fungi",
+   "type": "organism"
+  },
+  {
+   "name": "Iron",
+   "type": "chemical"
+  },
+  {
+   "name": "Sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "Genome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Assembly",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

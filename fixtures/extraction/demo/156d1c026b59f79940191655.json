@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC11618413:14:bd708cc8",
+ "entities": [
+  {
+   "name": "Transmission electron microscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TEM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JEOL-ARM F200 transmission electron microscope",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JEOL GmbH",
+   "type": "organism"
+  },
+  {
+   "name": "Germany",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Dr. Erik Goormaghtigh",
+   "type": "organism"
+  },
+  {
+   "name": "Université Libre de Bruxelles",
+   "type": "organism"
+  },
+  {
+   "name": "Brussels",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Belgium",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kinetic software",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fibers samples",
+   "type": "chemical"
+  },
+  {
+   "name": "diamond crystal surface",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Transmission electron microscopy",
+   "predicate": "uses",
+   "target": "JEOL-ARM F200 transmission electron microscope"
+  }
+ ],
+ "truncated": false
+}

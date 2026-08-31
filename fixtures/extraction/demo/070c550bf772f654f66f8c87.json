@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC8164748:2:8254e356",
+ "entities": [
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula graminis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces lipofer",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "basidiomycetous species",
+   "type": "organism"
+  },
+  {
+   "name": "ascomycetous species",
+   "type": "organism"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "cell dry weight",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "grew_to_higher_final_optical_density_than",
+   "target": "Lipomyces starkeyi"
+  },
+  {
+   "source": "basidiomycetous species",
+   "predicate": "grew_to_higher_final_optical_density_than",
+   "target": "ascomycetous species"
+  },
+  {
+   "source": "Rhodotorula babjevae",
+   "predicate": "had_highest_lipid_content_on_glucose",
+   "target": "glucose"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "had_highest_measured_intracellular_lipid_content_on_glucose",
+   "target": "glucose"
+  },
+  {
+   "source": "Lipomyces starkeyi",
+   "predicate": "had_highest_lipid_content_on_xylose",
+   "target": "xylose"
+  }
+ ],
+ "truncated": false
+}

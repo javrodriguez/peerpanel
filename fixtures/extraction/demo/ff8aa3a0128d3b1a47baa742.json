@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10440040:7:3e2e9ba8",
+ "entities": [
+  {
+   "name": "UP1a",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YNB-CN80",
+   "type": "chemical"
+  },
+  {
+   "name": "YNB1x",
+   "type": "chemical"
+  },
+  {
+   "name": "CN40",
+   "type": "chemical"
+  },
+  {
+   "name": "CN160",
+   "type": "chemical"
+  },
+  {
+   "name": "BOT-A2",
+   "type": "organism"
+  },
+  {
+   "name": "GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RTBOTA2_003877",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "nitrate transporter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UP3e",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UP10a",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MEP2p",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "UP1a",
+   "predicate": "is_cultivated_in",
+   "target": "YNB-CN80"
+  },
+  {
+   "source": "UP1a",
+   "predicate": "has_fluorescence_intensity",
+   "target": "GFP"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "has_autofluorescence",
+   "target": "GFP"
+  },
+  {
+   "source": "UP1a",
+   "predicate": "has_ammonia_depletion",
+   "target": "YNB-CN80"
+  },
+  {
+   "source": "UP10a",
+   "predicate": "is_cultivated_in",
+   "target": "YNB-CN80"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC12278674:1:a1d0cfa0",
+ "entities": [
+  {
+   "name": "Low-cost organic wastes",
+   "type": "chemical"
+  },
+  {
+   "name": "agricultural and forestry industries",
+   "type": "organism"
+  },
+  {
+   "name": "renewable avenues",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "biofuels",
+   "type": "chemical"
+  },
+  {
+   "name": "bioproducts",
+   "type": "chemical"
+  },
+  {
+   "name": "biomaterials",
+   "type": "chemical"
+  },
+  {
+   "name": "Oleaginous yeast",
+   "type": "organism"
+  },
+  {
+   "name": "complex carbon sources",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "proteins",
+   "type": "chemical"
+  },
+  {
+   "name": "other platform chemicals",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Low-cost organic wastes",
+   "predicate": "provide",
+   "target": "renewable avenues"
+  },
+  {
+   "source": "Oleaginous yeast",
+   "predicate": "convert",
+   "target": "complex carbon sources"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10440040:13:f7740daa",
+ "entities": [
+  {
+   "name": "MEP2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NP11",
+   "type": "organism"
+  },
+  {
+   "name": "RTBOTA2_003877",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TFS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTBOTA2_000480",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SSb2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTBOTA2_000530",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mvd1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTBOTA2_003356",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KGD1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTBOTA2_005360",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10832132:15:a0810ab1",
+ "entities": [
+  {
+   "name": "Sureyya Rifaioglu",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "A Dogan",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "T Jesus Martin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "M Cetin - Atalay",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "R Atalay",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "V",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Unsal S",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Atas H",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Albayrak M",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Turhan K",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Acar AC",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Doğan T",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

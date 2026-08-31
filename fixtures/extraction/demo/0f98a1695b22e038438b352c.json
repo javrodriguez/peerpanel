@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC3563226:5:0d05893d",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "amdSYM",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CAN1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADE2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CEN.PK113-7D",
+   "type": "organism"
+  },
+  {
+   "name": "l-arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "l-canavanine",
+   "type": "chemical"
+  },
+  {
+   "name": "adenine",
+   "type": "chemical"
+  },
+  {
+   "name": "purine nucleotides",
+   "type": "chemical"
+  },
+  {
+   "name": "phosphoribosylaminoimidazol carboxylase",
+   "type": "chemical"
+  },
+  {
+   "name": "vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "colonies",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_gene",
+   "target": "amdSYM"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_gene",
+   "target": "CAN1"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_gene",
+   "target": "ADE2"
+  },
+  {
+   "source": "CAN1",
+   "predicate": "can_import",
+   "target": "l-canavanine"
+  },
+  {
+   "source": "ADE2",
+   "predicate": "codes_for",
+   "target": "phosphoribosylaminoimidazol carboxylase"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_strain",
+   "target": "CEN.PK113-7D"
+  },
+  {
+   "source": "CEN.PK113-7D",
+   "predicate": "has_gene",
+   "target": "CAN1"
+  },
+  {
+   "source": "CEN.PK113-7D",
+   "predicate": "has_gene",
+   "target": "ADE2"
+  }
+ ],
+ "truncated": false
+}

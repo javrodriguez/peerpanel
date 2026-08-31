@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13450573:3:50a891cb",
+ "entities": [
+  {
+   "name": "Transcriptomic datasets",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sequence Read Archive",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gene Expression Omnibus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PRJNA531619",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BY4741",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GSE276309",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GSE182342",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GSE96829",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GSE33276",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GSE15147",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MATLAB R2021b",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bioconductor limma package",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Transcriptomic datasets",
+   "predicate": "retrieved from",
+   "target": "Sequence Read Archive"
+  },
+  {
+   "source": "Transcriptomic datasets",
+   "predicate": "retrieved from",
+   "target": "Gene Expression Omnibus"
+  }
+ ],
+ "truncated": false
+}

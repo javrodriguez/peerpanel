@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13467452:4:a96768b1",
+ "entities": [
+  {
+   "name": "Luo",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "semaglutide",
+   "type": "chemical"
+  },
+  {
+   "name": "calorie restriction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pancreatic islet morphology",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "β-cell function",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gut microbiota composition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "high-fat diet",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "HOMA-IR",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose tolerance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "insulin sensitivity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "METTL3/14",
+   "type": "chemical"
+  },
+  {
+   "name": "PDX-1",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

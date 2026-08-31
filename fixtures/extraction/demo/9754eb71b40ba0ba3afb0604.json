@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC6402699:23:83c20d1b",
+ "entities": [
+  {
+   "name": "A−L+ chemostat model",
+   "type": "chemical"
+  },
+  {
+   "name": "A−L+ cells",
+   "type": "chemical"
+  },
+  {
+   "name": "SD + excess hypoxanthine",
+   "type": "chemical"
+  },
+  {
+   "name": "time",
+   "type": "chemical"
+  },
+  {
+   "name": "starved cells",
+   "type": "chemical"
+  },
+  {
+   "name": "medium",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "chemostats",
+   "type": "chemical"
+  },
+  {
+   "name": "fresh SD + 20 μM hypoxanthine",
+   "type": "chemical"
+  },
+  {
+   "name": "rate",
+   "type": "chemical"
+  },
+  {
+   "name": "doubling time",
+   "type": "chemical"
+  },
+  {
+   "name": "live and dead populations",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "A−L+ cells",
+   "predicate": "grown",
+   "target": "SD + excess hypoxanthine"
+  },
+  {
+   "source": "starved cells",
+   "predicate": "inoculated",
+   "target": "chemostats"
+  },
+  {
+   "source": "chemostats",
+   "predicate": "pumped",
+   "target": "fresh SD + 20 μM hypoxanthine"
+  },
+  {
+   "source": "live and dead populations",
+   "predicate": "plotted",
+   "target": "chemostats"
+  }
+ ],
+ "truncated": false
+}

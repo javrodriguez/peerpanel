@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC11628909:7:1eafd87f",
+ "entities": [
+  {
+   "name": "PagERF021",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "POD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SOD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MDA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DAB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NBT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WRKY20",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NAC17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SAD2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AGL16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KUP",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "ROS"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "POD"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "SOD"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "MDA"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "DAB"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "NBT"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "WRKY20"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "NAC17"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "SAD2"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "AGL16"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "regulate",
+   "target": "KUP"
+  }
+ ],
+ "truncated": false
+}

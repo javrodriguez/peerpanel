@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13524880:0:341ac4cc",
+ "entities": [
+  {
+   "name": "Trypanosoma brucei",
+   "type": "organism"
+  },
+  {
+   "name": "AAT10.2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Doris Rentsch",
+   "type": "organism"
+  },
+  {
+   "name": "Journal of Biological Chemistry",
+   "type": "organism"
+  },
+  {
+   "name": "American Society for Biochemistry and Molecular Biology",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Leishmania",
+   "type": "organism"
+  },
+  {
+   "name": "Trypanosoma cruzi",
+   "type": "organism"
+  },
+  {
+   "name": "Glossina genus",
+   "type": "organism"
+  },
+  {
+   "name": "TCA cycle",
+   "type": "chemical"
+  },
+  {
+   "name": "TERT",
+   "type": "chemical"
+  },
+  {
+   "name": "Tet",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Trypanosoma brucei",
+   "predicate": "has_transporter",
+   "target": "AAT10.2"
+  },
+  {
+   "source": "Doris Rentsch",
+   "predicate": "corresponds",
+   "target": "Journal of Biological Chemistry"
+  },
+  {
+   "source": "Journal of Biological Chemistry",
+   "predicate": "published",
+   "target": "AAT10.2"
+  },
+  {
+   "source": "American Society for Biochemistry and Molecular Biology",
+   "predicate": "published",
+   "target": "Journal of Biological Chemistry"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "expresses",
+   "target": "AAT10.2"
+  },
+  {
+   "source": "Leishmania",
+   "predicate": "has_transporter",
+   "target": "AAT10.2"
+  },
+  {
+   "source": "Trypanosoma cruzi",
+   "predicate": "has_transporter",
+   "target": "AAT10.2"
+  },
+  {
+   "source": "Glossina genus",
+   "predicate": "transmits",
+   "target": "Trypanosoma brucei"
+  }
+ ],
+ "truncated": false
+}

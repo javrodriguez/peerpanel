@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC6912988:4:7df73191",
+ "entities": [
+  {
+   "name": "StringTie2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FLAIR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Traphlor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PacBio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ONT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila melanogaster",
+   "type": "organism"
+  },
+  {
+   "name": "Homo sapiens",
+   "type": "organism"
+  },
+  {
+   "name": "PBSIM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA simulator",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "human chromosome 19",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NPcDNA",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "StringTie2",
+   "predicate": "performed better than",
+   "target": "Traphlor"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "performed better than",
+   "target": "FLAIR"
+  },
+  {
+   "source": "FLAIR",
+   "predicate": "performed better than",
+   "target": "Traphlor"
+  }
+ ],
+ "truncated": false
+}

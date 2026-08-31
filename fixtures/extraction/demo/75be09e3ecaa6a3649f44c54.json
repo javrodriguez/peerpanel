@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC10440040:14:9dfc046e",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "GPD1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "nitrogen starvation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nitrogen depletion",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulphate",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acid biosynthesis pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "carotenoid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "acetyl-CoA flux",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "BOT-A2",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_promoter",
+   "target": "GPD1"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_promoter",
+   "target": "GFP"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "is_regulated_by",
+   "target": "nitrogen starvation"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "is_regulated_by",
+   "target": "nitrogen depletion"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "expresses",
+   "target": "GFP"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_gene",
+   "target": "GPD1"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_gene",
+   "target": "GFP"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_process",
+   "target": "fatty acid biosynthesis pathway"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_process",
+   "target": "carotenoid production"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_process",
+   "target": "acetyl-CoA flux"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is_strain_of",
+   "target": "Rhodotorula toruloides"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "has_promoter",
+   "target": "GPD1"
+  }
+ ],
+ "truncated": false
+}

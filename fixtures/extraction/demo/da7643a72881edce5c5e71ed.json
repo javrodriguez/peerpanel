@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13410889:2:bb707032",
+ "entities": [
+  {
+   "name": "JUB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GAL4AD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EDLLAD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YVG",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GER",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PMEI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PTEF1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LACI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TTEF1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CYC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TDH3",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "JUB1",
+   "predicate": "expression",
+   "target": "GAL4AD"
+  },
+  {
+   "source": "JUB1",
+   "predicate": "expression",
+   "target": "EDLLAD"
+  },
+  {
+   "source": "JUB1",
+   "predicate": "expression",
+   "target": "YVG"
+  },
+  {
+   "source": "JUB1",
+   "predicate": "expression",
+   "target": "GER"
+  },
+  {
+   "source": "PMEI",
+   "predicate": "cuts",
+   "target": "URA3"
+  },
+  {
+   "source": "PTEF1",
+   "predicate": "expression",
+   "target": "LACI"
+  },
+  {
+   "source": "TTEF1",
+   "predicate": "expression",
+   "target": "CYC1"
+  }
+ ],
+ "truncated": false
+}

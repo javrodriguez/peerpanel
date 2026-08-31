@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13515017:10:4241fb0c",
+ "entities": [
+  {
+   "name": "Terminal amplification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "human genome",
+   "type": "organism"
+  },
+  {
+   "name": "mmBIR",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Telomere",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Telomere-to-Telomere (T-2-T) human genome assembly",
+   "type": "organism"
+  },
+  {
+   "name": "T-2-T genome",
+   "type": "organism"
+  },
+  {
+   "name": "UCSC genome browser",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chromosome 18p",
+   "type": "organism"
+  },
+  {
+   "name": "Telomere adjacent sequence",
+   "type": "organism"
+  },
+  {
+   "name": "TUBB8B1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LINC RNAs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Terminal amplification",
+   "predicate": "occurs_in",
+   "target": "human genome"
+  },
+  {
+   "source": "mmBIR",
+   "predicate": "involved_in",
+   "target": "Telomere"
+  },
+  {
+   "source": "Telomere",
+   "predicate": "capped_by",
+   "target": "Telomere adjacent sequence"
+  },
+  {
+   "source": "T-2-T genome",
+   "predicate": "contains",
+   "target": "Chromosome 18p"
+  },
+  {
+   "source": "UCSC genome browser",
+   "predicate": "used_for",
+   "target": "T-2-T genome"
+  },
+  {
+   "source": "TUBB8B1",
+   "predicate": "located_in",
+   "target": "Chromosome 18p"
+  },
+  {
+   "source": "LINC RNAs",
+   "predicate": "located_in",
+   "target": "Chromosome 18p"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "mmBIR"
+  },
+  {
+   "source": "Telomere adjacent sequence",
+   "predicate": "contains",
+   "target": "TUBB8B1"
+  },
+  {
+   "source": "Telomere adjacent sequence",
+   "predicate": "contains",
+   "target": "LINC RNAs"
+  },
+  {
+   "source": "Telomere adjacent sequence",
+   "predicate": "contains",
+   "target": "SUL1"
+  },
+  {
+   "source": "mmBIR",
+   "predicate": "involved_in",
+   "target": "Telomere adjacent sequence"
+  }
+ ],
+ "truncated": false
+}

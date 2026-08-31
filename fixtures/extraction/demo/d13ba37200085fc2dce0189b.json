@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13453879:0:03c11d04",
+ "entities": [
+  {
+   "name": "Ma Bingsong",
+   "type": "organism"
+  },
+  {
+   "name": "Xu Longjie",
+   "type": "organism"
+  },
+  {
+   "name": "Liang Shuang",
+   "type": "organism"
+  },
+  {
+   "name": "Han Shuya",
+   "type": "organism"
+  },
+  {
+   "name": "Ma Cunqiang",
+   "type": "organism"
+  },
+  {
+   "name": "Li Xinghui",
+   "type": "organism"
+  },
+  {
+   "name": "Xu Yongquan",
+   "type": "organism"
+  },
+  {
+   "name": "Shi Yue",
+   "type": "organism"
+  },
+  {
+   "name": "Yin Junfeng",
+   "type": "organism"
+  },
+  {
+   "name": "Papiliotrema",
+   "type": "organism"
+  },
+  {
+   "name": "Hannaella",
+   "type": "organism"
+  },
+  {
+   "name": "Toxicocladosporium",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

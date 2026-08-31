@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13429971:6:c4a1783f",
+ "entities": [
+  {
+   "name": "Hinnebusch AG",
+   "type": "organism"
+  },
+  {
+   "name": "GCN4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "general amino acid control",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Ann Rev Microbiol",
+   "type": "chemical"
+  },
+  {
+   "name": "Chaveroux C",
+   "type": "organism"
+  },
+  {
+   "name": "Lambert‐Langlais S",
+   "type": "organism"
+  },
+  {
+   "name": "Cherasse Y",
+   "type": "organism"
+  },
+  {
+   "name": "Averous J",
+   "type": "organism"
+  },
+  {
+   "name": "Parry L",
+   "type": "organism"
+  },
+  {
+   "name": "Carraro V",
+   "type": "organism"
+  },
+  {
+   "name": "Jousse C",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hinnebusch AG",
+   "predicate": "author",
+   "target": "GCN4"
+  },
+  {
+   "source": "Hinnebusch AG",
+   "predicate": "author",
+   "target": "general amino acid control"
+  },
+  {
+   "source": "Hinnebusch AG",
+   "predicate": "author",
+   "target": "yeast"
+  },
+  {
+   "source": "Hinnebusch AG",
+   "predicate": "author",
+   "target": "Ann Rev Microbiol"
+  },
+  {
+   "source": "Chaveroux C",
+   "predicate": "author",
+   "target": "Lambert‐Langlais S"
+  },
+  {
+   "source": "Chaveroux C",
+   "predicate": "author",
+   "target": "Cherasse Y"
+  },
+  {
+   "source": "Chaveroux C",
+   "predicate": "author",
+   "target": "Averous J"
+  },
+  {
+   "source": "Chaveroux C",
+   "predicate": "author",
+   "target": "Parry L"
+  },
+  {
+   "source": "Chaveroux C",
+   "predicate": "author",
+   "target": "Carraro V"
+  },
+  {
+   "source": "Chaveroux C",
+   "predicate": "author",
+   "target": "Jousse C"
+  }
+ ],
+ "truncated": false
+}

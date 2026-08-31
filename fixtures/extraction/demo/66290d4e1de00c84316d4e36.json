@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC7382830:5:ba628166",
+ "entities": [
+  {
+   "name": "Key mutations",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bottom-up convergence",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mutated features",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "multiscaled annotation framework",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "convergence",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mutated coding and non-coding regulatory features",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "broader annotations",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "existing ALE experiment mutations",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Non-coding mutations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "beneficial role",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ALE phenotypes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "both coding and non-coding mutations",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Key mutations",
+   "predicate": "increase",
+   "target": "bottom-up convergence"
+  },
+  {
+   "source": "bottom-up convergence",
+   "predicate": "converge",
+   "target": "mutated features"
+  },
+  {
+   "source": "mutated features",
+   "predicate": "converge",
+   "target": "multiscaled annotation framework"
+  },
+  {
+   "source": "mutated coding and non-coding regulatory features",
+   "predicate": "converge",
+   "target": "broader annotations"
+  },
+  {
+   "source": "existing ALE experiment mutations",
+   "predicate": "involve",
+   "target": "Non-coding mutations"
+  },
+  {
+   "source": "Non-coding mutations",
+   "predicate": "play",
+   "target": "beneficial role"
+  },
+  {
+   "source": "beneficial role",
+   "predicate": "characterize",
+   "target": "ALE phenotypes"
+  }
+ ],
+ "truncated": false
+}

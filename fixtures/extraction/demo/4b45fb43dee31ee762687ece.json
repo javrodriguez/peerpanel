@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC8116571:0:767349e2",
+ "entities": [
+  {
+   "name": "Frontiers in Bioengineering and Biotechnology",
+   "type": "organism"
+  },
+  {
+   "name": "Monteiro de Oliveira Paola",
+   "type": "organism"
+  },
+  {
+   "name": "Aborneva Daria",
+   "type": "organism"
+  },
+  {
+   "name": "Bonturi Nemailla",
+   "type": "organism"
+  },
+  {
+   "name": "Petri-Jaan Lahtvee",
+   "type": "organism"
+  },
+  {
+   "name": "Julio Cesar Santos",
+   "type": "organism"
+  },
+  {
+   "name": "Volkmar Passoth",
+   "type": "organism"
+  },
+  {
+   "name": "Sujit Jagtap",
+   "type": "organism"
+  },
+  {
+   "name": "Boris Ugarte Stambuk",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

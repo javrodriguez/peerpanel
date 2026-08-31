@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13456448:8:19c5391f",
+ "entities": [
+  {
+   "name": "Cryptococcus",
+   "type": "organism"
+  },
+  {
+   "name": "C. neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "azoles",
+   "type": "chemical"
+  },
+  {
+   "name": "polyenes",
+   "type": "chemical"
+  },
+  {
+   "name": "fluconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "itraconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "voriconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "flucytosine",
+   "type": "chemical"
+  },
+  {
+   "name": "fluorouracil",
+   "type": "chemical"
+  },
+  {
+   "name": "amphotericin B",
+   "type": "chemical"
+  },
+  {
+   "name": "Aspergillus nidulans",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cryptococcus",
+   "predicate": "has enhanced drug transport",
+   "target": "flucytosine"
+  }
+ ],
+ "truncated": false
+}

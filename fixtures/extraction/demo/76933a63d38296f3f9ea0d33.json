@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC9487109:1:3ce006fc",
+ "entities": [
+  {
+   "name": "Stephen DeFelici",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Folate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Vitamin B9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Folic acid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dihydrofolate reductase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tetrahydrofolate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "5-methyl-THF",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lactococcus lactis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Streptococcus thermophilus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metschnikowia lochheadii",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Dihydrofolate reductase",
+   "predicate": "reduces",
+   "target": "Folic acid"
+  },
+  {
+   "source": "Folic acid",
+   "predicate": "is reduced to",
+   "target": "Tetrahydrofolate"
+  }
+ ],
+ "truncated": false
+}

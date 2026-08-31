@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC10832132:10:4dfade7f",
+ "entities": [
+  {
+   "name": "HSPA1A",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSPA2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Heat shock proteins",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSPs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UniProt ID",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HS71A_HUMAN",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "P0DMV8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UniProt ID",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HS71B_HUMAN",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "P0DMV9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetGO3",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "HSPA1A",
+   "predicate": "has_sequence_similarity",
+   "target": "HSPA2"
+  }
+ ],
+ "truncated": false
+}

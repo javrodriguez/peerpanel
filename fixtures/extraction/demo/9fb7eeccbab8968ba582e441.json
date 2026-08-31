@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC9825584:4:d2d47b36",
+ "entities": [
+  {
+   "name": "Gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OrthoDB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Uniprot",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "P12345",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PHUM213810",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Orco",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Alveolata",
+   "type": "organism"
+  },
+  {
+   "name": "human body louse",
+   "type": "organism"
+  },
+  {
+   "name": "fruit fly",
+   "type": "organism"
+  },
+  {
+   "name": "insects",
+   "type": "organism"
+  },
+  {
+   "name": "UniProt",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ensembl",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gene",
+   "predicate": "has_identifier",
+   "target": "P12345"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "has_ortholog",
+   "target": "Orco"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "has_ortholog",
+   "target": "PHUM213810"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_ortholog",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "Ensembl",
+   "predicate": "has_ortholog",
+   "target": "OrthoDB"
+  }
+ ],
+ "truncated": false
+}

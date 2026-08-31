@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13515017:2:75ab4fec",
+ "entities": [
+  {
+   "name": "Gresham",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS228",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YKU70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "chr II",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "telomere",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Y'",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ITS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pol32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rad51",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rad52",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gresham",
+   "predicate": "amplifies",
+   "target": "SUL1"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "telomere"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "Y'"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "ITS"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "telomere"
+  },
+  {
+   "source": "telomere",
+   "predicate": "has",
+   "target": "Y'"
+  },
+  {
+   "source": "telomere",
+   "predicate": "has",
+   "target": "ITS"
+  }
+ ],
+ "truncated": false
+}

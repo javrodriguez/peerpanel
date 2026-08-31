@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC9757880:7:6c978e5a",
+ "entities": [
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "NaHS",
+   "type": "chemical"
+  },
+  {
+   "name": "YLL058Wp",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Str2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cystathionine",
+   "type": "chemical"
+  },
+  {
+   "name": "OAHS",
+   "type": "chemical"
+  },
+  {
+   "name": "homoserine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YLL058Wp",
+   "predicate": "is_ortholog_of",
+   "target": "Str2p"
+  },
+  {
+   "source": "Met17p",
+   "predicate": "is_ortholog_of",
+   "target": "Str2p"
+  },
+  {
+   "source": "YLL058Wp",
+   "predicate": "has_similar_substrate",
+   "target": "OAHS"
+  },
+  {
+   "source": "Met17p",
+   "predicate": "has_similar_substrate",
+   "target": "OAHS"
+  },
+  {
+   "source": "Str2p",
+   "predicate": "has_similar_substrate",
+   "target": "OAHS"
+  }
+ ],
+ "truncated": false
+}

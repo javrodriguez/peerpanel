@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515273:0:480a4d27",
+ "entities": [
+  {
+   "name": "Pichia manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "Carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "Li Pei",
+   "type": "organism"
+  },
+  {
+   "name": "Wu Wenqing",
+   "type": "organism"
+  },
+  {
+   "name": "Pan Wenmin",
+   "type": "organism"
+  },
+  {
+   "name": "Yu Lu",
+   "type": "organism"
+  },
+  {
+   "name": "Paramithiotis Spiros",
+   "type": "organism"
+  },
+  {
+   "name": "Guizhou Key Laboratory of Miao Medicine",
+   "type": "organism"
+  },
+  {
+   "name": "Qiandongnan Engineering and Technology Research Center",
+   "type": "organism"
+  },
+  {
+   "name": "Kaili University",
+   "type": "organism"
+  },
+  {
+   "name": "Multidisciplinary Digital Publishing Institute",
+   "type": "organism"
+  },
+  {
+   "name": "MDPI",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

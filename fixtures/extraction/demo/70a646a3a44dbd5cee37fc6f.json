@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC7470746:12:afc45f7e",
+ "entities": [
+  {
+   "name": "Cells",
+   "type": "organism"
+  },
+  {
+   "name": "Continuous culturing device",
+   "type": "chemical"
+  },
+  {
+   "name": "Chemostat",
+   "type": "chemical"
+  },
+  {
+   "name": "Turbidostat",
+   "type": "chemical"
+  },
+  {
+   "name": "Nutrient media",
+   "type": "chemical"
+  },
+  {
+   "name": "PharMed rubber tubing",
+   "type": "chemical"
+  },
+  {
+   "name": "PTFE tubing",
+   "type": "chemical"
+  },
+  {
+   "name": "Cole Parmer C-Flex tubing",
+   "type": "chemical"
+  },
+  {
+   "name": "Welco WPM1 peristaltic pump",
+   "type": "chemical"
+  },
+  {
+   "name": "LabView program",
+   "type": "chemical"
+  },
+  {
+   "name": "OD measurements",
+   "type": "chemical"
+  },
+  {
+   "name": "OD",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cells",
+   "predicate": "grown in",
+   "target": "Continuous culturing device"
+  },
+  {
+   "source": "Chemostat",
+   "predicate": "maintains a limited nutrient environment",
+   "target": "Cells"
+  },
+  {
+   "source": "Turbidostat",
+   "predicate": "maintains a constant cell density",
+   "target": "Cells"
+  },
+  {
+   "source": "Continuous culturing device",
+   "predicate": "has",
+   "target": "Nutrient media"
+  },
+  {
+   "source": "Nutrient media",
+   "predicate": "is fed to",
+   "target": "Cells"
+  },
+  {
+   "source": "Continuous culturing device",
+   "predicate": "has",
+   "target": "OD measurements"
+  }
+ ],
+ "truncated": false
+}

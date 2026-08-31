@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13462271:1:38b7cf6b",
+ "entities": [
+  {
+   "name": "Eukaryotic chromosomes",
+   "type": "organism"
+  },
+  {
+   "name": "nucleosomes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "histone octamer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H2A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H2B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Replication",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "chromatin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol ε",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol3",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Eukaryotic chromosomes",
+   "predicate": "consists_of",
+   "target": "nucleosomes"
+  },
+  {
+   "source": "nucleosomes",
+   "predicate": "contains",
+   "target": "histone octamer"
+  },
+  {
+   "source": "histone octamer",
+   "predicate": "contains",
+   "target": "H2A"
+  },
+  {
+   "source": "histone octamer",
+   "predicate": "contains",
+   "target": "H2B"
+  },
+  {
+   "source": "Replication",
+   "predicate": "involves",
+   "target": "chromatin"
+  },
+  {
+   "source": "chromatin",
+   "predicate": "involves",
+   "target": "Pol ε"
+  },
+  {
+   "source": "chromatin",
+   "predicate": "involves",
+   "target": "Pol1"
+  },
+  {
+   "source": "chromatin",
+   "predicate": "involves",
+   "target": "Pol2"
+  },
+  {
+   "source": "chromatin",
+   "predicate": "involves",
+   "target": "Pol3"
+  }
+ ],
+ "truncated": false
+}

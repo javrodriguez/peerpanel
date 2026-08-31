@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13470552:10:4c646f27",
+ "entities": [
+  {
+   "name": "mitochondrial fragmentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Ndi1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nuc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "ER",
+   "type": "organism"
+  },
+  {
+   "name": "Emc1-2GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Elo3-mTagBFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GFP-HDEL",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ire1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "Ybh3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Prc1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mitochondrial fragmentation",
+   "predicate": "is associated with",
+   "target": "Ndi1"
+  },
+  {
+   "source": "mitochondrial fragmentation",
+   "predicate": "is associated with",
+   "target": "Nuc1"
+  },
+  {
+   "source": "ER",
+   "predicate": "remains largely preserved",
+   "target": "Emc1-2GFP"
+  },
+  {
+   "source": "ER",
+   "predicate": "remains largely preserved",
+   "target": "Elo3-mTagBFP"
+  },
+  {
+   "source": "vacuole",
+   "predicate": "shows vacuolar membrane enrichment",
+   "target": "Ybh3"
+  },
+  {
+   "source": "vacuole",
+   "predicate": "shows redistribution of",
+   "target": "Prc1"
+  }
+ ],
+ "truncated": false
+}

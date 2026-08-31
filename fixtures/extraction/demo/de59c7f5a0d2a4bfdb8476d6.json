@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC12278674:13:3f26d554",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "IFO0880",
+   "type": "organism"
+  },
+  {
+   "name": "NBRC 0880",
+   "type": "organism"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "peptone",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "NH4Cl",
+   "type": "chemical"
+  },
+  {
+   "name": "Na2HPO4",
+   "type": "chemical"
+  },
+  {
+   "name": "KH2PO4",
+   "type": "chemical"
+  },
+  {
+   "name": "liquid nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "agar",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "maintained on",
+   "target": "YPD"
+  },
+  {
+   "source": "YPD",
+   "predicate": "contains",
+   "target": "glucose"
+  },
+  {
+   "source": "YPD",
+   "predicate": "contains",
+   "target": "peptone"
+  },
+  {
+   "source": "YPD",
+   "predicate": "contains",
+   "target": "yeast extract"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "inoculated into",
+   "target": "YPD"
+  }
+ ],
+ "truncated": false
+}

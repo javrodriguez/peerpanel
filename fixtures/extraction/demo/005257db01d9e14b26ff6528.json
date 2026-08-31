@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC7334043:1:c08bd3af",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Torula rubescen",
+   "type": "organism"
+  },
+  {
+   "name": "Banno",
+   "type": "organism"
+  },
+  {
+   "name": "Dalian",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "China",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sporidiobolaceae",
+   "type": "organism"
+  },
+  {
+   "name": "Basidiomycota",
+   "type": "organism"
+  },
+  {
+   "name": "mushrooms",
+   "type": "organism"
+  },
+  {
+   "name": "smuts",
+   "type": "organism"
+  },
+  {
+   "name": "rusts",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Lypomyces starkeyi",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "classified",
+   "target": "Basidiomycota"
+  }
+ ],
+ "truncated": false
+}

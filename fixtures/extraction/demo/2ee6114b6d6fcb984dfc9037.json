@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC6547517:11:4fd0ce80",
+ "entities": [
+  {
+   "name": "Dried lipid samples",
+   "type": "chemical"
+  },
+  {
+   "name": "hexane",
+   "type": "chemical"
+  },
+  {
+   "name": "BF3",
+   "type": "chemical"
+  },
+  {
+   "name": "Appelqvist",
+   "type": "organism"
+  },
+  {
+   "name": "Methyl esters",
+   "type": "chemical"
+  },
+  {
+   "name": "gas chromatography",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "standard mixture",
+   "type": "chemical"
+  },
+  {
+   "name": "68A",
+   "type": "chemical"
+  },
+  {
+   "name": "Nu-Check",
+   "type": "organism"
+  },
+  {
+   "name": "Elysian",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "retention times",
+   "type": "chemical"
+  },
+  {
+   "name": "double binding or unsaturation index",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Dried lipid samples",
+   "predicate": "dissolved_in",
+   "target": "hexane"
+  },
+  {
+   "source": "Dried lipid samples",
+   "predicate": "methylated_with",
+   "target": "BF3"
+  },
+  {
+   "source": "Methyl esters",
+   "predicate": "analyzed_by",
+   "target": "gas chromatography"
+  },
+  {
+   "source": "double binding or unsaturation index",
+   "predicate": "calculated_from",
+   "target": "retention times"
+  }
+ ],
+ "truncated": false
+}

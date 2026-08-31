@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10398944:2:0e8ec951",
+ "entities": [
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ecm22",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Asg1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cha4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Euf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Xlr-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ara-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pdr-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_11990",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_9588",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HGT-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HGT-2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

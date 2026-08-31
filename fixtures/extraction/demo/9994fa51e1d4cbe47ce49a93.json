@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC6402699:13:eda8b1e7",
+ "entities": [
+  {
+   "name": "cells",
+   "type": "organism"
+  },
+  {
+   "name": "metabolites",
+   "type": "chemical"
+  },
+  {
+   "name": "microscope",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nikon Eclipse TE-2000U",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CCD camera",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LabVIEW",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ImageJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bioact",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ET DsRed filter cube",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ET GFP filter cube",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Costar 3370",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chemostat",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "microscope",
+   "predicate": "equipped_with",
+   "target": "CCD camera"
+  },
+  {
+   "source": "microscope",
+   "predicate": "equipped_with",
+   "target": "LabVIEW"
+  },
+  {
+   "source": "microscope",
+   "predicate": "equipped_with",
+   "target": "ImageJ"
+  },
+  {
+   "source": "microscope",
+   "predicate": "equipped_with",
+   "target": "Bioact"
+  },
+  {
+   "source": "microscope",
+   "predicate": "equipped_with",
+   "target": "ET DsRed filter cube"
+  },
+  {
+   "source": "microscope",
+   "predicate": "equipped_with",
+   "target": "ET GFP filter cube"
+  },
+  {
+   "source": "microscope",
+   "predicate": "imaged",
+   "target": "cells"
+  }
+ ],
+ "truncated": false
+}

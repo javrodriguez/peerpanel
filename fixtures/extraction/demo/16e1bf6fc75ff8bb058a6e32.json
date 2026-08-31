@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13413155:5:8df588c9",
+ "entities": [
+  {
+   "name": "A. brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "S. vesicarium",
+   "type": "organism"
+  },
+  {
+   "name": "A. brassicae",
+   "type": "organism"
+  },
+  {
+   "name": "A. alternantherae",
+   "type": "organism"
+  },
+  {
+   "name": "A. alternata",
+   "type": "organism"
+  },
+  {
+   "name": "A. argyranthemi",
+   "type": "organism"
+  },
+  {
+   "name": "A. burnsii",
+   "type": "organism"
+  },
+  {
+   "name": "A. eryngii",
+   "type": "organism"
+  },
+  {
+   "name": "A. gypsophilae",
+   "type": "organism"
+  },
+  {
+   "name": "A. limaciformis",
+   "type": "organism"
+  },
+  {
+   "name": "A. photistica",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "A. brassicicola",
+   "predicate": "isolate",
+   "target": "Ab0920a"
+  }
+ ],
+ "truncated": false
+}

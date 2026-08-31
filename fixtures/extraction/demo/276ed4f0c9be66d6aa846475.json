@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13450799:16:9fa58008",
+ "entities": [
+  {
+   "name": "JSPS KAKENHI Grant Number 22K06074",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "25K09504",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLOS ONE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YGP1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PUF5",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MSN2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MSN4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HAA1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Sato et al.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLOS Data policy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Data Availability Statement",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "JSPS KAKENHI Grant Number 22K06074",
+   "predicate": "funded_by",
+   "target": "Sato et al."
+  }
+ ],
+ "truncated": false
+}

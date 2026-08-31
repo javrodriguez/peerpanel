@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13413155:11:3cc988ac",
+ "entities": [
+  {
+   "name": "Alternaria alternata",
+   "type": "organism"
+  },
+  {
+   "name": "Boscalid",
+   "type": "chemical"
+  },
+  {
+   "name": "Carboxamide fungicide",
+   "type": "chemical"
+  },
+  {
+   "name": "QoIs",
+   "type": "chemical"
+  },
+  {
+   "name": "ROS",
+   "type": "chemical"
+  },
+  {
+   "name": "Cellular death",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Hypersensitive response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Effector proteins",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SignalP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "InterPro",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pfam",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DbCAN",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

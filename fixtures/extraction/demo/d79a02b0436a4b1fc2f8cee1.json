@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC3923900:4:c4376077",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "C. curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "palmitic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "stearic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "oleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "palmitoleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "linoleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "linolenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "tyrosine",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acids",
+   "type": "chemical"
+  },
+  {
+   "name": "unsaturated fatty acids",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

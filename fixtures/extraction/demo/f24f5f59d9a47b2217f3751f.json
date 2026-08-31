@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC4125178:6:4bb71a40",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "S. aureus",
+   "type": "organism"
+  },
+  {
+   "name": "S. typhimurium",
+   "type": "organism"
+  },
+  {
+   "name": "L. monocytogenes",
+   "type": "organism"
+  },
+  {
+   "name": "B. subtilis",
+   "type": "organism"
+  },
+  {
+   "name": "B. thuringiensis",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "E. aerogenes",
+   "type": "organism"
+  },
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "A. niger",
+   "type": "organism"
+  },
+  {
+   "name": "P. italicum",
+   "type": "organism"
+  },
+  {
+   "name": "P. expansum",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

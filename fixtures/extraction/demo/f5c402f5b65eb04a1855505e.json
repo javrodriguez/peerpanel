@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13514516:10:09ea5016",
+ "entities": [
+  {
+   "name": "high-yield strain 31.1",
+   "type": "organism"
+  },
+  {
+   "name": "low-yield strain",
+   "type": "organism"
+  },
+  {
+   "name": "wild-type strain",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis cells",
+   "type": "organism"
+  },
+  {
+   "name": "12 h",
+   "type": "chemical"
+  },
+  {
+   "name": "60 h",
+   "type": "chemical"
+  },
+  {
+   "name": "fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "differentially expressed genes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GO enrichment analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG enrichment analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Venn diagrams",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "clustering",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "high-yield strain 31.1",
+   "predicate": "has",
+   "target": "differentially expressed genes"
+  },
+  {
+   "source": "low-yield strain",
+   "predicate": "has",
+   "target": "differentially expressed genes"
+  },
+  {
+   "source": "wild-type strain",
+   "predicate": "has",
+   "target": "differentially expressed genes"
+  },
+  {
+   "source": "high-yield strain 31.1",
+   "predicate": "has",
+   "target": "GO enrichment analysis"
+  },
+  {
+   "source": "low-yield strain",
+   "predicate": "has",
+   "target": "GO enrichment analysis"
+  },
+  {
+   "source": "wild-type strain",
+   "predicate": "has",
+   "target": "GO enrichment analysis"
+  }
+ ],
+ "truncated": false
+}

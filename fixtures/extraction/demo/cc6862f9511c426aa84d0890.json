@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13419736:10:a6e2a2fb",
+ "entities": [
+  {
+   "name": "substrate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "reconstituted proteasomes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "20S CP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bpa-containing base variant",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpn10",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ubiquitinated FAM-substrate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "wild-type Rpn11",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpn11AXA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PRE1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "substrate",
+   "predicate": "crosslinked_by",
+   "target": "reconstituted proteasomes"
+  },
+  {
+   "source": "reconstituted proteasomes",
+   "predicate": "contains",
+   "target": "20S CP"
+  },
+  {
+   "source": "reconstituted proteasomes",
+   "predicate": "contains",
+   "target": "Bpa-containing base variant"
+  },
+  {
+   "source": "reconstituted proteasomes",
+   "predicate": "contains",
+   "target": "lid"
+  },
+  {
+   "source": "reconstituted proteasomes",
+   "predicate": "contains",
+   "target": "Rpn10"
+  },
+  {
+   "source": "reconstituted proteasomes",
+   "predicate": "crosslinked_with",
+   "target": "ubiquitinated FAM-substrate"
+  }
+ ],
+ "truncated": false
+}

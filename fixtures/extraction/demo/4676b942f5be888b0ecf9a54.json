@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC9825514:1:b067fc2e",
+ "entities": [
+  {
+   "name": "UniProt",
+   "type": "organism"
+  },
+  {
+   "name": "UniProtKB",
+   "type": "organism"
+  },
+  {
+   "name": "UniRef",
+   "type": "organism"
+  },
+  {
+   "name": "UniParc",
+   "type": "organism"
+  },
+  {
+   "name": "AlphaFold",
+   "type": "organism"
+  },
+  {
+   "name": "DeepMind",
+   "type": "organism"
+  },
+  {
+   "name": "protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "sequence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein entry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein sequence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein feature",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "UniProt",
+   "predicate": "has_database",
+   "target": "UniProtKB"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_database",
+   "target": "UniRef"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_database",
+   "target": "UniParc"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_algorithm",
+   "target": "AlphaFold"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_algorithm",
+   "target": "DeepMind"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_protein_sequence",
+   "target": "protein"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_protein_feature",
+   "target": "protein feature"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_database",
+   "target": "database"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_protein_entry",
+   "target": "protein entry"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_protein_sequence",
+   "target": "protein sequence"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_protein_feature",
+   "target": "protein feature"
+  },
+  {
+   "source": "UniProt",
+   "predicate": "has_database",
+   "target": "UniProtKB"
+  }
+ ],
+ "truncated": false
+}

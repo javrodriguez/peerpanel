@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC1409804:1:d1fb8724",
+ "entities": [
+  {
+   "name": "ExonHunter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Combiner",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GenomeScan",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EST",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNA sequence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "genomic sequence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "splice site",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "exon",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "intron",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CpG island finder",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

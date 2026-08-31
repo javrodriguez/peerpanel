@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC5484544:7:8da5ac37",
+ "entities": [
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "SCH9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET22",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BY4741",
+   "type": "organism"
+  },
+  {
+   "name": "pHv",
+   "type": "chemical"
+  },
+  {
+   "name": "BCECF-AM",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "rapamycin",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "has V-ATPase",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has pHv",
+   "target": "pHv"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has Sch9",
+   "target": "SCH9"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7690147:7:22f979e6",
+ "entities": [
+  {
+   "name": "R. glutinis ZHK",
+   "type": "organism"
+  },
+  {
+   "name": "torulene",
+   "type": "chemical"
+  },
+  {
+   "name": "torularhodin",
+   "type": "chemical"
+  },
+  {
+   "name": "β-carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "lycopene",
+   "type": "chemical"
+  },
+  {
+   "name": "Cystofilobasidium infirmominiatum",
+   "type": "organism"
+  },
+  {
+   "name": "Neurospora crassa",
+   "type": "organism"
+  },
+  {
+   "name": "GGPP synthase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lycopene cyclase/phytoene synthase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "phytoene desaturase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "carotene hydroxylase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "monooxygenase",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_carotenoid",
+   "target": "torulene"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_carotenoid",
+   "target": "torularhodin"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_carotenoid",
+   "target": "β-carotene"
+  },
+  {
+   "source": "torulene",
+   "predicate": "is_intermediate_product_of",
+   "target": "torularhodin"
+  },
+  {
+   "source": "Cystofilobasidium infirmominiatum",
+   "predicate": "has_biosynthetic_pathway",
+   "target": "torulene"
+  },
+  {
+   "source": "Neurospora crassa",
+   "predicate": "has_gene",
+   "target": "GGPP synthase"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_gene",
+   "target": "lycopene cyclase/phytoene synthase"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_gene",
+   "target": "phytoene desaturase"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_gene",
+   "target": "carotene hydroxylase"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_gene",
+   "target": "monooxygenase"
+  },
+  {
+   "source": "torulene",
+   "predicate": "is_catalyzed_by",
+   "target": "carotene hydroxylase"
+  },
+  {
+   "source": "torulene",
+   "predicate": "is_catalyzed_by",
+   "target": "monooxygenase"
+  }
+ ],
+ "truncated": false
+}

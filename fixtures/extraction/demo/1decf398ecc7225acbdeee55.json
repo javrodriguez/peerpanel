@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13485822:2:c79918d9",
+ "entities": [
+  {
+   "name": "M. pachydermatis",
+   "type": "organism"
+  },
+  {
+   "name": "Duo-Bakt Veterinary Microbiology Laboratory",
+   "type": "organism"
+  },
+  {
+   "name": "bulldog",
+   "type": "organism"
+  },
+  {
+   "name": "Bernese Mountain Dog",
+   "type": "organism"
+  },
+  {
+   "name": "KTZ",
+   "type": "chemical"
+  },
+  {
+   "name": "terbinafine",
+   "type": "chemical"
+  },
+  {
+   "name": "CLT",
+   "type": "chemical"
+  },
+  {
+   "name": "MCZ",
+   "type": "chemical"
+  },
+  {
+   "name": "ITR",
+   "type": "chemical"
+  },
+  {
+   "name": "Sabouraud dextrose agar",
+   "type": "chemical"
+  },
+  {
+   "name": "Sabouraud dextrose broth",
+   "type": "chemical"
+  },
+  {
+   "name": "chloramphenicol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "M. pachydermatis",
+   "predicate": "isolated from",
+   "target": "bulldog"
+  },
+  {
+   "source": "M. pachydermatis",
+   "predicate": "isolated from",
+   "target": "Bernese Mountain Dog"
+  },
+  {
+   "source": "KTZ",
+   "predicate": "used for treatment",
+   "target": "M. pachydermatis"
+  },
+  {
+   "source": "terbinafine",
+   "predicate": "used for treatment",
+   "target": "M. pachydermatis"
+  },
+  {
+   "source": "CLT",
+   "predicate": "used for treatment",
+   "target": "M. pachydermatis"
+  },
+  {
+   "source": "MCZ",
+   "predicate": "used for treatment",
+   "target": "M. pachydermatis"
+  },
+  {
+   "source": "ITR",
+   "predicate": "used for treatment",
+   "target": "M. pachydermatis"
+  },
+  {
+   "source": "M. pachydermatis",
+   "predicate": "grown on",
+   "target": "Sabouraud dextrose agar"
+  },
+  {
+   "source": "M. pachydermatis",
+   "predicate": "grown in",
+   "target": "Sabouraud dextrose broth"
+  },
+  {
+   "source": "KTZ",
+   "predicate": "added to",
+   "target": "M. pachydermatis"
+  },
+  {
+   "source": "M. pachydermatis",
+   "predicate": "treated with",
+   "target": "KTZ"
+  }
+ ],
+ "truncated": false
+}

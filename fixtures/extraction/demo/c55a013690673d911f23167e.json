@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13456448:10:42269116",
+ "entities": [
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "Scedosporium/Lomentospora",
+   "type": "organism"
+  },
+  {
+   "name": "S. minutisporum",
+   "type": "organism"
+  },
+  {
+   "name": "S. apiospermum",
+   "type": "organism"
+  },
+  {
+   "name": "S. aurantiacum",
+   "type": "organism"
+  },
+  {
+   "name": "L. prolificans",
+   "type": "organism"
+  },
+  {
+   "name": "conidia",
+   "type": "organism"
+  },
+  {
+   "name": "germ tube",
+   "type": "organism"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "mammalian hosts",
+   "type": "organism"
+  },
+  {
+   "name": "laryngeal epithelial cells",
+   "type": "organism"
+  },
+  {
+   "name": "lung epithelial cells",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Scedosporium/Lomentospora",
+   "predicate": "germinate",
+   "target": "CO2"
+  },
+  {
+   "source": "Scedosporium/Lomentospora",
+   "predicate": "respond",
+   "target": "CO2"
+  },
+  {
+   "source": "Scedosporium/Lomentospora",
+   "predicate": "activate",
+   "target": "mitochondria"
+  },
+  {
+   "source": "Scedosporium/Lomentospora",
+   "predicate": "invade",
+   "target": "mammalian hosts"
+  },
+  {
+   "source": "Scedosporium/Lomentospora",
+   "predicate": "penetrate",
+   "target": "laryngeal epithelial cells"
+  },
+  {
+   "source": "Scedosporium/Lomentospora",
+   "predicate": "penetrate",
+   "target": "lung epithelial cells"
+  }
+ ],
+ "truncated": false
+}

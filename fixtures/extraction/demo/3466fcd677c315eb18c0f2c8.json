@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC3923900:1:899be825",
+ "entities": [
+  {
+   "name": "biodiesel",
+   "type": "chemical"
+  },
+  {
+   "name": "Jatropha curcas",
+   "type": "chemical"
+  },
+  {
+   "name": "oleaginous microorganisms",
+   "type": "organism"
+  },
+  {
+   "name": "yeasts",
+   "type": "organism"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "FTIR spectroscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fourier transform infrared spectroscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "microbial lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "single-cell oils",
+   "type": "chemical"
+  },
+  {
+   "name": "oleaginous fungi",
+   "type": "organism"
+  },
+  {
+   "name": "edible vegetable oils",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "oleaginous microorganisms",
+   "predicate": "accumulate",
+   "target": "lipids"
+  },
+  {
+   "source": "yeasts",
+   "predicate": "utilize",
+   "target": "glycerol"
+  },
+  {
+   "source": "yeasts",
+   "predicate": "accumulate",
+   "target": "lipids"
+  }
+ ],
+ "truncated": false
+}

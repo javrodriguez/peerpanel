@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC10832132:5:46a7897e",
+ "entities": [
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UMAP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ProMAP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ProSIM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetGO3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GO",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "module",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LSTM",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AnnoPRO",
+   "predicate": "uses",
+   "target": "ProMAP"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "uses",
+   "target": "ProSIM"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "uses",
+   "target": "UMAP"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "uses",
+   "target": "PCA"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "compared_to",
+   "target": "DeepGOPlus"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "compared_to",
+   "target": "NetGO3"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "compared_to",
+   "target": "PFmulDL"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has",
+   "target": "module"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "has",
+   "target": "LSTM"
+  }
+ ],
+ "truncated": false
+}

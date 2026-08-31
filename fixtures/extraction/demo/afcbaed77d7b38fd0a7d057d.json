@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13464734:1:32550537",
+ "entities": [
+  {
+   "name": "Glycosyltransferases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UDP-glycosyltransferases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UGTs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoUGT71K2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoMYB102",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UDP-glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "UDP-sugars",
+   "type": "chemical"
+  },
+  {
+   "name": "flavonoid glycosides",
+   "type": "chemical"
+  },
+  {
+   "name": "flavonoids",
+   "type": "chemical"
+  },
+  {
+   "name": "phenylalanine",
+   "type": "chemical"
+  },
+  {
+   "name": "ABA",
+   "type": "chemical"
+  },
+  {
+   "name": "D. officinale",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Glycosyltransferases",
+   "predicate": "generate",
+   "target": "flavonoid glycosides"
+  },
+  {
+   "source": "phenylalanine",
+   "predicate": "originate",
+   "target": "flavonoids"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "express",
+   "target": "DoUGT71K2"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13518488:7:5525933a",
+ "entities": [
+  {
+   "name": "Initial glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Final glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "Maximum specific growth rate",
+   "type": "chemical"
+  },
+  {
+   "name": "Biomass productivity",
+   "type": "chemical"
+  },
+  {
+   "name": "Apparent substrate-to-biomass yield",
+   "type": "chemical"
+  },
+  {
+   "name": "Initial nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "Final nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "Nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "Protein",
+   "type": "chemical"
+  },
+  {
+   "name": "P. albidus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Initial glucose",
+   "predicate": "consumed by",
+   "target": "Glucose"
+  },
+  {
+   "source": "Glucose",
+   "predicate": "consumed by",
+   "target": "Biomass"
+  },
+  {
+   "source": "Biomass",
+   "predicate": "produced by",
+   "target": "P. albidus"
+  },
+  {
+   "source": "Maximum specific growth rate",
+   "predicate": "of",
+   "target": "Biomass"
+  },
+  {
+   "source": "Biomass productivity",
+   "predicate": "of",
+   "target": "Biomass"
+  },
+  {
+   "source": "Apparent substrate-to-biomass yield",
+   "predicate": "of",
+   "target": "Biomass"
+  },
+  {
+   "source": "Initial nitrogen",
+   "predicate": "consumed by",
+   "target": "Nitrogen"
+  },
+  {
+   "source": "Final nitrogen",
+   "predicate": "consumed by",
+   "target": "Nitrogen"
+  },
+  {
+   "source": "Nitrogen",
+   "predicate": "incorporated into",
+   "target": "Protein"
+  },
+  {
+   "source": "Protein",
+   "predicate": "produced by",
+   "target": "P. albidus"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has",
+   "target": "Biomass"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has",
+   "target": "Nitrogen"
+  }
+ ],
+ "truncated": false
+}

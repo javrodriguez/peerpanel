@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12628781:2:452a143b",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "CCT0783",
+   "type": "organism"
+  },
+  {
+   "name": "NBRC10076",
+   "type": "organism"
+  },
+  {
+   "name": "YPD medium",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "HCl",
+   "type": "chemical"
+  },
+  {
+   "name": "NaOH",
+   "type": "chemical"
+  },
+  {
+   "name": "KH2PO4",
+   "type": "chemical"
+  },
+  {
+   "name": "MgSO4·7H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "D(+)-glucose monohydrate",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "K2HPO4",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

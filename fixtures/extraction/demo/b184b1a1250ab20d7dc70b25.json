@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC10440040:4:b2987b7a",
+ "entities": [
+  {
+   "name": "Differential expression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nitrogen starvation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Exponential growth",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "R. toruloides BOT-A2",
+   "type": "organism"
+  },
+  {
+   "name": "FAS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FAS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DGA1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XYL2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XYL2_RT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MEP2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Differential expression",
+   "predicate": "involved_in",
+   "target": "Nitrogen starvation"
+  },
+  {
+   "source": "Differential expression",
+   "predicate": "involved_in",
+   "target": "Exponential growth"
+  },
+  {
+   "source": "Differential expression",
+   "predicate": "involved_in",
+   "target": "Glucose"
+  },
+  {
+   "source": "Differential expression",
+   "predicate": "involved_in",
+   "target": "Xylose"
+  }
+ ],
+ "truncated": false
+}

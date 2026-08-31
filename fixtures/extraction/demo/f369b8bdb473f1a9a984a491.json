@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC7334043:3:e6b17595",
+ "entities": [
+  {
+   "name": "R. toruloides MS7013",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides DMKU3-TK16",
+   "type": "organism"
+  },
+  {
+   "name": "Agrobacterium tumefaciens",
+   "type": "organism"
+  },
+  {
+   "name": "phenylalanine ammonia lyase (PAL) gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chromosome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "polyethylene glycol",
+   "type": "chemical"
+  },
+  {
+   "name": "protoplast",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "transformation efficiency",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ATMT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lithium acetate",
+   "type": "chemical"
+  },
+  {
+   "name": "electroporation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ti plasmids",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides MS7013",
+   "predicate": "has_gene",
+   "target": "phenylalanine ammonia lyase (PAL) gene"
+  },
+  {
+   "source": "R. toruloides MS7013",
+   "predicate": "has_chromosome",
+   "target": "chromosome"
+  },
+  {
+   "source": "R. toruloides DMKU3-TK16",
+   "predicate": "has_gene",
+   "target": "phenylalanine ammonia lyase (PAL) gene"
+  },
+  {
+   "source": "Agrobacterium tumefaciens",
+   "predicate": "mediates_transformation",
+   "target": "R. toruloides MS7013"
+  },
+  {
+   "source": "Lithium acetate",
+   "predicate": "mediates_transformation",
+   "target": "R. toruloides DMKU3-TK16"
+  },
+  {
+   "source": "ATMT",
+   "predicate": "mediates_transformation",
+   "target": "R. toruloides MS7013"
+  }
+ ],
+ "truncated": false
+}

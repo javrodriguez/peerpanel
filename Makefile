@@ -65,9 +65,10 @@ review:
 eval:
 	uv run python -m peerpanel eval
 
-## The captured demo run (writes demo/raw-*.log beside its curated transcript).
+## The captured demo run — tee'd verbatim to demo/raw-<utc>.log.
 demo:
-	uv run python -m peerpanel demo
+	@mkdir -p demo
+	uv run python -m peerpanel demo 2>&1 | tee demo/raw-$$(date -u +%Y%m%dT%H%M%SZ).log
 
 ## Replay the committed machine-captured demo (a labelled recording).
 demo-replay:

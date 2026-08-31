@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC10832132:9:70a88445",
+ "entities": [
+  {
+   "name": "GDF8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GDF8-WT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GDF8-Mutant-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GDF8-Mutant-2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GDF11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSPA1A",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSPA2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FS288",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetGO3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GDF8-WT",
+   "predicate": "interacts_with",
+   "target": "FS288"
+  },
+  {
+   "source": "GDF8-Mutant-1",
+   "predicate": "interacts_with",
+   "target": "FS288"
+  },
+  {
+   "source": "GDF8-Mutant-2",
+   "predicate": "interacts_with",
+   "target": "FS288"
+  }
+ ],
+ "truncated": false
+}

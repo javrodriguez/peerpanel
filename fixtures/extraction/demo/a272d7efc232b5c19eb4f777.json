@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13456448:3:364fcee6",
+ "entities": [
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "adenylyl cyclase Cyr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cAMP",
+   "type": "chemical"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Candida dubliniensis",
+   "type": "organism"
+  },
+  {
+   "name": "Candida tropicalis",
+   "type": "organism"
+  },
+  {
+   "name": "Candida glabrata",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus spp.",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium spp.",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila melanogaster",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Candida albicans",
+   "predicate": "has_filamentation",
+   "target": "CO2"
+  },
+  {
+   "source": "Candida albicans",
+   "predicate": "has_filamentation",
+   "target": "adenylyl cyclase Cyr1"
+  },
+  {
+   "source": "Candida albicans",
+   "predicate": "has_filamentation",
+   "target": "cAMP"
+  },
+  {
+   "source": "Candida albicans",
+   "predicate": "has_filamentation",
+   "target": "PKA"
+  },
+  {
+   "source": "Candida dubliniensis",
+   "predicate": "has_filamentation",
+   "target": "CO2"
+  },
+  {
+   "source": "Candida tropicalis",
+   "predicate": "has_inhibitory_effect",
+   "target": "CO2"
+  },
+  {
+   "source": "Candida glabrata",
+   "predicate": "has_morphological_changes",
+   "target": "CO2"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_capsule_formation",
+   "target": "CO2"
+  },
+  {
+   "source": "Aspergillus spp.",
+   "predicate": "has_germination_and_hyphal_growth",
+   "target": "CO2"
+  },
+  {
+   "source": "Scedosporium spp.",
+   "predicate": "has_modulation_of_germination_and_hyphal_development",
+   "target": "CO2"
+  },
+  {
+   "source": "Candida albicans",
+   "predicate": "has_biofilm_formation",
+   "target": "CO2"
+  },
+  {
+   "source": "Candida albicans",
+   "predicate": "has_tissue_invasion",
+   "target": "CO2"
+  }
+ ],
+ "truncated": false
+}

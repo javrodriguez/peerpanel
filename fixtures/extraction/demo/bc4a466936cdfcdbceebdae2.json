@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13514482:1:78a53d32",
+ "entities": [
+  {
+   "name": "F. velutipes",
+   "type": "organism"
+  },
+  {
+   "name": "Japan",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "China",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yunnan",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Flammulina",
+   "type": "organism"
+  },
+  {
+   "name": "F. yunnanensis",
+   "type": "organism"
+  },
+  {
+   "name": "F. fennae",
+   "type": "organism"
+  },
+  {
+   "name": "Z68",
+   "type": "organism"
+  },
+  {
+   "name": "M58",
+   "type": "organism"
+  },
+  {
+   "name": "FV0027",
+   "type": "organism"
+  },
+  {
+   "name": "Guangdong Academy of Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "Guangzhou",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "F. velutipes",
+   "predicate": "introduced from",
+   "target": "Japan"
+  },
+  {
+   "source": "F. velutipes",
+   "predicate": "commercial white enoki strains in",
+   "target": "China"
+  },
+  {
+   "source": "F. velutipes",
+   "predicate": "still rely on imports from",
+   "target": "Japan"
+  },
+  {
+   "source": "F. velutipes",
+   "predicate": "provided important support for large-scale production",
+   "target": "F. velutipes"
+  },
+  {
+   "source": "F. yunnanensis",
+   "predicate": "iron content and metabolism was focused",
+   "target": "F. yunnanensis"
+  }
+ ],
+ "truncated": false
+}

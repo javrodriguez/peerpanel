@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC4125178:0:8e1da1c7",
+ "entities": [
+  {
+   "name": "Hydrogen Sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Aspergillus niger",
+   "type": "organism"
+  },
+  {
+   "name": "Penicillium italicum",
+   "type": "organism"
+  },
+  {
+   "name": "Fu Liu-Hui",
+   "type": "organism"
+  },
+  {
+   "name": "Hu Kang-Di",
+   "type": "organism"
+  },
+  {
+   "name": "Liu Yong-Sheng",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Hua",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Rhizopus oryzae",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Salmonella typhimurium",
+   "type": "organism"
+  },
+  {
+   "name": "Staphylococcus aureus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hydrogen Sulfide",
+   "predicate": "inhibit",
+   "target": "Aspergillus niger"
+  },
+  {
+   "source": "Hydrogen Sulfide",
+   "predicate": "inhibit",
+   "target": "Penicillium italicum"
+  },
+  {
+   "source": "Hydrogen Sulfide",
+   "predicate": "inhibit",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Hydrogen Sulfide",
+   "predicate": "inhibit",
+   "target": "Rhizopus oryzae"
+  },
+  {
+   "source": "Hydrogen Sulfide",
+   "predicate": "inhibit",
+   "target": "Candida albicans"
+  },
+  {
+   "source": "Hydrogen Sulfide",
+   "predicate": "inhibit",
+   "target": "Salmonella typhimurium"
+  },
+  {
+   "source": "Hydrogen Sulfide",
+   "predicate": "inhibit",
+   "target": "Staphylococcus aureus"
+  }
+ ],
+ "truncated": false
+}

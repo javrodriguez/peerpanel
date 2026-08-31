@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13485822:4:9fda3170",
+ "entities": [
+  {
+   "name": "Fungi",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Malassezia spp.",
+   "type": "organism"
+  },
+  {
+   "name": "M. restricta",
+   "type": "organism"
+  },
+  {
+   "name": "M. furfur",
+   "type": "organism"
+  },
+  {
+   "name": "M. pachydermatis",
+   "type": "organism"
+  },
+  {
+   "name": "Neurospora crassa",
+   "type": "organism"
+  },
+  {
+   "name": "ERG11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG24",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

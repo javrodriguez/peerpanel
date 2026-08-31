@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13514516:2:d77ac6dc",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "lignocellulosic biomass hydrolyzate",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Pachysolen tannophilus",
+   "type": "organism"
+  },
+  {
+   "name": "PXF-58",
+   "type": "organism"
+  },
+  {
+   "name": "CICC1960",
+   "type": "organism"
+  },
+  {
+   "name": "Ren Jia",
+   "type": "organism"
+  },
+  {
+   "name": "Zhao Lei",
+   "type": "organism"
+  },
+  {
+   "name": "Watanabe et al.",
+   "type": "organism"
+  },
+  {
+   "name": "NBRC1687",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis",
+   "predicate": "ferment",
+   "target": "glucose"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "ferment",
+   "target": "xylose"
+  },
+  {
+   "source": "PXF-58",
+   "predicate": "ferment",
+   "target": "xylose"
+  },
+  {
+   "source": "Ren Jia",
+   "predicate": "mutagenize",
+   "target": "Pachysolen tannophilus"
+  },
+  {
+   "source": "Zhao Lei",
+   "predicate": "mutagenize",
+   "target": "Pachysolen tannophilus"
+  },
+  {
+   "source": "PXF-58",
+   "predicate": "produce",
+   "target": "ethanol"
+  }
+ ],
+ "truncated": false
+}

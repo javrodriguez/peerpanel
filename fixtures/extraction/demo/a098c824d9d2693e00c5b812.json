@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13458714:2:cf42a42d",
+ "entities": [
+  {
+   "name": "GCN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GCN1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RWD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RWDBD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Arg-2259",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Arg-2312",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "HsRWDBD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HsGCN1 CTD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Castilho",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Prescott",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kubota",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GCN2",
+   "predicate": "requires",
+   "target": "GCN1"
+  },
+  {
+   "source": "GCN2",
+   "predicate": "binds_to",
+   "target": "RWD"
+  },
+  {
+   "source": "RWD",
+   "predicate": "binds_to",
+   "target": "GCN2"
+  },
+  {
+   "source": "GCN1",
+   "predicate": "binds_to",
+   "target": "GCN2"
+  },
+  {
+   "source": "RWDBD",
+   "predicate": "binds_to",
+   "target": "GCN2"
+  },
+  {
+   "source": "HsRWDBD",
+   "predicate": "binds_to",
+   "target": "GCN2"
+  }
+ ],
+ "truncated": false
+}

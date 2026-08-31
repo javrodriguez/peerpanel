@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13450799:3:39d85806",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MCM2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YEplac195",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YCplac33",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YEplac13",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YGP1 promoter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MCM2 promoter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YGP1 3'UTR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADH1 3'UTR",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YGP1",
+   "predicate": "regulated_by",
+   "target": "Puf5"
+  },
+  {
+   "source": "Puf5",
+   "predicate": "regulates",
+   "target": "YGP1"
+  },
+  {
+   "source": "MCM2",
+   "predicate": "promoter",
+   "target": "MCM2 promoter"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "promoter",
+   "target": "YGP1 promoter"
+  },
+  {
+   "source": "ADH1",
+   "predicate": "3'UTR",
+   "target": "ADH1 3'UTR"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "3'UTR",
+   "target": "YGP1 3'UTR"
+  }
+ ],
+ "truncated": false
+}

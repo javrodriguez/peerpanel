@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC9487109:6:0ce14eda",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "urea",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonia",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "THF",
+   "type": "chemical"
+  },
+  {
+   "name": "5MTHF",
+   "type": "chemical"
+  },
+  {
+   "name": "5FTHF",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

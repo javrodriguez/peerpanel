@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10204961:4:b3798579",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Ribosomes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Proteomics data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Principal component analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gene Ontology",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Uniprot database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "rhto-GEM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Acetate",
+   "type": "chemical"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Proteins",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_proteome",
+   "target": "Proteomics data"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_ribosomes",
+   "target": "Ribosomes"
+  },
+  {
+   "source": "Proteomics data",
+   "predicate": "has_absolute_proteome_abundances",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene_expression",
+   "target": "Principal component analysis"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_proteome_allocation",
+   "target": "Ribosomes"
+  }
+ ],
+ "truncated": false
+}

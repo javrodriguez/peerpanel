@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13456448:7:c9603b23",
+ "entities": [
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus gattii",
+   "type": "organism"
+  },
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "carbonic anhydrases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PKA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "polysaccharide capsule",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "laccase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "melanin production",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "urease",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phospholipase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cryptococcus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "polysaccharide capsule"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "laccase"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "melanin production"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "urease"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "phospholipase"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "carbonic anhydrases"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "cAMP"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "PKA"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "polysaccharide capsule"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "laccase"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "melanin production"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_virulence_factor",
+   "target": "urease"
+  }
+ ],
+ "truncated": false
+}

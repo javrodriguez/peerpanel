@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC9763685:5:3ff3ca90",
+ "entities": [
+  {
+   "name": "YLL058W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YHR112C",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STR2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YML082W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Hanseniaspora",
+   "type": "organism"
+  },
+  {
+   "name": "Thermotoga maritima",
+   "type": "organism"
+  },
+  {
+   "name": "telomere",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chromosome XII",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfur metabolic network",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YLL058W",
+   "predicate": "located near",
+   "target": "telomere"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "has paralog",
+   "target": "STR2"
+  },
+  {
+   "source": "YLL058W",
+   "predicate": "has paralog",
+   "target": "YML082W"
+  },
+  {
+   "source": "Met4",
+   "predicate": "transcriptional activator",
+   "target": "sulfur metabolic network"
+  }
+ ],
+ "truncated": false
+}

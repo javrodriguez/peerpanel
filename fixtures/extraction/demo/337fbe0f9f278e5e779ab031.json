@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC9487109:5:0b0c10a2",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "folate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Pentose Phosphate Pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PPP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "G6P",
+   "type": "chemical"
+  },
+  {
+   "name": "PEP",
+   "type": "chemical"
+  },
+  {
+   "name": "E4P",
+   "type": "chemical"
+  },
+  {
+   "name": "shikimate pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Verduyn medium",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis",
+   "predicate": "produce",
+   "target": "folate"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "metabolize",
+   "target": "xylose"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "ferment",
+   "target": "ethanol"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "have",
+   "target": "Pentose Phosphate Pathway"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "have",
+   "target": "PPP"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "oxidize",
+   "target": "G6P"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "produce",
+   "target": "PEP"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "have",
+   "target": "E4P"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "use",
+   "target": "shikimate pathway"
+  }
+ ],
+ "truncated": false
+}

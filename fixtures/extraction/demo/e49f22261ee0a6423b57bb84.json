@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10204961:0:b51d471c",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Petri-Jaan Lahtvee",
+   "type": "organism"
+  },
+  {
+   "name": "Reķēna Alīna",
+   "type": "organism"
+  },
+  {
+   "name": "Marina J. Pinheiro",
+   "type": "organism"
+  },
+  {
+   "name": "Nemailla Bonturi",
+   "type": "organism"
+  },
+  {
+   "name": "Isma Belouah",
+   "type": "organism"
+  },
+  {
+   "name": "Eliise Tammekivi",
+   "type": "organism"
+  },
+  {
+   "name": "Koit Herodes",
+   "type": "organism"
+  },
+  {
+   "name": "Eduard J. Kerkhoven",
+   "type": "organism"
+  },
+  {
+   "name": "Radhakrishnan Mahadevan",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Computational Biology",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

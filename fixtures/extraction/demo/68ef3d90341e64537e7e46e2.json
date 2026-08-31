@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC5826700:1:0e01e45b",
+ "entities": [
+  {
+   "name": "V-ATPase",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pma1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "pH homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protons",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cytosol",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "vacuole",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "endosomes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Golgi compartments",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pH",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Vph1",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "V-ATPase",
+   "predicate": "pumps",
+   "target": "protons"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "translocates",
+   "target": "protons"
+  },
+  {
+   "source": "Pma1",
+   "predicate": "pumps",
+   "target": "protons"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "Pma1"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "is regulated by",
+   "target": "glucose"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "is regulated by",
+   "target": "pH"
+  },
+  {
+   "source": "Pma1",
+   "predicate": "is regulated by",
+   "target": "glucose"
+  },
+  {
+   "source": "Pma1",
+   "predicate": "is regulated by",
+   "target": "pH"
+  }
+ ],
+ "truncated": false
+}

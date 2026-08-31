@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13504229:0:0c970eb7",
+ "entities": [
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Kex2p",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Hemagglutinin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Influenza virus",
+   "type": "organism"
+  },
+  {
+   "name": "Furin protease",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "HADDOCK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AlphaFold3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ntshangase Nolwazi F.",
+   "type": "organism"
+  },
+  {
+   "name": "Mdana Khwezi",
+   "type": "organism"
+  },
+  {
+   "name": "Mjokane Nozethu",
+   "type": "organism"
+  },
+  {
+   "name": "van Zyl Winschau F.",
+   "type": "organism"
+  },
+  {
+   "name": "Albertyn Jacobus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_protease",
+   "target": "Kex2p"
+  },
+  {
+   "source": "Kex2p",
+   "predicate": "activates",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Hemagglutinin",
+   "predicate": "is_target_of",
+   "target": "Furin protease"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "interacts_with",
+   "target": "Influenza virus"
+  }
+ ],
+ "truncated": false
+}

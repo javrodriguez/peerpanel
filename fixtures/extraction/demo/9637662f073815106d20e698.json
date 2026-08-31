@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13484205:3:f7ac7f21",
+ "entities": [
+  {
+   "name": "Sis1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FRET biosensor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsp70",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mediator",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol II",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mEos3.2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DAmFRET principle",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhang et al.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Khan et al.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Posey et al.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Miller et al.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sis1",
+   "predicate": "self-association",
+   "target": "mEos3.2"
+  },
+  {
+   "source": "Sis1",
+   "predicate": "repress",
+   "target": "Hsf1"
+  },
+  {
+   "source": "Hsp70",
+   "predicate": "repress",
+   "target": "Hsf1"
+  }
+ ],
+ "truncated": false
+}

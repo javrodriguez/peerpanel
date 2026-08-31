@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC12278674:0:a7c4f83d",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Gluth Austin",
+   "type": "organism"
+  },
+  {
+   "name": "Yang Bin",
+   "type": "organism"
+  },
+  {
+   "name": "Qian Wei-Jun",
+   "type": "organism"
+  },
+  {
+   "name": "Bohutskyi Pavlo",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Tong",
+   "type": "organism"
+  },
+  {
+   "name": "Pacific Northwest National Laboratory",
+   "type": "organism"
+  },
+  {
+   "name": "Washington State University",
+   "type": "organism"
+  },
+  {
+   "name": "BMC",
+   "type": "organism"
+  },
+  {
+   "name": "BioMed Central Ltd.",
+   "type": "organism"
+  },
+  {
+   "name": "Springer Nature",
+   "type": "organism"
+  },
+  {
+   "name": "Oleaginous yeast",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Pacific Northwest National Laboratory",
+   "predicate": "affiliation",
+   "target": "Gluth Austin"
+  },
+  {
+   "source": "Washington State University",
+   "predicate": "affiliation",
+   "target": "Yang Bin"
+  }
+ ],
+ "truncated": false
+}

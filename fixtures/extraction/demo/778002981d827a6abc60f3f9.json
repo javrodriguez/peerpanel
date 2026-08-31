@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13419736:1:96ac14b5",
+ "entities": [
+  {
+   "name": "proteasome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CDC48",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "20S core peptidase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "19S regulatory particle",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpn2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt5",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt6",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpn1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "20S core peptidase"
+  },
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "19S regulatory particle"
+  },
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "Rpn2"
+  },
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "Rpt1"
+  },
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "Rpt2"
+  },
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "Rpt3"
+  },
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "Rpt4"
+  },
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "Rpt5"
+  },
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "Rpt6"
+  },
+  {
+   "source": "proteasome",
+   "predicate": "has_part",
+   "target": "Rpn1"
+  },
+  {
+   "source": "CDC48",
+   "predicate": "acts_upstream_of",
+   "target": "proteasome"
+  }
+ ],
+ "truncated": false
+}

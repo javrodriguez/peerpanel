@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC7873862:11:5960b8d7",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "genome-scale metabolic network model",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolic pathways",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "carbon sources",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lignocellulosic biomass",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "initial metabolic network",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "high-quality published metabolic network models",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "orthologous protein mapping",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "horizontal gene transfer",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "HGT",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid body",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "biomass equation",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_metabolic_pathway",
+   "target": "metabolic pathways"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "utilizes",
+   "target": "carbon sources"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_model",
+   "target": "genome-scale metabolic network model"
+  },
+  {
+   "source": "genome-scale metabolic network model",
+   "predicate": "reconstructed_from",
+   "target": "high-quality published metabolic network models"
+  },
+  {
+   "source": "genome-scale metabolic network model",
+   "predicate": "uses",
+   "target": "orthologous protein mapping"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "undergoes",
+   "target": "horizontal gene transfer"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_component",
+   "target": "lipid body"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_equation",
+   "target": "biomass equation"
+  }
+ ],
+ "truncated": false
+}

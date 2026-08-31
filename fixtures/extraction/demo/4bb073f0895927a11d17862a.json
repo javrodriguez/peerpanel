@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC11974387:8:81796a9c",
+ "entities": [
+  {
+   "name": "Crabtree-negative strains",
+   "type": "organism"
+  },
+  {
+   "name": "PDC-negative yeast",
+   "type": "organism"
+  },
+  {
+   "name": "pyruvate",
+   "type": "chemical"
+  },
+  {
+   "name": "2,3-BDO",
+   "type": "chemical"
+  },
+  {
+   "name": "malic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "isobutanol",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "nicotinamide adenine dinucleotide phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "free fatty acids",
+   "type": "chemical"
+  },
+  {
+   "name": "3-hydroxypropionic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "farnesene",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

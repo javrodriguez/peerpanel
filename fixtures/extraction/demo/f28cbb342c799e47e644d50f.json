@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13413155:7:98149667",
+ "entities": [
+  {
+   "name": "Alternaria brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "broccoli leaf black spot disease",
+   "type": "chemical"
+  },
+  {
+   "name": "cruciferous crops",
+   "type": "organism"
+  },
+  {
+   "name": "field investigations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "85% disease incidence rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "necrosis and spore production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PDA colony characteristics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "conidial features",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "multilocus phylogenetic analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Alt a1",
+   "type": "chemical"
+  },
+  {
+   "name": "ATPase",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Alternaria brassicicola",
+   "predicate": "causes",
+   "target": "broccoli leaf black spot disease"
+  },
+  {
+   "source": "Alternaria brassicicola",
+   "predicate": "has_host_range",
+   "target": "cruciferous crops"
+  },
+  {
+   "source": "field investigations",
+   "predicate": "reveals",
+   "target": "85% disease incidence rate"
+  },
+  {
+   "source": "necrosis and spore production",
+   "predicate": "results_from",
+   "target": "Alternaria brassicicola"
+  },
+  {
+   "source": "PDA colony characteristics",
+   "predicate": "characterizes",
+   "target": "Ab0920a"
+  },
+  {
+   "source": "conidial features",
+   "predicate": "characterizes",
+   "target": "Ab0920a"
+  },
+  {
+   "source": "multilocus phylogenetic analysis",
+   "predicate": "confirms",
+   "target": "Alternaria brassicicola"
+  },
+  {
+   "source": "Alt a1",
+   "predicate": "used_in",
+   "target": "multilocus phylogenetic analysis"
+  },
+  {
+   "source": "ATPase",
+   "predicate": "used_in",
+   "target": "multilocus phylogenetic analysis"
+  }
+ ],
+ "truncated": false
+}

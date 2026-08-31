@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13513244:11:57da38b0",
+ "entities": [
+  {
+   "name": "Sedimentation Assay",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Western Blotting",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Shiber et al",
+   "type": "organism"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "OD600",
+   "type": "chemical"
+  },
+  {
+   "name": "Tris-HCl",
+   "type": "chemical"
+  },
+  {
+   "name": "NaCl",
+   "type": "chemical"
+  },
+  {
+   "name": "EDTA",
+   "type": "chemical"
+  },
+  {
+   "name": "DTT",
+   "type": "chemical"
+  },
+  {
+   "name": "Glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "Triton-X",
+   "type": "chemical"
+  },
+  {
+   "name": "N-ethylmaleimide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "Shiber et al"
+  },
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "Yeast"
+  },
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "OD600"
+  },
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "Tris-HCl"
+  },
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "NaCl"
+  },
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "EDTA"
+  },
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "DTT"
+  },
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "Glycerol"
+  },
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "Triton-X"
+  },
+  {
+   "source": "Sedimentation Assay",
+   "predicate": "uses",
+   "target": "N-ethylmaleimide"
+  },
+  {
+   "source": "Western Blotting",
+   "predicate": "uses",
+   "target": "Yeast"
+  }
+ ],
+ "truncated": false
+}

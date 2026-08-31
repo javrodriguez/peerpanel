@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC7382830:7:994866e1",
+ "entities": [
+  {
+   "name": "CRP regulon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CRP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cAMP receptor protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "catabolite gene activator protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glpK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cyaA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crr",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glpR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glpFKX operon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "adenylate cyclase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "E. coli K-12 MG1655",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CRP regulon",
+   "predicate": "regulates",
+   "target": "glpK"
+  },
+  {
+   "source": "CRP regulon",
+   "predicate": "regulates",
+   "target": "cyaA"
+  },
+  {
+   "source": "CRP regulon",
+   "predicate": "regulates",
+   "target": "crr"
+  },
+  {
+   "source": "CRP regulon",
+   "predicate": "regulates",
+   "target": "glpR"
+  },
+  {
+   "source": "CRP regulon",
+   "predicate": "regulates",
+   "target": "adenylate cyclase"
+  },
+  {
+   "source": "cAMP",
+   "predicate": "binds",
+   "target": "CRP"
+  },
+  {
+   "source": "adenylate cyclase",
+   "predicate": "synthesizes",
+   "target": "cAMP"
+  },
+  {
+   "source": "adenylate cyclase",
+   "predicate": "produces",
+   "target": "cAMP"
+  },
+  {
+   "source": "cAMP",
+   "predicate": "binds",
+   "target": "CRP"
+  }
+ ],
+ "truncated": false
+}

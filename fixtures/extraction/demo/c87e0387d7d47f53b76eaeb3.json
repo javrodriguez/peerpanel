@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC11618413:9:3a8a65a8",
+ "entities": [
+  {
+   "name": "Biofilms",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hydrogels",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Curli fibers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CsgA subunit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Amyloid proteins",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Exopolysaccharides",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Phosphoethanolamine-cellulose",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "E. coli",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Urea",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nile Red",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Direct Red",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Trp amino acid",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Biofilms",
+   "predicate": "has",
+   "target": "hydrogels"
+  },
+  {
+   "source": "Biofilms",
+   "predicate": "has",
+   "target": "curli fibers"
+  }
+ ],
+ "truncated": false
+}

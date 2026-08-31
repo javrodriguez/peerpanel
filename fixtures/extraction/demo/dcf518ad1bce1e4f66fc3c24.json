@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13514516:13:ddc9b93a",
+ "entities": [
+  {
+   "name": "S. stipitis strain CICC1960",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "60Co",
+   "type": "chemical"
+  },
+  {
+   "name": "UV",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "XYL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XYL2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XKS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zhang Lingyan",
+   "type": "organism"
+  },
+  {
+   "name": "Grabek",
+   "type": "organism"
+  },
+  {
+   "name": "Ren Jia",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis strain CICC1960",
+   "predicate": "has_ethanol_production",
+   "target": "ethanol"
+  },
+  {
+   "source": "S. stipitis strain CICC1960",
+   "predicate": "has_xylose_utilization_efficiency",
+   "target": "xylose"
+  },
+  {
+   "source": "Zhang Lingyan",
+   "predicate": "overexpressed_gene",
+   "target": "XYL2"
+  }
+ ],
+ "truncated": false
+}

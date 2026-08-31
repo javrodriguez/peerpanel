@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC7382830:0:be13a75a",
+ "entities": [
+  {
+   "name": "BMC Genomics",
+   "type": "organism"
+  },
+  {
+   "name": "Phaneuf Patrick V.",
+   "type": "organism"
+  },
+  {
+   "name": "Yurkovich James T.",
+   "type": "organism"
+  },
+  {
+   "name": "Wu Muyao",
+   "type": "organism"
+  },
+  {
+   "name": "Sandberg Troy E.",
+   "type": "organism"
+  },
+  {
+   "name": "Palsson Bernhard O.",
+   "type": "organism"
+  },
+  {
+   "name": "Feist Adam M.",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Novo Nordisk Foundation Center for Biosustainability",
+   "type": "organism"
+  },
+  {
+   "name": "Technical University of Denmark",
+   "type": "organism"
+  },
+  {
+   "name": "University of California, San Diego",
+   "type": "organism"
+  },
+  {
+   "name": "Institute for Systems Biology",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Phaneuf Patrick V.",
+   "predicate": "author",
+   "target": "BMC Genomics"
+  },
+  {
+   "source": "Yurkovich James T.",
+   "predicate": "author",
+   "target": "BMC Genomics"
+  },
+  {
+   "source": "Wu Muyao",
+   "predicate": "author",
+   "target": "BMC Genomics"
+  },
+  {
+   "source": "Sandberg Troy E.",
+   "predicate": "author",
+   "target": "BMC Genomics"
+  },
+  {
+   "source": "Palsson Bernhard O.",
+   "predicate": "author",
+   "target": "BMC Genomics"
+  },
+  {
+   "source": "Feist Adam M.",
+   "predicate": "author",
+   "target": "BMC Genomics"
+  }
+ ],
+ "truncated": false
+}

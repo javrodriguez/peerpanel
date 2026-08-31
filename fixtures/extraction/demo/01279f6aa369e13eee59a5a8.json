@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC10398944:0:a4c217d8",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_12978",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_11990",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Samuel T. Coradetti",
+   "type": "organism"
+  },
+  {
+   "name": "Paul A. Adamczyk",
+   "type": "organism"
+  },
+  {
+   "name": "Di Liu",
+   "type": "organism"
+  },
+  {
+   "name": "Yuqian Gao",
+   "type": "organism"
+  },
+  {
+   "name": "Peter B. Otoupal",
+   "type": "organism"
+  },
+  {
+   "name": "Gina M. Geiselman",
+   "type": "organism"
+  },
+  {
+   "name": "Bobbie-Jo M. Webb-Robertson",
+   "type": "organism"
+  },
+  {
+   "name": "Meagan C. Burnet",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "RTO4_12978",
+   "predicate": "is regulated by",
+   "target": "Pnt1"
+  },
+  {
+   "source": "RTO4_11990",
+   "predicate": "is regulated by",
+   "target": "Pnt1"
+  }
+ ],
+ "truncated": false
+}

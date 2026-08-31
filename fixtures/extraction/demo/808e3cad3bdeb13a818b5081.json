@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC9757880:10:b328fc40",
+ "entities": [
+  {
+   "name": "Hsu1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met3p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met8p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met10p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met16p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sul2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mmp1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Jlp1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yct1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Soa1p",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met17p",
+   "predicate": "presence_of",
+   "target": "Hsu1p"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13450573:19:a8d36ef3",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "BY4742",
+   "type": "organism"
+  },
+  {
+   "name": "Table S18",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Table S19",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DEGs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ComBat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WGCNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Circos",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R Studio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FactoMineR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "factoextra",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Table S19",
+   "predicate": "has_gene_expression",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Table S19",
+   "predicate": "highlighted_in_yellow",
+   "target": "DEGs"
+  }
+ ],
+ "truncated": false
+}

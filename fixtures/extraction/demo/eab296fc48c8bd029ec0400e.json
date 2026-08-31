@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC6402699:25:4c9edeeb",
+ "entities": [
+  {
+   "name": "S26 Fig Model iii",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "detailed dynamics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lag phase",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CoSMO",
+   "type": "organism"
+  },
+  {
+   "name": "WY2447",
+   "type": "organism"
+  },
+  {
+   "name": "L−A+",
+   "type": "organism"
+  },
+  {
+   "name": "A−L+",
+   "type": "organism"
+  },
+  {
+   "name": "Nick Buchler",
+   "type": "organism"
+  },
+  {
+   "name": "Duke University",
+   "type": "organism"
+  },
+  {
+   "name": "UW Seattle",
+   "type": "organism"
+  },
+  {
+   "name": "Sarah Holte",
+   "type": "organism"
+  },
+  {
+   "name": "Fred Hutch",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S26 Fig Model iii",
+   "predicate": "models",
+   "target": "detailed dynamics"
+  },
+  {
+   "source": "S26 Fig Model iii",
+   "predicate": "models",
+   "target": "lag phase"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "has_mutations",
+   "target": "WY2447"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "has_consumption",
+   "target": "L−A+"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "has_consumption",
+   "target": "A−L+"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "has_death_and_release_rates",
+   "target": "L−A+"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "has_death_and_release_rates",
+   "target": "A−L+"
+  }
+ ],
+ "truncated": false
+}

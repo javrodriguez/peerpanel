@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC4125178:4:8a4f7510",
+ "entities": [
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "A. niger",
+   "type": "organism"
+  },
+  {
+   "name": "P. italicum",
+   "type": "organism"
+  },
+  {
+   "name": "NaHS",
+   "type": "chemical"
+  },
+  {
+   "name": "SOD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CAT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROS",
+   "type": "chemical"
+  },
+  {
+   "name": "DCHF-DA",
+   "type": "chemical"
+  },
+  {
+   "name": "spore germination",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "germ tube elongation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mycelial growth",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "hyphal morphology",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "H2S",
+   "predicate": "inhibit",
+   "target": "spore germination"
+  },
+  {
+   "source": "H2S",
+   "predicate": "inhibit",
+   "target": "germ tube elongation"
+  },
+  {
+   "source": "A. niger",
+   "predicate": "exhibit",
+   "target": "spore germination"
+  },
+  {
+   "source": "P. italicum",
+   "predicate": "exhibit",
+   "target": "spore germination"
+  }
+ ],
+ "truncated": false
+}

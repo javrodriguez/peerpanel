@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC8116571:2:7f421a26",
+ "entities": [
+  {
+   "name": "Lignocellulosic Hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "C5 - sugars enriched stream",
+   "type": "chemical"
+  },
+  {
+   "name": "Birch",
+   "type": "organism"
+  },
+  {
+   "name": "Betula pendula",
+   "type": "organism"
+  },
+  {
+   "name": "Graanul Biotech OÜ",
+   "type": "organism"
+  },
+  {
+   "name": "Acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Total phenols",
+   "type": "chemical"
+  },
+  {
+   "name": "Furfural",
+   "type": "chemical"
+  },
+  {
+   "name": "5-HMF",
+   "type": "chemical"
+  },
+  {
+   "name": "NaOH",
+   "type": "chemical"
+  },
+  {
+   "name": "Nalgene Filter",
+   "type": "chemical"
+  },
+  {
+   "name": "Polyethersulfone membrane",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "C5 - sugars enriched stream"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "Birch"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "Betula pendula"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "Graanul Biotech OÜ"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "Acetic acid"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "Total phenols"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "Furfural"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "5-HMF"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "NaOH"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "Nalgene Filter"
+  },
+  {
+   "source": "Lignocellulosic Hydrolysate",
+   "predicate": "contains",
+   "target": "Polyethersulfone membrane"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13514482:8:e55fe213",
+ "entities": [
+  {
+   "name": "F. yunnanensis",
+   "type": "organism"
+  },
+  {
+   "name": "Lys",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C-terminal intracellular tail",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepTMHMM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Glu",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "controls",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTR1 mechanism",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fe3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "channel",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cytoplasm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "positive charge",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "exit site",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "F. yunnanensis",
+   "predicate": "has",
+   "target": "Lys"
+  },
+  {
+   "source": "F. yunnanensis",
+   "predicate": "has",
+   "target": "C-terminal intracellular tail"
+  },
+  {
+   "source": "F. yunnanensis",
+   "predicate": "has",
+   "target": "DeepTMHMM"
+  },
+  {
+   "source": "F. yunnanensis",
+   "predicate": "has",
+   "target": "Glu"
+  },
+  {
+   "source": "F. yunnanensis",
+   "predicate": "has",
+   "target": "controls"
+  },
+  {
+   "source": "FTR1 mechanism",
+   "predicate": "has",
+   "target": "Fe3"
+  },
+  {
+   "source": "FTR1 mechanism",
+   "predicate": "has",
+   "target": "channel"
+  },
+  {
+   "source": "FTR1 mechanism",
+   "predicate": "has",
+   "target": "cytoplasm"
+  },
+  {
+   "source": "FTR1 mechanism",
+   "predicate": "has",
+   "target": "positive charge"
+  },
+  {
+   "source": "FTR1 mechanism",
+   "predicate": "has",
+   "target": "exit site"
+  }
+ ],
+ "truncated": false
+}

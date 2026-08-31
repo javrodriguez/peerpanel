@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC1409804:6:7d66620e",
+ "entities": [
+  {
+   "name": "AUGUSTUS+",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AGRIPPA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Agrippa",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EST",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EST database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RepeatMasker",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BLASTX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BLASTN",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "AGRIPPA"
+  },
+  {
+   "source": "AGRIPPA",
+   "predicate": "uses",
+   "target": "EST database"
+  },
+  {
+   "source": "AGRIPPA",
+   "predicate": "uses",
+   "target": "RepeatMasker"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13504229:10:28883969",
+ "entities": [
+  {
+   "name": "Cryptococcal Meningitis Patients",
+   "type": "organism"
+  },
+  {
+   "name": "Protease Activated Receptor",
+   "type": "chemical"
+  },
+  {
+   "name": "Activated Protein C",
+   "type": "chemical"
+  },
+  {
+   "name": "Neuroprotection",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Blood",
+   "type": "organism"
+  },
+  {
+   "name": "Synthetic Peptides",
+   "type": "chemical"
+  },
+  {
+   "name": "Protein Mimics",
+   "type": "chemical"
+  },
+  {
+   "name": "Bioengineering",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Biotechnology",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Influenza H1N1",
+   "type": "organism"
+  },
+  {
+   "name": "Disseminated Cryptococcosis",
+   "type": "organism"
+  },
+  {
+   "name": "Hiv Seropositive Patient",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cryptococcal Meningitis Patients",
+   "predicate": "has_disease",
+   "target": "Influenza H1N1"
+  },
+  {
+   "source": "Cryptococcal Meningitis Patients",
+   "predicate": "has_disease",
+   "target": "Hiv Seropositive Patient"
+  },
+  {
+   "source": "Protease Activated Receptor",
+   "predicate": "has_function",
+   "target": "Neuroprotection"
+  },
+  {
+   "source": "Activated Protein C",
+   "predicate": "has_function",
+   "target": "Neuroprotection"
+  },
+  {
+   "source": "Blood",
+   "predicate": "has_component",
+   "target": "Protease Activated Receptor"
+  },
+  {
+   "source": "Synthetic Peptides",
+   "predicate": "has_function",
+   "target": "Protein Mimics"
+  },
+  {
+   "source": "Bioengineering",
+   "predicate": "has_process",
+   "target": "Synthetic Peptides"
+  },
+  {
+   "source": "Biotechnology",
+   "predicate": "has_process",
+   "target": "Synthetic Peptides"
+  },
+  {
+   "source": "Influenza H1N1",
+   "predicate": "has_disease",
+   "target": "Disseminated Cryptococcosis"
+  },
+  {
+   "source": "Hiv Seropositive Patient",
+   "predicate": "has_disease",
+   "target": "Disseminated Cryptococcosis"
+  }
+ ],
+ "truncated": false
+}

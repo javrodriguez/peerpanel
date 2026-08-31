@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13504229:9:7d04318b",
+ "entities": [
+  {
+   "name": "Kex2p",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "hemagglutinin glycoprotein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "furin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "trypsin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "influenza virus",
+   "type": "organism"
+  },
+  {
+   "name": "cryptococcal infections",
+   "type": "organism"
+  },
+  {
+   "name": "lung",
+   "type": "organism"
+  },
+  {
+   "name": "Kex2p inhibitor",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pseudovirions",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mimetic peptide",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HA1/HA2 site",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Golgi apparatus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Kex2p",
+   "predicate": "cleave",
+   "target": "hemagglutinin glycoprotein"
+  },
+  {
+   "source": "furin",
+   "predicate": "cleave",
+   "target": "hemagglutinin glycoprotein"
+  },
+  {
+   "source": "Kex2p",
+   "predicate": "access",
+   "target": "influenza virus"
+  },
+  {
+   "source": "furin",
+   "predicate": "access",
+   "target": "influenza virus"
+  }
+ ],
+ "truncated": false
+}

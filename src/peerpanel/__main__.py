@@ -156,6 +156,35 @@ def main(argv: list[str] | None = None) -> int:
         print(render_table(report))
         print(f"ablation: full report -> {out}")
         return 0
+    if command == "demo":
+        from peerpanel.demo import run_demo
+
+        return run_demo(Path.cwd(), corpus=_corpus_arg(rest) if "--corpus" in rest else "demo")
+    if command == "eval":
+        from peerpanel.evals.planted_eval import render_table as render_planted
+        from peerpanel.evals.planted_eval import run_planted_eval
+        from peerpanel.orchestration import PanelProviders
+        from peerpanel.providers import OllamaNativeChat, OllamaOpenAIChat
+
+        corpus = _corpus_arg(rest) if "--corpus" in rest else "demo"
+        providers = PanelProviders(
+            methods=OllamaOpenAIChat("llama3.1:8b"),
+            novelty=OllamaNativeChat("qwen2:7b"),
+            verifier=OllamaOpenAIChat("llama3.1:8b"),
+            converger=OllamaNativeChat("qwen2:7b"),
+        )
+        planted_report = run_planted_eval(
+            Path.cwd(),
+            Path.cwd() / "manuscripts" / "caprin-heterochromatin.txt",
+            providers,
+            baseline_provider=OllamaOpenAIChat("llama3.1:8b"),
+            corpus=corpus,
+        )
+        out = Path.cwd() / "artifacts" / corpus / "planted_eval.json"
+        out.write_text(planted_report.model_dump_json(indent=1) + "\n")
+        print(render_planted(planted_report))
+        print(f"eval: full report -> {out}")
+        return 0
     if command == "review":
         from peerpanel.orchestration import PanelProviders, run_panel
         from peerpanel.providers import OllamaNativeChat, OllamaOpenAIChat

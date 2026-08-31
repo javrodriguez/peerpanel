@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC7690147:4:ef2515a5",
+ "entities": [
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidiobolus",
+   "type": "organism"
+  },
+  {
+   "name": "Sporobolomyces",
+   "type": "organism"
+  },
+  {
+   "name": "R. glutinis ZHK",
+   "type": "organism"
+  },
+  {
+   "name": "R. babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "R. graminis",
+   "type": "organism"
+  },
+  {
+   "name": "R. diobovata",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "R. taiwanensis",
+   "type": "organism"
+  },
+  {
+   "name": "Sporidiobolales",
+   "type": "organism"
+  },
+  {
+   "name": "NCBI Nucleotide database",
+   "type": "organism"
+  },
+  {
+   "name": "26S rDNA sequences",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_closer_evolutionary_relationship",
+   "target": "R. babjevae"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_closer_evolutionary_relationship",
+   "target": "R. graminis"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_closer_evolutionary_relationship",
+   "target": "R. diobovata"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_syntenic_relationship",
+   "target": "R. graminis"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_syntenic_relationship",
+   "target": "R. diobovata"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_9737_collinear_blocks",
+   "target": "R. graminis"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_11413_collinear_blocks",
+   "target": "R. diobovata"
+  }
+ ],
+ "truncated": false
+}

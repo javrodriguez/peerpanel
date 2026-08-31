@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC6547517:5:8ba85841",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "ribosome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "target of rapamycin (TOR) signaling pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nitrogen depletion",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "urea transporter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NCS2 allantoate transporter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "major facilitator superfamily (MFS) transporter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "siderochrome-iron transporter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "amine oxidase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "perilipin-like protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "aspartic proteinase",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_downregulated",
+   "target": "ribosome"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_upregulated",
+   "target": "urea transporter"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_upregulated",
+   "target": "NCS2 allantoate transporter"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_upregulated",
+   "target": "major facilitator superfamily (MFS) transporter"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_upregulated",
+   "target": "siderochrome-iron transporter"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_upregulated",
+   "target": "amine oxidase"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_upregulated",
+   "target": "perilipin-like protein"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_upregulated",
+   "target": "aspartic proteinase"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_downregulated",
+   "target": "ribosome"
+  }
+ ],
+ "truncated": false
+}

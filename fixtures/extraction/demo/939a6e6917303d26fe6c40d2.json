@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC7470746:9:2bde71ff",
+ "entities": [
+  {
+   "name": "Auxotrophs",
+   "type": "organism"
+  },
+  {
+   "name": "Lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "Organosulfurs",
+   "type": "chemical"
+  },
+  {
+   "name": "Autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Mutation-selection balance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Genetic hitchhiking",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Energy-saving hypothesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nutrient-growth dysregulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Coculture evolution",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Monoculture evolution",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Chemostat vessels",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YPD plates",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Auxotrophs",
+   "predicate": "can rise to a detectable level",
+   "target": "mutation-selection balance"
+  },
+  {
+   "source": "Energy-saving hypothesis",
+   "predicate": "posits",
+   "target": "auxotrophs"
+  },
+  {
+   "source": "Monoculture evolution",
+   "predicate": "was carried out using chemostat vessels",
+   "target": "chemostat vessels"
+  }
+ ],
+ "truncated": false
+}

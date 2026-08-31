@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13429971:1:52ea331a",
+ "entities": [
+  {
+   "name": "Gcn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GCN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Homo sapiens",
+   "type": "organism"
+  },
+  {
+   "name": "eIF2α",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Gcn1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pgk1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Thr-882",
+   "type": "chemical"
+  },
+  {
+   "name": "Thr-887",
+   "type": "chemical"
+  },
+  {
+   "name": "Thr-898",
+   "type": "chemical"
+  },
+  {
+   "name": "Thr-899",
+   "type": "chemical"
+  },
+  {
+   "name": "Thr-903",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gcn2",
+   "predicate": "activated_by",
+   "target": "Gcn1"
+  }
+ ],
+ "truncated": false
+}

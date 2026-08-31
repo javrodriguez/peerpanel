@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13515494:11:6dcfbdf2",
+ "entities": [
+  {
+   "name": "Pinto J.",
+   "type": "other"
+  },
+  {
+   "name": "Cork Closures",
+   "type": "other"
+  },
+  {
+   "name": "Volatile Profile",
+   "type": "other"
+  },
+  {
+   "name": "Bottle Aging Foods",
+   "type": "other"
+  },
+  {
+   "name": "Silva M.A.",
+   "type": "other"
+  },
+  {
+   "name": "Julien M.",
+   "type": "other"
+  },
+  {
+   "name": "Jourdes M.",
+   "type": "other"
+  },
+  {
+   "name": "Teissedre P.L.",
+   "type": "other"
+  },
+  {
+   "name": "Impact",
+   "type": "other"
+  },
+  {
+   "name": "Closures",
+   "type": "other"
+  },
+  {
+   "name": "Wine Post - Bottling Development",
+   "type": "other"
+  },
+  {
+   "name": "Review Eur . Food Res",
+   "type": "other"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Pinto J.",
+   "predicate": "Impact",
+   "target": "Cork Closures"
+  },
+  {
+   "source": "Pinto J.",
+   "predicate": "Impact",
+   "target": "Volatile Profile"
+  },
+  {
+   "source": "Pinto J.",
+   "predicate": "Impact",
+   "target": "Bottle Aging Foods"
+  },
+  {
+   "source": "Silva M.A.",
+   "predicate": "Impact",
+   "target": "Cork Closures"
+  },
+  {
+   "source": "Julien M.",
+   "predicate": "Impact",
+   "target": "Volatile Profile"
+  },
+  {
+   "source": "Jourdes M.",
+   "predicate": "Impact",
+   "target": "Bottle Aging Foods"
+  },
+  {
+   "source": "Teissedre P.L.",
+   "predicate": "Impact",
+   "target": "Cork Closures"
+  },
+  {
+   "source": "Teissedre P.L.",
+   "predicate": "Impact",
+   "target": "Volatile Profile"
+  },
+  {
+   "source": "Teissedre P.L.",
+   "predicate": "Impact",
+   "target": "Bottle Aging Foods"
+  },
+  {
+   "source": "Impact",
+   "predicate": "Closures",
+   "target": "Wine Post - Bottling Development"
+  },
+  {
+   "source": "Review Eur . Food Res",
+   "predicate": "Impact",
+   "target": "Cork Closures"
+  },
+  {
+   "source": "Review Eur . Food Res",
+   "predicate": "Impact",
+   "target": "Volatile Profile"
+  }
+ ],
+ "truncated": false
+}

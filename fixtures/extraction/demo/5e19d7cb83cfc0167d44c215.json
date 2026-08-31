@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC10832132:11:bf27f3cd",
+ "entities": [
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CAFA4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ProtT5-XL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ProtALBERT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MF",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fmax",
+   "type": "chemical"
+  },
+  {
+   "name": "AUPRC",
+   "type": "chemical"
+  },
+  {
+   "name": "UniProt",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AnnoPRO",
+   "predicate": "performed_best_in",
+   "target": "BP"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "performed_best_in",
+   "target": "CC"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "performed_best_in",
+   "target": "MF"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "performed_best_in",
+   "target": "Fmax"
+  },
+  {
+   "source": "AnnoPRO",
+   "predicate": "performed_best_in",
+   "target": "AUPRC"
+  },
+  {
+   "source": "DeepGOPlus",
+   "predicate": "performed_well_in",
+   "target": "BP"
+  },
+  {
+   "source": "DeepGOPlus",
+   "predicate": "performed_well_in",
+   "target": "CC"
+  },
+  {
+   "source": "DeepGOPlus",
+   "predicate": "performed_well_in",
+   "target": "MF"
+  },
+  {
+   "source": "PFmulDL",
+   "predicate": "performed_well_in",
+   "target": "BP"
+  },
+  {
+   "source": "PFmulDL",
+   "predicate": "performed_well_in",
+   "target": "CC"
+  },
+  {
+   "source": "PFmulDL",
+   "predicate": "performed_well_in",
+   "target": "MF"
+  }
+ ],
+ "truncated": false
+}

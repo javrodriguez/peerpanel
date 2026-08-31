@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13462271:7:78f06b07",
+ "entities": [
+  {
+   "name": "Pol1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pol2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pol3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "H3K4me3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AID",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "IAA",
+   "type": "chemical"
+  },
+  {
+   "name": "BrdU",
+   "type": "chemical"
+  },
+  {
+   "name": "HML",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "telomere",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "DNA polymerase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "histone",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AID",
+   "predicate": "tags",
+   "target": "Pol2"
+  },
+  {
+   "source": "IAA",
+   "predicate": "induces_depletion",
+   "target": "Pol3"
+  },
+  {
+   "source": "HML",
+   "predicate": "is_locus",
+   "target": "telomere"
+  }
+ ],
+ "truncated": false
+}

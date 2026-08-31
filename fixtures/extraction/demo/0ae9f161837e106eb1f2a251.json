@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13501320:0:a206dcb8",
+ "entities": [
+  {
+   "name": "Bioinformatics",
+   "type": "organism"
+  },
+  {
+   "name": "GIDEON",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jocelyn J Garcia",
+   "type": "organism"
+  },
+  {
+   "name": "Kevin M Yu",
+   "type": "organism"
+  },
+  {
+   "name": "Catherine H Freudenreich",
+   "type": "organism"
+  },
+  {
+   "name": "Lenore J Cowen",
+   "type": "organism"
+  },
+  {
+   "name": "National Institute Of General Medical Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "National Institutes of Health",
+   "type": "organism"
+  },
+  {
+   "name": "National Science Foundation",
+   "type": "organism"
+  },
+  {
+   "name": "Oxford University Press",
+   "type": "organism"
+  },
+  {
+   "name": "Tufts University",
+   "type": "organism"
+  },
+  {
+   "name": "Baker's yeast",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Bioinformatics",
+   "predicate": "published",
+   "target": "GIDEON"
+  },
+  {
+   "source": "Jocelyn J Garcia",
+   "predicate": "author",
+   "target": "GIDEON"
+  },
+  {
+   "source": "Kevin M Yu",
+   "predicate": "author",
+   "target": "GIDEON"
+  },
+  {
+   "source": "Catherine H Freudenreich",
+   "predicate": "author",
+   "target": "GIDEON"
+  },
+  {
+   "source": "Lenore J Cowen",
+   "predicate": "author",
+   "target": "GIDEON"
+  },
+  {
+   "source": "National Institute Of General Medical Sciences",
+   "predicate": "funded",
+   "target": "GIDEON"
+  },
+  {
+   "source": "National Institutes of Health",
+   "predicate": "funded",
+   "target": "GIDEON"
+  },
+  {
+   "source": "National Science Foundation",
+   "predicate": "funded",
+   "target": "GIDEON"
+  },
+  {
+   "source": "Oxford University Press",
+   "predicate": "published",
+   "target": "Bioinformatics"
+  },
+  {
+   "source": "Tufts University",
+   "predicate": "affiliated",
+   "target": "Jocelyn J Garcia"
+  },
+  {
+   "source": "Tufts University",
+   "predicate": "affiliated",
+   "target": "Kevin M Yu"
+  },
+  {
+   "source": "Tufts University",
+   "predicate": "affiliated",
+   "target": "Catherine H Freudenreich"
+  }
+ ],
+ "truncated": false
+}

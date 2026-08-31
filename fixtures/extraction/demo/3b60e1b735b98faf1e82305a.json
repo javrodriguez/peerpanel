@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13471478:0:19322f23",
+ "entities": [
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cullin 3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RocI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pendrin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Huber Florian",
+   "type": "organism"
+  },
+  {
+   "name": "Bernardinelli Emanuele",
+   "type": "organism"
+  },
+  {
+   "name": "Haddad Bassam G.",
+   "type": "organism"
+  },
+  {
+   "name": "Klaus Sophie",
+   "type": "organism"
+  },
+  {
+   "name": "Weitgasser Lennart",
+   "type": "organism"
+  },
+  {
+   "name": "Roesch Sebastian",
+   "type": "organism"
+  },
+  {
+   "name": "Jakab Martin",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ZBTB16",
+   "predicate": "interacts_with",
+   "target": "SLC26A4"
+  }
+ ],
+ "truncated": false
+}

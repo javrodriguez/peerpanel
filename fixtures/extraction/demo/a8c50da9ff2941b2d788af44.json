@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10729969:12:5de80d00",
+ "entities": [
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MMP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MHT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SMM",
+   "type": "chemical"
+  },
+  {
+   "name": "DMS",
+   "type": "chemical"
+  },
+  {
+   "name": "methanethiol",
+   "type": "chemical"
+  },
+  {
+   "name": "OAH",
+   "type": "chemical"
+  },
+  {
+   "name": "OAS",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

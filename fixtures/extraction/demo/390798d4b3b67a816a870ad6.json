@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13450799:21:eca7cdac",
+ "entities": [
+  {
+   "name": "Protocols.io",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS ONE",
+   "type": "organism"
+  },
+  {
+   "name": "ORCID",
+   "type": "organism"
+  },
+  {
+   "name": "Arthur J. Lustig",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Data policy",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS staff",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS ONE",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Data policy",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS staff",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS ONE",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Data policy",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PLOS",
+   "predicate": "supports",
+   "target": "ORCID"
+  }
+ ],
+ "truncated": false
+}

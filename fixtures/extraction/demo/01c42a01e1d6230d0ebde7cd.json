@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13467452:2:1bfb2a0b",
+ "entities": [
+  {
+   "name": "pancreatic β-cell",
+   "type": "organism"
+  },
+  {
+   "name": "calorie restriction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sirtuin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NAD+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NADH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AMP-activated protein kinase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "nicotinamide phosphoribosyltransferase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "type 2 diabetes mellitus",
+   "type": "organism"
+  },
+  {
+   "name": "obesity",
+   "type": "organism"
+  },
+  {
+   "name": "high-fat diet",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "inflammation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "insulin",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "calorie restriction",
+   "predicate": "has_effect",
+   "target": "pancreatic β-cell"
+  },
+  {
+   "source": "sirtuin",
+   "predicate": "is_activated_by",
+   "target": "NAD+"
+  },
+  {
+   "source": "NAD+",
+   "predicate": "is_produced_by",
+   "target": "nicotinamide phosphoribosyltransferase"
+  },
+  {
+   "source": "AMP-activated protein kinase",
+   "predicate": "is_activated_by",
+   "target": "NAD+"
+  },
+  {
+   "source": "pancreatic β-cell",
+   "predicate": "is_affected_by",
+   "target": "high-fat diet"
+  },
+  {
+   "source": "inflammation",
+   "predicate": "has_effect",
+   "target": "pancreatic β-cell"
+  },
+  {
+   "source": "obesity",
+   "predicate": "has_effect",
+   "target": "pancreatic β-cell"
+  }
+ ],
+ "truncated": false
+}

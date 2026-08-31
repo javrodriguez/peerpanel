@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC9757880:3:14481ff3",
+ "entities": [
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "met17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cost",
+   "type": "organism"
+  },
+  {
+   "name": "Boeke",
+   "type": "organism"
+  },
+  {
+   "name": "BY4741",
+   "type": "organism"
+  },
+  {
+   "name": "HIS3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LEU2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

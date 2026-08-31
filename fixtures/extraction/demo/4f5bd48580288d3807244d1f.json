@@ -1,0 +1,63 @@
+{
+ "chunk_id": "PMC13471478:20:9485b88b",
+ "entities": [
+  {
+   "name": "Paracelsus Medical University",
+   "type": "organism"
+  },
+  {
+   "name": "Salzburg",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Austria",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "animal procedures",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "guidelines",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "laboratory animals",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "animals",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "research",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "authors",
+   "type": "organism"
+  },
+  {
+   "name": "Springer Nature",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Paracelsus Medical University",
+   "predicate": "established",
+   "target": "guidelines"
+  },
+  {
+   "source": "Paracelsus Medical University",
+   "predicate": "conducted",
+   "target": "animal procedures"
+  },
+  {
+   "source": "animal procedures",
+   "predicate": "meet",
+   "target": "guidelines"
+  }
+ ],
+ "truncated": false
+}

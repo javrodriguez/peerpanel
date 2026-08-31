@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC11974387:0:cb57ff26",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Crabtree effect",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pyruvate decarboxylase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ethanol dehydrogenase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolic engineering",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Guo Yalin",
+   "type": "organism"
+  },
+  {
+   "name": "Xiong Zhen",
+   "type": "organism"
+  },
+  {
+   "name": "Zhai Haotian",
+   "type": "organism"
+  },
+  {
+   "name": "Wang Yuqi",
+   "type": "organism"
+  },
+  {
+   "name": "Qi Qingsheng",
+   "type": "organism"
+  },
+  {
+   "name": "Hou Jin",
+   "type": "organism"
+  },
+  {
+   "name": "FEMS Yeast Research",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_crabtree_effect",
+   "target": "Crabtree effect"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_pyruvate_decarboxylase",
+   "target": "pyruvate decarboxylase"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_ethanol_dehydrogenase",
+   "target": "ethanol dehydrogenase"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "is_engineered_by",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "Guo Yalin",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Xiong Zhen",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Zhai Haotian",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Wang Yuqi",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Qi Qingsheng",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Hou Jin",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "FEMS Yeast Research",
+   "predicate": "is_published_in",
+   "target": "FEMS Yeast Research"
+  }
+ ],
+ "truncated": false
+}

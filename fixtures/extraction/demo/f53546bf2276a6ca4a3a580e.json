@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC10440040:5:89d68d89",
+ "entities": [
+  {
+   "name": "MEP2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "NP11",
+   "type": "organism"
+  },
+  {
+   "name": "BOT-A2",
+   "type": "organism"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "hypothetical protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "exons",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "promoter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNA",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "MEP2",
+   "predicate": "has_promoter",
+   "target": "promoter"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_strain",
+   "target": "NP11"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "has_strain",
+   "target": "NP11"
+  },
+  {
+   "source": "MEP2",
+   "predicate": "is_upregulated",
+   "target": "nitrogen"
+  },
+  {
+   "source": "MEP2",
+   "predicate": "has_sequence",
+   "target": "DNA"
+  },
+  {
+   "source": "promoter",
+   "predicate": "is_located_in",
+   "target": "DNA"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "has_promoter",
+   "target": "promoter"
+  },
+  {
+   "source": "promoter",
+   "predicate": "is_regulated_by",
+   "target": "nitrogen"
+  },
+  {
+   "source": "protein",
+   "predicate": "is_expressed",
+   "target": "MEP2"
+  },
+  {
+   "source": "hypothetical protein",
+   "predicate": "is_expressed",
+   "target": "MEP2"
+  }
+ ],
+ "truncated": false
+}

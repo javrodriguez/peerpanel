@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC5484544:17:1d270e33",
+ "entities": [
+  {
+   "name": "Swinnen E",
+   "type": "organism"
+  },
+  {
+   "name": "Idkowiak - Baldys J",
+   "type": "organism"
+  },
+  {
+   "name": "Smets B",
+   "type": "organism"
+  },
+  {
+   "name": "Accardo S",
+   "type": "organism"
+  },
+  {
+   "name": "protein kinase Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "key regulator",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sphingolipid metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "doi: mbc",
+   "type": "other"
+  },
+  {
+   "name": "PMC3873890.24196832",
+   "type": "other"
+  },
+  {
+   "name": "E13 - 06 - 0340 PMC3873890",
+   "type": "other"
+  },
+  {
+   "name": "Jin N",
+   "type": "organism"
+  },
+  {
+   "name": "Mao K",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Swinnen E",
+   "predicate": "studied",
+   "target": "protein kinase Sch9"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "regulates",
+   "target": "sphingolipid metabolism"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "is",
+   "target": "key regulator"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "is",
+   "target": "sphingolipid metabolism"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "is",
+   "target": "key regulator"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "regulates",
+   "target": "sphingolipid metabolism"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "is",
+   "target": "key regulator"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "regulates",
+   "target": "sphingolipid metabolism"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "is",
+   "target": "key regulator"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "regulates",
+   "target": "sphingolipid metabolism"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "is",
+   "target": "key regulator"
+  },
+  {
+   "source": "protein kinase Sch9",
+   "predicate": "regulates",
+   "target": "sphingolipid metabolism"
+  }
+ ],
+ "truncated": false
+}

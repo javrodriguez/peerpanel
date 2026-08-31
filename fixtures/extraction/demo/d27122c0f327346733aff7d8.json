@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC11974387:6:36e34de6",
+ "entities": [
+  {
+   "name": "Acetyl-CoA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cell growth",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "nucleus",
+   "type": "organism"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "cytoplasm",
+   "type": "organism"
+  },
+  {
+   "name": "PDC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "pyruvate",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Acetyl-CoA",
+   "predicate": "is_essential_for",
+   "target": "cell growth"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "produces",
+   "target": "Acetyl-CoA"
+  },
+  {
+   "source": "pyruvate",
+   "predicate": "is_converted_to",
+   "target": "Acetyl-CoA"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13501320:10:63732f77",
+ "entities": [
+  {
+   "name": "Benjamini Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "false discovery rate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "practical and powerful approach",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "multiple testing",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J R Stat Soc Ser B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Methodol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Billmann M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CostanzoM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ZhangX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "et al",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Global genetic interaction network",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "human cell maps",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Benjamini Y",
+   "predicate": "proposed",
+   "target": "false discovery rate"
+  },
+  {
+   "source": "Benjamini Y",
+   "predicate": "proposed",
+   "target": "practical and powerful approach"
+  },
+  {
+   "source": "Benjamini Y",
+   "predicate": "proposed",
+   "target": "multiple testing"
+  },
+  {
+   "source": "J R Stat Soc Ser B",
+   "predicate": "published",
+   "target": "Methodol"
+  },
+  {
+   "source": "Billmann M",
+   "predicate": "proposed",
+   "target": "Global genetic interaction network"
+  },
+  {
+   "source": "Billmann M",
+   "predicate": "proposed",
+   "target": "human cell maps"
+  },
+  {
+   "source": "CostanzoM",
+   "predicate": "proposed",
+   "target": "Global genetic interaction network"
+  },
+  {
+   "source": "CostanzoM",
+   "predicate": "proposed",
+   "target": "human cell maps"
+  },
+  {
+   "source": "ZhangX",
+   "predicate": "proposed",
+   "target": "Global genetic interaction network"
+  },
+  {
+   "source": "ZhangX",
+   "predicate": "proposed",
+   "target": "human cell maps"
+  },
+  {
+   "source": "et al",
+   "predicate": "proposed",
+   "target": "Global genetic interaction network"
+  },
+  {
+   "source": "et al",
+   "predicate": "proposed",
+   "target": "human cell maps"
+  }
+ ],
+ "truncated": false
+}

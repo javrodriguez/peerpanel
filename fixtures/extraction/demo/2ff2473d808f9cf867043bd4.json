@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13515280:5:09cf6a2c",
+ "entities": [
+  {
+   "name": "Dezhou Jennies",
+   "type": "organism"
+  },
+  {
+   "name": "MCON group",
+   "type": "organism"
+  },
+  {
+   "name": "MYE group",
+   "type": "organism"
+  },
+  {
+   "name": "Yeast Hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "Serum Biochemical Parameters",
+   "type": "chemical"
+  },
+  {
+   "name": "Alanine Aminotransferase",
+   "type": "chemical"
+  },
+  {
+   "name": "Aspartate Aminotransferase",
+   "type": "chemical"
+  },
+  {
+   "name": "Triglyceride",
+   "type": "chemical"
+  },
+  {
+   "name": "Total Protein",
+   "type": "chemical"
+  },
+  {
+   "name": "Albumin",
+   "type": "chemical"
+  },
+  {
+   "name": "Alkaline Phosphatase",
+   "type": "chemical"
+  },
+  {
+   "name": "Total Cholesterol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has lower",
+   "target": "Alanine Aminotransferase"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has lower",
+   "target": "Aspartate Aminotransferase"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has higher",
+   "target": "Triglyceride"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has no significant difference",
+   "target": "Total Protein"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has no significant difference",
+   "target": "Albumin"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has no significant difference",
+   "target": "Alkaline Phosphatase"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has no significant difference",
+   "target": "Total Cholesterol"
+  }
+ ],
+ "truncated": false
+}

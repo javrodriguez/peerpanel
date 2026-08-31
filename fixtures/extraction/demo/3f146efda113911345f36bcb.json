@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC9157227:0:18652e48",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Bonturi Nemailla",
+   "type": "organism"
+  },
+  {
+   "name": "Pinheiro Marina Julio",
+   "type": "organism"
+  },
+  {
+   "name": "de Oliveira Paola Monteiro",
+   "type": "organism"
+  },
+  {
+   "name": "Rusadze Eka",
+   "type": "organism"
+  },
+  {
+   "name": "Liudžiūtė Gintare",
+   "type": "organism"
+  },
+  {
+   "name": "De Biaggi Juliano Sabedotti",
+   "type": "organism"
+  },
+  {
+   "name": "Lahtvee Petri-Jaan",
+   "type": "organism"
+  },
+  {
+   "name": "Metabolic Engineering Communications",
+   "type": "organism"
+  },
+  {
+   "name": "Metab Eng Commun",
+   "type": "organism"
+  },
+  {
+   "name": "Elsevier",
+   "type": "organism"
+  },
+  {
+   "name": "International Metabolic Engineering Society",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

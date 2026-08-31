@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC6402699:4:af251f08",
+ "entities": [
+  {
+   "name": "A−L+",
+   "type": "organism"
+  },
+  {
+   "name": "L−A+",
+   "type": "organism"
+  },
+  {
+   "name": "S288C background",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RM11 background",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mitochondrial mutation rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "death rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "starvation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "microscopy batch-culture assay",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolite",
+   "type": "chemical"
+  },
+  {
+   "name": "birth",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "batch cultures",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "saturation",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "A−L+",
+   "predicate": "has",
+   "target": "death rate"
+  }
+ ],
+ "truncated": false
+}

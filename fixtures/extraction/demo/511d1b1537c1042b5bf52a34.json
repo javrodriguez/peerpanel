@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC5484544:1:b6a2aba6",
+ "entities": [
+  {
+   "name": "TOR complex 1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sch9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "carbon",
+   "type": "chemical"
+  },
+  {
+   "name": "amino acids",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "TORC1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tap42",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pkh1-3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Snf1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sch9",
+   "predicate": "main effector",
+   "target": "TOR complex 1"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "phosphorylates",
+   "target": "Tap42"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "phosphorylates",
+   "target": "Sch9"
+  },
+  {
+   "source": "Pkh1-3",
+   "predicate": "phosphorylates",
+   "target": "Sch9"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "interacts with",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "activates",
+   "target": "Sch9"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC11701741:6:31f9f83c",
+ "entities": [
+  {
+   "name": "Pfam",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein families database",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "D412",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "D419.33125078",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gkaa913 PMC7779014",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Kriventseva E.V.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "RahmanN.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "EspinosaO.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ZdobnovE.M.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "hierarchical catalog",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "eukaryotic orthologs",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "36 : D271",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Pfam",
+   "predicate": "is",
+   "target": "protein families database"
+  },
+  {
+   "source": "D412",
+   "predicate": "is",
+   "target": "D419.33125078"
+  },
+  {
+   "source": "gkaa913 PMC7779014",
+   "predicate": "is",
+   "target": "Kriventseva E.V."
+  },
+  {
+   "source": "Kriventseva E.V.",
+   "predicate": "is",
+   "target": "RahmanN."
+  },
+  {
+   "source": "EspinosaO.",
+   "predicate": "is",
+   "target": "ZdobnovE.M."
+  },
+  {
+   "source": "hierarchical catalog",
+   "predicate": "is",
+   "target": "eukaryotic orthologs"
+  }
+ ],
+ "truncated": false
+}

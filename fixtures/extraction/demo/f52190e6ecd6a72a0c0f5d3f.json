@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13510017:8:fbe20d45",
+ "entities": [
+  {
+   "name": "Low DO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "High DO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C > T",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "T > C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "T > A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C > G",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C > A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "T > G",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mutect2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA-seq data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YMC framework",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WRS analysis",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Low DO",
+   "predicate": "associated_with",
+   "target": "C > T"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "associated_with",
+   "target": "T > C"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "associated_with",
+   "target": "T > A"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "associated_with",
+   "target": "C > G"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "associated_with",
+   "target": "C > A"
+  },
+  {
+   "source": "Low DO",
+   "predicate": "associated_with",
+   "target": "T > G"
+  },
+  {
+   "source": "High DO",
+   "predicate": "associated_with",
+   "target": "C > T"
+  },
+  {
+   "source": "High DO",
+   "predicate": "associated_with",
+   "target": "T > C"
+  },
+  {
+   "source": "High DO",
+   "predicate": "associated_with",
+   "target": "T > A"
+  },
+  {
+   "source": "High DO",
+   "predicate": "associated_with",
+   "target": "C > G"
+  },
+  {
+   "source": "High DO",
+   "predicate": "associated_with",
+   "target": "C > A"
+  },
+  {
+   "source": "High DO",
+   "predicate": "associated_with",
+   "target": "T > G"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC7470746:14:0f64208c",
+ "entities": [
+  {
+   "name": "WY2035",
+   "type": "organism"
+  },
+  {
+   "name": "mCherry-tagged yeast",
+   "type": "organism"
+  },
+  {
+   "name": "organosulfur",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "methionine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glutathione",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DxP10",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ToPro3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FlowJo software",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "rate-based bioassay",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Flow cytometry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metabolite extraction",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WY2035",
+   "predicate": "is_extracted_by",
+   "target": "Metabolite extraction"
+  },
+  {
+   "source": "Metabolite extraction",
+   "predicate": "extracts_metabolites_from",
+   "target": "WY2035"
+  },
+  {
+   "source": "Metabolite extraction",
+   "predicate": "uses",
+   "target": "HPLC"
+  },
+  {
+   "source": "Metabolite extraction",
+   "predicate": "uses",
+   "target": "DxP10"
+  },
+  {
+   "source": "Metabolite extraction",
+   "predicate": "uses",
+   "target": "ToPro3"
+  },
+  {
+   "source": "Metabolite extraction",
+   "predicate": "uses",
+   "target": "FlowJo software"
+  }
+ ],
+ "truncated": false
+}

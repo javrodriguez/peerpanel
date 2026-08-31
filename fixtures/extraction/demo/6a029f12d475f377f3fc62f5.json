@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7953724:2:7e03c87a",
+ "entities": [
+  {
+   "name": "Lipomyces starkeyi CBS 7786",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides CBS 14",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis CBS 3044",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula mucolaginosa CFSQE 63",
+   "type": "organism"
+  },
+  {
+   "name": "crude glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "hemicellulose hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "OD600",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FT-NIR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bioreactor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "exopolysaccharide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lipomyces starkeyi CBS 7786",
+   "predicate": "consumed",
+   "target": "crude glycerol"
+  },
+  {
+   "source": "Lipomyces starkeyi CBS 7786",
+   "predicate": "consumed",
+   "target": "hemicellulose hydrolysate"
+  },
+  {
+   "source": "Rhodotorula toruloides CBS 14",
+   "predicate": "consumed",
+   "target": "crude glycerol"
+  },
+  {
+   "source": "Rhodotorula toruloides CBS 14",
+   "predicate": "consumed",
+   "target": "hemicellulose hydrolysate"
+  },
+  {
+   "source": "Rhodotorula glutinis CBS 3044",
+   "predicate": "consumed",
+   "target": "crude glycerol"
+  },
+  {
+   "source": "Rhodotorula glutinis CBS 3044",
+   "predicate": "consumed",
+   "target": "hemicellulose hydrolysate"
+  },
+  {
+   "source": "Rhodotorula mucolaginosa CFSQE 63",
+   "predicate": "consumed",
+   "target": "crude glycerol"
+  },
+  {
+   "source": "Rhodotorula mucolaginosa CFSQE 63",
+   "predicate": "consumed",
+   "target": "hemicellulose hydrolysate"
+  },
+  {
+   "source": "Lipomyces starkeyi CBS 7786",
+   "predicate": "grew",
+   "target": "crude glycerol"
+  },
+  {
+   "source": "Lipomyces starkeyi CBS 7786",
+   "predicate": "grew",
+   "target": "hemicellulose hydrolysate"
+  },
+  {
+   "source": "Rhodotorula toruloides CBS 14",
+   "predicate": "grew",
+   "target": "crude glycerol"
+  },
+  {
+   "source": "Rhodotorula toruloides CBS 14",
+   "predicate": "grew",
+   "target": "hemicellulose hydrolysate"
+  }
+ ],
+ "truncated": false
+}

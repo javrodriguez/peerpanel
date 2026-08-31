@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC11701741:1:5c2a9762",
+ "entities": [
+  {
+   "name": "Genomics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Orthologs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gene orthology",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pfam",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OrthoDB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OrthoMCL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OrthoFinder",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Eukaryotes",
+   "type": "organism"
+  },
+  {
+   "name": "Bacteria",
+   "type": "organism"
+  },
+  {
+   "name": "Archaea",
+   "type": "organism"
+  },
+  {
+   "name": "Lepidoptera moths",
+   "type": "organism"
+  },
+  {
+   "name": "Chromadorea roundworms",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gene orthology",
+   "predicate": "define",
+   "target": "orthologs"
+  }
+ ],
+ "truncated": false
+}

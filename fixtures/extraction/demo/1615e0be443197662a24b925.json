@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC5968551:12:c65b7921",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "lipid droplet proteome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fatty acid-derived oleochemicals",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "synthetic yeast cell factories",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "very long-chain monounsaturated fatty acid rich oils",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "KU70 and KU80 homologues",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gene deletion frequency",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "false discovery rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Gene Ontology",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "EasyGO",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid contaminants",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein-dye binding",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has",
+   "target": "lipid droplet proteome"
+  }
+ ],
+ "truncated": false
+}

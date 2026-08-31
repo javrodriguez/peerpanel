@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13515280:9:86788a96",
+ "entities": [
+  {
+   "name": "Dezhou jennies",
+   "type": "organism"
+  },
+  {
+   "name": "yeast hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "basal diet",
+   "type": "chemical"
+  },
+  {
+   "name": "MCON",
+   "type": "chemical"
+  },
+  {
+   "name": "MYE",
+   "type": "chemical"
+  },
+  {
+   "name": "16S rRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "QIIME",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RDP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SPSS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PERMANOVA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LEfSe",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Dezhou jennies",
+   "predicate": "fed",
+   "target": "basal diet"
+  },
+  {
+   "source": "Dezhou jennies",
+   "predicate": "fed",
+   "target": "yeast hydrolysate"
+  },
+  {
+   "source": "yeast hydrolysate",
+   "predicate": "supplemented",
+   "target": "basal diet"
+  },
+  {
+   "source": "basal diet",
+   "predicate": "fed",
+   "target": "Dezhou jennies"
+  },
+  {
+   "source": "yeast hydrolysate",
+   "predicate": "supplemented",
+   "target": "basal diet"
+  },
+  {
+   "source": "MCON",
+   "predicate": "fed",
+   "target": "Dezhou jennies"
+  },
+  {
+   "source": "MYE",
+   "predicate": "fed",
+   "target": "Dezhou jennies"
+  }
+ ],
+ "truncated": false
+}

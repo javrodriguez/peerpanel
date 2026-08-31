@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC8116571:10:953dee94",
+ "entities": [
+  {
+   "name": "R. toruloides CCT 7815",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi DSM 70295",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis CBS 5773",
+   "type": "organism"
+  },
+  {
+   "name": "K. marxianus CBS 6556",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Pinheiro",
+   "type": "organism"
+  },
+  {
+   "name": "Zhao",
+   "type": "organism"
+  },
+  {
+   "name": "Anschau",
+   "type": "organism"
+  },
+  {
+   "name": "Nonklang",
+   "type": "organism"
+  },
+  {
+   "name": "Goshima",
+   "type": "organism"
+  },
+  {
+   "name": "Hua",
+   "type": "organism"
+  },
+  {
+   "name": "Simpson-Lavy",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L. starkeyi DSM 70295",
+   "predicate": "has similar specific co-consumption and growth rate",
+   "target": "S. stipitis CBS 5773"
+  }
+ ],
+ "truncated": false
+}

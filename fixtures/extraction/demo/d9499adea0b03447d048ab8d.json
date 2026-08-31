@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13524880:7:44e06c1b",
+ "entities": [
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "3xTy-AAT10.2∗",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "3xTy-Δ35-AAT10.2∗",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "3xTy-STA-AAT10.2∗",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "3xTy-STD-AAT10.2∗",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "eYFP-AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "3xcMyc-AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EF-1α",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TERT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tetracycline",
+   "type": "chemical"
+  },
+  {
+   "name": "BCAA",
+   "type": "chemical"
+  },
+  {
+   "name": "SDM79",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AAT10.2",
+   "predicate": "has_variant",
+   "target": "3xTy-AAT10.2∗"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "has_variant",
+   "target": "3xTy-Δ35-AAT10.2∗"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "has_variant",
+   "target": "3xTy-STA-AAT10.2∗"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "has_variant",
+   "target": "3xTy-STD-AAT10.2∗"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "is_expressed_in",
+   "target": "SDM79"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "is_downregulated_by",
+   "target": "tetracycline"
+  }
+ ],
+ "truncated": false
+}

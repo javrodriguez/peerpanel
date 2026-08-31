@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC6402699:16:ffff3721",
+ "entities": [
+  {
+   "name": "consumption",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "batch cultures",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "exponential cultures",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "exponentially growing cells",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lys2− cells",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "L−A+ cells",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "A−L+ cells",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "QIAGEN Genomic-tip 20G kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zymo Research YeaStar Genomic DNA Kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nextera DNA Sample Preparation Kit",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "consumption",
+   "predicate": "measured in",
+   "target": "batch cultures"
+  },
+  {
+   "source": "consumption",
+   "predicate": "measured in",
+   "target": "exponential cultures"
+  }
+ ],
+ "truncated": false
+}

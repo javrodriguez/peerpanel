@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7873862:5:9b46a649",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "OrthoMCL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BiGG database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metabolic reactions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Metabolic network reconstruction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "OrthoMCL orthologous groups",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Orthologous protein groups",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Paralogs",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Coenzyme Q9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ubiquinone-9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Heme O",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Heme A",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_metabolic_network",
+   "target": "Metabolic network reconstruction"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_metabolic_reactions",
+   "target": "Metabolic reactions"
+  },
+  {
+   "source": "OrthoMCL",
+   "predicate": "uses",
+   "target": "OrthoMCL orthologous groups"
+  },
+  {
+   "source": "BiGG database",
+   "predicate": "uses",
+   "target": "Metabolic network reconstruction"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_coenzyme",
+   "target": "Coenzyme Q9"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_heme",
+   "target": "Heme O"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_heme",
+   "target": "Heme A"
+  },
+  {
+   "source": "Metabolic reactions",
+   "predicate": "is_part_of",
+   "target": "Metabolic network reconstruction"
+  },
+  {
+   "source": "Metabolic network reconstruction",
+   "predicate": "is_reconstructed_from",
+   "target": "OrthoMCL orthologous groups"
+  },
+  {
+   "source": "Metabolic network reconstruction",
+   "predicate": "is_reconstructed_from",
+   "target": "BiGG database"
+  },
+  {
+   "source": "Metabolic reactions",
+   "predicate": "is_involves",
+   "target": "Coenzyme Q9"
+  },
+  {
+   "source": "Metabolic reactions",
+   "predicate": "is_involves",
+   "target": "Heme O"
+  }
+ ],
+ "truncated": false
+}

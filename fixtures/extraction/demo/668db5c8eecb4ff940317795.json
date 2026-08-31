@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC7382830:12:ad4ea29e",
+ "entities": [
+  {
+   "name": "CRP regulon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvA regulon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CCR system",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glycine cleavage system",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cyaA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crr",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "L-serine",
+   "type": "chemical"
+  },
+  {
+   "name": "A. coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "ALE",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mutation",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CRP regulon",
+   "predicate": "converge",
+   "target": "CCR system"
+  },
+  {
+   "source": "GcvA regulon",
+   "predicate": "converge",
+   "target": "glycine cleavage system"
+  },
+  {
+   "source": "cyaA",
+   "predicate": "mutate",
+   "target": "crr"
+  },
+  {
+   "source": "glycerol",
+   "predicate": "carbon source",
+   "target": "E. coli"
+  },
+  {
+   "source": "L-serine",
+   "predicate": "carbon source",
+   "target": "E. coli"
+  },
+  {
+   "source": "mutation",
+   "predicate": "converge",
+   "target": "ALE"
+  },
+  {
+   "source": "mutation",
+   "predicate": "enable",
+   "target": "glycine cleavage system"
+  },
+  {
+   "source": "mutation",
+   "predicate": "repress",
+   "target": "glycine cleavage system"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC6402699:9:5e88c39e",
+ "entities": [
+  {
+   "name": "CoSMO",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "L−A+",
+   "type": "organism"
+  },
+  {
+   "name": "A−L+",
+   "type": "organism"
+  },
+  {
+   "name": "phage",
+   "type": "organism"
+  },
+  {
+   "name": "bacteria",
+   "type": "organism"
+  },
+  {
+   "name": "metabolite",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon",
+   "type": "chemical"
+  },
+  {
+   "name": "predators",
+   "type": "organism"
+  },
+  {
+   "name": "man-made pollutants",
+   "type": "chemical"
+  },
+  {
+   "name": "drugs",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC10204961:5:8f0f3850",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "NP11",
+   "type": "organism"
+  },
+  {
+   "name": "CCT 7815",
+   "type": "organism"
+  },
+  {
+   "name": "CCT 0783",
+   "type": "organism"
+  },
+  {
+   "name": "GECKO Toolbox",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BRENDA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "kcat",
+   "type": "chemical"
+  },
+  {
+   "name": "kapp",
+   "type": "chemical"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "ATP",
+   "type": "chemical"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "glutamate dehydrogenase",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "glutamate dehydrogenase"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "kcat"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "kapp"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "acetyl-CoA"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "ATP"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "NADPH"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "CCT 7815"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "CCT 0783"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "NP11"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "GECKO Toolbox"
+  }
+ ],
+ "truncated": false
+}

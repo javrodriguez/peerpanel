@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC8116571:1:a560a8ea",
+ "entities": [
+  {
+   "name": "Lignocellulosic biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "Cellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "Hemicellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "Lignin",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces",
+   "type": "organism"
+  },
+  {
+   "name": "Cyberlindnera jadinii",
+   "type": "organism"
+  },
+  {
+   "name": "Candida parapsilosis",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lignocellulosic biomass",
+   "predicate": "composed of",
+   "target": "Cellulose"
+  },
+  {
+   "source": "Lignocellulosic biomass",
+   "predicate": "composed of",
+   "target": "Hemicellulose"
+  },
+  {
+   "source": "Lignocellulosic biomass",
+   "predicate": "composed of",
+   "target": "Lignin"
+  }
+ ],
+ "truncated": false
+}

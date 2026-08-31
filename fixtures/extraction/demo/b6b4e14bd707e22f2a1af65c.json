@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC11628909:4:8cb9b613",
+ "entities": [
+  {
+   "name": "PagERF021 protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "poplar protoplasts",
+   "type": "organism"
+  },
+  {
+   "name": "tobacco system",
+   "type": "organism"
+  },
+  {
+   "name": "pUC19-GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pBI121-GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cell",
+   "type": "organism"
+  },
+  {
+   "name": "nucleus",
+   "type": "organism"
+  },
+  {
+   "name": "yeast two-hybrid system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PagERF021-BD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SD/Trp medium",
+   "type": "chemical"
+  },
+  {
+   "name": "X-α-gal",
+   "type": "chemical"
+  },
+  {
+   "name": "PagERF021 protein",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PagERF021 protein",
+   "predicate": "located_in",
+   "target": "nucleus"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "transcriptional_activation",
+   "target": "yeast two-hybrid system"
+  }
+ ],
+ "truncated": false
+}

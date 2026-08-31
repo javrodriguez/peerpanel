@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13462271:2:fddc56a1",
+ "entities": [
+  {
+   "name": "Pol1 protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast strains",
+   "type": "organism"
+  },
+  {
+   "name": "Tris",
+   "type": "chemical"
+  },
+  {
+   "name": "buffered saline",
+   "type": "chemical"
+  },
+  {
+   "name": "PMSF",
+   "type": "chemical"
+  },
+  {
+   "name": "c-Myc antibody",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PGK1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rad53-P",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cycloheximide",
+   "type": "chemical"
+  },
+  {
+   "name": "α-factor",
+   "type": "chemical"
+  },
+  {
+   "name": "BrdU",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Pol1 protein",
+   "predicate": "has level",
+   "target": "yeast strains"
+  }
+ ],
+ "truncated": false
+}

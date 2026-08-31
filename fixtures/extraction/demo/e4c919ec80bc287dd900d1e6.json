@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC10204961:23:38e96e32",
+ "entities": [
+  {
+   "name": "Radhakrishnan Mahadevan",
+   "type": "organism"
+  },
+  {
+   "name": "Mark Alber",
+   "type": "organism"
+  },
+  {
+   "name": "Zsofia Freund",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Computational Biology",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Genome-scale metabolic modeling",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolic trade-offs",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "publication",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "editorial review process",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PLOS Data policy",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Radhakrishnan Mahadevan",
+   "predicate": "is Guest Editor of",
+   "target": "PLOS Computational Biology"
+  },
+  {
+   "source": "Mark Alber",
+   "predicate": "is Section Editor of",
+   "target": "PLOS Computational Biology"
+  },
+  {
+   "source": "Zsofia Freund",
+   "predicate": "is author of",
+   "target": "publication"
+  },
+  {
+   "source": "PLOS",
+   "predicate": "requires authors to make data and code available",
+   "target": "PLOS Data policy"
+  }
+ ],
+ "truncated": false
+}

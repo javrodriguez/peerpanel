@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13470552:3:e63c23bc",
+ "entities": [
+  {
+   "name": "OM14-2GFP-ter-URA3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UG72-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CIT1-2GFP-ter-URA3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AFG3-2GFP-ter-URA3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ABF2-2GFP-ter-URA3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "COX9-mTagBFP-ter-kanMX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NDI1-2GFP-ter-URA3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NUC1-2GFP-ter-URA3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ELO3-mTagBFP-ter-kanMX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EMC1-2GFP-ter-URA3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pTPI1-SS-GFP-HDEL-URA3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IRE1-2GFP-ter-URA3",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OM14-2GFP-ter-URA3",
+   "predicate": "has_backbone",
+   "target": "UG72-2GFP"
+  },
+  {
+   "source": "CIT1-2GFP-ter-URA3",
+   "predicate": "has_backbone",
+   "target": "UG72-2GFP"
+  },
+  {
+   "source": "AFG3-2GFP-ter-URA3",
+   "predicate": "has_backbone",
+   "target": "UG72-2GFP"
+  },
+  {
+   "source": "ABF2-2GFP-ter-URA3",
+   "predicate": "has_backbone",
+   "target": "UG72-2GFP"
+  },
+  {
+   "source": "NDI1-2GFP-ter-URA3",
+   "predicate": "has_backbone",
+   "target": "UG72-2GFP"
+  },
+  {
+   "source": "NUC1-2GFP-ter-URA3",
+   "predicate": "has_backbone",
+   "target": "UG72-2GFP"
+  },
+  {
+   "source": "EMC1-2GFP-ter-URA3",
+   "predicate": "has_backbone",
+   "target": "UG72-2GFP"
+  },
+  {
+   "source": "IRE1-2GFP-ter-URA3",
+   "predicate": "has_backbone",
+   "target": "UG72-2GFP"
+  }
+ ],
+ "truncated": false
+}

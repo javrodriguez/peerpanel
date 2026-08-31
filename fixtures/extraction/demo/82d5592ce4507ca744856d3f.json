@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12628781:0:1b6e3d27",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Sepúlveda Del Rio Hamacek Henrique",
+   "type": "organism"
+  },
+  {
+   "name": "Tingajeva Oksana",
+   "type": "organism"
+  },
+  {
+   "name": "Ostertag Katharina",
+   "type": "organism"
+  },
+  {
+   "name": "Reķēna Alīna",
+   "type": "organism"
+  },
+  {
+   "name": "Illarionov Aleksandr",
+   "type": "organism"
+  },
+  {
+   "name": "Jõul Piia",
+   "type": "organism"
+  },
+  {
+   "name": "Monteiro de Oliveira Paola",
+   "type": "organism"
+  },
+  {
+   "name": "de La Caridad Martín-Hernández Giselle",
+   "type": "organism"
+  },
+  {
+   "name": "Bonturi Nemailla",
+   "type": "organism"
+  },
+  {
+   "name": "Passoth Volkmar",
+   "type": "organism"
+  },
+  {
+   "name": "Lahtvee Petri-Jaan",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

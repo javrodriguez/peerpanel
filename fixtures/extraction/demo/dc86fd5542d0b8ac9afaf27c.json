@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13513244:13:3b431db1",
+ "entities": [
+  {
+   "name": "YARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CMTDIC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "humanized yeast model",
+   "type": "organism"
+  },
+  {
+   "name": "tyrosine",
+   "type": "chemical"
+  },
+  {
+   "name": "HSP70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP90",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP104",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "D81I",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "G41R",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "E196Q",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BioTek",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

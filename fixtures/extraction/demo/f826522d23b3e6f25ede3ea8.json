@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC6402699:3:6ca2de38",
+ "entities": [
+  {
+   "name": "Lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "A-L+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L-A+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Community growth rate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metabolite release rates",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Consumption",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cell birth",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Death rates",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Strain 1335",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Strain 1340",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RM11 background",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S288C background",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lysine",
+   "predicate": "release",
+   "target": "A-L+"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "consumption",
+   "target": "Lysine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "consumption",
+   "target": "Lysine"
+  },
+  {
+   "source": "Community growth rate",
+   "predicate": "dependent",
+   "target": "Metabolite release rates"
+  },
+  {
+   "source": "Community growth rate",
+   "predicate": "dependent",
+   "target": "Consumption"
+  },
+  {
+   "source": "Community growth rate",
+   "predicate": "dependent",
+   "target": "Cell birth"
+  },
+  {
+   "source": "Community growth rate",
+   "predicate": "dependent",
+   "target": "Death rates"
+  },
+  {
+   "source": "RM11 background",
+   "predicate": "used",
+   "target": "Strain 1335"
+  }
+ ],
+ "truncated": false
+}

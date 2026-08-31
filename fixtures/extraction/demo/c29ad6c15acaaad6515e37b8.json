@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC12628781:12:dd3dd240",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Nha1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kha1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nhx1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pma1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vph1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Stv1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mdm38",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vnx1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pmr1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Nha1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Kha1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Nhx1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Pma1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Vph1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Stv1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Mdm38"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Vnx1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Sch9"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "Pmr1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Sch9"
+  }
+ ],
+ "truncated": false
+}

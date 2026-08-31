@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514516:19:aad941a6",
+ "entities": [
+  {
+   "name": "CDC4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DBF2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MCM5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CDC15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CDH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MCM7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CDC6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GRR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CLB4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SMC2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MPS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CKS1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

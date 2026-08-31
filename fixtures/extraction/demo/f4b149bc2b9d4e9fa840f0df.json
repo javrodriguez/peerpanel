@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC3923900:6:3bc2f62f",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "C. curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "oleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "linoleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "palmitic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "palmitoleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "stearic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "linolenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "IR response",
+   "type": "chemical"
+  },
+  {
+   "name": "other biomolecules",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "oleic acid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "linoleic acid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "palmitic acid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "palmitoleic acid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "stearic acid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "linolenic acid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "lipids"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "IR response"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "other biomolecules"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has",
+   "target": "oleic acid"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has",
+   "target": "linoleic acid"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has",
+   "target": "palmitic acid"
+  }
+ ],
+ "truncated": false
+}

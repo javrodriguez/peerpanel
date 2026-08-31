@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC5968551:3:312030f7",
+ "entities": [
+  {
+   "name": "Gene",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RPKM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cufflinks",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DESeq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gene Ontology",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Blast2GO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WEGO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "iTRAQ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Pi",
+   "type": "chemical"
+  },
+  {
+   "name": "Urea",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gene",
+   "predicate": "has_expression_level",
+   "target": "RPKM"
+  },
+  {
+   "source": "Gene",
+   "predicate": "is_differentially_expressed",
+   "target": "DESeq"
+  },
+  {
+   "source": "Gene",
+   "predicate": "has_function",
+   "target": "Gene Ontology"
+  },
+  {
+   "source": "Gene",
+   "predicate": "is_enriched_in",
+   "target": "KEGG"
+  },
+  {
+   "source": "iTRAQ",
+   "predicate": "labels_protein",
+   "target": "R. toruloides"
+  }
+ ],
+ "truncated": false
+}

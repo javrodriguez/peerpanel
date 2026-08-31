@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13517252:8:cb561a6b",
+ "entities": [
+  {
+   "name": "Phytase",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Protein hydrolysates",
+   "type": "chemical"
+  },
+  {
+   "name": "Shrimp protein hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "Krill meal",
+   "type": "chemical"
+  },
+  {
+   "name": "Probiotics",
+   "type": "chemical"
+  },
+  {
+   "name": "Fermented soybean meal",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "Hydroxyproline",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "Lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

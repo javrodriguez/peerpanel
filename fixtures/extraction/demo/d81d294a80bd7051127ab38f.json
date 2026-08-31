@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515280:1:c9ab13c8",
+ "entities": [
+  {
+   "name": "Dezhou donkey",
+   "type": "organism"
+  },
+  {
+   "name": "Equus asinus",
+   "type": "organism"
+  },
+  {
+   "name": "China",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "jennies",
+   "type": "organism"
+  },
+  {
+   "name": "foals",
+   "type": "organism"
+  },
+  {
+   "name": "pigs",
+   "type": "organism"
+  },
+  {
+   "name": "poultry",
+   "type": "organism"
+  },
+  {
+   "name": "calves",
+   "type": "organism"
+  },
+  {
+   "name": "antibiotic growth promoters",
+   "type": "chemical"
+  },
+  {
+   "name": "natural functional feed additives",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13410889:0:018121b7",
+ "entities": [
+  {
+   "name": "Microb Cell Fact",
+   "type": "organism"
+  },
+  {
+   "name": "BMC",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "JUB1-X synTF",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "3'-phosphoadenosine 5'-phosphosulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "Synthetic transcription factor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Humboldt-Universität zu Berlin",
+   "type": "organism"
+  },
+  {
+   "name": "Borah Madhushruti",
+   "type": "organism"
+  },
+  {
+   "name": "Gu Shanna",
+   "type": "organism"
+  },
+  {
+   "name": "Saied Essa M.",
+   "type": "organism"
+  },
+  {
+   "name": "Arenz Christoph",
+   "type": "organism"
+  },
+  {
+   "name": "Koffas Mattheos",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "Microb Cell Fact"
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "JUB1-X synTF"
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "3'-phosphoadenosine 5'-phosphosulfate"
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "Synthetic transcription factor"
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "Humboldt-Universität zu Berlin"
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "Borah Madhushruti"
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "Gu Shanna"
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "Saied Essa M."
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "Arenz Christoph"
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "Koffas Mattheos"
+  },
+  {
+   "source": "Borah Madhushruti",
+   "predicate": "author",
+   "target": "Koffas Mattheos"
+  }
+ ],
+ "truncated": false
+}

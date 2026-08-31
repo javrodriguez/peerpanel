@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC5968551:9:28b8f14f",
+ "entities": [
+  {
+   "name": "Pi-limited sample",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pi-replete sample",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "phosphogluconate",
+   "type": "chemical"
+  },
+  {
+   "name": "ribose 5-phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "sedoheptulose 7-phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "pentose phosphate pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Me1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Agrobacterium-mediated transformation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acid biosynthesis",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Me1",
+   "predicate": "is over-expressed in",
+   "target": "R. toruloides"
+  }
+ ],
+ "truncated": false
+}

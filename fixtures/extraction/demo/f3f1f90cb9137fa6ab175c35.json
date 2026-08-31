@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC8620231:6:83ec6f8d",
+ "entities": [
+  {
+   "name": "TSEBRA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BRAKER1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BRAKER2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NCBI",
+   "type": "organism"
+  },
+  {
+   "name": "RNA-seq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EVM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "VARUS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MS",
+   "type": "organism"
+  },
+  {
+   "name": "LG",
+   "type": "organism"
+  },
+  {
+   "name": "TB",
+   "type": "organism"
+  },
+  {
+   "name": "KJH",
+   "type": "organism"
+  },
+  {
+   "name": "MB",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

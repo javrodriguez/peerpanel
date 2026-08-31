@@ -1,0 +1,56 @@
+{
+ "chunk_id": "PMC7382830:4:68b7230c",
+ "entities": [
+  {
+   "name": "Escherichia coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "ALEdb",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fisher’s Exact Test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bonferroni",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Δpgi",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "L-serine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Escherichia coli K-12 MG1655",
+   "predicate": "has_mutations",
+   "target": "ALEdb"
+  },
+  {
+   "source": "Escherichia coli K-12 MG1655",
+   "predicate": "has_mutations",
+   "target": "Δpgi"
+  },
+  {
+   "source": "Escherichia coli K-12 MG1655",
+   "predicate": "has_mutations",
+   "target": "glycerol"
+  },
+  {
+   "source": "Escherichia coli K-12 MG1655",
+   "predicate": "has_mutations",
+   "target": "L-serine"
+  }
+ ],
+ "truncated": false
+}

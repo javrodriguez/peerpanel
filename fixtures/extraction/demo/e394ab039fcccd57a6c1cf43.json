@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13524880:12:6340f9aa",
+ "entities": [
+  {
+   "name": "AATs",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "hydrophilic N-terminal domain",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AAAP family",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "phosphopeptide-enriched fractions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "T. cruzi",
+   "type": "organism"
+  },
+  {
+   "name": "Leishmania infantum",
+   "type": "organism"
+  },
+  {
+   "name": "phosphorylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lysine transporter",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AAP7",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "proline/alanine transporter",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AAP24",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AAT20",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AATs",
+   "predicate": "phosphorylated_in",
+   "target": "hydrophilic N-terminal domain"
+  },
+  {
+   "source": "AATs",
+   "predicate": "belong_to",
+   "target": "AAAP family"
+  },
+  {
+   "source": "phosphorylation",
+   "predicate": "affects",
+   "target": "hydrophilic N-terminal domain"
+  },
+  {
+   "source": "lysine transporter",
+   "predicate": "is",
+   "target": "AAP7"
+  },
+  {
+   "source": "proline/alanine transporter",
+   "predicate": "is",
+   "target": "AAP24"
+  },
+  {
+   "source": "AATs",
+   "predicate": "has",
+   "target": "phosphorylation"
+  }
+ ],
+ "truncated": false
+}

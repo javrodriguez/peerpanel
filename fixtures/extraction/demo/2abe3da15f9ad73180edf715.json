@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC11628909:3:949c4890",
+ "entities": [
+  {
+   "name": "PagERF021",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "A. tumefaciens",
+   "type": "organism"
+  },
+  {
+   "name": "poplar",
+   "type": "organism"
+  },
+  {
+   "name": "tobacco",
+   "type": "organism"
+  },
+  {
+   "name": "P. trichocarpa",
+   "type": "organism"
+  },
+  {
+   "name": "P. euphratica",
+   "type": "organism"
+  },
+  {
+   "name": "G. max",
+   "type": "organism"
+  },
+  {
+   "name": "A. thaliana",
+   "type": "organism"
+  },
+  {
+   "name": "O. sativa",
+   "type": "organism"
+  },
+  {
+   "name": "Z. mays",
+   "type": "organism"
+  },
+  {
+   "name": "XP_011005172.1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XP_002325519.1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PagERF021",
+   "predicate": "has_sequence_identity",
+   "target": "XP_011005172.1"
+  },
+  {
+   "source": "PagERF021",
+   "predicate": "has_sequence_identity",
+   "target": "XP_002325519.1"
+  }
+ ],
+ "truncated": false
+}

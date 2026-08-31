@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC9757880:20:e8f199d7",
+ "entities": [
+  {
+   "name": "Candida",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Met25",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Metab Eng Commun",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Elife",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nat Microbiol",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Angew Chem Weinheim Bergstr Ger",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nar",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nat Genet",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "eggNOG",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yea",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Appl Environ Microbiol",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Candida",
+   "predicate": "has_gene",
+   "target": "Met25"
+  },
+  {
+   "source": "Metab Eng Commun",
+   "predicate": "has_protein",
+   "target": "Met25"
+  },
+  {
+   "source": "Elife",
+   "predicate": "has_protein",
+   "target": "Met25"
+  },
+  {
+   "source": "Nat Microbiol",
+   "predicate": "has_protein",
+   "target": "Met25"
+  },
+  {
+   "source": "Angew Chem Weinheim Bergstr Ger",
+   "predicate": "has_protein",
+   "target": "Met25"
+  },
+  {
+   "source": "Nar",
+   "predicate": "has_protein",
+   "target": "Met25"
+  },
+  {
+   "source": "Nat Genet",
+   "predicate": "has_protein",
+   "target": "Met25"
+  },
+  {
+   "source": "eggNOG",
+   "predicate": "has_protein",
+   "target": "Met25"
+  },
+  {
+   "source": "Yea",
+   "predicate": "has_protein",
+   "target": "Met25"
+  },
+  {
+   "source": "Appl Environ Microbiol",
+   "predicate": "has_protein",
+   "target": "Met25"
+  }
+ ],
+ "truncated": false
+}

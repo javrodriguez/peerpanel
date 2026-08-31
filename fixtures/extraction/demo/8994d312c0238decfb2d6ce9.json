@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7470746:10:8dfad842",
+ "entities": [
+  {
+   "name": "chemostat vessels",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "SD",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "trehalose",
+   "type": "chemical"
+  },
+  {
+   "name": "sodium phosphate buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "autoclave trays",
+   "type": "chemical"
+  },
+  {
+   "name": "tube racks",
+   "type": "chemical"
+  },
+  {
+   "name": "reservoirs",
+   "type": "chemical"
+  },
+  {
+   "name": "vessels",
+   "type": "chemical"
+  },
+  {
+   "name": "sampling needle",
+   "type": "chemical"
+  },
+  {
+   "name": "chemostat manifold receptacles",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "lysine"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "SD"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "YPD"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "trehalose"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "sodium phosphate buffer"
+  },
+  {
+   "source": "autoclave trays",
+   "predicate": "contains",
+   "target": "chemostat vessels"
+  },
+  {
+   "source": "tube racks",
+   "predicate": "contains",
+   "target": "chemostat vessels"
+  },
+  {
+   "source": "reservoirs",
+   "predicate": "contains",
+   "target": "chemostat vessels"
+  },
+  {
+   "source": "vessels",
+   "predicate": "contains",
+   "target": "chemostat vessels"
+  },
+  {
+   "source": "sampling needle",
+   "predicate": "contains",
+   "target": "chemostat vessels"
+  },
+  {
+   "source": "chemostat manifold receptacles",
+   "predicate": "contains",
+   "target": "chemostat vessels"
+  },
+  {
+   "source": "lysine",
+   "predicate": "is contained in",
+   "target": "SD"
+  }
+ ],
+ "truncated": false
+}

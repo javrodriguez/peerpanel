@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13484205:5:7c8d158a",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "W303",
+   "type": "organism"
+  },
+  {
+   "name": "Sis1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mEos3.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RPL13A",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FKBP12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FRB domain",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsp70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Med15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pol II",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rpl26a",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sis1",
+   "predicate": "has_fusion",
+   "target": "mEos3.2"
+  },
+  {
+   "source": "Sis1",
+   "predicate": "has_anchor_away",
+   "target": "FRB domain"
+  },
+  {
+   "source": "Hsp70",
+   "predicate": "is_expressed_in",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Hsf1",
+   "predicate": "is_expressed_in",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Med15",
+   "predicate": "is_expressed_in",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Pol II",
+   "predicate": "is_expressed_in",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Rpl26a",
+   "predicate": "is_expressed_in",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_strain",
+   "target": "W303"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "SIS1"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "RPL13A"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "FKBP12"
+  }
+ ],
+ "truncated": false
+}

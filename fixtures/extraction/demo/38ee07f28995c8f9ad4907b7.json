@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13450573:4:bbe30a51",
+ "entities": [
+  {
+   "name": "WGCNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ComBat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ANOVA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Levene’s test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fligner-Killeen test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shapiro-Wilk test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "iDEP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gene",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "dataset",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "transcriptome",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WGCNA",
+   "predicate": "uses",
+   "target": "ComBat"
+  },
+  {
+   "source": "ComBat",
+   "predicate": "requires",
+   "target": "PCA"
+  },
+  {
+   "source": "ComBat",
+   "predicate": "requires",
+   "target": "ANOVA"
+  },
+  {
+   "source": "ComBat",
+   "predicate": "requires",
+   "target": "Levene’s test"
+  },
+  {
+   "source": "ComBat",
+   "predicate": "requires",
+   "target": "Fligner-Killeen test"
+  },
+  {
+   "source": "ComBat",
+   "predicate": "requires",
+   "target": "Shapiro-Wilk test"
+  },
+  {
+   "source": "ComBat",
+   "predicate": "requires",
+   "target": "R"
+  },
+  {
+   "source": "ComBat",
+   "predicate": "requires",
+   "target": "iDEP"
+  },
+  {
+   "source": "WGCNA",
+   "predicate": "identifies",
+   "target": "gene"
+  },
+  {
+   "source": "dataset",
+   "predicate": "has",
+   "target": "transcriptome"
+  },
+  {
+   "source": "transcriptome",
+   "predicate": "has",
+   "target": "gene"
+  }
+ ],
+ "truncated": false
+}

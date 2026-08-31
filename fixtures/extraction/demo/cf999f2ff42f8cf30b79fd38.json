@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC9757880:0:8d43d960",
+ "entities": [
+  {
+   "name": "Sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Hsu1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hydrogen Sulfide Utilizing-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PLOS Biology",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  },
+  {
+   "name": "Charité Universitätsmedizin",
+   "type": "organism"
+  },
+  {
+   "name": "Francis Crick Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Wellcome Trust",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sulfur",
+   "predicate": "is_fixed_by",
+   "target": "Hsu1p"
+  },
+  {
+   "source": "Yeast",
+   "predicate": "has_auxotrophy",
+   "target": "Methionine"
+  },
+  {
+   "source": "PLOS Biology",
+   "predicate": "is_published_in",
+   "target": "PLOS"
+  },
+  {
+   "source": "Charité Universitätsmedizin",
+   "predicate": "is_affiliated_with",
+   "target": "Francis Crick Institute"
+  },
+  {
+   "source": "Wellcome Trust",
+   "predicate": "is_funding",
+   "target": "Francis Crick Institute"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC11102182:8:989bb42c",
+ "entities": [
+  {
+   "name": "Sample preparation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lipidomics analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Time",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Sampling",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cell concentration",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Culture",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ABC buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "Zirconium glass beads",
+   "type": "chemical"
+  },
+  {
+   "name": "Chloroform",
+   "type": "chemical"
+  },
+  {
+   "name": "Methanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Internal standard cocktail",
+   "type": "chemical"
+  },
+  {
+   "name": "Lipid",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sample preparation",
+   "predicate": "involved",
+   "target": "Lipidomics analysis"
+  },
+  {
+   "source": "Sample preparation",
+   "predicate": "used",
+   "target": "ABC buffer"
+  },
+  {
+   "source": "Sample preparation",
+   "predicate": "used",
+   "target": "Zirconium glass beads"
+  },
+  {
+   "source": "Sample preparation",
+   "predicate": "used",
+   "target": "Chloroform"
+  },
+  {
+   "source": "Sample preparation",
+   "predicate": "used",
+   "target": "Methanol"
+  },
+  {
+   "source": "Sample preparation",
+   "predicate": "used",
+   "target": "Internal standard cocktail"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC10729969:9:69877d4b",
+ "entities": [
+  {
+   "name": "Hsu1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "density dependence",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "YLL058W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OAH",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "budding yeast",
+   "type": "organism"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "organosulfurs",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "has_auxotrophy",
+   "target": "sulfide"
+  }
+ ],
+ "truncated": false
+}

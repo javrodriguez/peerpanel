@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC7470746:4:2d0d61be",
+ "entities": [
+  {
+   "name": "WY950",
+   "type": "organism"
+  },
+  {
+   "name": "WY1335",
+   "type": "organism"
+  },
+  {
+   "name": "WY1604",
+   "type": "organism"
+  },
+  {
+   "name": "WY1569",
+   "type": "organism"
+  },
+  {
+   "name": "WY2376",
+   "type": "organism"
+  },
+  {
+   "name": "WY1591",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WY1335",
+   "predicate": "released",
+   "target": "GSH"
+  },
+  {
+   "source": "WY1604",
+   "predicate": "required",
+   "target": "methionine"
+  }
+ ],
+ "truncated": false
+}

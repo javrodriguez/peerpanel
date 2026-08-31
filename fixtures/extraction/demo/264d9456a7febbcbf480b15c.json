@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13517252:10:163dedb4",
+ "entities": [
+  {
+   "name": "Phytase",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Fishmeal",
+   "type": "chemical"
+  },
+  {
+   "name": "Protein",
+   "type": "chemical"
+  },
+  {
+   "name": "Amino acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Phospholipid",
+   "type": "chemical"
+  },
+  {
+   "name": "EPA",
+   "type": "chemical"
+  },
+  {
+   "name": "DHA",
+   "type": "chemical"
+  },
+  {
+   "name": "Crustacean",
+   "type": "organism"
+  },
+  {
+   "name": "Marine fish",
+   "type": "organism"
+  },
+  {
+   "name": "Soybean meal",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

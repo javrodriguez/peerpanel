@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13514482:4:92ab86d8",
+ "entities": [
+  {
+   "name": "FTR1 Iron Permease",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "F. yunnanensis",
+   "type": "organism"
+  },
+  {
+   "name": "MAFFT v7",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepTMHMM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ColabFold",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Excel",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Z68",
+   "type": "organism"
+  },
+  {
+   "name": "Flammulina",
+   "type": "organism"
+  },
+  {
+   "name": "ITS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pLDDT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pTM score",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "B-factor",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FTR1 Iron Permease",
+   "predicate": "has_sequence",
+   "target": "F. yunnanensis"
+  },
+  {
+   "source": "FTR1 Iron Permease",
+   "predicate": "has_structure",
+   "target": "F. yunnanensis"
+  },
+  {
+   "source": "F. yunnanensis",
+   "predicate": "has_phenotype",
+   "target": "Z68"
+  }
+ ],
+ "truncated": false
+}

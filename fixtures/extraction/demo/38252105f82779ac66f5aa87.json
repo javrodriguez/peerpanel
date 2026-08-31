@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13456448:4:d2bf6d1d",
+ "entities": [
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "CO2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "adenylyl cyclase Cyr1p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lys1373",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Drosophila melanogaster",
+   "type": "organism"
+  },
+  {
+   "name": "murine",
+   "type": "organism"
+  },
+  {
+   "name": "Candida",
+   "type": "organism"
+  },
+  {
+   "name": "NACs",
+   "type": "organism"
+  },
+  {
+   "name": "silicone",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Congo",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Calcofluor white",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ras1–Cyr1–PKA",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. albicans",
+   "predicate": "acts",
+   "target": "CO2"
+  }
+ ],
+ "truncated": false
+}

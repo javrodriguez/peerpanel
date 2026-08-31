@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13513244:5:60c24ce8",
+ "entities": [
+  {
+   "name": "YARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "D81I",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "G41R",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SSA4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP26",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP104",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP90",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARG1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SAM2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HOM2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

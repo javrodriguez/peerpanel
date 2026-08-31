@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13484205:6:966e8b31",
+ "entities": [
+  {
+   "name": "Rpl26a",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nsr1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CSC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sis1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsp70",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Med15",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol II",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AZC",
+   "type": "chemical"
+  },
+  {
+   "name": "DZA",
+   "type": "chemical"
+  },
+  {
+   "name": "NaCl",
+   "type": "chemical"
+  },
+  {
+   "name": "HS",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

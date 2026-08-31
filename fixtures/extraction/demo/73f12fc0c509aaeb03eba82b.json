@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13501320:3:f0b21f8e",
+ "entities": [
+  {
+   "name": "Collins et al.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Roguev et al.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Costanzo et al.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Kelley",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Kingsford",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Leiserson et al.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Gallant et al.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Liany et al.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yu",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cowen",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "LocalCut",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GIDEON",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Leiserson et al.",
+   "predicate": "introduced",
+   "target": "LocalCut"
+  }
+ ],
+ "truncated": false
+}

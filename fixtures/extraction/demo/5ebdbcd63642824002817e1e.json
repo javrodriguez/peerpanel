@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13450799:10:e70837cd",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YCplac33-YGP1–3HA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ygp1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Haa1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STRE1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STRE2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "puf5Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "msn2Δ",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YGP1",
+   "predicate": "is regulated by",
+   "target": "Puf5"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "is induced by",
+   "target": "Msn2"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "is induced by",
+   "target": "Msn4"
+  },
+  {
+   "source": "YCplac33-YGP1–3HA",
+   "predicate": "carries",
+   "target": "YGP1"
+  },
+  {
+   "source": "YCplac33-YGP1–3HA",
+   "predicate": "is expressed in",
+   "target": "Yeast"
+  },
+  {
+   "source": "YCplac33-YGP1–3HA",
+   "predicate": "is regulated by",
+   "target": "Puf5"
+  },
+  {
+   "source": "Puf5",
+   "predicate": "regulates",
+   "target": "YGP1"
+  },
+  {
+   "source": "Msn2",
+   "predicate": "induces",
+   "target": "YGP1"
+  },
+  {
+   "source": "Msn4",
+   "predicate": "induces",
+   "target": "YGP1"
+  },
+  {
+   "source": "Ygp1",
+   "predicate": "is regulated by",
+   "target": "Puf5"
+  },
+  {
+   "source": "Ygp1",
+   "predicate": "is induced by",
+   "target": "Msn2"
+  },
+  {
+   "source": "Ygp1",
+   "predicate": "is induced by",
+   "target": "Msn4"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10440040:0:83cf075d",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Brink Daniel P.",
+   "type": "organism"
+  },
+  {
+   "name": "Mierke Friederike",
+   "type": "organism"
+  },
+  {
+   "name": "Andlid Thomas",
+   "type": "organism"
+  },
+  {
+   "name": "Chalmers University of Technology",
+   "type": "organism"
+  },
+  {
+   "name": "Lund University",
+   "type": "organism"
+  },
+  {
+   "name": "Technical University of Denmark",
+   "type": "organism"
+  },
+  {
+   "name": "Novo Nordisk Foundation Center for Biosustainability",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium",
+   "type": "organism"
+  },
+  {
+   "name": "MinION",
+   "type": "organism"
+  },
+  {
+   "name": "RNAseq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Differential gene expression",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

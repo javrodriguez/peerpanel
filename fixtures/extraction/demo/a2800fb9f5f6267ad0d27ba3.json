@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13484205:2:26859493",
+ "entities": [
+  {
+   "name": "condensation index",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cellpose",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CellQuant pipeline",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sis1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsp70",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Med15",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol II",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "oRPs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CHX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "1,6-HD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NaCl",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "oRPs",
+   "predicate": "required for Sis1 to localize to the nucleolar periphery",
+   "target": "Sis1"
+  }
+ ],
+ "truncated": false
+}

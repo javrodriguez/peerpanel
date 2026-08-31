@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13524880:10:fbcc029d",
+ "entities": [
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "BCAA",
+   "type": "chemical"
+  },
+  {
+   "name": "AAT6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "phenylalanine",
+   "type": "chemical"
+  },
+  {
+   "name": "tryptophan",
+   "type": "chemical"
+  },
+  {
+   "name": "leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "valine",
+   "type": "chemical"
+  },
+  {
+   "name": "isoleucine",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

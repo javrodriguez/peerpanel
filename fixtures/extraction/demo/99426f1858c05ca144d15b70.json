@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13471478:19:44da1018",
+ "entities": [
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EphA2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "IQGAP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AP-2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Keap1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nrf2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUL",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RING",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ub",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UPS",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SLC26A4",
+   "predicate": "interacts_with",
+   "target": "EphA2"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "interacts_with",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "directs_degradation_of",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "IQGAP1",
+   "predicate": "enhances_activity_of",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "AP-2",
+   "predicate": "interacts_with",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "Keap1",
+   "predicate": "interacts_with",
+   "target": "Nrf2"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "mediates_degradation_of",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "Ub",
+   "predicate": "mediates_degradation_of",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "UPS",
+   "predicate": "mediates_degradation_of",
+   "target": "SLC26A4"
+  }
+ ],
+ "truncated": false
+}

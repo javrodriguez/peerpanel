@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13524880:14:4949e91d",
+ "entities": [
+  {
+   "name": "PCF T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "single marker cell line",
+   "type": "organism"
+  },
+  {
+   "name": "28 °C",
+   "type": "chemical"
+  },
+  {
+   "name": "standard medium (SDM79)",
+   "type": "chemical"
+  },
+  {
+   "name": "Switzerland",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "home-made medium SDM79S",
+   "type": "chemical"
+  },
+  {
+   "name": "BCAA",
+   "type": "chemical"
+  },
+  {
+   "name": "fetal bovine serum",
+   "type": "chemical"
+  },
+  {
+   "name": "Gibco",
+   "type": "chemical"
+  },
+  {
+   "name": "Thermo Fisher Scientific",
+   "type": "chemical"
+  },
+  {
+   "name": "hemin",
+   "type": "chemical"
+  },
+  {
+   "name": "folic acid",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

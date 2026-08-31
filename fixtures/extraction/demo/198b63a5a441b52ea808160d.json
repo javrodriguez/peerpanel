@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7953724:4:2e96d74d",
+ "entities": [
+  {
+   "name": "R. toruloides CBS 14",
+   "type": "organism"
+  },
+  {
+   "name": "R. glutinis CBS 3044",
+   "type": "organism"
+  },
+  {
+   "name": "HH",
+   "type": "chemical"
+  },
+  {
+   "name": "CG",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "oleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "palmitic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "linoleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "stearic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "behenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "C18:1",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

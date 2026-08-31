@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7470746:0:782421a1",
+ "entities": [
+  {
+   "name": "PLoS Biology",
+   "type": "organism"
+  },
+  {
+   "name": "Green Robin",
+   "type": "organism"
+  },
+  {
+   "name": "Sonal",
+   "type": "organism"
+  },
+  {
+   "name": "Wang Lin",
+   "type": "organism"
+  },
+  {
+   "name": "Hart Samuel F. M.",
+   "type": "organism"
+  },
+  {
+   "name": "Lu Wenyun",
+   "type": "organism"
+  },
+  {
+   "name": "Skelding David",
+   "type": "organism"
+  },
+  {
+   "name": "Burton Justin C.",
+   "type": "organism"
+  },
+  {
+   "name": "Mi Hanbing",
+   "type": "organism"
+  },
+  {
+   "name": "Capel Aric",
+   "type": "organism"
+  },
+  {
+   "name": "Chen Hung Alex",
+   "type": "organism"
+  },
+  {
+   "name": "Lin Aaron",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Green Robin",
+   "predicate": "conceptualization",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Green Robin",
+   "predicate": "data curation",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Green Robin",
+   "predicate": "formal analysis",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Green Robin",
+   "predicate": "funding acquisition",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Green Robin",
+   "predicate": "investigation",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Green Robin",
+   "predicate": "methodology",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Green Robin",
+   "predicate": "software",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Green Robin",
+   "predicate": "validation",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Green Robin",
+   "predicate": "visualization",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Green Robin",
+   "predicate": "writing",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Sonal",
+   "predicate": "data curation",
+   "target": "PLoS Biology"
+  },
+  {
+   "source": "Sonal",
+   "predicate": "formal analysis",
+   "target": "PLoS Biology"
+  }
+ ],
+ "truncated": false
+}

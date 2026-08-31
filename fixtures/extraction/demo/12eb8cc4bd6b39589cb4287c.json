@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514516:7:7d3b397e",
+ "entities": [
+  {
+   "name": "high-yield strain 31.1",
+   "type": "organism"
+  },
+  {
+   "name": "low-yield strain 12.1",
+   "type": "organism"
+  },
+  {
+   "name": "wild-type strain 1960",
+   "type": "organism"
+  },
+  {
+   "name": "YPX medium",
+   "type": "chemical"
+  },
+  {
+   "name": "Genomic DNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "agarose gel electrophoresis detection",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Figure S4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Table S2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "library construction",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "sequencing",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Draft genome assembly",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "de novo transcript assembly",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

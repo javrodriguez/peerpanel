@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13514516:17:68cb2e5b",
+ "entities": [
+  {
+   "name": "S. stipitis CBS 6054",
+   "type": "organism"
+  },
+  {
+   "name": "GCA_000209165.1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "H_12 h",
+   "type": "organism"
+  },
+  {
+   "name": "CK_12 h",
+   "type": "organism"
+  },
+  {
+   "name": "L_12 h",
+   "type": "organism"
+  },
+  {
+   "name": "H_60 h",
+   "type": "organism"
+  },
+  {
+   "name": "CK_60 h",
+   "type": "organism"
+  },
+  {
+   "name": "L_60 h",
+   "type": "organism"
+  },
+  {
+   "name": "High-yield strain 31.1",
+   "type": "organism"
+  },
+  {
+   "name": "Wild-type strain 1960",
+   "type": "organism"
+  },
+  {
+   "name": "Low-yield strain 12.1",
+   "type": "organism"
+  },
+  {
+   "name": "Reference genome ID",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis CBS 6054",
+   "predicate": "has_reference_genome",
+   "target": "GCA_000209165.1"
+  },
+  {
+   "source": "H_12 h",
+   "predicate": "has_higher_coverage_than",
+   "target": "CK_12 h"
+  },
+  {
+   "source": "H_12 h",
+   "predicate": "has_higher_coverage_than",
+   "target": "L_12 h"
+  },
+  {
+   "source": "L_12 h",
+   "predicate": "has_higher_coverage_than",
+   "target": "CK_12 h"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_higher_coverage_than",
+   "target": "CK_60 h"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_higher_coverage_than",
+   "target": "L_60 h"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_higher_coverage_than",
+   "target": "H_12 h"
+  },
+  {
+   "source": "CK_60 h",
+   "predicate": "has_higher_coverage_than",
+   "target": "CK_12 h"
+  },
+  {
+   "source": "L_60 h",
+   "predicate": "has_higher_coverage_than",
+   "target": "L_12 h"
+  },
+  {
+   "source": "High-yield strain 31.1",
+   "predicate": "has_higher_coverage_than",
+   "target": "Wild-type strain 1960"
+  },
+  {
+   "source": "High-yield strain 31.1",
+   "predicate": "has_higher_coverage_than",
+   "target": "Low-yield strain 12.1"
+  },
+  {
+   "source": "Wild-type strain 1960",
+   "predicate": "has_higher_coverage_than",
+   "target": "Low-yield strain 12.1"
+  }
+ ],
+ "truncated": false
+}

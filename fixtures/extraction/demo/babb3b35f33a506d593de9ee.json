@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514516:4:c40d0719",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Microsoft Excel",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Office",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Microsoft",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SPSS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "version",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IBM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Armonk",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Qubit fluorometer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bioanalyzer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HISAT2",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

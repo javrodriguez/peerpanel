@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13419736:12:969fe1fd",
+ "entities": [
+  {
+   "name": "Digested peptides",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "online capillary nanoLC-MS/MS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "25 cm reversed phase column",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "10 cm pre-column",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ReproSil-Gold C18–1.9 μm resin",
+   "type": "chemical"
+  },
+  {
+   "name": "Dr. Maisch GmbH",
+   "type": "organism"
+  },
+  {
+   "name": "laser-pulled nanoelectrospray emitter tip",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "precolumn",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "3.0 μm packing",
+   "type": "chemical"
+  },
+  {
+   "name": "Peptides",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "flow rate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "300 nL/min",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Digested peptides",
+   "predicate": "analyzed_by",
+   "target": "online capillary nanoLC-MS/MS"
+  },
+  {
+   "source": "online capillary nanoLC-MS/MS",
+   "predicate": "used",
+   "target": "25 cm reversed phase column"
+  },
+  {
+   "source": "25 cm reversed phase column",
+   "predicate": "packed_with",
+   "target": "ReproSil-Gold C18–1.9 μm resin"
+  },
+  {
+   "source": "ReproSil-Gold C18–1.9 μm resin",
+   "predicate": "manufactured_by",
+   "target": "Dr. Maisch GmbH"
+  },
+  {
+   "source": "online capillary nanoLC-MS/MS",
+   "predicate": "equipped_with",
+   "target": "laser-pulled nanoelectrospray emitter tip"
+  },
+  {
+   "source": "precolumn",
+   "predicate": "used",
+   "target": "3.0 μm packing"
+  },
+  {
+   "source": "Peptides",
+   "predicate": "eluted_at",
+   "target": "flow rate"
+  },
+  {
+   "source": "flow rate",
+   "predicate": "used",
+   "target": "300 nL/min"
+  }
+ ],
+ "truncated": false
+}

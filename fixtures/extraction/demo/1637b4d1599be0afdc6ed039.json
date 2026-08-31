@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13524880:17:f3f60bdf",
+ "entities": [
+  {
+   "name": "Tb927.11.10190",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tb927.10.12970",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TERT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AN1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AN1-like zinc finger",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Δ35-AAT10",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "eYFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "Tb927.11.10190",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tb927.10.12970",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TERT",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Tb927.11.10190",
+   "predicate": "is_reference_gene",
+   "target": "TERT"
+  },
+  {
+   "source": "Tb927.10.12970",
+   "predicate": "is_reference_gene",
+   "target": "AN1"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "is_expressed_in",
+   "target": "T. brucei"
+  },
+  {
+   "source": "Δ35-AAT10",
+   "predicate": "is_expressed_in",
+   "target": "T. brucei"
+  },
+  {
+   "source": "eYFP",
+   "predicate": "is_expressed_in",
+   "target": "T. brucei"
+  },
+  {
+   "source": "Tb927.11.10190",
+   "predicate": "is_phosphorylated",
+   "target": "TERT"
+  },
+  {
+   "source": "Tb927.10.12970",
+   "predicate": "is_phosphorylated",
+   "target": "AN1"
+  },
+  {
+   "source": "AAT10.2",
+   "predicate": "has_phosphosite",
+   "target": "Tb927.11.10190"
+  },
+  {
+   "source": "Δ35-AAT10",
+   "predicate": "has_phosphosite",
+   "target": "Tb927.10.12970"
+  },
+  {
+   "source": "eYFP",
+   "predicate": "has_phosphosite",
+   "target": "Tb927.11.10190"
+  },
+  {
+   "source": "T. brucei",
+   "predicate": "has_phosphoproteome",
+   "target": "Tb927.11.10190"
+  },
+  {
+   "source": "T. brucei",
+   "predicate": "has_phosphoproteome",
+   "target": "Tb927.10.12970"
+  }
+ ],
+ "truncated": false
+}

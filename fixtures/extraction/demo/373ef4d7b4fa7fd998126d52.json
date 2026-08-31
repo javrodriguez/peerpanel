@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13517252:11:b97e7492",
+ "entities": [
+  {
+   "name": "Phytase",
+   "type": "chemical"
+  },
+  {
+   "name": "Hydrolysates",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "Palatability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Intake",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Peptide supply",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Digestibility",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Gut-targeted strategies",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Mechanism-aligned outcomes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Growth",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nutrient retention",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Mechanism-aligned outcomes",
+   "predicate": "more informative than",
+   "target": "Growth"
+  },
+  {
+   "source": "Nutrient retention",
+   "predicate": "improved by",
+   "target": "Hydrolysates"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC3923900:9:972618da",
+ "entities": [
+  {
+   "name": "RP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SMD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C. curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Regione Lombardia ASTIL- Cooperazione scientifica e tecnologica internazionale",
+   "type": "organism"
+  },
+  {
+   "name": "University of Milano-Bicocca",
+   "type": "organism"
+  },
+  {
+   "name": "FAR",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

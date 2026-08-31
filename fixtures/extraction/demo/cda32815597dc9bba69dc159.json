@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13517252:4:be8d7bc2",
+ "entities": [
+  {
+   "name": "domain",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "low concern",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "concern",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "high concern",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "insufficient reporting",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "study",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "design",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "reporting",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "reviewer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "intervention",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "outcome",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "domain",
+   "predicate": "rated_as",
+   "target": "low concern"
+  },
+  {
+   "source": "domain",
+   "predicate": "rated_as",
+   "target": "concern"
+  },
+  {
+   "source": "domain",
+   "predicate": "rated_as",
+   "target": "high concern"
+  },
+  {
+   "source": "domain",
+   "predicate": "rated_as",
+   "target": "insufficient reporting"
+  }
+ ],
+ "truncated": false
+}

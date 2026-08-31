@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC9487109:7:bcbd8429",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Verduyn-based medium",
+   "type": "chemical"
+  },
+  {
+   "name": "folate",
+   "type": "chemical"
+  },
+  {
+   "name": "THF",
+   "type": "chemical"
+  },
+  {
+   "name": "5MTHF",
+   "type": "chemical"
+  },
+  {
+   "name": "5FTHF",
+   "type": "chemical"
+  },
+  {
+   "name": "HRMS system",
+   "type": "chemical"
+  },
+  {
+   "name": "HPLC–UV method",
+   "type": "chemical"
+  },
+  {
+   "name": "Ashbya gossypii",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli PB25",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis",
+   "predicate": "produces",
+   "target": "folate"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "produces",
+   "target": "THF"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "produces",
+   "target": "5MTHF"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "produces",
+   "target": "5FTHF"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grows",
+   "target": "Verduyn-based medium"
+  }
+ ],
+ "truncated": false
+}

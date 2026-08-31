@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13453879:11:8b0422e9",
+ "entities": [
+  {
+   "name": "P. flavescens RPT",
+   "type": "organism"
+  },
+  {
+   "name": "RZ",
+   "type": "chemical"
+  },
+  {
+   "name": "RF",
+   "type": "chemical"
+  },
+  {
+   "name": "hRF",
+   "type": "chemical"
+  },
+  {
+   "name": "PDB-A",
+   "type": "chemical"
+  },
+  {
+   "name": "PDB-B",
+   "type": "chemical"
+  },
+  {
+   "name": "PDB-C",
+   "type": "chemical"
+  },
+  {
+   "name": "L-Theanine",
+   "type": "chemical"
+  },
+  {
+   "name": "EC",
+   "type": "chemical"
+  },
+  {
+   "name": "EGC",
+   "type": "chemical"
+  },
+  {
+   "name": "8-C-S-EC-cThea",
+   "type": "chemical"
+  },
+  {
+   "name": "8-C-S-EGC-cThea",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L-Theanine",
+   "predicate": "is_degraded_by",
+   "target": "P. flavescens RPT"
+  },
+  {
+   "source": "EC",
+   "predicate": "is_degraded_by",
+   "target": "P. flavescens RPT"
+  },
+  {
+   "source": "EGC",
+   "predicate": "is_degraded_by",
+   "target": "P. flavescens RPT"
+  }
+ ],
+ "truncated": false
+}

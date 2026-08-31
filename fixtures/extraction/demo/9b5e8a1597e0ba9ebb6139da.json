@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC6547517:0:f943a9a3",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Ievgeniia A. Tiukova",
+   "type": "organism"
+  },
+  {
+   "name": "Mats Sandgren",
+   "type": "organism"
+  },
+  {
+   "name": "Jule Brandenburg",
+   "type": "organism"
+  },
+  {
+   "name": "Sabine Sampels",
+   "type": "organism"
+  },
+  {
+   "name": "Nils Mikkelsen",
+   "type": "organism"
+  },
+  {
+   "name": "Morten Skaugen",
+   "type": "organism"
+  },
+  {
+   "name": "Magnus Ø. Arntzen",
+   "type": "organism"
+  },
+  {
+   "name": "Jens Nielsen",
+   "type": "organism"
+  },
+  {
+   "name": "Chalmers University of Technology",
+   "type": "organism"
+  },
+  {
+   "name": "Swedish University of Agricultural Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "Norwegian University of Life Sciences",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

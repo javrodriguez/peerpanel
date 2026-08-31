@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC9825584:5:1674b907",
+ "entities": [
+  {
+   "name": "University of Geneva",
+   "type": "organism"
+  },
+  {
+   "name": "Swiss National Science Foundation",
+   "type": "organism"
+  },
+  {
+   "name": "E.Z.",
+   "type": "organism"
+  },
+  {
+   "name": "Swiss Institute of Bioinformatics",
+   "type": "organism"
+  },
+  {
+   "name": "SERI",
+   "type": "organism"
+  },
+  {
+   "name": "SwissOrthology",
+   "type": "organism"
+  },
+  {
+   "name": "E.K.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "University of Geneva",
+   "predicate": "funded_by",
+   "target": "Swiss National Science Foundation"
+  },
+  {
+   "source": "University of Geneva",
+   "predicate": "funded_by",
+   "target": "Swiss Institute of Bioinformatics"
+  },
+  {
+   "source": "Swiss Institute of Bioinformatics",
+   "predicate": "funded",
+   "target": "University of Geneva"
+  },
+  {
+   "source": "Swiss Institute of Bioinformatics",
+   "predicate": "funded",
+   "target": "Swiss National Science Foundation"
+  },
+  {
+   "source": "E.Z.",
+   "predicate": "author",
+   "target": "University of Geneva"
+  },
+  {
+   "source": "E.K.",
+   "predicate": "author",
+   "target": "University of Geneva"
+  },
+  {
+   "source": "Swiss Institute of Bioinformatics",
+   "predicate": "funded",
+   "target": "University of Geneva"
+  }
+ ],
+ "truncated": false
+}

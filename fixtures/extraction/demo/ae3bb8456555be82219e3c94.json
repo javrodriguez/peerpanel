@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC11102182:1:693d7547",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "oleochemicals",
+   "type": "chemical"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty alcohols",
+   "type": "chemical"
+  },
+  {
+   "name": "triacetic acid lactone",
+   "type": "chemical"
+  },
+  {
+   "name": "lignocellulosic biomass hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "hexose",
+   "type": "chemical"
+  },
+  {
+   "name": "pentose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_product",
+   "target": "lipids"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_product",
+   "target": "carotenoids"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_product",
+   "target": "fatty alcohols"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_product",
+   "target": "triacetic acid lactone"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_input",
+   "target": "acetyl-CoA"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_input",
+   "target": "hexose"
+  }
+ ],
+ "truncated": false
+}

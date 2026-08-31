@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC6547517:6:117d5dfe",
+ "entities": [
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Xylitol dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "XRs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Xylose reductase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Aldo/keto reductases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Beta-glucosidase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mandelate racemase/muconate lactonizing enzyme",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Phosphoglycerate mutase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Aconitate hydrotase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Succinate dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pyruvate carboxylase",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "Xylitol dehydrogenase"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "XRs"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "Xylose reductase"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "Aldo/keto reductases"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "Beta-glucosidase"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "Mandelate racemase/muconate lactonizing enzyme"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "Phosphoglycerate mutase"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "Aconitate hydrotase"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "Succinate dehydrogenase"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "involved_in",
+   "target": "Pyruvate carboxylase"
+  }
+ ],
+ "truncated": false
+}

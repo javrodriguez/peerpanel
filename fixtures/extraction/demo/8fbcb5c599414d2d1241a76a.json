@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC12278674:19:4a233fe7",
+ "entities": [
+  {
+   "name": "Kyle JE",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Crowell KL",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Casey CP",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Fujimoto GM",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Kim S",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Dautel SE",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "LIQUID",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "LC - MS / MS - based lipidomics data Bioinformatics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "28158427 10.1093 / bioinformatics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "btx046 PMC5860051",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Ikeda K",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Takahashi M",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Kyle JE",
+   "predicate": "author",
+   "target": "LIQUID"
+  },
+  {
+   "source": "Crowell KL",
+   "predicate": "author",
+   "target": "LIQUID"
+  },
+  {
+   "source": "Casey CP",
+   "predicate": "author",
+   "target": "LIQUID"
+  },
+  {
+   "source": "Fujimoto GM",
+   "predicate": "author",
+   "target": "LIQUID"
+  },
+  {
+   "source": "Kim S",
+   "predicate": "author",
+   "target": "LIQUID"
+  },
+  {
+   "source": "Dautel SE",
+   "predicate": "author",
+   "target": "LIQUID"
+  }
+ ],
+ "truncated": false
+}

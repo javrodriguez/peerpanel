@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC1409804:0:b1427a8d",
+ "entities": [
+  {
+   "name": "BMC Bioinformatics",
+   "type": "organism"
+  },
+  {
+   "name": "Stanke Mario",
+   "type": "organism"
+  },
+  {
+   "name": "Schöffmann Oliver",
+   "type": "organism"
+  },
+  {
+   "name": "Morgenstern Burkhard",
+   "type": "organism"
+  },
+  {
+   "name": "Waack Stephan",
+   "type": "organism"
+  },
+  {
+   "name": "Universität Göttingen",
+   "type": "organism"
+  },
+  {
+   "name": "Germany",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BioMed Central Ltd.",
+   "type": "organism"
+  },
+  {
+   "name": "Creative Commons Attribution License",
+   "type": "organism"
+  },
+  {
+   "name": "AUGUSTUS",
+   "type": "organism"
+  },
+  {
+   "name": "AUGUSTUS+",
+   "type": "organism"
+  },
+  {
+   "name": "GenScan",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "BMC Bioinformatics"
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "AUGUSTUS"
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "AUGUSTUS+"
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "BioMed Central Ltd."
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "Creative Commons Attribution License"
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "GenScan"
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "Universität Göttingen"
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "Germany"
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "BioMed Central Ltd."
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "Creative Commons Attribution License"
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "GenScan"
+  },
+  {
+   "source": "Stanke Mario",
+   "predicate": "author",
+   "target": "Universität Göttingen"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13450573:14:a012b164",
+ "entities": [
+  {
+   "name": "Q0160",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "snR59",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tRNAs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "snoRNAs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mtRNAs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNA biotypes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DEGs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chromosomal non-coding RNAs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ncRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Student’s t-test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wilcoxon",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WGCNA",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "tRNAs",
+   "predicate": "are",
+   "target": "RNA biotypes"
+  },
+  {
+   "source": "snoRNAs",
+   "predicate": "are",
+   "target": "RNA biotypes"
+  },
+  {
+   "source": "mtRNAs",
+   "predicate": "are",
+   "target": "RNA biotypes"
+  },
+  {
+   "source": "DEGs",
+   "predicate": "are",
+   "target": "chromosomal non-coding RNAs"
+  },
+  {
+   "source": "ncRNA",
+   "predicate": "is",
+   "target": "RNA biotypes"
+  },
+  {
+   "source": "Wilcoxon",
+   "predicate": "uses",
+   "target": "snoRNAs"
+  }
+ ],
+ "truncated": false
+}

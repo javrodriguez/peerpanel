@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13453879:14:caf386f9",
+ "entities": [
+  {
+   "name": "L. Yu",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "P. Upgrading",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fermentation process",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zhejiang",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rosy vinegar",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "purebred microorganisms",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Adv Appl Microbiol",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yang X. Peng Z. Zhu Q. Chen C. Liu J. Fu S. Analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Tieguanyin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "aged aroma compounds",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "correlation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "microbial communities LWT",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L. Yu",
+   "predicate": "involved in",
+   "target": "P. Upgrading"
+  },
+  {
+   "source": "P. Upgrading",
+   "predicate": "involved in",
+   "target": "fermentation process"
+  },
+  {
+   "source": "fermentation process",
+   "predicate": "involved in",
+   "target": "Zhejiang"
+  },
+  {
+   "source": "Zhejiang",
+   "predicate": "involved in",
+   "target": "rosy vinegar"
+  },
+  {
+   "source": "rosy vinegar",
+   "predicate": "involved in",
+   "target": "purebred microorganisms"
+  },
+  {
+   "source": "purebred microorganisms",
+   "predicate": "involved in",
+   "target": "Adv Appl Microbiol"
+  },
+  {
+   "source": "Adv Appl Microbiol",
+   "predicate": "involved in",
+   "target": "Yang X. Peng Z. Zhu Q. Chen C. Liu J. Fu S. Analysis"
+  },
+  {
+   "source": "Yang X. Peng Z. Zhu Q. Chen C. Liu J. Fu S. Analysis",
+   "predicate": "involved in",
+   "target": "Tieguanyin"
+  },
+  {
+   "source": "Tieguanyin",
+   "predicate": "involved in",
+   "target": "aged aroma compounds"
+  },
+  {
+   "source": "aged aroma compounds",
+   "predicate": "involved in",
+   "target": "correlation"
+  },
+  {
+   "source": "correlation",
+   "predicate": "involved in",
+   "target": "microbial communities LWT"
+  }
+ ],
+ "truncated": false
+}

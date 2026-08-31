@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC6402699:2:b599d128",
+ "entities": [
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "CoSMO",
+   "type": "organism"
+  },
+  {
+   "name": "adenine",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "acetate",
+   "type": "chemical"
+  },
+  {
+   "name": "ADE8 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LYS21 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADE4 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LYS2 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADE8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LYS21",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Escherichia coli",
+   "predicate": "excrete",
+   "target": "acetate"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "exchange",
+   "target": "lysine"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "exchange",
+   "target": "adenine"
+  },
+  {
+   "source": "ADE8 gene",
+   "predicate": "mutate",
+   "target": "adenine"
+  },
+  {
+   "source": "LYS21 gene",
+   "predicate": "mutate",
+   "target": "lysine"
+  },
+  {
+   "source": "ADE4 gene",
+   "predicate": "mutate",
+   "target": "adenine"
+  },
+  {
+   "source": "LYS2 gene",
+   "predicate": "mutate",
+   "target": "lysine"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "interact",
+   "target": "lysine"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "interact",
+   "target": "adenine"
+  }
+ ],
+ "truncated": false
+}

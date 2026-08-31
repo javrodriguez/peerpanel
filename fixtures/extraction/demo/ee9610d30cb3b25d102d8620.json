@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13515273:5:c6cc1521",
+ "entities": [
+  {
+   "name": "P. manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "carbon dioxide",
+   "type": "chemical"
+  },
+  {
+   "name": "TCA cycle",
+   "type": "chemical"
+  },
+  {
+   "name": "glycolysis",
+   "type": "chemical"
+  },
+  {
+   "name": "arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "alanine",
+   "type": "chemical"
+  },
+  {
+   "name": "aspartate",
+   "type": "chemical"
+  },
+  {
+   "name": "pyruvate",
+   "type": "chemical"
+  },
+  {
+   "name": "oxaloacetate",
+   "type": "chemical"
+  },
+  {
+   "name": "carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "P. manshurica",
+   "predicate": "produces",
+   "target": "carbon dioxide"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "uses",
+   "target": "glycolysis"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "uses",
+   "target": "TCA cycle"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "catabolizes",
+   "target": "arginine"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "catabolizes",
+   "target": "alanine"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "catabolizes",
+   "target": "aspartate"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "inhibits",
+   "target": "carvacrol"
+  },
+  {
+   "source": "carvacrol",
+   "predicate": "inhibits",
+   "target": "P. manshurica"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "uses",
+   "target": "mitochondria"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "uses",
+   "target": "yeast"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "produces",
+   "target": "pyruvate"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "produces",
+   "target": "oxaloacetate"
+  }
+ ],
+ "truncated": false
+}

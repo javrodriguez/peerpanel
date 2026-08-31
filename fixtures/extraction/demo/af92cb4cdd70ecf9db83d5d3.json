@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13471478:21:46b1b0cc",
+ "entities": [
+  {
+   "name": "14-3-3 proteins",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cullin 7",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Eag1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cullin 3",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "E3 ubiquitin-protein ligases",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "WNK",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SPAK-OSR1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AQP2",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "HSP70",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CHIP",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Rma1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "17-AAG",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "14-3-3 proteins",
+   "predicate": "interacts_with",
+   "target": "Cullin 7"
+  },
+  {
+   "source": "Cullin 7",
+   "predicate": "interacts_with",
+   "target": "Eag1"
+  },
+  {
+   "source": "Cullin 3",
+   "predicate": "interacts_with",
+   "target": "E3 ubiquitin-protein ligases"
+  },
+  {
+   "source": "WNK",
+   "predicate": "interacts_with",
+   "target": "SPAK-OSR1"
+  },
+  {
+   "source": "AQP2",
+   "predicate": "interacts_with",
+   "target": "HSP70"
+  },
+  {
+   "source": "CHIP",
+   "predicate": "interacts_with",
+   "target": "Rma1"
+  },
+  {
+   "source": "17-AAG",
+   "predicate": "interacts_with",
+   "target": "Rma1"
+  }
+ ],
+ "truncated": false
+}

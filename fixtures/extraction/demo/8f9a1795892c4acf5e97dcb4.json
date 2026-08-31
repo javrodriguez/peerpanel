@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC10440040:9:936d9f7b",
+ "entities": [
+  {
+   "name": "BioLector microbioreactor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DN1a",
+   "type": "organism"
+  },
+  {
+   "name": "DN2a",
+   "type": "organism"
+  },
+  {
+   "name": "DN5c",
+   "type": "organism"
+  },
+  {
+   "name": "BOT-A2",
+   "type": "organism"
+  },
+  {
+   "name": "CTRL1a",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium",
+   "type": "organism"
+  },
+  {
+   "name": "MAT A1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MAT A2",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BioLector microbioreactor",
+   "predicate": "uses",
+   "target": "GFP"
+  },
+  {
+   "source": "BioLector microbioreactor",
+   "predicate": "cultivates",
+   "target": "DN1a"
+  },
+  {
+   "source": "BioLector microbioreactor",
+   "predicate": "cultivates",
+   "target": "DN2a"
+  },
+  {
+   "source": "BioLector microbioreactor",
+   "predicate": "cultivates",
+   "target": "DN5c"
+  },
+  {
+   "source": "BioLector microbioreactor",
+   "predicate": "cultivates",
+   "target": "BOT-A2"
+  },
+  {
+   "source": "BioLector microbioreactor",
+   "predicate": "cultivates",
+   "target": "CTRL1a"
+  },
+  {
+   "source": "BioLector microbioreactor",
+   "predicate": "uses",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "BioLector microbioreactor",
+   "predicate": "uses",
+   "target": "Rhodotorula"
+  },
+  {
+   "source": "BioLector microbioreactor",
+   "predicate": "uses",
+   "target": "Rhodosporidium"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13515494:2:31de06f1",
+ "entities": [
+  {
+   "name": "Sigma-Aldrich",
+   "type": "chemical"
+  },
+  {
+   "name": "Madrid",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Spain",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "ERBA Reagents",
+   "type": "chemical"
+  },
+  {
+   "name": "Val de Reuil",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sparkling Wines",
+   "type": "chemical"
+  },
+  {
+   "name": "Closures",
+   "type": "chemical"
+  },
+  {
+   "name": "Portuguese base wine",
+   "type": "chemical"
+  },
+  {
+   "name": "Távora-Varosa region",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "November",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "wine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sigma-Aldrich",
+   "predicate": "purchased from",
+   "target": "Madrid"
+  },
+  {
+   "source": "Sigma-Aldrich",
+   "predicate": "purchased from",
+   "target": "Spain"
+  },
+  {
+   "source": "ERBA Reagents",
+   "predicate": "purchased from",
+   "target": "Val de Reuil"
+  },
+  {
+   "source": "Sparkling Wines",
+   "predicate": "produced in",
+   "target": "Távora-Varosa region"
+  },
+  {
+   "source": "Sparkling Wines",
+   "predicate": "produced in",
+   "target": "November"
+  },
+  {
+   "source": "Sparkling Wines",
+   "predicate": "consisted of",
+   "target": "wine"
+  },
+  {
+   "source": "Sparkling Wines",
+   "predicate": "consisted of",
+   "target": "Távora-Varosa region"
+  }
+ ],
+ "truncated": false
+}

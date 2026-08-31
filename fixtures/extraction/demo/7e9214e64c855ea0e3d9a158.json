@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC8164748:3:fc573099",
+ "entities": [
+  {
+   "name": "Rhodotorula babjevae DVBPG 8058",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis CBS 2367",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides CBS 14",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi CBS 1807",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi CBS 7544",
+   "type": "organism"
+  },
+  {
+   "name": "wheat straw hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast nitrogen base",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula babjevae DVBPG 8058",
+   "predicate": "grew on",
+   "target": "wheat straw hydrolysate"
+  },
+  {
+   "source": "Rhodotorula babjevae DVBPG 8058",
+   "predicate": "consumed",
+   "target": "carbon"
+  },
+  {
+   "source": "Rhodotorula babjevae DVBPG 8058",
+   "predicate": "consumed",
+   "target": "glucose"
+  },
+  {
+   "source": "Rhodotorula babjevae DVBPG 8058",
+   "predicate": "consumed",
+   "target": "xylose"
+  },
+  {
+   "source": "Rhodotorula babjevae DVBPG 8058",
+   "predicate": "consumed",
+   "target": "acetic acid"
+  },
+  {
+   "source": "Rhodotorula glutinis CBS 2367",
+   "predicate": "grew on",
+   "target": "wheat straw hydrolysate"
+  },
+  {
+   "source": "Rhodotorula glutinis CBS 2367",
+   "predicate": "consumed",
+   "target": "carbon"
+  },
+  {
+   "source": "Rhodotorula glutinis CBS 2367",
+   "predicate": "consumed",
+   "target": "glucose"
+  },
+  {
+   "source": "Rhodotorula glutinis CBS 2367",
+   "predicate": "consumed",
+   "target": "xylose"
+  },
+  {
+   "source": "Rhodotorula toruloides CBS 14",
+   "predicate": "grew on",
+   "target": "wheat straw hydrolysate"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC1409804:2:f2f755ce",
+ "entities": [
+  {
+   "name": "AUGUSTUS+",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GHMM",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "h",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "s",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "φ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Σ",
+   "type": "chemical"
+  },
+  {
+   "name": "Σ'",
+   "type": "chemical"
+  },
+  {
+   "name": "h",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "i",
+   "type": "chemical"
+  },
+  {
+   "name": "bi",
+   "type": "chemical"
+  },
+  {
+   "name": "hi",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "extends",
+   "target": "GHMM"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "h"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "generates",
+   "target": "s"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "produces",
+   "target": "h"
+  },
+  {
+   "source": "h",
+   "predicate": "associated_with",
+   "target": "i"
+  },
+  {
+   "source": "h",
+   "predicate": "contains",
+   "target": "bi"
+  }
+ ],
+ "truncated": false
+}

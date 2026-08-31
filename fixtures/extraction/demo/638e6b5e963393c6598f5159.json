@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC9763685:2:8c1207a0",
+ "entities": [
+  {
+   "name": "met15Δ cells",
+   "type": "organism"
+  },
+  {
+   "name": "BY4741",
+   "type": "organism"
+  },
+  {
+   "name": "BY4742",
+   "type": "organism"
+  },
+  {
+   "name": "MET15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LEU2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "uracil",
+   "type": "chemical"
+  },
+  {
+   "name": "leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "galactose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

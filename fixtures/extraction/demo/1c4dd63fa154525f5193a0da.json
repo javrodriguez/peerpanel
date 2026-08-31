@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC3923900:8:42d595db",
+ "entities": [
+  {
+   "name": "Nile red",
+   "type": "chemical"
+  },
+  {
+   "name": "Sigma Aldrich Co.",
+   "type": "organism"
+  },
+  {
+   "name": "PBS buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "Nikon Eclypse E600",
+   "type": "chemical"
+  },
+  {
+   "name": "Beckman Coulter Cytomics FC500",
+   "type": "chemical"
+  },
+  {
+   "name": "WinMDI 2.8 software",
+   "type": "chemical"
+  },
+  {
+   "name": "Bligh and Dyer method",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "chemical"
+  },
+  {
+   "name": "C. curvatus",
+   "type": "chemical"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "chemical"
+  },
+  {
+   "name": "FTIR microspectroscopy",
+   "type": "chemical"
+  },
+  {
+   "name": "Octave version 3.2.4",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sigma Aldrich Co.",
+   "predicate": "produced",
+   "target": "Nile red"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "used for",
+   "target": "FTIR microspectroscopy"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "used for",
+   "target": "FTIR microspectroscopy"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "used for",
+   "target": "FTIR microspectroscopy"
+  }
+ ],
+ "truncated": false
+}

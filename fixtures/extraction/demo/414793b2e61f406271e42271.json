@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12278674:18:8f941871",
+ "entities": [
+  {
+   "name": "AG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TZ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JJC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "XL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BY",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WQ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RKC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JGE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KJB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JEK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pacific Northwest National Laboratory",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

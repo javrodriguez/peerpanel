@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13450573:1:4c33b652",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Hsf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSEs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn2/Msn4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STREs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsp104",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsp31",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yak1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ESR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "iESR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RiBi",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has heat shock factor",
+   "target": "Hsf1"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has heat shock elements",
+   "target": "HSEs"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has general stress regulators",
+   "target": "Msn2/Msn4"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has stress response elements",
+   "target": "STREs"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has protective proteins",
+   "target": "Hsp104"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has oxidative-stress-associated protein",
+   "target": "Hsp31"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has upstream signalling pathways",
+   "target": "PKA"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has upstream signalling pathways",
+   "target": "Yak1"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has induced ESR",
+   "target": "iESR"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has repressed ESR",
+   "target": "ESR"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has ribosome biogenesis",
+   "target": "RiBi"
+  }
+ ],
+ "truncated": false
+}

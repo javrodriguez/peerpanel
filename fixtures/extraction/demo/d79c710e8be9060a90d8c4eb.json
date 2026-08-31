@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13419736:4:8ddf258f",
+ "entities": [
+  {
+   "name": "Galactose induction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Rpt1-PL1-Bpa",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Proteasome substrate pool",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Human progesterone",
+   "type": "chemical"
+  },
+  {
+   "name": "Bpa",
+   "type": "chemical"
+  },
+  {
+   "name": "26S proteasome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HA-His6-tagged Rpt1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ecm29",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Blm10",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ubiquitin",
+   "type": "chemical"
+  },
+  {
+   "name": "Autophagy",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rpt1-PL1-Bpa",
+   "predicate": "is_expressed_by",
+   "target": "Yeast"
+  },
+  {
+   "source": "Rpt1-PL1-Bpa",
+   "predicate": "responds_to",
+   "target": "Human progesterone"
+  },
+  {
+   "source": "26S proteasome",
+   "predicate": "is_associated_with",
+   "target": "Ubiquitin"
+  },
+  {
+   "source": "26S proteasome",
+   "predicate": "is_stalled_by",
+   "target": "Autophagy"
+  },
+  {
+   "source": "HA-His6-tagged Rpt1",
+   "predicate": "is_crosslinked_to",
+   "target": "Ubiquitin"
+  }
+ ],
+ "truncated": false
+}

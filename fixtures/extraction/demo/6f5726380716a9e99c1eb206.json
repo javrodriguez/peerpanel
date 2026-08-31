@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC9825584:6:c7a30baa",
+ "entities": [
+  {
+   "name": "OrthoMCL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li L.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "StoeckertC.J.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RoosD.S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Schoch C.L.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CiufoS.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KannanS.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KhovanskayaR.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LeipeD.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "McveighR.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "O’NeillK.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RobbertseB.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OrthoMCL",
+   "predicate": "uses",
+   "target": "Li L."
+  },
+  {
+   "source": "Li L.",
+   "predicate": "uses",
+   "target": "StoeckertC.J."
+  },
+  {
+   "source": "StoeckertC.J.",
+   "predicate": "uses",
+   "target": "RoosD.S."
+  },
+  {
+   "source": "Schoch C.L.",
+   "predicate": "uses",
+   "target": "CiufoS."
+  },
+  {
+   "source": "CiufoS.",
+   "predicate": "uses",
+   "target": "KannanS."
+  },
+  {
+   "source": "KannanS.",
+   "predicate": "uses",
+   "target": "KhovanskayaR."
+  },
+  {
+   "source": "KhovanskayaR.",
+   "predicate": "uses",
+   "target": "LeipeD."
+  },
+  {
+   "source": "LeipeD.",
+   "predicate": "uses",
+   "target": "McveighR."
+  },
+  {
+   "source": "McveighR.",
+   "predicate": "uses",
+   "target": "O’NeillK."
+  },
+  {
+   "source": "O’NeillK.",
+   "predicate": "uses",
+   "target": "RobbertseB."
+  }
+ ],
+ "truncated": false
+}

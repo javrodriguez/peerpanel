@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC11618413:3:fac2e4d8",
+ "entities": [
+  {
+   "name": "biofilm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "curli amyloid fibers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bradford assay",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thioflavin T",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fourier transform infrared spectroscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "transmission electron microscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SDS-PAGE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bacteria",
+   "type": "organism"
+  },
+  {
+   "name": "CsgA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "agar substrate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "water",
+   "type": "chemical"
+  },
+  {
+   "name": "nutrients",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "biofilm",
+   "predicate": "has_component",
+   "target": "curli amyloid fibers"
+  },
+  {
+   "source": "Thioflavin T",
+   "predicate": "binds_to",
+   "target": "curli amyloid fibers"
+  },
+  {
+   "source": "Fourier transform infrared spectroscopy",
+   "predicate": "analyzes",
+   "target": "curli amyloid fibers"
+  }
+ ],
+ "truncated": false
+}

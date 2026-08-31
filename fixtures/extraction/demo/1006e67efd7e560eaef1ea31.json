@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC9825584:2:38d9461b",
+ "entities": [
+  {
+   "name": "OrthoLoger",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OrthoFinder",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SonicParanoid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OrthoMCL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OMA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RefOGs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OrthoDB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LEMMI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BLAST",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MMseqs2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DIAMOND",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "species",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OrthoLoger",
+   "predicate": "uses",
+   "target": "MMseqs2"
+  }
+ ],
+ "truncated": false
+}

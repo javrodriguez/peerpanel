@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13514516:5:7dae25f7",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "strain 1K-9",
+   "type": "organism"
+  },
+  {
+   "name": "strain 31.1",
+   "type": "organism"
+  },
+  {
+   "name": "strain 1960",
+   "type": "organism"
+  },
+  {
+   "name": "strain 12.1",
+   "type": "organism"
+  },
+  {
+   "name": "60Co",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "sugarcane molasses",
+   "type": "chemical"
+  },
+  {
+   "name": "YPX medium",
+   "type": "chemical"
+  },
+  {
+   "name": "FM medium",
+   "type": "chemical"
+  },
+  {
+   "name": "wild-type strain",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "strain 31.1",
+   "predicate": "has_higher_ethanol_yield_than",
+   "target": "strain 1960"
+  },
+  {
+   "source": "strain 31.1",
+   "predicate": "has_higher_ethanol_yield_than",
+   "target": "strain 12.1"
+  },
+  {
+   "source": "strain 1960",
+   "predicate": "has_higher_ethanol_yield_than",
+   "target": "strain 12.1"
+  },
+  {
+   "source": "strain 31.1",
+   "predicate": "has_faster_gas_production_than",
+   "target": "strain 12.1"
+  },
+  {
+   "source": "strain 1960",
+   "predicate": "has_faster_gas_production_than",
+   "target": "strain 12.1"
+  },
+  {
+   "source": "strain 31.1",
+   "predicate": "has_higher_growth_rate_than",
+   "target": "strain 12.1"
+  },
+  {
+   "source": "strain 1960",
+   "predicate": "has_higher_growth_rate_than",
+   "target": "strain 12.1"
+  },
+  {
+   "source": "strain 31.1",
+   "predicate": "has_higher_xylose_ethanol_productivity_than",
+   "target": "strain 1960"
+  },
+  {
+   "source": "strain 31.1",
+   "predicate": "has_higher_xylose_ethanol_productivity_than",
+   "target": "strain 12.1"
+  },
+  {
+   "source": "strain 1960",
+   "predicate": "has_higher_xylose_ethanol_productivity_than",
+   "target": "strain 12.1"
+  },
+  {
+   "source": "strain 31.1",
+   "predicate": "has_higher_xylose_to_ethanol_conversion_rate_than",
+   "target": "strain 1960"
+  },
+  {
+   "source": "strain 31.1",
+   "predicate": "has_higher_xylose_to_ethanol_conversion_rate_than",
+   "target": "strain 12.1"
+  }
+ ],
+ "truncated": false
+}

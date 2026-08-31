@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13504229:6:9eb33205",
+ "entities": [
+  {
+   "name": "Cryptococcal Kex2p",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Hemagglutinin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HADDOCK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Furin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Kex2p",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "H5N1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Aribisala",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ramírez",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Caballero",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ferreira",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Van der Waals energy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Electrostatic energy",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cryptococcal Kex2p",
+   "predicate": "interact_with",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Furin",
+   "predicate": "interact_with",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Cryptococcal Kex2p",
+   "predicate": "have_better_orientation",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Furin",
+   "predicate": "have_better_orientation",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Cryptococcal Kex2p",
+   "predicate": "have_stronger_affinity",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Furin",
+   "predicate": "have_stronger_affinity",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Cryptococcal Kex2p",
+   "predicate": "have_higher_binding_strength",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Furin",
+   "predicate": "have_higher_binding_strength",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Cryptococcal Kex2p",
+   "predicate": "have_lower_desolvation_energy",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Furin",
+   "predicate": "have_lower_desolvation_energy",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Cryptococcal Kex2p",
+   "predicate": "have_lower_restraint_violation_energy",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Furin",
+   "predicate": "have_lower_restraint_violation_energy",
+   "target": "Hemagglutinin"
+  }
+ ],
+ "truncated": false
+}

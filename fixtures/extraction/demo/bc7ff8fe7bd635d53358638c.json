@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13464734:6:e87687cd",
+ "entities": [
+  {
+   "name": "DoMYB102",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoUGT71K2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MYB111",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MYB112",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MYB12/PFG1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Dendrobium officinale",
+   "type": "organism"
+  },
+  {
+   "name": "Arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "flavonoid",
+   "type": "chemical"
+  },
+  {
+   "name": "anthocyanin",
+   "type": "chemical"
+  },
+  {
+   "name": "salt",
+   "type": "chemical"
+  },
+  {
+   "name": "high-light stress",
+   "type": "chemical"
+  },
+  {
+   "name": "ABA",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DoMYB102",
+   "predicate": "enhances_transcriptional_activity",
+   "target": "DoUGT71K2"
+  }
+ ],
+ "truncated": false
+}

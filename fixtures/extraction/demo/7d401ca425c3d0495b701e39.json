@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10832132:3:dcfe5855",
+ "entities": [
+  {
+   "name": "ProMAP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ProSIM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CAFA4",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GO",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "LSTM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "7C-CNN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "5FC-DNN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UMAP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PROFEAT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cosine Similarity",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jonker-Volgenant algorithm",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

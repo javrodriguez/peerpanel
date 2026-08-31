@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC12628781:8:73add0de",
+ "entities": [
+  {
+   "name": "glycolysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "EPS production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "DCW",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "EPS",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "culture media",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen source",
+   "type": "chemical"
+  },
+  {
+   "name": "pH",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "urea",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "glycolysis",
+   "predicate": "involved_in",
+   "target": "EPS production"
+  },
+  {
+   "source": "culture media",
+   "predicate": "contains",
+   "target": "glucose"
+  },
+  {
+   "source": "culture media",
+   "predicate": "contains",
+   "target": "ammonium sulfate"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "produces",
+   "target": "EPS"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "produces",
+   "target": "DCW"
+  },
+  {
+   "source": "glucose",
+   "predicate": "increases",
+   "target": "EPS production"
+  },
+  {
+   "source": "ammonium sulfate",
+   "predicate": "increases",
+   "target": "EPS production"
+  },
+  {
+   "source": "nitrogen source",
+   "predicate": "increases",
+   "target": "EPS production"
+  },
+  {
+   "source": "pH",
+   "predicate": "increases",
+   "target": "EPS production"
+  },
+  {
+   "source": "yeast",
+   "predicate": "produces",
+   "target": "EPS"
+  },
+  {
+   "source": "yeast",
+   "predicate": "produces",
+   "target": "DCW"
+  },
+  {
+   "source": "urea",
+   "predicate": "increases",
+   "target": "EPS production"
+  }
+ ],
+ "truncated": false
+}

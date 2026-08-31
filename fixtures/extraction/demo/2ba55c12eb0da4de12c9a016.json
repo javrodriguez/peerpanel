@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC12628781:1:d0039975",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "neutral lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty-acid esters",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty alcohols",
+   "type": "chemical"
+  },
+  {
+   "name": "terpenes",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "salt",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon dioxide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produce",
+   "target": "carotenoids"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produce",
+   "target": "neutral lipids"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "synthesize",
+   "target": "fatty-acid esters"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "synthesize",
+   "target": "fatty alcohols"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "synthesize",
+   "target": "terpenes"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "utilize",
+   "target": "nitrogen"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "utilize",
+   "target": "phosphorus"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "utilize",
+   "target": "sulfur"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "respond to",
+   "target": "salt"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "respond to",
+   "target": "glucose"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produce",
+   "target": "carbon dioxide"
+  }
+ ],
+ "truncated": false
+}

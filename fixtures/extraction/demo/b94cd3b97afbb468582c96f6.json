@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13513244:14:9afe503f",
+ "entities": [
+  {
+   "name": "Tyrosine",
+   "type": "chemical"
+  },
+  {
+   "name": "YARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CMTDIC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "humanized yeast model",
+   "type": "organism"
+  },
+  {
+   "name": "G41R",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "D81I",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "E196Q",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GraphPad Prism",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "one-way ANOVA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "p values",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "30 °C",
+   "type": "chemical"
+  },
+  {
+   "name": "40 °C",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YARS1",
+   "predicate": "has variant",
+   "target": "G41R"
+  },
+  {
+   "source": "YARS1",
+   "predicate": "has variant",
+   "target": "D81I"
+  },
+  {
+   "source": "YARS1",
+   "predicate": "has variant",
+   "target": "E196Q"
+  },
+  {
+   "source": "humanized yeast model",
+   "predicate": "has growth defect",
+   "target": "CMTDIC"
+  },
+  {
+   "source": "GraphPad Prism",
+   "predicate": "uses",
+   "target": "one-way ANOVA"
+  },
+  {
+   "source": "one-way ANOVA",
+   "predicate": "determines",
+   "target": "p values"
+  },
+  {
+   "source": "Tyrosine",
+   "predicate": "supplements",
+   "target": "YARS1"
+  },
+  {
+   "source": "30 °C",
+   "predicate": "has temperature",
+   "target": "YARS1"
+  },
+  {
+   "source": "40 °C",
+   "predicate": "has temperature",
+   "target": "YARS1"
+  }
+ ],
+ "truncated": false
+}

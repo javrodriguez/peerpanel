@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13504229:5:2eebcafa",
+ "entities": [
+  {
+   "name": "timsTOF Pro 2 mass spectrometer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bruker",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "United States",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ProPeptide Cleavage Site Prediction",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "furin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "H5N1 influenza virus hemagglutinin glycoprotein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kex2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MaxQuant",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UniprotKB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GraphPad Prism",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NCBI",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "timsTOF Pro 2 mass spectrometer",
+   "predicate": "used_with",
+   "target": "Bruker"
+  },
+  {
+   "source": "timsTOF Pro 2 mass spectrometer",
+   "predicate": "used_with",
+   "target": "United States"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "analyzed_with",
+   "target": "ProPeptide Cleavage Site Prediction"
+  },
+  {
+   "source": "furin",
+   "predicate": "cleaves",
+   "target": "H5N1 influenza virus hemagglutinin glycoprotein"
+  },
+  {
+   "source": "Kex2p",
+   "predicate": "cleaves",
+   "target": "H5N1 influenza virus hemagglutinin glycoprotein"
+  },
+  {
+   "source": "MaxQuant",
+   "predicate": "used_for",
+   "target": "Cryptococcus neoformans"
+  },
+  {
+   "source": "UniprotKB",
+   "predicate": "used_for",
+   "target": "Cryptococcus neoformans"
+  },
+  {
+   "source": "GraphPad Prism",
+   "predicate": "used_for",
+   "target": "Cryptococcus neoformans"
+  },
+  {
+   "source": "NCBI",
+   "predicate": "used_for",
+   "target": "Cryptococcus neoformans"
+  }
+ ],
+ "truncated": false
+}

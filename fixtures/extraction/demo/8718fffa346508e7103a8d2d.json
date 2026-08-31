@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13467452:13:e775d2ce",
+ "entities": [
+  {
+   "name": "SIRT7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SIRT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "resveratrol",
+   "type": "chemical"
+  },
+  {
+   "name": "pancreatic β-cells",
+   "type": "organism"
+  },
+  {
+   "name": "INS-1E cells",
+   "type": "organism"
+  },
+  {
+   "name": "human islets",
+   "type": "organism"
+  },
+  {
+   "name": "Glut2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glucokinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pdx-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hnf-1α",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tfam",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SFRP4",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "resveratrol",
+   "predicate": "activates",
+   "target": "SIRT1"
+  }
+ ],
+ "truncated": false
+}

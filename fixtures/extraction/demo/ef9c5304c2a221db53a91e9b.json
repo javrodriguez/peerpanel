@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC8620231:3:db0f158a",
+ "entities": [
+  {
+   "name": "weight",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "o",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "evidence source",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "absolute quantity",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hints",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "transcript feature",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "weighted sum",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "supporting hints",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "af",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "scores",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "s3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "abundance",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "weight",
+   "predicate": "assigned to",
+   "target": "evidence source"
+  },
+  {
+   "source": "evidence source",
+   "predicate": "used to",
+   "target": "transcript feature"
+  }
+ ],
+ "truncated": false
+}

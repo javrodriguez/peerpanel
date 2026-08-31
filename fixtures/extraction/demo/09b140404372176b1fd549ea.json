@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12278674:6:2dd60f7f",
+ "entities": [
+  {
+   "name": "2,804 unique proteins",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "5,926 cysteine sites",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "17,195 sites",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PTMs",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Thiol Oxidation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Total Thiol",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CoQ9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCA",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pearson correlations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "KEGG pathway enrichment analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "FAS1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ERG10",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

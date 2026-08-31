@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC7690147:1:68ef9763",
+ "entities": [
+  {
+   "name": "Rhodotorula",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. glutinis",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "F.C. Harrison",
+   "type": "organism"
+  },
+  {
+   "name": "Basidiomycota",
+   "type": "organism"
+  },
+  {
+   "name": "Microbotryomycetes",
+   "type": "organism"
+  },
+  {
+   "name": "Sporidiobolales",
+   "type": "organism"
+  },
+  {
+   "name": "torulene",
+   "type": "chemical"
+  },
+  {
+   "name": "torularhodin",
+   "type": "chemical"
+  },
+  {
+   "name": "β-carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "enzymes",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula",
+   "predicate": "has_part",
+   "target": "Basidiomycota"
+  },
+  {
+   "source": "Rhodotorula",
+   "predicate": "has_part",
+   "target": "Microbotryomycetes"
+  },
+  {
+   "source": "Rhodotorula",
+   "predicate": "has_part",
+   "target": "Sporidiobolales"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "is_representative_of",
+   "target": "Rhodotorula"
+  }
+ ],
+ "truncated": false
+}

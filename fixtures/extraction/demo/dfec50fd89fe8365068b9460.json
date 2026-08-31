@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC11628909:0:7d823963",
+ "entities": [
+  {
+   "name": "PagERF021",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Populus alba",
+   "type": "organism"
+  },
+  {
+   "name": "P. glandulosa",
+   "type": "organism"
+  },
+  {
+   "name": "Fan Gaofeng",
+   "type": "organism"
+  },
+  {
+   "name": "Gao Yuan",
+   "type": "organism"
+  },
+  {
+   "name": "Wu Xinyue",
+   "type": "organism"
+  },
+  {
+   "name": "Yu Yingying",
+   "type": "organism"
+  },
+  {
+   "name": "Yao Wenjing",
+   "type": "organism"
+  },
+  {
+   "name": "Jiang Jiahui",
+   "type": "organism"
+  },
+  {
+   "name": "Liu Huanzhen",
+   "type": "organism"
+  },
+  {
+   "name": "Jiang Tingbo",
+   "type": "organism"
+  },
+  {
+   "name": "State Key Laboratory of Tree Genetics and Breeding",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

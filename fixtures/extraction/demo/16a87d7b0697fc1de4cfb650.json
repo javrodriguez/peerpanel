@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC8620231:4:00a86da4",
+ "entities": [
+  {
+   "name": "BRAKER1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BRAKER2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TSEBRA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "A. thaliana",
+   "type": "organism"
+  },
+  {
+   "name": "C. elegans",
+   "type": "organism"
+  },
+  {
+   "name": "D. melanogaster",
+   "type": "organism"
+  },
+  {
+   "name": "RNA-seq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HISAT2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "VARUS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SRA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EVM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "McNemar",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BRAKER1",
+   "predicate": "has_higher_accuracy_than",
+   "target": "BRAKER2"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "has_higher_accuracy_than",
+   "target": "BRAKER1"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "has_higher_accuracy_than",
+   "target": "BRAKER2"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "has_higher_F1_score_than",
+   "target": "BRAKER1"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "has_higher_F1_score_than",
+   "target": "BRAKER2"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "has_higher_F1_score_than",
+   "target": "EVM"
+  },
+  {
+   "source": "BRAKER1",
+   "predicate": "has_lower_F1_score_than",
+   "target": "TSEBRA"
+  },
+  {
+   "source": "BRAKER2",
+   "predicate": "has_lower_F1_score_than",
+   "target": "TSEBRA"
+  },
+  {
+   "source": "BRAKER1",
+   "predicate": "has_lower_F1_score_than",
+   "target": "EVM"
+  },
+  {
+   "source": "BRAKER2",
+   "predicate": "has_lower_F1_score_than",
+   "target": "EVM"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "has_higher_specificity_than",
+   "target": "BRAKER1"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "has_higher_specificity_than",
+   "target": "BRAKER2"
+  }
+ ],
+ "truncated": false
+}

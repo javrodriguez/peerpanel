@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC10440040:20:9585ae77",
+ "entities": [
+  {
+   "name": "BOT-A2",
+   "type": "organism"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "DNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "electroporation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Flow cytometry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BD Accuri C6",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "G418",
+   "type": "chemical"
+  },
+  {
+   "name": "Sigma-Aldrich",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "Chalmers University of Technology",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BOT-A2",
+   "predicate": "transformed_by",
+   "target": "electroporation"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "contains",
+   "target": "GFP"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "transformed_with",
+   "target": "DNA"
+  },
+  {
+   "source": "BD Accuri C6",
+   "predicate": "used_for",
+   "target": "flow cytometry"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "analyzed_by",
+   "target": "Flow cytometry"
+  },
+  {
+   "source": "Chalmers University of Technology",
+   "predicate": "hosts",
+   "target": "BOT-A2"
+  }
+ ],
+ "truncated": false
+}

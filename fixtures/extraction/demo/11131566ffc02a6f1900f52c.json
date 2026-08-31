@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13419736:7:27e230d0",
+ "entities": [
+  {
+   "name": "26S proteasome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ubiquitin-proteasome system",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PROTACs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "molecular glues",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "tunicamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "ER stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Bpa",
+   "type": "chemical"
+  },
+  {
+   "name": "Rpt1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pore-1 loop",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pSNR-EcTyrRS-tRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pSNR-BPA-RS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pULTRA plasmid backbone",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PROTACs",
+   "predicate": "uses",
+   "target": "26S proteasome"
+  },
+  {
+   "source": "molecular glues",
+   "predicate": "uses",
+   "target": "26S proteasome"
+  },
+  {
+   "source": "tunicamycin",
+   "predicate": "induces",
+   "target": "ER stress"
+  }
+ ],
+ "truncated": false
+}

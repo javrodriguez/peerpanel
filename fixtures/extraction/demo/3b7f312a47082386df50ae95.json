@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC8164748:0:390f167d",
+ "entities": [
+  {
+   "name": "Biotechnol Biofuels",
+   "type": "organism"
+  },
+  {
+   "name": "Oleaginous yeasts",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Volkmar Passoth",
+   "type": "organism"
+  },
+  {
+   "name": "Mats Sandgren",
+   "type": "organism"
+  },
+  {
+   "name": "Swedish University of Agricultural Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "BioCenter",
+   "type": "organism"
+  },
+  {
+   "name": "Faculty of Science and Technology",
+   "type": "organism"
+  },
+  {
+   "name": "Norwegian University of Life Sciences",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Biotechnol Biofuels",
+   "predicate": "published",
+   "target": "Oleaginous yeasts"
+  }
+ ],
+ "truncated": false
+}

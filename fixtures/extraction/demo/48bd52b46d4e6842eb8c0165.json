@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC11628909:8:43ff05c7",
+ "entities": [
+  {
+   "name": "PagERF021 protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "State Key Laboratory",
+   "type": "organism"
+  },
+  {
+   "name": "Tree Genetics",
+   "type": "organism"
+  },
+  {
+   "name": "NCBI's SRA",
+   "type": "organism"
+  },
+  {
+   "name": "PRJNA1067173",
+   "type": "organism"
+  },
+  {
+   "name": "Northeast Forestry University",
+   "type": "organism"
+  },
+  {
+   "name": "Table S1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Table S2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fig S1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DEGs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "authors",
+   "type": "organism"
+  },
+  {
+   "name": "data",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PagERF021 protein",
+   "predicate": "analyzed_by",
+   "target": "Table S1"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "analyzed_by",
+   "target": "Fig S1"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "analyzed_by",
+   "target": "Table S2"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "analyzed_by",
+   "target": "NCBI's SRA"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "analyzed_by",
+   "target": "PRJNA1067173"
+  },
+  {
+   "source": "State Key Laboratory",
+   "predicate": "funded_by",
+   "target": "Northeast Forestry University"
+  }
+ ],
+ "truncated": false
+}

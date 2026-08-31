@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC3923900:5:212dc31d",
+ "entities": [
+  {
+   "name": "C. curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "palmitic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "stearic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "oleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "linoleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "linolenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "palmitoleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "FTIR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. curvatus",
+   "predicate": "has spectral feature",
+   "target": "lipid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has spectral feature",
+   "target": "lipid"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has spectral feature",
+   "target": "palmitic acid"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has spectral feature",
+   "target": "stearic acid"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has spectral feature",
+   "target": "oleic acid"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has spectral feature",
+   "target": "linoleic acid"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has spectral feature",
+   "target": "linolenic acid"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has spectral feature",
+   "target": "palmitoleic acid"
+  },
+  {
+   "source": "C. curvatus",
+   "predicate": "has spectral feature",
+   "target": "lipid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has spectral feature",
+   "target": "lipid"
+  }
+ ],
+ "truncated": false
+}

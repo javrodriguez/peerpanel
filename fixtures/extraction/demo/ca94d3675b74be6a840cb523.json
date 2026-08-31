@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC12278674:4:f93c277d",
+ "entities": [
+  {
+   "name": "Lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Cellular membranes",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Glycerophospholipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Glycerolipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Sphingolipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Fatty acyls",
+   "type": "chemical"
+  },
+  {
+   "name": "Prenol lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "Cardiolipins",
+   "type": "chemical"
+  },
+  {
+   "name": "Fatty acid ester of hydroxy fatty acids",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphatidylinositol",
+   "type": "chemical"
+  },
+  {
+   "name": "Ceramides",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lipids",
+   "predicate": "are integral to",
+   "target": "Cellular membranes"
+  }
+ ],
+ "truncated": false
+}

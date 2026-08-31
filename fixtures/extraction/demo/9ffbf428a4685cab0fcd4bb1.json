@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC10729969:2:d1b1070d",
+ "entities": [
+  {
+   "name": "Met17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "organosulfurs",
+   "type": "chemical"
+  },
+  {
+   "name": "YLL058W (HSU1)",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "K. lactis",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "S. pombe",
+   "type": "organism"
+  },
+  {
+   "name": "uracil",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met17",
+   "predicate": "catalyzes",
+   "target": "homocysteine"
+  },
+  {
+   "source": "Met17",
+   "predicate": "is_located_in",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "sulfate",
+   "predicate": "is_source_of",
+   "target": "H2S"
+  },
+  {
+   "source": "H2S",
+   "predicate": "is_converted_to",
+   "target": "homocysteine"
+  },
+  {
+   "source": "H2S",
+   "predicate": "is_converted_to",
+   "target": "organosulfurs"
+  },
+  {
+   "source": "YLL058W (HSU1)",
+   "predicate": "catalyzes",
+   "target": "organosulfurs"
+  }
+ ],
+ "truncated": false
+}

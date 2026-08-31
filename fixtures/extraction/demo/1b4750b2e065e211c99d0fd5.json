@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC10398944:3:5425cef9",
+ "entities": [
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula graminis",
+   "type": "organism"
+  },
+  {
+   "name": "Tef1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nos",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Agrobacterium tumefaciens",
+   "type": "organism"
+  },
+  {
+   "name": "IFO 0880",
+   "type": "organism"
+  },
+  {
+   "name": "OE-Pnt1",
+   "type": "organism"
+  },
+  {
+   "name": "WT",
+   "type": "organism"
+  },
+  {
+   "name": "HGT-1/HGT-2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "arabitol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OE-Pnt1",
+   "predicate": "grows",
+   "target": "xylose"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "consumes",
+   "target": "xylose"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "produces",
+   "target": "arabitol"
+  },
+  {
+   "source": "WT",
+   "predicate": "grows",
+   "target": "xylose"
+  },
+  {
+   "source": "WT",
+   "predicate": "consumes",
+   "target": "xylose"
+  },
+  {
+   "source": "WT",
+   "predicate": "produces",
+   "target": "arabitol"
+  }
+ ],
+ "truncated": false
+}

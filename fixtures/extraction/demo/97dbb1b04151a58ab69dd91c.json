@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC7953724:0:1308f407",
+ "entities": [
+  {
+   "name": "Biotechnol Biofuels",
+   "type": "organism"
+  },
+  {
+   "name": "Mikolaj Chmielarz",
+   "type": "organism"
+  },
+  {
+   "name": "Johanna Blomqvist",
+   "type": "organism"
+  },
+  {
+   "name": "Sabine Sampels",
+   "type": "organism"
+  },
+  {
+   "name": "Mats Sandgren",
+   "type": "organism"
+  },
+  {
+   "name": "Volkmar Passoth",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Swedish University of Agricultural Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "Department of Molecular Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "Uppsala",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Mikolaj Chmielarz",
+   "predicate": "author",
+   "target": "Biotechnol Biofuels"
+  },
+  {
+   "source": "Johanna Blomqvist",
+   "predicate": "author",
+   "target": "Biotechnol Biofuels"
+  },
+  {
+   "source": "Sabine Sampels",
+   "predicate": "author",
+   "target": "Biotechnol Biofuels"
+  },
+  {
+   "source": "Mats Sandgren",
+   "predicate": "author",
+   "target": "Biotechnol Biofuels"
+  },
+  {
+   "source": "Volkmar Passoth",
+   "predicate": "author",
+   "target": "Biotechnol Biofuels"
+  },
+  {
+   "source": "Swedish University of Agricultural Sciences",
+   "predicate": "affiliation",
+   "target": "Volkmar Passoth"
+  },
+  {
+   "source": "Department of Molecular Sciences",
+   "predicate": "affiliation",
+   "target": "Volkmar Passoth"
+  },
+  {
+   "source": "Uppsala",
+   "predicate": "location",
+   "target": "Swedish University of Agricultural Sciences"
+  }
+ ],
+ "truncated": false
+}

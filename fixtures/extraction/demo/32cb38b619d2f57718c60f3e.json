@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13514516:11:d8fdb319",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "KEGG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Table 5",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "12 h",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "60 h",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "wild-type strain",
+   "type": "organism"
+  },
+  {
+   "name": "low-yield strain",
+   "type": "organism"
+  },
+  {
+   "name": "high-yield strain",
+   "type": "organism"
+  },
+  {
+   "name": "TAL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XYL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XYL2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XKS1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis",
+   "predicate": "at",
+   "target": "12 h"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "at",
+   "target": "60 h"
+  },
+  {
+   "source": "wild-type strain",
+   "predicate": "compared to",
+   "target": "low-yield strain"
+  },
+  {
+   "source": "wild-type strain",
+   "predicate": "compared to",
+   "target": "high-yield strain"
+  },
+  {
+   "source": "low-yield strain",
+   "predicate": "compared to",
+   "target": "wild-type strain"
+  },
+  {
+   "source": "low-yield strain",
+   "predicate": "compared to",
+   "target": "high-yield strain"
+  },
+  {
+   "source": "high-yield strain",
+   "predicate": "compared to",
+   "target": "wild-type strain"
+  },
+  {
+   "source": "high-yield strain",
+   "predicate": "compared to",
+   "target": "low-yield strain"
+  }
+ ],
+ "truncated": false
+}

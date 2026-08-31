@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC6402699:12:8c23a586",
+ "entities": [
+  {
+   "name": "WY1335",
+   "type": "organism"
+  },
+  {
+   "name": "lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WY1340",
+   "type": "organism"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WY2270",
+   "type": "organism"
+  },
+  {
+   "name": "WY1600",
+   "type": "organism"
+  },
+  {
+   "name": "ecm21",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Chromosome 14",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BioTek Synergy MX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thermo Scientific Teleshake",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "parafilm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BioRad",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WY1335",
+   "predicate": "has_metabolite",
+   "target": "lysine"
+  },
+  {
+   "source": "WY1340",
+   "predicate": "has_metabolite",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "WY2270",
+   "predicate": "has_metabolite",
+   "target": "lysine"
+  },
+  {
+   "source": "WY1600",
+   "predicate": "has_metabolite",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "WY2270",
+   "predicate": "has_gene",
+   "target": "ecm21"
+  },
+  {
+   "source": "WY2270",
+   "predicate": "has_gene",
+   "target": "Chromosome 14"
+  },
+  {
+   "source": "WY2270",
+   "predicate": "has_metabolite",
+   "target": "lysine"
+  },
+  {
+   "source": "WY1600",
+   "predicate": "has_metabolite",
+   "target": "hypoxanthine"
+  }
+ ],
+ "truncated": false
+}

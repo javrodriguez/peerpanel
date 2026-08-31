@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC6402699:0:9f418ebb",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Hart Samuel F. M.",
+   "type": "organism"
+  },
+  {
+   "name": "Shou Wenying",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  },
+  {
+   "name": "Fred Hutchinson Cancer Research Center",
+   "type": "organism"
+  },
+  {
+   "name": "Boston College",
+   "type": "organism"
+  },
+  {
+   "name": "Yale University",
+   "type": "organism"
+  },
+  {
+   "name": "National Institutes of Health",
+   "type": "organism"
+  },
+  {
+   "name": "National Institute of General Medical Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "W.M. Keck Foundation",
+   "type": "organism"
+  },
+  {
+   "name": "National Science Foundation",
+   "type": "organism"
+  },
+  {
+   "name": "Richard and Susan Smith Family Foundation",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

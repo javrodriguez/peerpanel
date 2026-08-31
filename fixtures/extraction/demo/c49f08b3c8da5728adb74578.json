@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC7470746:16:e927af1f",
+ "entities": [
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "Cambridge Isotope Laboratories",
+   "type": "organism"
+  },
+  {
+   "name": "Thermo Fisher Scientific",
+   "type": "organism"
+  },
+  {
+   "name": "Princeton University",
+   "type": "organism"
+  },
+  {
+   "name": "Rabinowitz lab",
+   "type": "organism"
+  },
+  {
+   "name": "WY1340",
+   "type": "organism"
+  },
+  {
+   "name": "WY2072/2073",
+   "type": "organism"
+  },
+  {
+   "name": "WY2429",
+   "type": "organism"
+  },
+  {
+   "name": "TCEP",
+   "type": "chemical"
+  },
+  {
+   "name": "GSX",
+   "type": "chemical"
+  },
+  {
+   "name": "NH4HCO3",
+   "type": "chemical"
+  },
+  {
+   "name": "MAVEN software",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GSH",
+   "predicate": "obtained from",
+   "target": "Cambridge Isotope Laboratories"
+  },
+  {
+   "source": "WY1340",
+   "predicate": "partner strain of",
+   "target": "WY2072/2073"
+  },
+  {
+   "source": "WY1340",
+   "predicate": "partner strain of",
+   "target": "WY2429"
+  }
+ ],
+ "truncated": false
+}

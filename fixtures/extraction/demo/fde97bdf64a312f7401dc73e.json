@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC10832132:1:d7d8616e",
+ "entities": [
+  {
+   "name": "Protein function annotation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProt",
+   "type": "organism"
+  },
+  {
+   "name": "GO",
+   "type": "organism"
+  },
+  {
+   "name": "AnnoPRO",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "NetGO2",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "BLAST",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GoFDR",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CAFA4",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProt",
+   "type": "organism"
+  },
+  {
+   "name": "GO",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Protein function annotation",
+   "predicate": "has_strategy",
+   "target": "AnnoPRO"
+  }
+ ],
+ "truncated": false
+}

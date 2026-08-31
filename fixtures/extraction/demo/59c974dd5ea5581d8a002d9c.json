@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC5968551:6:5f00e78c",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Pi",
+   "type": "chemical"
+  },
+  {
+   "name": "RNA-seq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "digital gene expression analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "transcriptome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H+/Pi-symporter PHO84",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Na+/Pi-symporter PHO89",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cyclin-dependent kinase (CDK) inhibitor PHO81",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "polyphosphate (polyP) degradation enzymes PHM5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PPX1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "secretory phosphatases Pho5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNY1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

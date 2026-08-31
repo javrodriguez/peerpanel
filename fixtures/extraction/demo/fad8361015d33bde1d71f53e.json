@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC6402699:26:b0eb8194",
+ "entities": [
+  {
+   "name": "Friedman J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Higgins LM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gore J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Goldford JE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lu N",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bajic D",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Estrela S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tikhonov M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sanchez - Gorostiaga A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Costello EK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Stagaman K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dethlefsen L",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Friedman J",
+   "predicate": "cited_by",
+   "target": "Higgins LM"
+  },
+  {
+   "source": "Higgins LM",
+   "predicate": "cited_by",
+   "target": "Gore J"
+  },
+  {
+   "source": "Goldford JE",
+   "predicate": "cited_by",
+   "target": "Lu N"
+  },
+  {
+   "source": "Lu N",
+   "predicate": "cited_by",
+   "target": "Bajic D"
+  },
+  {
+   "source": "Bajic D",
+   "predicate": "cited_by",
+   "target": "Estrela S"
+  },
+  {
+   "source": "Estrela S",
+   "predicate": "cited_by",
+   "target": "Tikhonov M"
+  },
+  {
+   "source": "Tikhonov M",
+   "predicate": "cited_by",
+   "target": "Sanchez - Gorostiaga A"
+  },
+  {
+   "source": "Costello EK",
+   "predicate": "cited_by",
+   "target": "Stagaman K"
+  },
+  {
+   "source": "Stagaman K",
+   "predicate": "cited_by",
+   "target": "Dethlefsen L"
+  }
+ ],
+ "truncated": false
+}

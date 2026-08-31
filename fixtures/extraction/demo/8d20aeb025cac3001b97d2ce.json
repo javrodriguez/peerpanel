@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC9763685:0:0ca706ef",
+ "entities": [
+  {
+   "name": "Met15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yll058w",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "homocysteine synthase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "inorganic sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "O-acetyl-l-homoserine",
+   "type": "chemical"
+  },
+  {
+   "name": "pyridoxal 5'-phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate assimilation pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met15",
+   "predicate": "encode",
+   "target": "homocysteine synthase"
+  },
+  {
+   "source": "Yll058w",
+   "predicate": "encode",
+   "target": "homocysteine synthase"
+  }
+ ],
+ "truncated": false
+}

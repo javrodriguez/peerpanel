@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC12628781:10:174334bf",
+ "entities": [
+  {
+   "name": "EPS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "CCT0783",
+   "type": "organism"
+  },
+  {
+   "name": "NCBI",
+   "type": "organism"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "NaOH",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose-6-phosphate isomerase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "phosphoglucomutase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mannose-6-phosphate isomerase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UTP-glucose-1-phosphate uridylyltransferase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UDP-glucose-4-epimerase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UDP-glucose-6-dehydrogenase",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "EPS",
+   "predicate": "produced_by",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_genome",
+   "target": "CCT0783"
+  },
+  {
+   "source": "CCT0783",
+   "predicate": "has_sequence",
+   "target": "NCBI"
+  }
+ ],
+ "truncated": false
+}

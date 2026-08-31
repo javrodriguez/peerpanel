@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13470552:6:bb2f71fc",
+ "entities": [
+  {
+   "name": "Ire1-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HAC1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nab2-GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nsr1-GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pus1-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nhp6a-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nma111-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GFP-Pho8",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ybh3-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Prc1-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pep4-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Elo3-mTagBFP",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13517252:7:836de51d",
+ "entities": [
+  {
+   "name": "Protein hydrolysates",
+   "type": "chemical"
+  },
+  {
+   "name": "Shrimp protein hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "Krill meal",
+   "type": "chemical"
+  },
+  {
+   "name": "Phytase",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Betaine",
+   "type": "chemical"
+  },
+  {
+   "name": "Lecithin",
+   "type": "chemical"
+  },
+  {
+   "name": "Macroalgae",
+   "type": "chemical"
+  },
+  {
+   "name": "Red seabream",
+   "type": "organism"
+  },
+  {
+   "name": "Olive flounder",
+   "type": "organism"
+  },
+  {
+   "name": "Atlantic salmon",
+   "type": "organism"
+  },
+  {
+   "name": "Whiteleg shrimp",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

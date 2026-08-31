@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC8164748:4:9c4080b0",
+ "entities": [
+  {
+   "name": "Lipomyces starkeyi CBS 1807",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi CBS 7544",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis CBS 2367",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides CBS 14",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces lipofer CBS 944",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "R. glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 1807",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 7544",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13518488:10:1cc4d06d",
+ "entities": [
+  {
+   "name": "glutamic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "aspartic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "umami taste",
+   "type": "chemical"
+  },
+  {
+   "name": "alanine",
+   "type": "chemical"
+  },
+  {
+   "name": "glycine",
+   "type": "chemical"
+  },
+  {
+   "name": "serine",
+   "type": "chemical"
+  },
+  {
+   "name": "proline",
+   "type": "chemical"
+  },
+  {
+   "name": "arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "tyrosine",
+   "type": "chemical"
+  },
+  {
+   "name": "threonine",
+   "type": "chemical"
+  },
+  {
+   "name": "isoleucine",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "glutamic acid",
+   "predicate": "is a precursor of",
+   "target": "umami taste"
+  },
+  {
+   "source": "aspartic acid",
+   "predicate": "is a precursor of",
+   "target": "umami taste"
+  }
+ ],
+ "truncated": false
+}

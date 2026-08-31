@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC5826700:0:4ebb7324",
+ "entities": [
+  {
+   "name": "Microb Cell",
+   "type": "organism"
+  },
+  {
+   "name": "Deprez Marie-Anne",
+   "type": "organism"
+  },
+  {
+   "name": "Eskes Elja",
+   "type": "organism"
+  },
+  {
+   "name": "Wilms Tobias",
+   "type": "organism"
+  },
+  {
+   "name": "Ludovico Paula",
+   "type": "organism"
+  },
+  {
+   "name": "Winderickx Joris",
+   "type": "organism"
+  },
+  {
+   "name": "PKA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TORC1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sch9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pma1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pH homeostasis",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Deprez Marie-Anne",
+   "predicate": "contributes_to",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "Eskes Elja",
+   "predicate": "contributes_to",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "Wilms Tobias",
+   "predicate": "contributes_to",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "Ludovico Paula",
+   "predicate": "contributes_to",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "Winderickx Joris",
+   "predicate": "contributes_to",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "PKA",
+   "predicate": "influences",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "influences",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "influences",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "regulates",
+   "target": "pH homeostasis"
+  },
+  {
+   "source": "Pma1",
+   "predicate": "regulates",
+   "target": "pH homeostasis"
+  }
+ ],
+ "truncated": false
+}

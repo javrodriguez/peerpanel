@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10729969:3:a59c9e59",
+ "entities": [
+  {
+   "name": "met17 mutants",
+   "type": "organism"
+  },
+  {
+   "name": "met17 deletion",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met14Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ura3 deletant",
+   "type": "organism"
+  },
+  {
+   "name": "ura3Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "wild-type prototrophic strain",
+   "type": "organism"
+  },
+  {
+   "name": "S288C background",
+   "type": "organism"
+  },
+  {
+   "name": "RM11 background",
+   "type": "organism"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "uracil",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17 mutants",
+   "predicate": "can grow on",
+   "target": "sulfate"
+  },
+  {
+   "source": "met17 deletion",
+   "predicate": "growth is mediated by",
+   "target": "hydrogen sulfide"
+  },
+  {
+   "source": "ura3 deletant",
+   "predicate": "cannot grow at any initial cell density",
+   "target": "sulfate"
+  },
+  {
+   "source": "wild-type prototrophic strain",
+   "predicate": "can grow at all initial cell densities",
+   "target": "sulfate"
+  },
+  {
+   "source": "hydrogen sulfide",
+   "predicate": "mediates the density-dependent growth of",
+   "target": "met17 deletion"
+  }
+ ],
+ "truncated": false
+}

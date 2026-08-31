@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC12278674:11:83590a3c",
+ "entities": [
+  {
+   "name": "ER",
+   "type": "organism"
+  },
+  {
+   "name": "lipid droplet",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "calcium",
+   "type": "chemical"
+  },
+  {
+   "name": "calmodulin",
+   "type": "chemical"
+  },
+  {
+   "name": "SAK1",
+   "type": "chemical"
+  },
+  {
+   "name": "SNF1",
+   "type": "chemical"
+  },
+  {
+   "name": "EFT2",
+   "type": "chemical"
+  },
+  {
+   "name": "HOG1",
+   "type": "chemical"
+  },
+  {
+   "name": "PKC1",
+   "type": "chemical"
+  },
+  {
+   "name": "SLT2",
+   "type": "chemical"
+  },
+  {
+   "name": "CMD1",
+   "type": "chemical"
+  },
+  {
+   "name": "calcineurin",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CMD1",
+   "predicate": "activates",
+   "target": "SAK1"
+  },
+  {
+   "source": "SAK1",
+   "predicate": "activates",
+   "target": "SNF1"
+  },
+  {
+   "source": "SNF1",
+   "predicate": "phosphorylates",
+   "target": "EFT2"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC6547517:9:3f02c8e8",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "glucose catabolite repression pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glucose induction pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "monosaccharide transporter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rhto_06016",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SNF3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphoketolase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "xylulose-5-P",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PPP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "transhydrogenase pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NADPH",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_homolog",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_homolog",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_homolog",
+   "target": "SNF3"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_homolog",
+   "target": "Rhto_06016"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_pathway",
+   "target": "glucose catabolite repression pathway"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_pathway",
+   "target": "glucose induction pathway"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_transporter",
+   "target": "monosaccharide transporter"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "phosphoketolase"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "xylulose-5-P"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "PPP"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_enzyme",
+   "target": "transhydrogenase pathway"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_molecule",
+   "target": "NADPH"
+  }
+ ],
+ "truncated": false
+}

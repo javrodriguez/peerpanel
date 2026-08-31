@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC7191244:4:a2b73b50",
+ "entities": [
+  {
+   "name": "FT-IR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rhodosporidium babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "EPSs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Golubev",
+   "type": "organism"
+  },
+  {
+   "name": "Grigorova",
+   "type": "organism"
+  },
+  {
+   "name": "Cho",
+   "type": "organism"
+  },
+  {
+   "name": "Pavlova",
+   "type": "organism"
+  },
+  {
+   "name": "Breierová",
+   "type": "organism"
+  },
+  {
+   "name": "Mahapatra",
+   "type": "organism"
+  },
+  {
+   "name": "Banerjee",
+   "type": "organism"
+  },
+  {
+   "name": "Konjac glucomannan",
+   "type": "chemical"
+  },
+  {
+   "name": "Galactomannan",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FT-IR",
+   "predicate": "has_spectrum",
+   "target": "EPSs"
+  },
+  {
+   "source": "Golubev",
+   "predicate": "studied",
+   "target": "EPSs"
+  },
+  {
+   "source": "Grigorova",
+   "predicate": "studied",
+   "target": "EPSs"
+  },
+  {
+   "source": "Cho",
+   "predicate": "studied",
+   "target": "EPSs"
+  },
+  {
+   "source": "Pavlova",
+   "predicate": "studied",
+   "target": "EPSs"
+  },
+  {
+   "source": "Breierová",
+   "predicate": "studied",
+   "target": "EPSs"
+  },
+  {
+   "source": "Mahapatra",
+   "predicate": "studied",
+   "target": "EPSs"
+  },
+  {
+   "source": "Banerjee",
+   "predicate": "studied",
+   "target": "EPSs"
+  }
+ ],
+ "truncated": false
+}

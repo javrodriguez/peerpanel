@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514516:14:b2d021c0",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Candida shehatae",
+   "type": "organism"
+  },
+  {
+   "name": "Zymomonas mobilis A3",
+   "type": "organism"
+  },
+  {
+   "name": "Paecilomyces sp. NF1",
+   "type": "organism"
+  },
+  {
+   "name": "S. passalidarum",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipites",
+   "type": "organism"
+  },
+  {
+   "name": "DPY06",
+   "type": "organism"
+  },
+  {
+   "name": "SA-1",
+   "type": "organism"
+  },
+  {
+   "name": "CAT-1-XIT",
+   "type": "organism"
+  },
+  {
+   "name": "XYL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XYL2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

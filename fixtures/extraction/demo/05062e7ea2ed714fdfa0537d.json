@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC11618413:13:76d4431a",
+ "entities": [
+  {
+   "name": "Biofilm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Epperndorf tube",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "XENOX MHX 68500 homogenizer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bath sonicator",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Curli fiber",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bradford reagent",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BioRad",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BSA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sigma",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thioflavin T",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SDS-PAGE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Western Blot",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Biofilm",
+   "predicate": "was disrupted by",
+   "target": "Epperndorf tube"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was disrupted by",
+   "target": "XENOX MHX 68500 homogenizer"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was disrupted by",
+   "target": "Bath sonicator"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was purified by",
+   "target": "Curli fiber"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was quantified by",
+   "target": "Bradford reagent"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was quantified by",
+   "target": "BioRad"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was quantified by",
+   "target": "BSA"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was quantified by",
+   "target": "Sigma"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was quantified by",
+   "target": "Thioflavin T"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was identified by",
+   "target": "SDS-PAGE"
+  },
+  {
+   "source": "Biofilm",
+   "predicate": "was identified by",
+   "target": "Western Blot"
+  }
+ ],
+ "truncated": false
+}

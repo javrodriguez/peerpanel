@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13450799:2:7e7f7515",
+ "entities": [
+  {
+   "name": "YCplac33 plasmid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YGP1promoter-ORF-3’UTR fragment",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MCM2 promoter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ADH1 3’UTR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YGP1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "STRE1del",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "STRE2del",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ISOGEN reagent",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PrimeScript RT reagent Kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gDNA Eraser",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "QuantStudio",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "YGP1promoter-ORF-3’UTR fragment"
+  },
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "MCM2 promoter"
+  },
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "GFP"
+  },
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "ADH1 3’UTR"
+  },
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "YGP1"
+  },
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "STRE1del"
+  },
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "STRE2del"
+  }
+ ],
+ "truncated": false
+}

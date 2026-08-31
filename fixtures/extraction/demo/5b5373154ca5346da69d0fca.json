@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13513244:10:fec7aaef",
+ "entities": [
+  {
+   "name": "YARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "p426-ccdB-GPD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "p425-ccdB-GPD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LEU2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tys1Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "BL21 Codon Plus",
+   "type": "organism"
+  },
+  {
+   "name": "pDEST527",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HisPurTM Ni-NTA resin",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YARS1",
+   "predicate": "expressed_in",
+   "target": "Yeast"
+  }
+ ],
+ "truncated": false
+}

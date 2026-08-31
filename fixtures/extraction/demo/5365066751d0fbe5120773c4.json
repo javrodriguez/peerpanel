@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC10440040:3:6fe930d4",
+ "entities": [
+  {
+   "name": "BOT-A2",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "RNAseq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "genome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rRNA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mRNA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tRNA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ammonia",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "CN80 medium",
+   "type": "chemical"
+  },
+  {
+   "name": "shake flasks",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BOT-A2",
+   "predicate": "was_cultivated_in",
+   "target": "CN80 medium"
+  },
+  {
+   "source": "glucose",
+   "predicate": "was_consumed_by",
+   "target": "BOT-A2"
+  },
+  {
+   "source": "xylose",
+   "predicate": "was_consumed_by",
+   "target": "BOT-A2"
+  },
+  {
+   "source": "ammonia",
+   "predicate": "was_consumed_by",
+   "target": "BOT-A2"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "had_lipid_accumulation",
+   "target": "lipid"
+  },
+  {
+   "source": "RNAseq",
+   "predicate": "was_mapped_to",
+   "target": "genome"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC11974387:5:14d08a29",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "NADH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PDC-negative strains",
+   "type": "organism"
+  },
+  {
+   "name": "ethanol production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "NAD+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Crabtree effect",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "respiratory chain",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "oxidative phosphorylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pyruvate kinase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pyk",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphoenolpyruvate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pep",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "produces",
+   "target": "NADH"
+  },
+  {
+   "source": "PDC-negative strains",
+   "predicate": "has blocked ethanol production",
+   "target": "ethanol production"
+  },
+  {
+   "source": "Crabtree effect",
+   "predicate": "inhibits respiratory chain",
+   "target": "respiratory chain"
+  },
+  {
+   "source": "Pyruvate kinase",
+   "predicate": "catalyzes conversion",
+   "target": "phosphoenolpyruvate"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC9763685:10:1f9a2064",
+ "entities": [
+  {
+   "name": "yeast sulfur metabolic network",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "FY4 strain",
+   "type": "organism"
+  },
+  {
+   "name": "H2S chelator",
+   "type": "chemical"
+  },
+  {
+   "name": "EDTA",
+   "type": "chemical"
+  },
+  {
+   "name": "MET15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SAP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yll058w",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "organosulfurs",
+   "type": "chemical"
+  },
+  {
+   "name": "inorganic sulfates",
+   "type": "chemical"
+  },
+  {
+   "name": "biotin",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast sulfur metabolic network",
+   "predicate": "has_component",
+   "target": "FY4 strain"
+  },
+  {
+   "source": "FY4 strain",
+   "predicate": "exposed_to",
+   "target": "H2S chelator"
+  },
+  {
+   "source": "yeast sulfur metabolic network",
+   "predicate": "influenced_by",
+   "target": "MET15"
+  },
+  {
+   "source": "yeast sulfur metabolic network",
+   "predicate": "influenced_by",
+   "target": "SAP"
+  },
+  {
+   "source": "yeast sulfur metabolic network",
+   "predicate": "influenced_by",
+   "target": "Yll058w"
+  },
+  {
+   "source": "yeast sulfur metabolic network",
+   "predicate": "has_component",
+   "target": "organosulfurs"
+  },
+  {
+   "source": "yeast sulfur metabolic network",
+   "predicate": "has_component",
+   "target": "inorganic sulfates"
+  },
+  {
+   "source": "yeast sulfur metabolic network",
+   "predicate": "has_component",
+   "target": "biotin"
+  },
+  {
+   "source": "yeast sulfur metabolic network",
+   "predicate": "has_component",
+   "target": "homocysteine"
+  }
+ ],
+ "truncated": false
+}

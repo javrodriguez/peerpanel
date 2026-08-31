@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC6402699:8:ea7c7d8e",
+ "entities": [
+  {
+   "name": "L−A+",
+   "type": "organism"
+  },
+  {
+   "name": "A−L+",
+   "type": "organism"
+  },
+  {
+   "name": "chemostat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lysine-limited chemostat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hypoxanthine-limited chemostat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CoSMO",
+   "type": "organism"
+  },
+  {
+   "name": "adenine",
+   "type": "chemical"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "chemical"
+  },
+  {
+   "name": "inosine",
+   "type": "chemical"
+  },
+  {
+   "name": "agarose",
+   "type": "chemical"
+  },
+  {
+   "name": "metabolites",
+   "type": "chemical"
+  },
+  {
+   "name": "parameters",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L−A+",
+   "predicate": "released",
+   "target": "adenine"
+  },
+  {
+   "source": "L−A+",
+   "predicate": "released",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L−A+",
+   "predicate": "released",
+   "target": "inosine"
+  },
+  {
+   "source": "A−L+",
+   "predicate": "grows",
+   "target": "adenine"
+  },
+  {
+   "source": "A−L+",
+   "predicate": "grows",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "A−L+",
+   "predicate": "grows",
+   "target": "inosine"
+  },
+  {
+   "source": "chemostat",
+   "predicate": "measured",
+   "target": "parameters"
+  },
+  {
+   "source": "lysine-limited chemostat",
+   "predicate": "measured",
+   "target": "parameters"
+  },
+  {
+   "source": "hypoxanthine-limited chemostat",
+   "predicate": "measured",
+   "target": "parameters"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "grows",
+   "target": "agarose"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "grows",
+   "target": "metabolites"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13413155:8:ab398603",
+ "entities": [
+  {
+   "name": "Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "A. brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "Arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "N. benthamiana",
+   "type": "organism"
+  },
+  {
+   "name": "Bax",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PHI-base",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pSUC2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PVX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RXLR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YxSL[R/K]",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LFLAK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CRN",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13462271:3:fde2e2aa",
+ "entities": [
+  {
+   "name": "histone enrichment",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein-associated nascent",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "eSPAN",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast cells",
+   "type": "organism"
+  },
+  {
+   "name": "YPD- medium",
+   "type": "chemical"
+  },
+  {
+   "name": "α-factor",
+   "type": "chemical"
+  },
+  {
+   "name": "bromodeoxyuridine (BrdU)",
+   "type": "chemical"
+  },
+  {
+   "name": "hydroxyurea",
+   "type": "chemical"
+  },
+  {
+   "name": "paraformaldehyde",
+   "type": "chemical"
+  },
+  {
+   "name": "glycine",
+   "type": "chemical"
+  },
+  {
+   "name": "ChIP lysis buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "Triton X-100",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "histone enrichment",
+   "predicate": "involved_in",
+   "target": "protein-associated nascent"
+  },
+  {
+   "source": "protein-associated nascent",
+   "predicate": "involved_in",
+   "target": "eSPAN"
+  },
+  {
+   "source": "yeast cells",
+   "predicate": "grown_in",
+   "target": "YPD- medium"
+  },
+  {
+   "source": "yeast cells",
+   "predicate": "treated_with",
+   "target": "α-factor"
+  },
+  {
+   "source": "yeast cells",
+   "predicate": "treated_with",
+   "target": "bromodeoxyuridine (BrdU)"
+  },
+  {
+   "source": "yeast cells",
+   "predicate": "treated_with",
+   "target": "hydroxyurea"
+  },
+  {
+   "source": "yeast cells",
+   "predicate": "fixed_with",
+   "target": "paraformaldehyde"
+  },
+  {
+   "source": "yeast cells",
+   "predicate": "quenched_with",
+   "target": "glycine"
+  },
+  {
+   "source": "yeast cells",
+   "predicate": "lysated_with",
+   "target": "ChIP lysis buffer"
+  }
+ ],
+ "truncated": false
+}

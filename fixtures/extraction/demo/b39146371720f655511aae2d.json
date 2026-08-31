@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13504229:3:4b178b9e",
+ "entities": [
+  {
+   "name": "Kex2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Ishibashi et al",
+   "type": "chemical"
+  },
+  {
+   "name": "Gressler et al",
+   "type": "chemical"
+  },
+  {
+   "name": "Redding et al",
+   "type": "chemical"
+  },
+  {
+   "name": "pET30a expression vector",
+   "type": "chemical"
+  },
+  {
+   "name": "6x His-tag",
+   "type": "chemical"
+  },
+  {
+   "name": "Ni2+-NTA superflow resin",
+   "type": "chemical"
+  },
+  {
+   "name": "E. coli BL21 Star",
+   "type": "organism"
+  },
+  {
+   "name": "IPTG",
+   "type": "chemical"
+  },
+  {
+   "name": "PVDF",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Kex2p",
+   "predicate": "expressed_in",
+   "target": "Escherichia coli"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_expression_system",
+   "target": "pET30a expression vector"
+  },
+  {
+   "source": "pET30a expression vector",
+   "predicate": "contains",
+   "target": "6x His-tag"
+  },
+  {
+   "source": "E. coli BL21 Star",
+   "predicate": "has_recombinant_protein_production",
+   "target": "Kex2p"
+  },
+  {
+   "source": "IPTG",
+   "predicate": "induces_protein_expression",
+   "target": "Kex2p"
+  }
+ ],
+ "truncated": false
+}

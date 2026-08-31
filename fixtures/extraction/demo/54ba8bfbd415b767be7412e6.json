@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC6402699:10:7d6d56a2",
+ "entities": [
+  {
+   "name": "CoSMO",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "lac operon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glutathione",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glutathione conjugates",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "liquid chromatography",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mass spectrometry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "met- mutation",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "organosulfurs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RM11 background",
+   "type": "organism"
+  },
+  {
+   "name": "S288C background",
+   "type": "organism"
+  },
+  {
+   "name": "ToPro 3",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lac operon",
+   "predicate": "is_part_of",
+   "target": "E. coli"
+  },
+  {
+   "source": "met- mutation",
+   "predicate": "affects",
+   "target": "organosulfurs"
+  }
+ ],
+ "truncated": false
+}

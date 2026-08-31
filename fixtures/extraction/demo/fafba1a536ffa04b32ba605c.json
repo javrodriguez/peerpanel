@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13467452:12:8f8e4299",
+ "entities": [
+  {
+   "name": "SIRT6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mostosławski et al",
+   "type": "chemical"
+  },
+  {
+   "name": "mice",
+   "type": "organism"
+  },
+  {
+   "name": "aging-associated degenerative processes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "genome stability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolic homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "DNA repair",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "aging",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "energy regulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pancreatic β-cells",
+   "type": "organism"
+  },
+  {
+   "name": "histone H3",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SIRT6",
+   "predicate": "involved_in",
+   "target": "genome stability"
+  },
+  {
+   "source": "SIRT6",
+   "predicate": "involved_in",
+   "target": "metabolic homeostasis"
+  },
+  {
+   "source": "SIRT6",
+   "predicate": "involved_in",
+   "target": "DNA repair"
+  },
+  {
+   "source": "SIRT6",
+   "predicate": "involved_in",
+   "target": "aging"
+  },
+  {
+   "source": "SIRT6",
+   "predicate": "involved_in",
+   "target": "energy regulation"
+  },
+  {
+   "source": "SIRT6",
+   "predicate": "involved_in",
+   "target": "glucose metabolism"
+  },
+  {
+   "source": "SIRT6",
+   "predicate": "regulates",
+   "target": "histone H3"
+  }
+ ],
+ "truncated": false
+}

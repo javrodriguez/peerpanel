@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13456448:1:908f9aa3",
+ "entities": [
+  {
+   "name": "carbon dioxide",
+   "type": "chemical"
+  },
+  {
+   "name": "Earth",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "photosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "global carbon cycle",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fungi",
+   "type": "organism"
+  },
+  {
+   "name": "microorganisms",
+   "type": "organism"
+  },
+  {
+   "name": "autotrophic organisms",
+   "type": "organism"
+  },
+  {
+   "name": "heterotrophic organisms",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Candida glabrata",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "carbonic anhydrase",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "carbon dioxide",
+   "predicate": "is_primary_substrate_for",
+   "target": "photosynthesis"
+  }
+ ],
+ "truncated": false
+}

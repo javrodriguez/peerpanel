@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC7690147:5:31415b4e",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "R. graminis",
+   "type": "organism"
+  },
+  {
+   "name": "R. diobovata",
+   "type": "organism"
+  },
+  {
+   "name": "R. taiwanensis",
+   "type": "organism"
+  },
+  {
+   "name": "R. glutinis ZHK",
+   "type": "organism"
+  },
+  {
+   "name": "ZHK genome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein-coding genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nr database",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "five oleaginous red yeasts",
+   "type": "organism"
+  },
+  {
+   "name": "species-specific gene/protein families",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BLASTX searches",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG pathways",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_protein_family",
+   "target": "species-specific gene/protein families"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_gene",
+   "target": "protein-coding genes"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_genome",
+   "target": "ZHK genome"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein_family",
+   "target": "species-specific gene/protein families"
+  },
+  {
+   "source": "R. graminis",
+   "predicate": "has_protein_family",
+   "target": "species-specific gene/protein families"
+  },
+  {
+   "source": "R. diobovata",
+   "predicate": "has_protein_family",
+   "target": "species-specific gene/protein families"
+  },
+  {
+   "source": "R. taiwanensis",
+   "predicate": "has_protein_family",
+   "target": "species-specific gene/protein families"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_orthologous_gene",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_orthologous_gene",
+   "target": "R. graminis"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_orthologous_gene",
+   "target": "R. diobovata"
+  },
+  {
+   "source": "R. glutinis ZHK",
+   "predicate": "has_orthologous_gene",
+   "target": "R. taiwanensis"
+  }
+ ],
+ "truncated": false
+}

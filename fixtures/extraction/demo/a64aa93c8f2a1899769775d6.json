@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13450799:1:32404e8f",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Msn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TOR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AMPK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Haa1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STRE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yeast Glyco-Protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "β-glucosidase",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Msn2",
+   "predicate": "binds_to",
+   "target": "STRE"
+  },
+  {
+   "source": "Msn4",
+   "predicate": "binds_to",
+   "target": "STRE"
+  }
+ ],
+ "truncated": false
+}

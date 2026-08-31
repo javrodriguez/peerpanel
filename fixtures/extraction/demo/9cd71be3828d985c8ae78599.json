@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13485822:3:f748a249",
+ "entities": [
+  {
+   "name": "KTZ",
+   "type": "chemical"
+  },
+  {
+   "name": "M. pachydermatis",
+   "type": "organism"
+  },
+  {
+   "name": "ergosterol",
+   "type": "chemical"
+  },
+  {
+   "name": "ERG3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG24",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG25",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG6",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "KTZ",
+   "predicate": "treats",
+   "target": "M. pachydermatis"
+  },
+  {
+   "source": "ERG3",
+   "predicate": "is_upregulated",
+   "target": "KTZ"
+  },
+  {
+   "source": "ERG5",
+   "predicate": "is_upregulated",
+   "target": "KTZ"
+  },
+  {
+   "source": "ERG11",
+   "predicate": "is_upregulated",
+   "target": "KTZ"
+  },
+  {
+   "source": "ERG24",
+   "predicate": "is_upregulated",
+   "target": "KTZ"
+  },
+  {
+   "source": "ERG25",
+   "predicate": "is_upregulated",
+   "target": "KTZ"
+  },
+  {
+   "source": "ERG1",
+   "predicate": "is_upregulated",
+   "target": "KTZ"
+  },
+  {
+   "source": "ERG2",
+   "predicate": "is_upregulated",
+   "target": "KTZ"
+  },
+  {
+   "source": "ERG4",
+   "predicate": "is_upregulated",
+   "target": "KTZ"
+  },
+  {
+   "source": "ERG6",
+   "predicate": "is_upregulated",
+   "target": "KTZ"
+  }
+ ],
+ "truncated": false
+}

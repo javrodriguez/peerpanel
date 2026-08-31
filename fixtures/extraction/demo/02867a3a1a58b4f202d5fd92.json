@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC7953724:8:f0615c27",
+ "entities": [
+  {
+   "name": "Bioreactor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fermentations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Multifors",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Infors HT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Switzerland",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Polypropylene glycol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. toruloides CBS 14",
+   "type": "organism"
+  },
+  {
+   "name": "R. glutinis CBS 3044",
+   "type": "organism"
+  },
+  {
+   "name": "H3PO4",
+   "type": "chemical"
+  },
+  {
+   "name": "NaOH",
+   "type": "chemical"
+  },
+  {
+   "name": "CO8000 Cell density meter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nordic Biolabs",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nordic Biolabs",
+   "predicate": "manufactures",
+   "target": "CO8000 Cell density meter"
+  }
+ ],
+ "truncated": false
+}

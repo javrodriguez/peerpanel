@@ -1,0 +1,112 @@
+{
+ "chunk_id": "PMC13524880:19:b2656bca",
+ "entities": [
+  {
+   "name": "Q.-F. O.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "A. C. H.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J. P. M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "D. R.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "V. v. B.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "F. L. R. F.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C. W.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "A. N.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Swiss National Science Foundation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "University of Bern",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Q.-F. O.",
+   "predicate": "conceptualization",
+   "target": "D. R."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "conceptualization",
+   "target": "A. C. H."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "conceptualization",
+   "target": "J. P. M."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "conceptualization",
+   "target": "S. P."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "conceptualization",
+   "target": "V. v. B."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "conceptualization",
+   "target": "F. L. R. F."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "conceptualization",
+   "target": "C. W."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "investigation",
+   "target": "A. C. H."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "investigation",
+   "target": "S. P."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "investigation",
+   "target": "J. P. M."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "investigation",
+   "target": "V. v. B."
+  },
+  {
+   "source": "Q.-F. O.",
+   "predicate": "investigation",
+   "target": "F. L. R. F."
+  }
+ ],
+ "truncated": false
+}

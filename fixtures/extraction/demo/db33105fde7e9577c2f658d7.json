@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13456448:5:d59c55f3",
+ "entities": [
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "silicone",
+   "type": "chemical"
+  },
+  {
+   "name": "C. tropicalis",
+   "type": "organism"
+  },
+  {
+   "name": "C. dubliniensis",
+   "type": "organism"
+  },
+  {
+   "name": "C. glabrata",
+   "type": "organism"
+  },
+  {
+   "name": "C. parapsilosis",
+   "type": "organism"
+  },
+  {
+   "name": "Ras1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cyr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GlcNAc",
+   "type": "chemical"
+  },
+  {
+   "name": "iron",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Ras1",
+   "predicate": "is_part_of_signaling_pathway",
+   "target": "PKA"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13464734:3:6a617f24",
+ "entities": [
+  {
+   "name": "D. officinale",
+   "type": "organism"
+  },
+  {
+   "name": "D. catenatum",
+   "type": "organism"
+  },
+  {
+   "name": "Nicotiana benthamiana",
+   "type": "organism"
+  },
+  {
+   "name": "DoMYB102",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoUGT71K2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UGT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MYB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNBSEQ-T7",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shanghai OE Biotech",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bioinformatics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dual-Luciferase Reporter Assay",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC10832132:8:0ce4bf72",
+ "entities": [
+  {
+   "name": "GDF11",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GDF8",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GDF8_HUMAN",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "O14793",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GDF11_HUMAN",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "O95390",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "TGFβ",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CNS",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "FS288",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Heparin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Follistatin-288",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GDF11",
+   "predicate": "has_sequence_similarity",
+   "target": "GDF8"
+  },
+  {
+   "source": "GDF11",
+   "predicate": "has_sequence_identity",
+   "target": "GDF8"
+  },
+  {
+   "source": "GDF8",
+   "predicate": "interacts_with",
+   "target": "FS288"
+  },
+  {
+   "source": "GDF8",
+   "predicate": "binds_to",
+   "target": "Heparin"
+  },
+  {
+   "source": "GDF11",
+   "predicate": "does_not_interact_with",
+   "target": "FS288"
+  },
+  {
+   "source": "GDF11",
+   "predicate": "does_not_bind_to",
+   "target": "Heparin"
+  }
+ ],
+ "truncated": false
+}

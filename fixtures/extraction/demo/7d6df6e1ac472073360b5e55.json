@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515494:0:6f404b4f",
+ "entities": [
+  {
+   "name": "Pinheiro Sara Sofia",
+   "type": "organism"
+  },
+  {
+   "name": "Cabrita Maria João",
+   "type": "organism"
+  },
+  {
+   "name": "da Silva Marco Gomes",
+   "type": "organism"
+  },
+  {
+   "name": "Komoda Toshikazu",
+   "type": "organism"
+  },
+  {
+   "name": "Microorganisms",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Fundaçao para a Ciência e a Tecnologia",
+   "type": "organism"
+  },
+  {
+   "name": "Multidisciplinary Digital Publishing Institute",
+   "type": "organism"
+  },
+  {
+   "name": "LAQV/REQUIMTE",
+   "type": "organism"
+  },
+  {
+   "name": "Department of Chemistry",
+   "type": "organism"
+  },
+  {
+   "name": "NOVA School of Science and Technology",
+   "type": "organism"
+  },
+  {
+   "name": "NOVA University Lisbon",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

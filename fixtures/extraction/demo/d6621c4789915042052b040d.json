@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515280:7:c97b002f",
+ "entities": [
+  {
+   "name": "Serum biochemical parameters",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ALT",
+   "type": "chemical"
+  },
+  {
+   "name": "AST",
+   "type": "chemical"
+  },
+  {
+   "name": "Dezhou jennies",
+   "type": "organism"
+  },
+  {
+   "name": "YH supplementation",
+   "type": "chemical"
+  },
+  {
+   "name": "MYE group",
+   "type": "chemical"
+  },
+  {
+   "name": "albumin",
+   "type": "chemical"
+  },
+  {
+   "name": "cholesterol",
+   "type": "chemical"
+  },
+  {
+   "name": "triglyceride",
+   "type": "chemical"
+  },
+  {
+   "name": "Bacteroidota",
+   "type": "organism"
+  },
+  {
+   "name": "Bacillota",
+   "type": "organism"
+  },
+  {
+   "name": "Christensenellaceae_R-7_group",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13450799:4:070d4a0b",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP26",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LRG1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rho1 GAP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD medium",
+   "type": "chemical"
+  },
+  {
+   "name": "cell wall",
+   "type": "organism"
+  },
+  {
+   "name": "stress response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cell cycle progression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YGP1",
+   "predicate": "regulated_by",
+   "target": "Puf5"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "expressed_in",
+   "target": "yeast"
+  }
+ ],
+ "truncated": false
+}

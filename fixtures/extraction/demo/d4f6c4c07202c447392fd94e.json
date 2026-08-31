@@ -1,0 +1,67 @@
+{
+ "chunk_id": "PMC7470746:18:104fa7f2",
+ "entities": [
+  {
+   "name": "cell viability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fluorescence",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cell death",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "adenine-auxotrophic cells",
+   "type": "organism"
+  },
+  {
+   "name": "lysine-auxotrophic cells",
+   "type": "organism"
+  },
+  {
+   "name": "Bcy1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ras/PKA growth-activating pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lysine-requiring mutant",
+   "type": "organism"
+  },
+  {
+   "name": "organosulfur-requiring mutant",
+   "type": "organism"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "ToPro3",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "adenine-auxotrophic cells",
+   "predicate": "has similar quantification of live-cell densities as",
+   "target": "lysine-auxotrophic cells"
+  },
+  {
+   "source": "adenine-auxotrophic cells",
+   "predicate": "has similar quantification of live-cell densities as",
+   "target": "lysine-auxotrophic cells"
+  },
+  {
+   "source": "adenine-auxotrophic cells",
+   "predicate": "has similar quantification of live-cell densities as",
+   "target": "lysine-auxotrophic cells"
+  }
+ ],
+ "truncated": false
+}

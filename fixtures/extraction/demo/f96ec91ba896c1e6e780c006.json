@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13453879:13:b42a3454",
+ "entities": [
+  {
+   "name": "Yunnan Wuxuan Tea Industry Co.",
+   "type": "organism"
+  },
+  {
+   "name": "Yunnan Pulis Biotechnology Co.",
+   "type": "organism"
+  },
+  {
+   "name": "China",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tea samples",
+   "type": "chemical"
+  },
+  {
+   "name": "authors",
+   "type": "organism"
+  },
+  {
+   "name": "work",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "paper",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "study",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "article",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Supplementary data",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "References",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "https://doi.org/10.1016/j.jare.2025.10.078",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "authors",
+   "predicate": "acknowledge",
+   "target": "Yunnan Wuxuan Tea Industry Co."
+  },
+  {
+   "source": "authors",
+   "predicate": "acknowledge",
+   "target": "Yunnan Pulis Biotechnology Co."
+  },
+  {
+   "source": "authors",
+   "predicate": "provide",
+   "target": "tea samples"
+  },
+  {
+   "source": "authors",
+   "predicate": "assist",
+   "target": "Yunnan Pulis Biotechnology Co."
+  },
+  {
+   "source": "authors",
+   "predicate": "conduct",
+   "target": "study"
+  },
+  {
+   "source": "authors",
+   "predicate": "publish",
+   "target": "paper"
+  },
+  {
+   "source": "authors",
+   "predicate": "reference",
+   "target": "References"
+  },
+  {
+   "source": "authors",
+   "predicate": "make available",
+   "target": "Supplementary data"
+  },
+  {
+   "source": "Yunnan Wuxuan Tea Industry Co.",
+   "predicate": "provide",
+   "target": "tea samples"
+  },
+  {
+   "source": "Yunnan Pulis Biotechnology Co.",
+   "predicate": "assist",
+   "target": "authors"
+  },
+  {
+   "source": "https://doi.org/10.1016/j.jare.2025.10.078",
+   "predicate": "contain",
+   "target": "Supplementary data"
+  }
+ ],
+ "truncated": false
+}

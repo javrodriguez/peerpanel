@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13515273:7:6f300474",
+ "entities": [
+  {
+   "name": "carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "P. manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "chili sauce",
+   "type": "chemical"
+  },
+  {
+   "name": "gas production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "inhibition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cell membrane integrity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mitochondrial function",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "tricarboxylic acid cycle",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "oxidative phosphorylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "energy metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "amino acid metabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "carvacrol",
+   "predicate": "inhibit",
+   "target": "gas production"
+  },
+  {
+   "source": "carvacrol",
+   "predicate": "disrupt",
+   "target": "cell membrane integrity"
+  },
+  {
+   "source": "carvacrol",
+   "predicate": "impair",
+   "target": "mitochondrial function"
+  },
+  {
+   "source": "carvacrol",
+   "predicate": "block",
+   "target": "tricarboxylic acid cycle"
+  },
+  {
+   "source": "carvacrol",
+   "predicate": "interfere",
+   "target": "energy metabolism"
+  },
+  {
+   "source": "carvacrol",
+   "predicate": "interfere",
+   "target": "lipid metabolism"
+  },
+  {
+   "source": "carvacrol",
+   "predicate": "interfere",
+   "target": "amino acid metabolism"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13471478:3:da819bfa",
+ "entities": [
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HEK293",
+   "type": "organism"
+  },
+  {
+   "name": "Phoenix cells",
+   "type": "organism"
+  },
+  {
+   "name": "pFLAG vector",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pIRES2 dsRed-Express vector",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MG132",
+   "type": "chemical"
+  },
+  {
+   "name": "CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GAPDH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ubiquitin",
+   "type": "chemical"
+  },
+  {
+   "name": "kidney",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SLC26A4",
+   "predicate": "co-immunoprecipitated with",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "co-immunoprecipitated with",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "MG132",
+   "predicate": "increased the expression levels of",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "part of the degradation complex",
+   "target": "ROC1"
+  },
+  {
+   "source": "ubiquitin",
+   "predicate": "ubiquitinated",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "kidney",
+   "predicate": "expressed",
+   "target": "SLC26A4"
+  }
+ ],
+ "truncated": false
+}

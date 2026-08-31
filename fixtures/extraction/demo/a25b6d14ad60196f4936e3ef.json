@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC9763685:14:c06dcbee",
+ "entities": [
+  {
+   "name": "Talbot C. Vogel",
+   "type": "organism"
+  },
+  {
+   "name": "C. Madera",
+   "type": "organism"
+  },
+  {
+   "name": "SUPERFAMILY",
+   "type": "organism"
+  },
+  {
+   "name": "sophisticated comparative genomics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "data mining",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "visualization",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "phylogeny Nucl",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Acids Res",
+   "type": "organism"
+  },
+  {
+   "name": "D380",
+   "type": "organism"
+  },
+  {
+   "name": "19036790",
+   "type": "organism"
+  },
+  {
+   "name": "10.1093 / nar / gkn762",
+   "type": "organism"
+  },
+  {
+   "name": "PMC2686452",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Talbot C. Vogel",
+   "predicate": "author",
+   "target": "SUPERFAMILY"
+  },
+  {
+   "source": "SUPERFAMILY",
+   "predicate": "published_in",
+   "target": "Acids Res"
+  },
+  {
+   "source": "Acids Res",
+   "predicate": "published_in",
+   "target": "D380"
+  },
+  {
+   "source": "D380",
+   "predicate": "published_in",
+   "target": "19036790"
+  },
+  {
+   "source": "19036790",
+   "predicate": "published_in",
+   "target": "10.1093 / nar / gkn762"
+  },
+  {
+   "source": "10.1093 / nar / gkn762",
+   "predicate": "published_in",
+   "target": "PMC2686452"
+  }
+ ],
+ "truncated": false
+}

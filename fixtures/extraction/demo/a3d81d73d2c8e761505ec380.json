@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC12628781:5:34b4db44",
+ "entities": [
+  {
+   "name": "R. glutinis ZHK yeast",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "EPS biosynthesis pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "potential transporters",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "EPS export",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "NCBI",
+   "type": "organism"
+  },
+  {
+   "name": "genome assembly ASM1550198v1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "blast search",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "reference genomes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. toruloides IFO0880 and NP11 strains",
+   "type": "organism"
+  },
+  {
+   "name": "genome-scale models",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. glutinis ZHK yeast",
+   "predicate": "has_process",
+   "target": "EPS biosynthesis pathway"
+  },
+  {
+   "source": "R. glutinis ZHK yeast",
+   "predicate": "has_process",
+   "target": "EPS export"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "EPS biosynthesis pathway"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "EPS export"
+  },
+  {
+   "source": "NCBI",
+   "predicate": "has_genomic_data",
+   "target": "genome assembly ASM1550198v1"
+  },
+  {
+   "source": "R. toruloides IFO0880 and NP11 strains",
+   "predicate": "has_genomic_data",
+   "target": "genome assembly ASM1550198v1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "genome-scale models"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "blast search"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "reference genomes"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "genome-scale models"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "EPS biosynthesis pathway"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "EPS export"
+  }
+ ],
+ "truncated": false
+}

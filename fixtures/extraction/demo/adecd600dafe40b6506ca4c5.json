@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC1409804:3:17e42a8a",
+ "entities": [
+  {
+   "name": "AUGUSTUS+",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "hints",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "order",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "model",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "probability distribution",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "probabilities",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "gene structures",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNA - sequences",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "same transition probabilities",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "exactly same models",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has",
+   "target": "hints"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has",
+   "target": "order"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has",
+   "target": "model"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has",
+   "target": "AUGUSTUS"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has",
+   "target": "probability distribution"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has",
+   "target": "probabilities"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has",
+   "target": "gene structures"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has",
+   "target": "DNA - sequences"
+  },
+  {
+   "source": "AUGUSTUS",
+   "predicate": "has",
+   "target": "same transition probabilities"
+  },
+  {
+   "source": "AUGUSTUS",
+   "predicate": "has",
+   "target": "exactly same models"
+  }
+ ],
+ "truncated": false
+}

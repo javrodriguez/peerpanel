@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13517252:19:6e0599b0",
+ "entities": [
+  {
+   "name": "whiteleg shrimp",
+   "type": "organism"
+  },
+  {
+   "name": "Litopenaeus vannamei",
+   "type": "organism"
+  },
+  {
+   "name": "Pinto L. Machado M. Calduch - Giner J.A. Pérez - Sánchez J. Dias J. Conceição L.E.C. Silva T.S. Costas B.",
+   "type": "organism"
+  },
+  {
+   "name": "Gunathilaka B.E. Khosravi S. Shin J. Shin J. Herault M. Fournier V. Lee K.-J.",
+   "type": "organism"
+  },
+  {
+   "name": "Niu K.-M. Khosravi S. Kothari D. Lee W.-D. Lim J.-M. Lee B.-J. Kim",
+   "type": "organism"
+  },
+  {
+   "name": "Lim S.-G. Lee S.-M. Kim S.",
+   "type": "organism"
+  },
+  {
+   "name": "Kim J.-M. Lee J.-H. Han T. Lee K.-J.",
+   "type": "organism"
+  },
+  {
+   "name": "Kotzamanis Y. Tsironi T. Brezas A. Grigorakis K. Ilia V. Vatsos I. Romano N. van Eys J. Kumar V.",
+   "type": "organism"
+  },
+  {
+   "name": "Watson A.M.",
+   "type": "organism"
+  },
+  {
+   "name": "Wang L. Zhang Y. Li X. Wang J. Zhang W.",
+   "type": "organism"
+  },
+  {
+   "name": "Shi M. Yuan Y. Li X. Wang Y. Mai K.",
+   "type": "organism"
+  },
+  {
+   "name": "Cao S. Zhao X. Wang W. Li Y. Xie S.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "whiteleg shrimp",
+   "predicate": "has",
+   "target": "Litopenaeus vannamei"
+  }
+ ],
+ "truncated": false
+}

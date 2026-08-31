@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13450573:10:78fc9fe1",
+ "entities": [
+  {
+   "name": "NTH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RPL14A",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RPS9B",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DHR2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FAF1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NOB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RLP7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PWP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Trehalose and carbohydrate metabolism",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Translational fidelity and tRNA aminoacylation",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pre-rRNA processing and ribosome biogenesis",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cytoplasmic translation",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "NTH1",
+   "predicate": "involved_in",
+   "target": "Trehalose and carbohydrate metabolism"
+  },
+  {
+   "source": "RPL14A",
+   "predicate": "involved_in",
+   "target": "Translational fidelity and tRNA aminoacylation"
+  },
+  {
+   "source": "RPS9B",
+   "predicate": "involved_in",
+   "target": "Translational fidelity and tRNA aminoacylation"
+  },
+  {
+   "source": "DHR2",
+   "predicate": "involved_in",
+   "target": "Pre-rRNA processing and ribosome biogenesis"
+  },
+  {
+   "source": "FAF1",
+   "predicate": "involved_in",
+   "target": "Pre-rRNA processing and ribosome biogenesis"
+  },
+  {
+   "source": "NOB1",
+   "predicate": "involved_in",
+   "target": "Pre-rRNA processing and ribosome biogenesis"
+  },
+  {
+   "source": "RLP7",
+   "predicate": "involved_in",
+   "target": "Pre-rRNA processing and ribosome biogenesis"
+  },
+  {
+   "source": "PWP1",
+   "predicate": "involved_in",
+   "target": "Pre-rRNA processing and ribosome biogenesis"
+  },
+  {
+   "source": "Trehalose and carbohydrate metabolism",
+   "predicate": "has_module",
+   "target": "Trehalose and carbohydrate metabolism"
+  },
+  {
+   "source": "Translational fidelity and tRNA aminoacylation",
+   "predicate": "has_module",
+   "target": "Translational fidelity and tRNA aminoacylation"
+  },
+  {
+   "source": "Pre-rRNA processing and ribosome biogenesis",
+   "predicate": "has_module",
+   "target": "Pre-rRNA processing and ribosome biogenesis"
+  },
+  {
+   "source": "Cytoplasmic translation",
+   "predicate": "has_module",
+   "target": "Cytoplasmic translation"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13467452:17:484fdeeb",
+ "entities": [
+  {
+   "name": "sirtuins",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nicotinamide riboside",
+   "type": "chemical"
+  },
+  {
+   "name": "nicotinamide mononucleotide",
+   "type": "chemical"
+  },
+  {
+   "name": "NAD+",
+   "type": "chemical"
+  },
+  {
+   "name": "pancreatic β-cells",
+   "type": "organism"
+  },
+  {
+   "name": "NRK1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "C-peptide",
+   "type": "chemical"
+  },
+  {
+   "name": "SIRT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AMPK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mTOR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "IGF-1",
+   "type": "chemical"
+  },
+  {
+   "name": "CD38",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sirtuins",
+   "predicate": "activate",
+   "target": "SIRT1"
+  },
+  {
+   "source": "nicotinamide riboside",
+   "predicate": "convert_to",
+   "target": "NAD+"
+  },
+  {
+   "source": "nicotinamide mononucleotide",
+   "predicate": "convert_to",
+   "target": "NAD+"
+  },
+  {
+   "source": "pancreatic β-cells",
+   "predicate": "express",
+   "target": "NRK1"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "activate",
+   "target": "AMPK"
+  },
+  {
+   "source": "AMPK",
+   "predicate": "activate",
+   "target": "mTOR"
+  },
+  {
+   "source": "mTOR",
+   "predicate": "activate",
+   "target": "IGF-1"
+  },
+  {
+   "source": "IGF-1",
+   "predicate": "activate",
+   "target": "SIRT1"
+  },
+  {
+   "source": "CD38",
+   "predicate": "degrade",
+   "target": "NAD+"
+  }
+ ],
+ "truncated": false
+}

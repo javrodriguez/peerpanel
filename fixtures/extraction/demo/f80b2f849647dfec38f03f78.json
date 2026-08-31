@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC7873862:4:5d463f3c",
+ "entities": [
+  {
+   "name": "Lipidomics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid samples",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "liquid chromatography tandem mass spectrometry",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "LC-MS/MS",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Kyle",
+   "type": "organism"
+  },
+  {
+   "name": "lipid fractions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "vacuo",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "moisture",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "methanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Waters CSH column",
+   "type": "chemical"
+  },
+  {
+   "name": "Waters Acquity UPLC H class system",
+   "type": "chemical"
+  },
+  {
+   "name": "Velos-ETD Orbitrap mass spectrometer",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lipidomics",
+   "predicate": "uses",
+   "target": "liquid chromatography tandem mass spectrometry"
+  },
+  {
+   "source": "liquid chromatography tandem mass spectrometry",
+   "predicate": "analyzes",
+   "target": "lipid samples"
+  }
+ ],
+ "truncated": false
+}

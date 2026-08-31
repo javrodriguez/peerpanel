@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13450799:12:6ce7329a",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Haa1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ixr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rgt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Stb5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yrr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CLB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CLB2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YGP1",
+   "predicate": "regulated_by",
+   "target": "Puf5"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "regulated_by",
+   "target": "Haa1"
+  },
+  {
+   "source": "Puf5",
+   "predicate": "dependent_on",
+   "target": "Ixr1"
+  }
+ ],
+ "truncated": false
+}

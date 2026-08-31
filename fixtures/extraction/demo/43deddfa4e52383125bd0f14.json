@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC1409804:7:114bb5ee",
+ "entities": [
+  {
+   "name": "AUGUSTUS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GENSCAN",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TWINSCAN",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SGP2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "human chromosome 22",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sag178",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Collins",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Chromosome 22 Group",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sanger Institute",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Parra et al",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Evan Keibler",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Michael R. Brent",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AUGUSTUS",
+   "predicate": "more accurate than",
+   "target": "GENSCAN"
+  },
+  {
+   "source": "AUGUSTUS",
+   "predicate": "less sensitive than",
+   "target": "GENSCAN"
+  },
+  {
+   "source": "AUGUSTUS",
+   "predicate": "more specific than",
+   "target": "GENSCAN"
+  },
+  {
+   "source": "SGP2",
+   "predicate": "more accurate than",
+   "target": "GENSCAN"
+  }
+ ],
+ "truncated": false
+}

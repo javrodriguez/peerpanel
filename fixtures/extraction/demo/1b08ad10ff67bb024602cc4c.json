@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC9757880:18:af4351c0",
+ "entities": [
+  {
+   "name": "Roland Roberts",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Biology",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS ONE",
+   "type": "organism"
+  },
+  {
+   "name": "protocols.io",
+   "type": "organism"
+  },
+  {
+   "name": "https://www.editorialmanager.com/pbiology/",
+   "type": "organism"
+  },
+  {
+   "name": "https://journals.plos.org/plosbiology/s/supporting-information",
+   "type": "organism"
+  },
+  {
+   "name": "https://blogs.plos.org/plos/2019/05/plos-journals-now-open-for-published-peer-review/",
+   "type": "organism"
+  },
+  {
+   "name": "https://plos.org/protocols?utm_medium=editorial-email&utm_source=authorletters&utm_campaign=protocols",
+   "type": "organism"
+  },
+  {
+   "name": "http://journals.plos.org/plosbiology/s/data-availability",
+   "type": "organism"
+  },
+  {
+   "name": "http://dx.doi.org/10.1371/journal.pbio.1001797",
+   "type": "organism"
+  },
+  {
+   "name": "Figs 1BCDEF",
+   "type": "organism"
+  },
+  {
+   "name": "Figs 2E",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

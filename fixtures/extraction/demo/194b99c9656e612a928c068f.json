@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC10158836:0:203084f8",
+ "entities": [
+  {
+   "name": "Saccharomyces Genome Database",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Wong Edith D",
+   "type": "organism"
+  },
+  {
+   "name": "Miyasato Stuart R",
+   "type": "organism"
+  },
+  {
+   "name": "Aleksander Suzi",
+   "type": "organism"
+  },
+  {
+   "name": "Karra Kalpana",
+   "type": "organism"
+  },
+  {
+   "name": "Nash Robert S",
+   "type": "organism"
+  },
+  {
+   "name": "Skrzypek Marek S",
+   "type": "organism"
+  },
+  {
+   "name": "Weng Shuai",
+   "type": "organism"
+  },
+  {
+   "name": "Engel Stacia R",
+   "type": "organism"
+  },
+  {
+   "name": "Cherry J Michael",
+   "type": "organism"
+  },
+  {
+   "name": "Lacefield S",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_author",
+   "target": "Wong Edith D"
+  },
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_author",
+   "target": "Miyasato Stuart R"
+  },
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_author",
+   "target": "Aleksander Suzi"
+  },
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_author",
+   "target": "Karra Kalpana"
+  },
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_author",
+   "target": "Nash Robert S"
+  },
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_author",
+   "target": "Skrzypek Marek S"
+  },
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_author",
+   "target": "Weng Shuai"
+  },
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_author",
+   "target": "Engel Stacia R"
+  },
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_author",
+   "target": "Cherry J Michael"
+  },
+  {
+   "source": "Saccharomyces Genome Database",
+   "predicate": "has_editor",
+   "target": "Lacefield S"
+  }
+ ],
+ "truncated": false
+}

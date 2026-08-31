@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13510017:3:cc9851f0",
+ "entities": [
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ribosomal RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "whole-transcriptome RNA sequencing",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WRS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RiboPure-Yeast Kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RiboCop rRNA Depletion Kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CORALL Total RNA-Seq V2 kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NanoDrop One spectrophotometry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "STAR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Subread",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DESeq2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAMtools",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "RNA",
+   "predicate": "extracted_by",
+   "target": "RiboPure-Yeast Kit"
+  },
+  {
+   "source": "ribosomal RNA",
+   "predicate": "depleted_by",
+   "target": "RiboCop rRNA Depletion Kit"
+  },
+  {
+   "source": "WRS",
+   "predicate": "performed_on",
+   "target": "NanoDrop One spectrophotometry"
+  },
+  {
+   "source": "WRS",
+   "predicate": "performed_on",
+   "target": "STAR"
+  },
+  {
+   "source": "WRS",
+   "predicate": "performed_on",
+   "target": "Subread"
+  },
+  {
+   "source": "WRS",
+   "predicate": "performed_on",
+   "target": "DESeq2"
+  },
+  {
+   "source": "WRS",
+   "predicate": "performed_on",
+   "target": "SAMtools"
+  },
+  {
+   "source": "WRS",
+   "predicate": "prepared_by",
+   "target": "CORALL Total RNA-Seq V2 kit"
+  }
+ ],
+ "truncated": false
+}

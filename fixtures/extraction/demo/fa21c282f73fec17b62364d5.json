@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13518488:9:4517dbb1",
+ "entities": [
+  {
+   "name": "P. albidus",
+   "type": "organism"
+  },
+  {
+   "name": "P. sapidus",
+   "type": "organism"
+  },
+  {
+   "name": "P. pulmonarius",
+   "type": "organism"
+  },
+  {
+   "name": "Raw soybean",
+   "type": "organism"
+  },
+  {
+   "name": "Beef",
+   "type": "organism"
+  },
+  {
+   "name": "Threonine",
+   "type": "chemical"
+  },
+  {
+   "name": "Valine",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Isoleucine",
+   "type": "chemical"
+  },
+  {
+   "name": "Leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "Phenylalanine",
+   "type": "chemical"
+  },
+  {
+   "name": "Lysine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Threonine"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Valine"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Methionine"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Isoleucine"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Leucine"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Phenylalanine"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Lysine"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Threonine"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Methionine"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has_chemical_score",
+   "target": "Lysine"
+  }
+ ],
+ "truncated": false
+}

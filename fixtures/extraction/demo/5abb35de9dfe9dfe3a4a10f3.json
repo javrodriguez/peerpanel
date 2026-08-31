@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC10832132:12:56299fa0",
+ "entities": [
+  {
+   "name": "CAFA4 challenge",
+   "type": "chemical"
+  },
+  {
+   "name": "UniProt knowledgebase",
+   "type": "chemical"
+  },
+  {
+   "name": "GO families",
+   "type": "chemical"
+  },
+  {
+   "name": "biological process",
+   "type": "chemical"
+  },
+  {
+   "name": "molecular function",
+   "type": "chemical"
+  },
+  {
+   "name": "cellular component",
+   "type": "chemical"
+  },
+  {
+   "name": "protein sequences",
+   "type": "chemical"
+  },
+  {
+   "name": "GO database",
+   "type": "chemical"
+  },
+  {
+   "name": "UniProt",
+   "type": "chemical"
+  },
+  {
+   "name": "GO",
+   "type": "chemical"
+  },
+  {
+   "name": "CAFA4",
+   "type": "chemical"
+  },
+  {
+   "name": "LSTM method",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CAFA4 challenge",
+   "predicate": "has_participant",
+   "target": "protein sequences"
+  },
+  {
+   "source": "UniProt knowledgebase",
+   "predicate": "has_data",
+   "target": "GO families"
+  },
+  {
+   "source": "GO database",
+   "predicate": "has_data",
+   "target": "GO families"
+  },
+  {
+   "source": "CAFA4 challenge",
+   "predicate": "has_participant",
+   "target": "UniProt knowledgebase"
+  },
+  {
+   "source": "UniProt knowledgebase",
+   "predicate": "has_data",
+   "target": "protein sequences"
+  },
+  {
+   "source": "GO database",
+   "predicate": "has_data",
+   "target": "protein sequences"
+  },
+  {
+   "source": "CAFA4 challenge",
+   "predicate": "has_participant",
+   "target": "GO database"
+  },
+  {
+   "source": "UniProt knowledgebase",
+   "predicate": "has_data",
+   "target": "GO database"
+  },
+  {
+   "source": "GO database",
+   "predicate": "has_data",
+   "target": "UniProt knowledgebase"
+  },
+  {
+   "source": "CAFA4 challenge",
+   "predicate": "has_participant",
+   "target": "UniProt"
+  },
+  {
+   "source": "UniProt knowledgebase",
+   "predicate": "has_data",
+   "target": "UniProt"
+  },
+  {
+   "source": "GO database",
+   "predicate": "has_data",
+   "target": "UniProt"
+  }
+ ],
+ "truncated": false
+}

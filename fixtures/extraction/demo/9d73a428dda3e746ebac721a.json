@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC7191244:5:406742f5",
+ "entities": [
+  {
+   "name": "EPSs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Field emission scanning electron microscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rhodosporidium babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "Leuconostoc lactis KC117496",
+   "type": "organism"
+  },
+  {
+   "name": "Lactobacillus keﬁranofaciens ZW3",
+   "type": "organism"
+  },
+  {
+   "name": "Bacillus atrophaeus WYZ",
+   "type": "organism"
+  },
+  {
+   "name": "Ganoderma applanatum",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula mucilaginosa CICC 33013",
+   "type": "organism"
+  },
+  {
+   "name": "Polaribacter sp. SM1127",
+   "type": "organism"
+  },
+  {
+   "name": "Hyaluronic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "DPPH•",
+   "type": "chemical"
+  },
+  {
+   "name": "•OH",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium babjevae",
+   "predicate": "produces_EPSs",
+   "target": "EPSs"
+  },
+  {
+   "source": "Leuconostoc lactis KC117496",
+   "predicate": "produces_EPSs",
+   "target": "EPSs"
+  },
+  {
+   "source": "Lactobacillus keﬁranofaciens ZW3",
+   "predicate": "produces_EPSs",
+   "target": "EPSs"
+  },
+  {
+   "source": "Bacillus atrophaeus WYZ",
+   "predicate": "produces_EPSs",
+   "target": "EPSs"
+  },
+  {
+   "source": "Ganoderma applanatum",
+   "predicate": "produces_EPSs",
+   "target": "EPSs"
+  },
+  {
+   "source": "Rhodotorula mucilaginosa CICC 33013",
+   "predicate": "produces_EPSs",
+   "target": "EPSs"
+  },
+  {
+   "source": "Polaribacter sp. SM1127",
+   "predicate": "produces_EPSs",
+   "target": "EPSs"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC9157227:4:d72252e6",
+ "entities": [
+  {
+   "name": "GGA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GGA platform",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "crtE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtYB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pXYL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pGPD1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pADH2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tNOS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NAT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KU70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RtGGA",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GGA",
+   "predicate": "uses",
+   "target": "crtE"
+  },
+  {
+   "source": "GGA",
+   "predicate": "uses",
+   "target": "crtI"
+  },
+  {
+   "source": "GGA",
+   "predicate": "uses",
+   "target": "crtYB"
+  },
+  {
+   "source": "GGA",
+   "predicate": "uses",
+   "target": "pXYL1"
+  },
+  {
+   "source": "GGA",
+   "predicate": "uses",
+   "target": "pGPD1"
+  },
+  {
+   "source": "GGA",
+   "predicate": "uses",
+   "target": "pADH2"
+  },
+  {
+   "source": "GGA",
+   "predicate": "uses",
+   "target": "tNOS"
+  },
+  {
+   "source": "GGA",
+   "predicate": "uses",
+   "target": "NAT"
+  },
+  {
+   "source": "GGA",
+   "predicate": "uses",
+   "target": "KU70"
+  },
+  {
+   "source": "RtGGA",
+   "predicate": "uses",
+   "target": "GGA"
+  },
+  {
+   "source": "RtGGA",
+   "predicate": "uses",
+   "target": "crtE"
+  },
+  {
+   "source": "RtGGA",
+   "predicate": "uses",
+   "target": "crtI"
+  }
+ ],
+ "truncated": false
+}

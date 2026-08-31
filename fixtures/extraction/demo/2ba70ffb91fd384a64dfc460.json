@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC5484544:9:aa708a16",
+ "entities": [
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pHc",
+   "type": "chemical"
+  },
+  {
+   "name": "pHv",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "rapamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "1-NM-PP1",
+   "type": "chemical"
+  },
+  {
+   "name": "Vph1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "WT",
+   "type": "organism"
+  },
+  {
+   "name": "sch9Δ",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sch9",
+   "predicate": "phosphorylates",
+   "target": "TORC1"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "activates",
+   "target": "Sch9"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "regulates",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "glucose",
+   "predicate": "influences",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "rapamycin",
+   "predicate": "inhibits",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "1-NM-PP1",
+   "predicate": "blocks",
+   "target": "Sch9"
+  }
+ ],
+ "truncated": false
+}

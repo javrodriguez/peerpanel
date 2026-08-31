@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC5484544:10:6b51a534",
+ "entities": [
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vph1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTG2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTG3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET22",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Gcn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vam6/Vps39",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Opi1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ino2/4",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sch9",
+   "predicate": "regulates",
+   "target": "TORC1"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC9157227:2:dfa631f1",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Hu",
+   "type": "organism"
+  },
+  {
+   "name": "Ji",
+   "type": "organism"
+  },
+  {
+   "name": "KU70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtYB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "geranylgeranyl diphosphate synthase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "phytoene dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "phytoene synthase/lycopene cyclase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NHEJ",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has non-homologous end joining (NHEJ) as default mechanism",
+   "target": "NHEJ"
+  }
+ ],
+ "truncated": false
+}

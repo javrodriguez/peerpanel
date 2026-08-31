@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC3563226:7:8d77a674",
+ "entities": [
+  {
+   "name": "amdSYM",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CEN.PK113-7D",
+   "type": "organism"
+  },
+  {
+   "name": "CBS1483",
+   "type": "organism"
+  },
+  {
+   "name": "Scottish Ale",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces eubayanus CBS12357",
+   "type": "organism"
+  },
+  {
+   "name": "IMK468",
+   "type": "organism"
+  },
+  {
+   "name": "IMK470",
+   "type": "organism"
+  },
+  {
+   "name": "IMK473",
+   "type": "organism"
+  },
+  {
+   "name": "IMK474",
+   "type": "organism"
+  },
+  {
+   "name": "Sc.HXK1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sb.ARO80",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. pastorianus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CEN.PK113-7D",
+   "predicate": "has_gene",
+   "target": "Sc.HXK1"
+  },
+  {
+   "source": "CBS1483",
+   "predicate": "has_gene",
+   "target": "Sc.HXK1"
+  }
+ ],
+ "truncated": false
+}

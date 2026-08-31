@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13471478:5:737ea961",
+ "entities": [
+  {
+   "name": "Slc26a4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cullin 3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zbtb16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Aqp2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Atp6v1b1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "stria vascularis",
+   "type": "organism"
+  },
+  {
+   "name": "spiral ligament",
+   "type": "organism"
+  },
+  {
+   "name": "murine neonatal cochlea explants",
+   "type": "organism"
+  },
+  {
+   "name": "kidney homogenates",
+   "type": "organism"
+  },
+  {
+   "name": "mouse stria vascularis",
+   "type": "organism"
+  },
+  {
+   "name": "mouse stria vascularis protein homogenates",
+   "type": "organism"
+  },
+  {
+   "name": "Western blot",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "stria vascularis",
+   "predicate": "isolated_from",
+   "target": "murine neonatal cochlea explants"
+  },
+  {
+   "source": "stria vascularis",
+   "predicate": "prepared_from",
+   "target": "mouse stria vascularis"
+  },
+  {
+   "source": "stria vascularis",
+   "predicate": "prepared_from",
+   "target": "mouse stria vascularis protein homogenates"
+  },
+  {
+   "source": "kidney homogenates",
+   "predicate": "prepared_from",
+   "target": "kidney homogenates"
+  }
+ ],
+ "truncated": false
+}

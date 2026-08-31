@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC10204961:10:8e659bae",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "NADPH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "XPK pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid biosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "carbon source",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "TCA cycle",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PDH bypass route",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PDC-ALDH",
+   "type": "chemical"
+  },
+  {
+   "name": "ACS",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "main suppliers",
+   "target": "NADPH"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "primary source",
+   "target": "acetyl-CoA"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "involved in",
+   "target": "lipid biosynthesis"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "involved in",
+   "target": "carbon source"
+  },
+  {
+   "source": "XPK pathway",
+   "predicate": "primary source",
+   "target": "acetyl-CoA"
+  },
+  {
+   "source": "XPK pathway",
+   "predicate": "involved in",
+   "target": "lipid biosynthesis"
+  },
+  {
+   "source": "glucose",
+   "predicate": "carbon source",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "xylose",
+   "predicate": "carbon source",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "TCA cycle",
+   "predicate": "involved in",
+   "target": "lipid biosynthesis"
+  },
+  {
+   "source": "PDH bypass route",
+   "predicate": "involved in",
+   "target": "lipid biosynthesis"
+  },
+  {
+   "source": "PDC-ALDH",
+   "predicate": "involved in",
+   "target": "PDH bypass route"
+  },
+  {
+   "source": "ACS",
+   "predicate": "involved in",
+   "target": "PDH bypass route"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC11974387:9:c438feec",
+ "entities": [
+  {
+   "name": "LA",
+   "type": "chemical"
+  },
+  {
+   "name": "PLA",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "pyruvate",
+   "type": "chemical"
+  },
+  {
+   "name": "lactate dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ldh",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "PDC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "2,3-BDO",
+   "type": "chemical"
+  },
+  {
+   "name": "acetolactate synthase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Als",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "LA",
+   "predicate": "substitute",
+   "target": "ethanol"
+  },
+  {
+   "source": "LA",
+   "predicate": "requires",
+   "target": "NADH"
+  },
+  {
+   "source": "PDC",
+   "predicate": "deleted",
+   "target": "ethanol"
+  },
+  {
+   "source": "ADH",
+   "predicate": "deleted",
+   "target": "ethanol"
+  },
+  {
+   "source": "2,3-BDO",
+   "predicate": "produced_by",
+   "target": "acetolactate synthase"
+  }
+ ],
+ "truncated": false
+}

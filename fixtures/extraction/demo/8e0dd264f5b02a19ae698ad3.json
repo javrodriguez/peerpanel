@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC11628909:5:1421e440",
+ "entities": [
+  {
+   "name": "PagERF021",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OE6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OE7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OE8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SOD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "POD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MDA",
+   "type": "chemical"
+  },
+  {
+   "name": "chlorophyll",
+   "type": "chemical"
+  },
+  {
+   "name": "PagERF021 transgenic poplar",
+   "type": "organism"
+  },
+  {
+   "name": "wild type poplars",
+   "type": "organism"
+  },
+  {
+   "name": "salt stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "resilience",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PagERF021",
+   "predicate": "overexpressed_in",
+   "target": "PagERF021 transgenic poplar"
+  },
+  {
+   "source": "PagERF021 transgenic poplar",
+   "predicate": "exhibited",
+   "target": "resilience"
+  },
+  {
+   "source": "PagERF021 transgenic poplar",
+   "predicate": "exhibited",
+   "target": "salt stress"
+  }
+ ],
+ "truncated": false
+}

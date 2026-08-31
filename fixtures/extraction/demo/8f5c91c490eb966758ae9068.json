@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC7873862:10:e3b56c61",
+ "entities": [
+  {
+   "name": "Short/branched chain acyl-CoA dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ACADS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fatty acid beta-oxidation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Acyl-CoA dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ACADM",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Enoyl-CoA hydratase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EHD3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ECHS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "3-hydroxyacyl-CoA dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HADH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Acetyl-CoA acyltransferase 2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG10",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Short/branched chain acyl-CoA dehydrogenase",
+   "predicate": "involved_in",
+   "target": "Fatty acid beta-oxidation"
+  },
+  {
+   "source": "Acyl-CoA dehydrogenase",
+   "predicate": "involved_in",
+   "target": "Fatty acid beta-oxidation"
+  },
+  {
+   "source": "Enoyl-CoA hydratase",
+   "predicate": "involved_in",
+   "target": "Fatty acid beta-oxidation"
+  },
+  {
+   "source": "3-hydroxyacyl-CoA dehydrogenase",
+   "predicate": "involved_in",
+   "target": "Fatty acid beta-oxidation"
+  },
+  {
+   "source": "Acetyl-CoA acyltransferase 2",
+   "predicate": "involved_in",
+   "target": "Fatty acid beta-oxidation"
+  }
+ ],
+ "truncated": false
+}

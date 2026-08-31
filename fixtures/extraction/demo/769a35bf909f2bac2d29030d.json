@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13517252:3:fcab9c69",
+ "entities": [
+  {
+   "name": "Study identification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "exact keyword matching",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "database searches",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Google Scholar",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "publisher-platform searches",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "backward reference screening",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "forward citation tracking",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Search performance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "eight known eligible benchmark studies",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "retrieval pathways",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "second author",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "search concepts",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Study identification",
+   "predicate": "uses",
+   "target": "exact keyword matching"
+  },
+  {
+   "source": "Study identification",
+   "predicate": "uses",
+   "target": "database searches"
+  },
+  {
+   "source": "Study identification",
+   "predicate": "uses",
+   "target": "Google Scholar"
+  },
+  {
+   "source": "Study identification",
+   "predicate": "uses",
+   "target": "publisher-platform searches"
+  },
+  {
+   "source": "Study identification",
+   "predicate": "uses",
+   "target": "backward reference screening"
+  },
+  {
+   "source": "Study identification",
+   "predicate": "uses",
+   "target": "forward citation tracking"
+  },
+  {
+   "source": "Search performance",
+   "predicate": "evaluated using",
+   "target": "eight known eligible benchmark studies"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC5484544:5:25db910a",
+ "entities": [
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VMA2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "chronological lifespan",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lifespan determination",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "V-ATPase activity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "V-ATPase function",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cell viability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ROS",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pH",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sch9",
+   "predicate": "regulates",
+   "target": "lifespan determination"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "regulates",
+   "target": "lifespan determination"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "is_important_for",
+   "target": "cell viability"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "is_important_for",
+   "target": "cell viability"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "impairs",
+   "target": "Sch9"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "extends",
+   "target": "chronological lifespan"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "decreases",
+   "target": "chronological lifespan"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "affects",
+   "target": "pH"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "affects",
+   "target": "pH"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "is_affected_by",
+   "target": "Sch9"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "is_affected_by",
+   "target": "V-ATPase"
+  }
+ ],
+ "truncated": false
+}

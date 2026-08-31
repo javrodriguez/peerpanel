@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC7382830:9:939ba650",
+ "entities": [
+  {
+   "name": "E. coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "L-serine",
+   "type": "chemical"
+  },
+  {
+   "name": "GcvA regulon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "gcvA operon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "gcvB operon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lrp",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rho",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "gcvTHP operon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cycA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "gcvB gene",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "E. coli K-12 MG1655",
+   "predicate": "has_regulon",
+   "target": "GcvA regulon"
+  },
+  {
+   "source": "GcvA regulon",
+   "predicate": "regulates",
+   "target": "gcvTHP operon"
+  },
+  {
+   "source": "GcvA regulon",
+   "predicate": "regulates",
+   "target": "gcvB operon"
+  },
+  {
+   "source": "GcvA regulon",
+   "predicate": "regulates",
+   "target": "gcvB gene"
+  },
+  {
+   "source": "GcvA regulon",
+   "predicate": "regulates",
+   "target": "cycA"
+  },
+  {
+   "source": "GcvR",
+   "predicate": "forms_complex_with",
+   "target": "GcvA"
+  },
+  {
+   "source": "GcvR",
+   "predicate": "regulates",
+   "target": "gcvTHP operon"
+  },
+  {
+   "source": "gcvA operon",
+   "predicate": "hosts",
+   "target": "GcvA regulon"
+  },
+  {
+   "source": "gcvB operon",
+   "predicate": "hosts",
+   "target": "gcvB gene"
+  },
+  {
+   "source": "gcvB operon",
+   "predicate": "regulates",
+   "target": "cycA"
+  }
+ ],
+ "truncated": false
+}

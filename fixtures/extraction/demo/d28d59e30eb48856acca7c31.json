@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13419736:14:4aca6273",
+ "entities": [
+  {
+   "name": "26S proteasome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt1-Rpt6 motor subunits",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "tunicamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "endoplasmic reticulum",
+   "type": "organism"
+  },
+  {
+   "name": "Sec12",
+   "type": "chemical"
+  },
+  {
+   "name": "Ape3",
+   "type": "chemical"
+  },
+  {
+   "name": "Sam1",
+   "type": "chemical"
+  },
+  {
+   "name": "Rna1",
+   "type": "chemical"
+  },
+  {
+   "name": "DMSO",
+   "type": "chemical"
+  },
+  {
+   "name": "Ni-NTA",
+   "type": "chemical"
+  },
+  {
+   "name": "Tu",
+   "type": "chemical"
+  },
+  {
+   "name": "log-phase growth",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "26S proteasome",
+   "predicate": "has_subunit",
+   "target": "Rpt1-Rpt6 motor subunits"
+  },
+  {
+   "source": "tunicamycin",
+   "predicate": "induces_degradation",
+   "target": "Sec12"
+  },
+  {
+   "source": "tunicamycin",
+   "predicate": "induces_degradation",
+   "target": "Ape3"
+  },
+  {
+   "source": "tunicamycin",
+   "predicate": "induces_degradation",
+   "target": "Sam1"
+  },
+  {
+   "source": "tunicamycin",
+   "predicate": "does_not_induce_degradation",
+   "target": "Rna1"
+  },
+  {
+   "source": "log-phase growth",
+   "predicate": "has_proteasome_substrate",
+   "target": "26S proteasome"
+  },
+  {
+   "source": "endoplasmic reticulum",
+   "predicate": "is_affected_by",
+   "target": "tunicamycin"
+  },
+  {
+   "source": "DMSO",
+   "predicate": "is_control",
+   "target": "tunicamycin"
+  },
+  {
+   "source": "Ni-NTA",
+   "predicate": "is_enrichment_method",
+   "target": "tunicamycin"
+  },
+  {
+   "source": "Tu",
+   "predicate": "is_enrichment_method",
+   "target": "tunicamycin"
+  },
+  {
+   "source": "Tu",
+   "predicate": "induces_stress",
+   "target": "endoplasmic reticulum"
+  },
+  {
+   "source": "Tu",
+   "predicate": "has_substrate",
+   "target": "Sec12"
+  }
+ ],
+ "truncated": false
+}

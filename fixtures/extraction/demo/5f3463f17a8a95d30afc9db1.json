@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7953724:9:727eed9e",
+ "entities": [
+  {
+   "name": "Gajdos P",
+   "type": "organism"
+  },
+  {
+   "name": "Hambalko J",
+   "type": "organism"
+  },
+  {
+   "name": "Slany O",
+   "type": "organism"
+  },
+  {
+   "name": "Certik M",
+   "type": "organism"
+  },
+  {
+   "name": "Xin B Wang Y Tao F Li L Ma C Xu P Co",
+   "type": "organism"
+  },
+  {
+   "name": "Spier F Buffon JG Burkert CA Bioconversion",
+   "type": "organism"
+  },
+  {
+   "name": "Shen Q Lin H Zhan J Wang Q Zhao Y Sweetpotato",
+   "type": "organism"
+  },
+  {
+   "name": "Yen H - W Yang Y - C Yu Y - H",
+   "type": "organism"
+  },
+  {
+   "name": "Diaz - Fernandez D Aguiar TQ Martin VI Romani",
+   "type": "organism"
+  },
+  {
+   "name": "Silva R Domingues L Revuelta JL Jimenez",
+   "type": "organism"
+  },
+  {
+   "name": "Biely P",
+   "type": "organism"
+  },
+  {
+   "name": "Singh S",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

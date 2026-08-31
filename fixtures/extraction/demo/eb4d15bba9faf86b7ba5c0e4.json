@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC5968551:7:56515373",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Pi",
+   "type": "chemical"
+  },
+  {
+   "name": "Ldp1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Acc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hcd1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Acl1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Acs1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pdc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Lys20",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Idh1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sdh1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sdh2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Ldp1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Acc1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Hcd1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Acl1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Acs1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Pdc1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Lys20"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Idh1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Sdh1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "Sdh2"
+  }
+ ],
+ "truncated": false
+}

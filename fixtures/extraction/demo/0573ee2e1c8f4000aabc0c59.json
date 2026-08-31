@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC11102182:0:32f75824",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Mishra Shekhar",
+   "type": "organism"
+  },
+  {
+   "name": "Deewan Anshu",
+   "type": "organism"
+  },
+  {
+   "name": "Zhao Huimin",
+   "type": "organism"
+  },
+  {
+   "name": "Christopher V. Rao",
+   "type": "organism"
+  },
+  {
+   "name": "University of Illinois Urbana-Champaign",
+   "type": "organism"
+  },
+  {
+   "name": "BMC",
+   "type": "organism"
+  },
+  {
+   "name": "Microb Cell Fact",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "U.S. Department of Energy",
+   "type": "organism"
+  },
+  {
+   "name": "DOE Center for Advanced Bioenergy and Bioproducts Innovation",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Mishra Shekhar",
+   "predicate": "has_funding",
+   "target": "U.S. Department of Energy"
+  },
+  {
+   "source": "Deewan Anshu",
+   "predicate": "has_funding",
+   "target": "U.S. Department of Energy"
+  },
+  {
+   "source": "Zhao Huimin",
+   "predicate": "has_funding",
+   "target": "U.S. Department of Energy"
+  },
+  {
+   "source": "Christopher V. Rao",
+   "predicate": "has_funding",
+   "target": "U.S. Department of Energy"
+  }
+ ],
+ "truncated": false
+}

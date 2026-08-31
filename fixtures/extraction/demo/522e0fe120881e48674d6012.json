@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7470746:20:07a3094a",
+ "entities": [
+  {
+   "name": "adenine",
+   "type": "chemical"
+  },
+  {
+   "name": "adenine-limited ade− cells",
+   "type": "organism"
+  },
+  {
+   "name": "adenine-requiring mutant",
+   "type": "organism"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine-requiring mutant",
+   "type": "organism"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "chemical"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ras/PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein kinase A",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "autophagy-related gene 5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "organosulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "reduced glutathione",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

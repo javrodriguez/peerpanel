@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC9825514:7:8f3145a8",
+ "entities": [
+  {
+   "name": "RivoireC.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "RedaschiN.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "O’DonovanC.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "BelyB.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AuchinclossA.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "EnnisM.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "KaleN.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "MuthukrishnanV.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Burley S.K.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "BittrichS.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ChenL.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CrichlowG.V.",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC11102182:9:3a1575da",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "IFO0880",
+   "type": "organism"
+  },
+  {
+   "name": "Dinh",
+   "type": "organism"
+  },
+  {
+   "name": "Suthers",
+   "type": "organism"
+  },
+  {
+   "name": "Shekhar Mishra",
+   "type": "organism"
+  },
+  {
+   "name": "Anshu Deewan",
+   "type": "organism"
+  },
+  {
+   "name": "NAD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NADPH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DAG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TAG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phospholipid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glycerol-3-phosphate",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_lipidomic_analysis",
+   "target": "IFO0880"
+  },
+  {
+   "source": "Dinh",
+   "predicate": "developed_pathway_map",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "Suthers",
+   "predicate": "developed_pathway_map",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_lipidomic_data",
+   "target": "DAG"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_lipidomic_data",
+   "target": "TAG"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_lipidomic_data",
+   "target": "glycerol-3-phosphate"
+  }
+ ],
+ "truncated": false
+}

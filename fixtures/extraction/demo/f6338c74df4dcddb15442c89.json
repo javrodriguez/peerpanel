@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13450799:17:ba9fd6c0",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PUF5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HAA1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MSN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MSN4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pCUT plasmid",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SC-ura",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YPD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "plasmid",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "regulatory mechanisms",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pCUT plasmid",
+   "predicate": "is",
+   "target": "plasmid"
+  },
+  {
+   "source": "plasmid",
+   "predicate": "is",
+   "target": "plasmid"
+  }
+ ],
+ "truncated": false
+}

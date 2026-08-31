@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC7873862:12:9740cebb",
+ "entities": [
+  {
+   "name": "DOE Agile BioFoundry",
+   "type": "organism"
+  },
+  {
+   "name": "United States Department of Energy",
+   "type": "organism"
+  },
+  {
+   "name": "Office of Energy Efficiency and Renewable Energy",
+   "type": "organism"
+  },
+  {
+   "name": "Bioenergy Technologies Office",
+   "type": "organism"
+  },
+  {
+   "name": "Award No. DE-NL0030038",
+   "type": "organism"
+  },
+  {
+   "name": "DOE Joint BioEnergy Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Office of Science",
+   "type": "organism"
+  },
+  {
+   "name": "Office of Biological and Environmental Research",
+   "type": "organism"
+  },
+  {
+   "name": "Lawrence Berkeley National Laboratory",
+   "type": "organism"
+  },
+  {
+   "name": "DOE Joint Genome Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Environmental Molecular Sciences Laboratory",
+   "type": "organism"
+  },
+  {
+   "name": "U.S. Department of Energy",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DOE Agile BioFoundry",
+   "predicate": "supported by",
+   "target": "United States Department of Energy"
+  },
+  {
+   "source": "DOE Joint BioEnergy Institute",
+   "predicate": "supported by",
+   "target": "United States Department of Energy"
+  },
+  {
+   "source": "DOE Joint BioEnergy Institute",
+   "predicate": "contract",
+   "target": "Lawrence Berkeley National Laboratory"
+  },
+  {
+   "source": "DOE Joint Genome Institute",
+   "predicate": "resources",
+   "target": "DOE Joint BioEnergy Institute"
+  },
+  {
+   "source": "Environmental Molecular Sciences Laboratory",
+   "predicate": "resources",
+   "target": "DOE Joint BioEnergy Institute"
+  },
+  {
+   "source": "DOE Joint BioEnergy Institute",
+   "predicate": "sponsored by",
+   "target": "Office of Biological and Environmental Research"
+  },
+  {
+   "source": "DOE Joint Genome Institute",
+   "predicate": "sponsored by",
+   "target": "Office of Biological and Environmental Research"
+  },
+  {
+   "source": "Environmental Molecular Sciences Laboratory",
+   "predicate": "sponsored by",
+   "target": "Office of Biological and Environmental Research"
+  },
+  {
+   "source": "DOE Joint BioEnergy Institute",
+   "predicate": "part of",
+   "target": "DOE Joint BioEnergy Institute"
+  },
+  {
+   "source": "DOE Agile BioFoundry",
+   "predicate": "part of",
+   "target": "DOE Agile BioFoundry"
+  }
+ ],
+ "truncated": false
+}

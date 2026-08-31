@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13515280:2:72d6ed96",
+ "entities": [
+  {
+   "name": "Dezhou jennies",
+   "type": "organism"
+  },
+  {
+   "name": "Equus asinus",
+   "type": "organism"
+  },
+  {
+   "name": "Shandong Dong-E Ejiao Co., Ltd.",
+   "type": "organism"
+  },
+  {
+   "name": "Liaocheng",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "China",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "jenny",
+   "type": "organism"
+  },
+  {
+   "name": "yeast hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "amino acids",
+   "type": "chemical"
+  },
+  {
+   "name": "small peptides",
+   "type": "chemical"
+  },
+  {
+   "name": "nucleotides",
+   "type": "chemical"
+  },
+  {
+   "name": "β-glucan",
+   "type": "chemical"
+  },
+  {
+   "name": "mannan oligosaccharides",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast hydrolysate",
+   "predicate": "contains",
+   "target": "amino acids"
+  },
+  {
+   "source": "yeast hydrolysate",
+   "predicate": "contains",
+   "target": "small peptides"
+  },
+  {
+   "source": "yeast hydrolysate",
+   "predicate": "contains",
+   "target": "nucleotides"
+  },
+  {
+   "source": "yeast hydrolysate",
+   "predicate": "contains",
+   "target": "β-glucan"
+  },
+  {
+   "source": "yeast hydrolysate",
+   "predicate": "contains",
+   "target": "mannan oligosaccharides"
+  },
+  {
+   "source": "Dezhou jennies",
+   "predicate": "has_husbandry_conditions",
+   "target": "Shandong Dong-E Ejiao Co., Ltd."
+  }
+ ],
+ "truncated": false
+}

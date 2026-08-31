@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC12278674:10:2b8bd218",
+ "entities": [
+  {
+   "name": "Nitrogen limitation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Carbon flux",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lipid accumulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Stress response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "TOR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AMPK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Calcium",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MAPK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TORC1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SCH9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SNF1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAK1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nitrogen limitation",
+   "predicate": "regulates",
+   "target": "Carbon flux"
+  },
+  {
+   "source": "Nitrogen limitation",
+   "predicate": "regulates",
+   "target": "Lipid accumulation"
+  },
+  {
+   "source": "Nitrogen limitation",
+   "predicate": "regulates",
+   "target": "Stress response"
+  },
+  {
+   "source": "AMPK",
+   "predicate": "works in tandem with",
+   "target": "TOR"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "phosphorylates",
+   "target": "SCH9"
+  },
+  {
+   "source": "SCH9",
+   "predicate": "is a major substrate of",
+   "target": "TORC1"
+  }
+ ],
+ "truncated": false
+}

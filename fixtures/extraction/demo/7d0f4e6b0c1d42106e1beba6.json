@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13467452:5:e6d404da",
+ "entities": [
+  {
+   "name": "Sirtuins",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "diet",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "NAD+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SIRT1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SIRT7",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mammals",
+   "type": "organism"
+  },
+  {
+   "name": "cytoplasm",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mitochondria",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cell nucleus",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "enzymes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "histone deacetylation",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sirtuins",
+   "predicate": "linked_to",
+   "target": "diet"
+  },
+  {
+   "source": "Sirtuins",
+   "predicate": "linked_to",
+   "target": "metabolism"
+  },
+  {
+   "source": "Sirtuins",
+   "predicate": "dependent_on",
+   "target": "NAD+"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "regulates",
+   "target": "histone deacetylation"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC10398944:5:665d273f",
+ "entities": [
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty alcohol",
+   "type": "chemical"
+  },
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Tef1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_11990",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OE-Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "∆Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "parental strain",
+   "type": "organism"
+  },
+  {
+   "name": "mutants",
+   "type": "organism"
+  },
+  {
+   "name": "corn stover hydrolysate",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Pnt1",
+   "predicate": "overexpressed_by",
+   "target": "OE-Pnt1"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "accumulated",
+   "target": "fatty alcohol"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "produced",
+   "target": "fatty alcohol"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "grew_in",
+   "target": "corn stover hydrolysate"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "produced",
+   "target": "fatty alcohol"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "consumed",
+   "target": "xylose"
+  },
+  {
+   "source": "Pnt1",
+   "predicate": "expressed",
+   "target": "OE-Pnt1"
+  },
+  {
+   "source": "Pnt1",
+   "predicate": "expressed",
+   "target": "WT"
+  },
+  {
+   "source": "Pnt1",
+   "predicate": "expressed",
+   "target": "∆Pnt1"
+  }
+ ],
+ "truncated": false
+}

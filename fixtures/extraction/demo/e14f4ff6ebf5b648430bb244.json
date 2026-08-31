@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC3923900:0:01ffd68c",
+ "entities": [
+  {
+   "name": "Biotechnol Biofuels",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Ami Diletta",
+   "type": "organism"
+  },
+  {
+   "name": "Riccardo Posteri",
+   "type": "organism"
+  },
+  {
+   "name": "Paolo Mereghetti",
+   "type": "organism"
+  },
+  {
+   "name": "Danilo Porro",
+   "type": "organism"
+  },
+  {
+   "name": "Silvia Maria Doglia",
+   "type": "organism"
+  },
+  {
+   "name": "Paola Branduardi",
+   "type": "organism"
+  },
+  {
+   "name": "University of Milano-Bicocca",
+   "type": "organism"
+  },
+  {
+   "name": "CNISM",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Biotechnol Biofuels",
+   "predicate": "published_in",
+   "target": "Ami Diletta"
+  },
+  {
+   "source": "Biotechnol Biofuels",
+   "predicate": "published_in",
+   "target": "Paola Branduardi"
+  }
+ ],
+ "truncated": false
+}

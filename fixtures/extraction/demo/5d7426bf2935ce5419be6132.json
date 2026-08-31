@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC6402699:11:e9d1f649",
+ "entities": [
+  {
+   "name": "Culture samples",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Milli-Q H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "unautoclaved 1.6-mL Eppendorf tubes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "90 μL",
+   "type": "chemical"
+  },
+  {
+   "name": "diluted culture sample",
+   "type": "chemical"
+  },
+  {
+   "name": "10 μL",
+   "type": "chemical"
+  },
+  {
+   "name": "stock",
+   "type": "chemical"
+  },
+  {
+   "name": "2 μL",
+   "type": "chemical"
+  },
+  {
+   "name": "1 μM ToPro 3",
+   "type": "chemical"
+  },
+  {
+   "name": "Molecular Probes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Eugene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cytek",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Culture samples",
+   "predicate": "diluted_in",
+   "target": "Milli-Q H2O"
+  },
+  {
+   "source": "Culture samples",
+   "predicate": "stored_in",
+   "target": "unautoclaved 1.6-mL Eppendorf tubes"
+  }
+ ],
+ "truncated": false
+}

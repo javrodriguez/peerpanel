@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC3923900:10:d0836990",
+ "entities": [
+  {
+   "name": "Cryptococcus albidus",
+   "type": "organism"
+  },
+  {
+   "name": "Trichosporon fermentans",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula graminis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "Toruloides Y2",
+   "type": "organism"
+  },
+  {
+   "name": "Toruloides Y4",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces",
+   "type": "organism"
+  },
+  {
+   "name": "DSM-4444",
+   "type": "organism"
+  },
+  {
+   "name": "Nile red",
+   "type": "chemical"
+  },
+  {
+   "name": "FTIR",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

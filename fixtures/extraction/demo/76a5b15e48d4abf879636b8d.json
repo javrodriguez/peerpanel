@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC9757880:4:ae5dc0a6",
+ "entities": [
+  {
+   "name": "met17Δ cells",
+   "type": "organism"
+  },
+  {
+   "name": "homocysteine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "methionine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "organosulfur auxotrophy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SeMeCo communities",
+   "type": "organism"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met3p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met14p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met5p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met10p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Meu1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Spe3p",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ cells",
+   "predicate": "has_metabolic_deficiency",
+   "target": "organosulfur auxotrophy"
+  },
+  {
+   "source": "SeMeCo communities",
+   "predicate": "has_metabolite_exchange",
+   "target": "met17Δ cells"
+  },
+  {
+   "source": "SeMeCo communities",
+   "predicate": "has_metabolite_exchange",
+   "target": "homocysteine"
+  },
+  {
+   "source": "SeMeCo communities",
+   "predicate": "has_metabolite_exchange",
+   "target": "methionine"
+  },
+  {
+   "source": "met17Δ cells",
+   "predicate": "has_upstream_precursor",
+   "target": "homocysteine"
+  },
+  {
+   "source": "met17Δ cells",
+   "predicate": "has_downstream_product",
+   "target": "methionine"
+  }
+ ],
+ "truncated": false
+}

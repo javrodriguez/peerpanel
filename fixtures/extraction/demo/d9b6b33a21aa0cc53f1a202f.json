@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10440040:1:f556427b",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "DAO1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ICL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CTR3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NAR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "triacylglycerols",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_promoter",
+   "target": "DAO1"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_promoter",
+   "target": "ICL1"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_promoter",
+   "target": "CTR3"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_promoter",
+   "target": "MET16"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_promoter",
+   "target": "NAR1"
+  }
+ ],
+ "truncated": false
+}

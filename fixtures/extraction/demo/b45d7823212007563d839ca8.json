@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC11618413:12:712603d7",
+ "entities": [
+  {
+   "name": "biofilm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "water",
+   "type": "chemical"
+  },
+  {
+   "name": "E. coli W3110 K-12",
+   "type": "organism"
+  },
+  {
+   "name": "Luria-Bertani liquid media",
+   "type": "chemical"
+  },
+  {
+   "name": "salt-free",
+   "type": "chemical"
+  },
+  {
+   "name": "agar",
+   "type": "chemical"
+  },
+  {
+   "name": "water activity meter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hysitron Inc.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TI 950 Triboindenter instrument",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PBS",
+   "type": "chemical"
+  },
+  {
+   "name": "NaOH",
+   "type": "chemical"
+  },
+  {
+   "name": "MTT",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "biofilm",
+   "predicate": "has_water_uptake",
+   "target": "water"
+  },
+  {
+   "source": "biofilm",
+   "predicate": "has_water_uptake",
+   "target": "water"
+  },
+  {
+   "source": "E. coli W3110 K-12",
+   "predicate": "grows_in",
+   "target": "Luria-Bertani liquid media"
+  },
+  {
+   "source": "E. coli W3110 K-12",
+   "predicate": "has_metabolic_activity",
+   "target": "MTT"
+  },
+  {
+   "source": "biofilm",
+   "predicate": "has_water_activity",
+   "target": "water activity meter"
+  },
+  {
+   "source": "Hysitron Inc.",
+   "predicate": "uses",
+   "target": "TI 950 Triboindenter instrument"
+  }
+ ],
+ "truncated": false
+}

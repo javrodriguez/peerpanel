@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC5968551:1:89e9d3d1",
+ "entities": [
+  {
+   "name": "microorganisms",
+   "type": "organism"
+  },
+  {
+   "name": "lipids",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "DNA",
+   "type": "chemical"
+  },
+  {
+   "name": "RNA",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "useful enzymes",
+   "type": "chemical"
+  },
+  {
+   "name": "triacylglycerols",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "microorganisms",
+   "predicate": "accumulate",
+   "target": "lipids"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "accumulate",
+   "target": "lipids"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "model",
+   "target": "microorganisms"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "model",
+   "target": "microorganisms"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "model",
+   "target": "microorganisms"
+  },
+  {
+   "source": "phosphorus",
+   "predicate": "essential",
+   "target": "DNA"
+  },
+  {
+   "source": "phosphorus",
+   "predicate": "essential",
+   "target": "RNA"
+  }
+ ],
+ "truncated": false
+}

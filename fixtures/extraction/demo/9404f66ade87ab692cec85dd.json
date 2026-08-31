@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7382830:13:38f1309f",
+ "entities": [
+  {
+   "name": "ALE experiments",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "E. coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "ALEdb",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Matplotlib",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "seaborn",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Floweaver",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "muts-needle-plot",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "breseq",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mutfunc",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "github repository",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "NCBI accession NC_000913",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AfterQC",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ALE experiments",
+   "predicate": "involved",
+   "target": "E. coli K-12 MG1655"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "used",
+   "target": "ALEdb"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "generated",
+   "target": "Matplotlib"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "generated",
+   "target": "seaborn"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "generated",
+   "target": "Floweaver"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "generated",
+   "target": "muts-needle-plot"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "used",
+   "target": "breseq"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "used",
+   "target": "mutfunc"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "stored",
+   "target": "github repository"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "referenced",
+   "target": "NCBI accession NC_000913"
+  },
+  {
+   "source": "ALE experiments",
+   "predicate": "used",
+   "target": "AfterQC"
+  },
+  {
+   "source": "E. coli K-12 MG1655",
+   "predicate": "involved",
+   "target": "ALE experiments"
+  }
+ ],
+ "truncated": false
+}

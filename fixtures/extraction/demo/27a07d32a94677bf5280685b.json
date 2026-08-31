@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC6402699:6:663a9c1b",
+ "entities": [
+  {
+   "name": "Lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "Hypoxanthine",
+   "type": "chemical"
+  },
+  {
+   "name": "L-A+",
+   "type": "organism"
+  },
+  {
+   "name": "SD",
+   "type": "chemical"
+  },
+  {
+   "name": "Synthetic Dextrose",
+   "type": "chemical"
+  },
+  {
+   "name": "minimal medium",
+   "type": "chemical"
+  },
+  {
+   "name": "SEM",
+   "type": "chemical"
+  },
+  {
+   "name": "standard error of the mean",
+   "type": "chemical"
+  },
+  {
+   "name": "medium",
+   "type": "chemical"
+  },
+  {
+   "name": "chemostat",
+   "type": "chemical"
+  },
+  {
+   "name": "chemostats",
+   "type": "chemical"
+  },
+  {
+   "name": "environment",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L-A+",
+   "predicate": "consumes",
+   "target": "Lysine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "releases",
+   "target": "Hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "grows",
+   "target": "SD"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has",
+   "target": "SEM"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has",
+   "target": "medium"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "is in",
+   "target": "chemostat"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "is in",
+   "target": "chemostats"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "is affected by",
+   "target": "environment"
+  },
+  {
+   "source": "Hypoxanthine",
+   "predicate": "is released by",
+   "target": "L-A+"
+  },
+  {
+   "source": "Lysine",
+   "predicate": "is consumed by",
+   "target": "L-A+"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has",
+   "target": "Hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has",
+   "target": "Lysine"
+  }
+ ],
+ "truncated": false
+}

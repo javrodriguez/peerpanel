@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC7873862:6:f3a9c6d9",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "mevalonate pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "sterol biosynthesis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ERG27",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSD17B7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acid biosynthesis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "beta-oxidation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "sphingolipid desaturase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "methyltransferase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "fungal ceramide biosynthesis",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has_product",
+   "target": "carotenoids"
+  },
+  {
+   "source": "mevalonate pathway",
+   "predicate": "is_part_of",
+   "target": "sterol biosynthesis"
+  },
+  {
+   "source": "ERG27",
+   "predicate": "is_ortholog_of",
+   "target": "HSD17B7"
+  },
+  {
+   "source": "ERG27",
+   "predicate": "is_missing_in",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "sphingolipid desaturase",
+   "predicate": "is_part_of",
+   "target": "fungal ceramide biosynthesis"
+  },
+  {
+   "source": "methyltransferase",
+   "predicate": "is_part_of",
+   "target": "fungal ceramide biosynthesis"
+  },
+  {
+   "source": "ERG27",
+   "predicate": "is_located_in",
+   "target": "S. cerevisiae"
+  }
+ ],
+ "truncated": false
+}

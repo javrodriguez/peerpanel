@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC6547517:3:55e15ecb",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Monoacylglycerols",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Diacylglycerols",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rhodotorula spp",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "R. glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "Oleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Linoleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Stearic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Heptadecenoic acid",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Monoacylglycerols"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Diacylglycerols"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Rhodotorula spp"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Y. lipolytica"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "R. glutinis"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Rhodotorula babjevae"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Oleic acid"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Linoleic acid"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Stearic acid"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Heptadecenoic acid"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Heptadecenoic acid"
+  }
+ ],
+ "truncated": false
+}

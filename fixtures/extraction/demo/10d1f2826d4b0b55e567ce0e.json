@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC12278674:12:9de1e4ed",
+ "entities": [
+  {
+   "name": "Nitrogen starvation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Oxidative stress response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ROS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ER stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Fatty acid β-oxidation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Peroxisome",
+   "type": "organism"
+  },
+  {
+   "name": "Nitrogen scavenging",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Mitochondrial redox imbalance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CAT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CCPs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GTT1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nitrogen starvation",
+   "predicate": "activates",
+   "target": "Oxidative stress response"
+  }
+ ],
+ "truncated": false
+}

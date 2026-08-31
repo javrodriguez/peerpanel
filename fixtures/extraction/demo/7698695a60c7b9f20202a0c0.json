@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC11618413:7:4e5667f0",
+ "entities": [
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "B. subtilis",
+   "type": "organism"
+  },
+  {
+   "name": "V. cholerae",
+   "type": "organism"
+  },
+  {
+   "name": "V. fischeri",
+   "type": "organism"
+  },
+  {
+   "name": "biofilm",
+   "type": "organism"
+  },
+  {
+   "name": "curli",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "agar",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "water",
+   "type": "chemical"
+  },
+  {
+   "name": "nutrient",
+   "type": "chemical"
+  },
+  {
+   "name": "osmotic pressure",
+   "type": "chemical"
+  },
+  {
+   "name": "matrix",
+   "type": "chemical"
+  },
+  {
+   "name": "extracellular matrix",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "E. coli",
+   "predicate": "has_osmotic_pressure",
+   "target": "osmotic pressure"
+  }
+ ],
+ "truncated": false
+}

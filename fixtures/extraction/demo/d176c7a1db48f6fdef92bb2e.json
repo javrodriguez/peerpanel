@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC5484544:8:483bc5a9",
+ "entities": [
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vma1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vph1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HA6-Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GFP-Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mCherry-Pho8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vma5-RFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase assembly",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "V-ATPase disassembly",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose availability",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sch9",
+   "predicate": "regulates",
+   "target": "V-ATPase disassembly"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "interacts_with",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "glucose availability",
+   "predicate": "affects",
+   "target": "V-ATPase assembly"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "regulates",
+   "target": "Sch9"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "functions_downstream_of",
+   "target": "TORC1"
+  }
+ ],
+ "truncated": false
+}

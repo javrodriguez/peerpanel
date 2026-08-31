@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC9757880:2:552613a4",
+ "entities": [
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hydrogen Sulfide Utilizing-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SeMeCo",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "encode",
+   "target": "Hsu1p"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "require",
+   "target": "methionine"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "require",
+   "target": "cysteine"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "require",
+   "target": "homocysteine"
+  },
+  {
+   "source": "Hsu1p",
+   "predicate": "generate",
+   "target": "homocysteine"
+  }
+ ],
+ "truncated": false
+}

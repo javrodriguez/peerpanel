@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC10204961:22:80d736ea",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Genomic metabolic network",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolic model",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLOS Computational Biology",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid synthesis rate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cell growth rate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cell consumption",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "by-product synthesis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid composition",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "growth phase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid synthesis phase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "different carbon sources",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has physiological parameter",
+   "target": "lipid synthesis rate"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has physiological parameter",
+   "target": "cell growth rate"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has physiological parameter",
+   "target": "cell consumption"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has physiological parameter",
+   "target": "by-product synthesis"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has physiological parameter",
+   "target": "lipid composition"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has growth phase",
+   "target": "growth phase"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has lipid synthesis phase",
+   "target": "lipid synthesis phase"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has different carbon sources",
+   "target": "different carbon sources"
+  },
+  {
+   "source": "Genomic metabolic network",
+   "predicate": "has metabolic model",
+   "target": "metabolic model"
+  }
+ ],
+ "truncated": false
+}

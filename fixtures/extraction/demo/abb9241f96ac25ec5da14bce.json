@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC9157227:1:479f6982",
+ "entities": [
+  {
+   "name": "Strain development",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Microbial cell factories",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia pastoris",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "Ashbya gossypii",
+   "type": "organism"
+  },
+  {
+   "name": "BsaI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gibson assembly",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Golden Gate assembly",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sequence and Ligation-Independent Cloning",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Microbial cell factories",
+   "predicate": "use",
+   "target": "Strain development"
+  }
+ ],
+ "truncated": false
+}

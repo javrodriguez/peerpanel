@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC5826700:8:51c25fd6",
+ "entities": [
+  {
+   "name": "Msn2/4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ras2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tps1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tps2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nth1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nth2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tps3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tsl1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ath1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

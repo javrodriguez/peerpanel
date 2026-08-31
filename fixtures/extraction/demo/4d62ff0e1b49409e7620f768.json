@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13501320:9:49c1f040",
+ "entities": [
+  {
+   "name": "ERG3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TRP3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARV1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARO7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TKL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ergosterol",
+   "type": "chemical"
+  },
+  {
+   "name": "BPM modules",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GIDEON",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast genetic interaction network",
+   "type": "organism"
+  },
+  {
+   "name": "human cancers",
+   "type": "organism"
+  },
+  {
+   "name": "National Institute Of General Medical Sciences",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ERG3",
+   "predicate": "interacts_with",
+   "target": "ERG6"
+  },
+  {
+   "source": "ERG3",
+   "predicate": "interacts_with",
+   "target": "TRP3"
+  },
+  {
+   "source": "ERG6",
+   "predicate": "interacts_with",
+   "target": "TRP3"
+  },
+  {
+   "source": "ERG3",
+   "predicate": "interacts_with",
+   "target": "ARV1"
+  },
+  {
+   "source": "ERG6",
+   "predicate": "interacts_with",
+   "target": "ARV1"
+  },
+  {
+   "source": "TRP3",
+   "predicate": "interacts_with",
+   "target": "ARV1"
+  },
+  {
+   "source": "ARV1",
+   "predicate": "interacts_with",
+   "target": "ARO7"
+  },
+  {
+   "source": "ERG3",
+   "predicate": "interacts_with",
+   "target": "ARO7"
+  },
+  {
+   "source": "ERG6",
+   "predicate": "interacts_with",
+   "target": "ARO7"
+  },
+  {
+   "source": "TRP3",
+   "predicate": "interacts_with",
+   "target": "ARO7"
+  },
+  {
+   "source": "TKL1",
+   "predicate": "interacts_with",
+   "target": "ergosterol"
+  },
+  {
+   "source": "GIDEON",
+   "predicate": "uses",
+   "target": "yeast genetic interaction network"
+  }
+ ],
+ "truncated": false
+}

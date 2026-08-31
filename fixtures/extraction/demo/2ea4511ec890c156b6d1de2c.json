@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC8164748:5:0683936e",
+ "entities": [
+  {
+   "name": "L. lipofer",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 944",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "R. glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 20",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 2367",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 14",
+   "type": "organism"
+  },
+  {
+   "name": "DBVPG 5085",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 2890",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

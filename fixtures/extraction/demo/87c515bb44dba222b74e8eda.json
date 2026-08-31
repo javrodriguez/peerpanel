@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13450573:6:85e44021",
+ "entities": [
+  {
+   "name": "GO Biological Process",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PANTHER Overrepresentation Test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GO Ontology database",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Fisher's exact test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "false discovery rate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ShinyGO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ensembl Release",
+   "type": "organism"
+  },
+  {
+   "name": "Cytoscape",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RStudio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ANOVA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shapiro–Wilk test",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GO Biological Process",
+   "predicate": "analyzed_by",
+   "target": "PANTHER Overrepresentation Test"
+  },
+  {
+   "source": "PANTHER Overrepresentation Test",
+   "predicate": "uses",
+   "target": "GO Ontology database"
+  },
+  {
+   "source": "GO Ontology database",
+   "predicate": "contains",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "ShinyGO",
+   "predicate": "uses",
+   "target": "Ensembl Release"
+  },
+  {
+   "source": "RStudio",
+   "predicate": "uses",
+   "target": "ANOVA"
+  },
+  {
+   "source": "RStudio",
+   "predicate": "uses",
+   "target": "Shapiro–Wilk test"
+  },
+  {
+   "source": "GO Biological Process",
+   "predicate": "identified_by",
+   "target": "Fisher's exact test"
+  },
+  {
+   "source": "GO Biological Process",
+   "predicate": "identified_by",
+   "target": "false discovery rate"
+  },
+  {
+   "source": "ShinyGO",
+   "predicate": "identified_by",
+   "target": "Ensembl Release"
+  },
+  {
+   "source": "RStudio",
+   "predicate": "identified_by",
+   "target": "ANOVA"
+  }
+ ],
+ "truncated": false
+}

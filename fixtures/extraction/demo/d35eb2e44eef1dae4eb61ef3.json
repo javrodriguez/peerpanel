@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13450573:13:d99f3088",
+ "entities": [
+  {
+   "name": "DEGs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "phylostratigraphy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "stress response gene clusters",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ramp",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ESR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "iESR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RiBi",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WGCNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces",
+   "type": "organism"
+  },
+  {
+   "name": "core genome",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DEGs",
+   "predicate": "corresponding",
+   "target": "ESR"
+  },
+  {
+   "source": "ESR",
+   "predicate": "including",
+   "target": "iESR"
+  },
+  {
+   "source": "ESR",
+   "predicate": "including",
+   "target": "RiBi"
+  },
+  {
+   "source": "ESR",
+   "predicate": "including",
+   "target": "RP"
+  }
+ ],
+ "truncated": false
+}

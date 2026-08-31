@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC11701741:4:9b1b67f4",
+ "entities": [
+  {
+   "name": "OrthoLoger",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OrthoDB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BUSCO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Prodigal",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Conda",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BioContainers.pro",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Miniprot",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MAGs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Genomes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Species",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Taxonomy",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OrthoLoger",
+   "predicate": "uses",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "BUSCO",
+   "predicate": "uses",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "BUSCO",
+   "predicate": "searches",
+   "target": "Genomes"
+  }
+ ],
+ "truncated": false
+}

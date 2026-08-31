@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC5484544:4:85806b12",
+ "entities": [
+  {
+   "name": "SCH9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VPH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STV1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rapamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "manganese",
+   "type": "chemical"
+  },
+  {
+   "name": "zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "proton pump",
+   "type": "organism"
+  },
+  {
+   "name": "SGA screen",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "tetrad dissection",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SCH9",
+   "predicate": "interacts_with",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "SCH9",
+   "predicate": "regulates",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "has_subunit",
+   "target": "VPH1"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "has_subunit",
+   "target": "STV1"
+  },
+  {
+   "source": "rapamycin",
+   "predicate": "affects",
+   "target": "TORC1"
+  },
+  {
+   "source": "manganese",
+   "predicate": "affects",
+   "target": "TORC1"
+  },
+  {
+   "source": "zinc",
+   "predicate": "affects",
+   "target": "V-ATPase"
+  }
+ ],
+ "truncated": false
+}

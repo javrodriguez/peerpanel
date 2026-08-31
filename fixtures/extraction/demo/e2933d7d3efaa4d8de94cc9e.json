@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC8116571:3:e8c45bf4",
+ "entities": [
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Birch tree",
+   "type": "organism"
+  },
+  {
+   "name": "C5-Birch",
+   "type": "organism"
+  },
+  {
+   "name": "HPLC",
+   "type": "chemical"
+  },
+  {
+   "name": "Refractive Index Detector RID-20A",
+   "type": "chemical"
+  },
+  {
+   "name": "Rezex ROA Organic Acid column",
+   "type": "chemical"
+  },
+  {
+   "name": "Rezex RPM Monosaccharide column",
+   "type": "chemical"
+  },
+  {
+   "name": "LC-2030/2040 PDA",
+   "type": "chemical"
+  },
+  {
+   "name": "β-carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "torulene",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "HPLC",
+   "predicate": "uses",
+   "target": "Refractive Index Detector RID-20A"
+  },
+  {
+   "source": "LC-2030/2040 PDA",
+   "predicate": "detects",
+   "target": "β-carotene"
+  }
+ ],
+ "truncated": false
+}

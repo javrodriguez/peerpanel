@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC5826700:10:d6b6d506",
+ "entities": [
+  {
+   "name": "pH",
+   "type": "chemical"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pma1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ER",
+   "type": "organism"
+  },
+  {
+   "name": "plasma membrane",
+   "type": "organism"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "lipid droplet",
+   "type": "organism"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "ceramide",
+   "type": "chemical"
+  },
+  {
+   "name": "sphingolipid",
+   "type": "chemical"
+  },
+  {
+   "name": "triacylglycerol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "V-ATPase",
+   "predicate": "regulates",
+   "target": "pH"
+  },
+  {
+   "source": "Pma1",
+   "predicate": "regulates",
+   "target": "pH"
+  },
+  {
+   "source": "ER",
+   "predicate": "interacts_with",
+   "target": "plasma membrane"
+  },
+  {
+   "source": "ER",
+   "predicate": "interacts_with",
+   "target": "vacuole"
+  },
+  {
+   "source": "lipid",
+   "predicate": "is_transport",
+   "target": "ER"
+  },
+  {
+   "source": "lipid",
+   "predicate": "is_transport",
+   "target": "plasma membrane"
+  },
+  {
+   "source": "ceramide",
+   "predicate": "is_transport",
+   "target": "ER"
+  },
+  {
+   "source": "sphingolipid",
+   "predicate": "is_transport",
+   "target": "ER"
+  },
+  {
+   "source": "triacylglycerol",
+   "predicate": "is_transport",
+   "target": "ER"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13517252:1:ed6f21ed",
+ "entities": [
+  {
+   "name": "Fishmeal",
+   "type": "chemical"
+  },
+  {
+   "name": "Lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Histidine",
+   "type": "chemical"
+  },
+  {
+   "name": "Arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "Threonine",
+   "type": "chemical"
+  },
+  {
+   "name": "Tryptophan",
+   "type": "chemical"
+  },
+  {
+   "name": "Branched-chain amino acids",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "EPA",
+   "type": "chemical"
+  },
+  {
+   "name": "DHA",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lysine",
+   "predicate": "is_supplemented",
+   "target": "Methionine"
+  },
+  {
+   "source": "EPA",
+   "predicate": "is_supplied_by",
+   "target": "Fishmeal"
+  },
+  {
+   "source": "DHA",
+   "predicate": "is_supplied_by",
+   "target": "Fishmeal"
+  }
+ ],
+ "truncated": false
+}

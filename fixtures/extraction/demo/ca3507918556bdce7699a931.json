@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13467452:6:21129908",
+ "entities": [
+  {
+   "name": "Sirtuin 1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sirtuin family",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SIRT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pancreatic islets",
+   "type": "organism"
+  },
+  {
+   "name": "Pancreas",
+   "type": "organism"
+  },
+  {
+   "name": "Endocrine progenitors",
+   "type": "organism"
+  },
+  {
+   "name": "Neurogenin3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FOXO3a",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GLUT4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PPARγ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PGC-1α",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UCP2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sirtuin 1",
+   "predicate": "regulates",
+   "target": "FOXO3a"
+  },
+  {
+   "source": "Sirtuin 1",
+   "predicate": "regulates",
+   "target": "GLUT4"
+  },
+  {
+   "source": "Sirtuin 1",
+   "predicate": "regulates",
+   "target": "PPARγ"
+  },
+  {
+   "source": "Sirtuin 1",
+   "predicate": "regulates",
+   "target": "PGC-1α"
+  },
+  {
+   "source": "Sirtuin 1",
+   "predicate": "regulates",
+   "target": "UCP2"
+  }
+ ],
+ "truncated": false
+}

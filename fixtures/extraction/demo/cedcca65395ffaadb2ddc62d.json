@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC10440040:2:7de4fc46",
+ "entities": [
+  {
+   "name": "R. toruloides BOT-A2",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "NCBI",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "CCT 0783",
+   "type": "organism"
+  },
+  {
+   "name": "NP11",
+   "type": "organism"
+  },
+  {
+   "name": "CBS14",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides VN1",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides NBRC 10032",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides JCM 24501",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides CGMCC2.1609",
+   "type": "organism"
+  },
+  {
+   "name": "M7X934",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides BOT-A2",
+   "predicate": "has_protein_sequence",
+   "target": "M7X934"
+  },
+  {
+   "source": "R. toruloides VN1",
+   "predicate": "has_protein_sequence",
+   "target": "M7X934"
+  }
+ ],
+ "truncated": false
+}

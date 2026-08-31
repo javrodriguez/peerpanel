@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13515280:6:0896486b",
+ "entities": [
+  {
+   "name": "Dezhou Jennies",
+   "type": "organism"
+  },
+  {
+   "name": "Bacteroidota",
+   "type": "organism"
+  },
+  {
+   "name": "Bacillota",
+   "type": "organism"
+  },
+  {
+   "name": "Actinomycetota",
+   "type": "organism"
+  },
+  {
+   "name": "Pseudomonadota",
+   "type": "organism"
+  },
+  {
+   "name": "Patescibacteria",
+   "type": "organism"
+  },
+  {
+   "name": "Verrucomicrobiota",
+   "type": "organism"
+  },
+  {
+   "name": "Fusobacteriota",
+   "type": "organism"
+  },
+  {
+   "name": "Porphyromonas",
+   "type": "organism"
+  },
+  {
+   "name": "unclassified Clostridia",
+   "type": "organism"
+  },
+  {
+   "name": "Arcanobacterium",
+   "type": "organism"
+  },
+  {
+   "name": "Corynebacterium",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Bacteroidota"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Bacillota"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Actinomycetota"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Pseudomonadota"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Patescibacteria"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Verrucomicrobiota"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Fusobacteriota"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Porphyromonas"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "unclassified Clostridia"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Arcanobacterium"
+  },
+  {
+   "source": "Dezhou Jennies",
+   "predicate": "has_microbiota",
+   "target": "Corynebacterium"
+  }
+ ],
+ "truncated": false
+}

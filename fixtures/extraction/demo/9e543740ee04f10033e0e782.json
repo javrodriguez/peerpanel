@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13514516:9:5b094a62",
+ "entities": [
+  {
+   "name": "libraries",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "aforementioned 18 total RNA samples",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "instrument",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "summary",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "data quality results",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Table S15",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "raw data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "minimum number",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "clean reads",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "sample",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "clean bases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "raw data filtering",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "libraries",
+   "predicate": "subject_to",
+   "target": "aforementioned 18 total RNA samples"
+  },
+  {
+   "source": "aforementioned 18 total RNA samples",
+   "predicate": "subject_to",
+   "target": "instrument"
+  },
+  {
+   "source": "instrument",
+   "predicate": "subject_to",
+   "target": "summary"
+  },
+  {
+   "source": "summary",
+   "predicate": "subject_to",
+   "target": "Table S15"
+  },
+  {
+   "source": "Table S15",
+   "predicate": "subject_to",
+   "target": "raw data"
+  },
+  {
+   "source": "raw data",
+   "predicate": "subject_to",
+   "target": "minimum number"
+  },
+  {
+   "source": "minimum number",
+   "predicate": "subject_to",
+   "target": "clean reads"
+  },
+  {
+   "source": "clean reads",
+   "predicate": "subject_to",
+   "target": "sample"
+  },
+  {
+   "source": "sample",
+   "predicate": "subject_to",
+   "target": "clean bases"
+  },
+  {
+   "source": "clean bases",
+   "predicate": "subject_to",
+   "target": "raw data filtering"
+  }
+ ],
+ "truncated": false
+}

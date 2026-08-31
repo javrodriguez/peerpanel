@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13467452:18:cad0e55b",
+ "entities": [
+  {
+   "name": "Sirtuins",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SIRT1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "β-cell",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mitochondrial performance",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metabolic signaling",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Oxidative and inflammatory stress",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Polyphenols",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SRT1720",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SRT2104",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NMN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NAD+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Resveratrol",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SIRT1",
+   "predicate": "activate",
+   "target": "polyphenols"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "activate",
+   "target": "SRT1720"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "activate",
+   "target": "SRT2104"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "activate",
+   "target": "NMN"
+  },
+  {
+   "source": "Sirtuins",
+   "predicate": "modulate",
+   "target": "metabolic signaling"
+  },
+  {
+   "source": "Sirtuins",
+   "predicate": "attenuate",
+   "target": "oxidative and inflammatory stress"
+  }
+ ],
+ "truncated": false
+}

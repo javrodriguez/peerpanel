@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13515273:6:42ad8685",
+ "entities": [
+  {
+   "name": "P. manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "fermented foods",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gas production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "membrane function",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mitochondrial activity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "core metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "U.S. Food and Drug Administration",
+   "type": "organism"
+  },
+  {
+   "name": "FDA",
+   "type": "organism"
+  },
+  {
+   "name": "animal husbandry",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "rumen fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "microbial community and metabolic pathways",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "carvacrol",
+   "predicate": "inhibits",
+   "target": "gas production"
+  }
+ ],
+ "truncated": false
+}

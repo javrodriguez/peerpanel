@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13471478:15:50aa20b9",
+ "entities": [
+  {
+   "name": "SLC26A2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zbtb16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cul3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Roc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CAND1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LMNB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNMT1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zbtb16",
+   "predicate": "interacts_with",
+   "target": "Cul3"
+  }
+ ],
+ "truncated": false
+}

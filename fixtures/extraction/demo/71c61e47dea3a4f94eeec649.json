@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC8116571:5:f4aed18e",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "K. marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "C5-Birch",
+   "type": "chemical"
+  },
+  {
+   "name": "C5-Birch hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "mannose",
+   "type": "chemical"
+  },
+  {
+   "name": "arabinose",
+   "type": "chemical"
+  },
+  {
+   "name": "acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "K. marxianus",
+   "predicate": "consumed",
+   "target": "glucose"
+  },
+  {
+   "source": "K. marxianus",
+   "predicate": "produced",
+   "target": "acetic acid"
+  },
+  {
+   "source": "K. marxianus",
+   "predicate": "consumed",
+   "target": "xylose"
+  },
+  {
+   "source": "K. marxianus",
+   "predicate": "consumed",
+   "target": "arabinose"
+  },
+  {
+   "source": "K. marxianus",
+   "predicate": "consumed",
+   "target": "mannose"
+  },
+  {
+   "source": "K. marxianus",
+   "predicate": "consumed",
+   "target": "acetic acid"
+  }
+ ],
+ "truncated": false
+}

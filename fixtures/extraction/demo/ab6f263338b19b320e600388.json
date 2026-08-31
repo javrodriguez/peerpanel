@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC6912988:9:63dca302",
+ "entities": [
+  {
+   "name": "StringTie2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "StringTie1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Splicing graph pruning algorithm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C1orf174",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "uc060qvn.1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "uc284pkq.1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "COL1A1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Scallop",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GEUVADIS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NA12878 RNA sequencing consortium",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shao",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kingsford",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "StringTie2",
+   "predicate": "uses",
+   "target": "C1orf174"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "uses",
+   "target": "uc060qvn.1"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "uses",
+   "target": "uc284pkq.1"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "uses",
+   "target": "COL1A1"
+  },
+  {
+   "source": "StringTie1",
+   "predicate": "uses",
+   "target": "C1orf174"
+  },
+  {
+   "source": "StringTie1",
+   "predicate": "uses",
+   "target": "uc060qvn.1"
+  },
+  {
+   "source": "StringTie1",
+   "predicate": "uses",
+   "target": "uc284pkq.1"
+  },
+  {
+   "source": "StringTie1",
+   "predicate": "uses",
+   "target": "COL1A1"
+  },
+  {
+   "source": "Splicing graph pruning algorithm",
+   "predicate": "uses",
+   "target": "C1orf174"
+  },
+  {
+   "source": "Splicing graph pruning algorithm",
+   "predicate": "uses",
+   "target": "uc060qvn.1"
+  },
+  {
+   "source": "Splicing graph pruning algorithm",
+   "predicate": "uses",
+   "target": "uc284pkq.1"
+  },
+  {
+   "source": "Splicing graph pruning algorithm",
+   "predicate": "uses",
+   "target": "COL1A1"
+  }
+ ],
+ "truncated": false
+}

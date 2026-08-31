@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC11974387:11:2c6a3ca9",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Zelle",
+   "type": "organism"
+  },
+  {
+   "name": "malate dehydrogenase 3 (Mdh3)",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pyruvate carboxylase Pyc2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SpMae1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Schizosaccharomyces pombe",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus flavus",
+   "type": "organism"
+  },
+  {
+   "name": "Rhizopus oryzae",
+   "type": "organism"
+  },
+  {
+   "name": "Isobutanol",
+   "type": "chemical"
+  },
+  {
+   "name": "PDC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Gpd1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fum1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

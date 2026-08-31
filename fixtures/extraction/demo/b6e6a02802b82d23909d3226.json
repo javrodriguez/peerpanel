@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13413155:6:67acd18f",
+ "entities": [
+  {
+   "name": "Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "A. brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "fluxapyroxad",
+   "type": "chemical"
+  },
+  {
+   "name": "prochloraz",
+   "type": "chemical"
+  },
+  {
+   "name": "difenoconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "tebuconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "hexaconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "fluopyram",
+   "type": "chemical"
+  },
+  {
+   "name": "epoxiconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "iprodione",
+   "type": "chemical"
+  },
+  {
+   "name": "fluazinam",
+   "type": "chemical"
+  },
+  {
+   "name": "Bax",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "fluxapyroxad"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "prochloraz"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "difenoconazole"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "tebuconazole"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "hexaconazole"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "fluopyram"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "epoxiconazole"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "iprodione"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "sensitive_to",
+   "target": "fluazinam"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "has_secreted_protein",
+   "target": "Bax"
+  }
+ ],
+ "truncated": false
+}

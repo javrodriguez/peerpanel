@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13524880:15:575c066a",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "YDR544",
+   "type": "organism"
+  },
+  {
+   "name": "Dohmen",
+   "type": "organism"
+  },
+  {
+   "name": "pDR197",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pBF1-AAT10.2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MluI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SP6 mMessage mMachine transcription kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Invitrogen/Thermo Fisher",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nanoject III microinjector",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Drummond Scientific",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EcoCyte Bioscience",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Barth’s solution",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transformed_by",
+   "target": "pDR197"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transformed_by",
+   "target": "pBF1-AAT10.2"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transformed_by",
+   "target": "MluI"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transformed_by",
+   "target": "SP6 mMessage mMachine transcription kit"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transformed_by",
+   "target": "Invitrogen/Thermo Fisher"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transformed_by",
+   "target": "Nanoject III microinjector"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transformed_by",
+   "target": "Drummond Scientific"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transformed_by",
+   "target": "EcoCyte Bioscience"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transformed_by",
+   "target": "Barth’s solution"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transported_by",
+   "target": "pDR197"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transported_by",
+   "target": "pBF1-AAT10.2"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "transported_by",
+   "target": "MluI"
+  }
+ ],
+ "truncated": false
+}

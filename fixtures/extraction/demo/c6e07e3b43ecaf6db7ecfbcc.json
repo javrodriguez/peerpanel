@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13510017:13:bf1e526b",
+ "entities": [
+  {
+   "name": "Mismatch-rate and candidate variant-rate analyses",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "substitution-class-dependent response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Low DO",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "largest mismatch-rate increase",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "collapsed C > T/G > A-compatible class",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "T > C/A > G",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "A > T",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "variant-rate analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "predominance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sample-specific candidate sites",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "small magnitude",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "recurrence differences",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "substitution-class-dependent response"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "Low DO"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "largest mismatch-rate increase"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "collapsed C > T/G > A-compatible class"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "T > C/A > G"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "A > T"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "variant-rate analysis"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "predominance"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "sample-specific candidate sites"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "small magnitude"
+  },
+  {
+   "source": "Mismatch-rate and candidate variant-rate analyses",
+   "predicate": "identified",
+   "target": "recurrence differences"
+  },
+  {
+   "source": "substitution-class-dependent response",
+   "predicate": "associated",
+   "target": "Low DO"
+  }
+ ],
+ "truncated": false
+}

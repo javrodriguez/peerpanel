@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13471478:6:06db240b",
+ "entities": [
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HEK293 Phoenix cells",
+   "type": "organism"
+  },
+  {
+   "name": "human SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "human ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "human CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "human ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mouse SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mouse ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mouse CUL3",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SLC26A4",
+   "predicate": "interacts_with",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "interacts_with",
+   "target": "CUL3"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "interacts_with",
+   "target": "ROC1"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC7382830:14:5bddf5d1",
+ "entities": [
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "GcvA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvA/GcvR interaction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GcvA-mediated activation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GcvB regulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GcvT/GcvH/P regulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GcvA/GcvR interaction",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "GcvA"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "GcvR"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "GcvB"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "GcvT"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "GcvH"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "GcvP"
+  },
+  {
+   "source": "GcvA",
+   "predicate": "interacts_with",
+   "target": "GcvR"
+  },
+  {
+   "source": "GcvA/GcvR interaction",
+   "predicate": "regulates",
+   "target": "GcvB"
+  }
+ ],
+ "truncated": false
+}

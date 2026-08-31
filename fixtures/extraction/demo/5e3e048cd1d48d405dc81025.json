@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC11618413:0:42b0e505",
+ "entities": [
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "Curli amyloid fibers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biofilms",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nutrient availability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Bacterial biofilms",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Extracellular matrix",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "P. aeruginosa",
+   "type": "organism"
+  },
+  {
+   "name": "Bacillus sp",
+   "type": "organism"
+  },
+  {
+   "name": "V. fischeri",
+   "type": "organism"
+  },
+  {
+   "name": "P. fluorescence",
+   "type": "organism"
+  },
+  {
+   "name": "S. typhimurium",
+   "type": "organism"
+  },
+  {
+   "name": "Max Planck Institute of Colloids and Interfaces",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "E. coli",
+   "predicate": "has_property",
+   "target": "Curli amyloid fibers"
+  },
+  {
+   "source": "Biofilms",
+   "predicate": "has_property",
+   "target": "extracellular matrix"
+  },
+  {
+   "source": "Bacterial biofilms",
+   "predicate": "has_property",
+   "target": "Curli amyloid fibers"
+  }
+ ],
+ "truncated": false
+}

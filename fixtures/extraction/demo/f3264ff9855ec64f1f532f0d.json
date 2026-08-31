@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13518488:4:934ed918",
+ "entities": [
+  {
+   "name": "YE",
+   "type": "chemical"
+  },
+  {
+   "name": "AS",
+   "type": "chemical"
+  },
+  {
+   "name": "P. albidus",
+   "type": "organism"
+  },
+  {
+   "name": "PDA",
+   "type": "chemical"
+  },
+  {
+   "name": "GDH",
+   "type": "chemical"
+  },
+  {
+   "name": "GS",
+   "type": "chemical"
+  },
+  {
+   "name": "GOGAT",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonia",
+   "type": "chemical"
+  },
+  {
+   "name": "glutamate",
+   "type": "chemical"
+  },
+  {
+   "name": "glutamine",
+   "type": "chemical"
+  },
+  {
+   "name": "amino acid permeases",
+   "type": "chemical"
+  },
+  {
+   "name": "peptide transport systems",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

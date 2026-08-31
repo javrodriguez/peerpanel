@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13515280:3:0ffa8d07",
+ "entities": [
+  {
+   "name": "100 μL aliquot",
+   "type": "chemical"
+  },
+  {
+   "name": "liquid sample",
+   "type": "chemical"
+  },
+  {
+   "name": "1.5 mL centrifuge tube",
+   "type": "chemical"
+  },
+  {
+   "name": "acetonitrile",
+   "type": "chemical"
+  },
+  {
+   "name": "methanol",
+   "type": "chemical"
+  },
+  {
+   "name": "L-2-chlorophenylalanine",
+   "type": "chemical"
+  },
+  {
+   "name": "internal standard",
+   "type": "chemical"
+  },
+  {
+   "name": "samples",
+   "type": "chemical"
+  },
+  {
+   "name": "SCIEX UPLC–TripleTOF 6600 system",
+   "type": "chemical"
+  },
+  {
+   "name": "ACQUITY UPLC HSS T3 column",
+   "type": "chemical"
+  },
+  {
+   "name": "Waters",
+   "type": "chemical"
+  },
+  {
+   "name": "Milford",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "100 μL aliquot",
+   "predicate": "CONTAINS",
+   "target": "liquid sample"
+  },
+  {
+   "source": "liquid sample",
+   "predicate": "CONTAINS",
+   "target": "1.5 mL centrifuge tube"
+  },
+  {
+   "source": "1.5 mL centrifuge tube",
+   "predicate": "CONTAINS",
+   "target": "acetonitrile"
+  },
+  {
+   "source": "1.5 mL centrifuge tube",
+   "predicate": "CONTAINS",
+   "target": "methanol"
+  },
+  {
+   "source": "1.5 mL centrifuge tube",
+   "predicate": "CONTAINS",
+   "target": "L-2-chlorophenylalanine"
+  },
+  {
+   "source": "SCIEX UPLC–TripleTOF 6600 system",
+   "predicate": "USES",
+   "target": "ACQUITY UPLC HSS T3 column"
+  },
+  {
+   "source": "SCIEX UPLC–TripleTOF 6600 system",
+   "predicate": "USES",
+   "target": "Waters"
+  },
+  {
+   "source": "SCIEX UPLC–TripleTOF 6600 system",
+   "predicate": "USES",
+   "target": "Milford"
+  }
+ ],
+ "truncated": false
+}

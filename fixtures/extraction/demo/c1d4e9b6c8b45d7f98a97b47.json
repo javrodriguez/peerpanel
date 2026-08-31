@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC9757880:14:251ddc7c",
+ "entities": [
+  {
+   "name": "Met17p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Eggnog Database",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Hsu1-GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "Salpingoeca rosetta",
+   "type": "organism"
+  },
+  {
+   "name": "NCBI pBLAST",
+   "type": "organism"
+  },
+  {
+   "name": "IQTREE v1.6.12",
+   "type": "organism"
+  },
+  {
+   "name": "mafft v7",
+   "type": "organism"
+  },
+  {
+   "name": "TrimAl 1.2",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met17p",
+   "predicate": "has_ortholog",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_ortholog",
+   "target": "Met17p"
+  },
+  {
+   "source": "Met17p",
+   "predicate": "is_query_protein",
+   "target": "Eggnog Database"
+  },
+  {
+   "source": "Eggnog Database",
+   "predicate": "has_query_protein",
+   "target": "Met17p"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_gene",
+   "target": "Hsu1"
+  },
+  {
+   "source": "Hsu1",
+   "predicate": "is_expressed_as",
+   "target": "GFP"
+  },
+  {
+   "source": "GFP",
+   "predicate": "is_expressed_by",
+   "target": "Hsu1"
+  },
+  {
+   "source": "NCBI pBLAST",
+   "predicate": "has_query",
+   "target": "S. cerevisiae"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13450573:11:e57e8747",
+ "entities": [
+  {
+   "name": "Hsf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YPL014W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YGR236C",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YHR143W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YNL036W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CIP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SPG1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DSE2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NCE103",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "WGCNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "STRING",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hsf1",
+   "predicate": "has_canonical_motif",
+   "target": "Hsf1"
+  },
+  {
+   "source": "Hsf1",
+   "predicate": "is_enriched_in",
+   "target": "WGCNA"
+  }
+ ],
+ "truncated": false
+}

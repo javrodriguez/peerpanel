@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13453879:6:aec205a8",
+ "entities": [
+  {
+   "name": "Chao1 richness index",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RPT-A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RPT-B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RPT-C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Aw",
+   "type": "chemical"
+  },
+  {
+   "name": "Ascomycota",
+   "type": "organism"
+  },
+  {
+   "name": "Basidiomycota",
+   "type": "organism"
+  },
+  {
+   "name": "Cladosporium",
+   "type": "organism"
+  },
+  {
+   "name": "Setophoma",
+   "type": "organism"
+  },
+  {
+   "name": "Hannaella",
+   "type": "organism"
+  },
+  {
+   "name": "Papiliotrema",
+   "type": "organism"
+  },
+  {
+   "name": "Didymella",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Chao1 richness index",
+   "predicate": "increased",
+   "target": "RPT-A"
+  },
+  {
+   "source": "Chao1 richness index",
+   "predicate": "increased",
+   "target": "RPT-C"
+  }
+ ],
+ "truncated": false
+}

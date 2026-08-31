@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7690147:11:3d833f3b",
+ "entities": [
+  {
+   "name": "Liu M",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang X",
+   "type": "organism"
+  },
+  {
+   "name": "Tan T",
+   "type": "organism"
+  },
+  {
+   "name": "Wang Y",
+   "type": "organism"
+  },
+  {
+   "name": "Ho S",
+   "type": "organism"
+  },
+  {
+   "name": "Yen H Current",
+   "type": "organism"
+  },
+  {
+   "name": "Zhu Z",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang S",
+   "type": "organism"
+  },
+  {
+   "name": "Liu H",
+   "type": "organism"
+  },
+  {
+   "name": "Pohanka M",
+   "type": "organism"
+  },
+  {
+   "name": "Maharana AK",
+   "type": "organism"
+  },
+  {
+   "name": "Singh SM",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

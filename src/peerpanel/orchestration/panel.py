@@ -35,6 +35,7 @@ from peerpanel.agents.schemas import (
     PanelReview,
     ReviewerOutput,
 )
+from peerpanel.corpus.models import CorpusManifest
 from peerpanel.embeddings import store
 from peerpanel.evals.ablation import load_artifacts
 from peerpanel.graph.pipeline import chunks_for, embedding_fixture_path
@@ -46,6 +47,10 @@ from peerpanel.retrieval import GraphGlobalRetriever, GraphLocalRetriever, Index
 
 SENTIMENT_GAP = 2
 CLAIMS_FROM_MANUSCRIPT = 8
+
+
+def _manifest_rel(corpus: str) -> Path:
+    return Path("corpus") / ("ci.manifest.json" if corpus == "ci" else "demo.manifest.json")
 
 
 class PanelProviders:
@@ -149,12 +154,16 @@ def run_panel(
     if [c.chunk_id for c in chunks] != chunk_ids:
         raise RuntimeError("embedding fixture stale relative to the corpus chunking")
     index = Index.build(chunks, vectors.astype("float32"), exclude_docs=excluded)
-    if not index.dropped_chunk_count:
-        # A non-empty exclusion SET proves nothing; this proves the mechanism removed
-        # something. An assertion that passes when exclusion is a no-op is an untested
-        # mechanism wearing a passing test.
+    # Two safe states, one unsafe one. Safe: exclusion actually removed chunks, or
+    # the manuscript is held out by construction (nothing of it is in the corpus at
+    # all — how the planted-error subject is chosen). UNSAFE, and the reason this
+    # check exists: its twin IS a corpus member and yet nothing was dropped, which
+    # is exclusion silently behaving as a no-op.
+    present = excluded & CorpusManifest.load(root / _manifest_rel(corpus)).pmcids()
+    if present and not index.dropped_chunk_count:
         raise RuntimeError(
-            f"exclusion removed no chunks for {header.preprint_doi} — no valid run (N3/D8)"
+            f"{header.preprint_doi}: twin {sorted(present)} is in the corpus but exclusion "
+            "removed no chunks — the mechanism is a no-op (N3/D8)"
         )
     # The graph is REBUILT with the excluded document's extractions withheld (exact,
     # ~0.1s) rather than filtered after the fact — that removes the edge weight the

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC8620231:1:082a299e",
+ "entities": [
+  {
+   "name": "NCBI",
+   "type": "organism"
+  },
+  {
+   "name": "GenBank",
+   "type": "organism"
+  },
+  {
+   "name": "eukaryotic genomes",
+   "type": "organism"
+  },
+  {
+   "name": "protein-coding genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNA-seq",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BRAKER",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GeneMark-ET",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MAKER2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GeMoMa",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FINDER",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EVM",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "NCBI",
+   "predicate": "hosts",
+   "target": "GenBank"
+  }
+ ],
+ "truncated": false
+}

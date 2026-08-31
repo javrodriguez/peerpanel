@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC12628781:3:ab3d2250",
+ "entities": [
+  {
+   "name": "dry cell weight",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "EPS",
+   "type": "chemical"
+  },
+  {
+   "name": "polysaccharides",
+   "type": "chemical"
+  },
+  {
+   "name": "proteins",
+   "type": "chemical"
+  },
+  {
+   "name": "PBS",
+   "type": "chemical"
+  },
+  {
+   "name": "Milli-Q water",
+   "type": "chemical"
+  },
+  {
+   "name": "vacuum filtration system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "microwave oven",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTIR spectrometer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Olympus Microscope CX21",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pierce Bradford Protein Assay Reagent",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "biomass",
+   "predicate": "has_weight",
+   "target": "dry cell weight"
+  },
+  {
+   "source": "EPS",
+   "predicate": "is_composed_of",
+   "target": "polysaccharides"
+  },
+  {
+   "source": "EPS",
+   "predicate": "is_composed_of",
+   "target": "proteins"
+  },
+  {
+   "source": "EPS",
+   "predicate": "is_analyzed_by",
+   "target": "FTIR spectrometer"
+  },
+  {
+   "source": "EPS",
+   "predicate": "has_functional_groups",
+   "target": "polysaccharides"
+  },
+  {
+   "source": "EPS",
+   "predicate": "has_monosaccharide_composition",
+   "target": "polysaccharides"
+  },
+  {
+   "source": "EPS",
+   "predicate": "is_dried_by",
+   "target": "microwave oven"
+  },
+  {
+   "source": "EPS",
+   "predicate": "is_analyzed_by",
+   "target": "Olympus Microscope CX21"
+  }
+ ],
+ "truncated": false
+}

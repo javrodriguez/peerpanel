@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC5826700:9:231aae79",
+ "entities": [
+  {
+   "name": "Mitochondrial dysfunction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "Vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "Chaperone proteins",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cdc48/p97",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TORC1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Snf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Avt1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pma1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mdm34",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mdm12",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Mitochondrial dysfunction",
+   "predicate": "interplay",
+   "target": "Vacuole"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "inactivates",
+   "target": "Snf1"
+  }
+ ],
+ "truncated": false
+}

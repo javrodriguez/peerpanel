@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC9757880:12:2358a723",
+ "entities": [
+  {
+   "name": "Hsu1p",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OAHS",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfide ions",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur limitation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sulfur fixation route",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Cost",
+   "type": "organism"
+  },
+  {
+   "name": "Boeke",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hsu1p",
+   "predicate": "catalyzes",
+   "target": "homocysteine"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "Hsu1p"
+  }
+ ],
+ "truncated": false
+}

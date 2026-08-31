@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13518488:0:38c7337f",
+ "entities": [
+  {
+   "name": "Pleurotus albidus",
+   "type": "organism"
+  },
+  {
+   "name": "Eduarda Monteiro Martins",
+   "type": "organism"
+  },
+  {
+   "name": "Acácio A. F. Zielinski",
+   "type": "organism"
+  },
+  {
+   "name": "Patrícia Poletto",
+   "type": "organism"
+  },
+  {
+   "name": "Federal University of Santa Catarina",
+   "type": "organism"
+  },
+  {
+   "name": "Santa Catarina",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Brazil",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Curr Microbiol",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Current Microbiology",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDA agar",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast extract",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

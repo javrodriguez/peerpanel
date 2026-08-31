@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC3923900:7:074642fa",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "C. curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTIR microspectroscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nile red",
+   "type": "chemical"
+  },
+  {
+   "name": "palmitic",
+   "type": "chemical"
+  },
+  {
+   "name": "stearic",
+   "type": "chemical"
+  },
+  {
+   "name": "oleic",
+   "type": "chemical"
+  },
+  {
+   "name": "linoleic",
+   "type": "chemical"
+  },
+  {
+   "name": "linolenic",
+   "type": "chemical"
+  },
+  {
+   "name": "palmitoleic",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

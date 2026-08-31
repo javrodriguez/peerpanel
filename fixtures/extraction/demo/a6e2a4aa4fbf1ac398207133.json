@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC8116571:9:6e349f4d",
+ "entities": [
+  {
+   "name": "K. marxianus CBS 6556",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis CBS 5773",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi DSM 70295",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides CCT 7815",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "D-xylitol",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "xylitol dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "xylulokinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pentose phosphate pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "biorefinery",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "xylose",
+   "predicate": "is converted to",
+   "target": "D-xylitol"
+  },
+  {
+   "source": "S. stipitis CBS 5773",
+   "predicate": "has similar specific co-consumption and growth rate",
+   "target": "L. starkeyi DSM 70295"
+  }
+ ],
+ "truncated": false
+}

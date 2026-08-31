@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC11974387:1:08fcd11b",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Crabtree effect",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "pyruvate",
+   "type": "chemical"
+  },
+  {
+   "name": "acetaldehyde",
+   "type": "chemical"
+  },
+  {
+   "name": "acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "acetyl coenzyme A",
+   "type": "chemical"
+  },
+  {
+   "name": "Hagman",
+   "type": "organism"
+  },
+  {
+   "name": "Piškur",
+   "type": "organism"
+  },
+  {
+   "name": "Pronk",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_metabolic_feature",
+   "target": "Crabtree effect"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "uses",
+   "target": "glucose"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "produces",
+   "target": "ethanol"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "uses",
+   "target": "NADH"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "produces",
+   "target": "pyruvate"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "uses",
+   "target": "acetaldehyde"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "produces",
+   "target": "acetic acid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "uses",
+   "target": "acetyl coenzyme A"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "uses",
+   "target": "NADH"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "produces",
+   "target": "ethanol"
+  }
+ ],
+ "truncated": false
+}

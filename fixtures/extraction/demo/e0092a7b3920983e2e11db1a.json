@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10204961:1:a07acd6d",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "NADPH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acids",
+   "type": "chemical"
+  },
+  {
+   "name": "triacylglycerols",
+   "type": "chemical"
+  },
+  {
+   "name": "phosphoketolase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATP citrate lyase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "malic enzyme",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "xylulokinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pentose phosphate pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TCA cycle",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

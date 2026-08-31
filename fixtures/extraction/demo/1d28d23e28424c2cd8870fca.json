@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13419736:3:3d3fd32b",
+ "entities": [
+  {
+   "name": "26S proteasomes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bpa-containing proteasomes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt1/2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt1-P1L-Bpa",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpt2-P1L-Bpa",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rpn11AXA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "polyubiquitinated model substrate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "single-amino acid tail substrate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ubiquitinated substrates",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ATPase subunit",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rpt1-P1L-Bpa",
+   "predicate": "crosslinks",
+   "target": "polyubiquitinated model substrate"
+  },
+  {
+   "source": "Rpt2-P1L-Bpa",
+   "predicate": "crosslinks",
+   "target": "polyubiquitinated model substrate"
+  },
+  {
+   "source": "Rpt1-P1L-Bpa",
+   "predicate": "crosslinks",
+   "target": "ubiquitinated substrates"
+  },
+  {
+   "source": "Rpt2-P1L-Bpa",
+   "predicate": "crosslinks",
+   "target": "ubiquitinated substrates"
+  },
+  {
+   "source": "Rpn11AXA",
+   "predicate": "accumulates",
+   "target": "ubiquitinated substrates"
+  },
+  {
+   "source": "Rpt1-P1L-Bpa",
+   "predicate": "crosslinks",
+   "target": "single-amino acid tail substrate"
+  }
+ ],
+ "truncated": false
+}

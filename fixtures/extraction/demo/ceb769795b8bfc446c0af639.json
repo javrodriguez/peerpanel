@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC9757880:6:5524d01c",
+ "entities": [
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "NaHS",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrosulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "supplemented_with",
+   "target": "NaHS"
+  }
+ ],
+ "truncated": false
+}

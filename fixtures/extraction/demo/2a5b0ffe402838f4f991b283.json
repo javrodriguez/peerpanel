@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC10398944:11:f6e2f9fb",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast nitrogen base",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "amino acids",
+   "type": "chemical"
+  },
+  {
+   "name": "MgCl2",
+   "type": "chemical"
+  },
+  {
+   "name": "MgSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "KCl",
+   "type": "chemical"
+  },
+  {
+   "name": "FeSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "utilize",
+   "target": "xylose"
+  },
+  {
+   "source": "yeast nitrogen base",
+   "predicate": "contain",
+   "target": "ammonium sulfate"
+  },
+  {
+   "source": "yeast nitrogen base",
+   "predicate": "contain",
+   "target": "amino acids"
+  },
+  {
+   "source": "MgCl2",
+   "predicate": "contain",
+   "target": "yeast nitrogen base"
+  },
+  {
+   "source": "MgSO4",
+   "predicate": "contain",
+   "target": "yeast nitrogen base"
+  },
+  {
+   "source": "KCl",
+   "predicate": "contain",
+   "target": "yeast nitrogen base"
+  },
+  {
+   "source": "FeSO4",
+   "predicate": "contain",
+   "target": "yeast nitrogen base"
+  },
+  {
+   "source": "yeast extract",
+   "predicate": "contain",
+   "target": "glutathione"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "grow",
+   "target": "xylose"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "grow",
+   "target": "glucose"
+  },
+  {
+   "source": "yeast nitrogen base",
+   "predicate": "require",
+   "target": "ammonium sulfate"
+  },
+  {
+   "source": "yeast nitrogen base",
+   "predicate": "require",
+   "target": "amino acids"
+  }
+ ],
+ "truncated": false
+}

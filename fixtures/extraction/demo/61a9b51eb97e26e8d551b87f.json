@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7334043:8:c1c6ab02",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Lee et al.",
+   "type": "organism"
+  },
+  {
+   "name": "National Natural Science Foundation of China",
+   "type": "organism"
+  },
+  {
+   "name": "Natural Science Foundation of Jiangsu Province",
+   "type": "organism"
+  },
+  {
+   "name": "Key Laboratory of Biomass Chemical Engineering",
+   "type": "organism"
+  },
+  {
+   "name": "Dalian Institute of Chemical Physics",
+   "type": "organism"
+  },
+  {
+   "name": "Zhejiang University",
+   "type": "organism"
+  },
+  {
+   "name": "CAS",
+   "type": "organism"
+  },
+  {
+   "name": "China",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Jiangsu Province",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cellular metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "physiology",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

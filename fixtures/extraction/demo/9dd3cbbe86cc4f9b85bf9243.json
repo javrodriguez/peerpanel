@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC10204961:21:164539a6",
+ "entities": [
+  {
+   "name": "kapp",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "kcat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphoketolase pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ATP citrate lyase pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L-xylulose reductase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L-arabinitol dehydrogenase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NADP(+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GDH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "malate-aspartate shuttle",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TCA cycle",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fatty acid oxidation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "beta oxidation metabolic pathways",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_functional_equivalent",
+   "target": "ATP citrate lyase pathway"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "L-xylulose reductase"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "L-arabinitol dehydrogenase"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "NADP(+"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "GDH"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "malate-aspartate shuttle"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "TCA cycle"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "fatty acid oxidation"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "beta oxidation metabolic pathways"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "kapp"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "kcat"
+  },
+  {
+   "source": "phosphoketolase pathway",
+   "predicate": "is_active",
+   "target": "phosphoketolase pathway"
+  }
+ ],
+ "truncated": false
+}

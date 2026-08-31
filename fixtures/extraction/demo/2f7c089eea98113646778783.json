@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC9825514:6:f22e1242",
+ "entities": [
+  {
+   "name": "UniProt",
+   "type": "organism"
+  },
+  {
+   "name": "EMBL-European Bioinformatics Institute",
+   "type": "organism"
+  },
+  {
+   "name": "SIB Swiss Institute of Bioinformatics",
+   "type": "organism"
+  },
+  {
+   "name": "Protein Information Resource",
+   "type": "organism"
+  },
+  {
+   "name": "ChEBI team",
+   "type": "organism"
+  },
+  {
+   "name": "National Institutes of Health",
+   "type": "organism"
+  },
+  {
+   "name": "National Human Genome Research Institute",
+   "type": "organism"
+  },
+  {
+   "name": "National Institute of Allergy and Infectious Diseases",
+   "type": "organism"
+  },
+  {
+   "name": "National Institute on Aging",
+   "type": "organism"
+  },
+  {
+   "name": "National Institute of General Medical Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "National Institute of Diabetes and Digestive and Kidney Diseases",
+   "type": "organism"
+  },
+  {
+   "name": "National Eye Institute",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

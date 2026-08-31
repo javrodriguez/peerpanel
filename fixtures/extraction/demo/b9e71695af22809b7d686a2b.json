@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7470746:21:ac836b49",
+ "entities": [
+  {
+   "name": "lys−orgS− cells",
+   "type": "organism"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "organosulfurs",
+   "type": "chemical"
+  },
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lys− cells",
+   "type": "organism"
+  },
+  {
+   "name": "WY2520",
+   "type": "organism"
+  },
+  {
+   "name": "GFP-Atg8",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Atg8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rapamycin complex",
+   "type": "chemical"
+  },
+  {
+   "name": "lys−",
+   "type": "organism"
+  },
+  {
+   "name": "orgS−",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

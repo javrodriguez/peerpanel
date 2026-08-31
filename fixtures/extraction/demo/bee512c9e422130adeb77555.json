@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13517252:0:bccfc5b3",
+ "entities": [
+  {
+   "name": "Vet Sci",
+   "type": "organism"
+  },
+  {
+   "name": "Multidisciplinary Digital Publishing Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Liang Hualiang",
+   "type": "organism"
+  },
+  {
+   "name": "Rahman Md Hashibur",
+   "type": "organism"
+  },
+  {
+   "name": "Jeon Hyuncheol",
+   "type": "organism"
+  },
+  {
+   "name": "Kim Haham",
+   "type": "organism"
+  },
+  {
+   "name": "Lee Seunghyung",
+   "type": "organism"
+  },
+  {
+   "name": "Pukyong National University",
+   "type": "organism"
+  },
+  {
+   "name": "Busan",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Republic of Korea",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fishmeal",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Lysine",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Vet Sci",
+   "predicate": "published_in",
+   "target": "Multidisciplinary Digital Publishing Institute"
+  },
+  {
+   "source": "Liang Hualiang",
+   "predicate": "edited_by",
+   "target": "Vet Sci"
+  },
+  {
+   "source": "Rahman Md Hashibur",
+   "predicate": "author_of",
+   "target": "Vet Sci"
+  },
+  {
+   "source": "Jeon Hyuncheol",
+   "predicate": "author_of",
+   "target": "Vet Sci"
+  },
+  {
+   "source": "Kim Haham",
+   "predicate": "author_of",
+   "target": "Vet Sci"
+  },
+  {
+   "source": "Lee Seunghyung",
+   "predicate": "author_of",
+   "target": "Vet Sci"
+  },
+  {
+   "source": "Pukyong National University",
+   "predicate": "affiliated_with",
+   "target": "Rahman Md Hashibur"
+  },
+  {
+   "source": "Pukyong National University",
+   "predicate": "affiliated_with",
+   "target": "Jeon Hyuncheol"
+  },
+  {
+   "source": "Pukyong National University",
+   "predicate": "affiliated_with",
+   "target": "Kim Haham"
+  },
+  {
+   "source": "Pukyong National University",
+   "predicate": "affiliated_with",
+   "target": "Lee Seunghyung"
+  }
+ ],
+ "truncated": false
+}

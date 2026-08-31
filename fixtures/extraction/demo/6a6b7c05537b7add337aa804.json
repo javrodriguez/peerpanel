@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC10204961:17:fc4bd5a7",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "acetate",
+   "type": "chemical"
+  },
+  {
+   "name": "BRENDA",
+   "type": "organism"
+  },
+  {
+   "name": "GECKO Toolbox",
+   "type": "organism"
+  },
+  {
+   "name": "kcat",
+   "type": "chemical"
+  },
+  {
+   "name": "kapp",
+   "type": "chemical"
+  },
+  {
+   "name": "flux",
+   "type": "chemical"
+  },
+  {
+   "name": "protein abundance",
+   "type": "chemical"
+  },
+  {
+   "name": "NAD/NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "DAD-2/LXR",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_kcat",
+   "target": "kcat"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_kapp",
+   "target": "kapp"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_flux",
+   "target": "flux"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein_abundance",
+   "target": "protein abundance"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_NAD/NADH",
+   "target": "NAD/NADH"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_DAD-2/LXR",
+   "target": "DAD-2/LXR"
+  },
+  {
+   "source": "BRENDA",
+   "predicate": "has_kcat",
+   "target": "kcat"
+  },
+  {
+   "source": "GECKO Toolbox",
+   "predicate": "has_kapp",
+   "target": "kapp"
+  }
+ ],
+ "truncated": false
+}

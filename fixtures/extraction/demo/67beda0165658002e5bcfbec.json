@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13410889:8:4399584f",
+ "entities": [
+  {
+   "name": "JUB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "JUB1-X",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PAPS",
+   "type": "chemical"
+  },
+  {
+   "name": "GER",
+   "type": "chemical"
+  },
+  {
+   "name": "YVG",
+   "type": "chemical"
+  },
+  {
+   "name": "RNAP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KanMX",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HIS3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lacO",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LacI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PPA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PPK",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "JUB1",
+   "predicate": "has_component",
+   "target": "GER"
+  },
+  {
+   "source": "JUB1",
+   "predicate": "has_component",
+   "target": "YVG"
+  },
+  {
+   "source": "JUB1",
+   "predicate": "is_derived_from",
+   "target": "JUB1-X"
+  },
+  {
+   "source": "JUB1-X",
+   "predicate": "has_component",
+   "target": "GER"
+  },
+  {
+   "source": "JUB1-X",
+   "predicate": "has_component",
+   "target": "YVG"
+  },
+  {
+   "source": "PAPS",
+   "predicate": "is_product_of",
+   "target": "PPA"
+  },
+  {
+   "source": "PAPS",
+   "predicate": "is_product_of",
+   "target": "PPK"
+  },
+  {
+   "source": "RNAP",
+   "predicate": "transcribes",
+   "target": "KanMX"
+  },
+  {
+   "source": "RNAP",
+   "predicate": "transcribes",
+   "target": "HIS3"
+  },
+  {
+   "source": "RNAP",
+   "predicate": "transcribes",
+   "target": "lacO"
+  },
+  {
+   "source": "RNAP",
+   "predicate": "transcribes",
+   "target": "LacI"
+  },
+  {
+   "source": "PPA",
+   "predicate": "is_enzyme",
+   "target": "PPK"
+  }
+ ],
+ "truncated": false
+}

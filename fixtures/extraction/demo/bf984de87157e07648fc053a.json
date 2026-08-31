@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13410889:6:6b888b96",
+ "entities": [
+  {
+   "name": "JUB1-X synTF",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PAPS",
+   "type": "chemical"
+  },
+  {
+   "name": "ATPS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "APSK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pseudomonas sp.",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "PPK2CpaN",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "polyphosphate kinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "inorganic polyphosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "ATP",
+   "type": "chemical"
+  },
+  {
+   "name": "ADP",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "JUB1-X synTF",
+   "predicate": "produces",
+   "target": "PAPS"
+  },
+  {
+   "source": "PPK2CpaN",
+   "predicate": "regenerates",
+   "target": "ATP"
+  },
+  {
+   "source": "Pseudomonas sp.",
+   "predicate": "donates",
+   "target": "inorganic polyphosphate"
+  }
+ ],
+ "truncated": false
+}

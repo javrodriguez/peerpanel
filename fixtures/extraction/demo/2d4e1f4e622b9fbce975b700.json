@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13524880:3:25837e91",
+ "entities": [
+  {
+   "name": "AAT locus",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tb927.4.3930",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tb927.4.4730",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S40;S44",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "T25;S37;S40;S44",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAT4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tb927.4.4820",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "T20;S21;S25;S30",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAT5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tb927.8.4740",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S3;S10",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AAT locus",
+   "predicate": "has_protein_id",
+   "target": "Tb927.4.3930"
+  },
+  {
+   "source": "AAT locus",
+   "predicate": "has_protein_id",
+   "target": "Tb927.4.4730"
+  },
+  {
+   "source": "AAT locus",
+   "predicate": "has_protein_id",
+   "target": "Tb927.4.4820"
+  },
+  {
+   "source": "AAT locus",
+   "predicate": "has_protein_id",
+   "target": "Tb927.8.4740"
+  }
+ ],
+ "truncated": false
+}

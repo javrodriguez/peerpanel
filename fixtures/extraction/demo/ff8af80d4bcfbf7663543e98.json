@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13464734:8:9273063c",
+ "entities": [
+  {
+   "name": "UDP-glycosyltransferases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UGT79B2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UGT79B3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UDP-glycosyltransferase 72B1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UGT86A1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UFGT2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CsUGT78A14",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GgUGT72L11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoAP2/ERF89",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoPAES",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoPYL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MYB transcription factors",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

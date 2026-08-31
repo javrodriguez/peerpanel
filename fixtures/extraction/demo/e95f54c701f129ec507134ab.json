@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13450573:12:8b3eecda",
+ "entities": [
+  {
+   "name": "heat-ramp condition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "heat shock condition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "WGCNA modules",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "rRNA processing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ribosome assembly",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein refolding",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "regulation of metabolic process",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolic process",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "primary metabolic process",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "biosynthetic process",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Stb3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Dat1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "heat-ramp condition",
+   "predicate": "associated_with",
+   "target": "rRNA processing"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "associated_with",
+   "target": "ribosome assembly"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "associated_with",
+   "target": "protein refolding"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "associated_with",
+   "target": "regulation of metabolic process"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "associated_with",
+   "target": "metabolic process"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "associated_with",
+   "target": "primary metabolic process"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "associated_with",
+   "target": "biosynthetic process"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "enriched_with",
+   "target": "Stb3"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "enriched_with",
+   "target": "Dat1"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "shared_with",
+   "target": "WGCNA modules"
+  },
+  {
+   "source": "heat-ramp condition",
+   "predicate": "shared_with",
+   "target": "heat shock condition"
+  }
+ ],
+ "truncated": false
+}

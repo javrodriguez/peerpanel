@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13515280:11:19404872",
+ "entities": [
+  {
+   "name": "Eubacterium",
+   "type": "organism"
+  },
+  {
+   "name": "gut health",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gut microbiota",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "microbiome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "hydrolyzed yeast",
+   "type": "chemical"
+  },
+  {
+   "name": "brewer's yeast",
+   "type": "chemical"
+  },
+  {
+   "name": "probiotic",
+   "type": "chemical"
+  },
+  {
+   "name": "bioactive peptides",
+   "type": "chemical"
+  },
+  {
+   "name": "bioactive compounds",
+   "type": "chemical"
+  },
+  {
+   "name": "donkey",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Eubacterium",
+   "predicate": "contributes to",
+   "target": "gut health"
+  }
+ ],
+ "truncated": false
+}

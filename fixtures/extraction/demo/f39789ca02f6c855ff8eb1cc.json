@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13518488:3:130b7772",
+ "entities": [
+  {
+   "name": "CBO Análises Laboratoriais",
+   "type": "organism"
+  },
+  {
+   "name": "Valinhos",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mycelium",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "P. albidus",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "phenylisothiocyanate",
+   "type": "chemical"
+  },
+  {
+   "name": "Pico-Tag system protocol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Statistica",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FAO/WHO",
+   "type": "organism"
+  },
+  {
+   "name": "Lucas",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CBO Análises Laboratoriais",
+   "predicate": "located_in",
+   "target": "Valinhos"
+  },
+  {
+   "source": "mycelium",
+   "predicate": "analyzed_by",
+   "target": "HPLC"
+  },
+  {
+   "source": "yeast extract",
+   "predicate": "used_in",
+   "target": "P. albidus"
+  },
+  {
+   "source": "ammonium sulfate",
+   "predicate": "used_in",
+   "target": "P. albidus"
+  },
+  {
+   "source": "phenylisothiocyanate",
+   "predicate": "used_in",
+   "target": "HPLC"
+  },
+  {
+   "source": "Pico-Tag system protocol",
+   "predicate": "used_in",
+   "target": "HPLC"
+  }
+ ],
+ "truncated": false
+}

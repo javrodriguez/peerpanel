@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13450799:24:34770a79",
+ "entities": [
+  {
+   "name": "PLOS ONE Editorial Office Staff",
+   "type": "organism"
+  },
+  {
+   "name": "Dr. Arthur J. Lustig",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  },
+  {
+   "name": "production team",
+   "type": "organism"
+  },
+  {
+   "name": "press team",
+   "type": "organism"
+  },
+  {
+   "name": "press office",
+   "type": "organism"
+  },
+  {
+   "name": "customercare@plos.org",
+   "type": "organism"
+  },
+  {
+   "name": "onepress@plos.org",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS One",
+   "type": "organism"
+  },
+  {
+   "name": "proof",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "paper",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "manuscript",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_production_team",
+   "target": "production team"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_press_team",
+   "target": "press team"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_press_office",
+   "target": "press office"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_customercare_email",
+   "target": "customercare@plos.org"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_press_email",
+   "target": "onepress@plos.org"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_publication",
+   "target": "PLOS One"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_proof",
+   "target": "proof"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_paper",
+   "target": "paper"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_manuscript",
+   "target": "manuscript"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_publication_fee",
+   "target": "PLOS"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_completed_accept_phase",
+   "target": "PLOS"
+  },
+  {
+   "source": "PLOS ONE Editorial Office Staff",
+   "predicate": "has_press_embargo",
+   "target": "PLOS One"
+  }
+ ],
+ "truncated": false
+}

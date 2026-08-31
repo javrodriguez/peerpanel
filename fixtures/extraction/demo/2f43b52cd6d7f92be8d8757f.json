@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC11618413:2:752472a6",
+ "entities": [
+  {
+   "name": "biofilm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "E. coli W3110",
+   "type": "organism"
+  },
+  {
+   "name": "nutrient",
+   "type": "chemical"
+  },
+  {
+   "name": "agar",
+   "type": "chemical"
+  },
+  {
+   "name": "water",
+   "type": "chemical"
+  },
+  {
+   "name": "curli fibers",
+   "type": "chemical"
+  },
+  {
+   "name": "CsgA",
+   "type": "chemical"
+  },
+  {
+   "name": "LB agar",
+   "type": "chemical"
+  },
+  {
+   "name": "salt",
+   "type": "chemical"
+  },
+  {
+   "name": "wet mass",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "dry mass",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "stiffness",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "biofilm",
+   "predicate": "has_composition",
+   "target": "curli fibers"
+  },
+  {
+   "source": "biofilm",
+   "predicate": "has_property",
+   "target": "wet mass"
+  },
+  {
+   "source": "biofilm",
+   "predicate": "has_property",
+   "target": "dry mass"
+  },
+  {
+   "source": "biofilm",
+   "predicate": "has_property",
+   "target": "stiffness"
+  }
+ ],
+ "truncated": false
+}

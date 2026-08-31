@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13501320:2:90812cc4",
+ "entities": [
+  {
+   "name": "BPMs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pathways",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "nodes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "edges",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "organisms",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "paralogs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pathway",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "network",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "dataset",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "algorithm",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BPMs",
+   "predicate": "defined_by",
+   "target": "pathways"
+  },
+  {
+   "source": "BPMs",
+   "predicate": "defined_by",
+   "target": "genes"
+  },
+  {
+   "source": "BPMs",
+   "predicate": "defined_by",
+   "target": "nodes"
+  },
+  {
+   "source": "BPMs",
+   "predicate": "defined_by",
+   "target": "edges"
+  },
+  {
+   "source": "organisms",
+   "predicate": "affected_by",
+   "target": "BPMs"
+  },
+  {
+   "source": "yeast",
+   "predicate": "affected_by",
+   "target": "BPMs"
+  },
+  {
+   "source": "paralogs",
+   "predicate": "defined_by",
+   "target": "pathway"
+  },
+  {
+   "source": "network",
+   "predicate": "defined_by",
+   "target": "dataset"
+  },
+  {
+   "source": "algorithm",
+   "predicate": "defined_by",
+   "target": "dataset"
+  },
+  {
+   "source": "BPMs",
+   "predicate": "has",
+   "target": "pathway"
+  },
+  {
+   "source": "BPMs",
+   "predicate": "has",
+   "target": "network"
+  },
+  {
+   "source": "BPMs",
+   "predicate": "has",
+   "target": "algorithm"
+  }
+ ],
+ "truncated": false
+}

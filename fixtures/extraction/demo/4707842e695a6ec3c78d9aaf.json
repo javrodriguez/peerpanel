@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC7191244:0:408c6184",
+ "entities": [
+  {
+   "name": "Rhodosporidium babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "Exopolysaccharides",
+   "type": "chemical"
+  },
+  {
+   "name": "Mirzaei Seveiri Rasool",
+   "type": "organism"
+  },
+  {
+   "name": "Hamidi Masoud",
+   "type": "organism"
+  },
+  {
+   "name": "Delattre Cédric",
+   "type": "organism"
+  },
+  {
+   "name": "Sedighian Hamid",
+   "type": "organism"
+  },
+  {
+   "name": "Pierre Guillaume",
+   "type": "organism"
+  },
+  {
+   "name": "Rahmani Babak",
+   "type": "organism"
+  },
+  {
+   "name": "Darzi Sina",
+   "type": "organism"
+  },
+  {
+   "name": "Brasselet Clément",
+   "type": "organism"
+  },
+  {
+   "name": "Karimitabar Fatemeh",
+   "type": "organism"
+  },
+  {
+   "name": "Razaghpoor Ali",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium babjevae",
+   "predicate": "produce",
+   "target": "Exopolysaccharides"
+  },
+  {
+   "source": "Rhodosporidium babjevae",
+   "predicate": "characterize",
+   "target": "Exopolysaccharides"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC11102182:5:c02130e3",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "IFO0880",
+   "type": "organism"
+  },
+  {
+   "name": "lipid accumulation phenotype",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcriptomic analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipidomic analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gene expression profile",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipidome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolic pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cluster map",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pathway diagram",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "correlations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nodes",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_phenotype",
+   "target": "lipid accumulation phenotype"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "undergoes_transcriptomic_analysis",
+   "target": "transcriptomic analysis"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "undergoes_lipidomic_analysis",
+   "target": "lipidomic analysis"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene_expression_profile",
+   "target": "gene expression profile"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_lipidome",
+   "target": "lipidome"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "is_part_of_metabolic_pathway",
+   "target": "metabolic pathway"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "is_represented_in_cluster_map",
+   "target": "cluster map"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "is_represented_in_pathway_diagram",
+   "target": "pathway diagram"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_correlations",
+   "target": "correlations"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_nodes",
+   "target": "nodes"
+  },
+  {
+   "source": "transcriptomic analysis",
+   "predicate": "produces_gene_expression_profile",
+   "target": "gene expression profile"
+  },
+  {
+   "source": "lipidomic analysis",
+   "predicate": "produces_lipidome",
+   "target": "lipidome"
+  }
+ ],
+ "truncated": false
+}

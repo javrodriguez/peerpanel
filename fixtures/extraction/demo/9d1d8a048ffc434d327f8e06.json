@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13471478:10:3cebc8ed",
+ "entities": [
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MG132",
+   "type": "chemical"
+  },
+  {
+   "name": "ubiquitin",
+   "type": "chemical"
+  },
+  {
+   "name": "proteasome",
+   "type": "chemical"
+  },
+  {
+   "name": "mouse",
+   "type": "organism"
+  },
+  {
+   "name": "human",
+   "type": "organism"
+  },
+  {
+   "name": "HEK293",
+   "type": "organism"
+  },
+  {
+   "name": "Phoenix",
+   "type": "organism"
+  },
+  {
+   "name": "ECFP",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ZBTB16",
+   "predicate": "binds",
+   "target": "CUL3"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "binds",
+   "target": "ROC1"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "binds",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "binds",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "ROC1",
+   "predicate": "binds",
+   "target": "SLC26A4"
+  }
+ ],
+ "truncated": false
+}

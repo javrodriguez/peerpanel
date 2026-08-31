@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC9763685:7:97f35c8b",
+ "entities": [
+  {
+   "name": "Yll058w",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MetY",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OAH",
+   "type": "chemical"
+  },
+  {
+   "name": "bisulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "PLP",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "AlphaFold2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CRISPR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yeast8",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FY4",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Yll058w",
+   "predicate": "is_similar_to",
+   "target": "MetY"
+  },
+  {
+   "source": "Met15",
+   "predicate": "is_similar_to",
+   "target": "MetY"
+  }
+ ],
+ "truncated": false
+}

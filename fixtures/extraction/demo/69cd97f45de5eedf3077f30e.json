@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7690147:2:e65571dc",
+ "entities": [
+  {
+   "name": "R. glutinis ZHK",
+   "type": "organism"
+  },
+  {
+   "name": "PacBio Sequel system",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Single Molecule Real-Time (SMRT) sequencer",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Illumina Hiseq 2500 system",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MECAT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pilon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GeneMark-ES",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tRNAscan-SE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BUSCO",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NCBI Nr",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Swissport",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KOG",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13471478:11:95470df4",
+ "entities": [
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HEK293 Phoenix cells",
+   "type": "organism"
+  },
+  {
+   "name": "cycloheximide",
+   "type": "chemical"
+  },
+  {
+   "name": "Western blot",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FRET",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "iodide sensor EYFP p.H148Q; p.I152L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "endoplasmic reticulum",
+   "type": "organism"
+  },
+  {
+   "name": "plasma membrane",
+   "type": "organism"
+  },
+  {
+   "name": "Amino acids 584–673",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ZBTB16",
+   "predicate": "binds",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "interact",
+   "target": "CUL3"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "interact",
+   "target": "ROC1"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "interact",
+   "target": "ROC1"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC6547517:1:758b93de",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "microorganisms",
+   "type": "organism"
+  },
+  {
+   "name": "palm oil",
+   "type": "chemical"
+  },
+  {
+   "name": "electric vehicles",
+   "type": "organism"
+  },
+  {
+   "name": "sustainability concerns",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "human nutrition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "animal feeds",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "aquaculture",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cunninghamella echinulata",
+   "type": "organism"
+  },
+  {
+   "name": "Mortierella isabellina",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produces",
+   "target": "lipids"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "utilizes",
+   "target": "xylose"
+  },
+  {
+   "source": "sustainability concerns",
+   "predicate": "affect",
+   "target": "human nutrition"
+  },
+  {
+   "source": "human nutrition",
+   "predicate": "affect",
+   "target": "animal feeds"
+  },
+  {
+   "source": "animal feeds",
+   "predicate": "require",
+   "target": "lipids"
+  },
+  {
+   "source": "Cunninghamella echinulata",
+   "predicate": "produces",
+   "target": "lipids"
+  },
+  {
+   "source": "Mortierella isabellina",
+   "predicate": "produces",
+   "target": "lipids"
+  }
+ ],
+ "truncated": false
+}

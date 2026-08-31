@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC8116571:4:84d8316b",
+ "entities": [
+  {
+   "name": "L. starkeyi DSM 70295",
+   "type": "organism"
+  },
+  {
+   "name": "K. marxianus CBS 6556",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis CBS 5773",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides CCT 7815",
+   "type": "organism"
+  },
+  {
+   "name": "C. parapsilosis DSM 70125",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica DSM 8218",
+   "type": "organism"
+  },
+  {
+   "name": "R. kratochvilovae CBS 321",
+   "type": "organism"
+  },
+  {
+   "name": "C. jadinii DSM 70163",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "C5-Birch hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon sources",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C5-Birch hydrolysate",
+   "predicate": "is used as substrate",
+   "target": "K. marxianus CBS 6556"
+  },
+  {
+   "source": "C5-Birch hydrolysate",
+   "predicate": "is used as substrate",
+   "target": "S. stipitis CBS 5773"
+  }
+ ],
+ "truncated": false
+}

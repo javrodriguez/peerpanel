@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC11618413:11:70ee289a",
+ "entities": [
+  {
+   "name": "Salt-free agar plates",
+   "type": "chemical"
+  },
+  {
+   "name": "Tryptone",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "E. coli K-12 W3110",
+   "type": "organism"
+  },
+  {
+   "name": "Roth",
+   "type": "chemical"
+  },
+  {
+   "name": "Netzch-Gerätebau GmbH",
+   "type": "organism"
+  },
+  {
+   "name": "Direct Red 23",
+   "type": "chemical"
+  },
+  {
+   "name": "Pontamine Fast Scarlett 4b",
+   "type": "chemical"
+  },
+  {
+   "name": "Luria-Bertani (LB) medium",
+   "type": "chemical"
+  },
+  {
+   "name": "TI 950 Triboindenter",
+   "type": "chemical"
+  },
+  {
+   "name": "Hysitron Inc.",
+   "type": "organism"
+  },
+  {
+   "name": "AxioZoomV.16",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Salt-free agar plates",
+   "predicate": "supplemented with",
+   "target": "Tryptone"
+  },
+  {
+   "source": "Salt-free agar plates",
+   "predicate": "supplemented with",
+   "target": "Yeast extract"
+  },
+  {
+   "source": "E. coli K-12 W3110",
+   "predicate": "used",
+   "target": "Salt-free agar plates"
+  }
+ ],
+ "truncated": false
+}

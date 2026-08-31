@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC7191244:2:76c7e63d",
+ "entities": [
+  {
+   "name": "EPSs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Agilent 1100 Series",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SEC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TSKGEL PW-XL 3000",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TSKGEL PW-XL 5000",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TSK gel PWXL pre-column",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "refractometer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GC-MS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Agilent 6890 Series GC System",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Agilent 5973 Network Mass Selective Detector",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TESCAN MIRA3",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "EPSs",
+   "predicate": "is_analyzed_by",
+   "target": "GC-MS"
+  }
+ ],
+ "truncated": false
+}

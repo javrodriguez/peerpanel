@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514516:0:2123f752",
+ "entities": [
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Zhou Yuanjie",
+   "type": "organism"
+  },
+  {
+   "name": "Zou Hao",
+   "type": "organism"
+  },
+  {
+   "name": "Lin Suiyin",
+   "type": "organism"
+  },
+  {
+   "name": "Pang Tingting",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Linxi",
+   "type": "organism"
+  },
+  {
+   "name": "Zhou Jing",
+   "type": "organism"
+  },
+  {
+   "name": "Wu Renzhi",
+   "type": "organism"
+  },
+  {
+   "name": "Kong Fantao",
+   "type": "organism"
+  },
+  {
+   "name": "Guangxi Key Laboratory of Polysaccharide Materials and Modification",
+   "type": "organism"
+  },
+  {
+   "name": "Guangxi-Indonesia Joint Laboratory for Microbial Resources and Artificial Intelligence",
+   "type": "organism"
+  },
+  {
+   "name": "School of Marine Sciences and Biotechnology",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

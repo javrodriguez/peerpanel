@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC4125178:5:83bbfec3",
+ "entities": [
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "SOD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CAT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "A. niger",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "R. oryzae",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "E. aerogenes",
+   "type": "organism"
+  },
+  {
+   "name": "S. aureus",
+   "type": "organism"
+  },
+  {
+   "name": "S. typhimurium",
+   "type": "organism"
+  },
+  {
+   "name": "L. monocytogenes",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

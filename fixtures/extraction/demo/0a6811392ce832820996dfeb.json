@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13515273:4:d122ee46",
+ "entities": [
+  {
+   "name": "P. manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "metabolite",
+   "type": "chemical"
+  },
+  {
+   "name": "metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "phospholipid",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acid",
+   "type": "chemical"
+  },
+  {
+   "name": "amino acid",
+   "type": "chemical"
+  },
+  {
+   "name": "purine",
+   "type": "chemical"
+  },
+  {
+   "name": "nucleotide",
+   "type": "chemical"
+  },
+  {
+   "name": "TCA cycle",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glycolysis",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolic_response_to",
+   "target": "carvacrol"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolite",
+   "target": "metabolite"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolite",
+   "target": "lipid"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolite",
+   "target": "phospholipid"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolite",
+   "target": "fatty acid"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolite",
+   "target": "amino acid"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolite",
+   "target": "purine"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolite",
+   "target": "nucleotide"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolic_process",
+   "target": "TCA cycle"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolic_process",
+   "target": "glycolysis"
+  },
+  {
+   "source": "carvacrol",
+   "predicate": "causes_metabolic_response",
+   "target": "P. manshurica"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolic_response_to",
+   "target": "carvacrol"
+  }
+ ],
+ "truncated": false
+}

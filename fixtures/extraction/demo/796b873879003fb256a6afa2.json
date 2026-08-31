@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13470552:5:306f31ec",
+ "entities": [
+  {
+   "name": "Mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "Om14-2GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Abf2-2GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Afg3-2GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cit1-2GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MitoTracker",
+   "type": "chemical"
+  },
+  {
+   "name": "Cox9-mTagBFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ndi1-2GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nuc1-2GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Emc1-2GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GFP-HDEL",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ire1-2GFP",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Om14-2GFP",
+   "predicate": "labels",
+   "target": "Mitochondria"
+  },
+  {
+   "source": "Abf2-2GFP",
+   "predicate": "labels",
+   "target": "Mitochondria"
+  },
+  {
+   "source": "Afg3-2GFP",
+   "predicate": "labels",
+   "target": "Mitochondria"
+  },
+  {
+   "source": "Cit1-2GFP",
+   "predicate": "labels",
+   "target": "Mitochondria"
+  },
+  {
+   "source": "MitoTracker",
+   "predicate": "labels",
+   "target": "Mitochondria"
+  },
+  {
+   "source": "Cox9-mTagBFP",
+   "predicate": "labels",
+   "target": "Mitochondria"
+  },
+  {
+   "source": "Ndi1-2GFP",
+   "predicate": "is_located_in",
+   "target": "Mitochondria"
+  },
+  {
+   "source": "Nuc1-2GFP",
+   "predicate": "is_located_in",
+   "target": "Mitochondria"
+  }
+ ],
+ "truncated": false
+}

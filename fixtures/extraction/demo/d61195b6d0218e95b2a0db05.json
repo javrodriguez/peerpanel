@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13515494:9:3ebc3f59",
+ "entities": [
+  {
+   "name": "Closure-associated differences",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fermentation kinetics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Temporal changes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Amino acids",
+   "type": "chemical"
+  },
+  {
+   "name": "Volatile compounds",
+   "type": "chemical"
+  },
+  {
+   "name": "Secondary fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Oxygen transfer",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Oenological data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metabolomic data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Aroma-related data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bottle closure",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Green Chemistry",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Closure-associated differences",
+   "predicate": "associated with",
+   "target": "fermentation kinetics"
+  },
+  {
+   "source": "Fermentation kinetics",
+   "predicate": "influenced by",
+   "target": "Temporal changes"
+  },
+  {
+   "source": "Temporal changes",
+   "predicate": "influenced by",
+   "target": "Amino acids"
+  },
+  {
+   "source": "Amino acids",
+   "predicate": "influenced by",
+   "target": "Volatile compounds"
+  },
+  {
+   "source": "Secondary fermentation",
+   "predicate": "influenced by",
+   "target": "Oxygen transfer"
+  },
+  {
+   "source": "Oenological data",
+   "predicate": "used in",
+   "target": "Metabolomic data"
+  },
+  {
+   "source": "Metabolomic data",
+   "predicate": "used in",
+   "target": "Aroma-related data"
+  }
+ ],
+ "truncated": false
+}

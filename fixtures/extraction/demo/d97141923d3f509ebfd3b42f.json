@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC11974387:12:05f19791",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Crabtree effect",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon source",
+   "type": "chemical"
+  },
+  {
+   "name": "PDC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "Mth1A81P",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pyk1R68",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Med2*432Y",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Oca5S383",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "Crabtree effect"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "converts",
+   "target": "glucose"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "produces",
+   "target": "ethanol"
+  }
+ ],
+ "truncated": false
+}

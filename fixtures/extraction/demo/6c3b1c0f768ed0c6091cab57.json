@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC8620231:2:fe12827d",
+ "entities": [
+  {
+   "name": "TSEBRA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BRAKER1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BRAKER2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "gene predictions",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "transcripts",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "extrinsic evidence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "intron regions",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "start/stop codon positions",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GTF format",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GFF file",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein alignment",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA-seq",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "TSEBRA",
+   "predicate": "uses",
+   "target": "extrinsic evidence"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "selects",
+   "target": "transcripts"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "filters",
+   "target": "transcripts"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "compares",
+   "target": "transcripts"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "removes",
+   "target": "transcripts"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "combines",
+   "target": "transcripts"
+  },
+  {
+   "source": "TSEBRA",
+   "predicate": "uses",
+   "target": "BRAKER1"
+  }
+ ],
+ "truncated": false
+}

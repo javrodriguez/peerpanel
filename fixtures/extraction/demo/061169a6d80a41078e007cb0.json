@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13464734:2:d33339c5",
+ "entities": [
+  {
+   "name": "D. officinale",
+   "type": "organism"
+  },
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cDNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CTAB-LiCl method",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phenol:chloroform:isoamyl alcohol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NanoDrop spectrophotometer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HiScript IV 1st Strand cDNA Synthesis Kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Vazyme Biotech Co.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NCBI Primer-BLAST",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Primer3 v2.5.0",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Oligonucleotide Properties Calculator v3.36",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CFX Connect real-time PCR detection system",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "RNA"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "cDNA"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "CTAB-LiCl method"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "phenol:chloroform:isoamyl alcohol"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "NanoDrop spectrophotometer"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "HiScript IV 1st Strand cDNA Synthesis Kit"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "Vazyme Biotech Co."
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "NCBI Primer-BLAST"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "Primer3 v2.5.0"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "Oligonucleotide Properties Calculator v3.36"
+  },
+  {
+   "source": "D. officinale",
+   "predicate": "has_part",
+   "target": "CFX Connect real-time PCR detection system"
+  }
+ ],
+ "truncated": false
+}

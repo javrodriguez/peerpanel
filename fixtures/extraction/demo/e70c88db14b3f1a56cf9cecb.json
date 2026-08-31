@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC7873862:2:69631cdf",
+ "entities": [
+  {
+   "name": "R. toruloides IFO0880",
+   "type": "organism"
+  },
+  {
+   "name": "Coradetti",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "Pseudomonas putida KT2440",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "BiGG Models",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "COBRApy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lieven et al.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Escher",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BOFdat",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_metabolic_model",
+   "target": "BiGG Models"
+  }
+ ],
+ "truncated": false
+}

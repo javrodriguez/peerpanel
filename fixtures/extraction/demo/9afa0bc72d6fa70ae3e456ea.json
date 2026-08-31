@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13470552:7:f1c005c9",
+ "entities": [
+  {
+   "name": "GFP-Pho8",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pep4-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ybh3-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Coomassie Brilliant Blue",
+   "type": "chemical"
+  },
+  {
+   "name": "FM4-64",
+   "type": "chemical"
+  },
+  {
+   "name": "Vrg4-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sys1-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chs5-GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sec7-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Snf7-GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Vps4-GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GFP",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

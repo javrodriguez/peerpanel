@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13514482:3:9da46e0d",
+ "entities": [
+  {
+   "name": "F. yunnanensis",
+   "type": "organism"
+  },
+  {
+   "name": "Z68",
+   "type": "organism"
+  },
+  {
+   "name": "M58",
+   "type": "organism"
+  },
+  {
+   "name": "F. fennae",
+   "type": "organism"
+  },
+  {
+   "name": "Potato Dextrose Agar",
+   "type": "chemical"
+  },
+  {
+   "name": "PDA",
+   "type": "chemical"
+  },
+  {
+   "name": "medium",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "agar",
+   "type": "chemical"
+  },
+  {
+   "name": "liquid nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "Illumina",
+   "type": "organism"
+  },
+  {
+   "name": "PacBio",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "F. yunnanensis",
+   "predicate": "has strain",
+   "target": "Z68"
+  },
+  {
+   "source": "Z68",
+   "predicate": "is cultured on",
+   "target": "Potato Dextrose Agar"
+  }
+ ],
+ "truncated": false
+}

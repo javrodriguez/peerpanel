@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13419736:15:6c56f623",
+ "entities": [
+  {
+   "name": "Goldberg A.L.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Logic",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "26S Proteasome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cell",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Beck M.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "quantitative proteome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "human cell line",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Mol Syst Biol",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Inobe T.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Fishbain S.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Prakash S.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "geometry",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Goldberg A.L.",
+   "predicate": "involved in",
+   "target": "26S Proteasome"
+  },
+  {
+   "source": "Logic",
+   "predicate": "involved in",
+   "target": "26S Proteasome"
+  },
+  {
+   "source": "Beck M.",
+   "predicate": "involved in",
+   "target": "quantitative proteome"
+  },
+  {
+   "source": "Beck M.",
+   "predicate": "involved in",
+   "target": "human cell line"
+  },
+  {
+   "source": "Mol Syst Biol",
+   "predicate": "involved in",
+   "target": "quantitative proteome"
+  },
+  {
+   "source": "Inobe T.",
+   "predicate": "involved in",
+   "target": "geometry"
+  },
+  {
+   "source": "Fishbain S.",
+   "predicate": "involved in",
+   "target": "geometry"
+  },
+  {
+   "source": "Prakash S.",
+   "predicate": "involved in",
+   "target": "geometry"
+  }
+ ],
+ "truncated": false
+}

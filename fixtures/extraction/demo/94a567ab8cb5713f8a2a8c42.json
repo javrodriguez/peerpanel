@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13518488:1:58117ac3",
+ "entities": [
+  {
+   "name": "P. albidus",
+   "type": "organism"
+  },
+  {
+   "name": "Fusarium venenatum",
+   "type": "organism"
+  },
+  {
+   "name": "Neurospora crassa",
+   "type": "organism"
+  },
+  {
+   "name": "Quorn",
+   "type": "organism"
+  },
+  {
+   "name": "Meati Foods",
+   "type": "organism"
+  },
+  {
+   "name": "Straits Research",
+   "type": "organism"
+  },
+  {
+   "name": "São Francisco de Paula",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pampa and Atlantic Forest biomes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Enzymes and Biomass Laboratory",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Biotechnology Institute",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "University of Caxias do Sul",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kasvi",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

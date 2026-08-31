@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13410889:5:0ba324ba",
+ "entities": [
+  {
+   "name": "JUB1-X synTF",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JUB1-X114-GAL4AD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JUB1-X191-GAL4AD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JUB1-X114-EDLLAD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JUB1-X191-EDLLAD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GAL4AD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EDLLAD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JUB1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "yEGFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IPTG",
+   "type": "chemical"
+  },
+  {
+   "name": "PAPS",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13518488:2:24e3ce26",
+ "entities": [
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "protein",
+   "type": "chemical"
+  },
+  {
+   "name": "KH2PO4",
+   "type": "chemical"
+  },
+  {
+   "name": "NH4)2SO4",
+   "type": "chemical"
+  },
+  {
+   "name": "urea",
+   "type": "chemical"
+  },
+  {
+   "name": "MgSO4·7 H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "CaCl2",
+   "type": "chemical"
+  },
+  {
+   "name": "FeSO4·7 H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "MnSO4·H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnSO4·7 H2O",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast extract",
+   "predicate": "supplies",
+   "target": "nitrogen"
+  }
+ ],
+ "truncated": false
+}

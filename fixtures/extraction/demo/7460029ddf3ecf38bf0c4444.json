@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13462271:5:3f2a45b9",
+ "entities": [
+  {
+   "name": "S phase checkpoint activation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "single-stranded DNA (ssDNA) accumulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "replication protein A (RPA)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BrdU-IP-ssSeq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pol1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pol1-C1372S,F1396S",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pol1-F1396S",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rad52",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNA damage checkpoint pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "replication fork stability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "chromatin instability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "histone transfer",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pol1-F1396S",
+   "predicate": "has_impact_on",
+   "target": "chromatin instability"
+  },
+  {
+   "source": "pol1-F1396S",
+   "predicate": "has_impact_on",
+   "target": "replication fork stability"
+  },
+  {
+   "source": "pol1-F1396S",
+   "predicate": "has_impact_on",
+   "target": "DNA damage checkpoint pathway"
+  },
+  {
+   "source": "pol1-C1372S,F1396S",
+   "predicate": "has_impact_on",
+   "target": "chromatin instability"
+  },
+  {
+   "source": "pol1-C1372S,F1396S",
+   "predicate": "has_impact_on",
+   "target": "replication fork stability"
+  },
+  {
+   "source": "pol1-C1372S,F1396S",
+   "predicate": "has_impact_on",
+   "target": "DNA damage checkpoint pathway"
+  },
+  {
+   "source": "pol1-F1396S",
+   "predicate": "has_impact_on",
+   "target": "histone transfer"
+  },
+  {
+   "source": "pol1-C1372S,F1396S",
+   "predicate": "has_impact_on",
+   "target": "histone transfer"
+  },
+  {
+   "source": "pol1-F1396S",
+   "predicate": "has_impact_on",
+   "target": "Rad52"
+  },
+  {
+   "source": "pol1-C1372S,F1396S",
+   "predicate": "has_impact_on",
+   "target": "Rad52"
+  }
+ ],
+ "truncated": false
+}

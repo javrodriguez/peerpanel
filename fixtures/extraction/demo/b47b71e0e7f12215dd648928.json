@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13513244:4:2e6d81d0",
+ "entities": [
+  {
+   "name": "YARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "kanamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "human",
+   "type": "organism"
+  },
+  {
+   "name": "CMT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "plasmid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "allele",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "variant",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "temperature",
+   "type": "chemical"
+  },
+  {
+   "name": "doubling time",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "area under the curve",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YARS1",
+   "predicate": "expressed_by",
+   "target": "yeast"
+  }
+ ],
+ "truncated": false
+}

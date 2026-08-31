@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13464734:0:33824dad",
+ "entities": [
+  {
+   "name": "Dendrobium officinale",
+   "type": "organism"
+  },
+  {
+   "name": "DoMYB102",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoUGT71K2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Li Jingting",
+   "type": "organism"
+  },
+  {
+   "name": "Yang Yuxia",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Huaizhi",
+   "type": "organism"
+  },
+  {
+   "name": "Xie Xinwei",
+   "type": "organism"
+  },
+  {
+   "name": "Niu Ruishu",
+   "type": "organism"
+  },
+  {
+   "name": "Li Xiaoyang",
+   "type": "organism"
+  },
+  {
+   "name": "Ding Haidong",
+   "type": "organism"
+  },
+  {
+   "name": "Bartels Dorothea",
+   "type": "organism"
+  },
+  {
+   "name": "Multidisciplinary Digital Publishing Institute",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DoMYB102",
+   "predicate": "binds_to",
+   "target": "DoUGT71K2"
+  },
+  {
+   "source": "DoMYB102",
+   "predicate": "activates",
+   "target": "DoUGT71K2"
+  }
+ ],
+ "truncated": false
+}

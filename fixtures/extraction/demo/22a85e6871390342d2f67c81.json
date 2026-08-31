@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13515494:7:8ea5cdbe",
+ "entities": [
+  {
+   "name": "HIS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ASN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ORN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bianchi",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phenylalanine",
+   "type": "chemical"
+  },
+  {
+   "name": "histidine",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "wine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "tirage cork",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "crown cap",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phenylacetaldehyde",
+   "type": "chemical"
+  },
+  {
+   "name": "2-phenylethanol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ASN",
+   "predicate": "accumulate",
+   "target": "wine"
+  },
+  {
+   "source": "ORN",
+   "predicate": "deplete",
+   "target": "wine"
+  },
+  {
+   "source": "yeast",
+   "predicate": "utilize",
+   "target": "histidine"
+  },
+  {
+   "source": "wine",
+   "predicate": "contain",
+   "target": "phenylalanine"
+  },
+  {
+   "source": "wine",
+   "predicate": "contain",
+   "target": "histidine"
+  },
+  {
+   "source": "wine",
+   "predicate": "contain",
+   "target": "yeast"
+  },
+  {
+   "source": "wine",
+   "predicate": "contain",
+   "target": "tirage cork"
+  },
+  {
+   "source": "wine",
+   "predicate": "contain",
+   "target": "crown cap"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13515273:3:a969877d",
+ "entities": [
+  {
+   "name": "P. manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "gas production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcriptome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GO enrichment analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG pathway enrichment analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLS-DA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolomic analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "nitrogen compound metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "organic substance biosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid metabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "carvacrol",
+   "predicate": "induces",
+   "target": "gas production"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_transcriptome",
+   "target": "transcriptome"
+  },
+  {
+   "source": "transcriptome",
+   "predicate": "is_enriched_in",
+   "target": "GO enrichment analysis"
+  },
+  {
+   "source": "GO enrichment analysis",
+   "predicate": "identifies",
+   "target": "nitrogen compound metabolism"
+  },
+  {
+   "source": "GO enrichment analysis",
+   "predicate": "identifies",
+   "target": "organic substance biosynthesis"
+  },
+  {
+   "source": "GO enrichment analysis",
+   "predicate": "identifies",
+   "target": "lipid metabolism"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "has_metabolome",
+   "target": "metabolomic analysis"
+  },
+  {
+   "source": "metabolomic analysis",
+   "predicate": "identifies",
+   "target": "nitrogen compound metabolism"
+  },
+  {
+   "source": "metabolomic analysis",
+   "predicate": "identifies",
+   "target": "organic substance biosynthesis"
+  },
+  {
+   "source": "metabolomic analysis",
+   "predicate": "identifies",
+   "target": "lipid metabolism"
+  }
+ ],
+ "truncated": false
+}

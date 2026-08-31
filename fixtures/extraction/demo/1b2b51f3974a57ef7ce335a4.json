@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC8164748:1:bb997a85",
+ "entities": [
+  {
+   "name": "Lignocellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "Microbial lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "Bioethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Biodiesel",
+   "type": "chemical"
+  },
+  {
+   "name": "Rapeseed",
+   "type": "organism"
+  },
+  {
+   "name": "Soy",
+   "type": "organism"
+  },
+  {
+   "name": "Oil palm",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Acid steam explosion",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Oleaginous yeasts",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus oryzae",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

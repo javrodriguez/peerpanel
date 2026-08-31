@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC9757880:11:e4dbdf92",
+ "entities": [
+  {
+   "name": "Hsu1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met4p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Str2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OAHS",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium chloride",
+   "type": "chemical"
+  },
+  {
+   "name": "magnesium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "magnesium chloride",
+   "type": "chemical"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hsu1",
+   "predicate": "regulates",
+   "target": "GFP"
+  },
+  {
+   "source": "OAHS",
+   "predicate": "is a substrate for",
+   "target": "Str2p"
+  }
+ ],
+ "truncated": false
+}

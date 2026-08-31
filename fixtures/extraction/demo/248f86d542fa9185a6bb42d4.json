@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7470746:5:d4be8e71",
+ "entities": [
+  {
+   "name": "met10−",
+   "type": "organism"
+  },
+  {
+   "name": "GSH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GS-SG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "methionine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lys−",
+   "type": "organism"
+  },
+  {
+   "name": "ade−",
+   "type": "organism"
+  },
+  {
+   "name": "WY1335",
+   "type": "organism"
+  },
+  {
+   "name": "WY1604",
+   "type": "organism"
+  },
+  {
+   "name": "chemostat supernatant",
+   "type": "chemical"
+  },
+  {
+   "name": "organosulfur niche",
+   "type": "chemical"
+  },
+  {
+   "name": "organosulfurs",
+   "type": "chemical"
+  },
+  {
+   "name": "GSX",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met10−",
+   "predicate": "uses",
+   "target": "organosulfurs"
+  },
+  {
+   "source": "met10−",
+   "predicate": "uses",
+   "target": "GSH"
+  },
+  {
+   "source": "met10−",
+   "predicate": "uses",
+   "target": "GS-SG"
+  },
+  {
+   "source": "met10−",
+   "predicate": "uses",
+   "target": "methionine"
+  },
+  {
+   "source": "lys−",
+   "predicate": "releases",
+   "target": "organosulfurs"
+  },
+  {
+   "source": "lys−",
+   "predicate": "releases",
+   "target": "GSH"
+  },
+  {
+   "source": "lys−",
+   "predicate": "releases",
+   "target": "GSX"
+  },
+  {
+   "source": "ade−",
+   "predicate": "releases",
+   "target": "organosulfurs"
+  },
+  {
+   "source": "ade−",
+   "predicate": "releases",
+   "target": "GSH"
+  },
+  {
+   "source": "ade−",
+   "predicate": "releases",
+   "target": "GSX"
+  },
+  {
+   "source": "chemostat supernatant",
+   "predicate": "contains",
+   "target": "organosulfur niche"
+  },
+  {
+   "source": "chemostat supernatant",
+   "predicate": "contains",
+   "target": "organosulfurs"
+  }
+ ],
+ "truncated": false
+}

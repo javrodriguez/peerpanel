@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC10204961:14:76cfff9d",
+ "entities": [
+  {
+   "name": "Agilent 7890A GC",
+   "type": "chemical"
+  },
+  {
+   "name": "Agilent 5975C inert XL mass spectrometric detector",
+   "type": "chemical"
+  },
+  {
+   "name": "Agilent DB-225MS capillary column",
+   "type": "chemical"
+  },
+  {
+   "name": "Santa Clara",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fatty acid methyl esters",
+   "type": "chemical"
+  },
+  {
+   "name": "Internal standard",
+   "type": "chemical"
+  },
+  {
+   "name": "Hexadecane",
+   "type": "chemical"
+  },
+  {
+   "name": "Toluene",
+   "type": "chemical"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Uniprot R. toruloides NP11 reference proteome database",
+   "type": "chemical"
+  },
+  {
+   "name": "MaxQuant v1.6.1.0 software package",
+   "type": "chemical"
+  },
+  {
+   "name": "ProteomeXchange Consortium",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Agilent 7890A GC",
+   "predicate": "connected_to",
+   "target": "Agilent 5975C inert XL mass spectrometric detector"
+  },
+  {
+   "source": "Agilent DB-225MS capillary column",
+   "predicate": "has_column",
+   "target": "Agilent 7890A GC"
+  },
+  {
+   "source": "Santa Clara",
+   "predicate": "located_in",
+   "target": "Agilent 7890A GC"
+  },
+  {
+   "source": "Fatty acid methyl esters",
+   "predicate": "used_as",
+   "target": "Agilent 7890A GC"
+  },
+  {
+   "source": "Internal standard",
+   "predicate": "used_as",
+   "target": "Agilent 7890A GC"
+  },
+  {
+   "source": "Hexadecane",
+   "predicate": "used_as",
+   "target": "Agilent 7890A GC"
+  },
+  {
+   "source": "Toluene",
+   "predicate": "used_as",
+   "target": "Agilent 7890A GC"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13517252:12:95beaca1",
+ "entities": [
+  {
+   "name": "Gut Health",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Immunity",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Disease Resistance",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Resilience",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Probiotic supplementation",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "Fermented soybean meal",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Vibrio parahaemolyticus",
+   "type": "organism"
+  },
+  {
+   "name": "Whiteleg shrimp",
+   "type": "organism"
+  },
+  {
+   "name": "Olive flounder",
+   "type": "organism"
+  },
+  {
+   "name": "Phytase",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Probiotic supplementation",
+   "predicate": "improve",
+   "target": "Gut Health"
+  },
+  {
+   "source": "Yeast hydrolysate",
+   "predicate": "improve",
+   "target": "Disease Resistance"
+  },
+  {
+   "source": "Vibrio parahaemolyticus",
+   "predicate": "challenge",
+   "target": "Disease Resistance"
+  },
+  {
+   "source": "Whiteleg shrimp",
+   "predicate": "host",
+   "target": "Vibrio parahaemolyticus"
+  },
+  {
+   "source": "Olive flounder",
+   "predicate": "host",
+   "target": "Vibrio parahaemolyticus"
+  },
+  {
+   "source": "Probiotic supplementation",
+   "predicate": "improve",
+   "target": "Immunity"
+  }
+ ],
+ "truncated": false
+}

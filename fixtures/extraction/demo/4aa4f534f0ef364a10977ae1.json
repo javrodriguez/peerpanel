@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC9487109:11:78a38067",
+ "entities": [
+  {
+   "name": "vitamin C",
+   "type": "chemical"
+  },
+  {
+   "name": "vitamin B2",
+   "type": "chemical"
+  },
+  {
+   "name": "vitamin B12",
+   "type": "chemical"
+  },
+  {
+   "name": "vitamin K",
+   "type": "chemical"
+  },
+  {
+   "name": "folates",
+   "type": "chemical"
+  },
+  {
+   "name": "folic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Spathaspora passalidarum",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Ashbya",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "vitamin C",
+   "predicate": "is produced by",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Ashbya",
+   "predicate": "ferments",
+   "target": "folic acid"
+  }
+ ],
+ "truncated": false
+}

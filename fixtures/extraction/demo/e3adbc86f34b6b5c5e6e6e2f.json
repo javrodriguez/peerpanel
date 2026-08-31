@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13514482:10:cc2e4fc5",
+ "entities": [
+  {
+   "name": "Z68",
+   "type": "organism"
+  },
+  {
+   "name": "F. fennae M58",
+   "type": "organism"
+  },
+  {
+   "name": "F. velutipes FV0027",
+   "type": "organism"
+  },
+  {
+   "name": "F. yunnanensis",
+   "type": "organism"
+  },
+  {
+   "name": "potassium",
+   "type": "chemical"
+  },
+  {
+   "name": "zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "iron",
+   "type": "chemical"
+  },
+  {
+   "name": "protein",
+   "type": "chemical"
+  },
+  {
+   "name": "vitamin B1",
+   "type": "chemical"
+  },
+  {
+   "name": "vitamin B2",
+   "type": "chemical"
+  },
+  {
+   "name": "L(+)-ascorbic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "FTR1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Z68",
+   "predicate": "has_higher_levels_of",
+   "target": "protein"
+  },
+  {
+   "source": "Z68",
+   "predicate": "has_higher_levels_of",
+   "target": "potassium"
+  },
+  {
+   "source": "Z68",
+   "predicate": "has_higher_levels_of",
+   "target": "zinc"
+  },
+  {
+   "source": "Z68",
+   "predicate": "has_higher_levels_of",
+   "target": "iron"
+  },
+  {
+   "source": "Z68",
+   "predicate": "has_higher_levels_of",
+   "target": "vitamin B1"
+  },
+  {
+   "source": "Z68",
+   "predicate": "has_higher_levels_of",
+   "target": "vitamin B2"
+  },
+  {
+   "source": "Z68",
+   "predicate": "has_higher_levels_of",
+   "target": "L(+)-ascorbic acid"
+  }
+ ],
+ "truncated": false
+}

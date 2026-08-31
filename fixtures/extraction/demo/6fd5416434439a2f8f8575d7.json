@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC12278674:15:a66d22a7",
+ "entities": [
+  {
+   "name": "deep-well plate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "sample/binding plate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lysate",
+   "type": "chemical"
+  },
+  {
+   "name": "protein",
+   "type": "chemical"
+  },
+  {
+   "name": "ultrapure water",
+   "type": "chemical"
+  },
+  {
+   "name": "absolute ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "bead plate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SP3 beads",
+   "type": "chemical"
+  },
+  {
+   "name": "KingFisher",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "digestion plate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "digestion mixture",
+   "type": "chemical"
+  },
+  {
+   "name": "trypsin",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lysate",
+   "predicate": "contains",
+   "target": "protein"
+  },
+  {
+   "source": "lysate",
+   "predicate": "transferred",
+   "target": "deep-well plate"
+  },
+  {
+   "source": "deep-well plate",
+   "predicate": "contains",
+   "target": "lysate"
+  },
+  {
+   "source": "bead plate",
+   "predicate": "contains",
+   "target": "SP3 beads"
+  },
+  {
+   "source": "bead plate",
+   "predicate": "transferred",
+   "target": "KingFisher"
+  },
+  {
+   "source": "KingFisher",
+   "predicate": "contains",
+   "target": "bead plate"
+  },
+  {
+   "source": "digestion plate",
+   "predicate": "contains",
+   "target": "digestion mixture"
+  },
+  {
+   "source": "digestion mixture",
+   "predicate": "contains",
+   "target": "trypsin"
+  },
+  {
+   "source": "lysate",
+   "predicate": "added",
+   "target": "absolute ethanol"
+  },
+  {
+   "source": "absolute ethanol",
+   "predicate": "added",
+   "target": "lysate"
+  },
+  {
+   "source": "lysate",
+   "predicate": "mixed",
+   "target": "digestion mixture"
+  },
+  {
+   "source": "digestion mixture",
+   "predicate": "mixed",
+   "target": "lysate"
+  }
+ ],
+ "truncated": false
+}

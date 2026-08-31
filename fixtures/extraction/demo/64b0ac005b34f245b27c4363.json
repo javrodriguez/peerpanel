@@ -1,0 +1,58 @@
+{
+ "chunk_id": "PMC9763685:4:ac2851e8",
+ "entities": [
+  {
+   "name": "Met15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FY4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SAP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met",
+   "type": "chemical"
+  },
+  {
+   "name": "Cys",
+   "type": "chemical"
+  },
+  {
+   "name": "Glu",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "YLL058W",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FY4",
+   "predicate": "has",
+   "target": "Met15"
+  },
+  {
+   "source": "FY4",
+   "predicate": "has",
+   "target": "Met3"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC11618413:16:b2e71fc3",
+ "entities": [
+  {
+   "name": "Krebs MRH",
+   "type": "organism"
+  },
+  {
+   "name": "Bromley EHC",
+   "type": "organism"
+  },
+  {
+   "name": "Donald AM",
+   "type": "organism"
+  },
+  {
+   "name": "Eftink",
+   "type": "organism"
+  },
+  {
+   "name": "Shammas SL",
+   "type": "organism"
+  },
+  {
+   "name": "Soares",
+   "type": "organism"
+  },
+  {
+   "name": "Monteiro GA",
+   "type": "organism"
+  },
+  {
+   "name": "Mergulhão FJ",
+   "type": "organism"
+  },
+  {
+   "name": "Ziege R",
+   "type": "organism"
+  },
+  {
+   "name": "Nijjer J",
+   "type": "organism"
+  },
+  {
+   "name": "Jo J",
+   "type": "organism"
+  },
+  {
+   "name": "Price-Whelan A",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

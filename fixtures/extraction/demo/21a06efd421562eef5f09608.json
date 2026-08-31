@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7690147:9:13c2d412",
+ "entities": [
+  {
+   "name": "GeneMark-ES",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GeneMark-ET",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Stringtie",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RepeatMasker",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rRNAmmer",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tRNAscan-SE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OrthoMCL",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KaKs_Calculator Toolbox",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UHPLC 1290 series",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Triple TOF 6600",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Analyst TF",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XCMS",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC7953724:7:7ecf8c19",
+ "entities": [
+  {
+   "name": "Hemicellulose hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "Crude glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast Nitrogen Base",
+   "type": "chemical"
+  },
+  {
+   "name": "Ammonium sulphate",
+   "type": "chemical"
+  },
+  {
+   "name": "Potassium phosphate buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Arabinose",
+   "type": "chemical"
+  },
+  {
+   "name": "NaCl",
+   "type": "chemical"
+  },
+  {
+   "name": "NaOH",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hemicellulose hydrolysate",
+   "predicate": "contains",
+   "target": "Xylose"
+  },
+  {
+   "source": "Hemicellulose hydrolysate",
+   "predicate": "contains",
+   "target": "Glucose"
+  },
+  {
+   "source": "Hemicellulose hydrolysate",
+   "predicate": "contains",
+   "target": "Acetic acid"
+  },
+  {
+   "source": "Hemicellulose hydrolysate",
+   "predicate": "contains",
+   "target": "Arabinose"
+  }
+ ],
+ "truncated": false
+}

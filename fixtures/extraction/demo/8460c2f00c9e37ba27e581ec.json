@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC9825584:1:f4f439b2",
+ "entities": [
+  {
+   "name": "OrthoDB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RefSeq",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GenBank",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Uniprot",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ensembl",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ENA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NCBI gid",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "InterPro",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GO",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EC categories",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KEGG genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NextProt",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

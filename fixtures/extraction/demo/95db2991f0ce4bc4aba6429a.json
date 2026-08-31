@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC12628781:15:a9e8be97",
+ "entities": [
+  {
+   "name": "microbial EPSs",
+   "type": "chemical"
+  },
+  {
+   "name": "Rhodotorula species",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides CCT0783",
+   "type": "organism"
+  },
+  {
+   "name": "EPS",
+   "type": "chemical"
+  },
+  {
+   "name": "oleaginous yeast",
+   "type": "organism"
+  },
+  {
+   "name": "extracellular microbial biopolymer cell factory",
+   "type": "organism"
+  },
+  {
+   "name": "biopolymers",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "Estonian Research Council",
+   "type": "organism"
+  },
+  {
+   "name": "European Union’s Horizon Europe Teaming for Excellence program",
+   "type": "organism"
+  },
+  {
+   "name": "Austrian government’s public employment service",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "be",
+   "target": "oleaginous yeast"
+  },
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "be",
+   "target": "extracellular microbial biopolymer cell factory"
+  },
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "produce",
+   "target": "biopolymers"
+  }
+ ],
+ "truncated": false
+}

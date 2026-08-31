@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC7873862:3:10ffc034",
+ "entities": [
+  {
+   "name": "lyophilized cell mass",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Retsch Tissue Lyser",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DB-wax column",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thermo Scientific Focus gas chromatograph",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "flame ionization detector",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sigma",
+   "type": "chemical"
+  },
+  {
+   "name": "tridecanoic acid methyl ester",
+   "type": "chemical"
+  },
+  {
+   "name": "methanol",
+   "type": "chemical"
+  },
+  {
+   "name": "n-hexane",
+   "type": "chemical"
+  },
+  {
+   "name": "palmitic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "palmitoleic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "heptadecanoic acid",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lyophilized cell mass",
+   "predicate": "extracted_with",
+   "target": "tridecanoic acid methyl ester"
+  },
+  {
+   "source": "Retsch Tissue Lyser",
+   "predicate": "used_for",
+   "target": "lyophilized cell mass"
+  },
+  {
+   "source": "DB-wax column",
+   "predicate": "used_for",
+   "target": "palmitic acid"
+  },
+  {
+   "source": "DB-wax column",
+   "predicate": "used_for",
+   "target": "palmitoleic acid"
+  },
+  {
+   "source": "DB-wax column",
+   "predicate": "used_for",
+   "target": "heptadecanoic acid"
+  },
+  {
+   "source": "Thermo Scientific Focus gas chromatograph",
+   "predicate": "used_for",
+   "target": "palmitic acid"
+  },
+  {
+   "source": "Thermo Scientific Focus gas chromatograph",
+   "predicate": "used_for",
+   "target": "palmitoleic acid"
+  },
+  {
+   "source": "Thermo Scientific Focus gas chromatograph",
+   "predicate": "used_for",
+   "target": "heptadecanoic acid"
+  },
+  {
+   "source": "flame ionization detector",
+   "predicate": "used_for",
+   "target": "palmitic acid"
+  },
+  {
+   "source": "flame ionization detector",
+   "predicate": "used_for",
+   "target": "palmitoleic acid"
+  }
+ ],
+ "truncated": false
+}

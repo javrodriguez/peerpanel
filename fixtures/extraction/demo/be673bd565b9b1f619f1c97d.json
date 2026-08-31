@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC5484544:15:db128bc8",
+ "entities": [
+  {
+   "name": "SCH9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vma2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vma6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Stv1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vph1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vma5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase subunits",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ImageJ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rapamycin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MES",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SCH9",
+   "predicate": "interacts_with",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "SCH9",
+   "predicate": "interacts_with",
+   "target": "Vma2"
+  },
+  {
+   "source": "SCH9",
+   "predicate": "interacts_with",
+   "target": "Vma6"
+  },
+  {
+   "source": "SCH9",
+   "predicate": "interacts_with",
+   "target": "Stv1"
+  },
+  {
+   "source": "SCH9",
+   "predicate": "interacts_with",
+   "target": "Vph1"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "has_subunit",
+   "target": "Vma2"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "has_subunit",
+   "target": "Vma6"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "has_subunit",
+   "target": "Stv1"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "has_subunit",
+   "target": "Vph1"
+  }
+ ],
+ "truncated": false
+}

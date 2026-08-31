@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC9157227:7:71d6708d",
+ "entities": [
+  {
+   "name": "R. toruloides CCT0783",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "CCT0783",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BsaI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NCBI",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 14",
+   "type": "organism"
+  },
+  {
+   "name": "IFO 0559",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 349",
+   "type": "organism"
+  },
+  {
+   "name": "IFO 0880",
+   "type": "organism"
+  },
+  {
+   "name": "NP11",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "has_genome_similarity",
+   "target": "CBS 14"
+  },
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "has_genome_similarity",
+   "target": "IFO 0880"
+  },
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "has_gene_version",
+   "target": "NP11"
+  },
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "has_genome_similarity",
+   "target": "CBS 349"
+  },
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "has_genome_similarity",
+   "target": "IFO 0559"
+  },
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "has_genome_similarity",
+   "target": "NP11"
+  },
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "has_genome_similarity",
+   "target": "CBS 14"
+  }
+ ],
+ "truncated": false
+}

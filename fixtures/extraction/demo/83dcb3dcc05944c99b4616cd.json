@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC5826700:6:fbbad8a1",
+ "entities": [
+  {
+   "name": "acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "cell",
+   "type": "organism"
+  },
+  {
+   "name": "plasma membrane",
+   "type": "organism"
+  },
+  {
+   "name": "cytosol",
+   "type": "organism"
+  },
+  {
+   "name": "vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "Pma1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Avt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn2/4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rtg1/3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Gis1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

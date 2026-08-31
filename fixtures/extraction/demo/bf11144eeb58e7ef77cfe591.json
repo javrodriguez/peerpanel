@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13515494:8:73b170f9",
+ "entities": [
+  {
+   "name": "isoamyl alcohol",
+   "type": "chemical"
+  },
+  {
+   "name": "diethyl succinate",
+   "type": "chemical"
+  },
+  {
+   "name": "ethyl butanoate",
+   "type": "chemical"
+  },
+  {
+   "name": "ethyl octanoate",
+   "type": "chemical"
+  },
+  {
+   "name": "ethyl hexanoate",
+   "type": "chemical"
+  },
+  {
+   "name": "1-hexanol",
+   "type": "chemical"
+  },
+  {
+   "name": "isoamyl acetate",
+   "type": "chemical"
+  },
+  {
+   "name": "VAL",
+   "type": "chemical"
+  },
+  {
+   "name": "ethyl isobutanoate",
+   "type": "chemical"
+  },
+  {
+   "name": "PHE",
+   "type": "chemical"
+  },
+  {
+   "name": "2-phenylethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "phenylacetaldehyde",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VAL",
+   "predicate": "associate",
+   "target": "ethyl isobutanoate"
+  },
+  {
+   "source": "VAL",
+   "predicate": "associate",
+   "target": "isoamyl alcohol"
+  },
+  {
+   "source": "PHE",
+   "predicate": "associate",
+   "target": "2-phenylethanol"
+  },
+  {
+   "source": "PHE",
+   "predicate": "associate",
+   "target": "phenylacetaldehyde"
+  }
+ ],
+ "truncated": false
+}

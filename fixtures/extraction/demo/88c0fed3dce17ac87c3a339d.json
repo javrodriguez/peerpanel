@@ -1,0 +1,42 @@
+{
+ "chunk_id": "PMC13464734:7:daec6847",
+ "entities": [
+  {
+   "name": "DoUGT71K2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "D. officinale",
+   "type": "organism"
+  },
+  {
+   "name": "DoMYB102",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "N. benthamiana",
+   "type": "organism"
+  },
+  {
+   "name": "AbA",
+   "type": "chemical"
+  },
+  {
+   "name": "SD/-Leu",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DoUGT71K2",
+   "predicate": "is_expressed_in",
+   "target": "D. officinale"
+  },
+  {
+   "source": "DoMYB102",
+   "predicate": "activates_promoter",
+   "target": "DoUGT71K2"
+  }
+ ],
+ "truncated": false
+}

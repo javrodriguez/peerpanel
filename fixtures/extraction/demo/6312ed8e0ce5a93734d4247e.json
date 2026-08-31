@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC10729969:17:a2999b45",
+ "entities": [
+  {
+   "name": "Statistical tests",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "significance testing",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "one-sample two-tailed t test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "two-tailed two-sample t test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NCBI's protein BLAST",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces Genome Database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jalview",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UniProt",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S288C Met17 protein sequence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MdeA protein sequence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsu1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "significance testing"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "one-sample two-tailed t test"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "two-tailed two-sample t test"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "NCBI's protein BLAST"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "Saccharomyces Genome Database"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "Jalview"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "UniProt"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "S288C Met17 protein sequence"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "MdeA protein sequence"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "Hsu1"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "uses",
+   "target": "Met17"
+  },
+  {
+   "source": "Statistical tests",
+   "predicate": "tests",
+   "target": "S288C Met17 protein sequence"
+  }
+ ],
+ "truncated": false
+}

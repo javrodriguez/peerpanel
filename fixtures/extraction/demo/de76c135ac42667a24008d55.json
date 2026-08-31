@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13513244:9:78e8e9a5",
+ "entities": [
+  {
+   "name": "Tyrosine",
+   "type": "chemical"
+  },
+  {
+   "name": "YARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Histidine",
+   "type": "chemical"
+  },
+  {
+   "name": "Caenorhabditis elegans",
+   "type": "organism"
+  },
+  {
+   "name": "C. elegans",
+   "type": "organism"
+  },
+  {
+   "name": "HARS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CMT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tRNA synthetase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Human",
+   "type": "organism"
+  },
+  {
+   "name": "Patient",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

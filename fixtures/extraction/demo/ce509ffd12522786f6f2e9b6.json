@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13517252:16:31e7796b",
+ "entities": [
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Red seabream",
+   "type": "organism"
+  },
+  {
+   "name": "Pagrus major",
+   "type": "organism"
+  },
+  {
+   "name": "Olive flounder",
+   "type": "organism"
+  },
+  {
+   "name": "Paralichthys olivaceus",
+   "type": "organism"
+  },
+  {
+   "name": "European seabass",
+   "type": "organism"
+  },
+  {
+   "name": "Dicentrarchus labrax",
+   "type": "organism"
+  },
+  {
+   "name": "Gilthead seabream",
+   "type": "organism"
+  },
+  {
+   "name": "Sparus aurata",
+   "type": "organism"
+  },
+  {
+   "name": "Yellowtail",
+   "type": "organism"
+  },
+  {
+   "name": "Seriola quinqueradiata",
+   "type": "organism"
+  },
+  {
+   "name": "Triploid crucian carp",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Taurine",
+   "predicate": "supplementation",
+   "target": "Red seabream"
+  },
+  {
+   "source": "Taurine",
+   "predicate": "supplementation",
+   "target": "Pagrus major"
+  },
+  {
+   "source": "Taurine",
+   "predicate": "supplementation",
+   "target": "Paralichthys olivaceus"
+  },
+  {
+   "source": "Taurine",
+   "predicate": "supplementation",
+   "target": "Dicentrarchus labrax"
+  },
+  {
+   "source": "Taurine",
+   "predicate": "supplementation",
+   "target": "Sparus aurata"
+  },
+  {
+   "source": "Taurine",
+   "predicate": "supplementation",
+   "target": "Seriola quinqueradiata"
+  }
+ ],
+ "truncated": false
+}

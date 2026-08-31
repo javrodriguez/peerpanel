@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13429971:2:b2cb65f3",
+ "entities": [
+  {
+   "name": "p722",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Gcn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pES806-HsA-p722",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pES807-HsB-p722",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pES808-HsC-p722",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "p1833",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pRS316",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pRS425",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pHQ1093",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GCN1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GCN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ESY10069",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GCN1",
+   "predicate": "is_deleted",
+   "target": "ESY10069"
+  },
+  {
+   "source": "GCN2",
+   "predicate": "is_deleted",
+   "target": "ESY10069"
+  },
+  {
+   "source": "pES806-HsA-p722",
+   "predicate": "is_constructed",
+   "target": "pES806-HsA-p722"
+  },
+  {
+   "source": "pES807-HsB-p722",
+   "predicate": "is_constructed",
+   "target": "pES807-HsB-p722"
+  },
+  {
+   "source": "pES808-HsC-p722",
+   "predicate": "is_constructed",
+   "target": "pES808-HsC-p722"
+  }
+ ],
+ "truncated": false
+}

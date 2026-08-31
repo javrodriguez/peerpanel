@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13510017:0:9aa6d52e",
+ "entities": [
+  {
+   "name": "Antioxidants",
+   "type": "organism"
+  },
+  {
+   "name": "Basel",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Multidisciplinary Digital Publishing Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Preťo Ondrej",
+   "type": "organism"
+  },
+  {
+   "name": "Iaparov Bogdan",
+   "type": "organism"
+  },
+  {
+   "name": "Freund Friedemann",
+   "type": "organism"
+  },
+  {
+   "name": "Karhanek Miloslav",
+   "type": "organism"
+  },
+  {
+   "name": "Stolc Viktor",
+   "type": "organism"
+  },
+  {
+   "name": "Alessandra",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "European Union",
+   "type": "organism"
+  },
+  {
+   "name": "A4L_BRIDGE project",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Antioxidants",
+   "predicate": "journal",
+   "target": "Basel"
+  },
+  {
+   "source": "Multidisciplinary Digital Publishing Institute",
+   "predicate": "publisher",
+   "target": "Antioxidants"
+  },
+  {
+   "source": "European Union",
+   "predicate": "funding",
+   "target": "A4L_BRIDGE project"
+  }
+ ],
+ "truncated": false
+}

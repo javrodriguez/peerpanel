@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC11701741:2:ce91c1cc",
+ "entities": [
+  {
+   "name": "OrthoDB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MASH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BUSCO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OrthoLoger software",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NCBI Taxonomy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RefSeq v220",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GenBank v257",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ensembl Rapid Release",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UniProt",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "COG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gene Ontology",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "MASH"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "BUSCO"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "OrthoLoger software"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "NCBI Taxonomy"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "RefSeq v220"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "GenBank v257"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "Ensembl Rapid Release"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "UniProt"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "KEGG"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "COG"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "Gene Ontology"
+  }
+ ],
+ "truncated": false
+}

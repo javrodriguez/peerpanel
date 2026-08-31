@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC1409804:5:557f2dad",
+ "entities": [
+  {
+   "name": "P(φ1|s,h)",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "P(φ0|s,h)",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS+",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EST",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "exon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "intron",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "intergenic region",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "splice site",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ab initio gene prediction program",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HMMGene",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has_a_relative_malus_factor",
+   "target": "P(φ1|s,h)"
+  }
+ ],
+ "truncated": false
+}

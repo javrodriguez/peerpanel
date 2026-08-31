@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC9763685:3:e91060ab",
+ "entities": [
+  {
+   "name": "BY4741",
+   "type": "organism"
+  },
+  {
+   "name": "MET15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FY4",
+   "type": "organism"
+  },
+  {
+   "name": "MET3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Glu",
+   "type": "chemical"
+  },
+  {
+   "name": "Gal",
+   "type": "chemical"
+  },
+  {
+   "name": "EtOH",
+   "type": "chemical"
+  },
+  {
+   "name": "SD-Met-Cys",
+   "type": "chemical"
+  },
+  {
+   "name": "SD+Met-Cys-Ura",
+   "type": "chemical"
+  },
+  {
+   "name": "SC-Met-Cys",
+   "type": "chemical"
+  },
+  {
+   "name": "YPDA",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BY4741",
+   "predicate": "grows_in",
+   "target": "SD-Met-Cys"
+  },
+  {
+   "source": "BY4741",
+   "predicate": "grows_in",
+   "target": "SD+Met-Cys-Ura"
+  },
+  {
+   "source": "BY4741",
+   "predicate": "grows_in",
+   "target": "SC-Met-Cys"
+  },
+  {
+   "source": "MET15",
+   "predicate": "required_for_growth",
+   "target": "SD-Met-Cys"
+  },
+  {
+   "source": "MET15",
+   "predicate": "required_for_growth",
+   "target": "SD+Met-Cys-Ura"
+  },
+  {
+   "source": "MET15",
+   "predicate": "required_for_growth",
+   "target": "SC-Met-Cys"
+  },
+  {
+   "source": "MET3",
+   "predicate": "required_for_growth",
+   "target": "SD-Met-Cys"
+  },
+  {
+   "source": "MET3",
+   "predicate": "required_for_growth",
+   "target": "SD+Met-Cys-Ura"
+  },
+  {
+   "source": "MET3",
+   "predicate": "required_for_growth",
+   "target": "SC-Met-Cys"
+  }
+ ],
+ "truncated": false
+}

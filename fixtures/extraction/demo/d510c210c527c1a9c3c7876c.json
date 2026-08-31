@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13514482:2:90d1c58e",
+ "entities": [
+  {
+   "name": "Nitrogen Source Test",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nitrogen source experiment",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "tryptone",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "beef extract",
+   "type": "chemical"
+  },
+  {
+   "name": "acid-hydrolyzed casein",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen source",
+   "type": "chemical"
+  },
+  {
+   "name": "basal medium",
+   "type": "chemical"
+  },
+  {
+   "name": "equal nitrogen concentration",
+   "type": "chemical"
+  },
+  {
+   "name": "2 g/L",
+   "type": "chemical"
+  },
+  {
+   "name": "medium",
+   "type": "chemical"
+  },
+  {
+   "name": "added nitrogen source",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nitrogen Source Test",
+   "predicate": "uses",
+   "target": "nitrogen source"
+  },
+  {
+   "source": "nitrogen source experiment",
+   "predicate": "uses",
+   "target": "nitrogen source"
+  },
+  {
+   "source": "tryptone",
+   "predicate": "is",
+   "target": "nitrogen source"
+  },
+  {
+   "source": "yeast extract",
+   "predicate": "is",
+   "target": "nitrogen source"
+  },
+  {
+   "source": "beef extract",
+   "predicate": "is",
+   "target": "nitrogen source"
+  },
+  {
+   "source": "acid-hydrolyzed casein",
+   "predicate": "is",
+   "target": "nitrogen source"
+  },
+  {
+   "source": "nitrogen source",
+   "predicate": "is",
+   "target": "basal medium"
+  },
+  {
+   "source": "basal medium",
+   "predicate": "has",
+   "target": "nitrogen source"
+  },
+  {
+   "source": "nitrogen source experiment",
+   "predicate": "has",
+   "target": "basal medium"
+  },
+  {
+   "source": "nitrogen source",
+   "predicate": "has",
+   "target": "equal nitrogen concentration"
+  },
+  {
+   "source": "nitrogen source experiment",
+   "predicate": "has",
+   "target": "equal nitrogen concentration"
+  },
+  {
+   "source": "nitrogen source",
+   "predicate": "has",
+   "target": "2 g/L"
+  }
+ ],
+ "truncated": false
+}

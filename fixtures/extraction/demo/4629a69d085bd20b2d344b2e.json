@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC6912988:0:9c8b7895",
+ "entities": [
+  {
+   "name": "StringTie2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kovaka Sam",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zimin Aleksey V.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pertea Geo M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Razaghi Roham",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pertea Mihaela",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Salzberg Steven L.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Genome Biology",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BMC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Johns Hopkins University",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Department of Computer Science",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Department of Biomedical Engineering",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Kovaka Sam",
+   "predicate": "is_author_of",
+   "target": "StringTie2"
+  },
+  {
+   "source": "Zimin Aleksey V.",
+   "predicate": "is_author_of",
+   "target": "StringTie2"
+  },
+  {
+   "source": "Pertea Geo M.",
+   "predicate": "is_author_of",
+   "target": "StringTie2"
+  },
+  {
+   "source": "Razaghi Roham",
+   "predicate": "is_author_of",
+   "target": "StringTie2"
+  },
+  {
+   "source": "Pertea Mihaela",
+   "predicate": "is_author_of",
+   "target": "StringTie2"
+  },
+  {
+   "source": "Salzberg Steven L.",
+   "predicate": "is_author_of",
+   "target": "StringTie2"
+  }
+ ],
+ "truncated": false
+}

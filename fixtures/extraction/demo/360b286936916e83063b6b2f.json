@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12278674:3:8909c9d7",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "proteome",
+   "type": "chemical"
+  },
+  {
+   "name": "PTMome",
+   "type": "chemical"
+  },
+  {
+   "name": "cell dry weight",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CDW",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipidome",
+   "type": "chemical"
+  },
+  {
+   "name": "phosphatidylinositol",
+   "type": "chemical"
+  },
+  {
+   "name": "cardiolipin",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acid ester of hydroxy fatty acids",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

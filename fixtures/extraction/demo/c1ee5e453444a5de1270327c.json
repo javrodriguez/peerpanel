@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13517252:9:7cfaea43",
+ "entities": [
+  {
+   "name": "Phytase",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "Gut-targeted additive",
+   "type": "chemical"
+  },
+  {
+   "name": "Fishmeal",
+   "type": "chemical"
+  },
+  {
+   "name": "Soy",
+   "type": "chemical"
+  },
+  {
+   "name": "Plant-protein",
+   "type": "chemical"
+  },
+  {
+   "name": "Salmonid",
+   "type": "organism"
+  },
+  {
+   "name": "Finfish",
+   "type": "organism"
+  },
+  {
+   "name": "Crustacean",
+   "type": "organism"
+  },
+  {
+   "name": "Juvenile",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

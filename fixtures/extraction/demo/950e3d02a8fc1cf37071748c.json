@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC6402699:20:64cdd945",
+ "entities": [
+  {
+   "name": "A−L+",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CoSMO",
+   "type": "organism"
+  },
+  {
+   "name": "WY1340",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WY1598",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WY2447",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OAR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cys102",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ser",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ade",
+   "type": "chemical"
+  },
+  {
+   "name": "Hyp",
+   "type": "chemical"
+  },
+  {
+   "name": "Lys",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WY1340",
+   "predicate": "is_ancestor_of",
+   "target": "WY1598"
+  },
+  {
+   "source": "WY1598",
+   "predicate": "is_descendant_of",
+   "target": "WY1340"
+  },
+  {
+   "source": "WY2447",
+   "predicate": "has_point_mutation",
+   "target": "Cys102"
+  },
+  {
+   "source": "WY2447",
+   "predicate": "has_synonymous_nucleotide_change",
+   "target": "OAR1"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC7470746:15:1ea6c314",
+ "entities": [
+  {
+   "name": "Reduced glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "Thiol Probe IV",
+   "type": "chemical"
+  },
+  {
+   "name": "EMD Millipore",
+   "type": "organism"
+  },
+  {
+   "name": "Burlington",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HPLC",
+   "type": "chemical"
+  },
+  {
+   "name": "Synergi 4-μM Hydro-RP 80-Å LC Column",
+   "type": "chemical"
+  },
+  {
+   "name": "Phenomenex",
+   "type": "organism"
+  },
+  {
+   "name": "Torrance",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SecurityGuard Cartridges AQ C18",
+   "type": "chemical"
+  },
+  {
+   "name": "AJO-7511",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Shimadzu",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Reduced glutathione",
+   "predicate": "derivatized_by",
+   "target": "Thiol Probe IV"
+  }
+ ],
+ "truncated": false
+}

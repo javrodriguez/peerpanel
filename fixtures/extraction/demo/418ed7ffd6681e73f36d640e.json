@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC6402699:17:0020f405",
+ "entities": [
+  {
+   "name": "L-A+ cells",
+   "type": "organism"
+  },
+  {
+   "name": "A-L+ cells",
+   "type": "organism"
+  },
+  {
+   "name": "lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CoSMO",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "exponential phase",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "agar",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "agarose",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MF membrane",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Millipore",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Billerica",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L-A+ cells",
+   "predicate": "grown in",
+   "target": "SD"
+  },
+  {
+   "source": "A-L+ cells",
+   "predicate": "grown in",
+   "target": "SD"
+  },
+  {
+   "source": "A-L+ cells",
+   "predicate": "prestarved in",
+   "target": "SD"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "grew in",
+   "target": "agar"
+  },
+  {
+   "source": "CoSMO",
+   "predicate": "grew in",
+   "target": "agarose"
+  },
+  {
+   "source": "lysine",
+   "predicate": "released by",
+   "target": "A-L+ cells"
+  },
+  {
+   "source": "hypoxanthine",
+   "predicate": "released by",
+   "target": "A-L+ cells"
+  },
+  {
+   "source": "lysine",
+   "predicate": "consumed by",
+   "target": "CoSMO"
+  },
+  {
+   "source": "hypoxanthine",
+   "predicate": "consumed by",
+   "target": "CoSMO"
+  }
+ ],
+ "truncated": false
+}

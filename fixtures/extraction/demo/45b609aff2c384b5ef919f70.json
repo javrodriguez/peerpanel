@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13450799:22:e59d8ebc",
+ "entities": [
+  {
+   "name": "PLOS authors",
+   "type": "organism"
+  },
+  {
+   "name": "Megumi Sato",
+   "type": "organism"
+  },
+  {
+   "name": "Kaoru Irie",
+   "type": "organism"
+  },
+  {
+   "name": "Yasuyuki Suda",
+   "type": "organism"
+  },
+  {
+   "name": "Tomoki Mizuno",
+   "type": "organism"
+  },
+  {
+   "name": "Kenji Irie",
+   "type": "organism"
+  },
+  {
+   "name": "Arthur J. Lustig",
+   "type": "organism"
+  },
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "NAAS",
+   "type": "organism"
+  },
+  {
+   "name": "Decision Letter 2",
+   "type": "organism"
+  },
+  {
+   "name": "Reviewer #1",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

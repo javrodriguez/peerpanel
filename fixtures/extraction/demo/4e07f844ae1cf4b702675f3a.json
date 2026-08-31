@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13458714:3:8bd8e4c9",
+ "entities": [
+  {
+   "name": "human GCN1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GCN2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GCN1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HsRWDBD+CTD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ScRWDBD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R2312",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "K2323",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "K2342",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "K2354",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "T2350",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R2312A",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "human GCN1",
+   "predicate": "has_equivalent_amino_acid",
+   "target": "yeast"
+  },
+  {
+   "source": "HsRWDBD+CTD",
+   "predicate": "has_equivalent_amino_acid",
+   "target": "ScRWDBD"
+  },
+  {
+   "source": "HsRWDBD+CTD",
+   "predicate": "has_equivalent_amino_acid",
+   "target": "R2312"
+  },
+  {
+   "source": "HsRWDBD+CTD",
+   "predicate": "has_equivalent_amino_acid",
+   "target": "K2323"
+  },
+  {
+   "source": "HsRWDBD+CTD",
+   "predicate": "has_equivalent_amino_acid",
+   "target": "K2342"
+  },
+  {
+   "source": "HsRWDBD+CTD",
+   "predicate": "has_equivalent_amino_acid",
+   "target": "K2354"
+  },
+  {
+   "source": "HsRWDBD+CTD",
+   "predicate": "has_equivalent_amino_acid",
+   "target": "T2350"
+  },
+  {
+   "source": "HsRWDBD+CTD",
+   "predicate": "has_equivalent_amino_acid",
+   "target": "R2312A"
+  }
+ ],
+ "truncated": false
+}

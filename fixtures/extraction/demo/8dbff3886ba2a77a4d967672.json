@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC11102182:3:cd19c303",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "nitrogen-sufficient cultures",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen-deficient cultures",
+   "type": "chemical"
+  },
+  {
+   "name": "cultures",
+   "type": "chemical"
+  },
+  {
+   "name": "growth phase",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "exponential growth phase cultures",
+   "type": "chemical"
+  },
+  {
+   "name": "RNA-Seq dataset",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA-Seq data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "genes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "nutrient starvation",
+   "type": "chemical"
+  },
+  {
+   "name": "baseline cultures",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_metabolic_process",
+   "target": "nutrient starvation"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_metabolic_process",
+   "target": "baseline cultures"
+  }
+ ],
+ "truncated": false
+}

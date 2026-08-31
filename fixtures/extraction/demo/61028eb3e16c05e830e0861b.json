@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC12278674:9:ee004016",
+ "entities": [
+  {
+   "name": "acetyl-CoA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NADPH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fatty acid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "malonyl-CoA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "acetyl-CoA carboxylase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ACC1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S1047",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S1159",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AMP kinase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FAS1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FAS2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PAH1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "acetyl-CoA",
+   "predicate": "carboxylates",
+   "target": "malonyl-CoA"
+  },
+  {
+   "source": "AMP kinase",
+   "predicate": "phosphorylates",
+   "target": "S1047"
+  }
+ ],
+ "truncated": false
+}

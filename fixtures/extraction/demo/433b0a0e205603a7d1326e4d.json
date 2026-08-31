@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC10398944:9:50b63d0f",
+ "entities": [
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_11990",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty alcohol",
+   "type": "chemical"
+  },
+  {
+   "name": "biomass hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "pentose",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon catabolite repression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bioproduct conversion",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bioreactor systems",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "regulation of alternative carbon catabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "RTO4_11990",
+   "predicate": "interacts with",
+   "target": "xylose"
+  }
+ ],
+ "truncated": false
+}

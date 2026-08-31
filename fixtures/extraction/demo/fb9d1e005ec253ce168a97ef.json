@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC7470746:11:c2439ead",
+ "entities": [
+  {
+   "name": "WY1604",
+   "type": "organism"
+  },
+  {
+   "name": "WY2226",
+   "type": "organism"
+  },
+  {
+   "name": "WY2490",
+   "type": "organism"
+  },
+  {
+   "name": "WY2527",
+   "type": "organism"
+  },
+  {
+   "name": "lys−orgS−",
+   "type": "organism"
+  },
+  {
+   "name": "lys−",
+   "type": "organism"
+  },
+  {
+   "name": "rapamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "organosulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "SD",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WY1604",
+   "predicate": "has genotype",
+   "target": "lys−orgS−"
+  },
+  {
+   "source": "WY2226",
+   "predicate": "has genotype",
+   "target": "lys−"
+  },
+  {
+   "source": "WY2490",
+   "predicate": "has genotype",
+   "target": "lys−"
+  },
+  {
+   "source": "WY1604",
+   "predicate": "is control",
+   "target": "lys−orgS−"
+  },
+  {
+   "source": "WY2226",
+   "predicate": "is control",
+   "target": "lys−"
+  },
+  {
+   "source": "WY2490",
+   "predicate": "is used in experiment",
+   "target": "lys−"
+  },
+  {
+   "source": "rapamycin",
+   "predicate": "is used in experiment",
+   "target": "lys−"
+  },
+  {
+   "source": "lysine",
+   "predicate": "is used in experiment",
+   "target": "lys−"
+  },
+  {
+   "source": "methionine",
+   "predicate": "is used in experiment",
+   "target": "lys−orgS−"
+  },
+  {
+   "source": "organosulfur",
+   "predicate": "is depleted in experiment",
+   "target": "lys−orgS−"
+  }
+ ],
+ "truncated": false
+}

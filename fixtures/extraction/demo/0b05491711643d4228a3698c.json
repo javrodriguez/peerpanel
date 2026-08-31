@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC6547517:13:63226750",
+ "entities": [
+  {
+   "name": "IAT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JBr",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MSk",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MOA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "The Swedish Research Council for Environment, Agricultural Sciences and Spatial Planning",
+   "type": "organism"
+  },
+  {
+   "name": "Formas",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

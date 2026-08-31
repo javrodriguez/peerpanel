@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC6402699:22:595c12e4",
+ "entities": [
+  {
+   "name": "chemostat",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "death rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "hypoxanthine release rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "A−L+",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yield bioassay",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "flow cytometry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Coulter counter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CoSMO",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WY1340",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ToPro3",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "chemostat",
+   "predicate": "has_process",
+   "target": "death rate"
+  },
+  {
+   "source": "chemostat",
+   "predicate": "has_process",
+   "target": "hypoxanthine release rate"
+  },
+  {
+   "source": "A−L+",
+   "predicate": "has_process",
+   "target": "death rate"
+  },
+  {
+   "source": "chemostat",
+   "predicate": "has_process",
+   "target": "CoSMO"
+  },
+  {
+   "source": "WY1340",
+   "predicate": "has_process",
+   "target": "A−L+"
+  },
+  {
+   "source": "SD",
+   "predicate": "has_process",
+   "target": "A−L+"
+  },
+  {
+   "source": "ToPro3",
+   "predicate": "has_process",
+   "target": "death rate"
+  },
+  {
+   "source": "yield bioassay",
+   "predicate": "has_process",
+   "target": "lysine"
+  },
+  {
+   "source": "flow cytometry",
+   "predicate": "has_process",
+   "target": "A−L+"
+  },
+  {
+   "source": "Coulter counter",
+   "predicate": "has_process",
+   "target": "A−L+"
+  },
+  {
+   "source": "chemostat",
+   "predicate": "has_process",
+   "target": "CoSMO"
+  }
+ ],
+ "truncated": false
+}

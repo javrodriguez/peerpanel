@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC5968551:0:ec826aed",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Wang Yanan",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Sufang",
+   "type": "organism"
+  },
+  {
+   "name": "Zhu Zhiwei",
+   "type": "organism"
+  },
+  {
+   "name": "Shen Hongwei",
+   "type": "organism"
+  },
+  {
+   "name": "Lin Xinping",
+   "type": "organism"
+  },
+  {
+   "name": "Jin Xiang",
+   "type": "organism"
+  },
+  {
+   "name": "Jiao Xiang",
+   "type": "organism"
+  },
+  {
+   "name": "Zhao Zongbao Kent",
+   "type": "organism"
+  },
+  {
+   "name": "Dalian Institute of Chemical Physics",
+   "type": "organism"
+  },
+  {
+   "name": "Dalian National Laboratory for Clean Energy",
+   "type": "organism"
+  },
+  {
+   "name": "Beijing Bio-Fly Bioscience Co. Ltd.",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

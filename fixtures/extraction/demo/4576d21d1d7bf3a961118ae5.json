@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13413155:3:2c399fbf",
+ "entities": [
+  {
+   "name": "Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "A. brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "Brassicaceae Crops",
+   "type": "organism"
+  },
+  {
+   "name": "Pathogen",
+   "type": "organism"
+  },
+  {
+   "name": "PDA",
+   "type": "chemical"
+  },
+  {
+   "name": "DMSO",
+   "type": "chemical"
+  },
+  {
+   "name": "Fungicides",
+   "type": "chemical"
+  },
+  {
+   "name": "Kaur",
+   "type": "organism"
+  },
+  {
+   "name": "JGI",
+   "type": "organism"
+  },
+  {
+   "name": "Excel",
+   "type": "organism"
+  },
+  {
+   "name": "DPS",
+   "type": "organism"
+  },
+  {
+   "name": "PHI",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Ab0920a",
+   "predicate": "pathogenicity_assay",
+   "target": "Brassicaceae Crops"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "inhibited_by",
+   "target": "Fungicides"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "effector",
+   "target": "A. brassicicola"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "secreted_by",
+   "target": "PDA"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "inhibited_by",
+   "target": "DMSO"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "pathogenicity_assay",
+   "target": "Brassicaceae Crops"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "effector",
+   "target": "A. brassicicola"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "secreted_by",
+   "target": "PDA"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "inhibited_by",
+   "target": "Fungicides"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "pathogenicity_assay",
+   "target": "Brassicaceae Crops"
+  },
+  {
+   "source": "Ab0920a",
+   "predicate": "effector",
+   "target": "A. brassicicola"
+  }
+ ],
+ "truncated": false
+}

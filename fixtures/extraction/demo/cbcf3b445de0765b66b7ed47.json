@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC6402699:21:8347b5fd",
+ "entities": [
+  {
+   "name": "A−L+",
+   "type": "organism"
+  },
+  {
+   "name": "WY1340",
+   "type": "organism"
+  },
+  {
+   "name": "WY2447",
+   "type": "organism"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "chromosome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chemostat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "flow cytometry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "microscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S10 Fig",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S11 Fig",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S12 Fig",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

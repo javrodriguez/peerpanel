@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10158836:2:790b7931",
+ "entities": [
+  {
+   "name": "YSC0001",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ENS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SceI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Endo",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "50 kDa subunit",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YSC0002",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KHR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Killer of heat resistant",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Killer toxin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YSC0003",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MAL2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MALtose fermentation",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YSC0001",
+   "predicate": "encoded_by",
+   "target": "ENS2"
+  },
+  {
+   "source": "YSC0001",
+   "predicate": "subunit_of",
+   "target": "Endo"
+  },
+  {
+   "source": "YSC0002",
+   "predicate": "encodes",
+   "target": "Killer toxin"
+  },
+  {
+   "source": "YSC0003",
+   "predicate": "involved_in",
+   "target": "maltose fermentation"
+  },
+  {
+   "source": "YSC0003",
+   "predicate": "part_of",
+   "target": "MALtose fermentation"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC3563226:2:07907b8f",
+ "entities": [
+  {
+   "name": "Aspergillus nidulans",
+   "type": "organism"
+  },
+  {
+   "name": "amdS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "acetamidase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kluyveromyces lactis",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces pastorianus",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces eubayanus",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "amdSYM",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TEF2ter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "A. gossypii",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Aspergillus nidulans",
+   "predicate": "encodes",
+   "target": "amdS"
+  },
+  {
+   "source": "amdS",
+   "predicate": "has_function",
+   "target": "acetamidase"
+  },
+  {
+   "source": "amdSYM",
+   "predicate": "is_used_in",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "amdSYM",
+   "predicate": "is_used_in",
+   "target": "Saccharomyces pastorianus"
+  },
+  {
+   "source": "amdSYM",
+   "predicate": "is_used_in",
+   "target": "Saccharomyces eubayanus"
+  },
+  {
+   "source": "amdS",
+   "predicate": "is_used_in",
+   "target": "Kluyveromyces lactis"
+  },
+  {
+   "source": "TEF2ter",
+   "predicate": "is_used_in",
+   "target": "A. gossypii"
+  }
+ ],
+ "truncated": false
+}

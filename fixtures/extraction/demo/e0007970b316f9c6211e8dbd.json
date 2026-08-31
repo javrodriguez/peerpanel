@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13470552:1:4b5d8cf6",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "Endoplasmic reticulum",
+   "type": "organism"
+  },
+  {
+   "name": "Vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "Golgi",
+   "type": "organism"
+  },
+  {
+   "name": "Endosomes",
+   "type": "organism"
+  },
+  {
+   "name": "Peroxisomes",
+   "type": "organism"
+  },
+  {
+   "name": "Lipid droplets",
+   "type": "organism"
+  },
+  {
+   "name": "Autophagy-related structures",
+   "type": "organism"
+  },
+  {
+   "name": "Yca1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Aif1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Mmi1",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

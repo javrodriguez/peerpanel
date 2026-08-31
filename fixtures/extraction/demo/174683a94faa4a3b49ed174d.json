@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13462271:6:dd9df5d9",
+ "entities": [
+  {
+   "name": "Pol1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H3K56ac",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H3K4me3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ARS1510",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ARS1513",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IAA",
+   "type": "chemical"
+  },
+  {
+   "name": "CHX",
+   "type": "chemical"
+  },
+  {
+   "name": "BrdU",
+   "type": "chemical"
+  },
+  {
+   "name": "Pgk1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pol1-F1396S",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

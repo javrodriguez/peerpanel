@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC3563226:0:db6d7ffd",
+ "entities": [
+  {
+   "name": "FEMS Yeast Res",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "amdSYM",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ashbya gossypii",
+   "type": "organism"
+  },
+  {
+   "name": "TEF2 promoter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Aspergillus nidulans",
+   "type": "organism"
+  },
+  {
+   "name": "amdS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "acetamidase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pascale Daran-Lapujade",
+   "type": "organism"
+  },
+  {
+   "name": "Jens Nielsen",
+   "type": "organism"
+  },
+  {
+   "name": "Daniel Solis-Escalante",
+   "type": "organism"
+  },
+  {
+   "name": "Niels GA Kuijpers",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FEMS Yeast Res",
+   "predicate": "published_in",
+   "target": "Pascale Daran-Lapujade"
+  },
+  {
+   "source": "Pascale Daran-Lapujade",
+   "predicate": "correspondence",
+   "target": "FEMS Yeast Res"
+  },
+  {
+   "source": "amdSYM",
+   "predicate": "contains",
+   "target": "TEF2 promoter"
+  },
+  {
+   "source": "amdSYM",
+   "predicate": "contains",
+   "target": "Aspergillus nidulans"
+  },
+  {
+   "source": "amdSYM",
+   "predicate": "confers",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Pascale Daran-Lapujade",
+   "predicate": "edited",
+   "target": "FEMS Yeast Res"
+  },
+  {
+   "source": "Jens Nielsen",
+   "predicate": "edited",
+   "target": "FEMS Yeast Res"
+  },
+  {
+   "source": "Daniel Solis-Escalante",
+   "predicate": "author",
+   "target": "FEMS Yeast Res"
+  },
+  {
+   "source": "Niels GA Kuijpers",
+   "predicate": "author",
+   "target": "FEMS Yeast Res"
+  },
+  {
+   "source": "Pascale Daran-Lapujade",
+   "predicate": "author",
+   "target": "FEMS Yeast Res"
+  }
+ ],
+ "truncated": false
+}

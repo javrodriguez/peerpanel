@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13458714:4:70aab5fb",
+ "entities": [
+  {
+   "name": "Tayla McDonald",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GCN1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "eIF2 kinase GCN2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biochem Biophys Res Commun",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Castilho BA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shanmugam R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Silva RC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sattlegger E",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gcn2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gcn1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "eIF2 alpha kinase Gcn2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GCN4 gene",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

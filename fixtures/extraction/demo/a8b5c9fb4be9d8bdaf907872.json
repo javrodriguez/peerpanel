@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13515494:6:bdc175cb",
+ "entities": [
+  {
+   "name": "present study",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "time-resolved characterization",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "basic oenological parameters",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "free amino acids",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "volatile compounds",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "traditional method",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "sparkling wines",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "ASN",
+   "type": "chemical"
+  },
+  {
+   "name": "ORN",
+   "type": "chemical"
+  },
+  {
+   "name": "HIS",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "present study",
+   "predicate": "characterized",
+   "target": "basic oenological parameters"
+  },
+  {
+   "source": "present study",
+   "predicate": "characterized",
+   "target": "free amino acids"
+  },
+  {
+   "source": "present study",
+   "predicate": "characterized",
+   "target": "volatile compounds"
+  }
+ ],
+ "truncated": false
+}

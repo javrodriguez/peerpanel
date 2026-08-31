@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC12628781:7:12154ae4",
+ "entities": [
+  {
+   "name": "EPS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. toruloides CCT0783",
+   "type": "organism"
+  },
+  {
+   "name": "cells",
+   "type": "organism"
+  },
+  {
+   "name": "potassium salts",
+   "type": "chemical"
+  },
+  {
+   "name": "KCl",
+   "type": "chemical"
+  },
+  {
+   "name": "DCW",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "GN-H",
+   "type": "chemical"
+  },
+  {
+   "name": "GN-L",
+   "type": "chemical"
+  },
+  {
+   "name": "EN-H",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "EPS",
+   "predicate": "produced_by",
+   "target": "R. toruloides CCT0783"
+  },
+  {
+   "source": "R. toruloides CCT0783",
+   "predicate": "produces",
+   "target": "EPS"
+  }
+ ],
+ "truncated": false
+}

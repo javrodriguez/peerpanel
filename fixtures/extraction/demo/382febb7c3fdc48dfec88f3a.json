@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC7470746:2:efdc72e7",
+ "entities": [
+  {
+   "name": "cell",
+   "type": "organism"
+  },
+  {
+   "name": "TORC1 pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Ras/PKA pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "auxotroph",
+   "type": "organism"
+  },
+  {
+   "name": "TOR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SCH9",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cell",
+   "predicate": "has_process",
+   "target": "TORC1 pathway"
+  },
+  {
+   "source": "cell",
+   "predicate": "has_process",
+   "target": "Ras/PKA pathway"
+  },
+  {
+   "source": "glucose",
+   "predicate": "activates_process",
+   "target": "TORC1 pathway"
+  },
+  {
+   "source": "glucose",
+   "predicate": "activates_process",
+   "target": "Ras/PKA pathway"
+  },
+  {
+   "source": "nitrogen",
+   "predicate": "activates_process",
+   "target": "TORC1 pathway"
+  },
+  {
+   "source": "sulfur",
+   "predicate": "activates_process",
+   "target": "TORC1 pathway"
+  },
+  {
+   "source": "phosphorus",
+   "predicate": "activates_process",
+   "target": "TORC1 pathway"
+  },
+  {
+   "source": "lysine",
+   "predicate": "activates_process",
+   "target": "TORC1 pathway"
+  }
+ ],
+ "truncated": false
+}

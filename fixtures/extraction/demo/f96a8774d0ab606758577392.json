@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC9487109:2:f74af8ff",
+ "entities": [
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Vitamin B9",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Erythrose 4-phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "Folate",
+   "type": "chemical"
+  },
+  {
+   "name": "GTP",
+   "type": "chemical"
+  },
+  {
+   "name": "pABA",
+   "type": "chemical"
+  },
+  {
+   "name": "Chorismate",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphoenolpyruvate",
+   "type": "chemical"
+  },
+  {
+   "name": "Pentose phosphate pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Glycolysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Verduyn medium",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has high flux",
+   "target": "Pentose phosphate pathway"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has high flux",
+   "target": "Pentose phosphate pathway"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has production",
+   "target": "Vitamin B9"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has precursor",
+   "target": "Erythrose 4-phosphate"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has production",
+   "target": "Folate"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has production",
+   "target": "GTP"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has production",
+   "target": "pABA"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has production",
+   "target": "Chorismate"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has production",
+   "target": "Phosphoenolpyruvate"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has production",
+   "target": "Pentose phosphate pathway"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "has production",
+   "target": "Glycolysis"
+  }
+ ],
+ "truncated": false
+}

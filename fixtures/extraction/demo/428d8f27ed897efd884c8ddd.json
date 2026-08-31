@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC9757880:16:1aaa1a34",
+ "entities": [
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "prototrophic WT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met17Δ prototrophic growth phenotype",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur assimilation mutants",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1-GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met6p-GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SeMeCo",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "yeast nitrogen broth",
+   "type": "chemical"
+  },
+  {
+   "name": "wild-type",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "has_growth_phenotype",
+   "target": "met17Δ prototrophic growth phenotype"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "lacks",
+   "target": "methionine"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "utilizes",
+   "target": "H2S"
+  }
+ ],
+ "truncated": false
+}

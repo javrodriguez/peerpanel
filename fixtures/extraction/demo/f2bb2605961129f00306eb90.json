@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC10440040:18:0fa7f156",
+ "entities": [
+  {
+   "name": "MAKER pipeline",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "v3.01.2-beta",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "gene models",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "final BOT-A2 assembly",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MAKER",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "StringTie",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TransposonPSI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RepeatModeler",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RepeatMasker",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RMBlast",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Braker2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Augustus",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "MAKER pipeline",
+   "predicate": "uses",
+   "target": "gene models"
+  },
+  {
+   "source": "MAKER pipeline",
+   "predicate": "uses",
+   "target": "final BOT-A2 assembly"
+  },
+  {
+   "source": "MAKER pipeline",
+   "predicate": "uses",
+   "target": "StringTie"
+  },
+  {
+   "source": "MAKER pipeline",
+   "predicate": "uses",
+   "target": "TransposonPSI"
+  },
+  {
+   "source": "MAKER pipeline",
+   "predicate": "uses",
+   "target": "RepeatModeler"
+  },
+  {
+   "source": "MAKER pipeline",
+   "predicate": "uses",
+   "target": "RepeatMasker"
+  },
+  {
+   "source": "MAKER pipeline",
+   "predicate": "uses",
+   "target": "RMBlast"
+  },
+  {
+   "source": "MAKER pipeline",
+   "predicate": "uses",
+   "target": "Braker2"
+  },
+  {
+   "source": "MAKER pipeline",
+   "predicate": "uses",
+   "target": "Augustus"
+  }
+ ],
+ "truncated": false
+}

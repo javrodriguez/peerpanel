@@ -1,0 +1,54 @@
+{
+ "chunk_id": "PMC9825584:3:efc1c362",
+ "entities": [
+  {
+   "name": "WEB INTERFACE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OrthoDB database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OGs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NCBI ID",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cytochrome P450",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "kinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Metazoa",
+   "type": "organism"
+  },
+  {
+   "name": "Eukaryota",
+   "type": "organism"
+  },
+  {
+   "name": "Uniprot accession number P12345",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WEB INTERFACE",
+   "predicate": "allows",
+   "target": "OrthoDB database"
+  },
+  {
+   "source": "WEB INTERFACE",
+   "predicate": "matches",
+   "target": "OGs"
+  }
+ ],
+ "truncated": false
+}

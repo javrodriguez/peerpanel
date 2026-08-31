@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC7382830:10:e875b841",
+ "entities": [
+  {
+   "name": "lrp",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rho",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "operons",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "leucine response system",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "L-serine tolerance",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glycine cleavage system",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "strain",
+   "type": "organism"
+  },
+  {
+   "name": "genome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "promoters",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "attenuator-terminators",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ribosomal binding sites",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ALE experiment",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lrp",
+   "predicate": "global regulator",
+   "target": "leucine response system"
+  },
+  {
+   "source": "lrp",
+   "predicate": "participation",
+   "target": "L-serine tolerance"
+  },
+  {
+   "source": "rho",
+   "predicate": "global regulator",
+   "target": "L-serine tolerance"
+  },
+  {
+   "source": "lrp",
+   "predicate": "mutation",
+   "target": "promoters"
+  },
+  {
+   "source": "rho",
+   "predicate": "mutation",
+   "target": "promoters"
+  },
+  {
+   "source": "lrp",
+   "predicate": "mutation",
+   "target": "operons"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10158836:1:880c07c4",
+ "entities": [
+  {
+   "name": "SGD",
+   "type": "organism"
+  },
+  {
+   "name": "Docker",
+   "type": "organism"
+  },
+  {
+   "name": "AWS",
+   "type": "organism"
+  },
+  {
+   "name": "Fargate",
+   "type": "organism"
+  },
+  {
+   "name": "S288C",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "EC2",
+   "type": "organism"
+  },
+  {
+   "name": "Lambda",
+   "type": "organism"
+  },
+  {
+   "name": "ECR",
+   "type": "organism"
+  },
+  {
+   "name": "XDH1",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

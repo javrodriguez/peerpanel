@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10204961:9:8945f55b",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "NADPH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GDH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FAS1-2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TCA cycle",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AKG",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonia",
+   "type": "chemical"
+  },
+  {
+   "name": "urea",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "acetate",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GDH1",
+   "predicate": "converts",
+   "target": "ammonia"
+  },
+  {
+   "source": "GDH1",
+   "predicate": "converts",
+   "target": "AKG"
+  },
+  {
+   "source": "FAS1-2",
+   "predicate": "consumes",
+   "target": "NADPH"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "GDH1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "FAS1-2"
+  }
+ ],
+ "truncated": false
+}

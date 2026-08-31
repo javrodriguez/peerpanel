@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10204961:2:f1de2e1b",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "L. lactis",
+   "type": "organism"
+  },
+  {
+   "name": "Chen",
+   "type": "organism"
+  },
+  {
+   "name": "Nielsen",
+   "type": "organism"
+  },
+  {
+   "name": "GEMs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "enzyme-constrained GEMs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phenomenological constraint",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolic flux",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein abundance",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "kcat",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

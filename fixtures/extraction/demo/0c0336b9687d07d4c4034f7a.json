@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13517252:2:beb28e64",
+ "entities": [
+  {
+   "name": "Nutritional Equivalence",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fishmeal-based reference diet",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fishmeal quality",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "prespecified biological and production functions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "core production outcomes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mechanism-specific outcomes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "health and safety outcomes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fish",
+   "type": "organism"
+  },
+  {
+   "name": "shrimp",
+   "type": "organism"
+  },
+  {
+   "name": "aquaculture species",
+   "type": "organism"
+  },
+  {
+   "name": "taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "phytase",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nutritional Equivalence",
+   "predicate": "defined_as",
+   "target": "prespecified biological and production functions"
+  },
+  {
+   "source": "Nutritional Equivalence",
+   "predicate": "maintained_by",
+   "target": "fishmeal-based reference diet"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC8116571:11:9a2e0920",
+ "entities": [
+  {
+   "name": "K. marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "arabinose",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Japanese cedar",
+   "type": "chemical"
+  },
+  {
+   "name": "Eucalypt",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "rice straw",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "K. marxianus",
+   "predicate": "can consume",
+   "target": "xylose"
+  },
+  {
+   "source": "K. marxianus",
+   "predicate": "can consume",
+   "target": "arabinose"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "has high native capacity to ferment",
+   "target": "xylose"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "can consume",
+   "target": "glucose"
+  }
+ ],
+ "truncated": false
+}

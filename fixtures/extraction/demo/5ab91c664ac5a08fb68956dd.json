@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13501320:1:fde419e6",
+ "entities": [
+  {
+   "name": "phenotype",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "double gene knockout",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "component viable single gene knockouts",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "epistasis",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pairwise epistasis data",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "growth phenotype",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "organism",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "genetic interaction network",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BPM",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pathways",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "phenotype",
+   "predicate": "has",
+   "target": "double gene knockout"
+  },
+  {
+   "source": "double gene knockout",
+   "predicate": "compensates",
+   "target": "component viable single gene knockouts"
+  },
+  {
+   "source": "pairwise epistasis data",
+   "predicate": "represents",
+   "target": "genetic interaction network"
+  },
+  {
+   "source": "genetic interaction network",
+   "predicate": "indicates",
+   "target": "BPM"
+  },
+  {
+   "source": "BPM",
+   "predicate": "consists_of",
+   "target": "pathways"
+  },
+  {
+   "source": "pathways",
+   "predicate": "can_compensate_for",
+   "target": "BPM"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "genetic interaction network"
+  },
+  {
+   "source": "genetic interaction network",
+   "predicate": "has",
+   "target": "BPM"
+  },
+  {
+   "source": "BPM",
+   "predicate": "has",
+   "target": "pathways"
+  },
+  {
+   "source": "pathways",
+   "predicate": "can_compensate_for",
+   "target": "BPM"
+  },
+  {
+   "source": "BPM",
+   "predicate": "has",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "genetic interaction network"
+  }
+ ],
+ "truncated": false
+}

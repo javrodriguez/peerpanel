@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC7953724:6:d9ca2ea3",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "CG media",
+   "type": "chemical"
+  },
+  {
+   "name": "HH supplement",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid content",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon source",
+   "type": "chemical"
+  },
+  {
+   "name": "Rhodotorula species",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "C. curvatum",
+   "type": "organism"
+  },
+  {
+   "name": "Acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "G-3-P",
+   "type": "chemical"
+  },
+  {
+   "name": "TAG",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has lipid content",
+   "target": "CG media"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has lipid content",
+   "target": "glycerol"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has lipid content",
+   "target": "HH supplement"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has lipid content",
+   "target": "carbon source"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has lipid content",
+   "target": "Rhodotorula species"
+  },
+  {
+   "source": "L. starkeyi",
+   "predicate": "has lipid content",
+   "target": "HH supplement"
+  }
+ ],
+ "truncated": false
+}

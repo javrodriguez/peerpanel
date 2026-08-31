@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13514516:12:0b4448db",
+ "entities": [
+  {
+   "name": "XYL2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NBM8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NADH-ubiquinone oxidoreductase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "CICC1960",
+   "type": "organism"
+  },
+  {
+   "name": "KEGG",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XUT4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XYL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARO10",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "XYL2",
+   "predicate": "has_highly_significant_differential_expression",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "PDC2",
+   "predicate": "has_extremely_significant_differential_expression",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "NBM8",
+   "predicate": "is_upregulated",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "XYL1",
+   "predicate": "is_upregulated",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "XUT4",
+   "predicate": "is_upregulated",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "PDC1",
+   "predicate": "is_upregulated",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "ARO10",
+   "predicate": "is_upregulated",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "has_high_ethanol_production",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "CICC1960",
+   "predicate": "is_haploid",
+   "target": "S. stipitis"
+  }
+ ],
+ "truncated": false
+}

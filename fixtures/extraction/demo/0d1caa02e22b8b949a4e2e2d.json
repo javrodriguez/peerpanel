@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC10440040:19:f7e0623e",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "MAT A1 protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MAT A2 protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MEP2 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KanMX",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NCBI Genome Database",
+   "type": "organism"
+  },
+  {
+   "name": "CBS14",
+   "type": "organism"
+  },
+  {
+   "name": "NP11",
+   "type": "organism"
+  },
+  {
+   "name": "ATCC 204091",
+   "type": "organism"
+  },
+  {
+   "name": "pDB22",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pDB23",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_genome",
+   "target": "NCBI Genome Database"
+  },
+  {
+   "source": "MAT A1 protein",
+   "predicate": "is_located_in",
+   "target": "NP11"
+  },
+  {
+   "source": "MAT A2 protein",
+   "predicate": "is_located_in",
+   "target": "ATCC 204091"
+  },
+  {
+   "source": "MEP2 gene",
+   "predicate": "is_located_in",
+   "target": "NP11"
+  },
+  {
+   "source": "GFP",
+   "predicate": "is_located_in",
+   "target": "pDB22"
+  },
+  {
+   "source": "KanMX",
+   "predicate": "is_located_in",
+   "target": "pDB22"
+  },
+  {
+   "source": "CBS14",
+   "predicate": "has_genome",
+   "target": "NCBI Genome Database"
+  },
+  {
+   "source": "NP11",
+   "predicate": "has_genome",
+   "target": "NCBI Genome Database"
+  },
+  {
+   "source": "ATCC 204091",
+   "predicate": "has_genome",
+   "target": "NCBI Genome Database"
+  },
+  {
+   "source": "pDB22",
+   "predicate": "is_constructed_from",
+   "target": "pDB23"
+  }
+ ],
+ "truncated": false
+}

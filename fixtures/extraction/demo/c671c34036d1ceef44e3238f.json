@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13517252:14:e61b6c99",
+ "entities": [
+  {
+   "name": "Sustainable fishmeal reduction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Phytase",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Protein hydrolysates",
+   "type": "chemical"
+  },
+  {
+   "name": "Fermented ingredients",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast-derived products",
+   "type": "chemical"
+  },
+  {
+   "name": "Probiotics",
+   "type": "chemical"
+  },
+  {
+   "name": "Hydroxyproline",
+   "type": "chemical"
+  },
+  {
+   "name": "Lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Md Hashibur Rahman",
+   "type": "organism"
+  },
+  {
+   "name": "Ministry of Oceans and Fisheries",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

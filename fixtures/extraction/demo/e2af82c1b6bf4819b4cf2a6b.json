@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13450799:23:fc4190c2",
+ "entities": [
+  {
+   "name": "manuscript",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "publication",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLOS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Editorial Manager",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Arthur J. Lustig",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLOS One",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Reviewers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "conclusions",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Experiments",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "statistical analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLOS Data policy",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "manuscript",
+   "predicate": "has been judged scientifically suitable for publication",
+   "target": "publication"
+  },
+  {
+   "source": "manuscript",
+   "predicate": "will be formally accepted for publication",
+   "target": "publication"
+  },
+  {
+   "source": "manuscript",
+   "predicate": "has been deemed suitable for publication",
+   "target": "publication"
+  },
+  {
+   "source": "manuscript",
+   "predicate": "has been conducted rigorously",
+   "target": "Experiments"
+  },
+  {
+   "source": "manuscript",
+   "predicate": "has been performed appropriately and rigorously",
+   "target": "statistical analysis"
+  },
+  {
+   "source": "manuscript",
+   "predicate": "has been made fully available",
+   "target": "data"
+  },
+  {
+   "source": "PLOS Data policy",
+   "predicate": "requires authors to make all data underlying the findings fully available",
+   "target": "data"
+  }
+ ],
+ "truncated": false
+}

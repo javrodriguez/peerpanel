@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13450573:7:3cbd980f",
+ "entities": [
+  {
+   "name": "RStudio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "log2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fold-change",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "log2FC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA biotype",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mtRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ncRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "snoRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "tRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "snRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ANOVA",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "RStudio",
+   "predicate": "used",
+   "target": "R"
+  }
+ ],
+ "truncated": false
+}

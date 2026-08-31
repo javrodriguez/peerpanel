@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC6402699:14:f3872347",
+ "entities": [
+  {
+   "name": "L-A+",
+   "type": "organism"
+  },
+  {
+   "name": "lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chemostat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "A-L+",
+   "type": "organism"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YPD plate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "flow cytometry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CoSMO growth rate measurements",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lysine-limited chemostat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "reservoir",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fresh medium",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "supernatant",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L-A+",
+   "predicate": "has_concentration",
+   "target": "lysine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "is_in",
+   "target": "chemostat"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "has_concentration",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "is_in",
+   "target": "lysine-limited chemostat"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has_metabolite",
+   "target": "lysine"
+  }
+ ],
+ "truncated": false
+}

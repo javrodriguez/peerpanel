@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC9757880:1:c3678430",
+ "entities": [
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Met17p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "O-acetyl-homoserine",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "have",
+   "target": "Met17p"
+  },
+  {
+   "source": "yeast",
+   "predicate": "have",
+   "target": "Hsu1p"
+  },
+  {
+   "source": "sulfate",
+   "predicate": "be_reduced_to",
+   "target": "sulfide"
+  }
+ ],
+ "truncated": false
+}

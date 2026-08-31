@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13450573:15:5349a065",
+ "entities": [
+  {
+   "name": "Hsf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hac1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Swi6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yap5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Spt3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sfp1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "ribosome biogenesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "RNA processing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "carbohydrate metabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sfp1",
+   "predicate": "involved_in",
+   "target": "ribosome biogenesis"
+  },
+  {
+   "source": "Sfp1",
+   "predicate": "involved_in",
+   "target": "RNA processing"
+  },
+  {
+   "source": "Sfp1",
+   "predicate": "involved_in",
+   "target": "carbohydrate metabolism"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_regulator",
+   "target": "Sfp1"
+  },
+  {
+   "source": "Candida albicans",
+   "predicate": "has_regulator",
+   "target": "Sfp1"
+  }
+ ],
+ "truncated": false
+}

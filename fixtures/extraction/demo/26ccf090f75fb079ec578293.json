@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC11102182:10:cf3730d6",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Chinese hamster ovary cell culture",
+   "type": "organism"
+  },
+  {
+   "name": "Nannochloropsis gaditana",
+   "type": "organism"
+  },
+  {
+   "name": "Astaxanthin",
+   "type": "chemical"
+  },
+  {
+   "name": "Galactitol",
+   "type": "chemical"
+  },
+  {
+   "name": "Citric acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "Biodiesel",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Astaxanthin",
+   "predicate": "is produced by",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Galactitol",
+   "predicate": "is produced by",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Citric acid",
+   "predicate": "is produced by",
+   "target": "Yarrowia lipolytica"
+  },
+  {
+   "source": "Glucose",
+   "predicate": "is consumed by",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Lipid",
+   "predicate": "is produced by",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Biodiesel",
+   "predicate": "is produced from",
+   "target": "Lipid"
+  }
+ ],
+ "truncated": false
+}

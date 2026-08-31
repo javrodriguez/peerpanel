@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13518488:6:2eadf58d",
+ "entities": [
+  {
+   "name": "Pellets",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pleurotus ostreatus",
+   "type": "organism"
+  },
+  {
+   "name": "P. albidus",
+   "type": "organism"
+  },
+  {
+   "name": "Kim and Song",
+   "type": "organism"
+  },
+  {
+   "name": "ImageJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "mycelial biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "oxygen",
+   "type": "chemical"
+  },
+  {
+   "name": "nutrients",
+   "type": "chemical"
+  },
+  {
+   "name": "medium",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

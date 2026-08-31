@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515280:0:a88d8eea",
+ "entities": [
+  {
+   "name": "Microorganisms",
+   "type": "organism"
+  },
+  {
+   "name": "Wen Zhangxinhan",
+   "type": "organism"
+  },
+  {
+   "name": "Liu Jiaxin",
+   "type": "organism"
+  },
+  {
+   "name": "Li Zuowei",
+   "type": "organism"
+  },
+  {
+   "name": "Wang Tianzheng",
+   "type": "organism"
+  },
+  {
+   "name": "Li Pengshuai",
+   "type": "organism"
+  },
+  {
+   "name": "Mao Xinyi",
+   "type": "organism"
+  },
+  {
+   "name": "Yin Yuhan",
+   "type": "organism"
+  },
+  {
+   "name": "Dong Boying",
+   "type": "organism"
+  },
+  {
+   "name": "Feng Yulong",
+   "type": "organism"
+  },
+  {
+   "name": "Qu Honglei",
+   "type": "organism"
+  },
+  {
+   "name": "Ma Qiugang",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

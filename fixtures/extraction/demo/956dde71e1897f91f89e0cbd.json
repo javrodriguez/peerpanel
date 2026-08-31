@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC6402699:5:a8c34504",
+ "entities": [
+  {
+   "name": "A−L+",
+   "type": "organism"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "adenine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L−A+",
+   "type": "organism"
+  },
+  {
+   "name": "lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CoSMO",
+   "type": "organism"
+  },
+  {
+   "name": "chemostat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "batch cultures",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "excess metabolite",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "strain phenotypes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "model",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "environment",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "A−L+",
+   "predicate": "consumed",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "A−L+",
+   "predicate": "consumed",
+   "target": "adenine"
+  },
+  {
+   "source": "L−A+",
+   "predicate": "consumed",
+   "target": "lysine"
+  },
+  {
+   "source": "chemostat",
+   "predicate": "mimicked",
+   "target": "CoSMO"
+  },
+  {
+   "source": "chemostat",
+   "predicate": "measured",
+   "target": "strain phenotypes"
+  }
+ ],
+ "truncated": false
+}

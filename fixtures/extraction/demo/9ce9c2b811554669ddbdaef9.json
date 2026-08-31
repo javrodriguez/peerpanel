@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC10398944:12:bea1e51a",
+ "entities": [
+  {
+   "name": "Dionex Ultimate 3000 system UHPLC",
+   "type": "chemical"
+  },
+  {
+   "name": "Aminex HPX-87H column",
+   "type": "chemical"
+  },
+  {
+   "name": "Thermo Scientific RefractoMax 520 Refractive Index Detector",
+   "type": "chemical"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "Cetyl alcohol C16:0",
+   "type": "chemical"
+  },
+  {
+   "name": "Palmitoleyl alcohol C16:1",
+   "type": "chemical"
+  },
+  {
+   "name": "1-heptadecanol C17:0",
+   "type": "chemical"
+  },
+  {
+   "name": "Stearyl alcohol C18:0",
+   "type": "chemical"
+  },
+  {
+   "name": "Oleyl alcohol C18:1",
+   "type": "chemical"
+  },
+  {
+   "name": "C13:0 internal standard",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Dionex Ultimate 3000 system UHPLC",
+   "predicate": "uses",
+   "target": "Aminex HPX-87H column"
+  },
+  {
+   "source": "Dionex Ultimate 3000 system UHPLC",
+   "predicate": "uses",
+   "target": "Thermo Scientific RefractoMax 520 Refractive Index Detector"
+  },
+  {
+   "source": "Glucose",
+   "predicate": "is_quantified_by",
+   "target": "Dionex Ultimate 3000 system UHPLC"
+  },
+  {
+   "source": "Xylose",
+   "predicate": "is_quantified_by",
+   "target": "Dionex Ultimate 3000 system UHPLC"
+  },
+  {
+   "source": "Glycerol",
+   "predicate": "is_quantified_by",
+   "target": "Dionex Ultimate 3000 system UHPLC"
+  },
+  {
+   "source": "Dionex Ultimate 3000 system UHPLC",
+   "predicate": "uses",
+   "target": "Thermo Scientific RefractoMax 520 Refractive Index Detector"
+  }
+ ],
+ "truncated": false
+}

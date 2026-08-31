@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13413155:9:bd031200",
+ "entities": [
+  {
+   "name": "A. brassicicola isolate Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "Alternaria brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "broccoli",
+   "type": "organism"
+  },
+  {
+   "name": "black spot disease",
+   "type": "organism"
+  },
+  {
+   "name": "Alternaria leaf black spot disease",
+   "type": "organism"
+  },
+  {
+   "name": "cruciferous crops",
+   "type": "organism"
+  },
+  {
+   "name": "Z.X.",
+   "type": "organism"
+  },
+  {
+   "name": "R.Z.",
+   "type": "organism"
+  },
+  {
+   "name": "C.Q.",
+   "type": "organism"
+  },
+  {
+   "name": "G.L.",
+   "type": "organism"
+  },
+  {
+   "name": "P.L.",
+   "type": "organism"
+  },
+  {
+   "name": "L.Z.",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

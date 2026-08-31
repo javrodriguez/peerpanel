@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13518488:8:ca8881d8",
+ "entities": [
+  {
+   "name": "mycelium",
+   "type": "organism"
+  },
+  {
+   "name": "basidiome",
+   "type": "organism"
+  },
+  {
+   "name": "yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen source",
+   "type": "chemical"
+  },
+  {
+   "name": "protein content",
+   "type": "chemical"
+  },
+  {
+   "name": "dietary fiber content",
+   "type": "chemical"
+  },
+  {
+   "name": "cell walls",
+   "type": "organism"
+  },
+  {
+   "name": "thickened tissues",
+   "type": "organism"
+  },
+  {
+   "name": "fruiting bodies",
+   "type": "organism"
+  },
+  {
+   "name": "P. albidus",
+   "type": "organism"
+  },
+  {
+   "name": "P. pulmonarius",
+   "type": "organism"
+  },
+  {
+   "name": "Fusarium venenatum",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mycelium",
+   "predicate": "has higher protein content than",
+   "target": "basidiome"
+  },
+  {
+   "source": "basidiome",
+   "predicate": "has lower protein content than",
+   "target": "mycelium"
+  },
+  {
+   "source": "mycelium",
+   "predicate": "has lower dietary fiber content than",
+   "target": "basidiome"
+  },
+  {
+   "source": "basidiome",
+   "predicate": "has higher dietary fiber content than",
+   "target": "mycelium"
+  },
+  {
+   "source": "yeast extract",
+   "predicate": "is a readily assimilable nitrogen source for",
+   "target": "mycelium"
+  },
+  {
+   "source": "mycelium",
+   "predicate": "has lower structural complexity than",
+   "target": "basidiome"
+  },
+  {
+   "source": "basidiome",
+   "predicate": "has higher structural complexity than",
+   "target": "mycelium"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has a protein content of 23.8%",
+   "target": "protein content"
+  },
+  {
+   "source": "P. pulmonarius",
+   "predicate": "has a protein content of approximately 32%",
+   "target": "protein content"
+  },
+  {
+   "source": "Fusarium venenatum",
+   "predicate": "has a protein content of approximately 45%",
+   "target": "protein content"
+  },
+  {
+   "source": "P. albidus",
+   "predicate": "has a higher total carbohydrate content than",
+   "target": "basidiome"
+  },
+  {
+   "source": "basidiome",
+   "predicate": "has a lower total carbohydrate content than",
+   "target": "mycelium"
+  }
+ ],
+ "truncated": false
+}

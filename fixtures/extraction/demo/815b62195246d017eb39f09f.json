@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC10729969:23:06284750",
+ "entities": [
+  {
+   "name": "Dequin S",
+   "type": "organism"
+  },
+  {
+   "name": "Genetic bases",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "DMS precursor S - methylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Food Microbiol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rouillon A",
+   "type": "organism"
+  },
+  {
+   "name": "Surdin - Kerjan Y",
+   "type": "organism"
+  },
+  {
+   "name": "Sulfonium",
+   "type": "chemical"
+  },
+  {
+   "name": "S - ADENOSYLMETHIONINE ANDS - METHYLMETHIONINE PERMEASES",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "YEASTSACCHAROMYCES",
+   "type": "organism"
+  },
+  {
+   "name": "Norman TM",
+   "type": "organism"
+  },
+  {
+   "name": "Lord ND",
+   "type": "organism"
+  },
+  {
+   "name": "Paulsson J",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Dequin S",
+   "predicate": "studied",
+   "target": "Genetic bases"
+  },
+  {
+   "source": "Genetic bases",
+   "predicate": "involves",
+   "target": "DMS precursor S - methylmethionine"
+  },
+  {
+   "source": "Food Microbiol",
+   "predicate": "used",
+   "target": "Dequin S"
+  },
+  {
+   "source": "Rouillon A",
+   "predicate": "studied",
+   "target": "Sulfonium"
+  },
+  {
+   "source": "Sulfonium",
+   "predicate": "involves",
+   "target": "S - ADENOSYLMETHIONINE ANDS - METHYLMETHIONINE PERMEASES"
+  },
+  {
+   "source": "YEASTSACCHAROMYCES",
+   "predicate": "studied",
+   "target": "S - ADENOSYLMETHIONINE ANDS - METHYLMETHIONINE PERMEASES"
+  },
+  {
+   "source": "Norman TM",
+   "predicate": "studied",
+   "target": "YEASTSACCHAROMYCES"
+  },
+  {
+   "source": "Lord ND",
+   "predicate": "studied",
+   "target": "YEASTSACCHAROMYCES"
+  },
+  {
+   "source": "Paulsson J",
+   "predicate": "studied",
+   "target": "YEASTSACCHAROMYCES"
+  }
+ ],
+ "truncated": false
+}

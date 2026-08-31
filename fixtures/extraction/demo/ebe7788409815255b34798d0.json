@@ -1,0 +1,63 @@
+{
+ "chunk_id": "PMC13450799:8:5b675e28",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP26",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Haa1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YCplac33",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pgk1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ypd medium",
+   "type": "chemical"
+  },
+  {
+   "name": "Table 4",
+   "type": "other"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YGP1",
+   "predicate": "is regulated by",
+   "target": "Puf5"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "is regulated by",
+   "target": "Haa1"
+  },
+  {
+   "source": "Puf5",
+   "predicate": "can function independently of",
+   "target": "Haa1"
+  }
+ ],
+ "truncated": false
+}

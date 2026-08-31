@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC10729969:8:8adac56b",
+ "entities": [
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "microbes",
+   "type": "organism"
+  },
+  {
+   "name": "wild-type cells",
+   "type": "organism"
+  },
+  {
+   "name": "SD medium",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "organosulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "cell",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "has_growth_rate_dependent_on",
+   "target": "sulfide"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "exhibits_density_dependent_growth",
+   "target": "sulfate"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "has_low_efficiency_of_sulfide_assimilation",
+   "target": "sulfide"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "has_expression_of",
+   "target": "HSU1"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "exhibits_stochastic_growth_dynamics",
+   "target": "sulfate"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "has_cell_state_switch",
+   "target": "sulfide"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "exhibits_inefficient_sulfide_assimilation",
+   "target": "sulfide"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "exhibits_density_dependent_growth",
+   "target": "sulfate"
+  }
+ ],
+ "truncated": false
+}

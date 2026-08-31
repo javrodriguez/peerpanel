@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13513244:8:b575faaa",
+ "entities": [
+  {
+   "name": "E196K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "E196Q",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "E196",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "tRNATyr",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hereditary neuropathy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast deletion strain",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YARS1 E196Q",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YARS1 D81I variant",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YARS1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CMT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "humanized yeast",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "E196K",
+   "predicate": "associated_with",
+   "target": "hereditary neuropathy"
+  },
+  {
+   "source": "E196K",
+   "predicate": "interacts_with",
+   "target": "tRNATyr"
+  }
+ ],
+ "truncated": false
+}

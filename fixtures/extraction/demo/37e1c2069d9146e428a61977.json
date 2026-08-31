@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC10204961:20:340fbb26",
+ "entities": [
+  {
+   "name": "Reviewer #1",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Genome-scale metabolic model",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "N-limited conditions",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "xylulokinase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yeast Nitrogen Base (YNB) media",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Convex Basis sampling algorithm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "kcat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "kapp",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "urea",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Reviewer #1",
+   "predicate": "used",
+   "target": "Genome-scale metabolic model"
+  },
+  {
+   "source": "Reviewer #1",
+   "predicate": "used",
+   "target": "N-limited conditions"
+  },
+  {
+   "source": "Reviewer #1",
+   "predicate": "encoded",
+   "target": "xylulokinase"
+  },
+  {
+   "source": "Reviewer #1",
+   "predicate": "used",
+   "target": "Yeast Nitrogen Base (YNB) media"
+  },
+  {
+   "source": "Reviewer #1",
+   "predicate": "used",
+   "target": "PCA"
+  },
+  {
+   "source": "Reviewer #1",
+   "predicate": "used",
+   "target": "Convex Basis sampling algorithm"
+  },
+  {
+   "source": "Reviewer #1",
+   "predicate": "used",
+   "target": "kcat"
+  },
+  {
+   "source": "Reviewer #1",
+   "predicate": "used",
+   "target": "kapp"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC9487109:3:5c054359",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Verduyn",
+   "type": "organism"
+  },
+  {
+   "name": "baffled flasks",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Verduyn-S2 medium",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "urea",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "oxygen",
+   "type": "chemical"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "folate",
+   "type": "chemical"
+  },
+  {
+   "name": "corn stover",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis",
+   "predicate": "consumes",
+   "target": "xylose"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "consumes",
+   "target": "glucose"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "produces",
+   "target": "ethanol"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "produces",
+   "target": "folate"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grows",
+   "target": "baffled flasks"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grows",
+   "target": "Verduyn-S2 medium"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grows",
+   "target": "urea"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grows",
+   "target": "ammonium sulfate"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grows",
+   "target": "oxygen"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grows",
+   "target": "ethanol"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grows",
+   "target": "folate"
+  }
+ ],
+ "truncated": false
+}

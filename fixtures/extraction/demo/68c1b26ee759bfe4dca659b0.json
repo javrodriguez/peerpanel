@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC5484544:13:bd5d3e0b",
+ "entities": [
+  {
+   "name": "ROS levels",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chronological lifespan analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pHluorin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DHE staining",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FlowJo software",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Guava easyCyte 8HT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Merck Millipore",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SYTOXgreen",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "propidium iodide",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BCECF-AM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thermo Scientific",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fluoroskan Ascent FL Microplate Fluorometer",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Chronological lifespan analysis",
+   "predicate": "determination",
+   "target": "ROS levels"
+  },
+  {
+   "source": "Chronological lifespan analysis",
+   "predicate": "analysis",
+   "target": "ROS levels"
+  },
+  {
+   "source": "DHE staining",
+   "predicate": "measurement",
+   "target": "ROS levels"
+  }
+ ],
+ "truncated": false
+}

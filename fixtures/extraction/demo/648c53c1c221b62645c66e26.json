@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7690147:3:30df000e",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides NP11",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula graminis WP1",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula sp. JG-1b",
+   "type": "organism"
+  },
+  {
+   "name": "ZHK genome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ACACa",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ACOX3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDAT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtYB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PAL",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TGL2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

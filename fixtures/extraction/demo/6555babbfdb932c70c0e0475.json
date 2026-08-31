@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC11628909:1:1161e835",
+ "entities": [
+  {
+   "name": "High salt",
+   "type": "chemical"
+  },
+  {
+   "name": "Na+",
+   "type": "chemical"
+  },
+  {
+   "name": "plant growth",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "development",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cell homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "plasma membrane damage",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcription factors",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERF",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DREB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PagERF021",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Populus alba",
+   "type": "organism"
+  },
+  {
+   "name": "P. glandulosa",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "High salt",
+   "predicate": "causes",
+   "target": "plasma membrane damage"
+  }
+ ],
+ "truncated": false
+}

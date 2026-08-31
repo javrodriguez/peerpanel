@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC9157227:9:6fb116f3",
+ "entities": [
+  {
+   "name": "RtGGA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "crtE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtYB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. toruloides CCT7815",
+   "type": "organism"
+  },
+  {
+   "name": "SBY92",
+   "type": "organism"
+  },
+  {
+   "name": "SBY93",
+   "type": "organism"
+  },
+  {
+   "name": "SBY94",
+   "type": "organism"
+  },
+  {
+   "name": "pXYL",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pGPD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pADH2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "RtGGA",
+   "predicate": "uses",
+   "target": "carotenoids"
+  },
+  {
+   "source": "RtGGA",
+   "predicate": "overexpresses",
+   "target": "crtE"
+  },
+  {
+   "source": "RtGGA",
+   "predicate": "overexpresses",
+   "target": "crtI"
+  },
+  {
+   "source": "RtGGA",
+   "predicate": "overexpresses",
+   "target": "crtYB"
+  },
+  {
+   "source": "RtGGA",
+   "predicate": "uses",
+   "target": "pXYL"
+  },
+  {
+   "source": "RtGGA",
+   "predicate": "uses",
+   "target": "pGPD"
+  },
+  {
+   "source": "RtGGA",
+   "predicate": "uses",
+   "target": "pADH2"
+  },
+  {
+   "source": "R. toruloides CCT7815",
+   "predicate": "has",
+   "target": "crtE"
+  },
+  {
+   "source": "R. toruloides CCT7815",
+   "predicate": "has",
+   "target": "crtI"
+  },
+  {
+   "source": "R. toruloides CCT7815",
+   "predicate": "has",
+   "target": "crtYB"
+  },
+  {
+   "source": "SBY92",
+   "predicate": "has",
+   "target": "crtE"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13513244:0:50afd8f4",
+ "entities": [
+  {
+   "name": "Nancy Sun",
+   "type": "organism"
+  },
+  {
+   "name": "Tristan N. Samuels",
+   "type": "organism"
+  },
+  {
+   "name": "Kyle Hoffman",
+   "type": "organism"
+  },
+  {
+   "name": "Ridhwan Busari",
+   "type": "organism"
+  },
+  {
+   "name": "Zain Nasir",
+   "type": "organism"
+  },
+  {
+   "name": "Nicole Girard",
+   "type": "organism"
+  },
+  {
+   "name": "Noah M. Reynolds",
+   "type": "organism"
+  },
+  {
+   "name": "Ilka U. Heinemann",
+   "type": "organism"
+  },
+  {
+   "name": "Bridget E. Bax",
+   "type": "organism"
+  },
+  {
+   "name": "YARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CMT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Charcot–Marie–Tooth disease",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nancy Sun",
+   "predicate": "conceptualization",
+   "target": "YARS1"
+  },
+  {
+   "source": "Nancy Sun",
+   "predicate": "methodology",
+   "target": "YARS1"
+  },
+  {
+   "source": "Nancy Sun",
+   "predicate": "formal analysis",
+   "target": "YARS1"
+  },
+  {
+   "source": "Nancy Sun",
+   "predicate": "investigation",
+   "target": "YARS1"
+  },
+  {
+   "source": "Nancy Sun",
+   "predicate": "writing",
+   "target": "YARS1"
+  },
+  {
+   "source": "Nancy Sun",
+   "predicate": "validation",
+   "target": "YARS1"
+  },
+  {
+   "source": "Nancy Sun",
+   "predicate": "data curation",
+   "target": "YARS1"
+  },
+  {
+   "source": "Nancy Sun",
+   "predicate": "visualization",
+   "target": "YARS1"
+  },
+  {
+   "source": "Nancy Sun",
+   "predicate": "writing",
+   "target": "YARS1"
+  },
+  {
+   "source": "Nancy Sun",
+   "predicate": "tyrosine supplementation",
+   "target": "YARS1"
+  }
+ ],
+ "truncated": false
+}

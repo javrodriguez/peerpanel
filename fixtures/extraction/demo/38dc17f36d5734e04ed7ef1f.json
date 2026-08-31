@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC5826700:3:69807361",
+ "entities": [
+  {
+   "name": "PKA",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "TORC1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Sch9",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Rim15",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Gpr1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gpa2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ras1/2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cyr1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EGOC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SNF1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pma1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PKA",
+   "predicate": "activates",
+   "target": "TORC1"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "negatively regulates",
+   "target": "SNF1"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "activates",
+   "target": "Sch9"
+  },
+  {
+   "source": "PKA",
+   "predicate": "activates",
+   "target": "Pma1"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "stimulates",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "PKA",
+   "predicate": "aids",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "EGOC",
+   "predicate": "activates",
+   "target": "TORC1"
+  },
+  {
+   "source": "Ras1/2",
+   "predicate": "activates",
+   "target": "Cyr1"
+  },
+  {
+   "source": "SNF1",
+   "predicate": "influences",
+   "target": "Sch9"
+  }
+ ],
+ "truncated": false
+}
