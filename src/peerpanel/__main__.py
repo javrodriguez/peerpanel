@@ -162,8 +162,14 @@ def main(argv: list[str] | None = None) -> int:
         if live is not None:
             digest = embedder.save(live.name)
             print(f"query-embedding fixture written, sha256 {digest}")
-        # results/ is TRACKED: a measurement nobody can see is not published.
-        out = Path.cwd() / "results" / f"ablation-{corpus}.json"
+        # Default output is the untracked working path, so running the documented
+        # command never dirties committed evidence (latencies are machine-dependent
+        # and can never be byte-reproducible). --publish updates results/, which is
+        # tracked because a measurement nobody can see is not published.
+        if "--publish" in rest:
+            out = Path.cwd() / "results" / f"ablation-{corpus}.json"
+        else:
+            out = Path.cwd() / "artifacts" / corpus / "ablation.json"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(report.model_dump_json(indent=1) + "\n")
         table = render_table(report)
@@ -194,7 +200,10 @@ def main(argv: list[str] | None = None) -> int:
             baseline_provider=OllamaOpenAIChat("llama3.1:8b"),
             corpus=corpus,
         )
-        out = Path.cwd() / "results" / f"planted-eval-{corpus}.json"
+        if "--publish" in rest:
+            out = Path.cwd() / "results" / f"planted-eval-{corpus}.json"
+        else:
+            out = Path.cwd() / "artifacts" / corpus / "planted_eval.json"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(planted_report.model_dump_json(indent=1) + "\n")
         print(render_planted(planted_report))

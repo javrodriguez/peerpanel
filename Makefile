@@ -7,7 +7,7 @@
 #   make corpus && make demo-index && make demo-summaries && make ablation && make demo
 
 .PHONY: quickstart demo demo-replay demo-index demo-summaries corpus corpus-verify \
-        embeddings query-embeddings graph summaries ablation ablation-demo eval review test lint
+        embeddings query-embeddings graph summaries ablation ablation-demo publish-results eval review test lint
 
 ## --- Tier 1: deterministic, from committed bytes ---
 
@@ -59,6 +59,11 @@ ablation:
 ## The same ladder at demo scale (needs the fetched demo corpus).
 ablation-demo:
 	uv run python -m peerpanel ablation --corpus demo
+
+## Republish the committed results (writes into the tracked results/ directory).
+publish-results:
+	uv run python -m peerpanel ablation --corpus ci --publish
+	uv run python -m peerpanel ablation --corpus demo --publish
 
 ## Regenerate the committed query-embedding fixture against the live embedder.
 query-embeddings:
