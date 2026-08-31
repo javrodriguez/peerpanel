@@ -7,9 +7,11 @@ temperature 0 with a JSON schema; results cache on disk keyed by
 committed cache as labeled recorded fixtures.
 
 Cost design (measured live 2026-08-31: ~80 s warm per uncapped chunk on
-llama3.1:8b): the prompt caps entities/relations, output budget starts at
-3072 tokens with ONE doubled retry on truncated JSON, and a chunk that still
-fails is recorded honestly as truncated=True (cached, counted, never a crash).
+llama3.1:8b): entity/relation caps are enforced in the schema, the output
+budget starts at 1024 tokens (measured capped output is ~500-600; prompt +
+output must stay inside the serve slot's context) with ONE doubled retry on
+truncated JSON, and a chunk that still fails is recorded honestly as
+truncated=True (cached, counted, never a crash).
 extract_many runs chunks on a thread pool — Ollama serves parallel requests.
 """
 
@@ -146,7 +148,7 @@ def extract_chunk(
     chunk: Chunk,
     provider: ChatProvider,
     cache_dir: Path | None = None,
-    max_tokens: int = 3072,
+    max_tokens: int = 1024,
 ) -> ChunkExtraction:
     """Extract one chunk's graph fragment; disk-cached when cache_dir is given.
 
