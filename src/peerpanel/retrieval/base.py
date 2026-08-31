@@ -9,11 +9,15 @@ assert its exclusion set is non-empty (the cross-cutting law).
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from typing import TYPE_CHECKING
 
 import numpy as np
 from numpy.typing import NDArray
 
 from peerpanel.text.chunks import Chunk
+
+if TYPE_CHECKING:
+    import networkx as nx
 
 
 def doc_of(chunk_id: str) -> str:
@@ -63,3 +67,25 @@ class Index:
 
     def __len__(self) -> int:
         return len(self.chunk_ids)
+
+    def live_nodes(self, graph: nx.Graph[str]) -> set[str]:
+        """Graph entities this run may use.
+
+        Chunk-level filtering stops excluded TEXT from being read, but it does
+        not stop an excluded document's entities from steering the ranking: an
+        entity evidenced only by the twin (its authors, its coined terms) would
+        still match a query and vote for its neighbours. Those entities do not
+        exist for this run.
+
+        Residual, stated: an entity evidenced by both excluded and surviving
+        chunks keeps the edge weight the excluded text contributed. Removing
+        that would require rebuilding the graph per run.
+        """
+        if not self.excluded_docs:
+            return set(graph.nodes())
+        live: set[str] = set()
+        for node, attrs in graph.nodes(data=True):
+            evidence = attrs.get("chunk_ids") or set()
+            if any(doc_of(cid) not in self.excluded_docs for cid in evidence):
+                live.add(node)
+        return live

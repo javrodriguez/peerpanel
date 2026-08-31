@@ -46,6 +46,7 @@ class GraphGlobalRetriever:
         self._reports = reports
         self._assignment = assignment
         self._chunk_set = set(index.chunk_ids)
+        self._live = index.live_nodes(graph)
         corpus = [tokenize(f"{r.title} {r.summary} {' '.join(r.member_names)}") for r in reports]
         # BM25Plus: Okapi's IDF hits exactly zero on tiny corpora (df == N/2),
         # and a report set can be small — Plus keeps matching terms positive.
@@ -67,7 +68,7 @@ class GraphGlobalRetriever:
             if community_score <= 0:
                 continue
             for node, cid in self._assignment.items():
-                if cid != report.community_id or node not in self._graph:
+                if cid != report.community_id or node not in self._live:
                     continue
                 for chunk_id in self._graph.nodes[node]["chunk_ids"]:
                     if chunk_id in self._chunk_set:

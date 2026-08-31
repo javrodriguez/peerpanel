@@ -38,12 +38,16 @@ class GraphLocalRetriever:
         self._graph = graph
         self._embedder = embedder if index.vectors is not None else None
         self._position = {cid: i for i, cid in enumerate(index.chunk_ids)}
+        # Entities evidenced ONLY by excluded documents do not exist for this run
+        # (see Index.live_nodes) — otherwise the twin steers the ranking of the
+        # very chunks that replaced it.
+        self._live = index.live_nodes(graph)
 
     def _matched_nodes(self, query: str) -> dict[str, float]:
         terms = [_norm(t) for t in candidate_terms(query)]
         terms += [t for t in _norm(query).split() if len(t) >= 4]
         weights: dict[str, float] = {}
-        for node in self._graph.nodes():
+        for node in self._live:
             for term in terms:
                 if node == term or (len(term) >= 4 and term in node):
                     weights[node] = max(weights.get(node, 0.0), 1.0)
@@ -54,6 +58,8 @@ class GraphLocalRetriever:
                 continue
             max_w = max(attrs["weight"] for attrs in edges.values())
             for neighbour, attrs in edges.items():
+                if neighbour not in self._live:
+                    continue
                 bonus = NEIGHBOUR_DAMP * attrs["weight"] / max_w
                 weights[neighbour] = max(weights.get(neighbour, 0.0), bonus)
         return weights

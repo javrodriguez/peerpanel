@@ -99,8 +99,19 @@ def _graph(args: list[str]) -> int:
         communities = json.loads((root / "artifacts" / corpus / "communities.json").read_text())
         provider = OllamaOpenAIChat("llama3.1:8b")
         cache = root / "fixtures" / "summaries" / corpus
+        # --resolution limits which Leiden levels get LLM reports. The hierarchy is
+        # always detected at every level (communities.json); reports cost one model
+        # call each, so by default only the level retrieval actually reads is
+        # summarised. Stated in the README rather than implied.
+        wanted = (
+            {args[args.index("--resolution") + 1]}
+            if "--resolution" in args
+            else set(communities)
+        )
         all_reports: list[dict[str, object]] = []
         for resolution, assignment in communities.items():
+            if resolution not in wanted:
+                continue
             typed = {n: int(c) for n, c in assignment.items()}
             reports = summarise_communities(
                 graph, typed, float(resolution), provider, cache_dir=cache
