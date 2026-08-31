@@ -114,8 +114,9 @@ Nothing here is mocked. The distinction that matters:
 - **Recorded from real runs and committed:** per-chunk extractions, community reports, embeddings.
   These are actual `llama3.1:8b` and `nomic-embed-text` outputs, cached by content hash, each with
   the command that regenerates it. CI replays them — it has no GPU — and any drift fails loudly.
-- **Proven by captured runs:** the panel and the planted-error evaluation, whose raw logs are
-  committed under `results/`.
+- **Proven by captured runs:** the index builds, whose raw logs are committed under `results/`
+  alongside the measurements they produced. The panel and planted-error captures land with
+  checkpoint C4; until they do, this line names only what is actually in the repo.
 
 The one adapter that has never run — Anthropic's — says so in its own docstring and is tested for
 request shape only. No API key exists on the development machine and none was requested.
@@ -124,7 +125,8 @@ request shape only. No API key exists on the development machine and none was re
 
 - **[results/RESULTS.md](results/RESULTS.md)** — every measurement, with its honest reading.
 - **[LIMITATIONS.md](LIMITATIONS.md)** — what this does not do, what the numbers do not prove, and
-  nine known failure modes of LLM review with what is done about each.
+  eight known failure modes of LLM review with what is done about each — three of them admitting
+  the mitigation is partial or absent.
 - **[DECISIONS.md](DECISIONS.md)** — the design calls and the measurements behind them.
 
 ## Scope
