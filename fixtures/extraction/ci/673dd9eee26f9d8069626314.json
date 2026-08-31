@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC12994171:8:a9e88d07",
+ "entities": [
+  {
+   "name": "diploid genotypes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "steady-state hypoxia",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "time-resolved experiment",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "induction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "feedback",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "haploid MynOx",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCO1 module",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UbSYRAP protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NLUC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RAP2-type ERFVIIs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERFVII module",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCO4",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "diploid genotypes",
+   "predicate": "responds_to",
+   "target": "steady-state hypoxia"
+  },
+  {
+   "source": "diploid genotypes",
+   "predicate": "has_induction",
+   "target": "induction"
+  },
+  {
+   "source": "haploid MynOx",
+   "predicate": "has_similar_range",
+   "target": "diploid genotypes"
+  }
+ ],
+ "truncated": false
+}

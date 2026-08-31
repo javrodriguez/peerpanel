@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC10729969:21:db6b3218",
+ "entities": [
+  {
+   "name": "Budding yeast",
+   "type": "organism"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "hydrogen sulfide gas",
+   "type": "chemical"
+  },
+  {
+   "name": "Roli",
+   "type": "organism"
+  },
+  {
+   "name": "Roland Roberts",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Biology",
+   "type": "organism"
+  },
+  {
+   "name": "GitHub",
+   "type": "organism"
+  },
+  {
+   "name": "Zenodo",
+   "type": "organism"
+  },
+  {
+   "name": "https://github.com/aeyuan/H2S-mediated-density-dependence",
+   "type": "organism"
+  },
+  {
+   "name": "https://doi.org/10.5281/zenodo.XXXXX",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS ONE",
+   "type": "organism"
+  },
+  {
+   "name": "protocols.io",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Budding yeast",
+   "predicate": "has_metabolic_defect",
+   "target": "MET17"
+  },
+  {
+   "source": "Budding yeast",
+   "predicate": "overcomes_metabolic_defect",
+   "target": "hydrogen sulfide gas"
+  }
+ ],
+ "truncated": false
+}

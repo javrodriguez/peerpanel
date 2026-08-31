@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC12994171:12:d4086ce6",
+ "entities": [
+  {
+   "name": "MaV203",
+   "type": "organism"
+  },
+  {
+   "name": "W303 1A",
+   "type": "organism"
+  },
+  {
+   "name": "W303 1B",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "Thermo-Fisher Scientific",
+   "type": "organism"
+  },
+  {
+   "name": "Scientific Research and Development",
+   "type": "organism"
+  },
+  {
+   "name": "GmbH",
+   "type": "organism"
+  },
+  {
+   "name": "Coy Lab Products",
+   "type": "organism"
+  },
+  {
+   "name": "PyroScience",
+   "type": "organism"
+  },
+  {
+   "name": "Promega",
+   "type": "organism"
+  },
+  {
+   "name": "Bio-Rad",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "MaV203",
+   "predicate": "has_strain",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "W303 1A",
+   "predicate": "has_strain",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "W303 1B",
+   "predicate": "has_strain",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "Arabidopsis",
+   "predicate": "has_organism",
+   "target": "S. cerevisiae"
+  }
+ ],
+ "truncated": false
+}

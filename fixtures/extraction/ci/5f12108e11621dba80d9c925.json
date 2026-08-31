@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13406880:7:c3182815",
+ "entities": [
+  {
+   "name": "Sam1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sam2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ded1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "lactate",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "cycloheximide",
+   "type": "chemical"
+  },
+  {
+   "name": "2-deoxyglucose",
+   "type": "chemical"
+  },
+  {
+   "name": "stress granules",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "foci",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GFP",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sam1",
+   "predicate": "accumulate",
+   "target": "foci"
+  },
+  {
+   "source": "Sam1",
+   "predicate": "colocalize",
+   "target": "Sam2"
+  },
+  {
+   "source": "Sam1",
+   "predicate": "relocalize",
+   "target": "foci"
+  },
+  {
+   "source": "Sam1",
+   "predicate": "form",
+   "target": "foci"
+  },
+  {
+   "source": "Sam1",
+   "predicate": "disassemble",
+   "target": "foci"
+  },
+  {
+   "source": "glucose",
+   "predicate": "starve",
+   "target": "Sam1"
+  },
+  {
+   "source": "glucose",
+   "predicate": "limit",
+   "target": "Sam1"
+  },
+  {
+   "source": "Sam1",
+   "predicate": "colocalize",
+   "target": "stress granules"
+  },
+  {
+   "source": "Ded1",
+   "predicate": "mark",
+   "target": "stress granules"
+  }
+ ],
+ "truncated": false
+}

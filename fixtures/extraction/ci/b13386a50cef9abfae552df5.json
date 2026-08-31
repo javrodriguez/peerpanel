@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13274398:8:15590057",
+ "entities": [
+  {
+   "name": "PKA",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Met4",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Gcn4",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Fhl1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Ifh1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Crf1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pde1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pde2",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cyr1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Snf1",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "TORC1",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PKA",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "cAMP",
+   "predicate": "regulates",
+   "target": "PKA"
+  },
+  {
+   "source": "Gcn4",
+   "predicate": "regulates",
+   "target": "Met4"
+  },
+  {
+   "source": "Pde1",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "Pde2",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "Cyr1",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "Snf1",
+   "predicate": "regulates",
+   "target": "cAMP"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13515017:10:4241fb0c",
+ "entities": [
+  {
+   "name": "Terminal amplification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "human genome",
+   "type": "organism"
+  },
+  {
+   "name": "mmBIR",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Telomere",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "T-2-T human genome assembly",
+   "type": "organism"
+  },
+  {
+   "name": "Telomere-to-Telomere (T-2-T) human genome assembly",
+   "type": "organism"
+  },
+  {
+   "name": "Telomere-to-Telomere (T-2-T) human genome",
+   "type": "organism"
+  },
+  {
+   "name": "Telomere",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Telomere",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Telomere",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Telomere",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Telomere",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Terminal amplification",
+   "predicate": "occurs_in",
+   "target": "human genome"
+  },
+  {
+   "source": "mmBIR",
+   "predicate": "involved_in",
+   "target": "Telomere"
+  },
+  {
+   "source": "Telomere",
+   "predicate": "found_in",
+   "target": "human genome"
+  }
+ ],
+ "truncated": false
+}

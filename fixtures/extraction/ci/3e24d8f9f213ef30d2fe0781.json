@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13170222:13:3a6318bd",
+ "entities": [
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "MET32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met32 mutant",
+   "type": "organism"
+  },
+  {
+   "name": "SN250",
+   "type": "organism"
+  },
+  {
+   "name": "Table S6",
+   "type": "chemical"
+  },
+  {
+   "name": "pFA plasmids",
+   "type": "chemical"
+  },
+  {
+   "name": "pDUP3 plasmid",
+   "type": "chemical"
+  },
+  {
+   "name": "CIp-Act plasmid",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "SLD",
+   "type": "chemical"
+  },
+  {
+   "name": "MDM",
+   "type": "chemical"
+  },
+  {
+   "name": "SC medium",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. albicans",
+   "predicate": "has_strain",
+   "target": "met32 mutant"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_strain",
+   "target": "SN250"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "MET32"
+  },
+  {
+   "source": "met32 mutant",
+   "predicate": "has_gene",
+   "target": "MET32"
+  },
+  {
+   "source": "met32 mutant",
+   "predicate": "has_plasmid",
+   "target": "pDUP3 plasmid"
+  },
+  {
+   "source": "met32 mutant",
+   "predicate": "has_plasmid",
+   "target": "CIp-Act plasmid"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_plasmid",
+   "target": "pFA plasmids"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_medium",
+   "target": "YPD"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_medium",
+   "target": "SLD"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_medium",
+   "target": "MDM"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_medium",
+   "target": "SC medium"
+  }
+ ],
+ "truncated": false
+}

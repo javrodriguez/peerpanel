@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13348253:6:ebf0759b",
+ "entities": [
+  {
+   "name": "Thiamine",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "HMP",
+   "type": "chemical"
+  },
+  {
+   "name": "THI5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "THI21",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "THI72",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SNO2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SNZ2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GCV1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GCV2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GCV3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BAT2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

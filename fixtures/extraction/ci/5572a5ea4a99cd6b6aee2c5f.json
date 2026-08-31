@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13055380:1:25f8ce9c",
+ "entities": [
+  {
+   "name": "Skatole",
+   "type": "chemical"
+  },
+  {
+   "name": "3-methylindole",
+   "type": "chemical"
+  },
+  {
+   "name": "C₉H₉N",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Bacillus subtilis",
+   "type": "organism"
+  },
+  {
+   "name": "L-tryptophan",
+   "type": "chemical"
+  },
+  {
+   "name": "malodorous gas",
+   "type": "chemical"
+  },
+  {
+   "name": "livestock production performance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "environment",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "odorous emissions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "farm workers",
+   "type": "organism"
+  },
+  {
+   "name": "nearby residents",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

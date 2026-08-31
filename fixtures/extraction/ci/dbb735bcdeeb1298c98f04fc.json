@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13055380:7:567b8910",
+ "entities": [
+  {
+   "name": "skatole",
+   "type": "chemical"
+  },
+  {
+   "name": "indole",
+   "type": "chemical"
+  },
+  {
+   "name": "indoxyl",
+   "type": "chemical"
+  },
+  {
+   "name": "indoxyl sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "red pitaya",
+   "type": "organism"
+  },
+  {
+   "name": "sinomenine",
+   "type": "chemical"
+  },
+  {
+   "name": "aryl hydrocarbon receptor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gut microbiota regulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lactobacillus plantarum",
+   "type": "organism"
+  },
+  {
+   "name": "indole-3-lactic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "CD8 + T cell immunity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "colorectal tumorigenesis",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "skatole",
+   "predicate": "is associated with",
+   "target": "indole"
+  },
+  {
+   "source": "indole",
+   "predicate": "is associated with",
+   "target": "indoxyl"
+  },
+  {
+   "source": "indoxyl",
+   "predicate": "is associated with",
+   "target": "indoxyl sulfate"
+  },
+  {
+   "source": "aryl hydrocarbon receptor",
+   "predicate": "is involved in",
+   "target": "gut microbiota regulation"
+  },
+  {
+   "source": "Lactobacillus plantarum",
+   "predicate": "produces",
+   "target": "indole-3-lactic acid"
+  },
+  {
+   "source": "indole-3-lactic acid",
+   "predicate": "is associated with",
+   "target": "CD8 + T cell immunity"
+  },
+  {
+   "source": "indole-3-lactic acid",
+   "predicate": "is associated with",
+   "target": "colorectal tumorigenesis"
+  }
+ ],
+ "truncated": false
+}

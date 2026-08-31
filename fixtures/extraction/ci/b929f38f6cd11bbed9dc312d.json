@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13510017:6:b68f0239",
+ "entities": [
+  {
+   "name": "Low-DO",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "High-DO",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DESeq2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GSEA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YMC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ox",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R/B",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R/C",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "POX1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Douglas Murray",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

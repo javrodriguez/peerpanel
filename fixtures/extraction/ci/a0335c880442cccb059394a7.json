@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13510017:1:a40051d0",
+ "entities": [
+  {
+   "name": "YMC",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "oxygen",
+   "type": "chemical"
+  },
+  {
+   "name": "ATP",
+   "type": "chemical"
+  },
+  {
+   "name": "ribosome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA",
+   "type": "chemical"
+  },
+  {
+   "name": "DNA",
+   "type": "chemical"
+  },
+  {
+   "name": "ROS",
+   "type": "chemical"
+  },
+  {
+   "name": "redox environment",
+   "type": "chemical"
+  },
+  {
+   "name": "redox cycle",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YMC",
+   "predicate": "have",
+   "target": "redox cycle"
+  }
+ ],
+ "truncated": false
+}

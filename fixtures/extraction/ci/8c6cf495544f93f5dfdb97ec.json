@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13304748:5:d1f8b815",
+ "entities": [
+  {
+   "name": "YKO collections",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "CdS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "CuO NPs",
+   "type": "chemical"
+  },
+  {
+   "name": "Au NPs",
+   "type": "chemical"
+  },
+  {
+   "name": "Ag NPs",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnO NPs",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "Glr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sod1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pos5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TOM5",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YKO collections",
+   "predicate": "contains",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "YKO collections",
+   "predicate": "exposed_to",
+   "target": "CdS QDs"
+  }
+ ],
+ "truncated": false
+}

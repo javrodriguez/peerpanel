@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13304748:9:c9e9eff3",
+ "entities": [
+  {
+   "name": "ZnS QD",
+   "type": "chemical"
+  },
+  {
+   "name": "CdS QD",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "SCJ1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RKR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUE1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kar2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSPs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "COA6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NADK2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "POS5",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

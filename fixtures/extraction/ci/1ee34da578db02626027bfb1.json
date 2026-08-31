@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13348253:7:b4fc76e5",
+ "entities": [
+  {
+   "name": "Cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "pyruvate",
+   "type": "chemical"
+  },
+  {
+   "name": "ROS",
+   "type": "chemical"
+  },
+  {
+   "name": "CTA1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GTO1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GDB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GLC3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GLG2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GAC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARG1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cysteine",
+   "predicate": "catabolized_by",
+   "target": "H2S"
+  },
+  {
+   "source": "Cysteine",
+   "predicate": "produces",
+   "target": "pyruvate"
+  },
+  {
+   "source": "Cysteine",
+   "predicate": "produces",
+   "target": "ROS"
+  },
+  {
+   "source": "Cysteine",
+   "predicate": "regulates",
+   "target": "CTA1"
+  },
+  {
+   "source": "Cysteine",
+   "predicate": "regulates",
+   "target": "GTO1"
+  },
+  {
+   "source": "Cysteine",
+   "predicate": "regulates",
+   "target": "GDB1"
+  },
+  {
+   "source": "Cysteine",
+   "predicate": "regulates",
+   "target": "GLC3"
+  },
+  {
+   "source": "Cysteine",
+   "predicate": "regulates",
+   "target": "GLG2"
+  },
+  {
+   "source": "Cysteine",
+   "predicate": "regulates",
+   "target": "GAC1"
+  },
+  {
+   "source": "Cysteine",
+   "predicate": "regulates",
+   "target": "ARG1"
+  },
+  {
+   "source": "H2S",
+   "predicate": "produces",
+   "target": "ROS"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_gene",
+   "target": "CTA1"
+  }
+ ],
+ "truncated": false
+}

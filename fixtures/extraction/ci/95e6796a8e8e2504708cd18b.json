@@ -1,0 +1,70 @@
+{
+ "chunk_id": "PMC13312927:2:0dd3d141",
+ "entities": [
+  {
+   "name": "SAH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hcy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "SAHH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Δsah1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mCherry",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SAH",
+   "predicate": "accumulate",
+   "target": "yeast"
+  },
+  {
+   "source": "Hcy",
+   "predicate": "supplement",
+   "target": "yeast"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "inhibit",
+   "target": "yeast"
+  },
+  {
+   "source": "SAH",
+   "predicate": "accumulate",
+   "target": "Drosophila"
+  },
+  {
+   "source": "Hcy",
+   "predicate": "supplement",
+   "target": "Drosophila"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "inhibit",
+   "target": "Drosophila"
+  }
+ ],
+ "truncated": false
+}

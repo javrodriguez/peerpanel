@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13026841:7:e03503ae",
+ "entities": [
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UHPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HRMS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FISh",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Compound Discoverer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Principal Component Analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MetaboAnalyst",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ρ+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ρ0",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Aminoacyl-tRNA biosynthesis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Alanine, aspartate and glutamate metabolism",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ρ+",
+   "predicate": "compared_to",
+   "target": "ρ0"
+  }
+ ],
+ "truncated": false
+}

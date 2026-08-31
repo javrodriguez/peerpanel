@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13170222:10:403acacc",
+ "entities": [
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "human host",
+   "type": "organism"
+  },
+  {
+   "name": "sulfur-containing metabolites",
+   "type": "chemical"
+  },
+  {
+   "name": "gut",
+   "type": "organism"
+  },
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "Francisella novicida",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "RSS",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Opt7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Seo13",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. albicans",
+   "predicate": "utilize",
+   "target": "sulfur-containing metabolites"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "import",
+   "target": "GSH"
+  },
+  {
+   "source": "Francisella novicida",
+   "predicate": "import",
+   "target": "GSH"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "utilize",
+   "target": "RSS"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "utilize",
+   "target": "hydrogen sulfide"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13515017:8:b65630f1",
+ "entities": [
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Y'",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chr II-R",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yku70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "exo1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "msh2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sae2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sgf73",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pol32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rad5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rad54",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rad52",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "yku70"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "exo1"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "msh2"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "sae2"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "sgf73"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "pol32"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "rad5"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "rad54"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "amplified_by",
+   "target": "rad52"
+  },
+  {
+   "source": "Y'",
+   "predicate": "amplified_by",
+   "target": "yku70"
+  },
+  {
+   "source": "chr II-R",
+   "predicate": "amplified_by",
+   "target": "yku70"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13170222:9:36351a93",
+ "entities": [
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "SOD1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "sulfite",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "RSS",
+   "type": "chemical"
+  },
+  {
+   "name": "JLP12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SEO13",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Galleria mellonella",
+   "type": "organism"
+  },
+  {
+   "name": "HT-29",
+   "type": "organism"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met32",
+   "predicate": "regulates",
+   "target": "SOD1"
+  }
+ ],
+ "truncated": false
+}

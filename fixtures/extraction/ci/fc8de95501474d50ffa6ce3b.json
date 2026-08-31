@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13304748:12:94ce1ab3",
+ "entities": [
+  {
+   "name": "ZnO nanoparticles",
+   "type": "chemical"
+  },
+  {
+   "name": "CdS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "CdSe nanoparticles",
+   "type": "chemical"
+  },
+  {
+   "name": "Graphene Quantum Dots",
+   "type": "chemical"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH kinase",
+   "type": "chemical"
+  },
+  {
+   "name": "Mitochondrial NADP(H ) deficiency",
+   "type": "chemical"
+  },
+  {
+   "name": "Dienoyl - CoA reductase deficiency",
+   "type": "chemical"
+  },
+  {
+   "name": "Hyperlysinemia",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn",
+   "type": "chemical"
+  },
+  {
+   "name": "Cd",
+   "type": "chemical"
+  },
+  {
+   "name": "S",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

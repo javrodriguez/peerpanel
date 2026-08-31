@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13406880:6:5ac97245",
+ "entities": [
+  {
+   "name": "Sam1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AdoMet",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CEN.PK",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "H. Hariri",
+   "type": "organism"
+  },
+  {
+   "name": "National Institutes of Health",
+   "type": "organism"
+  },
+  {
+   "name": "National Institute of General Medical Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "Wayne State University",
+   "type": "organism"
+  },
+  {
+   "name": "Karmanos Cancer Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Barbara Ann Karmanos Cancer Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Microscopy, Imaging and Cytometry Resources Core",
+   "type": "organism"
+  },
+  {
+   "name": "Pharmacology and Metabolomics Core",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

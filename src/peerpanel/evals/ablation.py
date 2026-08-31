@@ -60,6 +60,7 @@ class RungResult(BaseModel):
 class AblationReport(BaseModel):
     corpus_manifest: str
     n_cases: int
+    skipped_cases: dict[str, str]  # doi -> reason (e.g. twin not a corpus member: no valid run)
     aggregate_relevant: int
     rates_reported: bool
     k: int
@@ -108,7 +109,19 @@ def load_ci_artifacts(
 def run_ablation(root: Path, embedder: EmbedProvider, k: int = K) -> AblationReport:
     """Run every rung on every case over the CI corpus artifacts."""
     manifest_rel = Path("corpus") / "ci.manifest.json"
-    cases: list[QueryCase] = build_cases(root, manifest_rel)
+    all_cases: list[QueryCase] = build_cases(root, manifest_rel)
+    from peerpanel.corpus.models import CorpusManifest
+
+    corpus_pmcids = CorpusManifest.load(root / manifest_rel).pmcids()
+    # A run is only valid where the manuscript's twin is a member of THIS corpus
+    # (the per-RUN reading of the self-exclusion law, DECISIONS D8): a case whose
+    # twin is absent has no run here and is skipped LOUDLY, never silently.
+    cases = [c for c in all_cases if set(c.excluded_docs) & corpus_pmcids]
+    skipped = {
+        c.preprint_doi: "twin not a member of this corpus — no valid run"
+        for c in all_cases
+        if not (set(c.excluded_docs) & corpus_pmcids)
+    }
     chunk_ids, vectors = store.load(root / "fixtures" / "ci_embeddings.npz")
     chunks, _ = ci_chunks(root)
     if [c.chunk_id for c in chunks] != chunk_ids:
@@ -139,6 +152,7 @@ def run_ablation(root: Path, embedder: EmbedProvider, k: int = K) -> AblationRep
     return AblationReport(
         corpus_manifest=str(manifest_rel),
         n_cases=len(cases),
+        skipped_cases=skipped,
         aggregate_relevant=sum(len(c.relevant_docs) for c in cases),
         rates_reported=allowed,
         k=k,
@@ -157,6 +171,8 @@ def render_table(report: AblationReport) -> str:
             else "below the N>=20 gate — per-item hits only, no rates"
         )
     ]
+    for doi, reason in report.skipped_cases.items():
+        lines.append(f"  (skipped {doi}: {reason})")
     rungs: dict[str, list[RungResult]] = {}
     for r in report.results:
         rungs.setdefault(r.rung, []).append(r)

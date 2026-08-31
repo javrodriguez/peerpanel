@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13348253:1:7441b8de",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfite",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "O-acetylhomoserine",
+   "type": "chemical"
+  },
+  {
+   "name": "Met4p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met28p",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "assimilate",
+   "target": "sulfur"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "reduce",
+   "target": "sulfate"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "produce",
+   "target": "sulfide"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "condense",
+   "target": "homocysteine"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "catabolize",
+   "target": "methionine"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "catabolize",
+   "target": "cysteine"
+  }
+ ],
+ "truncated": false
+}

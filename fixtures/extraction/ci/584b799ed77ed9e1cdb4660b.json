@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13026841:5:ccfc30fb",
+ "entities": [
+  {
+   "name": "Metabolite Extraction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Metabolites",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biphasic protocol",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Literature",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cell pellets",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ACN",
+   "type": "chemical"
+  },
+  {
+   "name": "MeOH",
+   "type": "chemical"
+  },
+  {
+   "name": "Ascorbic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Glass microspheres",
+   "type": "chemical"
+  },
+  {
+   "name": "TissueLyser LT",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Centrifugation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Supernatant",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "uses",
+   "target": "Biphasic protocol"
+  },
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "employs",
+   "target": "Literature"
+  },
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "involves",
+   "target": "Cell pellets"
+  },
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "uses",
+   "target": "ACN"
+  },
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "uses",
+   "target": "MeOH"
+  },
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "uses",
+   "target": "Ascorbic acid"
+  },
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "uses",
+   "target": "Glass microspheres"
+  },
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "employs",
+   "target": "TissueLyser LT"
+  },
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "involves",
+   "target": "Centrifugation"
+  },
+  {
+   "source": "Metabolite Extraction",
+   "predicate": "produces",
+   "target": "Supernatant"
+  }
+ ],
+ "truncated": false
+}

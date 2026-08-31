@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13515017:7:54f3354e",
+ "entities": [
+  {
+   "name": "Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ITS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "telomere",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SUL1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yku70",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ars228",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chr II",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Oxford Nanopore",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "telomerase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "exonucleases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "end-recognizing machinery",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA repair",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Y",
+   "predicate": "is homogeneous",
+   "target": "ITS"
+  },
+  {
+   "source": "ITS",
+   "predicate": "is related",
+   "target": "Y"
+  },
+  {
+   "source": "telomere",
+   "predicate": "is recognized",
+   "target": "exonucleases"
+  },
+  {
+   "source": "telomere",
+   "predicate": "is repaired",
+   "target": "DNA repair"
+  },
+  {
+   "source": "yku70",
+   "predicate": "is mutated",
+   "target": "telomerase"
+  },
+  {
+   "source": "ars228",
+   "predicate": "is mutated",
+   "target": "telomerase"
+  },
+  {
+   "source": "chr II",
+   "predicate": "is invaded",
+   "target": "ITS"
+  },
+  {
+   "source": "telomerase",
+   "predicate": "is involved",
+   "target": "DNA repair"
+  },
+  {
+   "source": "exonucleases",
+   "predicate": "is involved",
+   "target": "DNA repair"
+  },
+  {
+   "source": "end-recognizing machinery",
+   "predicate": "is involved",
+   "target": "DNA repair"
+  }
+ ],
+ "truncated": false
+}

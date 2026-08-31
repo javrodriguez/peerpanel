@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13515017:9:d01162b9",
+ "entities": [
+  {
+   "name": "mmBIR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "POL32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Y' (Y-prime)",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yku70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "telomere",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNA polymerase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "subtelomeric sequence",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ITS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ku heterodimer",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "wild type",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pol32Δ",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mmBIR",
+   "predicate": "involved_in",
+   "target": "telomere"
+  },
+  {
+   "source": "POL32",
+   "predicate": "encode",
+   "target": "DNA polymerase"
+  },
+  {
+   "source": "Yku70",
+   "predicate": "involved_in",
+   "target": "telomere"
+  },
+  {
+   "source": "mmBIR",
+   "predicate": "require",
+   "target": "POL32"
+  },
+  {
+   "source": "mmBIR",
+   "predicate": "require",
+   "target": "Yku70"
+  },
+  {
+   "source": "telomere",
+   "predicate": "involved_in",
+   "target": "mmBIR"
+  },
+  {
+   "source": "DNA polymerase",
+   "predicate": "involved_in",
+   "target": "mmBIR"
+  },
+  {
+   "source": "subtelomeric sequence",
+   "predicate": "involved_in",
+   "target": "mmBIR"
+  },
+  {
+   "source": "ITS",
+   "predicate": "involved_in",
+   "target": "mmBIR"
+  },
+  {
+   "source": "Ku heterodimer",
+   "predicate": "involved_in",
+   "target": "telomere"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13515017:1:e5ef880d",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GEO accession GSE74443",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Dryad",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NIH Sequence Read Archive",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BioProject ID PRJNA1473328",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "telomere",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chromosome II",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pol32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yku70",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "amplify",
+   "target": "SUL1"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "involve",
+   "target": "telomere"
+  },
+  {
+   "source": "DNA",
+   "predicate": "replicate",
+   "target": "chromosome II"
+  },
+  {
+   "source": "pol32",
+   "predicate": "involve",
+   "target": "telomere"
+  },
+  {
+   "source": "yku70",
+   "predicate": "involve",
+   "target": "telomere"
+  },
+  {
+   "source": "telomere",
+   "predicate": "involve",
+   "target": "DNA"
+  },
+  {
+   "source": "DNA",
+   "predicate": "involve",
+   "target": "telomere"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "involve",
+   "target": "telomere"
+  },
+  {
+   "source": "telomere",
+   "predicate": "involve",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "DNA",
+   "predicate": "involve",
+   "target": "Saccharomyces cerevisiae"
+  }
+ ],
+ "truncated": false
+}

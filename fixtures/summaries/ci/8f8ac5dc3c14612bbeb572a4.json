@@ -1,0 +1,22 @@
+{
+ "community_id": 10,
+ "resolution": 0.3,
+ "size": 12,
+ "member_names": [
+  "Carvunis lab",
+  "Dana Miller",
+  "David Skelding",
+  "Li Xie",
+  "Maitreya Dunham",
+  "Mark Roth",
+  "Michael Gong",
+  "Olly Jarvis",
+  "Ralser lab",
+  "Shou lab",
+  "Stuart Harrison",
+  "Yuejia Zhu"
+ ],
+ "title": "Carvunis Lab and Ralser Lab Collaborators",
+ "summary": "This cluster consists of researchers and labs from various fields, all categorized as method_or_tool. The entities include Carvunis lab, Ralser lab, and several individual researchers such as Dana Miller, David Skelding, and Li Xie. The relationships between these entities are not specified, but they are likely collaborators or contributors to the Carvunis lab and Ralser lab. The presence of Shou lab and other researchers suggests a broader network of researchers and labs working together.",
+ "truncated": false
+}

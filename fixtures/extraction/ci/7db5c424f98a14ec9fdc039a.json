@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13406880:4:f38e907d",
+ "entities": [
+  {
+   "name": "Sam1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ded1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "stress granules",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "cycloheximide",
+   "type": "chemical"
+  },
+  {
+   "name": "2-deoxyglucose",
+   "type": "chemical"
+  },
+  {
+   "name": "H2O2",
+   "type": "chemical"
+  },
+  {
+   "name": "ATG2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP42",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AdoMet",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "cells",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sam1",
+   "predicate": "is_recruited_to",
+   "target": "stress granules"
+  },
+  {
+   "source": "glucose",
+   "predicate": "limits",
+   "target": "Sam1"
+  }
+ ],
+ "truncated": false
+}

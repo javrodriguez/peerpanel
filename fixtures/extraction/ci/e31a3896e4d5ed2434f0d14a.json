@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12994171:13:35e269c8",
+ "entities": [
+  {
+   "name": "Prof. Pierdomenico Perata",
+   "type": "organism"
+  },
+  {
+   "name": "Beatriz Pasero Garcia",
+   "type": "organism"
+  },
+  {
+   "name": "M.L.-P.",
+   "type": "organism"
+  },
+  {
+   "name": "F.L.",
+   "type": "organism"
+  },
+  {
+   "name": "Y.H.",
+   "type": "organism"
+  },
+  {
+   "name": "L.P.",
+   "type": "organism"
+  },
+  {
+   "name": "L.D.P.",
+   "type": "organism"
+  },
+  {
+   "name": "A.P.",
+   "type": "organism"
+  },
+  {
+   "name": "B.G.",
+   "type": "organism"
+  },
+  {
+   "name": "UKRI Biotechnology",
+   "type": "organism"
+  },
+  {
+   "name": "Biological Science Research Council Pioneer Award Grant BB/Y512953/1",
+   "type": "organism"
+  },
+  {
+   "name": "European Research Council",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

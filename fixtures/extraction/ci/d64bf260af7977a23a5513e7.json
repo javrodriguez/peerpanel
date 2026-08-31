@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13170222:7:338bc016",
+ "entities": [
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "Opt7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Seo13",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "SLD",
+   "type": "chemical"
+  },
+  {
+   "name": "WT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met32 mutant",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MFS transporter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "human host",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met32",
+   "predicate": "requires",
+   "target": "glutathione"
+  },
+  {
+   "source": "Seo13",
+   "predicate": "is a",
+   "target": "MFS transporter"
+  }
+ ],
+ "truncated": false
+}

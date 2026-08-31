@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13026841:0:ba006cdd",
+ "entities": [
+  {
+   "name": "Mastrorocco Fabrizio",
+   "type": "organism"
+  },
+  {
+   "name": "De Martino Luca",
+   "type": "organism"
+  },
+  {
+   "name": "Fochi Igor",
+   "type": "organism"
+  },
+  {
+   "name": "Pesole Graziano",
+   "type": "organism"
+  },
+  {
+   "name": "Picardi Ernesto",
+   "type": "organism"
+  },
+  {
+   "name": "Musicco Clara",
+   "type": "organism"
+  },
+  {
+   "name": "Giannattasio Sergio",
+   "type": "organism"
+  },
+  {
+   "name": "Chrousos George P.",
+   "type": "organism"
+  },
+  {
+   "name": "Vlachakis Dimitrios",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "ELIXIR-IT",
+   "type": "organism"
+  },
+  {
+   "name": "Italian Node",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

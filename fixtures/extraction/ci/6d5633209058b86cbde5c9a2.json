@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13348253:10:68644f95",
+ "entities": [
+  {
+   "name": "VSC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "pantothenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Ehrlich pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SRS pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "methanethiol",
+   "type": "chemical"
+  },
+  {
+   "name": "ARO9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BAT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "IRC7",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VSC",
+   "predicate": "derived_from",
+   "target": "methionine"
+  },
+  {
+   "source": "VSC",
+   "predicate": "derived_from",
+   "target": "cysteine"
+  },
+  {
+   "source": "methionine",
+   "predicate": "catabolized_by",
+   "target": "Ehrlich pathway"
+  },
+  {
+   "source": "cysteine",
+   "predicate": "catabolized_by",
+   "target": "Ehrlich pathway"
+  }
+ ],
+ "truncated": false
+}

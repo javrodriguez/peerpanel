@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13055380:0:b9dfbb6d",
+ "entities": [
+  {
+   "name": "Gao Xiaoli",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Shengwei",
+   "type": "organism"
+  },
+  {
+   "name": "Ge Shanshan",
+   "type": "organism"
+  },
+  {
+   "name": "Yang Qiaoli",
+   "type": "organism"
+  },
+  {
+   "name": "Gun Shuangbao",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Skatole",
+   "type": "chemical"
+  },
+  {
+   "name": "Tryptophan",
+   "type": "chemical"
+  },
+  {
+   "name": "Lysinibacillus",
+   "type": "organism"
+  },
+  {
+   "name": "Sojibacillus",
+   "type": "organism"
+  },
+  {
+   "name": "Bacillus",
+   "type": "organism"
+  },
+  {
+   "name": "Sphingobacterium",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gao Xiaoli",
+   "predicate": "conceptualization",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Gao Xiaoli",
+   "predicate": "methodology",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Gao Xiaoli",
+   "predicate": "software",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Gao Xiaoli",
+   "predicate": "writing",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Zhang Shengwei",
+   "predicate": "data curation",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Zhang Shengwei",
+   "predicate": "investigation",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Zhang Shengwei",
+   "predicate": "writing",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Ge Shanshan",
+   "predicate": "formal analysis",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Ge Shanshan",
+   "predicate": "investigation",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Ge Shanshan",
+   "predicate": "methodology",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Ge Shanshan",
+   "predicate": "validation",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Yang Qiaoli",
+   "predicate": "software",
+   "target": "Saccharomyces cerevisiae"
+  }
+ ],
+ "truncated": false
+}

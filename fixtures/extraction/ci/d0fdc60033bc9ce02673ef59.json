@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13170222:15:b695f4b8",
+ "entities": [
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "HT-29",
+   "type": "organism"
+  },
+  {
+   "name": "Swiss Webster mice",
+   "type": "organism"
+  },
+  {
+   "name": "cyclophosphamide",
+   "type": "chemical"
+  },
+  {
+   "name": "MDM",
+   "type": "chemical"
+  },
+  {
+   "name": "arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "PBS",
+   "type": "chemical"
+  },
+  {
+   "name": "Kaplan–Meier method",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "log-rank test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dr. Adnane Sellam",
+   "type": "organism"
+  },
+  {
+   "name": "Dr. Joachim Morschhäuser",
+   "type": "organism"
+  },
+  {
+   "name": "Dr. Malcolm Whiteway",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. albicans",
+   "predicate": "has_strain",
+   "target": "C. albicans"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "is_cultured_in",
+   "target": "MDM"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "is_supplemented_with",
+   "target": "arginine"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "is_infected_in",
+   "target": "Swiss Webster mice"
+  },
+  {
+   "source": "Swiss Webster mice",
+   "predicate": "is_infected_with",
+   "target": "C. albicans"
+  },
+  {
+   "source": "HT-29",
+   "predicate": "is_infected_with",
+   "target": "C. albicans"
+  },
+  {
+   "source": "HT-29",
+   "predicate": "is_damaged_by",
+   "target": "C. albicans"
+  }
+ ],
+ "truncated": false
+}

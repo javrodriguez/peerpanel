@@ -1,0 +1,22 @@
+{
+ "community_id": 31,
+ "resolution": 3.0,
+ "size": 12,
+ "member_names": [
+  "Zinc",
+  "Zinc accumulation",
+  "Zinc distribution",
+  "Zinc homeostasis",
+  "Zinc ion",
+  "Zinc overload",
+  "Zinc responsive regulon",
+  "Zinc sensing",
+  "Zinc storage",
+  "Zinc tolerance",
+  "Zinc toxicity",
+  "Zinc transporter protein"
+ ],
+ "title": "Zinc Homeostasis and Its Related Processes",
+ "summary": "This cluster revolves around zinc homeostasis, a process that involves the regulation of zinc levels within an organism. Zinc homeostasis is affected by various processes, including zinc accumulation, distribution, overload, tolerance, and toxicity. It is also involved in zinc responsive regulon, sensing, storage, and the function of zinc transporter proteins. The cluster highlights the importance of maintaining a balance of zinc levels, as disruptions can lead to negative consequences.",
+ "truncated": false
+}

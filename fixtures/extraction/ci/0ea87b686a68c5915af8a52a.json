@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC10729969:7:20106950",
+ "entities": [
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1-GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S288C",
+   "type": "organism"
+  },
+  {
+   "name": "RM11",
+   "type": "organism"
+  },
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S-methylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "cadmium",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "wine strains",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "has_impaired_growth",
+   "target": "sulfide"
+  },
+  {
+   "source": "cadmium",
+   "predicate": "has_impacted_growth",
+   "target": "yeast"
+  }
+ ],
+ "truncated": false
+}

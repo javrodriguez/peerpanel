@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13410889:7:60660764",
+ "entities": [
+  {
+   "name": "JUB1-X synTF",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PAPS",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "APSK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATPS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PPK2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "IPTG",
+   "type": "chemical"
+  },
+  {
+   "name": "JUB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GAL4AD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PPK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PPi",
+   "type": "chemical"
+  },
+  {
+   "name": "ADP",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "JUB1-X synTF",
+   "predicate": "expresses",
+   "target": "APSK"
+  },
+  {
+   "source": "JUB1-X synTF",
+   "predicate": "expresses",
+   "target": "ATPS"
+  },
+  {
+   "source": "JUB1-X synTF",
+   "predicate": "expresses",
+   "target": "PPK2"
+  },
+  {
+   "source": "JUB1-X synTF",
+   "predicate": "regulates",
+   "target": "PAPS"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "hosts",
+   "target": "JUB1-X synTF"
+  },
+  {
+   "source": "IPTG",
+   "predicate": "induces",
+   "target": "JUB1-X synTF"
+  },
+  {
+   "source": "JUB1",
+   "predicate": "derived_from",
+   "target": "JUB1-X synTF"
+  },
+  {
+   "source": "GAL4AD",
+   "predicate": "part_of",
+   "target": "JUB1-X synTF"
+  },
+  {
+   "source": "PPK",
+   "predicate": "part_of",
+   "target": "PPK2"
+  },
+  {
+   "source": "PPi",
+   "predicate": "donor",
+   "target": "PPK2"
+  },
+  {
+   "source": "ADP",
+   "predicate": "product",
+   "target": "PPK2"
+  },
+  {
+   "source": "JUB1-X synTF",
+   "predicate": "produces",
+   "target": "PAPS"
+  }
+ ],
+ "truncated": false
+}

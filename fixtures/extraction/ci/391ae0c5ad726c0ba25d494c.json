@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13170222:0:0cf8f0d2",
+ "entities": [
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "sulfur metabolic flexibility",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sulfur species",
+   "type": "chemical"
+  },
+  {
+   "name": "Jlp12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Seo13",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "methionine biosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfite",
+   "type": "chemical"
+  },
+  {
+   "name": "superoxide dismutase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sod1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met32",
+   "predicate": "controls",
+   "target": "methionine biosynthesis"
+  },
+  {
+   "source": "Seo13",
+   "predicate": "transports",
+   "target": "glutathione"
+  }
+ ],
+ "truncated": false
+}

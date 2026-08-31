@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13170222:6:db872d22",
+ "entities": [
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met30",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Jlp11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Jlp12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fmo5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ays1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CYS3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GAP4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MUP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OPT7",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

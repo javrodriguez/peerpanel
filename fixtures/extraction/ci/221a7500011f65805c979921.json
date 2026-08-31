@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13228058:3:cd82ec8c",
+ "entities": [
+  {
+   "name": "Vd592",
+   "type": "organism"
+  },
+  {
+   "name": "ΔVdMFS2-4",
+   "type": "organism"
+  },
+  {
+   "name": "ΔVdMFS2-5",
+   "type": "organism"
+  },
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "PDA medium",
+   "type": "chemical"
+  },
+  {
+   "name": "Czapek-Dox medium",
+   "type": "chemical"
+  },
+  {
+   "name": "CM medium",
+   "type": "chemical"
+  },
+  {
+   "name": "Complete medium",
+   "type": "chemical"
+  },
+  {
+   "name": "KNO3",
+   "type": "chemical"
+  },
+  {
+   "name": "CuSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "Congo red",
+   "type": "chemical"
+  },
+  {
+   "name": "SD medium",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Vd592",
+   "predicate": "has_growth_medium",
+   "target": "PDA medium"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "has_growth_medium",
+   "target": "Czapek-Dox medium"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "has_growth_medium",
+   "target": "CM medium"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "has_nutrient",
+   "target": "KNO3"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "has_nutrient",
+   "target": "CuSO4"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "has_nutrient",
+   "target": "Congo red"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "has_nutrient",
+   "target": "SD medium"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "has_pathogenicity",
+   "target": "V. dahliae"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "has_stress_tolerance",
+   "target": "CuSO4"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "has_stress_tolerance",
+   "target": "Congo red"
+  }
+ ],
+ "truncated": false
+}

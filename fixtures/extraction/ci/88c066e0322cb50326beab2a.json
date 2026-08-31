@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13228058:13:b8e3a131",
+ "entities": [
+  {
+   "name": "BMC Genomics",
+   "type": "organism"
+  },
+  {
+   "name": "Fusarium oxysporum f. sp. vasinfectum",
+   "type": "organism"
+  },
+  {
+   "name": "Verticillium dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "Phytophthora sojae",
+   "type": "organism"
+  },
+  {
+   "name": "Candida auris",
+   "type": "organism"
+  },
+  {
+   "name": "Talaromyces marneffei",
+   "type": "organism"
+  },
+  {
+   "name": "J Clin Microbiol",
+   "type": "organism"
+  },
+  {
+   "name": "Biochem Res Int",
+   "type": "organism"
+  },
+  {
+   "name": "J Ind Microbiol Biotechnol",
+   "type": "organism"
+  },
+  {
+   "name": "Annu Rev Phytopathol",
+   "type": "organism"
+  },
+  {
+   "name": "Cell Rep",
+   "type": "organism"
+  },
+  {
+   "name": "Plant Cell",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

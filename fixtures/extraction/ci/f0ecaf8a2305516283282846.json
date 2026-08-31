@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13026841:2:c375a9b6",
+ "entities": [
+  {
+   "name": "System stability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Unlabeled Metabolite Yeast Extract",
+   "type": "chemical"
+  },
+  {
+   "name": "Cambridge Isotope Laboratories, Inc.",
+   "type": "organism"
+  },
+  {
+   "name": "Tewksbury",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "QC samples",
+   "type": "chemical"
+  },
+  {
+   "name": "ρ0 cells",
+   "type": "organism"
+  },
+  {
+   "name": "ρ+ cells",
+   "type": "organism"
+  },
+  {
+   "name": "Compound Discoverer",
+   "type": "chemical"
+  },
+  {
+   "name": "KEGG",
+   "type": "chemical"
+  },
+  {
+   "name": "BioCyc",
+   "type": "chemical"
+  },
+  {
+   "name": "ChEBI",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ρ0 cells",
+   "predicate": "separated_from",
+   "target": "ρ+ cells"
+  }
+ ],
+ "truncated": false
+}

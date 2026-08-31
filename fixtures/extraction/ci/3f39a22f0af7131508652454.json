@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13510017:4:958fde8e",
+ "entities": [
+  {
+   "name": "Gene Ontology",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Gene Set Enrichment Analysis",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GSEA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DESeq2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "GO Consortium",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STAR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GATK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "fastp",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glmmTMB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "emmeans",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Benjamini–Hochberg method",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gene Ontology",
+   "predicate": "has_association",
+   "target": "Saccharomyces cerevisiae"
+  }
+ ],
+ "truncated": false
+}

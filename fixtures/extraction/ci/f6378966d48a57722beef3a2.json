@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13312927:3:8f2c0853",
+ "entities": [
+  {
+   "name": "SAH",
+   "type": "chemical"
+  },
+  {
+   "name": "Hcy",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "SAHH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Δsah1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mice",
+   "type": "organism"
+  },
+  {
+   "name": "Miller et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "Malanovic",
+   "type": "chemical"
+  },
+  {
+   "name": "Visram",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "propidium iodide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SAH",
+   "predicate": "accumulate",
+   "target": "yeast"
+  },
+  {
+   "source": "SAH",
+   "predicate": "accumulate",
+   "target": "Drosophila"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "encode",
+   "target": "Δsah1"
+  },
+  {
+   "source": "Δsah1",
+   "predicate": "mutate",
+   "target": "yeast"
+  },
+  {
+   "source": "Hcy",
+   "predicate": "accumulate",
+   "target": "yeast"
+  },
+  {
+   "source": "Hcy",
+   "predicate": "accumulate",
+   "target": "Drosophila"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "knockdown",
+   "target": "Drosophila"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "knockdown",
+   "target": "yeast"
+  },
+  {
+   "source": "yeast",
+   "predicate": "grow",
+   "target": "Hcy"
+  },
+  {
+   "source": "Drosophila",
+   "predicate": "grow",
+   "target": "Hcy"
+  },
+  {
+   "source": "SAH",
+   "predicate": "degrade",
+   "target": "yeast"
+  },
+  {
+   "source": "SAH",
+   "predicate": "degrade",
+   "target": "Drosophila"
+  }
+ ],
+ "truncated": false
+}

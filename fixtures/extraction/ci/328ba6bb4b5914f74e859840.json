@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13312927:10:a9dd07cf",
+ "entities": [
+  {
+   "name": "PL methyltransferase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "de Sousa",
+   "type": "organism"
+  },
+  {
+   "name": "MMPE",
+   "type": "chemical"
+  },
+  {
+   "name": "DMPE",
+   "type": "chemical"
+  },
+  {
+   "name": "SAH",
+   "type": "chemical"
+  },
+  {
+   "name": "PC",
+   "type": "chemical"
+  },
+  {
+   "name": "choline",
+   "type": "chemical"
+  },
+  {
+   "name": "PRMT1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rmt1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DART1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hmt1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10729969:5:57abdee4",
+ "entities": [
+  {
+   "name": "RM11",
+   "type": "organism"
+  },
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S288C met17Δ",
+   "type": "organism"
+  },
+  {
+   "name": "S288C",
+   "type": "organism"
+  },
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OAH",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "OAS",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "YLL058W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

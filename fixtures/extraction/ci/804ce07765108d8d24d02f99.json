@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13170222:14:ebcd3b91",
+ "entities": [
+  {
+   "name": "cDNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "total RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "High-Capacity cDNA Reverse Transcription Kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Applied Biosystems",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "qPCR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ABI StepOnePlus system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PowerUp SYBR Green Master Mix",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNase H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NEB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA-seq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NEBNext Ultra II RNA Library Prep Kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Illumina NovaSeq 6000 sequencing system",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cDNA",
+   "predicate": "generated_from",
+   "target": "total RNA"
+  },
+  {
+   "source": "cDNA",
+   "predicate": "used_with",
+   "target": "High-Capacity cDNA Reverse Transcription Kit"
+  },
+  {
+   "source": "qPCR",
+   "predicate": "carried_out_with",
+   "target": "ABI StepOnePlus system"
+  },
+  {
+   "source": "qPCR",
+   "predicate": "used_with",
+   "target": "PowerUp SYBR Green Master Mix"
+  },
+  {
+   "source": "RNase H",
+   "predicate": "added_to",
+   "target": "cDNA"
+  },
+  {
+   "source": "RNA-seq",
+   "predicate": "performed_with",
+   "target": "NEBNext Ultra II RNA Library Prep Kit"
+  },
+  {
+   "source": "RNA-seq",
+   "predicate": "performed_with",
+   "target": "Illumina NovaSeq 6000 sequencing system"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13515017:0:9b510b26",
+ "entities": [
+  {
+   "name": "Brewer Bonita J.",
+   "type": "organism"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Y'",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "microhomology-mediated break induced replication",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "telomeric amplicons",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PLOS Genetics",
+   "type": "organism"
+  },
+  {
+   "name": "PLoS Genet",
+   "type": "organism"
+  },
+  {
+   "name": "University of Washington",
+   "type": "organism"
+  },
+  {
+   "name": "Seattle",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "United States",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "National Institute of General Medical Sciences",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "conceptualization",
+   "target": "telomeric amplicons"
+  },
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "funding acquisition",
+   "target": "National Institute of General Medical Sciences"
+  },
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "investigation",
+   "target": "telomeric amplicons"
+  },
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "methodology",
+   "target": "telomeric amplicons"
+  },
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "project administration",
+   "target": "telomeric amplicons"
+  },
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "resources",
+   "target": "telomeric amplicons"
+  },
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "supervision",
+   "target": "telomeric amplicons"
+  },
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "validation",
+   "target": "telomeric amplicons"
+  },
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "visualization",
+   "target": "telomeric amplicons"
+  },
+  {
+   "source": "Brewer Bonita J.",
+   "predicate": "writing",
+   "target": "telomeric amplicons"
+  }
+ ],
+ "truncated": false
+}

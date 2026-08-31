@@ -1,0 +1,30 @@
+{
+ "community_id": 24,
+ "resolution": 3.0,
+ "size": 20,
+ "member_names": [
+  "dDnmt2",
+  "demethylation",
+  "DNA methylation",
+  "Dot1",
+  "Grappa",
+  "H3K36 methylation",
+  "H3K4 methylation",
+  "H3K79 methylation",
+  "Histone methylation",
+  "histone methyltransferase DOT1L",
+  "Hox genes",
+  "lipidomics",
+  "phospholipid methylation",
+  "PP2A",
+  "protein arginine methylation",
+  "protein arginine methyltransferases",
+  "protein phosphatase PP2A",
+  "RNA methylation",
+  "S-adenosylhomocysteine hydrolase",
+  "SET8"
+ ],
+ "title": "Histone Methylation and Demethylation Processes and Enzymes",
+ "summary": "This cluster is centered around histone methylation, a process catalyzed by enzymes such as Dot1 and Grappa. Histone methylation is also associated with histone methyltransferase DOT1L. Additionally, the cluster includes other methylation processes like H3K79 methylation, H3K36 methylation, and H3K4 methylation. Demethylation is also present, catalyzed by protein phosphatase PP2A. The cluster also includes enzymes involved in other methylation processes, such as S-adenosylhomocysteine hydrolase in phospholipid methylation and protein arginine methyltransferases in protein arginine methylation.",
+ "truncated": false
+}

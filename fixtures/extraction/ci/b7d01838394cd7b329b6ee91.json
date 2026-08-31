@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13312927:5:15ff7931",
+ "entities": [
+  {
+   "name": "SAH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAHH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hcy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MMPE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DMPE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "larvae",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SAHH",
+   "predicate": "accumulate",
+   "target": "SAH"
+  },
+  {
+   "source": "Hcy",
+   "predicate": "accumulate",
+   "target": "SAH"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13515017:3:5c3f7164",
+ "entities": [
+  {
+   "name": "Gene amplification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "chemostat",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "culture vessel",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CHEF gel electrophoresis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CEN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chr II",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "karyotype",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "array Comparative Genome Hybridization",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nanopore sequencing",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gene amplification",
+   "predicate": "involves",
+   "target": "SUL1"
+  },
+  {
+   "source": "Gene amplification",
+   "predicate": "occurs in",
+   "target": "yeast"
+  },
+  {
+   "source": "yeast",
+   "predicate": "grows in",
+   "target": "chemostat"
+  },
+  {
+   "source": "chemostat",
+   "predicate": "contains",
+   "target": "culture vessel"
+  }
+ ],
+ "truncated": false
+}

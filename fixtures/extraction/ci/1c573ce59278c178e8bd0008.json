@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12994171:2:1219b083",
+ "entities": [
+  {
+   "name": "Plant Cells",
+   "type": "organism"
+  },
+  {
+   "name": "A. thaliana",
+   "type": "organism"
+  },
+  {
+   "name": "HRA1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LBD41",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCO1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HRE2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PGB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SAD6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUS4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERFVII",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

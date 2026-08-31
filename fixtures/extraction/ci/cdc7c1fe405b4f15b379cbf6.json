@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13055380:3:7f54b99c",
+ "entities": [
+  {
+   "name": "CON-DLY",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SC-DLY",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Volcano plot",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Heatmap",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "methyl (indol-3-yl)acetate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "indoxyl sulfate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "3-methylindole",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "5-hydroxyindole-2-carboxylic acid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dl-indole-3-lactic acid",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

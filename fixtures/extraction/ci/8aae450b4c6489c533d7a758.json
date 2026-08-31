@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13274398:4:3b328c7c",
+ "entities": [
+  {
+   "name": "proteome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bPACy",
+   "type": "organism"
+  },
+  {
+   "name": "WT",
+   "type": "organism"
+  },
+  {
+   "name": "Acs1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "β-carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "Erg1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Erg4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Erg5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Erg28",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Erg29",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pde1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "bPACy",
+   "predicate": "has_higher_abundance_than",
+   "target": "WT"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_higher_abundance_than",
+   "target": "Acs1"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_higher_abundance_than",
+   "target": "Erg1"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_lower_abundance_than",
+   "target": "Erg4"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_lower_abundance_than",
+   "target": "Erg5"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_lower_abundance_than",
+   "target": "Erg28"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_lower_abundance_than",
+   "target": "Erg29"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_lower_abundance_than",
+   "target": "Pde1"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_lower_abundance_than",
+   "target": "Pde1"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_lower_abundance_than",
+   "target": "Pde1"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_lower_abundance_than",
+   "target": "Pde1"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_lower_abundance_than",
+   "target": "Pde1"
+  }
+ ],
+ "truncated": false
+}

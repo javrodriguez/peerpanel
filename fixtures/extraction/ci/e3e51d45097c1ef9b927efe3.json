@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13228058:9:824d0f68",
+ "entities": [
+  {
+   "name": "Vd592Y",
+   "type": "organism"
+  },
+  {
+   "name": "Vd592",
+   "type": "organism"
+  },
+  {
+   "name": "ΔVdMFS2-4Y",
+   "type": "organism"
+  },
+  {
+   "name": "ΔVdMFS2-4",
+   "type": "organism"
+  },
+  {
+   "name": "cotton",
+   "type": "organism"
+  },
+  {
+   "name": "Verticillium dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "G2WV74",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "G2WQ86",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "G2WZZ8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "G2WQ69",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "G2WX35",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "G2WUU1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Vd592Y",
+   "predicate": "has_more_secreted_proteins_than",
+   "target": "Vd592"
+  },
+  {
+   "source": "ΔVdMFS2-4Y",
+   "predicate": "has_more_secreted_proteins_than",
+   "target": "ΔVdMFS2-4"
+  },
+  {
+   "source": "ΔVdMFS2-4Y",
+   "predicate": "has_more_secreted_proteins_than",
+   "target": "Vd592Y"
+  }
+ ],
+ "truncated": false
+}

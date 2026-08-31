@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13406880:1:cef80e0f",
+ "entities": [
+  {
+   "name": "Paul Srere",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sam1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sam2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AdoMet",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fas1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "purinosome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "stress granules",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolic enzymes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cell",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glucose",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "purine",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Paul Srere",
+   "predicate": "proposed",
+   "target": "metabolic enzymes"
+  },
+  {
+   "source": "Sam1",
+   "predicate": "assemble",
+   "target": "stress granules"
+  },
+  {
+   "source": "Sam1",
+   "predicate": "associate",
+   "target": "stress granules"
+  }
+ ],
+ "truncated": false
+}

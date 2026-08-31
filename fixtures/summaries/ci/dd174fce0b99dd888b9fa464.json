@@ -1,0 +1,22 @@
+{
+ "community_id": 32,
+ "resolution": 3.0,
+ "size": 12,
+ "member_names": [
+  "Aerobic organisms",
+  "animals",
+  "Earth's atmosphere",
+  "ERFVII families",
+  "ERFVIIs",
+  "Ethylene Response Factors",
+  "Fungi",
+  "molecular oxygen",
+  "PCOs",
+  "planet's biogeochemistry",
+  "Plant Cysteine Oxidases",
+  "Plants"
+ ],
+ "title": "Oxygen Use in Aerobic Organisms and Plants",
+ "summary": "This cluster is about the relationship between molecular oxygen and aerobic organisms. Molecular oxygen is used by aerobic organisms, indicating that oxygen is essential for their survival. Additionally, the cluster includes various plant-related entities, such as Ethylene Response Factors, ERFVIIs, and Plant Cysteine Oxidases, which are likely involved in plant responses to oxygen levels. The presence of Earth's atmosphere and planet's biogeochemistry suggests a broader context of oxygen's role in the planet's ecosystem.",
+ "truncated": false
+}

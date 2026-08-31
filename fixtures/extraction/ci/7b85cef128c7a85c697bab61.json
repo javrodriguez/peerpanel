@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10729969:1:f530591d",
+ "entities": [
+  {
+   "name": "Sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "Organisms",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Met17 enzyme",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1 protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YLL058W",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AdoMet",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sulfur",
+   "predicate": "is vital to",
+   "target": "Organisms"
+  },
+  {
+   "source": "Met17 enzyme",
+   "predicate": "produces",
+   "target": "Homocysteine"
+  },
+  {
+   "source": "Homocysteine",
+   "predicate": "can be converted to",
+   "target": "Methionine"
+  },
+  {
+   "source": "Homocysteine",
+   "predicate": "can be converted to",
+   "target": "Cysteine"
+  },
+  {
+   "source": "Homocysteine",
+   "predicate": "can be converted to",
+   "target": "Glutathione"
+  }
+ ],
+ "truncated": false
+}

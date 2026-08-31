@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC12994171:14:9b7e7ee4",
+ "entities": [
+  {
+   "name": "hypoxia",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcriptional activation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein accumulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "precipitation regimes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "E3 ubiquitin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "plant adaptation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "root architecture",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "auxin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lateral root primordia",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "flowering plants",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nucleosome mobilization",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast SWI / SNF complex",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "hypoxia",
+   "predicate": "regulates",
+   "target": "transcriptional activation"
+  },
+  {
+   "source": "protein accumulation",
+   "predicate": "regulated_by",
+   "target": "hypoxia"
+  },
+  {
+   "source": "precipitation regimes",
+   "predicate": "regulates",
+   "target": "plant adaptation"
+  },
+  {
+   "source": "E3 ubiquitin",
+   "predicate": "regulates",
+   "target": "protein accumulation"
+  },
+  {
+   "source": "plant adaptation",
+   "predicate": "regulated_by",
+   "target": "precipitation regimes"
+  },
+  {
+   "source": "root architecture",
+   "predicate": "regulated_by",
+   "target": "auxin"
+  },
+  {
+   "source": "lateral root primordia",
+   "predicate": "regulated_by",
+   "target": "root architecture"
+  },
+  {
+   "source": "flowering plants",
+   "predicate": "regulated_by",
+   "target": "lateral root primordia"
+  },
+  {
+   "source": "nucleosome mobilization",
+   "predicate": "regulated_by",
+   "target": "yeast SWI / SNF complex"
+  }
+ ],
+ "truncated": false
+}

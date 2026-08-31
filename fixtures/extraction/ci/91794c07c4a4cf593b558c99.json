@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13304748:10:50d67c6d",
+ "entities": [
+  {
+   "name": "ZnS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "YKO collection",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TEM image",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Principal Component Analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FPKM values",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pos5Δ",
+   "type": "organism"
+  },
+  {
+   "name": "wild type strain",
+   "type": "organism"
+  },
+  {
+   "name": "ZnSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "CdS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "Mitochondrion",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "BY4742",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pos5Δ",
+   "predicate": "be sensitive to",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "ZnS QDs",
+   "predicate": "modulate",
+   "target": "Mitochondrion"
+  },
+  {
+   "source": "ZnSO4",
+   "predicate": "modulate",
+   "target": "Mitochondrion"
+  }
+ ],
+ "truncated": false
+}

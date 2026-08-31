@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13348253:11:f4970b6a",
+ "entities": [
+  {
+   "name": "thiamine biosynthetic pathway",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mol Microbiol",
+   "type": "organism"
+  },
+  {
+   "name": "SM Miller",
+   "type": "organism"
+  },
+  {
+   "name": "B Magasanik",
+   "type": "organism"
+  },
+  {
+   "name": "NAD-linked glutamate dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Minebois R",
+   "type": "organism"
+  },
+  {
+   "name": "Peris",
+   "type": "organism"
+  },
+  {
+   "name": "Barrio E",
+   "type": "organism"
+  },
+  {
+   "name": "Metabolic differences",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "wild",
+   "type": "organism"
+  },
+  {
+   "name": "wine strain",
+   "type": "organism"
+  },
+  {
+   "name": "multi-omic analysis",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "thiamine biosynthetic pathway",
+   "predicate": "is involved in",
+   "target": "Mol Microbiol"
+  },
+  {
+   "source": "SM Miller",
+   "predicate": "is involved in",
+   "target": "thiamine biosynthetic pathway"
+  },
+  {
+   "source": "B Magasanik",
+   "predicate": "is involved in",
+   "target": "NAD-linked glutamate dehydrogenase"
+  },
+  {
+   "source": "Minebois R",
+   "predicate": "is involved in",
+   "target": "Peris"
+  },
+  {
+   "source": "Barrio E",
+   "predicate": "is involved in",
+   "target": "Metabolic differences"
+  },
+  {
+   "source": "wild",
+   "predicate": "is involved in",
+   "target": "wine strain"
+  },
+  {
+   "source": "multi-omic analysis",
+   "predicate": "is involved in",
+   "target": "Metabolic differences"
+  }
+ ],
+ "truncated": false
+}

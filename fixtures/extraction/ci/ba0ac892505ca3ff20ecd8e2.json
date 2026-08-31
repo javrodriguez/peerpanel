@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13406880:0:ea589003",
+ "entities": [
+  {
+   "name": "S-adenosylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Sam1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sam2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "AdoMet",
+   "type": "chemical"
+  },
+  {
+   "name": "Wayne State University",
+   "type": "organism"
+  },
+  {
+   "name": "National Institutes of Health",
+   "type": "organism"
+  },
+  {
+   "name": "Multidisciplinary Digital Publishing Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Karmanos Cancer Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Detroit",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Li Jing",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S-adenosylmethionine",
+   "predicate": "is synthesized by",
+   "target": "Sam1"
+  },
+  {
+   "source": "S-adenosylmethionine",
+   "predicate": "is synthesized by",
+   "target": "Sam2"
+  }
+ ],
+ "truncated": false
+}

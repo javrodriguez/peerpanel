@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13510017:10:f9be1d2c",
+ "entities": [
+  {
+   "name": "Methylglyoxal",
+   "type": "chemical"
+  },
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Low DO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "High DO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YMC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA-seq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Transcriptome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metabolic state",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Redox cycle",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Oxidative stress",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Transcriptional fidelity",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

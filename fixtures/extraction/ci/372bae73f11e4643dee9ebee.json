@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13170222:8:4184a0ef",
+ "entities": [
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OPT7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Zcf2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ssu1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SOD1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SEO1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SEO13",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SOA1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "JLP11",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met32",
+   "predicate": "regulates",
+   "target": "SEO13"
+  },
+  {
+   "source": "Met32",
+   "predicate": "regulates",
+   "target": "SOD1"
+  },
+  {
+   "source": "Met32",
+   "predicate": "binds",
+   "target": "SEO1"
+  },
+  {
+   "source": "Met32",
+   "predicate": "binds",
+   "target": "SEO13"
+  },
+  {
+   "source": "Met32",
+   "predicate": "binds",
+   "target": "SOA1"
+  },
+  {
+   "source": "Met32",
+   "predicate": "binds",
+   "target": "JLP11"
+  },
+  {
+   "source": "Met32",
+   "predicate": "regulates",
+   "target": "SSU1"
+  }
+ ],
+ "truncated": false
+}

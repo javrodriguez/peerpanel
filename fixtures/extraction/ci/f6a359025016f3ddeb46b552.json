@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13274398:9:de9ea726",
+ "entities": [
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "S288C",
+   "type": "organism"
+  },
+  {
+   "name": "YJT23",
+   "type": "organism"
+  },
+  {
+   "name": "YJT24",
+   "type": "organism"
+  },
+  {
+   "name": "SK1",
+   "type": "organism"
+  },
+  {
+   "name": "YCR75",
+   "type": "organism"
+  },
+  {
+   "name": "YCR76",
+   "type": "organism"
+  },
+  {
+   "name": "plasmids",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lithium acetate method",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Attune NxT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Agilent 1260 HPLC Infinity system",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Yeast",
+   "predicate": "derived from",
+   "target": "S288C"
+  },
+  {
+   "source": "Yeast",
+   "predicate": "transformed by",
+   "target": "lithium acetate method"
+  },
+  {
+   "source": "Yeast",
+   "predicate": "analyzed by",
+   "target": "Attune NxT"
+  },
+  {
+   "source": "Yeast",
+   "predicate": "analyzed by",
+   "target": "Agilent 1260 HPLC Infinity system"
+  }
+ ],
+ "truncated": false
+}

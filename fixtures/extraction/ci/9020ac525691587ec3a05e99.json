@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13312927:0:b1e3280f",
+ "entities": [
+  {
+   "name": "S-adenosyl-L-homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Drosophila melanogaster",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Austria",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "University of Graz",
+   "type": "organism"
+  },
+  {
+   "name": "Medical University of Graz",
+   "type": "organism"
+  },
+  {
+   "name": "BioTechMed-Graz",
+   "type": "organism"
+  },
+  {
+   "name": "Oksana Tehlivets",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Markus S. Brunner",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hansjörg Habisch",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Jutta Hafner",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Oksana Tehlivets",
+   "predicate": "conceptualization",
+   "target": "S-adenosyl-L-homocysteine"
+  },
+  {
+   "source": "Oksana Tehlivets",
+   "predicate": "funding acquisition",
+   "target": "Austria"
+  },
+  {
+   "source": "Oksana Tehlivets",
+   "predicate": "investigation",
+   "target": "Drosophila melanogaster"
+  },
+  {
+   "source": "Oksana Tehlivets",
+   "predicate": "methodology",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Markus S. Brunner",
+   "predicate": "data curation",
+   "target": "S-adenosyl-L-homocysteine"
+  },
+  {
+   "source": "Hansjörg Habisch",
+   "predicate": "formal analysis",
+   "target": "Homocysteine"
+  },
+  {
+   "source": "Jutta Hafner",
+   "predicate": "writing",
+   "target": "Drosophila melanogaster"
+  },
+  {
+   "source": "Oksana Tehlivets",
+   "predicate": "supervision",
+   "target": "BioTechMed-Graz"
+  },
+  {
+   "source": "Oksana Tehlivets",
+   "predicate": "project administration",
+   "target": "University of Graz"
+  },
+  {
+   "source": "Oksana Tehlivets",
+   "predicate": "resources",
+   "target": "Medical University of Graz"
+  },
+  {
+   "source": "Oksana Tehlivets",
+   "predicate": "validation",
+   "target": "S-adenosyl-L-homocysteine"
+  },
+  {
+   "source": "Oksana Tehlivets",
+   "predicate": "visualization",
+   "target": "Drosophila melanogaster"
+  }
+ ],
+ "truncated": false
+}

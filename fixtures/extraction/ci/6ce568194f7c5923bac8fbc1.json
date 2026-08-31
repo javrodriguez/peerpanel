@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13348253:0:e2caa93b",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "pantothenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "FEMS Yeast Research",
+   "type": "organism"
+  },
+  {
+   "name": "Oxford University Press",
+   "type": "organism"
+  },
+  {
+   "name": "Jiménez-Lorenzo Rafael",
+   "type": "organism"
+  },
+  {
+   "name": "Duncan James D",
+   "type": "organism"
+  },
+  {
+   "name": "Valérie Nolleau",
+   "type": "organism"
+  },
+  {
+   "name": "Vincent Farines",
+   "type": "organism"
+  },
+  {
+   "name": "Jean-Marie Sablayrolles",
+   "type": "organism"
+  },
+  {
+   "name": "Audrey Bloem",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cysteine",
+   "predicate": "is_catabolized_by",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "methionine",
+   "predicate": "is_catabolized_by",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "pantothenic acid",
+   "predicate": "is_deficient_in",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "FEMS Yeast Research",
+   "predicate": "is_published_by",
+   "target": "Oxford University Press"
+  },
+  {
+   "source": "Jiménez-Lorenzo Rafael",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Duncan James D",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Valérie Nolleau",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Vincent Farines",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Jean-Marie Sablayrolles",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  },
+  {
+   "source": "Audrey Bloem",
+   "predicate": "is_author_of",
+   "target": "FEMS Yeast Research"
+  }
+ ],
+ "truncated": false
+}

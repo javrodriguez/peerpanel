@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13304748:2:f7b2e0a4",
+ "entities": [
+  {
+   "name": "ZnS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "CdS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "IMEM-CNR",
+   "type": "organism"
+  },
+  {
+   "name": "Parma",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "dynamic light scattering",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DLS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "dissolution",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pagano",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zetasizer Nano Series ZS90",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Malvern Instruments",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BY4742",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ZnS QDs",
+   "predicate": "manufactured_by",
+   "target": "IMEM-CNR"
+  },
+  {
+   "source": "ZnS QDs",
+   "predicate": "characterized_by",
+   "target": "dynamic light scattering"
+  }
+ ],
+ "truncated": false
+}

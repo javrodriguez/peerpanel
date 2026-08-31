@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13515017:14:e0ba35ce",
+ "entities": [
+  {
+   "name": "Grant Brown",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Barry Dion",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Alex White",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "William DeWitt",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bob Waterston",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MJD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BJB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MKR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA repair mutants",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chemostat culture",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bio-Rad CHEF gel apparatus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "many dedicated undergraduate student helpers",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "MJD",
+   "predicate": "thanks",
+   "target": "Grant Brown"
+  },
+  {
+   "source": "MJD",
+   "predicate": "thanks",
+   "target": "Barry Dion"
+  },
+  {
+   "source": "MJD",
+   "predicate": "thanks",
+   "target": "Alex White"
+  },
+  {
+   "source": "BJB",
+   "predicate": "thanks",
+   "target": "William DeWitt"
+  },
+  {
+   "source": "BJB",
+   "predicate": "thanks",
+   "target": "Bob Waterston"
+  },
+  {
+   "source": "BJB",
+   "predicate": "thanks",
+   "target": "many dedicated undergraduate student helpers"
+  },
+  {
+   "source": "BJB",
+   "predicate": "thanks",
+   "target": "MKR"
+  },
+  {
+   "source": "DNA repair mutants",
+   "predicate": "adapt",
+   "target": "chemostat culture"
+  },
+  {
+   "source": "BJB",
+   "predicate": "gift",
+   "target": "Bio-Rad CHEF gel apparatus"
+  }
+ ],
+ "truncated": false
+}

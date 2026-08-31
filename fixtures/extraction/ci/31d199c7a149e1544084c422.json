@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13092671:1:0379c92e",
+ "entities": [
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Zn",
+   "type": "chemical"
+  },
+  {
+   "name": "Zrt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zrt2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fet4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pho84",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zap1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Crs5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zrc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cot1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zrt3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Escherichia coli",
+   "predicate": "has",
+   "target": "Zn"
+  },
+  {
+   "source": "Zrt1",
+   "predicate": "import",
+   "target": "Zn"
+  },
+  {
+   "source": "Zrt2",
+   "predicate": "import",
+   "target": "Zn"
+  },
+  {
+   "source": "Fet4",
+   "predicate": "import",
+   "target": "Zn"
+  },
+  {
+   "source": "Pho84",
+   "predicate": "transport",
+   "target": "Zn"
+  },
+  {
+   "source": "Zap1",
+   "predicate": "regulate",
+   "target": "Zn"
+  },
+  {
+   "source": "Crs5",
+   "predicate": "store",
+   "target": "Zn"
+  },
+  {
+   "source": "Zrc1",
+   "predicate": "import",
+   "target": "Zn"
+  },
+  {
+   "source": "Cot1",
+   "predicate": "import",
+   "target": "Zn"
+  },
+  {
+   "source": "Zrt3",
+   "predicate": "transport",
+   "target": "Zn"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has",
+   "target": "Zrt1"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has",
+   "target": "Zrt2"
+  }
+ ],
+ "truncated": false
+}

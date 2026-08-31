@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13274398:11:a0c7dfbf",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "MaxQuant",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UniProt",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "timsTOF",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Python",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pandas",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NumPy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "matplotlib",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GOATOOLS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ShinyGO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BMBF",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "analyzed_by",
+   "target": "MaxQuant"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_sequence",
+   "target": "UniProt"
+  },
+  {
+   "source": "timsTOF",
+   "predicate": "analyzed_by",
+   "target": "MaxQuant"
+  },
+  {
+   "source": "MaxQuant",
+   "predicate": "uses",
+   "target": "UniProt"
+  },
+  {
+   "source": "MaxQuant",
+   "predicate": "uses",
+   "target": "timsTOF"
+  }
+ ],
+ "truncated": false
+}

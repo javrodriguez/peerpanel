@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10729969:11:6274c458",
+ "entities": [
+  {
+   "name": "hsu1Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfur limitation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sulfur starvation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "SMM",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "FY4",
+   "type": "organism"
+  },
+  {
+   "name": "Van Oss",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "has_leaky_auxotrophy",
+   "target": "sulfate"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "has_density_dependent_growth",
+   "target": "sulfate"
+  },
+  {
+   "source": "HSU1",
+   "predicate": "has_expression",
+   "target": "sulfur starvation"
+  },
+  {
+   "source": "sulfur limitation",
+   "predicate": "has_consistent_fitness_defect",
+   "target": "hsu1Δ"
+  },
+  {
+   "source": "sulfur starvation",
+   "predicate": "has_no_consistent_fitness_defect",
+   "target": "hsu1Δ"
+  }
+ ],
+ "truncated": false
+}

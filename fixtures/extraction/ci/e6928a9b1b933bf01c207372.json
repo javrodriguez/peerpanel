@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13092671:3:83aad053",
+ "entities": [
+  {
+   "name": "CYT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn",
+   "type": "chemical"
+  },
+  {
+   "name": "S",
+   "type": "chemical"
+  },
+  {
+   "name": "protein",
+   "type": "chemical"
+  },
+  {
+   "name": "CYT0",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CYT10",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CYT100",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTS0",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTS10",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTS100",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast cells",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CYT",
+   "predicate": "has_component",
+   "target": "Zn"
+  },
+  {
+   "source": "CYT",
+   "predicate": "has_component",
+   "target": "S"
+  },
+  {
+   "source": "CYT",
+   "predicate": "has_component",
+   "target": "protein"
+  },
+  {
+   "source": "FTS",
+   "predicate": "has_component",
+   "target": "Zn"
+  },
+  {
+   "source": "FTS",
+   "predicate": "has_component",
+   "target": "S"
+  },
+  {
+   "source": "FTS",
+   "predicate": "has_component",
+   "target": "protein"
+  },
+  {
+   "source": "CYT0",
+   "predicate": "has_component",
+   "target": "Zn"
+  },
+  {
+   "source": "CYT0",
+   "predicate": "has_component",
+   "target": "S"
+  },
+  {
+   "source": "CYT0",
+   "predicate": "has_component",
+   "target": "protein"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_component",
+   "target": "Zn"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_component",
+   "target": "S"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_component",
+   "target": "protein"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13515017:13:59adf2db",
+ "entities": [
+  {
+   "name": "chr II",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chr IX",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ODIRA",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sae2Δ mutant",
+   "type": "organism"
+  },
+  {
+   "name": "yku70Δ mutant",
+   "type": "organism"
+  },
+  {
+   "name": "rad5Δ mutant",
+   "type": "organism"
+  },
+  {
+   "name": "rad54Δ mutant",
+   "type": "organism"
+  },
+  {
+   "name": "pol32Δ mutant",
+   "type": "organism"
+  },
+  {
+   "name": "CEN9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCA1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUL1 locus",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "chr II",
+   "predicate": "contains",
+   "target": "URA3 gene"
+  },
+  {
+   "source": "chr IX",
+   "predicate": "contains",
+   "target": "URA3 gene"
+  },
+  {
+   "source": "sae2Δ mutant",
+   "predicate": "experiences",
+   "target": "ODIRA"
+  },
+  {
+   "source": "yku70Δ mutant",
+   "predicate": "experiences",
+   "target": "ODIRA"
+  },
+  {
+   "source": "rad5Δ mutant",
+   "predicate": "experiences",
+   "target": "ODIRA"
+  },
+  {
+   "source": "rad54Δ mutant",
+   "predicate": "experiences",
+   "target": "ODIRA"
+  },
+  {
+   "source": "pol32Δ mutant",
+   "predicate": "experiences",
+   "target": "ODIRA"
+  },
+  {
+   "source": "CEN9",
+   "predicate": "stabilizes",
+   "target": "chr II"
+  },
+  {
+   "source": "PCA1",
+   "predicate": "hybridizes",
+   "target": "chr II"
+  }
+ ],
+ "truncated": false
+}

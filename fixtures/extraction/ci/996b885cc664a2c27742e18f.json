@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13348253:2:dfee54cd",
+ "entities": [
+  {
+   "name": "transcriptome analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "pantothenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CO2 release",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CO2 production rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cell population",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gene expression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "microarray analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcriptomic regulation",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "transcriptome analysis",
+   "predicate": "involved",
+   "target": "methionine"
+  },
+  {
+   "source": "transcriptome analysis",
+   "predicate": "involved",
+   "target": "cysteine"
+  },
+  {
+   "source": "transcriptome analysis",
+   "predicate": "involved",
+   "target": "pantothenic acid"
+  },
+  {
+   "source": "transcriptome analysis",
+   "predicate": "involved",
+   "target": "nitrogen"
+  },
+  {
+   "source": "fermentation",
+   "predicate": "involved",
+   "target": "CO2 release"
+  },
+  {
+   "source": "fermentation",
+   "predicate": "involved",
+   "target": "CO2 production rate"
+  },
+  {
+   "source": "cell population",
+   "predicate": "involved",
+   "target": "gene expression"
+  },
+  {
+   "source": "microarray analysis",
+   "predicate": "involved",
+   "target": "gene expression"
+  }
+ ],
+ "truncated": false
+}

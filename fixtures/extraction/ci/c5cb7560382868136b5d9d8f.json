@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13515017:11:15863b53",
+ "entities": [
+  {
+   "name": "FY4",
+   "type": "organism"
+  },
+  {
+   "name": "S288C",
+   "type": "organism"
+  },
+  {
+   "name": "BY4741",
+   "type": "organism"
+  },
+  {
+   "name": "yku70Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sae2Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rad54∆",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rad5Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Y'",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS228",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KanMX",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Oxford Nanopore Technology",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FY4",
+   "predicate": "is_derived_from",
+   "target": "S288C"
+  },
+  {
+   "source": "FY4",
+   "predicate": "is_close_relative_of",
+   "target": "BY4741"
+  }
+ ],
+ "truncated": false
+}

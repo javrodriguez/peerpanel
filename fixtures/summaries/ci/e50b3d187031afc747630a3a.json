@@ -1,0 +1,21 @@
+{
+ "community_id": 40,
+ "resolution": 3.0,
+ "size": 11,
+ "member_names": [
+  "Annu Rev Phytopathol",
+  "Biochem Res Int",
+  "BMC Genomics",
+  "Candida auris",
+  "Cell Rep",
+  "Fusarium oxysporum f. sp. vasinfectum",
+  "J Clin Microbiol",
+  "J Ind Microbiol Biotechnol",
+  "Phytophthora sojae",
+  "Plant Cell",
+  "Talaromyces marneffei"
+ ],
+ "title": "Scientific Journals and Pathogenic Organisms",
+ "summary": "This cluster consists of scientific journals and pathogenic organisms. The journals include Annu Rev Phytopathol, Biochem Res Int, BMC Genomics, Cell Rep, J Clin Microbiol, J Ind Microbiol Biotechnol, and Plant Cell, which are all involved in the study of various organisms. The organisms in the cluster are Candida auris, Fusarium oxysporum f. sp. vasinfectum, Phytophthora sojae, and Talaromyces marneffei, which are all pathogenic in nature. The relationship between the journals and organisms is that they are likely involved in the study and research of these pathogens.",
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12994171:0:6fd5e55e",
+ "entities": [
+  {
+   "name": "Mikel Lavilla-Puerta",
+   "type": "organism"
+  },
+  {
+   "name": "Yuming He",
+   "type": "organism"
+  },
+  {
+   "name": "Luca Piccinini",
+   "type": "organism"
+  },
+  {
+   "name": "Lorenzo Di Paco",
+   "type": "organism"
+  },
+  {
+   "name": "Antonis Papachristodoulou",
+   "type": "organism"
+  },
+  {
+   "name": "Francesco Licausi",
+   "type": "organism"
+  },
+  {
+   "name": "Beatrice Giuntoli",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Arabidopsis thaliana",
+   "type": "organism"
+  },
+  {
+   "name": "National Academy of Sciences",
+   "type": "organism"
+  },
+  {
+   "name": "University of Oxford",
+   "type": "organism"
+  },
+  {
+   "name": "University of Pisa",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

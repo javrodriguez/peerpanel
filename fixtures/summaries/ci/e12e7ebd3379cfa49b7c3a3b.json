@@ -1,0 +1,22 @@
+{
+ "community_id": 11,
+ "resolution": 0.3,
+ "size": 12,
+ "member_names": [
+  "Bonferroni correction",
+  "Datasets",
+  "GraphPad",
+  "Kruskal–Wallis test",
+  "Mann–Whitney U-test",
+  "Microsoft",
+  "Office Professional Plus 2021",
+  "PowerPoint",
+  "Prism 8",
+  "Shapiro–Wilk test",
+  "SPSS 27.0",
+  "SPSS Inc."
+ ],
+ "title": "Statistical Analysis Tools Used in Datasets",
+ "summary": "Datasets are checked using the Shapiro–Wilk test, a statistical method for normality testing. This cluster includes various tools used in statistical analysis, including the Bonferroni correction, Kruskal–Wallis test, and Mann–Whitney U-test. Additionally, it includes software packages such as GraphPad, Microsoft Office Professional Plus 2021, and SPSS 27.0, as well as specific applications like PowerPoint and Prism 8. The presence of SPSS Inc. suggests a commercial entity behind the software package SPSS 27.0.",
+ "truncated": false
+}

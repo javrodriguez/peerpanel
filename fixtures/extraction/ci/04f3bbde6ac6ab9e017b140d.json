@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13406880:5:432a96e6",
+ "entities": [
+  {
+   "name": "AdoMet",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sam1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "cycloheximide",
+   "type": "chemical"
+  },
+  {
+   "name": "2-deoxyglucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Ded1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsp42",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "stress granules",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "oxidative stress",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AdoMet",
+   "predicate": "biosynthesis",
+   "target": "Sam1"
+  },
+  {
+   "source": "Sam1",
+   "predicate": "relocalization",
+   "target": "yeast"
+  }
+ ],
+ "truncated": false
+}

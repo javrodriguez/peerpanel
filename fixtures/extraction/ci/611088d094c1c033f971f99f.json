@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13274398:5:fb7d3be1",
+ "entities": [
+  {
+   "name": "metabolome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WT",
+   "type": "organism"
+  },
+  {
+   "name": "bPACy",
+   "type": "organism"
+  },
+  {
+   "name": "proteome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ribosome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glucose",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "β-carotene",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mevalonate pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "tricarboxylic acid cycle",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "oxidative phosphorylation",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WT",
+   "predicate": "has_metabolome",
+   "target": "metabolome"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_metabolome",
+   "target": "metabolome"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_proteome",
+   "target": "proteome"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_ribosome",
+   "target": "ribosome"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_RNA",
+   "target": "RNA"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_cAMP",
+   "target": "cAMP"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_glucose",
+   "target": "glucose"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_β-carotene",
+   "target": "β-carotene"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_mevalonate pathway",
+   "target": "mevalonate pathway"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_tricarboxylic acid cycle",
+   "target": "tricarboxylic acid cycle"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has_oxidative phosphorylation",
+   "target": "oxidative phosphorylation"
+  }
+ ],
+ "truncated": false
+}

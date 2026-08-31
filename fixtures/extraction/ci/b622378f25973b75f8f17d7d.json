@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13312927:1:25c80faf",
+ "entities": [
+  {
+   "name": "Cardiovascular disease",
+   "type": "chemical"
+  },
+  {
+   "name": "CVD",
+   "type": "chemical"
+  },
+  {
+   "name": "Hyperhomocysteinemia",
+   "type": "chemical"
+  },
+  {
+   "name": "HHcy",
+   "type": "chemical"
+  },
+  {
+   "name": "Homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Hcy",
+   "type": "chemical"
+  },
+  {
+   "name": "S-adenosyl-L-methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "SAM",
+   "type": "chemical"
+  },
+  {
+   "name": "S-adenosyl-L-homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "SAH",
+   "type": "chemical"
+  },
+  {
+   "name": "SAHH",
+   "type": "chemical"
+  },
+  {
+   "name": "Atherosclerosis",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

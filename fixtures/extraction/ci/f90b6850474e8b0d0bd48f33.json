@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13228058:7:cb4b66a4",
+ "entities": [
+  {
+   "name": "VdMFS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "PHT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PHT2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VGLUT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Phenylalanine",
+   "type": "chemical"
+  },
+  {
+   "name": "Leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "Valine",
+   "type": "chemical"
+  },
+  {
+   "name": "Cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Tryptophan",
+   "type": "chemical"
+  },
+  {
+   "name": "Czapek-Dox medium",
+   "type": "chemical"
+  },
+  {
+   "name": "Carbendazim",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

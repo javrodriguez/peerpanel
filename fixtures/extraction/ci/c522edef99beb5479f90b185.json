@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13092671:2:bee715aa",
+ "entities": [
+  {
+   "name": "Zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "Sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "Cells",
+   "type": "organism"
+  },
+  {
+   "name": "Cytosol",
+   "type": "organism"
+  },
+  {
+   "name": "FTS",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Proteins",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn coordination complexes",
+   "type": "chemical"
+  },
+  {
+   "name": "Vacuoles",
+   "type": "organism"
+  },
+  {
+   "name": "Mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "Nuclei",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zinc",
+   "predicate": "concentration",
+   "target": "Cells"
+  },
+  {
+   "source": "Zinc",
+   "predicate": "concentration",
+   "target": "Cytosol"
+  },
+  {
+   "source": "Zinc",
+   "predicate": "concentration",
+   "target": "FTS"
+  },
+  {
+   "source": "Sulfur",
+   "predicate": "concentration",
+   "target": "Cells"
+  },
+  {
+   "source": "Sulfur",
+   "predicate": "concentration",
+   "target": "Cytosol"
+  },
+  {
+   "source": "Sulfur",
+   "predicate": "concentration",
+   "target": "FTS"
+  },
+  {
+   "source": "Zinc",
+   "predicate": "bound to",
+   "target": "Proteins"
+  },
+  {
+   "source": "Zinc",
+   "predicate": "bound to",
+   "target": "Zn coordination complexes"
+  },
+  {
+   "source": "Cells",
+   "predicate": "contain",
+   "target": "Vacuoles"
+  },
+  {
+   "source": "Cells",
+   "predicate": "contain",
+   "target": "Mitochondria"
+  },
+  {
+   "source": "Cells",
+   "predicate": "contain",
+   "target": "Nuclei"
+  },
+  {
+   "source": "Cytosol",
+   "predicate": "contain",
+   "target": "Proteins"
+  }
+ ],
+ "truncated": false
+}

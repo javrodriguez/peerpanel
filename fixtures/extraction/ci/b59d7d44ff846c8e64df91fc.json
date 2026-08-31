@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13312927:8:4ba97b2d",
+ "entities": [
+  {
+   "name": "Histone 3 (H3)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "SAH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hcy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAHH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CVD",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cardiovascular remodeling",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glutathione synthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "folate cycle",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "methylation",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hcy",
+   "predicate": "indicator",
+   "target": "CVD"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "deletion",
+   "target": "yeast"
+  },
+  {
+   "source": "SAH",
+   "predicate": "accumulation",
+   "target": "CVD"
+  },
+  {
+   "source": "Hcy",
+   "predicate": "response",
+   "target": "cardiovascular remodeling"
+  }
+ ],
+ "truncated": false
+}

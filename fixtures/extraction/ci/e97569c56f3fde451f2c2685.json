@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13348253:9:63212004",
+ "entities": [
+  {
+   "name": "PCA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "VSC profiles",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. cerevisiae LMD17",
+   "type": "organism"
+  },
+  {
+   "name": "MET",
+   "type": "chemical"
+  },
+  {
+   "name": "CYS",
+   "type": "chemical"
+  },
+  {
+   "name": "B5 Def",
+   "type": "chemical"
+  },
+  {
+   "name": "SM200",
+   "type": "chemical"
+  },
+  {
+   "name": "pantothenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Ehrlich pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "methanethiol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PCA",
+   "predicate": "explains",
+   "target": "VSC profiles"
+  }
+ ],
+ "truncated": false
+}

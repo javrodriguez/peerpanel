@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13312927:9:8e5c0c35",
+ "entities": [
+  {
+   "name": "Hcy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SAHH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "methionine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "adenosyltransferase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "methylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glutathione",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "folate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PL",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hcy",
+   "predicate": "is_inhibited_by",
+   "target": "SAH"
+  },
+  {
+   "source": "yeast",
+   "predicate": "can_produce",
+   "target": "Hcy"
+  },
+  {
+   "source": "Drosophila",
+   "predicate": "cannot_produce",
+   "target": "Hcy"
+  },
+  {
+   "source": "methionine",
+   "predicate": "is_reduced_by",
+   "target": "SAH"
+  },
+  {
+   "source": "adenosyltransferase",
+   "predicate": "is_inhibited_by",
+   "target": "SAH"
+  },
+  {
+   "source": "methylation",
+   "predicate": "is_inhibited_by",
+   "target": "SAH"
+  },
+  {
+   "source": "glutathione",
+   "predicate": "requires",
+   "target": "Hcy"
+  },
+  {
+   "source": "folate",
+   "predicate": "requires",
+   "target": "Hcy"
+  }
+ ],
+ "truncated": false
+}

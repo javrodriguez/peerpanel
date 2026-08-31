@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13274398:7:c7a7cbfa",
+ "entities": [
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PKA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Bcy1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tpk1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tpk2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tpk3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RAS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Snf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HOG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cyr1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sak1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cAMP",
+   "predicate": "controls",
+   "target": "PKA"
+  }
+ ],
+ "truncated": false
+}

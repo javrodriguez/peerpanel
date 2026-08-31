@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC12994171:1:99b962cd",
+ "entities": [
+  {
+   "name": "Earth's atmosphere",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "molecular oxygen",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "planet's biogeochemistry",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Aerobic organisms",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fungi",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Plants",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "animals",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ethylene Response Factors",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERFVIIs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERFVII families",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Plant Cysteine Oxidases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCOs",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Aerobic organisms",
+   "predicate": "use",
+   "target": "molecular oxygen"
+  }
+ ],
+ "truncated": false
+}

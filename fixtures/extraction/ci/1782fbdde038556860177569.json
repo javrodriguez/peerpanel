@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10729969:18:9c4e38fc",
+ "entities": [
+  {
+   "name": "Mark Roth",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Olly Jarvis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yuejia Zhu",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Michael Gong",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ralser lab",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Carvunis lab",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li Xie",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "David Skelding",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shou lab",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Maitreya Dunham",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dana Miller",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Stuart Harrison",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

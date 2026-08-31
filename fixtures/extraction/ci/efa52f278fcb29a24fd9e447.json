@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13092671:11:b464ec43",
+ "entities": [
+  {
+   "name": "Cytosol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zymolyase",
+   "type": "chemical"
+  },
+  {
+   "name": "ABC buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "DTT",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium bicarbonate",
+   "type": "chemical"
+  },
+  {
+   "name": "sorbitol",
+   "type": "chemical"
+  },
+  {
+   "name": "PMSF",
+   "type": "chemical"
+  },
+  {
+   "name": "Thermo Fisher Scientific",
+   "type": "chemical"
+  },
+  {
+   "name": "HPW",
+   "type": "chemical"
+  },
+  {
+   "name": "cell pellet",
+   "type": "chemical"
+  },
+  {
+   "name": "pellet",
+   "type": "chemical"
+  },
+  {
+   "name": "distilled water",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cytosol",
+   "predicate": "has_component",
+   "target": "DTT"
+  },
+  {
+   "source": "Cytosol",
+   "predicate": "has_component",
+   "target": "ammonium bicarbonate"
+  },
+  {
+   "source": "Cytosol",
+   "predicate": "has_component",
+   "target": "sorbitol"
+  },
+  {
+   "source": "Cytosol",
+   "predicate": "has_component",
+   "target": "PMSF"
+  },
+  {
+   "source": "Cytosol",
+   "predicate": "has_component",
+   "target": "HPW"
+  },
+  {
+   "source": "Cytosol",
+   "predicate": "has_component",
+   "target": "cell pellet"
+  },
+  {
+   "source": "Cytosol",
+   "predicate": "has_component",
+   "target": "pellet"
+  },
+  {
+   "source": "Cytosol",
+   "predicate": "has_component",
+   "target": "distilled water"
+  },
+  {
+   "source": "Zymolyase",
+   "predicate": "has_component",
+   "target": "cell pellet"
+  },
+  {
+   "source": "ABC buffer",
+   "predicate": "has_component",
+   "target": "ammonium bicarbonate"
+  },
+  {
+   "source": "ABC buffer",
+   "predicate": "has_component",
+   "target": "sorbitol"
+  },
+  {
+   "source": "ABC buffer",
+   "predicate": "has_component",
+   "target": "HPW"
+  }
+ ],
+ "truncated": false
+}

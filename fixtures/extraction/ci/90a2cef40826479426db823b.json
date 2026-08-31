@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13092671:8:5176d245",
+ "entities": [
+  {
+   "name": "Zn",
+   "type": "chemical"
+  },
+  {
+   "name": "iron",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "cluster",
+   "type": "chemical"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "cytosol",
+   "type": "organism"
+  },
+  {
+   "name": "vacuoles",
+   "type": "organism"
+  },
+  {
+   "name": "W303 cells",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "breast milk",
+   "type": "organism"
+  },
+  {
+   "name": "coconut water",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

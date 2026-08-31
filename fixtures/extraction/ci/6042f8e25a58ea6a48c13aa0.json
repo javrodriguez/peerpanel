@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10729969:0:4e00518a",
+ "entities": [
+  {
+   "name": "Sonal",
+   "type": "organism"
+  },
+  {
+   "name": "Yuan Alex E.",
+   "type": "organism"
+  },
+  {
+   "name": "Yang Xueqin",
+   "type": "organism"
+  },
+  {
+   "name": "Shou Wenying",
+   "type": "organism"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces",
+   "type": "organism"
+  },
+  {
+   "name": "Fungi",
+   "type": "organism"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "Hydrogen sulfide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

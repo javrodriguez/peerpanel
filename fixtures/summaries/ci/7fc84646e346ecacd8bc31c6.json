@@ -1,0 +1,28 @@
+{
+ "community_id": 25,
+ "resolution": 3.0,
+ "size": 18,
+ "member_names": [
+  "BMBF",
+  "GOATOOLS",
+  "Jalview",
+  "matplotlib",
+  "MaxQuant",
+  "MdeA protein sequence",
+  "NCBI's protein BLAST",
+  "NumPy",
+  "one-sample two-tailed t test",
+  "pandas",
+  "Python",
+  "S288C Met17 protein sequence",
+  "ShinyGO",
+  "significance testing",
+  "Statistical tests",
+  "timsTOF",
+  "two-tailed two-sample t test",
+  "UniProt"
+ ],
+ "title": "Protein Sequence Analysis and Statistical Testing Tools",
+ "summary": "This cluster is centered around protein sequence analysis and statistical testing tools. Statistical tests use various tools to analyze protein sequences, including UniProt, NCBI's protein BLAST, Jalview, and MdeA protein sequence. MaxQuant is used by UniProt, and timsTOF is used by MaxQuant to analyze protein sequences. The cluster also includes tools for data visualization and manipulation, such as matplotlib, NumPy, pandas, and Python, as well as tools for gene ontology analysis, including ShinyGO and GOATOOLS. BMBF is also part of this cluster.",
+ "truncated": false
+}

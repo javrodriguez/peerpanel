@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13406880:2:bc394818",
+ "entities": [
+  {
+   "name": "EVOS M5000 Cell Imaging System",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thermo Fisher Scientific",
+   "type": "organism"
+  },
+  {
+   "name": "Waltham",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "room temperature",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yeast cultures",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mid-log phase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "media",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "conditional media",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cells",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SAM1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SAM2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Yeast cultures",
+   "predicate": "grown_in",
+   "target": "media"
+  },
+  {
+   "source": "SAM1",
+   "predicate": "colocalized_with",
+   "target": "SAM2"
+  },
+  {
+   "source": "SAM1",
+   "predicate": "expressed_in",
+   "target": "Yeast cultures"
+  },
+  {
+   "source": "SAM2",
+   "predicate": "expressed_in",
+   "target": "Yeast cultures"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13092671:13:5ec20352",
+ "entities": [
+  {
+   "name": "Zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "Zinc ion",
+   "type": "chemical"
+  },
+  {
+   "name": "Zinc homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zinc transporter protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zinc tolerance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zinc toxicity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zinc sensing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zinc responsive regulon",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zinc accumulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zinc overload",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zinc storage",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zinc distribution",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zinc",
+   "predicate": "has homeostasis",
+   "target": "Zinc homeostasis"
+  },
+  {
+   "source": "Zinc transporter protein",
+   "predicate": "is involved in",
+   "target": "Zinc homeostasis"
+  },
+  {
+   "source": "Zinc tolerance",
+   "predicate": "is affected by",
+   "target": "Zinc homeostasis"
+  },
+  {
+   "source": "Zinc toxicity",
+   "predicate": "is affected by",
+   "target": "Zinc homeostasis"
+  },
+  {
+   "source": "Zinc sensing",
+   "predicate": "is involved in",
+   "target": "Zinc homeostasis"
+  },
+  {
+   "source": "Zinc responsive regulon",
+   "predicate": "is involved in",
+   "target": "Zinc homeostasis"
+  },
+  {
+   "source": "Zinc accumulation",
+   "predicate": "is affected by",
+   "target": "Zinc homeostasis"
+  },
+  {
+   "source": "Zinc overload",
+   "predicate": "is affected by",
+   "target": "Zinc homeostasis"
+  },
+  {
+   "source": "Zinc storage",
+   "predicate": "is involved in",
+   "target": "Zinc homeostasis"
+  },
+  {
+   "source": "Zinc distribution",
+   "predicate": "is affected by",
+   "target": "Zinc homeostasis"
+  }
+ ],
+ "truncated": false
+}

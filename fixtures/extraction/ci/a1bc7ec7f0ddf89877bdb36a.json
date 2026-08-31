@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13228058:6:cd9ed9a0",
+ "entities": [
+  {
+   "name": "VdMFS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "Vd592",
+   "type": "organism"
+  },
+  {
+   "name": "ΔVdMFS2 mutants",
+   "type": "organism"
+  },
+  {
+   "name": "complementary strains",
+   "type": "organism"
+  },
+  {
+   "name": "cotton plants",
+   "type": "organism"
+  },
+  {
+   "name": "Xinluzao 7",
+   "type": "organism"
+  },
+  {
+   "name": "yeast mutant strain EBY.VW4000",
+   "type": "organism"
+  },
+  {
+   "name": "PDA",
+   "type": "chemical"
+  },
+  {
+   "name": "cellophane membrane",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "sucrose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

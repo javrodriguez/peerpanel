@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13092671:10:6156a462",
+ "entities": [
+  {
+   "name": "low-mass Zn pool",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Zn",
+   "type": "chemical"
+  },
+  {
+   "name": "E coli",
+   "type": "organism"
+  },
+  {
+   "name": "CYT",
+   "type": "chemical"
+  },
+  {
+   "name": "FTS samples",
+   "type": "chemical"
+  },
+  {
+   "name": "Zrc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cot1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "FeIII oxyhydroxide nanoparticles",
+   "type": "chemical"
+  },
+  {
+   "name": "Aft1/2-dependent iron regulon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "W303 cells",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "low-mass Zn pool",
+   "predicate": "perturbed_by",
+   "target": "Zn"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has_pool",
+   "target": "low-mass Zn pool"
+  },
+  {
+   "source": "Zrc1",
+   "predicate": "importer",
+   "target": "Zn"
+  },
+  {
+   "source": "Cot1",
+   "predicate": "importer",
+   "target": "Zn"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "regulates",
+   "target": "Zn"
+  },
+  {
+   "source": "FeIII oxyhydroxide nanoparticles",
+   "predicate": "formed_by",
+   "target": "Aft1/2-dependent iron regulon"
+  },
+  {
+   "source": "Zn",
+   "predicate": "toxic_to",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "Zn",
+   "predicate": "activated",
+   "target": "Aft1/2-dependent iron regulon"
+  },
+  {
+   "source": "CYT",
+   "predicate": "buffered",
+   "target": "Zn"
+  },
+  {
+   "source": "FTS samples",
+   "predicate": "buffered",
+   "target": "Zn"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13312927:11:5f058665",
+ "entities": [
+  {
+   "name": "Histone methylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "H3K4 methylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "H3K36 methylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "H3K79 methylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Dot1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Grappa",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hcy",
+   "type": "chemical"
+  },
+  {
+   "name": "SAH",
+   "type": "chemical"
+  },
+  {
+   "name": "PP2A",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SET8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "dDnmt2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hox genes",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Histone methylation",
+   "predicate": "catalyzed_by",
+   "target": "Dot1"
+  },
+  {
+   "source": "Histone methylation",
+   "predicate": "catalyzed_by",
+   "target": "Grappa"
+  },
+  {
+   "source": "Histone methylation",
+   "predicate": "inhibited_by",
+   "target": "Hcy"
+  },
+  {
+   "source": "Histone methylation",
+   "predicate": "inhibited_by",
+   "target": "SAH"
+  },
+  {
+   "source": "H3K79 methylation",
+   "predicate": "catalyzed_by",
+   "target": "Dot1"
+  },
+  {
+   "source": "H3K79 methylation",
+   "predicate": "inhibited_by",
+   "target": "Hcy"
+  },
+  {
+   "source": "H3K79 methylation",
+   "predicate": "inhibited_by",
+   "target": "SAH"
+  },
+  {
+   "source": "H3K36 methylation",
+   "predicate": "inhibited_by",
+   "target": "Hcy"
+  },
+  {
+   "source": "H3K36 methylation",
+   "predicate": "inhibited_by",
+   "target": "SAH"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,32 @@
+{
+ "community_id": 22,
+ "resolution": 3.0,
+ "size": 22,
+ "member_names": [
+  "A > T",
+  "C > T/G > A-compatible class",
+  "candidate variant-rate patterns",
+  "collapsed C > T/G > A-compatible class",
+  "largest mismatch-rate increase",
+  "Low DO/high respiration",
+  "Mismatch-rate and candidate variant-rate analyses",
+  "phenotypic adaptation",
+  "predominance",
+  "recurrence differences",
+  "redox-cycle resonance framework",
+  "redox-defined metabolic phases",
+  "RNA-processing, RNA-modification, and sequencing-readout landscape",
+  "RNA-seq mismatch",
+  "sample-specific candidate sites",
+  "small magnitude",
+  "stable DNA mutation",
+  "substitution-class-dependent response",
+  "T > A/A > T and T > C/A > G changes",
+  "T > C/A > G",
+  "transcriptome fidelity",
+  "variant-rate analysis"
+ ],
+ "title": "Phenotypic Adaptation and Redox Cycle Resonance in Low Oxygen Conditions",
+ "summary": "This cluster of processes and phenotypes is centered around the effects of low oxygen conditions on cellular metabolism and genetic stability. Low DO/high respiration is associated with several processes, including the RNA-processing, RNA-modification, and sequencing-readout landscape, and the substitution-class-dependent response. Mismatch-rate and candidate variant-rate analyses have identified various genetic changes, including A > T, T > C/A > G, and collapsed C > T/G > A-compatible class, which are linked to the largest mismatch-rate increase and predominance. These findings suggest that low oxygen conditions lead to phenotypic adaptation and changes in the redox cycle resonance framework, affecting the redox-defined metabolic phases and transcriptome fidelity.",
+ "truncated": false
+}

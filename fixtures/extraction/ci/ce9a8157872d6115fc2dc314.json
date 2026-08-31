@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC12994171:6:ed17bdd2",
+ "entities": [
+  {
+   "name": "MynOx",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCO4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "O2",
+   "type": "chemical"
+  },
+  {
+   "name": "NLUC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HRPEADH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UBQ10",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Actin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERFVII",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "cells",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PCO4",
+   "predicate": "presence",
+   "target": "MynOx"
+  }
+ ],
+ "truncated": false
+}

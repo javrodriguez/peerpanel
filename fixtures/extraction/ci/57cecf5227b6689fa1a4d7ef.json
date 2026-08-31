@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13274398:0:d37a78e7",
+ "entities": [
+  {
+   "name": "Watad Mohamed",
+   "type": "organism"
+  },
+  {
+   "name": "Jonathan Trauth",
+   "type": "organism"
+  },
+  {
+   "name": "Filipp Bezold",
+   "type": "organism"
+  },
+  {
+   "name": "Ammar Baker",
+   "type": "organism"
+  },
+  {
+   "name": "Bastian Pook",
+   "type": "organism"
+  },
+  {
+   "name": "Johannes Scheffer",
+   "type": "organism"
+  },
+  {
+   "name": "Hagen Nusshär",
+   "type": "organism"
+  },
+  {
+   "name": "Sophia Hasenjäger",
+   "type": "organism"
+  },
+  {
+   "name": "Nicole Paczia",
+   "type": "organism"
+  },
+  {
+   "name": "Lars-Oliver Essen",
+   "type": "organism"
+  },
+  {
+   "name": "Christof Taxis",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

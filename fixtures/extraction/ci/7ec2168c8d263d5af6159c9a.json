@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13026841:1:bcc95399",
+ "entities": [
+  {
+   "name": "Metabolomics analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Metabolome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Liquid chromatography mass spectrometry",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Gas chromatography mass spectrometry",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Capillary electrophoresis mass spectrometry",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nuclear magnetic resonance spectroscopy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Metabolomics data",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Genomics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Proteomics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Mitochondrial DNA",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Metabolomics analysis",
+   "predicate": "uses",
+   "target": "Liquid chromatography mass spectrometry"
+  },
+  {
+   "source": "Metabolomics analysis",
+   "predicate": "uses",
+   "target": "Gas chromatography mass spectrometry"
+  },
+  {
+   "source": "Metabolomics analysis",
+   "predicate": "uses",
+   "target": "Capillary electrophoresis mass spectrometry"
+  },
+  {
+   "source": "Metabolomics analysis",
+   "predicate": "uses",
+   "target": "Nuclear magnetic resonance spectroscopy"
+  },
+  {
+   "source": "Metabolomics data",
+   "predicate": "is",
+   "target": "Genomics"
+  },
+  {
+   "source": "Metabolomics data",
+   "predicate": "is",
+   "target": "Proteomics"
+  },
+  {
+   "source": "Yeast",
+   "predicate": "has",
+   "target": "Mitochondrial DNA"
+  }
+ ],
+ "truncated": false
+}

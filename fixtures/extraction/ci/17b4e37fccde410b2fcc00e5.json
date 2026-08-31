@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13312927:7:880450bc",
+ "entities": [
+  {
+   "name": "Hcy",
+   "type": "chemical"
+  },
+  {
+   "name": "SAH",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "Esse",
+   "type": "organism"
+  },
+  {
+   "name": "SAHH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADMA",
+   "type": "chemical"
+  },
+  {
+   "name": "Arg",
+   "type": "chemical"
+  },
+  {
+   "name": "H3",
+   "type": "chemical"
+  },
+  {
+   "name": "H3K4Me3",
+   "type": "chemical"
+  },
+  {
+   "name": "H3K36Me3",
+   "type": "chemical"
+  },
+  {
+   "name": "H3K79Me3",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

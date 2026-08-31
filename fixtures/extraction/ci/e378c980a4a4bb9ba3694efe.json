@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13170222:4:764f1288",
+ "entities": [
+  {
+   "name": "Nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "Sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "GSSG",
+   "type": "chemical"
+  },
+  {
+   "name": "GRX1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MXR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MXR2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Jlp12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Soa1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OPT7",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Jlp12"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Soa1"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Met32"
+  }
+ ],
+ "truncated": false
+}

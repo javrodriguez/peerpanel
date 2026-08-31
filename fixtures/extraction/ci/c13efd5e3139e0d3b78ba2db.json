@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13312927:14:a616e2de",
+ "entities": [
+  {
+   "name": "SAHH primers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FlyPrimerBank",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fly RNAi Database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gapdh1/2 primers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Beaucher",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Table S3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mCherry RNAi",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNeasy Minikit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nanodrop ND-1000",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Invitrogen superscript III One-Step RT-PCR System",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "StepOne Plus RT-PCR system",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SAHH primers",
+   "predicate": "selected_from",
+   "target": "FlyPrimerBank"
+  },
+  {
+   "source": "Gapdh1/2 primers",
+   "predicate": "selected_according_to",
+   "target": "Beaucher"
+  },
+  {
+   "source": "RNA",
+   "predicate": "extracted_using",
+   "target": "RNeasy Minikit"
+  },
+  {
+   "source": "RNA",
+   "predicate": "concentrated_by",
+   "target": "Nanodrop ND-1000"
+  },
+  {
+   "source": "RNA",
+   "predicate": "reverse_transcribed_using",
+   "target": "Invitrogen superscript III One-Step RT-PCR System"
+  }
+ ],
+ "truncated": false
+}

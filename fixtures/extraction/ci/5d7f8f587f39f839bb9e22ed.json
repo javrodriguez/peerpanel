@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13170222:11:89fa09a1",
+ "entities": [
+  {
+   "name": "GSH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Opt7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Francisella novicida",
+   "type": "organism"
+  },
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Seo13",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sod1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zcf2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cdg1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ssu1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NgtA",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GSH",
+   "predicate": "uptake",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "GSH",
+   "predicate": "internalization",
+   "target": "C. albicans"
+  },
+  {
+   "source": "Francisella novicida",
+   "predicate": "imports",
+   "target": "GSH"
+  }
+ ],
+ "truncated": false
+}

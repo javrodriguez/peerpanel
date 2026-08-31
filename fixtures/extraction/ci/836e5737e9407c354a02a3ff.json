@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13274398:10:a969374f",
+ "entities": [
+  {
+   "name": "WT",
+   "type": "organism"
+  },
+  {
+   "name": "bPACy",
+   "type": "organism"
+  },
+  {
+   "name": "LFM",
+   "type": "chemical"
+  },
+  {
+   "name": "blue light illumination",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "465 nm",
+   "type": "chemical"
+  },
+  {
+   "name": "flux rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "1 μmol m−2 s⁻¹",
+   "type": "chemical"
+  },
+  {
+   "name": "30°C",
+   "type": "chemical"
+  },
+  {
+   "name": "80 rpm",
+   "type": "chemical"
+  },
+  {
+   "name": "darkness",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "0.9% NaCl",
+   "type": "chemical"
+  },
+  {
+   "name": "FastPrep vials",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WT",
+   "predicate": "inoculated",
+   "target": "LFM"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "inoculated",
+   "target": "LFM"
+  },
+  {
+   "source": "LFM",
+   "predicate": "incubated",
+   "target": "blue light illumination"
+  },
+  {
+   "source": "blue light illumination",
+   "predicate": "at",
+   "target": "465 nm"
+  },
+  {
+   "source": "blue light illumination",
+   "predicate": "at",
+   "target": "1 μmol m−2 s⁻¹"
+  },
+  {
+   "source": "blue light illumination",
+   "predicate": "at",
+   "target": "30°C"
+  },
+  {
+   "source": "blue light illumination",
+   "predicate": "at",
+   "target": "80 rpm"
+  },
+  {
+   "source": "LFM",
+   "predicate": "shifted",
+   "target": "darkness"
+  },
+  {
+   "source": "LFM",
+   "predicate": "incubated",
+   "target": "blue light illumination"
+  },
+  {
+   "source": "WT",
+   "predicate": "harvested",
+   "target": "0.9% NaCl"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "harvested",
+   "target": "0.9% NaCl"
+  },
+  {
+   "source": "0.9% NaCl",
+   "predicate": "resuspended",
+   "target": "FastPrep vials"
+  }
+ ],
+ "truncated": false
+}

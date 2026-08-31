@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC12994171:11:26a959ec",
+ "entities": [
+  {
+   "name": "Plant ERFVII",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCO gene families",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "hypoxia-inducible members",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MynOx",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HRPEADH seedlings",
+   "type": "organism"
+  },
+  {
+   "name": "Spermatophytes",
+   "type": "organism"
+  },
+  {
+   "name": "RAP2.12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UbSYRAP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERFVII",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCO1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "hre1hre2 mutants",
+   "type": "organism"
+  },
+  {
+   "name": "Col-0 A. thaliana",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Plant ERFVII",
+   "predicate": "has_function",
+   "target": "hypoxia-inducible members"
+  },
+  {
+   "source": "PCO gene families",
+   "predicate": "has_function",
+   "target": "hypoxia-inducible members"
+  }
+ ],
+ "truncated": false
+}

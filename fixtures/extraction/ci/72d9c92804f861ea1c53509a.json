@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13228058:10:18717097",
+ "entities": [
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "G2WZT4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VdAgl1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VdMFS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SCRPs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "N-CSPs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CAZymes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PHIs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GHs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CEs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CBMs",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "V. dahliae",
+   "predicate": "has_gene",
+   "target": "VdMFS2"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "G2WZT4"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "VdAgl1"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "SCRPs"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "N-CSPs"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "CAZymes"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "PHIs"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "GHs"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "AAs"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "CEs"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "CBMs"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_protein",
+   "target": "G2WZT4"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13092671:6:85fc658e",
+ "entities": [
+  {
+   "name": "FTS10",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CYT10",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FluoZin-3",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn21.2",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn28.8",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn7.8",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn14.7",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn-citrate",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn",
+   "type": "chemical"
+  },
+  {
+   "name": "S17.3",
+   "type": "chemical"
+  },
+  {
+   "name": "S17.8",
+   "type": "chemical"
+  },
+  {
+   "name": "S18.6",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FTS10",
+   "predicate": "has_peak",
+   "target": "Zn21.2"
+  },
+  {
+   "source": "FTS10",
+   "predicate": "has_peak",
+   "target": "Zn14.7"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_peak",
+   "target": "Zn28.8"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_peak",
+   "target": "Zn7.8"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_peak",
+   "target": "Zn14.7"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_peak",
+   "target": "Zn-citrate"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_peak",
+   "target": "Zn"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_peak",
+   "target": "S17.3"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_peak",
+   "target": "S17.8"
+  },
+  {
+   "source": "CYT10",
+   "predicate": "has_peak",
+   "target": "S18.6"
+  },
+  {
+   "source": "FluoZin-3",
+   "predicate": "binds_to",
+   "target": "Zn28.8"
+  }
+ ],
+ "truncated": false
+}

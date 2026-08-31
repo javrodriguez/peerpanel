@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC10729969:20:ead48ceb",
+ "entities": [
+  {
+   "name": "Sonal et al.",
+   "type": "organism"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast cells",
+   "type": "organism"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "cadmium",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "RM11",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS Biology",
+   "type": "organism"
+  },
+  {
+   "name": "Roland G Roberts",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sonal et al.",
+   "predicate": "study",
+   "target": "yeast cells"
+  },
+  {
+   "source": "Sonal et al.",
+   "predicate": "find",
+   "target": "MET17"
+  },
+  {
+   "source": "Sonal et al.",
+   "predicate": "use",
+   "target": "hydrogen sulfide"
+  },
+  {
+   "source": "Sonal et al.",
+   "predicate": "accumulate",
+   "target": "hydrogen sulfide"
+  }
+ ],
+ "truncated": false
+}

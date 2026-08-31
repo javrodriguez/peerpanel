@@ -1,0 +1,32 @@
+{
+ "community_id": 21,
+ "resolution": 3.0,
+ "size": 22,
+ "member_names": [
+  "ADH",
+  "auxin",
+  "bortezomib",
+  "E3 ubiquitin",
+  "erfVII mutant",
+  "ERFVII protein dynamics",
+  "flowering plants",
+  "hypoxia",
+  "lateral root primordia",
+  "nucleosome mobilization",
+  "PCO sensor",
+  "PDC",
+  "plant adaptation",
+  "posttranslational regulation",
+  "precipitation regimes",
+  "proteasome inhibition",
+  "protein accumulation",
+  "RAP2.3",
+  "RAP2.33xHA",
+  "root architecture",
+  "transcriptional activation",
+  "yeast SWI / SNF complex"
+ ],
+ "title": "Regulation of Plant Processes Under Stress Conditions",
+ "summary": "This cluster explores the regulation of various plant processes under different conditions. Hypoxia, a state of low oxygen, is regulated by protein accumulation and in turn regulates transcriptional activation. Lateral root primordia, a process in plant development, is regulated by flowering plants. Plant adaptation is influenced by precipitation regimes. Root architecture is controlled by both auxin and lateral root primordia. Additionally, the yeast SWI/SNF complex regulates nucleosome mobilization. The regulation of these processes is complex and involves multiple interactions.",
+ "truncated": false
+}

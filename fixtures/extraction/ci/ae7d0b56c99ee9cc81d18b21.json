@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13312927:12:9f15e8d5",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "BY4741",
+   "type": "organism"
+  },
+  {
+   "name": "S288C",
+   "type": "organism"
+  },
+  {
+   "name": "Hcy",
+   "type": "chemical"
+  },
+  {
+   "name": "Drosophila melanogaster",
+   "type": "organism"
+  },
+  {
+   "name": "R.P.K.",
+   "type": "organism"
+  },
+  {
+   "name": "FlyBase",
+   "type": "organism"
+  },
+  {
+   "name": "Jenkins",
+   "type": "organism"
+  },
+  {
+   "name": "Wolinski",
+   "type": "organism"
+  },
+  {
+   "name": "Kohlwein",
+   "type": "organism"
+  },
+  {
+   "name": "Leica SP5 confocal microscope",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BD LSRFortessa",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "is_congenic_with",
+   "target": "BY4741"
+  },
+  {
+   "source": "BY4741",
+   "predicate": "is_derivative_of",
+   "target": "S288C"
+  }
+ ],
+ "truncated": false
+}

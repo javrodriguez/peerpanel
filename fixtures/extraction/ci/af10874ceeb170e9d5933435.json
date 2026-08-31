@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13228058:8:96a918f6",
+ "entities": [
+  {
+   "name": "Secreted proteins",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ΔVdMFS2 mutants",
+   "type": "organism"
+  },
+  {
+   "name": "WT",
+   "type": "organism"
+  },
+  {
+   "name": "ΔVdMFS2-C",
+   "type": "organism"
+  },
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "Czapek-Dox media",
+   "type": "chemical"
+  },
+  {
+   "name": "(NH₄)₂SO₄ precipitation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bovine serum albumin (BSA) standard curve",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SDS-PAGE electrophoresis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DAB stained area",
+   "type": "chemical"
+  },
+  {
+   "name": "H2O2",
+   "type": "chemical"
+  },
+  {
+   "name": "R software",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ΔVdMFS2 mutants",
+   "predicate": "produce",
+   "target": "Secreted proteins"
+  }
+ ],
+ "truncated": false
+}

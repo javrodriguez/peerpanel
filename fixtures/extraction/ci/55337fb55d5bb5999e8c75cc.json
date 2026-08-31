@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13092671:4:7d802445",
+ "entities": [
+  {
+   "name": "Zn8.2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn8.4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn9.5",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn11.2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn14.7",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn18.3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn21.3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn21.2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn-bound proteins",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn coordination complexes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn-citrate complexes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zn-GSH complexes",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zn8.2",
+   "predicate": "is_part_of",
+   "target": "Zn-bound proteins"
+  },
+  {
+   "source": "Zn8.4",
+   "predicate": "is_part_of",
+   "target": "Zn-bound proteins"
+  },
+  {
+   "source": "Zn9.5",
+   "predicate": "is_part_of",
+   "target": "Zn-bound proteins"
+  },
+  {
+   "source": "Zn11.2",
+   "predicate": "is_part_of",
+   "target": "Zn-bound proteins"
+  },
+  {
+   "source": "Zn14.7",
+   "predicate": "is_part_of",
+   "target": "Zn coordination complexes"
+  },
+  {
+   "source": "Zn18.3",
+   "predicate": "is_part_of",
+   "target": "Zn coordination complexes"
+  },
+  {
+   "source": "Zn21.3",
+   "predicate": "is_part_of",
+   "target": "Zn coordination complexes"
+  },
+  {
+   "source": "Zn21.2",
+   "predicate": "is_part_of",
+   "target": "Zn-GSH complexes"
+  },
+  {
+   "source": "Zn21.2",
+   "predicate": "is_part_of",
+   "target": "Zn coordination complexes"
+  },
+  {
+   "source": "Zn21.2",
+   "predicate": "is_part_of",
+   "target": "Zn-citrate complexes"
+  },
+  {
+   "source": "Zn14.7",
+   "predicate": "is_part_of",
+   "target": "Zn-citrate complexes"
+  }
+ ],
+ "truncated": false
+}

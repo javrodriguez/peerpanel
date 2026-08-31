@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13170222:2:e26058b1",
+ "entities": [
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Met15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cbf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Jlp1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Jlp12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sod1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "SO42⁻",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Met15"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Met6"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Met4"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Met32"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Cbf1"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Jlp1"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Jlp12"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_gene",
+   "target": "Sod1"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "regulates",
+   "target": "GSH"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "regulates",
+   "target": "SO42⁻"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "regulates",
+   "target": "Met32"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "regulates",
+   "target": "Jlp12"
+  }
+ ],
+ "truncated": false
+}

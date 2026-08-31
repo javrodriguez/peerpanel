@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC10729969:4:44bb170c",
+ "entities": [
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met14Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "sodium hydrosulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "lead acetate paper",
+   "type": "chemical"
+  },
+  {
+   "name": "RM11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S288C",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "WY2035",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WY2548",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WY2539",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "releases",
+   "target": "H2S"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "requires",
+   "target": "H2S"
+  },
+  {
+   "source": "met14Δ",
+   "predicate": "requires",
+   "target": "H2S"
+  }
+ ],
+ "truncated": false
+}

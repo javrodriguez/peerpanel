@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC10729969:16:512e78e6",
+ "entities": [
+  {
+   "name": "hsu1Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fba1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "SMM",
+   "type": "chemical"
+  },
+  {
+   "name": "cadmium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "RM11 yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Nikon AZ100 upright microscope",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "flow cytometer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sulfate",
+   "predicate": "is_source_of",
+   "target": "sulfide"
+  },
+  {
+   "source": "methionine",
+   "predicate": "is_source_of",
+   "target": "sulfide"
+  },
+  {
+   "source": "SMM",
+   "predicate": "is_source_of",
+   "target": "sulfide"
+  },
+  {
+   "source": "cadmium sulfate",
+   "predicate": "exposed_to",
+   "target": "hsu1Δ"
+  }
+ ],
+ "truncated": false
+}

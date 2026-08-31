@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13312927:17:bbb26608",
+ "entities": [
+  {
+   "name": "Prism 8",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GraphPad",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PowerPoint",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Office Professional Plus 2021",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Microsoft",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SPSS 27.0",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SPSS Inc.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Datasets",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shapiro–Wilk test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mann–Whitney U-test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kruskal–Wallis test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bonferroni correction",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Shapiro–Wilk test",
+   "predicate": "checked",
+   "target": "Datasets"
+  }
+ ],
+ "truncated": false
+}

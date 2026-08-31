@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13304748:0:67297620",
+ "entities": [
+  {
+   "name": "Nanomaterials",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "ZnS QD",
+   "type": "chemical"
+  },
+  {
+   "name": "CdS QD",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "Luche Sophia",
+   "type": "organism"
+  },
+  {
+   "name": "Pagano Luca",
+   "type": "organism"
+  },
+  {
+   "name": "Marmiroli Marta",
+   "type": "organism"
+  },
+  {
+   "name": "Marmiroli Nelson",
+   "type": "organism"
+  },
+  {
+   "name": "Guisbiers Gregory",
+   "type": "organism"
+  },
+  {
+   "name": "Parma",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "University",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nanomaterials",
+   "predicate": "published",
+   "target": "Luche Sophia"
+  },
+  {
+   "source": "Nanomaterials",
+   "predicate": "published",
+   "target": "Pagano Luca"
+  },
+  {
+   "source": "Nanomaterials",
+   "predicate": "published",
+   "target": "Marmiroli Marta"
+  },
+  {
+   "source": "Nanomaterials",
+   "predicate": "published",
+   "target": "Marmiroli Nelson"
+  },
+  {
+   "source": "Nanomaterials",
+   "predicate": "published",
+   "target": "Guisbiers Gregory"
+  },
+  {
+   "source": "ZnS QD",
+   "predicate": "exposure",
+   "target": "Saccharomyces cerevisiae"
+  }
+ ],
+ "truncated": false
+}

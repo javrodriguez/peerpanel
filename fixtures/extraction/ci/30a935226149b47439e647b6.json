@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13312927:15:077ea049",
+ "entities": [
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "ADMA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "Zhang",
+   "type": "organism"
+  },
+  {
+   "name": "Habisch",
+   "type": "organism"
+  },
+  {
+   "name": "Precellys 24 tissue homogenizer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NMR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bruker 600 MHz",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Invitrogen NuPAGE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "polyvinylidene fluoride (PVDF) Immobilon-P Transfer Membrane",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Western blot analysis",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "has_protein",
+   "target": "ADMA"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has_protein",
+   "target": "arginine"
+  },
+  {
+   "source": "Drosophila",
+   "predicate": "has_protein",
+   "target": "ADMA"
+  },
+  {
+   "source": "Drosophila",
+   "predicate": "has_protein",
+   "target": "arginine"
+  },
+  {
+   "source": "Zhang",
+   "predicate": "performed_analysis",
+   "target": "NMR"
+  },
+  {
+   "source": "Habisch",
+   "predicate": "performed_analysis",
+   "target": "NMR"
+  },
+  {
+   "source": "Precellys 24 tissue homogenizer",
+   "predicate": "used_in_analysis",
+   "target": "yeast"
+  },
+  {
+   "source": "Precellys 24 tissue homogenizer",
+   "predicate": "used_in_analysis",
+   "target": "Drosophila"
+  },
+  {
+   "source": "NMR",
+   "predicate": "used_in_analysis",
+   "target": "yeast"
+  },
+  {
+   "source": "NMR",
+   "predicate": "used_in_analysis",
+   "target": "Drosophila"
+  },
+  {
+   "source": "Invitrogen NuPAGE",
+   "predicate": "used_in_analysis",
+   "target": "yeast"
+  },
+  {
+   "source": "Invitrogen NuPAGE",
+   "predicate": "used_in_analysis",
+   "target": "Drosophila"
+  }
+ ],
+ "truncated": false
+}

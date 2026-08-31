@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13055380:2:1d086e08",
+ "entities": [
+  {
+   "name": "skatole",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "fermentation solution",
+   "type": "chemical"
+  },
+  {
+   "name": "CON-DLY group",
+   "type": "organism"
+  },
+  {
+   "name": "SC-DLY group",
+   "type": "organism"
+  },
+  {
+   "name": "16S rRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "microbial community structure",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "composition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Venn diagram",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OTUs",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Proteobacteria",
+   "type": "organism"
+  },
+  {
+   "name": "Firmicutes",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "skatole",
+   "predicate": "has_lower_concentration_in",
+   "target": "SC-DLY group"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "reduces_production_of",
+   "target": "skatole"
+  },
+  {
+   "source": "CON-DLY group",
+   "predicate": "has_higher_concentration_of",
+   "target": "skatole"
+  },
+  {
+   "source": "SC-DLY group",
+   "predicate": "has_higher_abundance_of",
+   "target": "Proteobacteria"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "alters_microbial_communities",
+   "target": "CON-DLY group"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "alters_microbial_communities",
+   "target": "SC-DLY group"
+  },
+  {
+   "source": "CON-DLY group",
+   "predicate": "has_significant_difference_in",
+   "target": "SC-DLY group"
+  },
+  {
+   "source": "SC-DLY group",
+   "predicate": "has_significant_difference_in",
+   "target": "CON-DLY group"
+  },
+  {
+   "source": "SC-DLY group",
+   "predicate": "has_distinct_metabolites",
+   "target": "CON-DLY group"
+  }
+ ],
+ "truncated": false
+}

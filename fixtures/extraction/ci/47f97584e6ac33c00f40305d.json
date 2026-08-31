@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13312927:4:23ec5d14",
+ "entities": [
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "Hcy",
+   "type": "chemical"
+  },
+  {
+   "name": "SAHH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mCherry",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Canton-S",
+   "type": "organism"
+  },
+  {
+   "name": "w[1118]",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "has_growth_defect",
+   "target": "Hcy"
+  },
+  {
+   "source": "Drosophila",
+   "predicate": "has_growth_defect",
+   "target": "Hcy"
+  },
+  {
+   "source": "Drosophila",
+   "predicate": "has_growth_defect",
+   "target": "SAHH"
+  },
+  {
+   "source": "Canton-S",
+   "predicate": "has_growth_defect",
+   "target": "Hcy"
+  },
+  {
+   "source": "Canton-S",
+   "predicate": "has_growth_defect",
+   "target": "SAHH"
+  },
+  {
+   "source": "w[1118]",
+   "predicate": "has_growth_defect",
+   "target": "Hcy"
+  },
+  {
+   "source": "w[1118]",
+   "predicate": "has_growth_defect",
+   "target": "SAHH"
+  },
+  {
+   "source": "Hcy",
+   "predicate": "causes_growth_defect",
+   "target": "yeast"
+  },
+  {
+   "source": "Hcy",
+   "predicate": "causes_growth_defect",
+   "target": "Drosophila"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "causes_growth_defect",
+   "target": "Drosophila"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "causes_growth_defect",
+   "target": "Canton-S"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "causes_growth_defect",
+   "target": "w[1118]"
+  }
+ ],
+ "truncated": false
+}

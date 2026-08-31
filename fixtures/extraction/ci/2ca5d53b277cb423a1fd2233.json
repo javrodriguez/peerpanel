@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13348253:3:461ccb52",
+ "entities": [
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "pantothenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae LMD17",
+   "type": "organism"
+  },
+  {
+   "name": "VSC profile",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CO2 release",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SM200",
+   "type": "chemical"
+  },
+  {
+   "name": "MET",
+   "type": "chemical"
+  },
+  {
+   "name": "CYS",
+   "type": "chemical"
+  },
+  {
+   "name": "B5 Def",
+   "type": "chemical"
+  },
+  {
+   "name": "Coenzyme A (CoA)",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "methionine",
+   "predicate": "has_effect_on",
+   "target": "fermentation"
+  },
+  {
+   "source": "cysteine",
+   "predicate": "has_effect_on",
+   "target": "fermentation"
+  },
+  {
+   "source": "pantothenic acid",
+   "predicate": "has_effect_on",
+   "target": "fermentation"
+  },
+  {
+   "source": "S. cerevisiae LMD17",
+   "predicate": "produces",
+   "target": "VSC profile"
+  },
+  {
+   "source": "S. cerevisiae LMD17",
+   "predicate": "undergoes",
+   "target": "fermentation"
+  },
+  {
+   "source": "SM200",
+   "predicate": "has_effect_on",
+   "target": "fermentation"
+  },
+  {
+   "source": "MET",
+   "predicate": "has_effect_on",
+   "target": "fermentation"
+  },
+  {
+   "source": "CYS",
+   "predicate": "has_effect_on",
+   "target": "fermentation"
+  },
+  {
+   "source": "B5 Def",
+   "predicate": "has_effect_on",
+   "target": "fermentation"
+  },
+  {
+   "source": "Coenzyme A (CoA)",
+   "predicate": "is_biosynthesized_from",
+   "target": "pantothenic acid"
+  },
+  {
+   "source": "fermentation",
+   "predicate": "results_in",
+   "target": "CO2 release"
+  }
+ ],
+ "truncated": false
+}

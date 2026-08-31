@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13510017:16:380bf53a",
+ "entities": [
+  {
+   "name": "C.J. Siddique",
+   "type": "organism"
+  },
+  {
+   "name": "N. Chapman",
+   "type": "organism"
+  },
+  {
+   "name": "E.G. Resendiz",
+   "type": "organism"
+  },
+  {
+   "name": "M.J.E. Processing",
+   "type": "organism"
+  },
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "exoribonuclease",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Xrn-1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Front",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biosci",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "2021",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "8",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "780315",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "N. Chapman"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "E.G. Resendiz"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "M.J.E. Processing"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "RNA"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "exoribonuclease"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "Xrn-1"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "Front"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "Biosci"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "2021"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "8"
+  },
+  {
+   "source": "C.J. Siddique",
+   "predicate": "author",
+   "target": "780315"
+  }
+ ],
+ "truncated": false
+}

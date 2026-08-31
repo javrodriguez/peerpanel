@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC12994171:7:f26f4f0c",
+ "entities": [
+  {
+   "name": "ERFVII",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AtRAP2.2/3/12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AtHRE1/2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AtPCO3/4/5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AtPCO1/2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UbSYRAP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCO",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MynOx",
+   "type": "organism"
+  },
+  {
+   "name": "Arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "MATα W303 cells",
+   "type": "organism"
+  },
+  {
+   "name": "MATa",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ERFVII",
+   "predicate": "regulates",
+   "target": "PCO"
+  },
+  {
+   "source": "ERFVII",
+   "predicate": "regulates",
+   "target": "UbSYRAP"
+  },
+  {
+   "source": "UbSYRAP",
+   "predicate": "induces",
+   "target": "PCO"
+  },
+  {
+   "source": "MynOx",
+   "predicate": "contains",
+   "target": "ERFVII"
+  },
+  {
+   "source": "MynOx",
+   "predicate": "contains",
+   "target": "PCO"
+  },
+  {
+   "source": "Arabidopsis",
+   "predicate": "expresses",
+   "target": "ERFVII"
+  },
+  {
+   "source": "Arabidopsis",
+   "predicate": "expresses",
+   "target": "PCO"
+  },
+  {
+   "source": "MATα W303 cells",
+   "predicate": "contains",
+   "target": "ERFVII"
+  },
+  {
+   "source": "MATα W303 cells",
+   "predicate": "contains",
+   "target": "PCO"
+  }
+ ],
+ "truncated": false
+}

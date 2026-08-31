@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13228058:1:cb138df7",
+ "entities": [
+  {
+   "name": "Cotton",
+   "type": "organism"
+  },
+  {
+   "name": "Verticillium dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "MFS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VdMFS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ABC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FgMFS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VdPAT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AaMFS19",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Alternaria alternata",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Fusarium graminearum",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cotton",
+   "predicate": "has_pathogen",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "Verticillium dahliae",
+   "predicate": "causes",
+   "target": "Cotton"
+  },
+  {
+   "source": "Alternaria alternata",
+   "predicate": "has_gene",
+   "target": "AaMFS19"
+  },
+  {
+   "source": "Candida albicans",
+   "predicate": "has_gene",
+   "target": "MFS"
+  },
+  {
+   "source": "Fusarium graminearum",
+   "predicate": "has_gene",
+   "target": "FgMFS1"
+  },
+  {
+   "source": "V. dahliae",
+   "predicate": "has_gene",
+   "target": "VdMFS2"
+  }
+ ],
+ "truncated": false
+}

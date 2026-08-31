@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13348253:5:0a27c508",
+ "entities": [
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae LMD17",
+   "type": "organism"
+  },
+  {
+   "name": "GDH2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MUP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NCR",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "TNA1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PTR2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OPT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OPT2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "arginine",
+   "predicate": "is stored in",
+   "target": "vacuole"
+  }
+ ],
+ "truncated": false
+}

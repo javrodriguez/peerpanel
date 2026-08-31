@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13348253:8:e5aa8523",
+ "entities": [
+  {
+   "name": "Pantothenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Vitamin B5",
+   "type": "chemical"
+  },
+  {
+   "name": "CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "Acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "Sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "OAH",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Fen2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EMC31",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PAN6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Pantothenic acid",
+   "predicate": "is_key_precursor_for",
+   "target": "CoA"
+  },
+  {
+   "source": "Pantothenic acid",
+   "predicate": "is_key_precursor_for",
+   "target": "Acetyl-CoA"
+  },
+  {
+   "source": "Pantothenic acid",
+   "predicate": "is_imported_via",
+   "target": "Fen2p"
+  }
+ ],
+ "truncated": false
+}

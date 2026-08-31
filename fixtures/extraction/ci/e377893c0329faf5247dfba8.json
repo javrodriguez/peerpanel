@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13055380:5:cca5b8f7",
+ "entities": [
+  {
+   "name": "Duroc",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Landace",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yorkshire",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "ATCC",
+   "type": "organism"
+  },
+  {
+   "name": "Beijing Beina Chuanglian Biotechnology Research Institute",
+   "type": "organism"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "chemical"
+  },
+  {
+   "name": "peptone",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "maltose",
+   "type": "chemical"
+  },
+  {
+   "name": "Zhengda Feed Co.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Duroc",
+   "predicate": "has_part",
+   "target": "Landace"
+  },
+  {
+   "source": "Duroc",
+   "predicate": "has_part",
+   "target": "Yorkshire"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "is_isolated_from",
+   "target": "Beijing Beina Chuanglian Biotechnology Research Institute"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "is_cultivated_in",
+   "target": "YPD"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "is_cultivated_with",
+   "target": "yeast"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "is_cultivated_with",
+   "target": "peptone"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "is_cultivated_with",
+   "target": "glucose"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "is_cultivated_with",
+   "target": "maltose"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13304748:1:ac717401",
+ "entities": [
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "genome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "proteome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "metabolome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mtDNA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mitochondrial functions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cell cycle dynamics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "genetics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "engineered nanomaterials",
+   "type": "chemical"
+  },
+  {
+   "name": "quantum dots",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnS QDs",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "genome"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "proteome"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "metabolome"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "mtDNA"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "mitochondrial functions"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "cell cycle dynamics"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "genetics"
+  },
+  {
+   "source": "engineered nanomaterials",
+   "predicate": "is",
+   "target": "quantum dots"
+  },
+  {
+   "source": "quantum dots",
+   "predicate": "has",
+   "target": "ZnS QDs"
+  }
+ ],
+ "truncated": false
+}

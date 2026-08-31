@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC12994171:5:cfc2336e",
+ "entities": [
+  {
+   "name": "O2-dependent regulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast circuit",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PCO4 module",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "SYRAP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UbSYRAP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HRPEADH-NLUC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MynOx",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DLOR",
+   "type": "chemical"
+  },
+  {
+   "name": "PCO",
+   "type": "chemical"
+  },
+  {
+   "name": "normoxia",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "anoxia",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PCO4 module",
+   "predicate": "regulates",
+   "target": "yeast circuit"
+  },
+  {
+   "source": "HRPEADH-NLUC",
+   "predicate": "regulates",
+   "target": "MynOx"
+  },
+  {
+   "source": "PCO4 module",
+   "predicate": "degrades",
+   "target": "SYRAP"
+  },
+  {
+   "source": "PCO4 module",
+   "predicate": "degrades",
+   "target": "UbSYRAP"
+  },
+  {
+   "source": "PCO4 module",
+   "predicate": "requires",
+   "target": "normoxia"
+  }
+ ],
+ "truncated": false
+}

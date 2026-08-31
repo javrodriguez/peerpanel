@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13510017:11:651bd57a",
+ "entities": [
+  {
+   "name": "RNA-seq mismatch",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "candidate variant-rate patterns",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "redox-defined metabolic phases",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Low DO/high respiration",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "substitution-class-dependent response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "C > T/G > A-compatible class",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "T > A/A > T and T > C/A > G changes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "RNA-processing, RNA-modification, and sequencing-readout landscape",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcriptome fidelity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "stable DNA mutation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "phenotypic adaptation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "redox-cycle resonance framework",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Low DO/high respiration",
+   "predicate": "associated with",
+   "target": "substitution-class-dependent response"
+  },
+  {
+   "source": "Low DO/high respiration",
+   "predicate": "associated with",
+   "target": "C > T/G > A-compatible class"
+  },
+  {
+   "source": "Low DO/high respiration",
+   "predicate": "associated with",
+   "target": "T > A/A > T and T > C/A > G changes"
+  },
+  {
+   "source": "Low DO/high respiration",
+   "predicate": "associated with",
+   "target": "RNA-processing, RNA-modification, and sequencing-readout landscape"
+  }
+ ],
+ "truncated": false
+}

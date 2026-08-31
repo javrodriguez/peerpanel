@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13410889:1:2140328f",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "JUB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PAPS",
+   "type": "chemical"
+  },
+  {
+   "name": "ATPS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "APSK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PPA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "IPTG",
+   "type": "chemical"
+  },
+  {
+   "name": "GAL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CYC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NAC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Le et al.",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "IPTG",
+   "predicate": "induces expression of",
+   "target": "GAL1"
+  },
+  {
+   "source": "GAL1",
+   "predicate": "controls expression of",
+   "target": "JUB1"
+  }
+ ],
+ "truncated": false
+}

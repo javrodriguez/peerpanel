@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13274398:3:d6ff5a10",
+ "entities": [
+  {
+   "name": "bPACy",
+   "type": "organism"
+  },
+  {
+   "name": "wild-type cells",
+   "type": "organism"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "adenylate energy charge",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ATP",
+   "type": "chemical"
+  },
+  {
+   "name": "ADP",
+   "type": "chemical"
+  },
+  {
+   "name": "AMP",
+   "type": "chemical"
+  },
+  {
+   "name": "AEC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "PKA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cyr1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pde1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "bPACy",
+   "predicate": "has lower",
+   "target": "adenylate energy charge"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has lower",
+   "target": "adenylate energy charge"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has lower",
+   "target": "adenylate energy charge"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has lower",
+   "target": "adenylate energy charge"
+  }
+ ],
+ "truncated": false
+}

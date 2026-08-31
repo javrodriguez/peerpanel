@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10729969:15:b98c21c3",
+ "entities": [
+  {
+   "name": "Genesys 20 spectrophotometer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thermo Fisher Scientific",
+   "type": "organism"
+  },
+  {
+   "name": "Waltham",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Costar 3370 96-well plate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Corning",
+   "type": "organism"
+  },
+  {
+   "name": "Glendale",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Biotek Synergy MX plate reader",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Agilent Technologies",
+   "type": "organism"
+  },
+  {
+   "name": "Teleshake magnetic shaking device",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "custom-built 'lid warmer'",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DxP10",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

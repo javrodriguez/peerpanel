@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13092671:5:17258f96",
+ "entities": [
+  {
+   "name": "GSH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GSSG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CYT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Zn-GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn-cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn-citrate",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "citrate",
+   "type": "chemical"
+  },
+  {
+   "name": "vacuoles",
+   "type": "organism"
+  },
+  {
+   "name": "cytosol",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GSH",
+   "predicate": "is_bound_to",
+   "target": "Zn-GSH"
+  },
+  {
+   "source": "GSSG",
+   "predicate": "has_similar_peaks",
+   "target": "GSH"
+  },
+  {
+   "source": "CYT",
+   "predicate": "has_absence",
+   "target": "GSH"
+  },
+  {
+   "source": "FTS",
+   "predicate": "has_absence",
+   "target": "GSH"
+  },
+  {
+   "source": "Zn-GSH",
+   "predicate": "is_stable",
+   "target": "Zn-GSH"
+  },
+  {
+   "source": "cysteine",
+   "predicate": "is_bound_to",
+   "target": "Zn-cysteine"
+  },
+  {
+   "source": "citrate",
+   "predicate": "is_bound_to",
+   "target": "Zn-citrate"
+  },
+  {
+   "source": "vacuoles",
+   "predicate": "has_concentration",
+   "target": "GSH"
+  }
+ ],
+ "truncated": false
+}

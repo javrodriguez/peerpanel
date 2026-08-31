@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13228058:0:8da50dfa",
+ "entities": [
+  {
+   "name": "Verticillium dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "VdMFS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sun Tiange",
+   "type": "organism"
+  },
+  {
+   "name": "Li Yongtai",
+   "type": "organism"
+  },
+  {
+   "name": "Yuan Ruixiang",
+   "type": "organism"
+  },
+  {
+   "name": "Liu Feng",
+   "type": "organism"
+  },
+  {
+   "name": "Ma Xiaomei",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Xinyu",
+   "type": "organism"
+  },
+  {
+   "name": "Sun Yuqiang",
+   "type": "organism"
+  },
+  {
+   "name": "Li Yanjun",
+   "type": "organism"
+  },
+  {
+   "name": "Shihezi University",
+   "type": "organism"
+  },
+  {
+   "name": "Zhejiang Sci-Tech University",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VdMFS2",
+   "predicate": "silenced",
+   "target": "Verticillium dahliae"
+  }
+ ],
+ "truncated": false
+}

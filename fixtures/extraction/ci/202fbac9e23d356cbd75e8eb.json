@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10729969:13:9d6b6207",
+ "entities": [
+  {
+   "name": "hsu1Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KANMX",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "amdSYM",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fba1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mCherry",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "eGFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mOrange",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSU1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CRE",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "hsu1Δ",
+   "predicate": "is_deletion_of",
+   "target": "HSU1"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "is_deletion_of",
+   "target": "MET17"
+  },
+  {
+   "source": "KANMX",
+   "predicate": "is_resistance_gene",
+   "target": "amdSYM"
+  },
+  {
+   "source": "amdSYM",
+   "predicate": "is_counter_selectable_marker",
+   "target": "MET17"
+  },
+  {
+   "source": "Fba1",
+   "predicate": "is_tagged_with",
+   "target": "mCherry"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13274398:12:53caa111",
+ "entities": [
+  {
+   "name": "WT",
+   "type": "organism"
+  },
+  {
+   "name": "bPACy",
+   "type": "organism"
+  },
+  {
+   "name": "blue light",
+   "type": "chemical"
+  },
+  {
+   "name": "darkness",
+   "type": "chemical"
+  },
+  {
+   "name": "GO term",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "KEGG pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Supplemental Material",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "plasmids",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "authors",
+   "type": "organism"
+  },
+  {
+   "name": "corresponding author",
+   "type": "organism"
+  },
+  {
+   "name": "ASM",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WT",
+   "predicate": "exposed_to",
+   "target": "blue light"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "exposed_to",
+   "target": "blue light"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "incubated_in",
+   "target": "darkness"
+  },
+  {
+   "source": "WT",
+   "predicate": "exposed_to",
+   "target": "darkness"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has",
+   "target": "plasmids"
+  },
+  {
+   "source": "WT",
+   "predicate": "has",
+   "target": "plasmids"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has",
+   "target": "yeast"
+  },
+  {
+   "source": "WT",
+   "predicate": "has",
+   "target": "yeast"
+  },
+  {
+   "source": "bPACy",
+   "predicate": "has",
+   "target": "Supplemental Material"
+  },
+  {
+   "source": "WT",
+   "predicate": "has",
+   "target": "Supplemental Material"
+  },
+  {
+   "source": "authors",
+   "predicate": "granted",
+   "target": "ASM"
+  }
+ ],
+ "truncated": false
+}

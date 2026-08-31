@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13304748:3:87c65247",
+ "entities": [
+  {
+   "name": "yeast strains",
+   "type": "organism"
+  },
+  {
+   "name": "ZnS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "CdS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "SD-agar",
+   "type": "chemical"
+  },
+  {
+   "name": "YPG-agar",
+   "type": "chemical"
+  },
+  {
+   "name": "milliQ water",
+   "type": "chemical"
+  },
+  {
+   "name": "BY4742",
+   "type": "organism"
+  },
+  {
+   "name": "pos5Δ",
+   "type": "organism"
+  },
+  {
+   "name": "2′7′-dichlorodihydrofluorescein diacetate",
+   "type": "chemical"
+  },
+  {
+   "name": "propidium iodide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast strains",
+   "predicate": "pre-cultured in",
+   "target": "YPD"
+  },
+  {
+   "source": "yeast strains",
+   "predicate": "exposed to",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "BY4742",
+   "predicate": "treated with",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "pos5Δ",
+   "predicate": "treated with",
+   "target": "ZnS QDs"
+  }
+ ],
+ "truncated": false
+}
