@@ -95,7 +95,7 @@ class TestDemoManifest:
         """Per D8: exclusion binds per RUN; caprin has no run, so its twin is
         not a member — it re-enters WITH its manuscript at the expansion."""
         pmcids = self._manifest().pmcids()
-        assert self.RUN_TWINS <= pmcids
+        assert pmcids >= self.RUN_TWINS
         assert self.DEFERRED_TWIN not in pmcids
 
     def test_every_doc_redistributable_and_attributed(self) -> None:
