@@ -19,6 +19,7 @@ from peerpanel.graph.build import build_graph, display_name, node_type, stats
 from peerpanel.graph.communities import detect
 from peerpanel.graph.extract import extract_many
 from peerpanel.graph.summaries import summarise_communities
+from peerpanel.manuscripts.twins import load_twins
 from peerpanel.providers.base import ChatResponse
 from peerpanel.retrieval import BM25Retriever, GraphLocalRetriever, Index
 
@@ -64,6 +65,14 @@ def run_quickstart(root: Path) -> int:
     if [c.chunk_id for c in chunks] != chunk_ids:
         raise RuntimeError("embedding fixture stale relative to the committed corpus")
     index = Index.build(chunks, vectors.astype("float32"))
+    # A twin retrieved here is expected and harmless — this is a demo query, not a
+    # metric — but it must SAY so: an unlabeled twin at rank 1 makes a reader work
+    # out for themselves whether the exclusion machinery exists (it does; it binds
+    # per run, and this run reviews nothing).
+    twin_labels = {
+        t.pmcid: "  [twin*]" for t in load_twins(root / "manuscripts" / "twins.json").twins
+    }
+    shown_twin = False
     print(f'\nquery: "{QUERY}"')
     for name, retriever in (
         ("bm25", BM25Retriever(index)),
@@ -72,7 +81,15 @@ def run_quickstart(root: Path) -> int:
         hits = retriever.search(QUERY, k=3)
         print(f"  {name}:")
         for hit in hits:
-            print(f"    #{hit.rank} {hit.chunk_id} (score {hit.score:.2f})")
+            label = twin_labels.get(hit.doc_id, "")
+            print(f"    #{hit.rank} {hit.chunk_id} (score {hit.score:.2f}){label}")
+            shown_twin = shown_twin or bool(label)
+    if shown_twin:
+        print(
+            "  [twin*] the published version of a manuscript the panel reviews — a corpus\n"
+            "          member by design, excluded from that manuscript's own review run and\n"
+            "          from every reported metric (this demo query reviews nothing)."
+        )
     top = sorted(reports, key=lambda r: -r.size)[:3]
     print("\nlargest community reports (titles from the recorded cache):")
     for report in top:
