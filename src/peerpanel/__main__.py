@@ -46,6 +46,28 @@ def _corpus(args: list[str]) -> int:
     return 2
 
 
+def _embeddings(args: list[str]) -> int:
+    from peerpanel.embeddings import pipeline
+    from peerpanel.providers import OllamaNativeEmbed
+
+    root = Path.cwd()
+    if "--write" in args:
+        digest = pipeline.write(root, OllamaNativeEmbed())
+        print(f"embeddings: fixture written, payload sha256 {digest}")
+        return 0
+    # Default (and --check): recompute live, diff against the committed manifest.
+    match, recomputed, committed = pipeline.check_live(root, OllamaNativeEmbed())
+    if match:
+        print(f"embeddings: unchanged — recomputed sha256 matches committed {committed}")
+        return 0
+    print(
+        f"embeddings: DRIFT — recomputed {recomputed} != committed {committed}; "
+        "inspect, then accept deliberately with `embeddings --write`",
+        file=sys.stderr,
+    )
+    return 1
+
+
 def main(argv: list[str] | None = None) -> int:
     args = sys.argv[1:] if argv is None else argv
     if not args or args[0] in ("-h", "--help"):
@@ -54,6 +76,8 @@ def main(argv: list[str] | None = None) -> int:
     command, rest = args[0], args[1:]
     if command == "corpus":
         return _corpus(rest)
+    if command == "embeddings":
+        return _embeddings(rest)
     if command not in PLANNED:
         print(f"peerpanel: unknown command {command!r}", file=sys.stderr)
         return 2
