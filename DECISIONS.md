@@ -51,3 +51,18 @@ So the demo runs MET17 + the oleaginous-biopolymer manuscript; caprin is deferre
 Biopolymer was kept over caprin deliberately: nitrogen-metabolism text is topically adjacent to the sulfur-heavy corpus, which makes retrieval harder and the reported numbers more honest than caprin's easily-separable heterochromatin domain would.
 The caprin twin (PMC11918387) stays out of the demo corpus entirely — the non-empty-exclusion assertion binds per RUN, and caprin has no run; it re-enters WITH its manuscript if the three-manuscript expansion lands (its ingest, twin row and ground truth are already committed).
 Why this scope reduction is legal under both laws: the wall-clock trigger sanctions reducing MANUSCRIPT scope (the plan's own minimum cut drops to one manuscript, so whole-manuscript reduction is the designed escape hatch), while the ground-truth tie-break bars cutting ground-truth DOCUMENTS within whatever scope is kept — and every kept manuscript's forced includes are untouched here.
+**Outcome:** the demo index built in 6.4 h against the 6.8 h projection and the 8 h ceiling, 948 chunks, zero truncated — the measure-then-rule ordering was worth it, and a scope guessed rather than measured would have been wrong in one direction or the other.
+
+## D9 — Community reports are generated at the resolution retrieval reads
+Leiden runs at three resolutions on both corpora and the full hierarchy is persisted (`artifacts/<corpus>/communities.json`) — that is the cheap, deterministic half.
+Each community REPORT costs one model call, and only the resolution-1.0 level is read by global search and the novelty reviewer, so the demo corpus is summarised at 1.0 (65 eligible communities) rather than all three levels (~213).
+The CI corpus, being small, carries reports at every level.
+`graph summaries --resolution <r>` makes the choice explicit rather than implicit, and the README states which levels carry reports on which corpus.
+This is a cost decision, not a claim about what GraphRAG requires: summarising every level is what Microsoft's implementation does, and doing so here would add roughly 150 further model calls for levels nothing currently retrieves through.
+
+## D10 — Exclusion binds the graph, not only the chunks
+Chunk-level filtering alone left a real leak, found by testing rather than reasoning: on the CI graph 131 entities were evidenced ONLY by the excluded twin, and 110 of them still matched queries and voted for their neighbours — the twin's own author surnames and MET17 among them.
+No twin text could be retrieved (measured 0 twin chunks in 30 hits across both graph modes), but the twin was still steering which surviving chunks ranked.
+`Index.live_nodes()` now removes any entity whose every evidencing chunk belongs to an excluded document, and both graph retrievers seed and expand only through live nodes.
+Residual, stated rather than hidden: an entity evidenced by both excluded and surviving chunks keeps the edge weight the excluded text contributed; removing that would require rebuilding the graph per run (6.4 h at demo scale), so it is a documented limitation.
+Note also what the non-empty-exclusion assertion does and does not prove: it shows the exclusion SET is non-empty, not that anything was removed — `Index.dropped_chunk_count` records the latter.
