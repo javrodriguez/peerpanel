@@ -68,3 +68,39 @@ class TestDemoCandidates:
         twins = {str(c["pmcid"]): c for c in self._candidates() if c["origin"] == "twin"}
         assert set(twins) == TWINS
         assert all(c["forced"] for c in twins.values())
+
+
+class TestDemoManifest:
+    """Pins on the committed demo manifest (D8 scope: MET17 + biopolymer)."""
+
+    RUN_TWINS = {"PMC10729969", "PMC12628781"}
+    DEFERRED_TWIN = "PMC11918387"
+
+    def _manifest(self) -> CorpusManifest:
+        return CorpusManifest.load(ROOT / "corpus" / "demo.manifest.json")
+
+    def test_scope_and_ground_truth_gate(self) -> None:
+        import json
+
+        manifest = self._manifest()
+        assert len(manifest.docs) == 68
+        ground_truth = json.loads((ROOT / "corpus" / "ground_truth.json").read_text())
+        aggregate = 0
+        for doi in ("10.1101/2023.05.18.541364", "10.1101/2025.05.04.652101"):
+            cited = set(ground_truth["manuscripts"][doi]["cited_pmcids"])
+            aggregate += len(cited & manifest.pmcids())
+        assert aggregate >= 20, "the demo corpus must clear the ground-truth gate"
+
+    def test_run_twins_in_deferred_twin_out(self) -> None:
+        """Per D8: exclusion binds per RUN; caprin has no run, so its twin is
+        not a member — it re-enters WITH its manuscript at the expansion."""
+        pmcids = self._manifest().pmcids()
+        assert self.RUN_TWINS <= pmcids
+        assert self.DEFERRED_TWIN not in pmcids
+
+    def test_every_doc_redistributable_and_attributed(self) -> None:
+        manifest = self._manifest()
+        assert all(d.license_code in ALLOWED_LICENSES for d in manifest.docs)
+        citations = (ROOT / "corpus" / "DEMO_CITATIONS.md").read_text()
+        for doc in manifest.docs:
+            assert f"**Pinned:** {doc.pmcid}.{doc.version} · md5 {doc.md5}" in citations
