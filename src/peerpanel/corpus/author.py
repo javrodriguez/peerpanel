@@ -21,7 +21,7 @@ from .sync import build_doc, doc_path
 class Candidate:
     pmcid: str
     forced: bool
-    origin: str  # "seed" | "one_hop" | "topical"
+    origin: str  # "seed" | "twin" | "one_hop" | "topical"
 
 
 def build_candidates(

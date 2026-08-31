@@ -1,0 +1,2237 @@
+[
+{
+"pmcid": "PMC10158836",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9825514",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9763685",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9757880",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7470746",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6785046",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6402699",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4125178",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4063906",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3901014",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3855844",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3698976",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3563226",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2814790",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2672624",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2258607",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC1204804",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC246839",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC232622",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC206591",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC183945",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC12278674",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC11974387",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC11933384",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC11701741",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC11618413",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC11216313",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC11216308",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC11102182",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10832132",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10440040",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10398944",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10204961",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10032269",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9825584",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9487109",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9157227",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8713813",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8620231",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8315938",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8217475",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8164748",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8116571",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7953724",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7873862",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7787252",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7690147",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7382830",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7334043",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7191244",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7132131",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6912988",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6709370",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6635606",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6547517",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6078167",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5968551",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5957285",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5826700",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5798460",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5484544",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3923900",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3493640",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3488211",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3245034",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3101780",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2377433",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC1409804",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC1287664",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC92509",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC91430",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC91314",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC91048",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC11075564",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10411572",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10309086",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10169411",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10112292",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9796812",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9507967",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9499908",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC9340482",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8728224",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8371605",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8179192",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8125374",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC8053981",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7816607",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7816278",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7721064",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7448383",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7181197",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC7026591",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6822695",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6383145",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6338074",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6317313",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC6030962",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5936480",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5697933",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5533921",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5495069",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5204350",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5180613",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC5052683",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4934518",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4810302",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4791967",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4758730",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4697380",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4536793",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4526745",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4484966",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4455066",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4450266",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4210515",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4117795",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4081823",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC4024641",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3974623",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3841737",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3770337",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3666757",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3661211",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3642681",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3554839",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3530905",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3364741",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3312557",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC3244756",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2935449",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2875855",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2797062",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2705653",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2376062",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC2119680",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC1820512",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC1176008",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC394230",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC99945",
+"forced": true,
+"origin": "seed"
+},
+{
+"pmcid": "PMC10729969",
+"forced": true,
+"origin": "twin"
+},
+{
+"pmcid": "PMC12628781",
+"forced": true,
+"origin": "twin"
+},
+{
+"pmcid": "PMC11918387",
+"forced": true,
+"origin": "twin"
+},
+{
+"pmcid": "PMC11506715",
+"forced": false,
+"origin": "one_hop"
+},
+{
+"pmcid": "PMC13436021",
+"forced": false,
+"origin": "one_hop"
+},
+{
+"pmcid": "PMC12948864",
+"forced": false,
+"origin": "one_hop"
+},
+{
+"pmcid": "PMC12002642",
+"forced": false,
+"origin": "one_hop"
+},
+{
+"pmcid": "PMC13524880",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13518488",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13517252",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13515280",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13515494",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13515273",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13513244",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13514516",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13510017",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13514482",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13515017",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13504229",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13501320",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC11628909",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13485822",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13484205",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13470552",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13471478",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13467452",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13464734",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13462271",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13458714",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13456448",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13453879",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13450573",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13450799",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13429971",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13419736",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13413155",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13410889",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13406880",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13398684",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13392485",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13392044",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13385520",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13377622",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13377633",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13375760",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13376413",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13313450",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13364918",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13362000",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13363216",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13358676",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13348253",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13343975",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13343922",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13337978",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13333559",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13319017",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13315812",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13317204",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13312541",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13312927",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13305191",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13305240",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13304748",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13309016",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13245203",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13303079",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13294386",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13299270",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13299185",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13296758",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13289927",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13274398",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13269466",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13265630",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13263796",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13259618",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13261765",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13260833",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13254718",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13257386",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13253662",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13252423",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13243391",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13241008",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13240291",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13228386",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13229132",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13227963",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13228058",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13216983",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13201474",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13210522",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13207560",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13205528",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13208281",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13208731",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13198848",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13197446",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13188906",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13182270",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13171327",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13174551",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13170222",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13165106",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13160679",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13149401",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13139853",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13142962",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13141997",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13137203",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13127195",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13109641",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13109660",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13099781",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13099959",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13101504",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13093828",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13092671",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13087581",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13087070",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13084002",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13082054",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13078204",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13072888",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13072838",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13073167",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13072964",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13071878",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13070103",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13063552",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13060938",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13059742",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13055198",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13055380",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13050448",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13047200",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13043775",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13043894",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13043108",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13030030",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13029606",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13026331",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13026841",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13023492",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13020758",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13013213",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13012505",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC13000866",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12993457",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12995121",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12994171",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12992792",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12989794",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12987877",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12982346",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12987073",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12984308",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12977959",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12975806",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12977625",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12972980",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12963334",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12959225",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12958826",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12955050",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12950145",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12945937",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12947587",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12943946",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12941551",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12938199",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12929447",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12930517",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12925191",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12923136",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12917902",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12914765",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12904895",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12901402",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12900492",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12897357",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12893587",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12880724",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12880806",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12876586",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12869077",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12864121",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC7618711",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12861478",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12860867",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12858493",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12852300",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12843841",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12844158",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12844350",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12843964",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12841429",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12840341",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12838822",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12843039",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12842759",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12823764",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12816187",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12817334",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12811382",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12807978",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12804076",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12791086",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12795261",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12786662",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12785990",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12787735",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12787530",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12776145",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12777571",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12759021",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12761179",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12750150",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12751075",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12745894",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12741054",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12733451",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12732919",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12733089",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12732294",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12724544",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12719309",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12689874",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12692672",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12687560",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12680105",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12670178",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12671053",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12660106",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12647413",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12657017",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12655172",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12654844",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12649743",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12649635",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12645042",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12646323",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12642554",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12625737",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12623888",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12622171",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12622370",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12618353",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12530248",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12612559",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12612560",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12608651",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12610034",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12609508",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12610179",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12607694",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12604005",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12599253",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12589731",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12587573",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12559430",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12546869",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12539867",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12532617",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12532734",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12516185",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12508003",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12505964",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12501793",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12502333",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12492616",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12484048",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12478946",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12474164",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12463838",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12473287",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12473993",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12472392",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12472195",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12466836",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12469781",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12467476",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12469342",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12468435",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12455975",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12452945",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12453243",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12446351",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12448885",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12442379",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12440015",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12429396",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12428700",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12427885",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12423557",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12408066",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12406275",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12405629",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12399601",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12385430",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12385506",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12384203",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12383934",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12390548",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12375894",
+"forced": false,
+"origin": "topical"
+},
+{
+"pmcid": "PMC12367503",
+"forced": false,
+"origin": "topical"
+}
+]

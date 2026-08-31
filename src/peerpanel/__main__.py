@@ -3,9 +3,47 @@
 from __future__ import annotations
 
 import sys
+from collections import Counter
+from pathlib import Path
 
-BUILT: dict[str, str] = {}
 PLANNED = ("quickstart", "demo", "corpus", "embeddings", "graph", "ablation", "eval")
+
+
+def _corpus(args: list[str]) -> int:
+    from peerpanel.corpus.models import CorpusManifest
+    from peerpanel.corpus.sync import sync, verify
+
+    root = Path.cwd()
+    sub = args[0] if args else "fetch"
+    if sub == "fetch":
+        manifest_path = root / "corpus" / "demo.manifest.json"
+        if not manifest_path.exists():
+            print(
+                "corpus fetch: no corpus/demo.manifest.json yet — it is written at "
+                "checkpoint C2 (T2.1). The committed CI corpus needs no fetch.",
+                file=sys.stderr,
+            )
+            return 3
+        manifest = CorpusManifest.load(manifest_path)
+        outcomes = sync(manifest, root / "corpus" / "demo")
+        counts = Counter(o.value for o in outcomes.values())
+        print(f"corpus fetch: {dict(counts)} of {len(manifest.docs)} docs")
+        bad = {p: o.value for p, o in outcomes.items() if o.value not in ("fetched", "cached")}
+        if bad:
+            print(f"corpus fetch: NOT satisfied: {bad}", file=sys.stderr)
+            return 1
+        return 0
+    if sub == "verify":
+        manifest = CorpusManifest.load(root / "corpus" / "ci.manifest.json")
+        results = verify(manifest, root / "corpus" / "ci")
+        ok = all(results.values())
+        failed = sorted(p for p, good in results.items() if not good)
+        print(f"corpus verify: {sum(results.values())}/{len(results)} md5-exact")
+        if not ok:
+            print(f"corpus verify: FAILED: {failed}", file=sys.stderr)
+        return 0 if ok else 1
+    print(f"corpus: unknown subcommand {sub!r} (fetch | verify)", file=sys.stderr)
+    return 2
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -13,12 +51,14 @@ def main(argv: list[str] | None = None) -> int:
     if not args or args[0] in ("-h", "--help"):
         print(f"peerpanel commands: {' '.join(PLANNED)}")
         return 0
-    command = args[0]
+    command, rest = args[0], args[1:]
+    if command == "corpus":
+        return _corpus(rest)
     if command not in PLANNED:
         print(f"peerpanel: unknown command {command!r}", file=sys.stderr)
         return 2
     print(
-        f"peerpanel {command}: not built yet — this is the C0 scaffold; "
+        f"peerpanel {command}: not built yet — it lands at its own checkpoint; "
         "see README for the build plan.",
         file=sys.stderr,
     )

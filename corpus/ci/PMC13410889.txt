@@ -1,0 +1,384 @@
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: Microb Cell Fact
+Journal ID: Microb Cell Fact
+NLM Journal ID: 101139812
+
+Microbial Cell Factories
+
+EISSN: 1475-2859
+Publisher: BMC
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC13410889
+PMID: 42509562
+DOI: 10.1186/s12934-026-03072-0
+Article ID: 3072
+Article version: 1
+Subjects: Research
+
+Fine-tuned synthetic transcription factors for production of 3′-phosphoadenosine-5′-phosphosulfate in yeast
+
+Borah Madhushruti 1
+Gu Shanna 1
+Saied Essa M. 2 3
+Arenz Christoph 2
+Koffas Mattheos 4
+Naseri Gita gita.naseri@hu-berlin.de
+1 5
+1 https://ror.org/01hcx6992 grid.7468.d 0000 0001 2248 7639 Institut of Biology, Humboldt-Universität zu Berlin, Philippstrasse 13, 10115 Berlin, Germany
+2 https://ror.org/01hcx6992 grid.7468.d 0000 0001 2248 7639 Institute of Chemistry, Humboldt-Universität zu Berlin, Brook-Taylor-Str. 2, 12489 Berlin, Germany
+3 https://ror.org/02m82p074 grid.33003.33 0000 0000 9889 5690 Chemistry Department, Faculty of Science, Suez Canal University, Ismailia, 41522 Egypt
+4 https://ror.org/01rtyzb94 grid.33647.35 0000 0001 2160 9198 Department of Chemical and Biological Engineering, Rensselaer Polytechnic Institute, Troy, NY 12180 USA
+5 https://ror.org/04rhq3086 grid.507437.2 Max Planck Unit for the Science of Pathogens, Charitéplatz 1, 10117 Berlin, Germany
+Electronic publication date: 2026 Jul 27
+Publication date: 2026
+Volume: 25
+Electronic Location ID: 165
+Received 2026 Feb 19; Accepted 2026 Jul 15
+Copyright: © The Author(s) 2026
+Copyright year: 2026
+License: Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Keywords: JUB1-X synTF, 3'-phosphoadenosine 5'-phosphosulfate, Synthetic transcription factor, Saccharomyces cerevisiae
+
+Funding: Humboldt-Universität zu Berlin (1034) Open Access funding enabled and organized by Projekt DEAL.
+
+issue-copyright-statement: © BioMed Central Ltd., part of Springer Nature 2026
+
+==============================
+Background
+
+Technologies developed over the past decade have made Saccharomyces cerevisiae a promising platform for producing various natural products. Balancing multi-enzyme expression, while maintaining robust microbial growth, remains a limiting factor for engineering long biosynthetic pathways in yeast.
+
+Result
+
+Here, we improved the transcriptional capacity of our previously developed synthetic transcription factors (synTFs) derived from the plant JUB1 DNA-binding domain, whose expression is controlled by an β-D-1-thiogalactopyranoside (IPTG)-inducible promoter. To this end, at cysteine positions within surface-exposed loop regions of a JUB1-derived DNA-binding scaffold, we introduced a short peptide to enhance loop flexibility while providing local stability and orientation. The generated synTFs, so-called JUB1-X synTFs, varying in strength, have been successfully used to improve the production of 3’-phosphoadenosine 5’-phosphosulfate (PAPS), a universal sulfate donor necessary for the synthesis of therapeutic glycosaminoglycans and sulfolipids, in yeast. Using the generated yeast strain, in simple batch culture, PAPS accumulation of 21.4 ± 5.8 mg g⁻¹ cdw was achieved after only 5 h of inducing the expression of JUB1-X synTFs.
+
+Conclusions
+
+The design principle demonstrated here provides a generalizable strategy to fine-tune other synTFs derived from heterologous DNA-binding domains, expanding the regulatory capabilities of existing synTF collections. Together, this work offers a modular, scalable approach to constructing high-performance gene circuits and supports the development of yeast cell factories for the synthesis of complex natural products.
+
+Supplementary Information
+
+The online version contains supplementary material available at 10.1186/s12934-026-03072-0.
+
+Background
+
+The well-developed genetics, solid knowledge of endogenous metabolism, and robustness in large-scale fermentations make traditional baker’s yeast Saccharomyces cerevisiae a suitable cell factory for metabolic engineering [1] As such, it has been broadly used to produce diverse products, e.g., alcohols [2], hydrocarbons [3], and proteins [4]. Extending this capability to the microbial production of activated cofactors would further expand the utility of yeast as a platform for complex biochemicals.
+
+Balancing enzyme expression, correct folding, and cofactor supply while maintaining robust microbial growth remains a limiting factor for large-scale productivity. Strong promoters of yeast genes are repetitively implemented in yeast S. cerevisiae for metabolic engineering purposes [5, 6]. They may create a metabolic burden on the cell (thus negatively affecting growth), and cells must allocate limited metabolic resources to heterologous metabolite production during the biomass accumulation phase [7]. To mitigate this trade-off, dynamic pathway engineering emerged as an effective strategy to address metabolic stress and cytotoxicity arising from natural product accumulation [7]. Previously developed inducible synthetic transcription factors (synTFs) have been limited by relatively low transcriptional activation, making them suboptimal for high-performance synthetic biology applications [8, 9]. To overcome these limitations, we previously established a new class of chemically inducible synTFs for gene expression in S. cerevisiae. To this end, different combinations of plant TF families and activation domains (ADs) derived from plants, viruses, and yeast are being used in yeast. The isopropyl β-D-1-thiogalactopyranoside (IPTG)- inducible GAL1 promoter (harboring lacO site) controls the expression of plant-derived ATFs in yeast. Upon synTF expression, synTF targets synthetic promoters that harbor one or more copies of its binding site upstream of a yeast CYC1 minimal promoter to drive target gene expression. Among them, JUB1 (JUNGBRUNNEN1)-derived synTF exhibited strong inducible activation and low basal activity, making it an optimal candidate for synTF engineering for enhancing its transcriptional capacity in yeast. In this study, we engineered next-generation JUB1-based synTFs by rationally modifying conserved regions of the NAC DNA-binding domain (DBD), which is crucial for DNA binding and dimerization. We showed that inserting short, stabilized, flexible sequences into structurally sensitive but non-disruptive regions of DBD could improve transcriptional performance of synTFs without altering DNA-binding specificity, while minimizing growth defects compared to commonly used yeast promoters.
+
+As a proof-of-concept, we implemented our JUB1-X synTFs to enhance production of 3′-phosphoadenosine 5′-phosphosulfate (PAPS), the universal sulfate donor required for sulfotransferase-catalyzed reactions for a wide range of biomolecules [10], including glycosaminoglycans [11], glycolipids [12], and small-molecule metabolites [12]. Sulfated glycosaminoglycans, such as chondroitin sulfate, heparin and heparan sulfate, are of important biomedical significance because of their anticoagulant, anti-inflammatory, and antiviral activities [13, 14]. Growing the need for pharmaceuticals for these compounds has promoted interest in sustainable biosynthetic routes, as traditional extraction from animal-derived sources faces challenges such as pathogen contamination, batch-to-batch variability, and supply chain limits [14]. Consequently, insufficient PAPS supply can severely constrain the productivity of engineered sulfation pathways. PAPS biosynthesis involves the sequential action of ATP sulfurylase (ATPS), adenosine 5′-phosphosulfate kinase (APSK), and inorganic pyrophosphatase (PPA) [15, 16]. Enzymatic PAPS synthesis is strongly limited by the cost of ATP, which alone accounts for more than 60% of substrate expenses [17]. In a recent study, Le et al. (2025) showed that combining ATP regeneration with biotin–streptavidin-mediated enzyme immobilization in yeast reduced ATP consumption, resulting in an improved PAPS titer of 12.02 g/L [18]. However, the complex enzyme immobilization procedures and cofactor recycling systems required in their study limit the approach’s accessibility and scalability. Hence, in this study, we used JUB1-X synthetic transcription factors to induce expression of the key PAPS biosynthetic enzymes ATPS, PPA, and APSK after yeast growth was complete. We showed that using only our growth-decoupled strategy, mediated by JUB1-X synTFs, enables PAPS accumulation of PAPS to 21.4 ± 5.8 mg g⁻¹ cdw after 5 h of induction. The approach is simple, scalable, and readily extendable to other synthetic biology and metabolic engineering applications requiring dynamic gene control.
+
+Methods
+
+General
+
+Plasmids were constructed by NEBuilder HiFi DNA assembly (New England Biolabs, Frankfurt am Main, Germany) [19, 20]. The strains used in this study are listed in Table 1. Primer and plasmid sequences are given in Supplementary Table S1 and Supplementary Table S2, respectively. PCR amplifications were done using Q5 DNA Polymerase (New England Biolabs, Frankfurt am Main, Germany), or PrimeSTAR GXL DNA Polymerase (Takara Bio, Saint-Germain-en-Laye, France). Amplified DNA parts were gel-purified prior to Sanger sequencing. All primers and oligonucleotides were ordered from IDT (Integrated DNA Technologies Inc., Dessau-Rosslau, Germany). All constructs were confirmed by sequencing (Microsynth Seqlab, Goettingen, Germany).
+
+Plasmids were transformed into Escherichia coli NEB 5α (New England Biolabs). Strains were grown in Luria-Bertani (LB) medium with an appropriate E. coli selection marker at 37 °C. Competent yeast cells and genetic transformation with plasmids or linearized DNA fragments were performed using the LiAc/SS carrier DNA/PEG method [21]. All strains were grown at 30 °C in yeast extract peptone dextrose adenine (YPDA)-rich medium or in appropriate synthetic complete (SC) media. Then, verification of the transformation was done using colony PCR followed by sequencing.
+
+Table 1 List of parental S. cerevisiae strains used in this study
+
+Yeast strain	Relevant genome	Origin	
+YPH500	MAT a, URA3-52, lys2-801, ade2-101, trp1D63, his3D200, leu2D1	ATCC, #76,626	
+ProTDH3-yEGFP	YPH500/ura3-52::PTDH3-yEGFP-TCYC1-his3-ura3	Naseri et al. [22]	
+NLS-JUB1-GAL4AD/4X	YPH500/ura3-52::PlacO-NLS-JUB1-GAL4AD-CYC1t-PTEF1-LacI-TTEF1-trp1-4X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	Naseri et al. [22]	
+NLS-JUB1-EDLLAD/4X	YPH500/ura3-52::PlacO-NLS-JUB1-EDLLAD-CYC1t-pTEF1-LacI- TTEF1-trp1-4X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	Naseri et al. [22]	
+yJUB1-X001	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-GAL4AD-TCYC1-PTEF1-LacI- TTEF1-trp1	This study	
+yJUB1-X002	YPH500/ura3-52::placO-NLS-JUB1-XC191-GAL4AD-TCYC1- PTEF1-LacI-TTEF1-trp1	This study	
+yJUB1-X003	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-EDLLAD-TCYC1- PTEF1-LacI-TTEF1-trp1	This study	
+yJUB1-X004	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-EDLLAD-TCYC11- PTEF1-LacI-TTEF1-trp1	This study	
+yJUB1-X005	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-GAL4AD-CYC1t-PTEF1-LacI-TTEF1-trp1-1X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X006	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-GAL4AD-CYC1t-PTEF1-LacI-TTEF1-trp1-2X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X007	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-GAL4AD-CYC1t-PTEF1-LacI-TTEF1-trp1-3X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X008	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-GAL4AD-CYC1t-PTEF1-LacI-TTEF1TEF1t-trp1-4X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X009	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-GAL4AD-CYC1t-PTEF1-LacI-TTEF1-trp1-6X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X010	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-GAL4AD-CYC1t-PTEF1-LacI-TTEF1-trp1-1X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X011	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-GAL4AD-TCYC1- PTEF1-LacI-TTEF1-trp1-2X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X012	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-GAL4AD-CYC1t-PTEF1-LacI-TTEF1-trp1-3X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X013	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-GAL4AD- TCYC1-PTEF1-LacI-TTEF1-trp1-4X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X014	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-GAL4AD- TCYC1-PTEF1-LacI-TTEF1-trp1-6X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X015	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-EDLLAD- TCYC1-PTEF1-LacI-TTEF1-trp1-1X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X016	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-EDLLAD- TCYC1-PTEF1-LacI-TTEF1-trp1-2X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X017	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-EDLLAD- TCYC1-PTEF1-LacI-TTEF1-trp1-3X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X018	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-EDLLAD- TCYC1-PTEF1 -LacI-TTEF1-trp1-4X BS JUB1- PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X019	YPH500/ura3-52::PlacO-NLS-JUB1-XC114-EDLLAD- TCYC1-PTEF1-LacI-TTEF1-trp1-6X BS JUB1-PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X020	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-EDLLAD- TCYC1-PTEF1-LacI-TTEF1-trp1-1X BS JUB1-PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X021	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-EDLLAD- TCYC1-PTEF1-LacI-TTEF1-trp1-2X BS JUB1-PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X022	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-EDLLAD- TCYC1-PTEF1-LacI-TTEF1-trp1-3X BS JUB1-PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X023	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-EDLLAD- TCYC1- PTEF1-LacI-TTEF1-trp1-4X BS JUB1-PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X024	YPH500/ura3-52::PlacO-NLS-JUB1-XC191-EDLLAD- TCYC1-PTEF1-LacI-TTEF1-trp1-6X BS JUB1-PCYC1min -yeGFP-TCYC1-his3-ura3	This study	
+yJUB1-X025	YPH500/H1::his3-PlacO-NLS-JUB1-XC114-GAL4AD-TCYC1- PCYC1min−2X BS JUB1-PPK2C-TACT1	This study	
+yJUB1-X026	yJUB1-X025/H2::ura3-PlacO-NLS-JUB1-XC191-GAL4AD-TCYC1- PCYC1min−4X BS JUB1-ATPS-TALG9	This study	
+yJUB1-XPAPS	yJUB1-X026/H5::KanMX-PTEF1-LacI-TTEF1- PlacO-NLS-JUB1-XC191-GAL4AD-TCYC1- PCYC1min−6X BS JUB1-APSK-TTDH1	This study	
+
+Construction of JUB1-X synTFs expression clones
+
+JUB1-X synTF expression clones were constructed based on previously published plasmids pFM003B-JUB1(NLS-JUB1-GAL4AD) and pGN003B-JUB1(NLS-JUB1-EDLLAD), encoding NLS–JUB1 fused to the GAL4 activation domain or the EDLL activation domain [22]. Short peptide insertions (YVG and GER) were added into the JUB1 coding sequence using PCR-based site-directed mutagenesis. To this end, the hexapeptide YVGGER was inserted at positions C114 or C191 using primers SM001/SM002 and SM003/SM004, respectively. The same insertion strategy was applied to both GAL4AD- and EDLLAD-based constructs. Following sequence verification, plasmids pSM01-04 were linearized with PmeI, which cuts within the ura3-52 homology region, and transformed into the yeast strain YPH500. Targeted genomic integration occurred at the ura3–52 locus via homologous recombination. Positive transformants were selected on SD–Trp medium and confirmed by colony PCR with primers SM005 and SM006, followed by sequencing.
+
+Construction of JUB1-X synTFs reporter clones
+
+Plasmids pSM05,pSM06, pSM07, and pSM08 harbor one, two, three, and four copies of JUB1 binding sites [23]. Six copies of the JUB1 binding site were amplified from pSM09 (synthesized by BioCat, Germany). Next, the reporter plasmid pSM010 harboring six copies of the JUB1 binding site reporter construct was generated by ligating an EcoRI/XhoI-digested fragment derived from pSM09 into the EcoRI/XhoI-digested pSM08 using T4 DNA ligase. All reporter plasmids were linearized with AatII and transformed into the yeast strain YPH500 carrying the corresponding JUB1-X synTF expression cassette. Transformants were selected on SD–Ura medium. Correct genomic integration was verified by colony PCR using primers SM006/SM007, followed by Sanger sequencing.
+
+ATF characterization, flow cytometry, and data analysis
+
+Yeast strains carrying yEGFP reporter constructs were used to assess the transcriptional activity of JUB1-X synTFs under IPTG-inducing conditions. The set included wild-type (WT) strains, a strain with GFP under the constitutive TDH3 promoter, strains expressing unmodified JUB1 synTFs, and strains expressing JUB1-X variants carrying mutations, and strains expressing JUB1-X variants in combination with various reporters (strains yJUB1-X001 - yJUB1-X025). Single colonies were grown overnight (~ 16 h) in selective SC medium at 30 °C with 220 rpm. Main cultures were started at an OD₆₀₀ of ~ 0.1 in YPDA medium. Inducing cultures contained 2% (w/v) galactose and 20 mM IPTG, and non-inducing cultures contained 2% (w/v) glucose. Cultures were grown for 4–6 h at 30 °C with 220 rpm. Cells were harvested by centrifugation, washed once with phosphate-buffered saline (PBS), and analyzed by flow cytometry. yEGFP fluorescence was measured using a Cytek Aurora CS cytometer, with a minimum of 10,000 cells per sample. The geometric mean of yEGFP fluorescence was calculated in FlowJo.
+
+Construction of plasmids and donors for PAPS pathway integration
+
+For the PAPS production pathway coupled with ATP generation, the genes PPK2CpaN and ATPS were adopted from Pseudomonas aeruginosa and Kluyveromyces lactis, respectively, and codon-optimized for Saccharomyces cerevisiae, together with APSK from S. cerevisiae. The genes PPK2CpaN, ATPS, and APSK were expressed under the control of the inducible ATFs NLS-JUB1-XC114-GAL4AD/2X, NLS-JUB1-XC191-GAL4AD/4X, and NLS-JUB1-XC191-GAL4AD/6X, respectively. To construct plasmid pSM11, expression cassette for NLS-JUB1-XC114-GAL4AD synTF (primers SM008/SM009, on pSM01), six copies of JUB1 binding sites upstream of the CYC1 minimal promoter (primers SM010/SM011, on pSM10), oligo fragment encoding coding DNA sequence (CDS) of PPK2CpaN codon optimized for yeast (synthesized by GenScript, Netherlands), and ACT1 terminator (primers SM012/SM013, on genomic DNA of S. cerevisiae YPH500 strain) were cloned into NcoI-digested yeast vector for integration into H1 locus, harboring yeast selection auxotrphic marker HIS3 [24]. To construct plasmid pSM12, expression cassette for NLS-JUB1-XC191-GAL4AD synTF (primers SM014/SM009, on pSM02), four copies of JUB1 binding sites upstream of the CYC1 minimal promoter (primers SM010/SM011, on pSM008), ATPS CDS (primers SM0015/SM016, on genomic DNA of S. cerevisiae YPH500 strain) and ALG9 terminator (primers SM017/SM018, on genomic DNA of S. cerevisiae YPH500 strain) were cloned into NheI-digested yeast vector for integration into H2 locus, harboring yest selction auxotrophic marker URA3 [24]. To construct plasmid pSM13, expression cast for LacI and NLS-JUB1-XC191-GAL4AD synTF (primers SM019/SM009, on pSM02), six copies of JUB1 binding sites upstream of the CYC1 minimal promoter (primers SM010/SM011, on pSM10), oligo fragment encoding APSK CDS, codon optimized for yeast (synthesized by GenScript, Netherlands) and TDH1 terminator (primers SM020/SM021, on genomic DNA of S. cerevisiae YPH500 strain) were cloned into NheI-digested yeast vector for integration into H5 locus, harboring yeast selection marker kanMX [24]. Integration of the pathway genes into H1, H2, and H5 loci was performed by transforming donor fragments of pSM11-13 (primers SM022/SM023, SM024/SM025, and SM026/SM027, respectively), aided by Cas9-containing pCRCT plasmids, which also harbor gRNAs targeting the respective loci to produce strains yJUB1-X025, yJUB1-X026, and yJUB1-XPAPS sequentially. Correct genomic integration and sequence integrity of all reporter constructs were verified by colony PCR and Sanger sequencing.
+
+PAPS production, qPCR, and data analysis
+
+A yeast strain carrying the PAPS pathway was grown under IPTG-inducing conditions and used to quantify relative transcript levels as a proxy for transcriptional activity by RT-qPCR. Single colonies were grown overnight (~ 16 h) in selective SC medium at 30 °C with shaking at 220 rpm. Main cultures were then started at an initial OD600 of ~ 0.1 in YPDA medium. Inducing cultures contained 2% (w/v) galactose and 20 mM IPTG [25], while non-inducing cultures contained 2% (w/v) glucose. Cultures were grown for 4–6 h at 30 °C with 220 rpm. Cells were harvested for RNA extraction (Qiagen RNeasy Kit) and DNase treatment (TURBO DNA-free Kit). cDNA was prepared by reverse transcription on the RNA (NEB LunaScript RT SuperMix Kit), and qPCR analysis was carried out (BIORAD SsoFast EvaGreen supermix with low ROX) using SYBR green with FBA1 as an internal reference gene. Relative expression levels were calculated using the ΔΔCt method.
+
+HPLC
+
+Metabolite extraction was carried out using the final strain. 10 ml of yeast culture was harvested by centrifugation at 1,000 g at − 20 °C for 5 min. Cell pellets were washed once with 5 ml of pre-chilled 60% (v/v) methanol (− 20 °C) and centrifuged again under the same conditions. Pellets were resuspended in 1 ml of pre-chilled 80% (v/v) methanol (− 80 °C) and transferred to 2 ml bead-beating tubes containing 0.5 mm beads. Cells were disrupted using a homogenizer (8,000 rpm; 3 × 30 s cycles with 90 s rest), followed by incubation at − 80 °C for 20 min and a second homogenization step (8,000 rpm; 2 × 20 s cycles with 90 s rest). Lysates were centrifuged at 1,000 g at − 20 °C for 30 s, and the supernatant was filtered through a 0.22 μm syringe filter prior to analysis.
+
+For quantification, a calibration curve for PAPS was generated using authentic standards. Briefly, 1 mg of PAPS was dissolved in 500 µL of methanol (MeOH) to prepare a stock solution. From this stock, 10 µL (20 µg PAPS) was diluted with 450 µL MeOH to make a working solution with 20 µg PAPS in 460 µL. Aliquots of 1–20 µL of this solution, corresponding to 0.043–0.87 µg PAPS injected, were analyzed by HPLC, and the resulting peak areas were plotted against the amount of PAPS injected to generate the calibration curve. For samples, 5 µL of each extract was injected directly, and the PAPS concentration was determined by comparing the detected PAPS peak area to the calibration curve. Mass spectrometric analyses were carried out using an Agilent 6120 UPLC–MS system equipped with a single-quadrupole mass analyzer and an electrospray ionization (ESI) source operating in both positive and negative ionization modes. Chromatographic separation was achieved on a Zorbax Eclipse Plus C18 column (2.1 × 50 mm, 1.8 μm particle size) using a UPLC pump at a flow rate of 0.8 mL min⁻¹. A ternary mobile phase system consisting of methanol, water, and formic acid was employed, with mobile phase A comprising 99.9% MeOH and 0.1% HCOOH (v/v).
+
+Growth assays
+
+Growth assays were performed as described for the induction experiments, with the following modifications. Glucose was used as the carbon source in a non-induction medium, and the induction medium contained both galactose and IPTG. A single colony of the strain was pre-inoculated in 2 ml of noninducing medium with appropriate yeast selection markers for 18 h at 30 °C in a rotary shaker at 230 rpm. The subcultures were grown in non-inducing or inducing YPDA media to an initial OD600 of ~ 0.2 in a total volume of 2 mL, at 30 °C and 230 rpm. OD600 was measured at 8 h, 16 h, 24 h, 36 h, and 48 h.
+
+Results
+
+Design of JUB1-X synTFs
+
+A core objective of our work is to develop tunable regulators that enable genetic reprogramming of S. cerevisiae to balance the expression of multiple enzymatic pathways. Plant-derived synTFs incorporate DBDs originating from plant TF and ADs compatible with yeast, inserted downstream of a nuclear localization signal (NLS; from the SV40 large T antigen), and their expression is driven by an IPTG-inducible promoter [25]. Among them, synTFs derived from JUB1 TF showed high inducible activation with low basal activity and tunability across synthetic promoters. Here, to further enhance their tunability, short tripeptides of valine, tyrosine, and glycine (YVG) and glycine, glutamate, and arginine (GER) were selected to minimally perturb the JUB1 NAC fold while increasing local conformational flexibility (Fig. 1A). This small sequence introduces flexible loops. Conserved cysteine residues were chosen for insertion of the motif because they are structurally sensitive regions within the NAC domain of NAC TFs of plants, where local rigidity can constrain functional engagement without compromising global folding. For example, Cys114 is located near the C/D subdomains and contributes to DNA binding, whereas Cys191 lies near the C-terminal boundary of the NAC domain, adjacent to the transition to more flexible regions. Targeting these positions allows selective modulation of DNA-binding adaptability and domain coupling, resulting in enhanced transcriptional output and expanded tunability while preserving the integrity of the resulting JUB1-X synTFs and cellular fitness. For IPTG induction in S. cerevisiae, we quantified the output of a fluorescent protein reporter under the control of the IPTG-responsive synTF after induction during mid-log growth using our previously established induction protocol [25], ensuring maximal activation (Supplementary Fig. S1A), indicating that most cells responded to induction (Supplementary Fig. S1B). Upon characterization of the generated JUB1-X synTF harboring yeast GAL4 activation domain, we observed an enhanced inducibility and an expanded dynamic range across synthetic promoters harboring its binding site in one to multiple copies, compared to the parental JUB1 synTF (Fig. 1B). Notably, insertion of the YVG and GER motifs at selected cysteine positions increased maximal activation. Further characterization of JUB1-X variants harboring an additional yeast-compatible activation domain derived from plants, the EDLL activation domain, expands the graded promoter-dependent transcriptional responses (Fig. 1C).
+
+Fig. 1 JUB1-X synTF. A A schematic demonstrating JUB1-X synTF established in this study. synTFs incorporate DBDs originating from the JUB1 TF of the plant, fused to activation domains compatible with yeast, and are under the control of an IPTG-inducible GAL1 promoter harboring lacO site. Within the DBD, a synthetic X motif, YVGCGER, is added. To evaluate the performance of these synTFs in inducing gene expression, chromosomally encoded JUB1-X synTFs were placed under the control of an IPTG-responsive promoter. In the presence of IPTG, IPTG binds to LacI, forming the IPTG-LacI complex that prevents binding to the lacO site in the promoter, thereby activating synTF expression. Next, the nucleus-guided synTF targets its binding site (BS), located in one or more copies upstream of a minimal CYC1 promoter, thereby recruiting RNAP to the promoter. As a result, yeGFP is expressed. Transcriptional output of JUB1-X synTF harboring X motif at B 114 cystein and C 191 cystein. The CDSs of JUB1 harboring the X motif in cysteine sites 114 and 191 were inserted between the N-terminus NLS and GAL4 or EDLL ADs. The generated JUB1-X synTFs were tested for their strength to activate yEGFP reporter gene expression from the CYC1 minimal promoter harboring four (4×) copies of the cognate binding sites. The effector and reporter constructs were chromosomally integrated into the yeast genome. The yEGFP output signal was tested both in the absence and in the presence of the inducer (IPTG). Gray, non-induction medium; green, induction medium. WT, yeast YPH500 wild type control; ProTDH3, yeGFP under the control of yeast constitutive promoter TDH3. Mean fluorescence intensity per cell is given. Data are geometric means ± SD of fluorescence intensity from two cultures, each derived from two independent yeast colonies and measured in three technical replicates. Asterisks indicate statistically significant difference from noninduction medium (Student’s t-test; (∗) p < 0.05; (∗∗) p < 0.01; ns, non-significant). AD, activation domain; AU, arbitrary units; BS, binding site; DBD, DNA binding domain; IPTG, isopropyl β-D-1-thiogalactopyranoside; JUB1, JUNGBRUNNEN1 transcription factor; lacO, lactose operator; LacI, lactose operon repressor; NLS, nuclear localization signal; Pro, promoter; PromGAL1, modified yeast GAL1 promoter harbroing lacO site; RNAP, RNA polymerase; JUB1-X synTF, JUB1-derived synthetic transcription factor harboring short tripeptide valine, tyrosine, and glycine (YVG) and glycine, glutamate, and arginine (GER) placed in the N- and C-terminus of cycteins; yEGFP, yeast-enhanced green fluorescent protein. Full data are shown in Supplementary Data S1
+
+JUB1-X synTF collection for tunable gene expression in yeast
+
+The four JUB1-X synTFs JUB1-X114-GAL4AD (Fig. 2A), JUB1-X191-GAL4AD (Fig. 2B), JUB1-X114-EDLLAD (Fig. 2C), and JUB1-X191-EDLLAD (Fig. 2D), in combination with one or multiple copies of the JUB1 binding site, were next characterized for their ability to drive gene expression in yeast. The GAL4AD-based JUB1-X synTFs exhibited a pronounced and graded increase in transcriptional output as the number of binding sites was raised, demonstrating a high degree of GAL4AD-containing JUB1-X synTFs’ tunability across promoter architectures. In contrast, EDLLAD-containing JUB1-X synTFs produced higher expression levels. Furthermore, JUB1-X191 variants consistently outperformed the JUB1-XC114 variants. Together, these results suggest that JUB1-X synTFs are highly tunable transcriptional activators, a highly desirable feature for minimizing metabolic burden in dynamic metabolic engineering applications.
+
+To assess the impact of JUB1-X synTF activity on growth, we cultivated strains expressing weak, medium, or strong JUB1-X synTFs under inducing conditions. As shown in Fig. 2E, activation of the strong synTF based on EDLL activation domain and six copies of JUB1 binding site, which drives the highest reporter expression, resulted in only a reduction in growth (green line) relative to wild-type cells (grey line), while medium and weak JUB1-X synTFs reached higher OD600 than WT in the late logarithmic phase, indicating moderate levels of synTF activity do not impair cellular fitness and may even promote improved culture performance, potentially due to physiological adaptation to moderate synTF expression enabling, without imposing a measurable metabolic burden, effective transgene regulation. Importantly, in the absence of induction, JUB1-X synTF-expressing strains displayed growth similar to wild type, even in the case of strong JUB1-X synTF (Fig. 2F), indicating robustness of the implemented induction system. By contrast, constitutive GFP expression caused a clear growth defect across both tested conditions (Fig. 2F, blue line), highlighting the cost associated with constitutive expression systems. As shown in Fig. 2E, strains grew, on average, less in the induction medium than in the non-inducing medium (Fig. 2F), consistent with the known lower growth when galactose is used as the carbon source rather than glucose. Altogether, these results showed that inducible JUB1-X synTFs impose a lower metabolic burden than constitutive expression systems, enabling robust biomass accumulation before the production phase begins.
+
+Fig. 2 Tunable transcriptional activation by JUB1-X synthetic transcription factors through binding-site copy number modulation. Transcriptional output of four JUB1-X synTF variants, JUB1-X114-GAL4AD (A), JUB1-X191-GAL4AD (B), JUB1-X114-EDLLAD (C), and JUB1-X191-EDLLAD (D), controlling reporter gene expression in yeast. JUB1-X synTFs were expressed from an IPTG-inducible promoter and targeted synthetic promoters harboring one (1×), two (2×), or four (4×) copies of the cognate binding site upstream of a minimal CYC1 promoter driving yEGFP expression. Both expression and reporter constructs were chromosomally integrated into the yeast genome. yEGFP fluorescence was measured in the absence (gray) and presence (green) of IPTG. Data are presented as geometric mean fluorescence intensity ± SD from two independent yeast colonies, each measured in three technical replicates. Asterisks indicate statistically significant differences relative to non-induction conditions (Student’s t-test; (∗) p < 0.05; (∗∗) p < 0.01; ns, non-significant). Time course growth assay of yeast cells containing chromosomally integrated JUB1-X synTFs controlling reporter gene expression in E induction medium and F non-induction medium. The overnight cultures for strains containing the integrated weak and medium by combining synTF JUB1-XC114-GAL4AD, respectively, with one and two copies of JUB1 binding sites and strong synTF by combining JUB1-XC191-EDLL4AD with six copies of JUB1 binding sites controlling yEGFP expression were inoculated into non-induction medium (without IPTG), and induction (with IPTG), and OD600 was measured over 48 h. WT and a strain expressing yEGFP under the control of the yeast constitutive strong TDH3 promoter, integrated at the ura3-52 site, were used as negative and positive controls, respectively. Data are presented as the mean of OD600 ± SD from three independent yeast colonies. Asterisks indicate statistically significant differences relative to noninduction conditions (Student’s t-test; (∗) p < 0.05; (∗∗) p < 0.01; ns, non-significant). GAL4AD and EDLLAD, yeast compatible activation domains; AU, arbitrary units; BS, binding site; IPTG, isopropyl β-D-1-thiogalactopyranoside; JUB1, JUNGBRUNNEN1 transcription factor; JUB1-X synTF, JUB1-derived synthetic transcription factor harboring Short tripeptide YVG and GER were placed in the N- and C-terminus of cycteins; yEGFP, yeast-enhanced green fluorescent protein; WT, wild type; ProTDH3, yeast constitutive TDH3 promoter. Full data are shown in Supplementary Data S2
+
+JUB1-X synTF-derived PAPS-producing yeast strain
+
+PAPS is synthesized from ATP and inorganic sulfate via the sequential action of ATPS and APSK, directly coupling sulfate activation to cellular energy and sulfur metabolism (Fig. 3A). To establish a yeast platform capable of growth-decoupled PAPS production, we first rationally selected highly efficient enzymes for PAPS biosynthesis and ATP regeneration. Previous studies have shown that ATPS from S. cerevisiae exhibits higher catalytic activity, whereas APSK from E. coli displays superior efficiency, achieving substantially higher ATP-to-PAPS conversion than fungal APSKs [26]. Based on these findings, we selected ATPS from S. cerevisiae and APSK from E. coli as the core enzymes for PAPS biosynthesis in our engineered yeast strain. Because PAPS synthesis consumes ATP and generates ADP, sustained pathway activity requires efficient ATP regeneration to prevent energetic limitation. To address this constraint, we incorporated a polyphosphate kinase (PPK2CpaN) from Pseudomonas sp., which catalyzes ATP regeneration from ADP using inorganic polyphosphate as a phosphate donor [26]. This strategy has been shown to markedly enhance ATP availability and overall PAPS conversion efficiency in vitro, and is compatible with yeast physiology, as S. cerevisiae tolerates polyphosphate supplementation. To express the PAPS biosynthetic genes, JUB1-X synTF variants with different transcriptional strengths were combined with short synthetic promoters containing different numbers of JUB1-binding sites upstream of a minimal promoter. Specifically, PPK2CpaN was expressed from a promoter harboring two JUB1-binding sites, and ATPS and APSK were controlled by promoters harboring four and six JUB1-binding sites, respectively. For expression activation, we then employed only two IPTG-inducible synTFs, JUB1-XC114-GAL4AD and JUB1-XC191-GAL4AD. Although the EDLLAD-based variant, combined with six copies of its binding site, showed strong transcriptional activity, its output was weak at lower numbers of binding sites. In contrast, GAL4AD-based synTFs provided a more tunable expression range, which is desirable to avoid pathway imbalance or intermediate accumulation. This design enabled inducible, graded gene expression while maintaining a relatively simple regulatory framework. Upon IPTG induction, transcriptional levels of all three pathway genes increased significantly compared to non-induced conditions, reaching 204-, 170-, and 54-fold induction under the control of JUB1-XC114-GAL4AD/2X, JUB1-XC191-GAL4AD/4X, and JUB1-XC191-GAL4AD/6X, respectively (Fig. 3B). Correspondingly, expression levels were 3.3-, 9.7-, and 12.5-fold higher than those of housekeeping genes. Consistent with the observed induction of pathway gene expression, IPTG induction led to robust intracellular accumulation of PAPS in strain yJUB1-XPAPS (Fig. 3B). Under simple batch flask culture conditions, the engineered strain resulted in PAPS accumulation of 21.4 ± 5.8 mg g⁻¹ cdw (Fig. 3C) only after only 5 h of inducing the expression of JUB1-X synTFs controlling expression of PAPS enzymes, while no detectable PAPS was obtained for non-induced condition and wild-type strain (see also Supplementary Fig. S1). Importantly, induction of the PAPS pathway after only 5 h of growth (the same time as the time to characterize JUB1-X synTFs, Figs. 1 and 2), which corresponds to the mid-exponential growth phase, ensures that cells remain highly metabolically active while having accumulated sufficient biomass. Different expression levels of various PAPS genes were therefore achieved through the combined effects of two JUB1-derived synTFs that target synthetic promoters harboring 2, 4, and 6 copies of JUB1-binding sites. These results confirm the high transcriptional capacity of JUB1-X synTFs for metabolic engineering applications in yeast S. cerevisiae. To evaluate whether pathway induction imposes an additional growth burden, we next monitored the growth dynamics of strains expressing the APSK–ATPS–PPK2 genes under the control of synTF. As shown in Fig. 3D, induction of the pathway resulted in only modest alterations to growth kinetics compared with the wild-type controls. The engineered strain contains synTF expression cassettes in addition to the heterologous pathway genes. To investigate whether the observed growth phenotype reflects the combined burden of synTF expression and pathway metabolite production, we tested the growth of the PAPS-producing strain in non-inducing medium. Interestingly, the PAPS-producing strain showed reduced growth under non-induced conditions (when the synTFs and pathway genes are not fully expressed) compared with induced conditions. As shown in Fig. 2E and F and Supplementary Fig. S3, strains expressing GFP under the control of JUB1-XC114-GAL4AD/2X, JUB1-XC191-GAL4AD/4X, or JUB1-XC191-GAL4AD/6X exhibited comparable growth under both inducing and non-inducing conditions. These data indicate that the activities of the selected JUB1-X synTFs do not noticeably impair cellular fitness in GFP-expressing cells. The reduced growth observed in the PAPS-producing strain under non-induced conditions may result from leaky expression of the pathway genes, leading to an imbalance in metabolic flux, possibly through the accumulation of toxic. Such effects have been previously recognized in metabolic engineering, where increasing the expression levels of pathway genes can minimize the buildup of toxic intermediates and thereby improve the growth of an engineered strain [27, 28].
+
+The present study showed the applicability of combining JUB1-X variants with separate promoter architectures, future pathway optimization efforts could focus on employing a single synTF, together with appropriate tuning of binding-site copy number, in order to further minimize fitness costs while maintaining effective pathway induction. Further optimization of synTF dosage and pathway expression strength may provide additional opportunities to reduce fitness costs while maintaining production performance. Together, these results establish a modular and energetically balanced PAPS-producing yeast strain in which the strength and timing of enzyme expression can be precisely controlled using next-generation JUB1-X synTFs.
+
+Fig. 3 Engineering platform for PAPS production in yeast. A Schematic illustration of PAPS production. To redirect yeast metabolism toward PAPS production, overexpression of APSK, ATPS, and PPK2 (green) is needed. APSK and ATPS convert ATP to PAPS, producing ADP. PPK2 utilizes polyphosphate as a phosphate donor to regenerate ATP from ADP. B Relative transcriptional level of PAPS-encoding enzymes using JUB1-X synTFs in yeast. The inducible JUB1-X synTFs JUB1-XC114-GAL4AD/2X, JUB1-XC191-GAL4AD/4X, and JUB1-XC191-GAL4AD/6X were used to express enzymes PPK2CpaN, APSK, and ATPS, respectively, to generate strain yJUB1-XPAPS. Transcription level of pathway genes was measured in the absence (gray) and presence (green) of IPTG after 5 h. C PAPS production in strain yJUB1-XPAPS. Production of PAPS in the generated strain yJUB1-XPAPS was measured in the presence (green) of IPTG after 5 h at OD600 ~ 2.0 using HPLC. No detectable PAPS was observed in the non-induction medium or in YPH500 (data not shown). D Time course growth assay of yeast cells producing PAPS under the control of JUB1-X synTFs. Overnight culture of strain yJUB1-XPAPS was inoculated into both induction and non-induction media, and OD600 was measured over 48 h. WT was used as a negative control, respectively. Data are presented as the mean OD600 ± SD from three technical replicates. Asterisks indicate statistically significant differences relative to the non-induction condition (Student’s t-test; (∗) p < 0.05; (∗∗) p < 0.01; ns, non-significant). ATP, adenosine 5′-triphosphate. ADP, adenosine 5′-diphosphate; PAPS, 3′-phosphoadenosine-5′-phosphosulfate; ATPS, ATP sulfurylase; APSK, APS kinase; PPi, inorganic pyrophosphatase; PPK, polyphosphate kinase; IPTG, isopropyl β-D-1-thiogalactopyranoside; JUB1, plant JUNGBRUNNEN1 transcription factor; JUNGBRUNNEN1 transcription factor; JUB1-X synTF, JUB1-derived synthetic transcription factor harboring short tripeptide YVG and GER were placed in the N- and C-terminus of cycteins; GAL4AD, yeast GAL4 activation domain; ´2X´, ´4X´, and ´6X´ indicate two, four, and six copies of the synTF binding site, respectively; WT, wild type; HPLC, high performance liquid chromatography; cdw, cell dry weight. Full data are shown in Supplementary Data S3
+
+Discussion
+
+Precise control of pathway expression strength and timing is essential for efficient metabolic engineering in S. cerevisiae, particularly for energetically demanding biosynthetic processes. In this study, we developed next-generation JUB1-X synTFs that expand the tunable expression range of plant-derived synTFs while maintaining minimal impact on cellular fitness. We showed that rational modification of conserved regions within the JUB1 NAC DNA-binding domain yields a graded set of inducible regulators compared to previously reported JUB1-based synTFs.
+
+A major bottleneck in sulfation pathways is the limited intracellular availability of PAPS, which is biosynthesized, tightly regulated, and energetically costly. We therefore sought to implement our synTFs for PAPS production in the S. cerevisiae. To avoid relying on constitutive overexpression or complex cofactor-recycling systems [18], we implemented two JUB1-X synTFs to express three enzymes of the PAPS biosynthetic pathway. By inducing pathway expression only at the appropriate time and after the biomass accumulation phase, the engineered strain yJUB1-XPAPS produced 21.4 ± 5.8 mg g⁻¹ cdw PAPS in a simple batch flask culture, whereas no PAPS was detected under noninduced conditions. Future studies are needed to investigate whether a simplified architecture employing a single synTF, such as a moderate JUB1-XC114-GAL4AD, and promoter copy-number tuning is sufficient to achieve high production while further reducing the burden associated with more synTF expression. Notably, using yeast shake-flask batch cultures without process optimization, we achieved this production, whereas a higher titer reported by Li et al. (2025) was obtained in controlled fermentor systems and demands a more complex in vitro enzyme immobilization strategy [18]. Our system requires only the addition of IPTG to the culture medium, offering a substantially simplified in vivo platform.
+
+Future efforts could focus on further tuning induction timing, assessing the effects of single- to multiple-synTF expression on cell fitness, optimizing growth and induction conditions, modifying the copy number of the JUB1-X synTF, and integrating dynamic feedback systems to maximize yields. Importantly, the engineering principle established here, enhancing tunability through modification of conserved regions within plant-derived DBD, is not limited to JUB1. It is broadly applicable to other synTFs, including those described by Naseri et al. [22], which employ diverse plant DNA-binding domains or other synTFs derived from dCas9. The modularity and tunability of JUB1-X synTFs make them promising tools for production in a wide range of industrially relevant pathways. This strategy could be extended to other cofactor-dependent pathways where production competes with growth, such as NADPH-dependent polyketide or flavonoid biosynthesis, SAM-dependent methylation reactions, and acetyl-CoA-intensive terpene or lipid pathways.
+
+Conclusions
+
+This work introduces JUB1-X synTFs as an improved, tunable regulatory tool for biosynthetic pathway engineering projects that require adjustable gene expression, such as PAPS co-factor synthesis in S. cerevisiae. In addition, the basic design principle offers a generalizable strategy to improve the tunability of other synTFs, extending its applicability beyond yeast to a wide range of microbial cell factories.
+
+Supplementary Information
+
+Below is the link to the electronic supplementary material.
+
+Supplementary Material 1.
+
+Supplementary Material 2.
+
+Supplementary Material 3.
+
+Supplementary Material 4.
+
+Supplementary Material 5.
+
+Abbreviations
+
+1×, 2×, 4×, 6× Number of copies of a synTF binding site
+
+AD Activation domain
+
+ADS Amorphadiene synthase
+
+APSK Adenosine 5′-phosphosulfate kinase
+
+ATPS ATP sulfurylase
+
+AU Arbitrary units
+
+BS Binding site
+
+CDW Cell dry weight
+
+Cys Cysteine
+
+DBD DNA-binding domain
+
+EDLLAD EDLL activation domain
+
+FACS Fluorescence-Activated Cell Sorting
+
+GAL4AD Yeast GAL4 activation domain
+
+GER Tripeptide glycine–glutamate–arginine
+
+HPLC High-Performance Liquid Chromatography
+
+HIS3 Yeast imidazoleglycerol-phosphate dehydratase
+
+IPTG Isopropyl β-D-1-thiogalactopyranoside
+
+JUB1 JUNGBRUNNEN1 transcription factor
+
+JUB1-X synTF JUB1-derived synthetic transcription factor with short tripeptides YVG and GER inserted at N- and C-terminal cysteine positions
+
+JUB1-X114 JUB1-X synTF with tripeptides at cysteine 114
+
+JUB1-X191 JUB1-X synTF with tripeptides at cysteine 191
+
+KanMX Yeast selectable marker conferring kanamycin resistance
+
+LacI Lactose operon repressor
+
+lacO Lactose operator
+
+NLS Nuclear localization signal
+
+PAPS 3′-Phosphoadenosine 5′-phosphosulfate
+
+PPA Inorganic pyrophosphatase
+
+PPi Inorganic pyrophosphate
+
+PPK Polyphosphate kinase
+
+Pro Promoter
+
+P Minimal promoter
+
+PCYC1min Yeast CYC1 minimal promoter
+
+ProTDH3 Yeast constitutive TDH3 promoter
+
+ProTEF1 Yeast constitutive TEF1 promoter
+
+RNAP RNA polymerase
+
+TACT1 Yeast ACT1 terminator
+
+TALG9 Yeast ALG9 terminator
+
+TTDH1 Yeast TDH1 terminator
+
+TRP1 Yeast phosphoribosylanthranilate isomerase
+
+TCYC1 Yeast CYC1 terminator
+
+URA3 Yeast orotidine-5′-phosphate decarboxylase
+
+WT Wild type
+
+yEGFP Yeast-enhanced green fluorescent protein
+
+yJUB1-XPAPS Yeast strain expressing PAPS pathway USINF JUB1-X synTFs
+
+YVG Tripeptide tyrosine–valine–glycine
+
+Acknowledgements
+
+Gita Naseri would like to acknowledge support from the Institute for Biology, Humboldt-Universität zu Berlin, and Neel H. Shah (Columbia University, New York, NY, USA) for his guidance in designing synthetic transcription factors.
+
+Author contributions
+
+GN conceived and supervised the project. SG designed, constructed, and performed synthetic transcription factor characterization and analyzed the data. MK designed the PAPS engineering strategy. MB designed, constructed, and characterized the PAPS-producing strain and analyzed the data. Chromatography experiments were performed and analyzed by EMS and CA. The manuscript was written by GN, with contributions from SG and MB. All authors take full responsibility for the content of the paper.
+
+Funding
+
+Open Access funding enabled and organized by Projekt DEAL. Gita Naseri acknowledges funding by the DFG (German Research Foundation) Emmy Noether Programm - NA 1650/4 − 1.
+
+Data availability
+
+The authors declare that the data supporting the findings of this study are available within thepaper and its Supplementary Information files. Should any raw data files be needed in anotherformat, they are available from the corresponding author upon reasonable request.
+
+Declarations
+
+Ethics approval and consent to participate
+
+Not applicable.
+
+Consent for publication
+
+Not applicable.
+
+Competing interests
+
+The authors declare no competing interests.
+
+Publisher’s Note
+
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+Madhushruti Borah and Shanna Gu have contributed equally.
+
+
+References
+
+1. Mattanovich D Sauer M Gasser B Yeast biotechnology: teaching the old dog new tricks Microb Cell Fact 2014 13 34 10.1186/1475-2859-13-34 24602262 PMC3975642
+Mattanovich D, Sauer M, Gasser B. Yeast biotechnology: teaching the old dog new tricks. Microb Cell Fact. 2014;13:34.24602262 10.1186/1475-2859-13-34 PMC3975642
+2. Generoso WC Schadeweg V Oreb M Boles E Metabolic engineering of Saccharomyces cerevisiae for production of butanol isomers Curr Opin Biotechnol 2015 33 1 7 10.1016/j.copbio.2014.09.004 25286420
+Generoso WC, Schadeweg V, Oreb M, Boles E. Metabolic engineering of Saccharomyces cerevisiae for production of butanol isomers. Curr Opin Biotechnol. 2015;33:1–7.25286420 10.1016/j.copbio.2014.09.004
+3. Li Y Li S Thodey K Trenchard I Cravens A Smolke CD Complete biosynthesis of noscapine and halogenated alkaloids in yeast Proc Natl Acad Sci U S A 2018 115 E3922 31 29610307 10.1073/pnas.1721469115 PMC5924921
+Li Y, Li S, Thodey K, Trenchard I, Cravens A, Smolke CD. Complete biosynthesis of noscapine and halogenated alkaloids in yeast. Proc Natl Acad Sci U S A. 2018;115:E3922–31.29610307 10.1073/pnas.1721469115 PMC5924921
+4. Xiao S Shiloach J Betenbaugh MJ Engineering cells to improve protein expression Curr Opin Struct Biol 2014 26 32 8 10.1016/j.sbi.2014.03.005 24704806 PMC4127093
+Xiao S, Shiloach J, Betenbaugh MJ. Engineering cells to improve protein expression. Curr Opin Struct Biol. 2014;26:32–8.24704806 10.1016/j.sbi.2014.03.005 PMC4127093
+5. Zhang J, Hansen LG, Gudich O, Viehrig K, Lassen LMM, Schrubbers L, Adhikari KB, Rubaszka P, Carrasquer-Alvarez E, Chen L et al. A microbial supply chain for production of the anti-cancer drug vinblastine. Nature 2022.10.1038/s41586-022-05157-3 PMC9452304 36045295
+6. De S Mattanovich D Ferrer P Gasser B Established tools and emerging trends for the production of recombinant proteins and metabolites in Pichia pastoris Essays Biochem 2021 65 293 307 10.1042/EBC20200138 33956085
+De S, Mattanovich D, Ferrer P, Gasser B. Established tools and emerging trends for the production of recombinant proteins and metabolites in Pichia pastoris. Essays Biochem. 2021;65:293–307.33956085 10.1042/EBC20200138
+7. Borodina I Nielsen J Advances in metabolic engineering of yeast Saccharomyces cerevisiae for production of chemicals Biotechnol J 2014 9 609 20 10.1002/biot.201300445 24677744
+Borodina I, Nielsen J. Advances in metabolic engineering of yeast Saccharomyces cerevisiae for production of chemicals. Biotechnol J. 2014;9:609–20.24677744 10.1002/biot.201300445
+8. Machens F Balazadeh S Mueller-Roeber B Messerschmidt K Synthetic Promoters and Transcription Factors for Heterologous Protein Expression in Saccharomyces cerevisiae Front Bioeng Biotechnol 2017 5 63 10.3389/fbioe.2017.00063 29098147 PMC5653697
+Machens F, Balazadeh S, Mueller-Roeber B, Messerschmidt K. Synthetic Promoters and Transcription Factors for Heterologous Protein Expression in Saccharomyces cerevisiae. Front Bioeng Biotechnol. 2017;5:63.29098147 10.3389/fbioe.2017.00063 PMC5653697
+9. Gao X Tsang JC Gaba F Wu D Lu L Liu P Comparison of TALE designer transcription factors and the CRISPR/dCas9 in regulation of gene expression by targeting enhancers Nucleic Acids Res 2014 42 e155 10.1093/nar/gku836 25223790 PMC4227760
+Gao X, Tsang JC, Gaba F, Wu D, Lu L, Liu P. Comparison of TALE designer transcription factors and the CRISPR/dCas9 in regulation of gene expression by targeting enhancers. Nucleic Acids Res. 2014;42:e155.25223790 10.1093/nar/gku836 PMC4227760
+10. Chapman E Best MD Hanson SR Wong CH Sulfotransferases: structure, mechanism, biological activity, inhibition, and synthetic utility Angew Chem Int Ed Engl 2004 43 3526 48 10.1002/anie.200300631 15293241
+Chapman E, Best MD, Hanson SR, Wong CH. Sulfotransferases: structure, mechanism, biological activity, inhibition, and synthetic utility. Angew Chem Int Ed Engl. 2004;43:3526–48.15293241 10.1002/anie.200300631
+11. Perez S Makshakova O Angulo J Bedini E Bisio A de Paz JL Fadda E Guerrini M Hricovini M Hricovini M Glycosaminoglycans: What Remains To Be Deciphered? JACS Au 2023 3 628 56 10.1021/jacsau.2c00569 37006755 PMC10052243
+Perez S, Makshakova O, Angulo J, Bedini E, Bisio A, de Paz JL, Fadda E, Guerrini M, Hricovini M, Hricovini M, et al. Glycosaminoglycans: What Remains To Be Deciphered? JACS Au. 2023;3:628–56.37006755 10.1021/jacsau.2c00569 PMC10052243
+12. Honke K Biosynthesis and biological function of sulfoglycolipids Proc Jpn Acad Ser B Phys Biol Sci 2013 89 129 38 10.2183/pjab.89.129 23574804 PMC3669731
+Honke K. Biosynthesis and biological function of sulfoglycolipids. Proc Jpn Acad Ser B Phys Biol Sci. 2013;89:129–38.23574804 10.2183/pjab.89.129 PMC3669731
+13. Carlsson P Presto J Spillmann D Lindahl U Kjellen L Heparin/heparan sulfate biosynthesis: processive formation of N-sulfated domains J Biol Chem 2008 283 20008 14 10.1074/jbc.M801652200 18487608
+Carlsson P, Presto J, Spillmann D, Lindahl U, Kjellen L. Heparin/heparan sulfate biosynthesis: processive formation of N-sulfated domains. J Biol Chem. 2008;283:20008–14.18487608 10.1074/jbc.M801652200
+14. Tithi AD Song Y Zeghal H Koffas M From animal tissue to engineered cells: biotechnological advances in sulfated glycosaminoglycan production Curr Opin Biotechnol 2025 95 103340 10.1016/j.copbio.2025.103340 40818269
+Tithi AD, Song Y, Zeghal H, Koffas M. From animal tissue to engineered cells: biotechnological advances in sulfated glycosaminoglycan production. Curr Opin Biotechnol. 2025;95:103340.40818269 10.1016/j.copbio.2025.103340
+15. Jiang X Zhang B Cai X Liu Z Zheng Y Progress on the synthesis of bioengineered heparin as an alternative to animal-derived heparin active pharmaceutical ingredient Carbohydr Polym 2025 368 124099 10.1016/j.carbpol.2025.124099 40912801
+Jiang X, Zhang B, Cai X, Liu Z, Zheng Y. Progress on the synthesis of bioengineered heparin as an alternative to animal-derived heparin active pharmaceutical ingredient. Carbohydr Polym. 2025;368:124099.40912801 10.1016/j.carbpol.2025.124099
+16. Badri A Williams A Xia K Linhardt RJ Koffas MAG Increased 3’-Phosphoadenosine-5’-phosphosulfate Levels in Engineered Escherichia coli Cell Lysate Facilitate the In Vitro Synthesis of Chondroitin Sulfate A Biotechnol J 2019 14 e1800436 10.1002/biot.201800436 31180182
+Badri A, Williams A, Xia K, Linhardt RJ, Koffas MAG. Increased 3’-Phosphoadenosine-5’-phosphosulfate Levels in Engineered Escherichia coli Cell Lysate Facilitate the In Vitro Synthesis of Chondroitin Sulfate A. Biotechnol J. 2019;14:e1800436.31180182 10.1002/biot.201800436
+17. Datta P Fu L He W Koffas MAG Dordick JS Linhardt RJ Expression of enzymes for 3’-phosphoadenosine-5’-phosphosulfate (PAPS) biosynthesis and their preparation for PAPS synthesis and regeneration Appl Microbiol Biotechnol 2020 104 7067 78 10.1007/s00253-020-10709-6 32601738
+Datta P, Fu L, He W, Koffas MAG, Dordick JS, Linhardt RJ. Expression of enzymes for 3’-phosphoadenosine-5’-phosphosulfate (PAPS) biosynthesis and their preparation for PAPS synthesis and regeneration. Appl Microbiol Biotechnol. 2020;104:7067–78.32601738 10.1007/s00253-020-10709-6
+18. Li XY Deng JQ Zhao YH Cao YL Li Y Hou J Guo XP Sheng JZ Optimized 3’-Phosphoadenosine-5’-phosphosulfate Biosynthesis via Yeast-Powered ATP Regeneration and Biotin-Streptavidin Enzyme Immobilization Biochemistry 2025 64 4232 41 10.1021/acs.biochem.5c00373 40968095
+Li XY, Deng JQ, Zhao YH, Cao YL, Li Y, Hou J, Guo XP, Sheng JZ. Optimized 3’-Phosphoadenosine-5’-phosphosulfate Biosynthesis via Yeast-Powered ATP Regeneration and Biotin-Streptavidin Enzyme Immobilization. Biochemistry. 2025;64:4232–41.40968095 10.1021/acs.biochem.5c00373
+19. Zhang Y Werling U Edelmann W SLiCE: a novel bacterial cell extract-based DNA cloning method Nucleic Acids Res 2012 40 e55 10.1093/nar/gkr1288 22241772 PMC3333860
+Zhang Y, Werling U, Edelmann W. SLiCE: a novel bacterial cell extract-based DNA cloning method. Nucleic Acids Res. 2012;40:e55.22241772 10.1093/nar/gkr1288 PMC3333860
+20. Messerschmidt K Hochrein L Dehm D Schulz K Mueller-Roeber B Characterizing seamless ligation cloning extract for synthetic biological applications Anal Biochem 2016 509 24 32 10.1016/j.ab.2016.05.029 27311554
+Messerschmidt K, Hochrein L, Dehm D, Schulz K, Mueller-Roeber B. Characterizing seamless ligation cloning extract for synthetic biological applications. Anal Biochem. 2016;509:24–32.27311554 10.1016/j.ab.2016.05.029
+21. Gietz RD Schiestl RH Frozen competent yeast cells that can be transformed with high efficiency using the LiAc/SS carrier DNA/PEG method Nat Protoc 2007 2 1 4 10.1038/nprot.2007.17 17401330
+Gietz RD, Schiestl RH. Frozen competent yeast cells that can be transformed with high efficiency using the LiAc/SS carrier DNA/PEG method. Nat Protoc. 2007;2:1–4.17401330 10.1038/nprot.2007.17
+22. Naseri G Balazadeh S Machens F Kamranfar I Messerschmidt K Mueller-Roeber B Plant-Derived Transcription Factors for Orthologous Regulation of Gene Expression in the Yeast Saccharomyces cerevisiae ACS Synth Biol 2017 6 1742 56 10.1021/acssynbio.7b00094 28531348
+Naseri G, Balazadeh S, Machens F, Kamranfar I, Messerschmidt K, Mueller-Roeber B. Plant-Derived Transcription Factors for Orthologous Regulation of Gene Expression in the Yeast Saccharomyces cerevisiae. ACS Synth Biol. 2017;6:1742–56.28531348 10.1021/acssynbio.7b00094
+23. Naseri G Prause K Hamdo HH Arenz C Artificial Transcription Factors for Tuneable Gene Expression in Pichia pastoris Front Bioeng Biotechnol 2021 9 676900 10.3389/fbioe.2021.676900 34434924 PMC8381338
+Naseri G, Prause K, Hamdo HH, Arenz C. Artificial Transcription Factors for Tuneable Gene Expression in Pichia pastoris. Front Bioeng Biotechnol. 2021;9:676900.34434924 10.3389/fbioe.2021.676900 PMC8381338
+24. Baek S Utomo JC Lee JY Dalal K Yoon YJ Ro DK The yeast platform engineered for synthetic gRNA-landing pads enables multiple gene integrations by a single gRNA/Cas9 system Metab Eng 2021 64 111 21 10.1016/j.ymben.2021.01.011 33549837
+Baek S, Utomo JC, Lee JY, Dalal K, Yoon YJ, Ro DK. The yeast platform engineered for synthetic gRNA-landing pads enables multiple gene integrations by a single gRNA/Cas9 system. Metab Eng. 2021;64:111–21.33549837 10.1016/j.ymben.2021.01.011
+25. Naseri G Balazadeh S Machens F Kamranfar I Messerschmidt K Mueller-Roeber B Plant-Derived Transcription Factors for Orthologous Regulation of Gene Expression in the Yeast Saccharomyces cerevisiae ACS Synth Biol 2017 6 1742 56 10.1021/acssynbio.7b00094 28531348
+Naseri G, Balazadeh S, Machens F, Kamranfar I, Messerschmidt K, Mueller-Roeber B. Plant-Derived Transcription Factors for Orthologous Regulation of Gene Expression in the Yeast Saccharomyces cerevisiae. ACS Synth Biol. 2017;6:1742–56.28531348 10.1021/acssynbio.7b00094
+26. Xu R Wang Y Huang H Jin X Li J Du G Kang Z Closed-Loop System Driven by ADP Phosphorylation from Pyrophosphate Affords Equimolar Transformation of ATP to 3′-Phosphoadenosine-5′-phosphosulfate ACS Catal 2021 11 10405 15 10.1021/acscatal.1c02004
+Xu R, Wang Y, Huang H, Jin X, Li J, Du G, Kang Z. Closed-Loop System Driven by ADP Phosphorylation from Pyrophosphate Affords Equimolar Transformation of ATP to 3′-Phosphoadenosine-5′-phosphosulfate. ACS Catal. 2021;11:10405–15.
+27. Naseri G, Behrend J, Rieper L, Mueller-Roeber B. COMPASS for rapid combinatorial optimization of biochemical pathways based on artificial transcription factors. Nat Commun 2019, 10.10.1038/s41467-019-10224-x PMC6565718 31197154
+28. Meadows AL Hawkins KM Tsegaye Y Antipov E Kim Y Raetz L Dahl RH Tai A Mahatdejkul-Meadows T Xu L Rewriting yeast central carbon metabolism for industrial isoprenoid production Nature 2016 537 694 7 10.1038/nature19769 27654918
+Meadows AL, Hawkins KM, Tsegaye Y, Antipov E, Kim Y, Raetz L, Dahl RH, Tai A, Mahatdejkul-Meadows T, Xu L, et al. Rewriting yeast central carbon metabolism for industrial isoprenoid production. Nature. 2016;537:694–7.27654918 10.1038/nature19769
