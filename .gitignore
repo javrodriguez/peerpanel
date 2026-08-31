@@ -20,3 +20,9 @@ build/
 .mypy_cache/
 .ruff_cache/
 .pytest_cache/
+
+# --- Glitch publish boundary (added by workspace-git) ---
+.planning/
+STATE.md
+CLAUDE.md
+AGENTS.md
