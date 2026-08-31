@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import sys
 from collections import Counter
 from pathlib import Path
@@ -68,6 +69,29 @@ def _embeddings(args: list[str]) -> int:
     return 1
 
 
+def _graph(args: list[str]) -> int:
+    root = Path.cwd()
+    sub = args[0] if args else "build"
+    if sub == "build":
+        from peerpanel.graph.pipeline import ci_graph_build
+        from peerpanel.providers import OllamaOpenAIChat
+
+        result = ci_graph_build(root, OllamaOpenAIChat("llama3.1:8b"))
+        print(json.dumps(result, indent=1, sort_keys=True))
+        truncated = result.get("truncated_chunks")
+        if isinstance(truncated, int) and truncated:
+            print(f"graph build: {truncated} chunk(s) recorded as truncated", file=sys.stderr)
+        return 0
+    if sub == "summaries":
+        print(
+            "peerpanel graph summaries: not built yet — it lands at checkpoint C2/T2.3.",
+            file=sys.stderr,
+        )
+        return 3
+    print(f"graph: unknown subcommand {sub!r} (build | summaries)", file=sys.stderr)
+    return 2
+
+
 def main(argv: list[str] | None = None) -> int:
     args = sys.argv[1:] if argv is None else argv
     if not args or args[0] in ("-h", "--help"):
@@ -78,6 +102,8 @@ def main(argv: list[str] | None = None) -> int:
         return _corpus(rest)
     if command == "embeddings":
         return _embeddings(rest)
+    if command == "graph":
+        return _graph(rest)
     if command not in PLANNED:
         print(f"peerpanel: unknown command {command!r}", file=sys.stderr)
         return 2
