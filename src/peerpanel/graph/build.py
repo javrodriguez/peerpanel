@@ -55,14 +55,18 @@ def _bump(g: nx.Graph[str], a: str, b: str, weight: float, predicate: str | None
         g.edges[a, b]["predicates"][predicate] += 1
 
 
+def _top(counter: Counter[str]) -> str:
+    """Deterministic Counter winner: count desc, then lexicographic — never
+    insertion order, which differs between a built and a JSON-loaded graph."""
+    return sorted(counter.items(), key=lambda kv: (-kv[1], kv[0]))[0][0]
+
+
 def display_name(g: nx.Graph[str], node: str) -> str:
-    name: str = g.nodes[node]["variants"].most_common(1)[0][0]
-    return name
+    return _top(g.nodes[node]["variants"])
 
 
 def node_type(g: nx.Graph[str], node: str) -> str:
-    kind: str = g.nodes[node]["types"].most_common(1)[0][0]
-    return kind
+    return _top(g.nodes[node]["types"])
 
 
 def stats(g: nx.Graph[str]) -> dict[str, int]:

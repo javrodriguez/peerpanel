@@ -124,6 +124,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"peerpanel commands: {' '.join(PLANNED)}")
         return 0
     command, rest = args[0], args[1:]
+    if command == "quickstart":
+        from peerpanel.quickstart import run_quickstart
+
+        return run_quickstart(Path.cwd())
     if command == "corpus":
         return _corpus(rest)
     if command == "embeddings":

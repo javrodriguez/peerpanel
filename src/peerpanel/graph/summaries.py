@@ -63,9 +63,11 @@ def _community_payload(
     entity_lines = [f"{display_name(g, n)} ({node_type(g, n)})" for n in kept]
     kept_set = set(kept)
     relation_lines: list[str] = []
+    from .build import _top
+
     for a, b, attrs in g.edges(data=True):
         if a in kept_set and b in kept_set and attrs.get("predicates"):
-            predicate = attrs["predicates"].most_common(1)[0][0]
+            predicate = _top(attrs["predicates"])
             relation_lines.append(f"{display_name(g, a)} —{predicate}→ {display_name(g, b)}")
     return entity_lines, sorted(relation_lines)
 
