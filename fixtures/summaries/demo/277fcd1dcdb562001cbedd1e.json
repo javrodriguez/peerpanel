@@ -1,0 +1,22 @@
+{
+ "community_id": 36,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "01AK803G",
+  "BMBF project",
+  "Broňa Brejová",
+  "C. Burge",
+  "Krogh A",
+  "MediGrid",
+  "Parra G",
+  "Peter Meinicke",
+  "Stanke M",
+  "Stefanie Dahms",
+  "Tomáš Vinař",
+  "Waack S"
+ ],
+ "title": "Researchers and Tools in Computational Biology",
+ "summary": "This cluster consists of researchers and tools in the field of computational biology. The entities listed are all categorized as method_or_tool, suggesting they are either individuals who have developed methods or tools, or the tools themselves. Without further information, it is unclear how these entities are related to each other, but they may be collaborators, authors, or developers of the listed tools.",
+ "truncated": false
+}

@@ -1,0 +1,22 @@
+{
+ "community_id": 55,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "50 kDa subunit",
+  "Endo",
+  "ENS2",
+  "KHR1",
+  "Killer of heat resistant",
+  "Killer toxin",
+  "MAL2",
+  "MALtose fermentation",
+  "SceI",
+  "YSC0001",
+  "YSC0002",
+  "YSC0003"
+ ],
+ "title": "Genes and Proteins Involved in MALtose Fermentation and Toxin Production",
+ "summary": "This cluster consists of genes and proteins related to MALtose fermentation and toxin production. MALtose fermentation is associated with YSC0003. Endo is a subunit of YSC0001, which is encoded by ENS2. YSC0002 encodes the Killer toxin. The 50 kDa subunit and KHR1 are related to the Killer of heat resistant toxin, but their exact roles are unclear. MAL2 is not directly related to the other entities in this cluster.",
+ "truncated": false
+}

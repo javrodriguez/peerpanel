@@ -1,0 +1,22 @@
+{
+ "community_id": 39,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Bajic D",
+  "Costello EK",
+  "Dethlefsen L",
+  "Estrela S",
+  "Friedman J",
+  "Goldford JE",
+  "Gore J",
+  "Higgins LM",
+  "Lu N",
+  "Sanchez - Gorostiaga A",
+  "Stagaman K",
+  "Tikhonov M"
+ ],
+ "title": "Citation Network of Methods and Tools in Research",
+ "summary": "This cluster consists of 11 methods or tools in research, connected by citation relationships. Bajic D is cited by Lu N, and Lu N is also cited by Bajic D, forming a loop. Estrela S is cited by Bajic D and Tikhonov M. The other entities are cited by various methods or tools, indicating a network of research influences and citations.",
+ "truncated": false
+}

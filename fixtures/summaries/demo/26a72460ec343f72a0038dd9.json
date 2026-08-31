@@ -1,0 +1,22 @@
+{
+ "community_id": 61,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "backward reference screening",
+  "database searches",
+  "eight known eligible benchmark studies",
+  "exact keyword matching",
+  "forward citation tracking",
+  "Google Scholar",
+  "publisher-platform searches",
+  "retrieval pathways",
+  "search concepts",
+  "Search performance",
+  "second author",
+  "Study identification"
+ ],
+ "title": "Study Identification and Performance Evaluation Methods",
+ "summary": "This cluster describes the methods used for study identification and performance evaluation. Study identification involves using various processes such as Google Scholar, backward reference screening, database searches, exact keyword matching, forward citation tracking, and publisher-platform searches. These processes are used to identify eight known eligible benchmark studies. The performance of these methods is evaluated using the benchmark studies, indicating how effective each process is in identifying relevant studies.",
+ "truncated": false
+}

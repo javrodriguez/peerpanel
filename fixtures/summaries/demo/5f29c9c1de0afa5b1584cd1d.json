@@ -1,0 +1,22 @@
+{
+ "community_id": 38,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "aforementioned 18 total RNA samples",
+  "clean bases",
+  "clean reads",
+  "data quality results",
+  "instrument",
+  "libraries",
+  "minimum number",
+  "raw data",
+  "raw data filtering",
+  "sample",
+  "summary",
+  "Table S15"
+ ],
+ "title": "RNA Sample Processing and Analysis Pipeline",
+ "summary": "This cluster describes a pipeline for processing and analyzing 18 total RNA samples. The pipeline involves several steps, including raw data filtering, which produces clean bases, and sample processing, which produces clean reads. The clean reads are then subject to a minimum number threshold. The instrument used for the analysis is summarized in Table S15, which is also subject to the raw data. Libraries are derived from the 18 total RNA samples, and the data quality results are not explicitly mentioned in the relations, but are likely a byproduct of the pipeline.",
+ "truncated": false
+}

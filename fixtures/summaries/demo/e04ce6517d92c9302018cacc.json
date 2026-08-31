@@ -1,0 +1,22 @@
+{
+ "community_id": 46,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "AuchinclossA.",
+  "BelyB.",
+  "BittrichS.",
+  "Burley S.K.",
+  "ChenL.",
+  "CrichlowG.V.",
+  "EnnisM.",
+  "KaleN.",
+  "MuthukrishnanV.",
+  "O’DonovanC.",
+  "RedaschiN.",
+  "RivoireC."
+ ],
+ "title": "Authors of Process or Phenotype Studies",
+ "summary": "This cluster consists of 11 entities labeled as process_or_phenotype, which are likely authors of scientific studies on processes or phenotypes. The relationships between these entities are not specified, suggesting that they may be independent studies or authors with no known connections to each other.",
+ "truncated": false
+}

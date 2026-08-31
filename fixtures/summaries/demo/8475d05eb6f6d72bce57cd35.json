@@ -1,0 +1,22 @@
+{
+ "community_id": 41,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "1 μM ToPro 3",
+  "10 μL",
+  "2 μL",
+  "90 μL",
+  "Culture samples",
+  "Cytek",
+  "diluted culture sample",
+  "Eugene",
+  "Milli-Q H2O",
+  "Molecular Probes",
+  "stock",
+  "unautoclaved 1.6-mL Eppendorf tubes"
+ ],
+ "title": "Culture Sample Preparation and Storage",
+ "summary": "Culture samples are diluted in Milli-Q H2O and stored in unautoclaved 1.6-mL Eppendorf tubes. The diluted culture sample is a chemical entity resulting from the dilution process. The culture samples and diluted culture sample are related to the storage containers, indicating a practical application of the culture samples. The entities involved in this cluster are primarily related to laboratory methods and tools, as well as chemicals used in the process.",
+ "truncated": false
+}

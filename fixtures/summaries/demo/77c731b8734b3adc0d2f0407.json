@@ -1,0 +1,22 @@
+{
+ "community_id": 42,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "28158427 10.1093 / bioinformatics",
+  "btx046 PMC5860051",
+  "Casey CP",
+  "Crowell KL",
+  "Dautel SE",
+  "Fujimoto GM",
+  "Ikeda K",
+  "Kim S",
+  "Kyle JE",
+  "LC - MS / MS - based lipidomics data Bioinformatics",
+  "LIQUID",
+  "Takahashi M"
+ ],
+ "title": "Liquid Process Authors",
+ "summary": "This cluster consists of a research process named LIQUID and its authors, a group of scientists. The authors are Casey CP, Crowell KL, Dautel SE, Fujimoto GM, Kim S, Kyle JE, and Takahashi M. They are all associated with the LIQUID process, indicating their involvement in the research. The LIQUID process is likely a scientific study or publication, as it is also associated with a PubMed ID (btx046 PMC5860051) and a bioinformatics article (28158427 10.1093 / bioinformatics).",
+ "truncated": false
+}

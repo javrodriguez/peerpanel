@@ -1,0 +1,22 @@
+{
+ "community_id": 35,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "CDC15",
+  "CDC4",
+  "CDC6",
+  "CDH1",
+  "CKS1",
+  "CLB4",
+  "DBF2",
+  "GRR1",
+  "MCM5",
+  "MCM7",
+  "MPS1",
+  "SMC2"
+ ],
+ "title": "Cluster of Cell Cycle Regulators",
+ "summary": "This cluster consists of 11 genes or proteins involved in the regulation of the cell cycle. The relationships between these entities are not specified, but based on their names, it can be inferred that they play roles in various stages of the cell cycle, including DNA replication and mitosis. Some of these entities, such as CDC15, CDC4, and CDC6, have names that suggest involvement in the cell cycle, while others, like CKS1 and MPS1, have names that imply roles in cell cycle regulation. The presence of multiple genes or proteins with similar names (e.g., MCM5 and MCM7) suggests functional redundancy or relatedness.",
+ "truncated": false
+}
