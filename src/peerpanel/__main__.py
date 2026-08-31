@@ -145,6 +145,46 @@ def main(argv: list[str] | None = None) -> int:
         print(render_table(report))
         print(f"ablation: full report -> {out}")
         return 0
+    if command == "review":
+        from peerpanel.orchestration import PanelProviders, run_panel
+        from peerpanel.providers import OllamaNativeChat, OllamaOpenAIChat
+
+        names = [a for a in rest if not a.startswith("--")]
+        if not names:
+            print("review: name a manuscript (a file under manuscripts/)", file=sys.stderr)
+            return 2
+        manuscript = Path.cwd() / "manuscripts" / f"{Path(names[0]).stem}.txt"
+        if not manuscript.exists():
+            print(f"review: no manuscript at {manuscript}", file=sys.stderr)
+            return 2
+        corpus = _corpus_arg(rest) if "--corpus" in rest else "demo"
+        # Two wire protocols on purpose: the production panel itself exercises
+        # the provider seam (openai-compat AND native) across two model families.
+        providers = PanelProviders(
+            methods=OllamaOpenAIChat("llama3.1:8b"),
+            novelty=OllamaNativeChat("qwen2:7b"),
+            verifier=OllamaOpenAIChat("llama3.1:8b"),
+            converger=OllamaNativeChat("qwen2:7b"),
+        )
+        review = run_panel(Path.cwd(), manuscript, providers, corpus=corpus)
+        out = Path.cwd() / "artifacts" / corpus / f"review-{Path(names[0]).stem}.json"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(review.model_dump_json(indent=1) + "\n")
+        print(f"panel review of {review.manuscript_doi} (excluded: {review.excluded_docs})")
+        for output in review.reviewer_outputs:
+            print(f"  [{output.reviewer} · {output.model}] scores {output.scores} "
+                  f"confidence {output.confidence} · {len(output.findings)} findings")
+        supported = sum(1 for v in review.verdicts if v.verdict == "SUPPORTS")
+        refuted = sum(1 for v in review.verdicts if v.verdict == "REFUTES")
+        nei = sum(1 for v in review.verdicts if v.verdict == "NOT_ENOUGH_INFO")
+        print(f"  claims: {supported} supported · {refuted} refuted · {nei} NEI "
+              f"(swap-consistency {review.swap_consistency_rate} over n={review.n_swap_checked})")
+        print(f"  deterministic lens: {len(review.deterministic_findings)} findings · "
+              f"conflicts: {len(review.conflicts)} · tokens {review.total_tokens} · "
+              f"wall {review.wall_s}s")
+        print(f"  summary: {review.summary[:300]}")
+        print(f"review: full record -> {out}")
+        return 0
     if command not in PLANNED:
         print(f"peerpanel: unknown command {command!r}", file=sys.stderr)
         return 2
