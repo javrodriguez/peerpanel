@@ -97,3 +97,23 @@ reviewer's prompt.
 The rule: a mutation proof is only evidence if it first proves it is running the mutant. Clone, never
 copy; sync fresh; and when a result says "the guard does not fire", suspect the harness before
 believing it.
+
+## D14 — A small-n aggregate publishes its per-unit numbers, or publishes nothing
+One error class was caught four times in this build, each time in something already written down as
+though it were settled:
+1. A hits column computed at k=30 published under a `k = 10` heading — which happened to flatter the
+   graph rung, and reversed the true ordering at the reported depth (BM25 13, GraphRAG local 12).
+2. Swap-consistency published as `0.50` from a single run; an independent second run of the same
+   panel returned 0.417.
+3. `GraphRAG local wins on recall, 0.393` — the mean of a decisive win on one manuscript (0.500) and
+   a clear loss on the other (0.286), with the rung ordering reversing between the only two cases.
+4. Latency labelled "median" while the code computed a mean.
+None was a lie and none was caught by a test; each was a number carrying more confidence than its
+evidence supported, in a repo whose entire credibility rests on the opposite.
+**The rule:** an aggregate over fewer than roughly ten units ships the per-unit numbers beside it, or
+does not ship. Where a mean can invert the ordering it implies, the per-unit numbers are the result
+and the mean is a convenience. This is enforced in the tool, not just in prose — `render_table`
+always emits per-case rows — because a prose-only fix decays the moment another case lands.
+The repo already applied this discipline twice before noticing it was a rule (the N ≥ 20 gate that
+withholds rates over thin ground truth; swap-consistency published as a range). The inconsistency was
+ours.
