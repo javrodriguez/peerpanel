@@ -79,9 +79,10 @@ useful result.
 Recall is always shown against its achievable ceiling: with 28 relevant documents, no top-10 list
 can exceed 0.357 recall, so a bare number would misrepresent a good result as a poor one.
 
-And from a real panel run on a real manuscript — **swap-consistency 0.50 over n = 24**. Half the
-claim verdicts flipped when the evidence order was reversed, and were forced to abstain. Position
-bias is not a hypothetical this system guards against; it is the largest measured effect in it.
+And from two independent panel runs on a real manuscript — **swap-consistency 0.42 and 0.50, n = 24
+each**. Between four and five verdicts in ten flipped when the evidence order was reversed, and were
+forced to abstain. Position bias is not a hypothetical this system guards against; it is the largest
+measured effect in it — and the gap between the two runs is why the figure is given as a range.
 The same run also produced one hallucinated finding in sixteen, where a reviewer attributed
 retrieved literature to the manuscript. Both numbers are in
 [results/RESULTS.md](results/RESULTS.md), with the reasoning.

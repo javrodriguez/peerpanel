@@ -13,6 +13,7 @@ capture of the runs that produced the indexes.
 | `demo-index-build.log` | raw capture of the 6.4-hour demo index build | `make demo-index` |
 | `demo-summaries.log` | raw capture of the demo community-report run | `make demo-summaries` |
 | `panel-review-met17.json` / `.log` | a real panel run on a real manuscript | `make review` |
+| `panel-review-met17-run2.json` | an independent second run of the same panel | `make review` |
 
 ## The indexes
 
@@ -102,17 +103,30 @@ own published twin withheld from the index and from the graph. 142,852 tokens, 3
 | conflicts detected | 1 (evidence: a reviewer's own claim refuted by retrieval) |
 | deterministic lens | 0 findings — a published paper; the lens is proven on planted defects |
 
-### The result worth reading: swap-consistency 0.50 over n = 24
+### The result worth reading: swap-consistency 0.42–0.50, and it is noisy
 
-**Half the claim verdicts flipped when the evidence order was reversed.** Twelve of twenty-four
-were forced to abstain because the two orderings disagreed with each other.
+Two independent runs of the same panel, same manuscript, same withheld twin, same models:
 
-That is the single most useful number this system has produced. Position bias in LLM judges is
-documented — first-shown options are picked ~64% of the time, and the median model flips on ~41% of
-decisive swapped-order cases — and this run reproduces it at the high end on a small local model.
-Without the order-swap, half of these verdicts would have been artifacts of which evidence chunk
-happened to come first, and they would have looked exactly like judgements. The mitigation is not
-decoration; on this evidence it is doing more work than any other component.
+| run | swap-consistency | verdicts forced to abstain | tokens | wall |
+|---|---|---|---|---|
+| 1 | 0.500 | 12 / 24 | 142,852 | 2,351 s |
+| 2 | 0.417 | 14 / 24 | 137,561 | 2,964 s |
+
+**Between two and five of every twelve claim verdicts flipped when the evidence order was
+reversed**, and were forced to abstain. This is the most useful result the system has produced, and
+the spread between the two runs is part of it: a single run's rate is not precise to three digits,
+and an earlier version of this section published `0.50` as though it were. Anyone re-running will
+get a third number in this neighbourhood, not this one.
+
+Position bias in LLM judges is documented — first-shown options are picked ~64% of the time, and
+the median model flips on ~41% of decisive swapped-order cases — and both runs land at or above the
+high end of that on a small local model. Without the order-swap, four to five in every ten of these
+verdicts would have been artifacts of which evidence chunk happened to come first, and they would
+have looked exactly like judgements. The mitigation is not decoration; on this evidence it does
+more work than any other component in the panel.
+
+(The wall-clock figures are not comparable to each other: the two runs overlapped on one GPU. That
+is also why sampling temperature, not timing, explains the token difference.)
 
 ### And one thing the run got wrong
 

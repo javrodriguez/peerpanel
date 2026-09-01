@@ -1,0 +1,319 @@
+{
+ "manuscript_doi": "10.1101/2023.05.18.541364",
+ "corpus_manifest": "corpus/demo.manifest.json",
+ "excluded_docs": [
+  "PMC10729969"
+ ],
+ "reviewer_outputs": [
+  {
+   "reviewer": "methods-statistics",
+   "model": "ollama-openai:llama3.1:8b",
+   "scores": {
+    "soundness": 4,
+    "presentation": 4,
+    "contribution": 4
+   },
+   "confidence": 4,
+   "findings": [
+    {
+     "dimension": "soundness",
+     "severity": "major",
+     "text": "The manuscript does not provide a clear description of the experimental design, controls, and replication. The authors mention that they used a met17 deletion mutant, but it is unclear how this mutant was generated and what controls were used to ensure that the results were not due to off-target effects.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "major",
+     "text": "The authors claim that met17Δ yeast can grow on sulfate without any organosulfur supplements, but this result is surprising and requires further explanation. The authors mention that this growth is density-dependent, but it is unclear how this density dependence is mediated.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "minor",
+     "text": "The authors use a commercial TAG assay kit to quantify triacylglycerol content, but it is unclear whether this method is suitable for yeast cells.",
+     "evidence_chunk_ids": [
+      "PMC13470552:4:92499ba4"
+     ]
+    },
+    {
+     "dimension": "presentation",
+     "severity": "minor",
+     "text": "The manuscript could benefit from a clearer and more concise writing style. Some sentences are long and convoluted, making it difficult to follow the authors' arguments.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "minor",
+     "text": "The authors' finding that met17Δ yeast can grow on sulfate without any organosulfur supplements is interesting, but it is unclear how this result contributes to our understanding of sulfur metabolism in yeast.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "minor",
+     "text": "The authors use a mathematical model to explain the density-dependent growth of met17Δ on sulfate, but it is unclear whether this model is supported by empirical evidence.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "presentation",
+     "severity": "minor",
+     "text": "The manuscript could benefit from more figures and tables to help illustrate the authors' results and arguments.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "minor",
+     "text": "The authors' finding that the YLL058W (HSU1) gene is involved in the assimilation of H2S into organosulfurs is interesting, but it is unclear how this result contributes to our understanding of sulfur metabolism in yeast.",
+     "evidence_chunk_ids": []
+    }
+   ],
+   "truncated": false
+  },
+  {
+   "reviewer": "prior-work-novelty",
+   "model": "ollama-native:qwen2:7b",
+   "scores": {
+    "soundness": 4,
+    "presentation": 4,
+    "contribution": 3
+   },
+   "confidence": 4,
+   "findings": [
+    {
+     "dimension": "soundness",
+     "severity": "minor",
+     "text": "The manuscript provides a comprehensive introduction to sulfur metabolism and its relevance to various biological processes, including protein synthesis, nucleotide metabolism, redox homeostasis, and microbial behavior. However, it does not delve deeply into the biochemical mechanisms of sulfur metabolism beyond the simplified model presented in Fig 1A.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "presentation",
+     "severity": "minor",
+     "text": "The introduction is well-organized and provides a clear context for the research, but it could benefit from more specific details about the metabolic pathways involved in sulfur metabolism and their interconnections.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "major",
+     "text": "The manuscript contributes to the understanding of sulfur metabolism by revealing that met17Δ yeast can grow on sulfate without organosulfur supplements under certain conditions, which was previously thought to be impossible. This finding challenges the established model of sulfur metabolism in yeast and opens up new avenues for research.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "minor",
+     "text": "The manuscript discusses the density-dependent growth of met17Δ yeast on sulfate, which is an interesting phenomenon that could have implications for understanding microbial interactions and sulfur metabolism in yeast.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "minor",
+     "text": "The manuscript provides insights into the role of Hsu1p in sulfur limitation response in yeast, which could be relevant for understanding the biological response to sulfur limitation.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "minor",
+     "text": "The manuscript discusses the paradoxical yeast growth phenotype reported by Cost and Boeke, which could lead to new insights into sulfur metabolism and the role of Hsu1p.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "minor",
+     "text": "The manuscript provides a framework for evaluating nutritional equivalence in low-fishmeal feeds, which could be relevant for the food industry and aquafeed research.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "minor",
+     "text": "The manuscript discusses the consistency and precision of evidence for nutritional-balancing strategies in low-fishmeal aquafeeds, which could be useful for researchers and practitioners in the field.",
+     "evidence_chunk_ids": []
+    }
+   ],
+   "truncated": false
+  }
+ ],
+ "verdicts": [
+  {
+   "claim_id": "manuscript:0:951f5223",
+   "claim_text": "The MET17 gene catalyzes homocysteine synthesis by reacting H2S with O-acetyl homoserine.",
+   "verdict": "SUPPORTS",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "manuscript:1:951f5223",
+   "claim_text": "The purified Met17 protein can also catalyze cysteine synthesis by reacting H2S with O-acetyl serine, but this activity is low.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "manuscript:2:951f5223",
+   "claim_text": "Met17 has been assigned as the sole enzyme for synthesizing homocysteine in S. cerevisiae.",
+   "verdict": "SUPPORTS",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "manuscript:3:951f5223",
+   "claim_text": "met17 mutants are auxotrophic for organosulfurs.",
+   "verdict": "SUPPORTS",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "manuscript:4:951f5223",
+   "claim_text": "met17Δ yeast can grow on sulfate without any organosulfur supplements in a density-dependent manner.",
+   "verdict": "SUPPORTS",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "manuscript:5:951f5223",
+   "claim_text": "The density-dependence of met17Δ growth on sulfate is mediated via the volatile metabolite H2S.",
+   "verdict": "REFUTES",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "manuscript:6:951f5223",
+   "claim_text": "H2S can be assimilated into organosulfurs through the YLL058W (HSU1) gene in the absence of MET17.",
+   "verdict": "SUPPORTS",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "manuscript:7:951f5223",
+   "claim_text": "A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17Δ on sulfate.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "methods-statistics:0:panel000",
+   "claim_text": "The manuscript does not provide a clear description of the experimental design, controls, and replication. The authors mention that they used a met17 deletion mutant, but it is unclear how this mutant was generated and what controls were used to ensure that the results were not due to off-target effects.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "methods-statistics:1:panel000",
+   "claim_text": "The authors claim that met17Δ yeast can grow on sulfate without any organosulfur supplements, but this result is surprising and requires further explanation. The authors mention that this growth is density-dependent, but it is unclear how this density dependence is mediated.",
+   "verdict": "SUPPORTS",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "methods-statistics:2:panel000",
+   "claim_text": "The authors use a commercial TAG assay kit to quantify triacylglycerol content, but it is unclear whether this method is suitable for yeast cells.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "methods-statistics:3:panel000",
+   "claim_text": "The manuscript could benefit from a clearer and more concise writing style. Some sentences are long and convoluted, making it difficult to follow the authors' arguments.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "methods-statistics:4:panel000",
+   "claim_text": "The authors' finding that met17Δ yeast can grow on sulfate without any organosulfur supplements is interesting, but it is unclear how this result contributes to our understanding of sulfur metabolism in yeast.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "methods-statistics:5:panel000",
+   "claim_text": "The authors use a mathematical model to explain the density-dependent growth of met17Δ on sulfate, but it is unclear whether this model is supported by empirical evidence.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "methods-statistics:6:panel000",
+   "claim_text": "The manuscript could benefit from more figures and tables to help illustrate the authors' results and arguments.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "methods-statistics:7:panel000",
+   "claim_text": "The authors' finding that the YLL058W (HSU1) gene is involved in the assimilation of H2S into organosulfurs is interesting, but it is unclear how this result contributes to our understanding of sulfur metabolism in yeast.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "prior-work-novelty:0:panel000",
+   "claim_text": "The manuscript provides a comprehensive introduction to sulfur metabolism and its relevance to various biological processes, including protein synthesis, nucleotide metabolism, redox homeostasis, and microbial behavior. However, it does not delve deeply into the biochemical mechanisms of sulfur metabolism beyond the simplified model presented in Fig 1A.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "prior-work-novelty:1:panel000",
+   "claim_text": "The introduction is well-organized and provides a clear context for the research, but it could benefit from more specific details about the metabolic pathways involved in sulfur metabolism and their interconnections.",
+   "verdict": "REFUTES",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "prior-work-novelty:2:panel000",
+   "claim_text": "The manuscript contributes to the understanding of sulfur metabolism by revealing that met17Δ yeast can grow on sulfate without organosulfur supplements under certain conditions, which was previously thought to be impossible. This finding challenges the established model of sulfur metabolism in yeast and opens up new avenues for research.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "prior-work-novelty:3:panel000",
+   "claim_text": "The manuscript discusses the density-dependent growth of met17Δ yeast on sulfate, which is an interesting phenomenon that could have implications for understanding microbial interactions and sulfur metabolism in yeast.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "prior-work-novelty:4:panel000",
+   "claim_text": "The manuscript provides insights into the role of Hsu1p in sulfur limitation response in yeast, which could be relevant for understanding the biological response to sulfur limitation.",
+   "verdict": "SUPPORTS",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "prior-work-novelty:5:panel000",
+   "claim_text": "The manuscript discusses the paradoxical yeast growth phenotype reported by Cost and Boeke, which could lead to new insights into sulfur metabolism and the role of Hsu1p.",
+   "verdict": "SUPPORTS",
+   "evidence": [],
+   "swap_consistent": true
+  },
+  {
+   "claim_id": "prior-work-novelty:6:panel000",
+   "claim_text": "The manuscript provides a framework for evaluating nutritional equivalence in low-fishmeal feeds, which could be relevant for the food industry and aquafeed research.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  },
+  {
+   "claim_id": "prior-work-novelty:7:panel000",
+   "claim_text": "The manuscript discusses the consistency and precision of evidence for nutritional-balancing strategies in low-fishmeal aquafeeds, which could be useful for researchers and practitioners in the field.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false
+  }
+ ],
+ "deterministic_findings": [],
+ "conflicts": [
+  {
+   "type": "evidence",
+   "between": [
+    "prior-work-novelty",
+    "claims-verifier"
+   ],
+   "detail": "reviewer claim refuted by evidence: The introduction is well-organized and provides a clear context for the research, but it could benefit from more specifi"
+  }
+ ],
+ "summary": "The meta-review synthesizes the findings, verdicts, and conflicts from the provided reviews on a manuscript focusing on sulfur metabolism in yeast. Key points include:\n\n### Methodological Concerns\n- **Experimental Design and Replication**: The manuscript lacks clarity on the experimental design, controls, and replication methods, particularly regarding the met17 deletion mutant's generation and the use of controls to validate results.\n- **Statistical Analysis**: There is a need for a clearer description of the statistical methods used, especially concerning the met17Δ yeast's growth on sulfate without organosulfur supplements and the density-dependent growth phenomenon.\n- **Assay Suitability**: The use of a commercial TAG assay kit for quantifying triacylglycerol content in yeast cells is questioned, requiring validation of the method's appropriateness for the study.\n\n### Presentation Issues\n- **Writing Style**: The manuscript could benefit from a more concise writing style, with some sentences being overly long and complex, making the arguments difficult to follow.\n\n### Contribution to Knowledge\n- **Novelty and Impact**: The manuscript's contribution to understanding sulfur metabolism is acknowledged, particularly the revelation that met17Δ yeast can grow on sulfate without organosulfur supplements under certain conditions. However, the extent to which this finding challenges established models and opens new research avenues is unclear.\n\n### Experimental Evidence\n- **Model Validation**: The use of a mathematical model to explain density-dependent growth is questioned, as it is not clear whether the model is supported by empirical evidence.\n\n### Prior Work and Context\n- **Depth of Discussion**: While the manuscript provides a comprehensive introduction to sulfur metabolism, it does not delve deeply into the biochemical mechanisms beyond the simplified model presented in Fig 1A.\n\n### Experimental Design and Replication (Conflict)\n- **Conflict**: There is a discrepancy between the reviewers' claims regarding the experimental design and replication, with some supporting the manuscript's claims and others questioning the lack of detail and controls.\n\n### Contribution to Knowledge (Conflict)\n- **Conflict**: There is disagreement on the manuscript's contribution to the field, with some reviewers seeing it as a significant advancement in understanding sulfur metabolism and others finding the impact unclear.\n\n### Presentation Issues (Conflict)\n- **Conflict**: There is a consensus on the need for a clearer and more concise writing style, but there is no clear conflict on this point as it is a minor issue across all reviews.\n\n### Experimental Evidence (Conflict)\n- **Conflict**: There is a conflict regarding the use of a mathematical model to explain density-dependent growth, with some",
+ "swap_consistency_rate": 0.4166666666666667,
+ "n_swap_checked": 24,
+ "total_tokens": 137561,
+ "wall_s": 2963.6
+}
