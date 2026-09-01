@@ -15,6 +15,9 @@ from numpy.typing import NDArray
 
 from .base import ChatResponse
 
+# One serving slot's context. Prompts are budgeted to fit inside it.
+NUM_CTX = 4096
+
 
 class OllamaNativeChat:
     def __init__(self, model: str, host: str | None = None) -> None:
@@ -41,7 +44,14 @@ class OllamaNativeChat:
                 {"role": "user", "content": user},
             ],
             format=json_schema,
-            options={"temperature": temperature, "num_predict": max_tokens},
+            options={
+                "temperature": temperature,
+                "num_predict": max_tokens,
+                # Pin the context window. Without it the server uses the model's
+                # own default (32k for qwen2), and with parallel slots that KV
+                # cache spills to CPU and generation crawls — measured.
+                "num_ctx": NUM_CTX,
+            },
         )
         return ChatResponse(
             text=resp.message.content or "",
