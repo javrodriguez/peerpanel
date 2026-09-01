@@ -83,3 +83,17 @@ The planted-error evaluation built the panel's index with exclusions and the bas
 Latent rather than active — the shipped subject's twin is not a corpus member — but the published NOTE claimed "no unperturbed original is retrievable", which was false for both in-scope manuscripts, and D8 schedules exactly the corpus change that would have made the default case contaminated.
 Measured on the committed demo corpus before the fix: the baseline's top three chunks for MET17 were the manuscript's own published twin (scores 64.7 / 46.1 / 45.0), which states every planted fact correctly — the answer key, handed to one arm only.
 Both arms now build from the same twin lookup, the run refuses if the subject's twin is a corpus member and the baseline index dropped nothing, and each arm's exclusion state is recorded in the report rather than described in prose.
+
+## D13 — A mutation proof needs a clean clone AND a fresh environment
+The fourth near-miss of the D11 shape was in the proof, not the code. Mutating a `cp -R` copy of the
+workspace and running its tests reported **5 passed on a mutant with every exclusion guard removed** —
+which looked exactly like "the tests do not defend".
+The copy carried `.venv`, whose editable install still resolved `peerpanel` to the ORIGINAL source
+tree, so under pytest the mutations were never imported. A probe test printing `module.__file__`
+showed it pointing back at the real workspace.
+Redone as `git clone` + `uv sync --dev` — no venv, no `__pycache__`, tracked files only — the same
+three mutations turn **4 of 5 tests red**, including the one asserting no twin chunk reaches a
+reviewer's prompt.
+The rule: a mutation proof is only evidence if it first proves it is running the mutant. Clone, never
+copy; sync fresh; and when a result says "the guard does not fire", suspect the harness before
+believing it.

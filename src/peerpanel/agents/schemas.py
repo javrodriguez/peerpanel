@@ -71,6 +71,7 @@ class PanelReview(BaseModel):
     manuscript_doi: str
     corpus_manifest: str
     excluded_docs: list[str]
+    dropped_chunks: int = 0  # what THIS run's index actually removed
     reviewer_outputs: list[ReviewerOutput]
     verdicts: list[ClaimVerdict]
     deterministic_findings: list[DeterministicFinding]

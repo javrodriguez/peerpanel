@@ -229,6 +229,7 @@ def run_panel(
         manuscript_doi=header.preprint_doi,
         corpus_manifest=f"corpus/{'ci' if corpus == 'ci' else 'demo'}.manifest.json",
         excluded_docs=sorted(index.excluded_docs),
+        dropped_chunks=index.dropped_chunk_count,
         reviewer_outputs=outputs,
         verdicts=verdicts,
         deterministic_findings=deterministic,

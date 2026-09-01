@@ -13,6 +13,7 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
+from peerpanel.agents.reviewer_base import EXCERPT_WORDS, excerpt
 from peerpanel.corpus.models import CorpusManifest
 from peerpanel.embeddings import store
 from peerpanel.evals.baseline import run_baseline
@@ -46,14 +47,36 @@ class PlantedEvalReport(BaseModel):
     note: str
 
 
-NOTE = (
-    "Both arms search the SAME index with the SAME exclusions: the manuscript's own "
-    "published twin is withheld from both, because a twin states every planted fact "
-    "correctly and whichever arm could retrieve it would be handed the answer key. "
-    "Detection requires a finding to NAME the planted token, which under-credits a "
-    "described-but-unquoted catch — read the numbers as a floor. Both arms ran on the "
-    "same retrieval budget and approximately the same token spend."
+SCORING_NOTE = (
+    "Scored over ASSERTION channels only — reviewer findings, REFUTES verdicts and "
+    "deterministic-lens findings for the panel; model-authored findings for the "
+    "baseline. Restatements of the manuscript and the converger's prose are excluded: "
+    "counting them would credit the panel for quoting a planted error, or for agreeing "
+    "with it. Detection requires a finding to NAME the planted token, which "
+    "under-credits a described-but-unquoted catch — read the numbers as a floor."
 )
+
+
+def _budget_note(panel_tokens: int, baseline_tokens: int, twin_in_corpus: bool) -> str:
+    """The note is DERIVED, never asserted: an earlier hardcoded version claimed a
+    matched budget the run's own numbers contradicted."""
+    share = baseline_tokens / panel_tokens if panel_tokens else 0.0
+    budget = (
+        f"Token spend: panel {panel_tokens}, baseline {baseline_tokens} "
+        f"({share:.0%} of the panel's)."
+    )
+    if share < 0.9:
+        budget += (
+            " The baseline hit its sampling ceiling before matching the panel, so this "
+            "is NOT an equal-compute comparison — the baseline had less."
+        )
+    exclusion = (
+        "Both arms searched the same index with the same exclusions."
+        if twin_in_corpus
+        else "The subject is held out of this corpus entirely, so neither arm had "
+        "anything to withhold and no answer key existed for either."
+    )
+    return f"{SCORING_NOTE} {exclusion} {budget}"
 
 
 def run_planted_eval(
@@ -67,7 +90,15 @@ def run_planted_eval(
     excluded = load_twins(root / "manuscripts" / "twins.json").excluded_pmcids(
         header.preprint_doi
     )
-    planted = plant_errors(body, manuscript_path.name)
+    # Plant only where the reviewers actually look: both arms read excerpt(body).
+    planted = plant_errors(body, manuscript_path.name, window_words=EXCERPT_WORDS)
+    visible = excerpt(planted.text)
+    unreachable = [e.error_id for e in planted.errors if e.detection_token not in visible]
+    if unreachable:
+        raise RuntimeError(
+            f"planted errors outside the reviewed window: {unreachable} — neither arm "
+            "could see them, so the measurement could not be earned"
+        )
     planted_path = root / "artifacts" / corpus / f"planted-{manuscript_path.stem}.json"
     planted_path.parent.mkdir(parents=True, exist_ok=True)
     planted_path.write_text(planted.model_dump_json(indent=1) + "\n")
@@ -82,11 +113,17 @@ def run_planted_eval(
     t0 = time.monotonic()
     review = run_panel(root, perturbed_path, providers, corpus=corpus)
     panel_wall = time.monotonic() - t0
+    # ASSERTION CHANNELS ONLY. A claim's text is a near-verbatim slice of the
+    # manuscript, so counting it would credit the panel for RESTATING a planted
+    # error — and a SUPPORTS verdict would score as a catch for agreeing with it.
+    # The converger's prose is excluded for the same reason: it quotes findings
+    # rather than asserting new ones, and the baseline has no equivalent channel,
+    # so including either would hand the panel surface area the baseline lacks.
+    # Only a REFUTES verdict is an assertion that something is wrong.
     panel_texts = (
         [f.text for o in review.reviewer_outputs for f in o.findings]
-        + [f"{v.verdict} {v.claim_text}" for v in review.verdicts]
+        + [v.claim_text for v in review.verdicts if v.verdict == "REFUTES"]
         + [f"{d.check} {d.detail}" for d in review.deterministic_findings]
-        + [review.summary]
     )
 
     chunks = chunks_for(root, corpus)
@@ -125,7 +162,8 @@ def run_planted_eval(
     baseline_wall = time.monotonic() - t1
 
     def _result(
-        name: str, texts: list[str], tokens: int, wall: float, detail: str, dropped: int
+        name: str, texts: list[str], tokens: int, wall: float, detail: str,
+        dropped: int, arm_excluded: list[str],
     ) -> SystemResult:
         hit = [e.error_id for e in planted.errors if detect(e, texts)]
         return SystemResult(
@@ -135,7 +173,7 @@ def run_planted_eval(
             total_tokens=tokens,
             wall_s=round(wall, 1),
             detail=detail,
-            excluded_docs=sorted(excluded),
+            excluded_docs=arm_excluded,
             dropped_chunks=dropped,
         )
 
@@ -145,19 +183,24 @@ def run_planted_eval(
         n_errors=len(planted.errors),
         error_kinds={e.error_id: e.kind for e in planted.errors},
         results=[
+            # Each arm reports ITS OWN exclusion state (D12). Passing the baseline
+            # index's numbers for both made the rows incapable of disagreeing, so a
+            # panel that stopped excluding would still have been reported as excluding.
             _result(
                 "panel", panel_texts, review.total_tokens, panel_wall,
                 f"{len(review.reviewer_outputs)} reviewers · {len(review.verdicts)} claims "
                 f"verified · {len(review.deterministic_findings)} deterministic findings",
-                index.dropped_chunk_count,
+                review.dropped_chunks, review.excluded_docs,
             ),
             _result(
                 "single-agent-equal-compute", baseline.finding_texts, baseline.total_tokens,
                 baseline_wall, f"{baseline.samples} self-consistency samples",
-                index.dropped_chunk_count,
+                index.dropped_chunk_count, sorted(excluded),
             ),
         ],
-        note=NOTE,
+        note=_budget_note(
+            review.total_tokens, baseline.total_tokens, twin_present
+        ),
     )
 
 
