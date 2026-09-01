@@ -57,12 +57,26 @@ lookup only, not encoding. Latencies are means over the two cases, not medians.
   relevant documents where BM25 finds 18. Community-level routing is built for corpus-wide
   questions ("what themes exist here"), and these queries are specific-document lookups — the
   wrong tool, measured rather than quietly omitted.
-- **At the reported depth, BM25 beats GraphRAG local outright.** In the top 10, BM25 finds 13
-  relevant documents to GraphRAG local's 12, and ranks them better (NDCG 0.770 vs 0.713). The graph
-  only draws level three times deeper (18 each at @30), which is another way of saying its ranking
-  is the weak part: it reaches documents lexical matching misses, then puts them too far down the
-  list to help. GraphRAG local's one genuine win is recall@10 (0.393 vs 0.366) — it retrieves a
-  larger *share* of what exists, while placing fewer documents in the top 10 than BM25 does.
+- **n = 2, and the ordering reverses between the two cases — so this establishes behaviour, not a
+  ranking.** Every aggregate above is a mean over two manuscripts that disagree:
+
+  | rung | MET17: recall / NDCG | biopolymer: recall / NDCG |
+  |---|---|---|
+  | BM25 · vector · RRF | 0.375 / 0.539 | 0.357 / **1.000** |
+  | GraphRAG local | **0.500** / 0.590 | 0.286 / 0.837 |
+  | GraphRAG global | 0.375 / 0.370 | 0.250 / 0.801 |
+
+  GraphRAG local is the **best** rung on MET17 (0.500 vs 0.375) and the **worst but one** on the
+  biopolymer paper (0.286 vs 0.357). Its published mean of 0.393 is the average of a decisive win
+  and a clear loss, and BM25's NDCG of 0.770 averages a 0.539 and a perfect 1.000 — two very
+  different behaviours, not one number. At this n, no rung ordering survives per-case inspection,
+  and any sentence of the form "rung X wins" would be an artifact of averaging. This is the same
+  discipline as the N ≥ 20 gate below and the swap-consistency range: a mean over two opposing
+  cases does not earn three significant digits.
+- **At the reported depth, BM25 places more relevant documents in the top 10** (13 vs GraphRAG
+  local's 12) and ranks them better on average. The graph only draws level three times deeper (18
+  each at @30) — its recall comes from reaching documents lexical matching misses, then placing
+  them too far down the list to help.
 - **BM25 is the cost-effectiveness winner, and it is not close.** Best NDCG, most documents in the
   top 10, 28 ms, and no index beyond a token count — against 624 ms for GraphRAG local, which is
   22× slower for a worse top-10. A retrieval layer that cannot beat BM25 on a corpus like this has

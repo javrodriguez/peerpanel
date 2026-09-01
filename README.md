@@ -68,13 +68,17 @@ over 68 documents and two query manuscripts with 36 relevant documents between t
 | GraphRAG local | 12 / 36 | 18 / 36 | **58%** | 0.713 | 624 ms |
 | GraphRAG global | 10 / 36 | 10 / 36 | 46% | 0.586 | 8 ms |
 
-**BM25 wins.** It puts the most relevant documents in the top 10, ranks them best, and does it in
-28 ms against GraphRAG local's 624 ms. The graph only draws level three times deeper in the list
-(18 each at @30) — which is the finding: entity-neighbourhood retrieval reaches documents lexical
-matching misses, then ranks them too low to help. GraphRAG global is the worst rung on every
-measure. These are published rather than omitted because a retrieval layer that cannot beat BM25
-on a corpus like this has not earned its complexity, and knowing *which* part failed to is the
-useful result.
+**BM25 puts the most relevant documents in the top 10, ranks them best, and does it in 28 ms
+against GraphRAG local's 624 ms.** The graph only draws level three times deeper in the list (18
+each at @30) — entity-neighbourhood retrieval reaches documents lexical matching misses, then ranks
+them too low to help. GraphRAG global is the worst rung on every aggregate measure.
+
+**But n = 2, and the two manuscripts disagree:** GraphRAG local is the best rung on one (recall
+0.500 vs 0.375) and second-worst on the other (0.286 vs 0.357). Every number above is a mean over
+that reversal, so these results establish *behaviour*, not a ranking — the per-case table is in
+[results/RESULTS.md](results/RESULTS.md) and the raw JSON beside it. They are published rather than
+omitted because a retrieval layer that cannot clearly beat BM25 on a corpus like this has not earned
+its complexity.
 
 Recall is always shown against its achievable ceiling: with 28 relevant documents, no top-10 list
 can exceed 0.357 recall, so a bare number would misrepresent a good result as a poor one.

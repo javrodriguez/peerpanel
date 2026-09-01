@@ -244,4 +244,18 @@ def render_table(report: AblationReport) -> str:
                 f"· ndcg@{report.k} {ndcg:.3f}"
             )
         lines.append(line)
+    # Per-case rows are NOT optional. A mean over a handful of cases can invert the
+    # ordering the mean implies — measured here — so the aggregate is never shown
+    # without the numbers it was computed from.
+    lines.append("")
+    lines.append(f"  per case (n={report.n_cases} — read these before trusting any mean):")
+    for rung_name, rows in rungs.items():
+        for row in rows:
+            case = row.case_doi.split("/")[-1]
+            rates = (
+                f"recall {row.recall_at_k} · ndcg {row.ndcg_at_k}"
+                if row.recall_at_k is not None
+                else "rates withheld (below the N gate)"
+            )
+            lines.append(f"    {rung_name:16s} {case:22s} {rates}")
     return "\n".join(lines)
