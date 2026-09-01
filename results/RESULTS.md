@@ -36,11 +36,11 @@ Two query manuscripts, 36 relevant documents between them, k = 10.
 
 | rung | found @10 | found @30 | recall@10 | ceiling | % of ceiling | NDCG@10 | mean latency |
 |---|---|---|---|---|---|---|---|
-| BM25 | **13 / 36** | 18 / 36 | 0.366 | 0.679 | 54% | **0.770** | 28 ms |
-| vector | **13 / 36** | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 4 ms* |
-| RRF hybrid | **13 / 36** | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 27 ms |
-| GraphRAG local | 12 / 36 | 18 / 36 | **0.393** | 0.679 | **58%** | 0.713 | 624 ms |
-| GraphRAG global | 10 / 36 | 10 / 36 | 0.312 | 0.679 | 46% | 0.586 | 8 ms |
+| BM25 | **13 / 36** | 18 / 36 | 0.366 | 0.679 | 54% | **0.770** | 36 ms |
+| vector | **13 / 36** | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 5 ms* |
+| RRF hybrid | **13 / 36** | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 28 ms |
+| GraphRAG local | 12 / 36 | 18 / 36 | **0.393** | 0.679 | **58%** | 0.713 | 507 ms |
+| GraphRAG global | 10 / 36 | 10 / 36 | 0.312 | 0.679 | 46% | 0.586 | 7 ms |
 
 Two hit columns, both labelled, because they disagree and the disagreement is the point.
 **found @10** counts relevant documents inside the top-10 list the reported rates are computed over.
@@ -77,9 +77,11 @@ lookup only, not encoding. Latencies are means over the two cases, not medians.
   local's 12) and ranks them better on average. The graph only draws level three times deeper (18
   each at @30) — its recall comes from reaching documents lexical matching misses, then placing
   them too far down the list to help.
-- **BM25 is the cost-effectiveness winner, and it is not close.** Best NDCG, most documents in the
-  top 10, 28 ms, and no index beyond a token count — against 624 ms for GraphRAG local, which is
-  22× slower for a worse top-10. A retrieval layer that cannot beat BM25 on a corpus like this has
+- **BM25 is the cost-effectiveness winner.** Best NDCG, most documents in the top 10, 36 ms, and no
+  index beyond a token count — against 507 ms for GraphRAG local, **14× slower** for a worse top-10.
+  (Latency is also the least stable column here: GraphRAG local's two cases were 913 ms and 101 ms,
+  a 9× spread — wider than any recall disagreement — so read the ratio as an order of magnitude,
+  not a measurement.) A retrieval layer that cannot beat BM25 on a corpus like this has
   not earned its complexity, and on this corpus, at this depth, it does not.
 - **Recall@10 is reported against its ceiling for a reason.** With 28 relevant documents for one
   manuscript, no system can exceed 10/28 = 0.357 recall in a top-10 list. A bare "recall@10 =
@@ -126,7 +128,7 @@ Two independent runs of the same panel, same manuscript, same withheld twin, sam
 | 1 | 0.500 | 12 / 24 | 142,852 | 2,351 s |
 | 2 | 0.417 | 14 / 24 | 137,561 | 2,964 s |
 
-**Between two and five of every twelve claim verdicts flipped when the evidence order was
+**Between six and seven of every twelve claim verdicts flipped when the evidence order was
 reversed**, and were forced to abstain. This is the most useful result the system has produced, and
 the spread between the two runs is part of it: a single run's rate is not precise to three digits,
 and an earlier version of this section published `0.50` as though it were. Anyone re-running will
@@ -134,7 +136,7 @@ get a third number in this neighbourhood, not this one.
 
 Position bias in LLM judges is documented — first-shown options are picked ~64% of the time, and
 the median model flips on ~41% of decisive swapped-order cases — and both runs land at or above the
-high end of that on a small local model. Without the order-swap, four to five in every ten of these
+high end of that on a small local model. Without the order-swap, five to six in every ten of these
 verdicts would have been artifacts of which evidence chunk happened to come first, and they would
 have looked exactly like judgements. The mitigation is not decoration; on this evidence it does
 more work than any other component in the panel.

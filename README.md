@@ -62,14 +62,14 @@ over 68 documents and two query manuscripts with 36 relevant documents between t
 
 | rung | found @10 | found @30 | recall@10 (of 0.679 ceiling) | NDCG@10 | latency |
 |---|---|---|---|---|---|
-| BM25 | **13 / 36** | 18 / 36 | 54% | **0.770** | 28 ms |
+| BM25 | **13 / 36** | 18 / 36 | 54% | **0.770** | 36 ms |
 | vector | **13 / 36** | 17 / 36 | 54% | **0.770** | — |
-| RRF hybrid | **13 / 36** | 17 / 36 | 54% | **0.770** | 27 ms |
-| GraphRAG local | 12 / 36 | 18 / 36 | **58%** | 0.713 | 624 ms |
-| GraphRAG global | 10 / 36 | 10 / 36 | 46% | 0.586 | 8 ms |
+| RRF hybrid | **13 / 36** | 17 / 36 | 54% | **0.770** | 28 ms |
+| GraphRAG local | 12 / 36 | 18 / 36 | **58%** | 0.713 | 507 ms |
+| GraphRAG global | 10 / 36 | 10 / 36 | 46% | 0.586 | 7 ms |
 
-**BM25 puts the most relevant documents in the top 10, ranks them best, and does it in 28 ms
-against GraphRAG local's 624 ms.** The graph only draws level three times deeper in the list (18
+**BM25 puts the most relevant documents in the top 10, ranks them best, and does it in 36 ms
+against GraphRAG local's 507 ms.** The graph only draws level three times deeper in the list (18
 each at @30) — entity-neighbourhood retrieval reaches documents lexical matching misses, then ranks
 them too low to help. GraphRAG global is the worst rung on every aggregate measure.
 
@@ -84,7 +84,7 @@ Recall is always shown against its achievable ceiling: with 28 relevant document
 can exceed 0.357 recall, so a bare number would misrepresent a good result as a poor one.
 
 And from two independent panel runs on a real manuscript — **swap-consistency 0.42 and 0.50, n = 24
-each**. Between four and five verdicts in ten flipped when the evidence order was reversed, and were
+each**. Between five and six verdicts in ten flipped when the evidence order was reversed, and were
 forced to abstain. Position bias is not a hypothetical this system guards against; it is the largest
 measured effect in it — and the gap between the two runs is why the figure is given as a range.
 The same run also produced one hallucinated finding in sixteen, where a reviewer attributed

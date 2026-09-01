@@ -30,7 +30,13 @@ def build(
     return np.concatenate(parts).astype(np.float16)
 
 
-def save(path: Path, chunk_ids: list[str], vectors: NDArray[np.float16], provider_name: str) -> str:
+def save(
+    path: Path,
+    chunk_ids: list[str],
+    vectors: NDArray[np.float16],
+    provider_name: str,
+    regenerate: str = "make embeddings",
+) -> str:
     """Write the .npz + manifest; returns the sha256 of the vector payload."""
     if vectors.dtype != np.float16:
         raise ValueError("fixtures are stored f16")
@@ -45,7 +51,7 @@ def save(path: Path, chunk_ids: list[str], vectors: NDArray[np.float16], provide
         "dim": int(vectors.shape[1]),
         "dtype": "float16",
         "sha256": digest,
-        "regenerate": "make embeddings",
+        "regenerate": regenerate,
     }
     path.with_suffix(".manifest.json").write_text(json.dumps(manifest, indent=1) + "\n")
     return digest

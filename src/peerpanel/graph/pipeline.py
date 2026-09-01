@@ -58,8 +58,23 @@ def corpus_chunks(
     return chunks, findings
 
 
+class DemoCorpusMissing(RuntimeError):
+    """The demo corpus is fetched, not committed — say so instead of tracebacking."""
+
+
 def demo_chunks(root: Path) -> tuple[list[Chunk], list[tuple[str, Finding]]]:
-    return corpus_chunks(root, Path("corpus") / "demo.manifest.json", Path("corpus") / "demo")
+    texts = root / "corpus" / "demo"
+    manifest = CorpusManifest.load(root / "corpus" / "demo.manifest.json")
+    missing = [d.pmcid for d in manifest.docs if not (texts / f"{d.pmcid}.txt").exists()]
+    if missing:
+        raise DemoCorpusMissing(
+            f"the demo corpus is not on disk ({len(missing)} of {len(manifest.docs)} documents "
+            "missing). Its texts are fetched rather than committed — they are third-party "
+            "CC-BY papers, pinned by md5 in corpus/demo.manifest.json. Run `make corpus` "
+            "(needs network, no model) and try again. The CI corpus IS committed, so "
+            "`make ablation` and `make quickstart` work with no fetch."
+        )
+    return corpus_chunks(root, Path("corpus") / "demo.manifest.json", texts)
 
 
 def chunks_for(root: Path, corpus: str) -> list[Chunk]:
@@ -79,7 +94,16 @@ def write_demo_embedding_fixture(root: Path, embedder: EmbedProvider) -> str:
     chunks = chunks_for(root, "demo")
     ids = [c.chunk_id for c in chunks]
     vectors = store.build(ids, [c.text for c in chunks], embedder)
-    return store.save(embedding_fixture_path(root, "demo"), ids, vectors, embedder.name)
+    return store.save(
+        embedding_fixture_path(root, "demo"),
+        ids,
+        vectors,
+        embedder.name,
+        # `make embeddings` writes the CI fixture only; this one is written by the
+        # demo index build, and a manifest that names the wrong command is a
+        # reproduction instruction that silently does not reproduce.
+        regenerate="make demo-index",
+    )
 
 
 def graph_build(

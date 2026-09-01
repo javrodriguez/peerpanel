@@ -257,5 +257,10 @@ def render_table(report: AblationReport) -> str:
                 if row.recall_at_k is not None
                 else "rates withheld (below the N gate)"
             )
-            lines.append(f"    {rung_name:16s} {case:22s} {rates}")
+            # Latency belongs here too: its per-case spread is the widest of any
+            # column (measured 913ms vs 101ms on one rung), so a mean hides more
+            # here than anywhere else — which is exactly what D14 is about.
+            lines.append(
+                f"    {rung_name:16s} {case:22s} {rates} · {row.latency_ms:.1f}ms"
+            )
     return "\n".join(lines)

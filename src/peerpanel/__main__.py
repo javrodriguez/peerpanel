@@ -7,6 +7,8 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from peerpanel.graph.pipeline import DemoCorpusMissing
+
 PLANNED = ("quickstart", "demo", "corpus", "embeddings", "graph", "ablation", "eval")
 
 
@@ -92,13 +94,16 @@ def _graph(args: list[str]) -> int:
         return 0
     if sub == "summaries":
         from peerpanel.graph.build import load_graph
-        from peerpanel.graph.summaries import summarise_communities
+        from peerpanel.graph.summaries import summarise_communities, write_cache_readme
         from peerpanel.providers import OllamaOpenAIChat
 
         graph = load_graph(root / "artifacts" / corpus / "graph.json")
         communities = json.loads((root / "artifacts" / corpus / "communities.json").read_text())
         provider = OllamaOpenAIChat("llama3.1:8b")
         cache = root / "fixtures" / "summaries" / corpus
+        write_cache_readme(
+            cache, corpus, "make summaries" if corpus == "ci" else "make demo-summaries"
+        )
         # --resolution limits which Leiden levels get LLM reports. The hierarchy is
         # always detected at every level (communities.json); reports cost one model
         # call each, so by default only the level retrieval actually reads is
@@ -130,7 +135,16 @@ def _graph(args: list[str]) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
-    args = sys.argv[1:] if argv is None else argv
+    try:
+        return _main(sys.argv[1:] if argv is None else argv)
+    except DemoCorpusMissing as missing:
+        # A documented command meeting a fetchable prerequisite should say what to
+        # run, not print a traceback at someone following the README.
+        print(f"\n{missing}", file=sys.stderr)
+        return 3
+
+
+def _main(args: list[str]) -> int:
     if not args or args[0] in ("-h", "--help"):
         print(f"peerpanel commands: {' '.join(PLANNED)}")
         return 0
