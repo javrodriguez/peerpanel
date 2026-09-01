@@ -118,7 +118,15 @@ def plant_errors(
         if m
     ]
     for i, word in rng.sample(directions, min(n_per_kind, len(directions))):
-        _apply(i, word, _FLIP[word.lower()], "effect_direction_flip", _FLIP[word.lower()])
+        flipped = _FLIP[word.lower()]
+        # The detection token is a PHRASE pinned to the perturbed sentence, not the
+        # bare flipped word: "decreased" alone occurs in 37 of the 68 demo-corpus
+        # documents, so retrieved literature quoted back by either arm could mint a
+        # catch nobody earned. The phrase is the flipped word plus the two words
+        # that follow it in the sentence it was planted in.
+        after = lines[i].split(word, 1)[1].split() if word in lines[i] else []
+        token = " ".join([flipped, *after[:2]]) if after else flipped
+        _apply(i, word, flipped, "effect_direction_flip", token)
 
     # 3. Statistical impossibility: a p-value above 1.
     pvalues = [
