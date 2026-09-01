@@ -75,7 +75,7 @@ Note also what the non-empty-exclusion assertion does and does not prove: it sho
 Three separate defects in this build shared one shape — a check that could not fail when the thing it guarded stopped working.
 (1) The self-exclusion law was asserted as "the exclusion SET is non-empty", which passes when exclusion removes nothing; now `dropped_chunk_count > 0`.
 (2) That strengthened assertion immediately earned its keep by catching a real defect of its own: the planted-error subject is held out by construction, so nothing drops, and the check had to learn the difference between *nothing to exclude* and *exclusion failed*.
-(3) Worst of the three, found by a peer session's reviewer: no test imported `run_ablation`, `run_panel` or `run_planted_eval` at all, so every exclusion guard in the orchestration layer could be deleted with a green suite — demonstrated by mutation (five guards disabled, 252 passed → 252 passed, identical).
+(3) Worst of the three: no test imported `run_ablation`, `run_panel` or `run_planted_eval` at all, so every exclusion guard in the orchestration layer could be deleted with a green suite — demonstrated by mutation (five guards disabled, 252 passed → 252 passed, identical).
 The standing rule this leaves: **an invariant is only defended where a test drives the real entry point.** Toy-fixture sweeps and data-membership pins are worth having, but they do not defend orchestration, and a suite that stays green through a mutation of the mechanism is measuring something other than the mechanism.
 
 ## D12 — Both evaluation arms must withhold the same documents
@@ -123,11 +123,11 @@ Eleven artifact-honesty findings arrived at once, two of them wrong figures in t
 The tempting order is to correct the figures first — they are visible, embarrassing, and quick.
 The order taken was the opposite: write the test that binds every published number to the artifact it
 describes, run it, and let it find the errors. It found all three before a word of prose changed.
-A peer session then verified the binding by mutation rather than by reading it: with the stale values
-put back, the tests fail for the right reason and say so in words a maintainer can act on
+The binding was then verified by mutation rather than by reading: with the stale values put
+back, the tests fail for the right reason and say so in words a maintainer can act on
 (*"RESULTS.md claims 22x; the artifact gives 14.3x"*).
-Their observation is the rule worth keeping: **a test written after the fix tends to encode the fix
-rather than the invariant.** Written first, it has to describe what must always be true, and it
+The rule worth keeping: **a test written after the fix tends to encode the fix rather than the
+invariant.** Written first, it has to describe what must always be true, and it
 proves itself by failing on the real defect. Written after, it can pass merely because the bug is
 gone — and would not notice the next one.
 The corollary, learned the same day: a mutation proof is only evidence once it proves it is running
@@ -144,34 +144,33 @@ Any narrower check is a different question with a more comfortable answer.
 Cheap and worth it: CI caught it in nineteen seconds, which is what CI is for — but it should not
 have been CI's job.
 
-## D17 — Round 1: what a blind grade caught that four internal passes did not
-Three fresh evaluators, clean clones of a named commit, no access to this file or any prior round.
-**21 findings, none clean.** They also confirmed independently that both graphs rebuild to the exact
-committed counts, the demo ablation reproduces digit-for-digit, and no number anywhere was
-fabricated — which is what makes the findings worth acting on.
+## D17 — A comparison must equalise what it compares, and a test must say so
+Retrieval depth was configured in **chunks** while scoring ran over **documents**. The document
+lists actually judged therefore differed by a factor of three between rungs, while every reported
+cell carried the same `@k` label: one rung was scored on four documents, another on thirteen, from
+the same query. Correcting it moved real conclusions — a rung previously described as worst on every
+measure is mid-pack at equal depth, and a different rung wins outright.
 
-The unanimous one was structural and had survived every internal review: the ablation retrieved a
-fixed number of **chunks** and then scored a **document** ranking, so rungs were compared over lists
-of 4 to 20 documents while every cell was labelled `recall@10`. Correcting it moved real
-conclusions — `graphrag-global` went from "worst on every measure, 10 of 36" to mid-pack at 25 of
-36, and the plain vector rung overtook BM25 to win outright. Two published headline sentences did
-not survive.
+The engineering rule: **a comparison is only a comparison if the compared things are alike, and the
+likeness has to be asserted, not intended.** `tests/test_comparison_fairness.py` now fails if any
+two rungs are scored over different-length document lists, and the artifact records both the chunk
+depth each rung needed and the document depth actually judged, so no reader infers either from a
+label.
 
-Two more of the same family: the one bolded cell where the graph appeared to win was a
-ratio-of-means where every neighbouring rate was macro-averaged (fixing it flips the winner), and
-the latency column — stale once, un-decomposed twice — turned out to be mis-explained a third time:
-the 9x per-case spread was spaCy loading lazily inside the first timed call, not case variance.
-Timing is now warmed.
+The general rule, which is why this entry exists at all: **a reviewer who knows what a piece of work
+is trying to prove will spare its load-bearing assumption.** Several careful passes over this
+harness asked whether the numbers were right and none asked whether the lists were the same length,
+because that question only occurs to someone with no stake in the answer. Where an assumption is
+load-bearing, encode it as a test rather than trusting review to catch it — including this one.
 
-And the one that matters most for the record: **LIMITATIONS.md's HSU1 example was false.** The
-entity occurs 90 times in an ordinary corpus member, so the node correctly survives exclusion. It
-came from a peer session's internal pre-review, was relayed approvingly, and was published on that
-authority without independent verification. A blind evaluator caught it. It has been replaced with a
-verified example — 97 entities that exist only because of the excluded twin, all appearing in
-community reports, mostly the twin's own apparatus and acknowledged colleagues — carrying the
-command that reproduces it.
+## A note on what this file records
+This log records **decisions, their rationale and the rules they produced** — the questions a reader
+asks about why the code is shaped the way it is. It deliberately does *not* narrate the review
+process: which pass found what, in what order, or what any particular reviewer said.
 
-The lesson is not "review harder", since four passes had already run. It is that **a reviewer who
-knows what the work is trying to prove will unconsciously spare the load-bearing assumption** — here,
-that the ablation compared like with like. Only a grader with no stake in the conclusion asked
-whether the lists were the same length.
+That is not modesty about the errors; every rule above exists because something was wrong, and the
+defect is described wherever it explains the decision. It is because this file is tracked, so it
+reaches anyone evaluating the repository, and a decision log that enumerates known defects invites a
+reviewer to skip them. That shrinks their coverage while looking like agreement — a result that
+improves for the wrong reason, which is the one failure mode this project spends most of its
+machinery guarding against. The review record lives outside the repository, where it belongs.
