@@ -14,6 +14,7 @@ capture of the runs that produced the indexes.
 | `demo-summaries.log` | raw capture of the demo community-report run | `make demo-summaries` |
 | `panel-review-met17.json` / `.log` | a real panel run on a real manuscript | `make review` |
 | `panel-review-met17-run2.json` | an independent second run of the same panel | `make review` |
+| `planted-eval-demo.json` | planted errors: panel vs single-agent baseline | `make eval` |
 
 ## The indexes
 
@@ -157,3 +158,55 @@ reported here rather than trimmed, because the number a reader needs in order to
 to trust the other fifteen is exactly this one. It is also a concrete argument for the claim
 verifier: a grounding check that demands a quote be a substring of a retrieved chunk is the kind of
 mechanism that catches this class of error, and a larger model would reduce but not eliminate it.
+
+
+## The headline measurement: the panel loses to a single agent
+
+Three errors planted into a held-out manuscript — a swapped gene symbol (`Dcr1`→`Dcr2`), a
+reversed effect direction, and a fabricated citation — inside the 900-word window both systems
+read. Neither system could retrieve the unperturbed original: the subject is held out of the corpus
+entirely, so no answer key existed for either.
+
+| system | detected | tokens | wall |
+|---|---|---|---|
+| **panel** (2 reviewers + verifier + deterministic lens + converger) | **1 / 3** | 165,334 | 2,751 s |
+| **single agent**, chain-of-thought + self-consistency | **3 / 3** | 36,857 | 344 s |
+
+**The single agent found every planted error. The panel found one, using 4.5× the tokens and 8× the
+wall-clock.** It missed the swapped gene symbol and the reversed effect direction; it caught only
+the fabricated citation.
+
+This is the row the multi-agent literature says is always missing. Debate and panel architectures
+"often fail to outperform simple single-agent baselines such as Chain-of-Thought and
+Self-Consistency, even when consuming significantly more inference-time computation"
+([arXiv:2502.08788](https://arxiv.org/abs/2502.08788)). That is reproduced here, against the system
+this repository was built to demonstrate, and it is published for the same reason the losing
+retrieval rung is: a result that only appears when it flatters the architecture is not a
+measurement.
+
+### Reading it honestly — including what would make it fairer
+
+Three things about this comparison a careful reader should weigh, none of which reverses it:
+
+- **The two systems were asked different questions, and that is the biggest confound.** The
+  baseline's prompt is *"reviewing a manuscript excerpt for errors and weaknesses… quote the exact
+  problematic text"*. The panel's reviewers are asked for a structured pre-submission review scored
+  on soundness, presentation and contribution. One was pointed at the task being measured; the
+  other was pointed at reviewing. A fairer comparison would give both the same instruction — and
+  the fact that a general-purpose review panel misses a swapped gene symbol *is itself the finding*,
+  because catching that is a reviewer's job.
+- **The budget did not match, in the baseline's disfavour.** The baseline hit its sampling ceiling
+  at 36,857 tokens — 22% of the panel's spend. It won with a fifth of the compute, so the gap is
+  not explained by resources.
+- **n = 3 errors, one manuscript.** Per D14, this establishes behaviour, not a rate. Two error
+  kinds could not be planted inside the reviewed window at all and are recorded as skipped rather
+  than quietly shrinking the denominator.
+
+### What the panel is for, then
+
+The panel's measured strengths are elsewhere in this document and they are real: order-swapped claim
+verification that abstains on disagreement (five to six verdicts in ten flip on evidence order), a
+deterministic lens no model can talk out of a finding, and evidence grounding enforced in code. What
+this measurement says is that **assembling those parts into a panel did not, here, make it better at
+finding planted errors than one well-prompted agent** — and that a system's architecture has to earn
+its cost against the simplest thing that could work, every time, in public.

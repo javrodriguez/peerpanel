@@ -83,6 +83,28 @@ its complexity.
 Recall is always shown against its achievable ceiling: with 28 relevant documents, no top-10 list
 can exceed 0.357 recall, so a bare number would misrepresent a good result as a poor one.
 
+### The headline measurement, and it is a loss
+
+Three errors planted into a held-out manuscript, inside the window both systems read:
+
+| system | detected | tokens | wall |
+|---|---|---|---|
+| panel (2 reviewers + verifier + lens + converger) | **1 / 3** | 165,334 | 2,751 s |
+| single agent, CoT + self-consistency | **3 / 3** | 36,857 | 344 s |
+
+**A single well-prompted agent found every planted error. The panel found one, for 4.5× the tokens
+and 8× the wall-clock.** This is the row the multi-agent literature says is always missing —
+architectures that "often fail to outperform simple single-agent baselines… even when consuming
+significantly more inference-time computation"
+([arXiv:2502.08788](https://arxiv.org/abs/2502.08788)) — reproduced against the system this repo
+exists to demonstrate.
+
+The comparison has a real confound, disclosed rather than used as an excuse: the baseline was asked
+to hunt errors, the panel was asked to review. A fairer test gives both the same instruction. But a
+review panel that misses a swapped gene symbol is a finding either way, and the baseline won with a
+fifth of the compute. The full reading, including what the panel measurably *is* good at, is in
+[results/RESULTS.md](results/RESULTS.md).
+
 And from two independent panel runs on a real manuscript — **swap-consistency 0.42 and 0.50, n = 24
 each**. Between five and six verdicts in ten flipped when the evidence order was reversed, and were
 forced to abstain. Position bias is not a hypothetical this system guards against; it is the largest

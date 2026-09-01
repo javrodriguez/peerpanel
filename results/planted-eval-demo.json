@@ -1,0 +1,44 @@
+{
+ "manuscript": "caprin-heterochromatin.txt",
+ "twin_in_corpus": false,
+ "n_errors": 3,
+ "error_kinds": {
+  "gene_symbol_swap-0": "gene_symbol_swap",
+  "effect_direction_flip-1": "effect_direction_flip",
+  "fabricated_citation-2": "fabricated_citation"
+ },
+ "results": [
+  {
+   "system": "panel",
+   "detected": [
+    "fabricated_citation-2"
+   ],
+   "missed": [
+    "gene_symbol_swap-0",
+    "effect_direction_flip-1"
+   ],
+   "total_tokens": 165334,
+   "wall_s": 2750.8,
+   "detail": "2 reviewers · 24 claims verified · 0 deterministic findings",
+   "excluded_docs": [],
+   "dropped_chunks": 0
+  },
+  {
+   "system": "single-agent-equal-compute",
+   "detected": [
+    "gene_symbol_swap-0",
+    "effect_direction_flip-1",
+    "fabricated_citation-2"
+   ],
+   "missed": [],
+   "total_tokens": 36857,
+   "wall_s": 344.1,
+   "detail": "12 self-consistency samples",
+   "excluded_docs": [
+    "PMC11918387"
+   ],
+   "dropped_chunks": 0
+  }
+ ],
+ "note": "Scored over ASSERTION channels only — reviewer findings, REFUTES verdicts and deterministic-lens findings for the panel; model-authored findings for the baseline. Restatements of the manuscript and the converger's prose are excluded: counting them would credit the panel for quoting a planted error, or for agreeing with it. Detection requires a finding to NAME the planted token, which under-credits a described-but-unquoted catch — read the numbers as a floor. The subject is held out of this corpus entirely, so neither arm had anything to withhold and no answer key existed for either. Token spend: panel 165334, baseline 36857 (22% of the panel's). The baseline hit its sampling ceiling before matching the panel, so this is NOT an equal-compute comparison — the baseline had less."
+}

@@ -195,7 +195,10 @@ def run_planted_eval(
             _result(
                 "single-agent-equal-compute", baseline.finding_texts, baseline.total_tokens,
                 baseline_wall, f"{baseline.samples} self-consistency samples",
-                index.dropped_chunk_count, sorted(excluded),
+                # Both arms report what their OWN index actually withheld, not what
+                # was requested — otherwise the two rows describe different things
+                # and cannot be compared, which is the point of recording them.
+                index.dropped_chunk_count, sorted(index.excluded_docs),
             ),
         ],
         note=_budget_note(
