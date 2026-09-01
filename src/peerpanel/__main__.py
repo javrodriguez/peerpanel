@@ -177,9 +177,21 @@ def main(argv: list[str] | None = None) -> int:
         print(f"ablation: full report -> {out}")
         return 0
     if command == "demo":
-        from peerpanel.demo import run_demo
+        from peerpanel.demo import replay, run_demo
+        from peerpanel.orchestration import PanelProviders
+        from peerpanel.providers import OllamaNativeChat, OllamaOpenAIChat
 
-        return run_demo(Path.cwd(), corpus=_corpus_arg(rest) if "--corpus" in rest else "demo")
+        if "--replay" in rest:
+            return replay(Path.cwd())
+        return run_demo(
+            Path.cwd(),
+            PanelProviders(
+                methods=OllamaOpenAIChat("llama3.1:8b"),
+                novelty=OllamaNativeChat("qwen2:7b"),
+                verifier=OllamaOpenAIChat("llama3.1:8b"),
+                converger=OllamaNativeChat("qwen2:7b"),
+            ),
+        )
     if command == "eval":
         from peerpanel.evals.planted_eval import render_table as render_planted
         from peerpanel.evals.planted_eval import run_planted_eval
