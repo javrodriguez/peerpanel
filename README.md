@@ -79,6 +79,13 @@ useful result.
 Recall is always shown against its achievable ceiling: with 28 relevant documents, no top-10 list
 can exceed 0.357 recall, so a bare number would misrepresent a good result as a poor one.
 
+And from a real panel run on a real manuscript — **swap-consistency 0.50 over n = 24**. Half the
+claim verdicts flipped when the evidence order was reversed, and were forced to abstain. Position
+bias is not a hypothetical this system guards against; it is the largest measured effect in it.
+The same run also produced one hallucinated finding in sixteen, where a reviewer attributed
+retrieved literature to the manuscript. Both numbers are in
+[results/RESULTS.md](results/RESULTS.md), with the reasoning.
+
 ## How it is built
 
 **GraphRAG, from scratch.** Chunk → LLM entity/relation extraction → merged knowledge graph →
@@ -116,9 +123,8 @@ Nothing here is mocked. The distinction that matters:
 - **Recorded from real runs and committed:** per-chunk extractions, community reports, embeddings.
   These are actual `llama3.1:8b` and `nomic-embed-text` outputs, cached by content hash, each with
   the command that regenerates it. CI replays them — it has no GPU — and any drift fails loudly.
-- **Proven by captured runs:** the index builds, whose raw logs are committed under `results/`
-  alongside the measurements they produced. The panel and planted-error captures land with
-  checkpoint C4; until they do, this line names only what is actually in the repo.
+- **Proven by captured runs:** the index builds and a full panel review, whose raw logs and
+  structured records are committed under `results/` alongside the measurements they produced.
 
 The one adapter that has never run — Anthropic's — says so in its own docstring and is tested for
 request shape only. No API key exists on the development machine and none was requested.

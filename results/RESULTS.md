@@ -12,6 +12,7 @@ capture of the runs that produced the indexes.
 | `build-stats-demo.json` | demo index build, same fields | `make demo-index` |
 | `demo-index-build.log` | raw capture of the 6.4-hour demo index build | `make demo-index` |
 | `demo-summaries.log` | raw capture of the demo community-report run | `make demo-summaries` |
+| `panel-review-met17.json` / `.log` | a real panel run on a real manuscript | `make review` |
 
 ## The indexes
 
@@ -84,3 +85,45 @@ nothing to exclude and are not valid runs.
 
 That file exists to prove the harness runs offline and reports honestly when it has nothing to
 measure, not to carry evidence.
+
+
+## The panel, on a real manuscript
+
+`make review` on the MET17 preprint against the 68-document demo corpus, with that manuscript's
+own published twin withheld from the index and from the graph. 142,852 tokens, 39 minutes, $0.
+
+| | |
+|---|---|
+| reviewers | 2, blind and parallel, different retrieval scopes and model families |
+| findings | 8 each |
+| scores | methods 4/4/4 · novelty 4/4/**3** (they disagree on contribution) |
+| claims verified | 24, each judged twice with the evidence order reversed |
+| verdicts | 9 SUPPORTS · 2 REFUTES · 13 NOT_ENOUGH_INFO |
+| conflicts detected | 1 (evidence: a reviewer's own claim refuted by retrieval) |
+| deterministic lens | 0 findings — a published paper; the lens is proven on planted defects |
+
+### The result worth reading: swap-consistency 0.50 over n = 24
+
+**Half the claim verdicts flipped when the evidence order was reversed.** Twelve of twenty-four
+were forced to abstain because the two orderings disagreed with each other.
+
+That is the single most useful number this system has produced. Position bias in LLM judges is
+documented — first-shown options are picked ~64% of the time, and the median model flips on ~41% of
+decisive swapped-order cases — and this run reproduces it at the high end on a small local model.
+Without the order-swap, half of these verdicts would have been artifacts of which evidence chunk
+happened to come first, and they would have looked exactly like judgements. The mitigation is not
+decoration; on this evidence it is doing more work than any other component.
+
+### And one thing the run got wrong
+
+One of the 16 findings — *"The authors use a commercial TAG assay kit to quantify triacylglycerol
+content"* — describes a **different paper**. None of `triacylglycerol`, `TAG assay` or `lipid`
+appears anywhere in the MET17 manuscript; the reviewer took retrieved literature context and
+attributed it to the manuscript under review, despite the prompt labelling the two sections
+separately.
+
+That is 1 in 16 findings hallucinated by conflation, from an 8-billion-parameter model. It is
+reported here rather than trimmed, because the number a reader needs in order to calibrate how much
+to trust the other fifteen is exactly this one. It is also a concrete argument for the claim
+verifier: a grounding check that demands a quote be a substring of a retrieved chunk is the kind of
+mechanism that catches this class of error, and a larger model would reduce but not eliminate it.
