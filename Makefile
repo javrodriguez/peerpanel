@@ -80,10 +80,13 @@ eval:
 	uv run python -m peerpanel eval
 
 ## The captured demo run — tee'd verbatim to demo/raw-<utc>.log.
+## The captured demo walk. Writes the raw capture to the path --replay reads,
+## so the committed evidence and the replay can never drift apart.
 demo:
-	@mkdir -p demo
-	uv run python -m peerpanel demo 2>&1 | tee demo/raw-$$(date -u +%Y%m%dT%H%M%SZ).log
+	@mkdir -p results
+	uv run python -m peerpanel demo 2>&1 | tee results/demo-capture.log
 
-## Replay the committed machine-captured demo (a labelled recording).
+## Print the committed capture instead of re-running it (no model needed).
 demo-replay:
 	uv run python -m peerpanel demo --replay
+
