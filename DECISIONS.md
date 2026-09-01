@@ -143,3 +143,35 @@ was not: **before a push, run the pipeline's own commands verbatim, on the pipel
 Any narrower check is a different question with a more comfortable answer.
 Cheap and worth it: CI caught it in nineteen seconds, which is what CI is for — but it should not
 have been CI's job.
+
+## D17 — Round 1: what a blind grade caught that four internal passes did not
+Three fresh evaluators, clean clones of a named commit, no access to this file or any prior round.
+**21 findings, none clean.** They also confirmed independently that both graphs rebuild to the exact
+committed counts, the demo ablation reproduces digit-for-digit, and no number anywhere was
+fabricated — which is what makes the findings worth acting on.
+
+The unanimous one was structural and had survived every internal review: the ablation retrieved a
+fixed number of **chunks** and then scored a **document** ranking, so rungs were compared over lists
+of 4 to 20 documents while every cell was labelled `recall@10`. Correcting it moved real
+conclusions — `graphrag-global` went from "worst on every measure, 10 of 36" to mid-pack at 25 of
+36, and the plain vector rung overtook BM25 to win outright. Two published headline sentences did
+not survive.
+
+Two more of the same family: the one bolded cell where the graph appeared to win was a
+ratio-of-means where every neighbouring rate was macro-averaged (fixing it flips the winner), and
+the latency column — stale once, un-decomposed twice — turned out to be mis-explained a third time:
+the 9x per-case spread was spaCy loading lazily inside the first timed call, not case variance.
+Timing is now warmed.
+
+And the one that matters most for the record: **LIMITATIONS.md's HSU1 example was false.** The
+entity occurs 90 times in an ordinary corpus member, so the node correctly survives exclusion. It
+came from a peer session's internal pre-review, was relayed approvingly, and was published on that
+authority without independent verification. A blind evaluator caught it. It has been replaced with a
+verified example — 97 entities that exist only because of the excluded twin, all appearing in
+community reports, mostly the twin's own apparatus and acknowledged colleagues — carrying the
+command that reproduces it.
+
+The lesson is not "review harder", since four passes had already run. It is that **a reviewer who
+knows what the work is trying to prove will unconsciously spare the load-bearing assumption** — here,
+that the ablation compared like with like. Only a grader with no stake in the conclusion asked
+whether the lists were the same length.

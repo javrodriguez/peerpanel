@@ -2,7 +2,11 @@
 
 Nodes are case-normalised entities carrying their surface variants and type
 votes; edges combine explicit relations (weight 1 each) with same-chunk
-co-mentions (weight 0.25 each), so stated links dominate mere adjacency.
+co-mentions (weight 0.25 each), so a stated link outweighs a bare co-mention
+four to one PER EDGE. That is a statement about weighting, not about the graph
+that results: measured on the demo corpus, 92.8% of edges (51,176 of 55,146)
+are co-mention only and just 3,970 carry an extracted relation. The graph is
+mostly adjacency, and any claim resting on its relations should say so.
 """
 
 from __future__ import annotations

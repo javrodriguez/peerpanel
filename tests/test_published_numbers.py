@@ -54,7 +54,10 @@ def _published_demo_rows() -> dict[str, list[str]]:
     """The main demo table in RESULTS.md, keyed by rung."""
     rows: dict[str, list[str]] = {}
     for label, rung in ROW_LABELS.items():
-        match = re.search(rf"^\| {re.escape(label)} \|(.+)$", RESULTS, re.MULTILINE)
+        # labels may be bolded when a rung leads its column
+        match = re.search(
+            rf"^\| \**{re.escape(label)}\** \|(.+)$", RESULTS, re.MULTILINE
+        )
         assert match, f"no published row for {label}"
         rows[rung] = [c.strip() for c in match.group(1).split("|") if c.strip()]
     return rows
@@ -84,7 +87,15 @@ class TestAblationTableMatchesItsArtifact:
             ndcg = sum(float(r["ndcg_at_k"]) for r in rows) / len(rows)  # type: ignore[arg-type]
             assert _cell(cells[2]) == pytest.approx(recall, abs=0.001), f"{rung} recall"
             assert _cell(cells[3]) == pytest.approx(ceiling, abs=0.001), f"{rung} ceiling"
-            assert _cell(cells[4]) == pytest.approx(recall / ceiling * 100, abs=1), f"{rung} %"
+            # Macro-average, matching every other rate in the table. A
+            # ratio-of-means reweights toward the case with the larger
+            # denominator and inverted the apparent winner when it was used.
+            shares = [
+                float(r["recall_at_k"]) / float(r["recall_ceiling_at_k"])  # type: ignore[arg-type]
+                for r in rows
+            ]
+            macro = sum(shares) / len(shares) * 100
+            assert _cell(cells[4]) == pytest.approx(macro, abs=1), f"{rung} %"
             assert _cell(cells[5]) == pytest.approx(ndcg, abs=0.001), f"{rung} ndcg"
 
     def test_latency_column_is_not_stale(self) -> None:

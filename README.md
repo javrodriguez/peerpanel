@@ -62,21 +62,25 @@ over 68 documents and two query manuscripts with 36 relevant documents between t
 
 | rung | found @10 | found @30 | recall@10 (of 0.679 ceiling) | NDCG@10 | latency |
 |---|---|---|---|---|---|
-| BM25 | **13 / 36** | 18 / 36 | 54% | **0.770** | 36 ms |
-| vector | **13 / 36** | 17 / 36 | 54% | **0.770** | — |
-| RRF hybrid | **13 / 36** | 17 / 36 | 54% | **0.770** | 28 ms |
-| GraphRAG local | 12 / 36 | 18 / 36 | **58%** | 0.713 | 507 ms |
-| GraphRAG global | 10 / 36 | 10 / 36 | 46% | 0.586 | 7 ms |
+| BM25 | 13 / 36 | 25 / 36 | 69% | 0.770 | 20 ms |
+| **vector** | **14 / 36** | **26 / 36** | **75%** | **0.806** | **0.4 ms** |
+| RRF hybrid | 13 / 36 | 25 / 36 | 69% | 0.770 | 22 ms |
+| GraphRAG local | 12 / 36 | 22 / 36 | 65% | 0.713 | 85 ms |
+| GraphRAG global | 13 / 36 | 25 / 36 | 69% | 0.685 | 5 ms |
 
-**BM25 puts the most relevant documents in the top 10, ranks them best, and does it in 36 ms
-against GraphRAG local's 507 ms.** The graph only draws level three times deeper in the list (18
-each at @30) — entity-neighbourhood retrieval reaches documents lexical matching misses, then ranks
-them too low to help. GraphRAG global is the worst rung on every aggregate measure.
+**A plain cosine lookup beats the entire graph pipeline.** The vector rung wins every aggregate
+measure — highest found@10, found@30, recall and NDCG — while GraphRAG local has the worst deep
+recall of any rung at 4x BM25's latency. The extraction, the Leiden partitioning and the community
+reports did not earn their cost here. (The vector rung's 0.4 ms is a fixture lookup with no query
+encoding, so it is not comparable as a speed claim; BM25 at 20 ms is the honest cost baseline.)
 
-**But n = 2, and the two manuscripts disagree:** GraphRAG local is the best rung on one (recall
-0.500 vs 0.375) and second-worst on the other (0.286 vs 0.357). Every number above is a mean over
-that reversal, so these results establish *behaviour*, not a ranking — the per-case table is in
-[results/RESULTS.md](results/RESULTS.md) and the raw JSON beside it. They are published rather than
+Caveats published with it, because they matter: **n = 2, and the two manuscripts disagree** —
+GraphRAG local ties for best on one and is worst on the other, so this establishes behaviour, not a
+ranking. The corpus is citation-seeded and contains the answers by construction, with no random
+floor to calibrate against. And an earlier version of this table was wrong in a way worth naming:
+it retrieved a fixed number of *chunks* and scored *document* lists of different lengths, which made
+GraphRAG global look like the worst rung when at equal depth it is mid-pack. The full reading is in
+[results/RESULTS.md](results/RESULTS.md).
 omitted because a retrieval layer that cannot clearly beat BM25 on a corpus like this has not earned
 its complexity.
 

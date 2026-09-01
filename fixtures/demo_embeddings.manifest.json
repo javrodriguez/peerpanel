@@ -4,5 +4,5 @@
  "dim": 768,
  "dtype": "float16",
  "sha256": "eaa7a2476f1be06a60fd5f3461c72d387d74e6117645cbc1c6e9467da8c862a8",
- "regenerate": "make embeddings"
+ "regenerate": "make demo-index"
 }

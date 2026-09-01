@@ -37,11 +37,22 @@ Two query manuscripts, 36 relevant documents between them, k = 10.
 
 | rung | found @10 | found @30 | recall@10 | ceiling | % of ceiling | NDCG@10 | mean latency |
 |---|---|---|---|---|---|---|---|
-| BM25 | **13 / 36** | 18 / 36 | 0.366 | 0.679 | 54% | **0.770** | 36 ms |
-| vector | **13 / 36** | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 5 ms* |
-| RRF hybrid | **13 / 36** | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 28 ms |
-| GraphRAG local | 12 / 36 | 18 / 36 | **0.393** | 0.679 | **58%** | 0.713 | 507 ms |
-| GraphRAG global | 10 / 36 | 10 / 36 | 0.312 | 0.679 | 46% | 0.586 | 7 ms |
+| BM25 | 13 / 36 | 25 / 36 | 0.366 | 0.679 | 69% | 0.770 | 20 ms |
+| **vector** | **14 / 36** | **26 / 36** | **0.429** | 0.679 | **75%** | **0.806** | **0.4 ms** |
+| RRF hybrid | 13 / 36 | 25 / 36 | 0.366 | 0.679 | 69% | 0.770 | 22 ms |
+| GraphRAG local | 12 / 36 | 22 / 36 | 0.393 | 0.679 | 65% | 0.713 | 85 ms |
+| GraphRAG global | 13 / 36 | 25 / 36 | 0.366 | 0.679 | 69% | 0.685 | 5 ms |
+
+Every rung is scored over a document list of the **same length**. That sounds obvious and an
+earlier version of this table did not do it: it retrieved a fixed 30 *chunks* per rung and then
+scored the *document* ranking those chunks happened to produce — 4 documents for RRF against 13 for
+GraphRAG local on the same query, both reported as "recall@10". Chunk depth is now grown until every
+rung offers the same number of documents. Correcting it moved real conclusions, which is the point
+of publishing the harness alongside the numbers.
+
+"% of ceiling" is macro-averaged across cases like every other rate here; it was previously a
+ratio-of-means, which silently reweighted toward the case with the larger denominator and inverted
+which rung appeared to win.
 
 Two hit columns, both labelled, because they disagree and the disagreement is the point.
 **found @10** counts relevant documents inside the top-10 list the reported rates are computed over.
@@ -54,43 +65,40 @@ lookup only, not encoding. Latencies are means over the two cases, not medians.
 
 **Read this honestly, including the parts that do not flatter the graph:**
 
-- **GraphRAG global is the worst rung on this corpus, on every measure.** It finds 10 of 36
-  relevant documents where BM25 finds 18. Community-level routing is built for corpus-wide
-  questions ("what themes exist here"), and these queries are specific-document lookups — the
-  wrong tool, measured rather than quietly omitted.
+- **The plain vector rung wins on every aggregate measure.** Highest found@10 and found@30,
+  highest recall, highest NDCG. A cosine lookup over committed embeddings beats the entire graph
+  pipeline — the extraction, the Leiden partitioning, the community reports, all of it — on this
+  corpus at this scale. Its 0.4 ms is *not* a fair speed claim: query embeddings are served from a
+  committed fixture, so that figure excludes encoding. BM25's 20 ms is the honest cost baseline,
+  and GraphRAG local runs 4x that.
+- **GraphRAG local has the worst deep recall of any rung** (22 of 36 against vector's 26) and the
+  second-worst NDCG, at 4x BM25's latency. Its one aggregate win is recall@10
+  over BM25 (0.393 vs 0.366), and that is itself a mean over a reversal (below).
+- **GraphRAG global is mid-pack, not worst.** An earlier version of this document called it "the
+  worst rung on every measure" at 10 of 36. That was the depth defect: given a document list as
+  long as the other rungs', it finds 25 of 36 and ties BM25 on recall. The correction is bigger
+  than the original claim.
 - **n = 2, and the ordering reverses between the two cases — so this establishes behaviour, not a
   ranking.** Every aggregate above is a mean over two manuscripts that disagree:
 
   | rung | MET17: recall / NDCG | biopolymer: recall / NDCG |
   |---|---|---|
-  | BM25 · vector · RRF | 0.375 / 0.539 | 0.357 / **1.000** |
+  | BM25 · RRF | 0.375 / 0.539 | 0.357 / **1.000** |
+  | vector | **0.500** / 0.612 | 0.357 / **1.000** |
   | GraphRAG local | **0.500** / 0.590 | 0.286 / 0.837 |
-  | GraphRAG global | 0.375 / 0.370 | 0.250 / 0.801 |
+  | GraphRAG global | 0.375 / 0.370 | 0.357 / **1.000** |
 
-  GraphRAG local is the **best** rung on MET17 (0.500 vs 0.375) and the **worst but one** on the
-  biopolymer paper (0.286 vs 0.357). Its published mean of 0.393 is the average of a decisive win
-  and a clear loss, and BM25's NDCG of 0.770 averages a 0.539 and a perfect 1.000 — two very
-  different behaviours, not one number. At this n, no rung ordering survives per-case inspection,
-  and any sentence of the form "rung X wins" would be an artifact of averaging. This is the same
-  discipline as the N ≥ 20 gate below and the swap-consistency range: a mean over two opposing
-  cases does not earn three significant digits.
-- **At the reported depth, BM25 places more relevant documents in the top 10** (13 vs GraphRAG
-  local's 12) and ranks them better on average. The graph only draws level three times deeper (18
-  each at @30) — its recall comes from reaching documents lexical matching misses, then placing
-  them too far down the list to help.
-- **BM25 is the cost-effectiveness winner.** Best NDCG, most documents in the top 10, 36 ms, and no
-  index beyond a token count — against 507 ms for GraphRAG local, **14× slower** for a worse top-10.
-  (Latency is also the least stable column here: GraphRAG local's two cases were 913 ms and 101 ms,
-  a 9× spread — wider than any recall disagreement — so read the ratio as an order of magnitude,
-  not a measurement.) A retrieval layer that cannot beat BM25 on a corpus like this has
-  not earned its complexity, and on this corpus, at this depth, it does not.
-- **Recall@10 is reported against its ceiling for a reason.** With 28 relevant documents for one
-  manuscript, no system can exceed 10/28 = 0.357 recall in a top-10 list. A bare "recall@10 =
-  0.366" would read as poor when it is 54% of what is achievable. NDCG needs no such caveat — its
-  denominator already accounts for the ceiling.
+  GraphRAG local ties vector for best on MET17 (0.500) and is the **worst rung** on the biopolymer
+  paper (0.286). At this n no rung ordering survives per-case inspection, and any sentence of the
+  form "rung X wins" is an artifact of averaging. This is the same discipline as the N ≥ 20 gate
+  and the swap-consistency range: a mean over two opposing cases does not earn three significant
+  digits.
 - **The corpus is citation-seeded** (see `DECISIONS.md` D6): it was built from these manuscripts'
   own reference lists, so it contains the answers by construction. These numbers compare rungs
-  against each other. They are not an estimate of real-world retrieval difficulty.
+  against each other. They are not an estimate of real-world retrieval difficulty, and there is no
+  random-selection floor here to say how much of any rung's score is the corpus rather than the
+  method.
+
 
 ## Retrieval ablation — CI corpus
 

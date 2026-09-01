@@ -44,6 +44,8 @@ from .retrieval_eval import (
 )
 
 K = 10
+DOC_DEPTH_MULTIPLIER = 3  # the deeper list, in DOCUMENTS
+MAX_CHUNKS = 2000
 
 
 class _SearchFn(Protocol):
@@ -54,6 +56,8 @@ class RungResult(BaseModel):
     rung: str
     case_doi: str
     latency_ms: float
+    chunks_retrieved: int  # how deep the CHUNK search had to go for equal doc depth
+    docs_ranked: int  # the document list actually scored
     hits: list[tuple[str, int | None]]  # (relevant doc, rank or None)
     recall_at_k: float | None
     recall_ceiling_at_k: float | None  # the best recall@k achievable for this case
@@ -174,16 +178,35 @@ def run_ablation(
         )
         relevant = set(case.relevant_docs)
         for rung_name, search in _rungs(index, graph, reports, assignment, embedder).items():
+            # EQUAL DOCUMENT DEPTH. Retrieving a fixed number of CHUNKS and then
+            # scoring a DOCUMENT ranking compares lists of wildly different length
+            # — measured: 4 documents for RRF against 13 for graph-local on the same
+            # query, both reported as "recall@10". Chunk depth is therefore grown
+            # until every rung offers the same number of documents.
+            want_docs = k * DOC_DEPTH_MULTIPLIER
+            chunk_k = want_docs * 4
+            ranking: list[str] = []
+            while True:
+                ranking = doc_ranking(search(case.query, k=chunk_k))
+                if len(ranking) >= want_docs or chunk_k >= MAX_CHUNKS:
+                    break
+                chunk_k *= 2
+            # Timed separately, and warm: spaCy loads lazily inside the graph rungs,
+            # so the first timed call charges that one-off import to the rung
+            # (measured 912ms then 101ms for the same work).
+            search(case.query, k=chunk_k)
             t0 = time.monotonic()
-            hits = search(case.query, k=k * 3)
+            search(case.query, k=chunk_k)
             latency_ms = (time.monotonic() - t0) * 1000
-            ranking = doc_ranking(hits)
+            ranking = ranking[:want_docs]
             results.append(
                 RungResult(
                     rung=rung_name,
                     case_doi=case.preprint_doi,
                     latency_ms=round(latency_ms, 1),
-                    hits=per_item_hits(ranking, relevant, k=k * 3),
+                    chunks_retrieved=chunk_k,
+                    docs_ranked=len(ranking),
+                    hits=per_item_hits(ranking, relevant, k=want_docs),
                     recall_at_k=round(recall_at_k(ranking, relevant, k), 4) if allowed else None,
                     recall_ceiling_at_k=(
                         round(recall_ceiling_at_k(relevant, k), 4) if allowed else None
@@ -238,7 +261,15 @@ def render_table(report: AblationReport) -> str:
             recall = sum(row.recall_at_k or 0 for row in rows) / len(rows)
             ceiling = sum(row.recall_ceiling_at_k or 0 for row in rows) / len(rows)
             ndcg = sum(row.ndcg_at_k or 0 for row in rows) / len(rows)
-            share = recall / ceiling if ceiling else 0.0
+            # Macro-average the SHARE, like every other rate in this table — a
+            # ratio-of-means silently reweights toward the case with the larger
+            # denominator, and measured here it flipped which rung appeared to win.
+            shares = [
+                (row.recall_at_k or 0) / row.recall_ceiling_at_k
+                for row in rows
+                if row.recall_ceiling_at_k
+            ]
+            share = sum(shares) / len(shares) if shares else 0.0
             line += (
                 f" · recall@{report.k} {recall:.3f}/{ceiling:.3f} ceiling ({share:.0%}) "
                 f"· ndcg@{report.k} {ndcg:.3f}"

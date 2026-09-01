@@ -49,16 +49,41 @@ manuscripts to language models, and this system would do exactly that.
   that both survive — the part node-filtering cannot reach. Chunk-level retrieval and
   `graphrag-local` therefore carry no residue at all. Community summary *text*, however, is a
   model artifact generated once over the whole corpus, so `graphrag-global` — which ranks over
-  that text — can still be influenced by a document it may not retrieve. **Measured, not
-  hand-waved:** on the MET17 run the top community scores 286.5 with the real reports and 272.6
-  once entity names evidenced only by the excluded twin are scrubbed — roughly 5% inflation from
-  names alone, and a floor, since the summary prose stays contaminated either way. The concrete
-  case is sharper than the number: that report reads *"The genes MET17 and HSU1 play crucial
-  roles…"*, and HSU1 appears in this corpus only in the excluded twin — it is the manuscript's own
-  finding, reaching the ranking through a summary. Regenerating summaries per run would cost
+  that text — can still be influenced by a document it may not retrieve. **Measured:** on the MET17
+  run, 97 graph entities exist only because of the excluded twin, and all 97 appear in community
+  reports at the resolution retrieval reads. They are mostly the twin's own apparatus and
+  acknowledged colleagues — *"Biotek Synergy MX plate reader"*, *"Costar 3370 96-well plate"*,
+  personal names — so its fingerprint is in the summary text that ranking scores, even though not
+  one of its chunks can be retrieved. Reproduce with
+  `build_run_graph(root, "demo", {"PMC10729969"})` against the unexcluded graph and intersect the
+  removed entities with `artifacts/demo/summaries.json`. Regenerating summaries per run would cost
   roughly an hour of local model time per manuscript and is not done; the LLM face of global
   search (`answer()`, which would put that prose in front of a reviewer) instead refuses to run
   when anything is excluded.
+- **The graph is mostly adjacency, not stated relations.** An extracted relation weighs four times a
+  bare co-mention per edge, but 92.8% of the demo graph's edges (51,176 of 55,146) are co-mention
+  only. When `graphrag-local` reaches a document lexical matching misses, it is usually because two
+  entities appeared in the same chunk — not because the model asserted a link between them.
+- **No entity resolution.** Nodes are case-normalised strings. `MET17`, `Met17` and `met17` merge;
+  `S. cerevisiae` and `Saccharomyces cerevisiae` do not, and neither do a protein and the gene that
+  encodes it. The entity count is therefore an upper bound on distinct concepts.
+- **`graphrag-global` breaks ties alphabetically.** Chunks inside one community share that
+  community's score, so ties are resolved by chunk-id string order — which begins with the PMCID.
+  Some of that rung's ranking, and therefore some of its NDCG, is alphabetical rather than
+  relevance-driven. It is deterministic and reproducible; it is not meaningful.
+- **The ablation and the panel use `graphrag-local` differently.** The ablation blends graph votes
+  with cosine similarity; the panel's reviewer runs it with the embedding blend off. The retrieval
+  numbers above therefore describe a configuration the panel does not use, and the two should not
+  be read as measuring the same component.
+- **Attribution covers the committed corpus, not the fetched one.** `CITATIONS.md` carries per-
+  document TASL attribution for the 15 documents committed to this repository. The 68-document demo
+  corpus is fetched at run time and its attribution is generated then, into
+  `corpus/DEMO_CITATIONS.md`, so a reader of the repository alone sees attribution for 15 of the 83
+  documents the project touches.
+- **No random-selection floor.** Roughly 42% of the demo corpus is relevant to one query or another
+  by construction, so a rung that returned documents at random would not score zero — and nothing
+  here measures what it *would* score. Every reported rate should be read against that missing
+  baseline rather than against zero.
 - **A stale corpus, deliberately.** The corpus is a pinned snapshot with per-document md5s, not a
   live search. The demo therefore re-runs identically next year and cannot see anything published
   after the snapshot. That trade is the point: reproducible verdicts over current ones.

@@ -11,7 +11,9 @@
   {
    "rung": "bm25",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 41.2,
+   "latency_ms": 22.5,
+   "chunks_retrieved": 120,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10158836",
@@ -27,7 +29,7 @@
     ],
     [
      "PMC6402699",
-     null
+     12
     ],
     [
      "PMC7470746",
@@ -53,7 +55,9 @@
   {
    "rung": "vector",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 8.1,
+   "latency_ms": 0.4,
+   "chunks_retrieved": 120,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10158836",
@@ -61,15 +65,15 @@
     ],
     [
      "PMC3563226",
-     null
+     19
     ],
     [
      "PMC4125178",
-     null
+     10
     ],
     [
      "PMC6402699",
-     null
+     23
     ],
     [
      "PMC7470746",
@@ -88,14 +92,16 @@
      null
     ]
    ],
-   "recall_at_k": 0.375,
+   "recall_at_k": 0.5,
    "recall_ceiling_at_k": 1.0,
-   "ndcg_at_k": 0.539
+   "ndcg_at_k": 0.6121
   },
   {
    "rung": "rrf-hybrid",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 27.6,
+   "latency_ms": 25.3,
+   "chunks_retrieved": 120,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10158836",
@@ -107,11 +113,11 @@
     ],
     [
      "PMC4125178",
-     null
+     17
     ],
     [
      "PMC6402699",
-     null
+     11
     ],
     [
      "PMC7470746",
@@ -137,7 +143,9 @@
   {
    "rung": "graphrag-local",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 912.6,
+   "latency_ms": 85.3,
+   "chunks_retrieved": 120,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10158836",
@@ -149,7 +157,7 @@
     ],
     [
      "PMC4125178",
-     null
+     21
     ],
     [
      "PMC6402699",
@@ -179,15 +187,17 @@
   {
    "rung": "graphrag-global",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 6.9,
+   "latency_ms": 4.8,
+   "chunks_retrieved": 240,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10158836",
-     null
+     26
     ],
     [
      "PMC3563226",
-     null
+     16
     ],
     [
      "PMC4125178",
@@ -195,11 +205,11 @@
     ],
     [
      "PMC6402699",
-     null
+     23
     ],
     [
      "PMC7470746",
-     null
+     14
     ],
     [
      "PMC9757880",
@@ -221,7 +231,9 @@
   {
    "rung": "bm25",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 29.9,
+   "latency_ms": 18.3,
+   "chunks_retrieved": 240,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10204961",
@@ -245,7 +257,7 @@
     ],
     [
      "PMC11618413",
-     null
+     29
     ],
     [
      "PMC11701741",
@@ -265,15 +277,15 @@
     ],
     [
      "PMC3923900",
-     null
+     16
     ],
     [
      "PMC5484544",
-     null
+     28
     ],
     [
      "PMC5826700",
-     null
+     22
     ],
     [
      "PMC5968551",
@@ -289,7 +301,7 @@
     ],
     [
      "PMC7191244",
-     null
+     26
     ],
     [
      "PMC7334043",
@@ -329,7 +341,7 @@
     ],
     [
      "PMC9487109",
-     null
+     19
     ],
     [
      "PMC9825584",
@@ -343,7 +355,9 @@
   {
    "rung": "vector",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 2.0,
+   "latency_ms": 0.4,
+   "chunks_retrieved": 240,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10204961",
@@ -375,7 +389,7 @@
     ],
     [
      "PMC11974387",
-     null
+     15
     ],
     [
      "PMC12278674",
@@ -387,15 +401,15 @@
     ],
     [
      "PMC3923900",
-     null
+     20
     ],
     [
      "PMC5484544",
-     null
+     29
     ],
     [
      "PMC5826700",
-     null
+     28
     ],
     [
      "PMC5968551",
@@ -411,7 +425,7 @@
     ],
     [
      "PMC7191244",
-     null
+     19
     ],
     [
      "PMC7334043",
@@ -451,7 +465,7 @@
     ],
     [
      "PMC9487109",
-     null
+     16
     ],
     [
      "PMC9825584",
@@ -465,7 +479,9 @@
   {
    "rung": "rrf-hybrid",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 28.9,
+   "latency_ms": 17.9,
+   "chunks_retrieved": 240,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10204961",
@@ -497,7 +513,7 @@
     ],
     [
      "PMC11974387",
-     14
+     15
     ],
     [
      "PMC12278674",
@@ -509,15 +525,15 @@
     ],
     [
      "PMC3923900",
-     null
+     16
     ],
     [
      "PMC5484544",
-     null
+     29
     ],
     [
      "PMC5826700",
-     null
+     25
     ],
     [
      "PMC5968551",
@@ -533,7 +549,7 @@
     ],
     [
      "PMC7191244",
-     null
+     24
     ],
     [
      "PMC7334043",
@@ -557,7 +573,7 @@
     ],
     [
      "PMC8116571",
-     null
+     14
     ],
     [
      "PMC8164748",
@@ -573,7 +589,7 @@
     ],
     [
      "PMC9487109",
-     null
+     17
     ],
     [
      "PMC9825584",
@@ -587,7 +603,9 @@
   {
    "rung": "graphrag-local",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 101.0,
+   "latency_ms": 83.7,
+   "chunks_retrieved": 120,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10204961",
@@ -611,7 +629,7 @@
     ],
     [
      "PMC11618413",
-     null
+     24
     ],
     [
      "PMC11701741",
@@ -619,7 +637,7 @@
     ],
     [
      "PMC11974387",
-     null
+     30
     ],
     [
      "PMC12278674",
@@ -679,7 +697,7 @@
     ],
     [
      "PMC8116571",
-     null
+     29
     ],
     [
      "PMC8164748",
@@ -709,7 +727,9 @@
   {
    "rung": "graphrag-global",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 6.4,
+   "latency_ms": 5.0,
+   "chunks_retrieved": 240,
+   "docs_ranked": 30,
    "hits": [
     [
      "PMC10204961",
@@ -733,7 +753,7 @@
     ],
     [
      "PMC11618413",
-     null
+     29
     ],
     [
      "PMC11701741",
@@ -741,7 +761,7 @@
     ],
     [
      "PMC11974387",
-     null
+     19
     ],
     [
      "PMC12278674",
@@ -753,7 +773,7 @@
     ],
     [
      "PMC3923900",
-     null
+     14
     ],
     [
      "PMC5484544",
@@ -781,7 +801,7 @@
     ],
     [
      "PMC7334043",
-     null
+     15
     ],
     [
      "PMC7382830",
@@ -789,23 +809,23 @@
     ],
     [
      "PMC7690147",
-     null
+     13
     ],
     [
      "PMC7873862",
-     null
+     8
     ],
     [
      "PMC7953724",
-     null
+     9
     ],
     [
      "PMC8116571",
-     null
+     10
     ],
     [
      "PMC8164748",
-     null
+     11
     ],
     [
      "PMC8620231",
@@ -813,20 +833,20 @@
     ],
     [
      "PMC9157227",
-     null
+     12
     ],
     [
      "PMC9487109",
-     null
+     16
     ],
     [
      "PMC9825584",
      null
     ]
    ],
-   "recall_at_k": 0.25,
+   "recall_at_k": 0.3571,
    "recall_ceiling_at_k": 0.3571,
-   "ndcg_at_k": 0.8007
+   "ndcg_at_k": 1.0
   }
  ]
 }

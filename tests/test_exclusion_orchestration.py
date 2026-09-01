@@ -96,7 +96,11 @@ class TestRealOrchestration:
         monkeypatch.setattr(ablation_mod, "doc_ranking", spy)
         report = run_ablation(ROOT, embedder, corpus="ci")
 
-        assert len(seen) == report.n_cases * len(RUNGS)
+        # At least one ranking per rung per case. Not exactly one: the ablation grows
+        # chunk depth until every rung offers the same number of DOCUMENTS, so it
+        # ranks several times per rung. The guard that matters is unchanged — every
+        # ranking produced is checked, and there must be some.
+        assert len(seen) >= report.n_cases * len(RUNGS)
         assert any(seen), "rankings were empty — the assertion below would be vacuous"
         for ranking in seen:
             assert TWIN not in ranking
