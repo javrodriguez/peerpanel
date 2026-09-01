@@ -117,3 +117,18 @@ always emits per-case rows — because a prose-only fix decays the moment anothe
 The repo already applied this discipline twice before noticing it was a rule (the N ≥ 20 gate that
 withholds rates over thin ground truth; swap-consistency published as a range). The inconsistency was
 ours.
+
+## D15 — Build the binding before fixing the numbers
+Eleven artifact-honesty findings arrived at once, two of them wrong figures in the published tables.
+The tempting order is to correct the figures first — they are visible, embarrassing, and quick.
+The order taken was the opposite: write the test that binds every published number to the artifact it
+describes, run it, and let it find the errors. It found all three before a word of prose changed.
+A peer session then verified the binding by mutation rather than by reading it: with the stale values
+put back, the tests fail for the right reason and say so in words a maintainer can act on
+(*"RESULTS.md claims 22x; the artifact gives 14.3x"*).
+Their observation is the rule worth keeping: **a test written after the fix tends to encode the fix
+rather than the invariant.** Written first, it has to describe what must always be true, and it
+proves itself by failing on the real defect. Written after, it can pass merely because the bug is
+gone — and would not notice the next one.
+The corollary, learned the same day: a mutation proof is only evidence once it proves it is running
+the mutant (D13).
