@@ -45,12 +45,16 @@ summaries:
 	uv run python -m peerpanel graph summaries
 
 ## Build the demo-scale index: embeddings + extraction + graph + Leiden (~6.4h).
+## Writes the log RESULTS.md cites as this build's raw capture — a documented
+## regenerate command that produces no artifact is not a regenerate command.
 demo-index:
-	uv run python -m peerpanel graph build --corpus demo
+	@mkdir -p results
+	uv run python -m peerpanel graph build --corpus demo 2>&1 | tee results/demo-index-build.log
 
 ## Demo community reports at the resolution retrieval reads (see DECISIONS D9).
 demo-summaries:
-	uv run python -m peerpanel graph summaries --corpus demo --resolution 1.0
+	@mkdir -p results
+	uv run python -m peerpanel graph summaries --corpus demo --resolution 1.0 2>&1 | tee results/demo-summaries.log
 
 ## The retrieval ablation ladder — CI corpus, from committed bytes, no model needed.
 ablation:

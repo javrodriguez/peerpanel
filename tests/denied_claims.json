@@ -1,0 +1,12 @@
+{
+  "_note": "Claims this repo must never make about itself. Kept as DATA, not as prose in the test that enforces them — otherwise the enforcing file trips its own sweep and needs a whole-file exemption, which is how the one absolute stopped being enforced anywhere.",
+  "denied": {
+    "production-ready": "this is a demonstration system",
+    "state-of-the-art": "no benchmark here supports it",
+    "revolutionary": "marketing register",
+    "replaces peer review": "explicitly out of scope",
+    "autonomous reviewer": "explicitly out of scope",
+    "world-class": "marketing register"
+  },
+  "denied_everywhere": ["production-ready"]
+}
