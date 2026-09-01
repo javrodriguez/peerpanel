@@ -219,10 +219,21 @@ def render_table(report: AblationReport) -> str:
     for r in report.results:
         rungs.setdefault(r.rung, []).append(r)
     for rung_name, rows in rungs.items():
-        found = sum(1 for row in rows for _, rank in row.hits if rank is not None)
+        # Two counts, both labelled. found@k is the one the reported rates use;
+        # the deeper count says where the rest landed. Publishing only the deeper
+        # number under a k-headed table would flatter whichever rung has a long
+        # tail — which is exactly the rung whose ranking is worst.
+        deep_k = report.k * 3
+        found_at_k = sum(
+            1 for row in rows for _, rank in row.hits if rank is not None and rank <= report.k
+        )
+        found_deep = sum(1 for row in rows for _, rank in row.hits if rank is not None)
         total = sum(len(row.hits) for row in rows)
         latency = sum(row.latency_ms for row in rows) / len(rows)
-        line = f"  {rung_name:16s} hits {found}/{total} · p_mean latency {latency:7.1f}ms"
+        line = (
+            f"  {rung_name:16s} found@{report.k} {found_at_k}/{total} · "
+            f"found@{deep_k} {found_deep}/{total} · mean latency {latency:7.1f}ms"
+        )
         if report.rates_reported:
             recall = sum(row.recall_at_k or 0 for row in rows) / len(rows)
             ceiling = sum(row.recall_ceiling_at_k or 0 for row in rows) / len(rows)

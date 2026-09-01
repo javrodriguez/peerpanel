@@ -11,7 +11,7 @@
   {
    "rung": "bm25",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 26.8,
+   "latency_ms": 24.1,
    "hits": [
     [
      "PMC10158836",
@@ -53,7 +53,7 @@
   {
    "rung": "vector",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 0.5,
+   "latency_ms": 4.8,
    "hits": [
     [
      "PMC10158836",
@@ -95,7 +95,7 @@
   {
    "rung": "rrf-hybrid",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 22.1,
+   "latency_ms": 27.3,
    "hits": [
     [
      "PMC10158836",
@@ -137,7 +137,7 @@
   {
    "rung": "graphrag-local",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 788.7,
+   "latency_ms": 1142.2,
    "hits": [
     [
      "PMC10158836",
@@ -179,7 +179,7 @@
   {
    "rung": "graphrag-global",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 5.5,
+   "latency_ms": 7.8,
    "hits": [
     [
      "PMC10158836",
@@ -221,7 +221,7 @@
   {
    "rung": "bm25",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 24.3,
+   "latency_ms": 31.3,
    "hits": [
     [
      "PMC10204961",
@@ -343,7 +343,7 @@
   {
    "rung": "vector",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 0.6,
+   "latency_ms": 4.1,
    "hits": [
     [
      "PMC10204961",
@@ -465,7 +465,7 @@
   {
    "rung": "rrf-hybrid",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 25.4,
+   "latency_ms": 27.3,
    "hits": [
     [
      "PMC10204961",
@@ -587,7 +587,7 @@
   {
    "rung": "graphrag-local",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 85.5,
+   "latency_ms": 105.0,
    "hits": [
     [
      "PMC10204961",
@@ -709,7 +709,7 @@
   {
    "rung": "graphrag-global",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 6.1,
+   "latency_ms": 7.3,
    "hits": [
     [
      "PMC10204961",

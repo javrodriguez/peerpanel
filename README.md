@@ -60,19 +60,21 @@ make eval           # planted errors: panel vs equal-compute single agent
 Full tables and the honest reading: **[results/RESULTS.md](results/RESULTS.md)**. The headline,
 over 68 documents and two query manuscripts with 36 relevant documents between them:
 
-| rung | relevant found | recall@10 (of 0.679 ceiling) | NDCG@10 | latency |
-|---|---|---|---|---|
-| BM25 | 18 / 36 | 54% | **0.770** | 26 ms |
-| vector | 17 / 36 | 54% | **0.770** | — |
-| RRF hybrid | 17 / 36 | 54% | **0.770** | 24 ms |
-| GraphRAG local | **18 / 36** | **58%** | 0.713 | 437 ms |
-| GraphRAG global | 10 / 36 | 46% | 0.586 | 6 ms |
+| rung | found @10 | found @30 | recall@10 (of 0.679 ceiling) | NDCG@10 | latency |
+|---|---|---|---|---|---|
+| BM25 | **13 / 36** | 18 / 36 | 54% | **0.770** | 28 ms |
+| vector | **13 / 36** | 17 / 36 | 54% | **0.770** | — |
+| RRF hybrid | **13 / 36** | 17 / 36 | 54% | **0.770** | 27 ms |
+| GraphRAG local | 12 / 36 | 18 / 36 | **58%** | 0.713 | 624 ms |
+| GraphRAG global | 10 / 36 | 10 / 36 | 46% | 0.586 | 8 ms |
 
-**GraphRAG global is the worst rung here on every measure, and BM25 wins on ranking at a fraction
-of the cost.** GraphRAG local reaches documents lexical matching misses — the best recall of any
-rung — then orders them worse. Those are the results; they are published rather than omitted
-because a retrieval layer that cannot beat BM25 on a corpus like this has not earned its
-complexity, and knowing *which* part earned it is the useful finding.
+**BM25 wins.** It puts the most relevant documents in the top 10, ranks them best, and does it in
+28 ms against GraphRAG local's 624 ms. The graph only draws level three times deeper in the list
+(18 each at @30) — which is the finding: entity-neighbourhood retrieval reaches documents lexical
+matching misses, then ranks them too low to help. GraphRAG global is the worst rung on every
+measure. These are published rather than omitted because a retrieval layer that cannot beat BM25
+on a corpus like this has not earned its complexity, and knowing *which* part failed to is the
+useful result.
 
 Recall is always shown against its achievable ceiling: with 28 relevant documents, no top-10 list
 can exceed 0.357 recall, so a bare number would misrepresent a good result as a poor one.

@@ -32,16 +32,22 @@ result cached and committed under `fixtures/extraction/`.
 
 Two query manuscripts, 36 relevant documents between them, k = 10.
 
-| rung | relevant found | recall@10 | ceiling | % of ceiling | NDCG@10 | median latency |
-|---|---|---|---|---|---|---|
-| BM25 | 18 / 36 | 0.366 | 0.679 | 54% | **0.770** | 26 ms |
-| vector | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 1 ms* |
-| RRF hybrid | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 24 ms |
-| GraphRAG local | **18 / 36** | **0.393** | 0.679 | **58%** | 0.713 | 437 ms |
-| GraphRAG global | 10 / 36 | 0.312 | 0.679 | 46% | 0.586 | 6 ms |
+| rung | found @10 | found @30 | recall@10 | ceiling | % of ceiling | NDCG@10 | mean latency |
+|---|---|---|---|---|---|---|---|
+| BM25 | **13 / 36** | 18 / 36 | 0.366 | 0.679 | 54% | **0.770** | 28 ms |
+| vector | **13 / 36** | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 4 ms* |
+| RRF hybrid | **13 / 36** | 17 / 36 | 0.366 | 0.679 | 54% | **0.770** | 27 ms |
+| GraphRAG local | 12 / 36 | 18 / 36 | **0.393** | 0.679 | **58%** | 0.713 | 624 ms |
+| GraphRAG global | 10 / 36 | 10 / 36 | 0.312 | 0.679 | 46% | 0.586 | 8 ms |
+
+Two hit columns, both labelled, because they disagree and the disagreement is the point.
+**found @10** counts relevant documents inside the top-10 list the reported rates are computed over.
+**found @30** counts them inside a list three times as deep — where a rung with a long tail catches
+up. An earlier version of this table published only the deeper count under a `k = 10` heading,
+which flattered exactly the rung whose ranking is weakest. Both are here now.
 
 \* the vector rung's query embedding is served from the committed fixture, so its latency here is
-lookup only, not encoding.
+lookup only, not encoding. Latencies are means over the two cases, not medians.
 
 **Read this honestly, including the parts that do not flatter the graph:**
 
@@ -49,13 +55,16 @@ lookup only, not encoding.
   relevant documents where BM25 finds 18. Community-level routing is built for corpus-wide
   questions ("what themes exist here"), and these queries are specific-document lookups — the
   wrong tool, measured rather than quietly omitted.
-- **GraphRAG local wins on recall and loses on ranking.** It surfaces the most relevant documents
-  (18, and the highest share of the achievable ceiling at 58%) but orders them worse than BM25
-  does (NDCG 0.713 vs 0.770) — entity-neighbourhood voting reaches documents lexical matching
-  misses, then ranks them by graph proximity rather than by textual fit.
-- **BM25 is the cost-effectiveness winner.** It matches or beats every other rung's NDCG at 26 ms
-  and no index beyond a token count. A retrieval layer that cannot beat BM25 on a corpus like this
-  has not earned its complexity, and on ranking, this one does not.
+- **At the reported depth, BM25 beats GraphRAG local outright.** In the top 10, BM25 finds 13
+  relevant documents to GraphRAG local's 12, and ranks them better (NDCG 0.770 vs 0.713). The graph
+  only draws level three times deeper (18 each at @30), which is another way of saying its ranking
+  is the weak part: it reaches documents lexical matching misses, then puts them too far down the
+  list to help. GraphRAG local's one genuine win is recall@10 (0.393 vs 0.366) — it retrieves a
+  larger *share* of what exists, while placing fewer documents in the top 10 than BM25 does.
+- **BM25 is the cost-effectiveness winner, and it is not close.** Best NDCG, most documents in the
+  top 10, 28 ms, and no index beyond a token count — against 624 ms for GraphRAG local, which is
+  22× slower for a worse top-10. A retrieval layer that cannot beat BM25 on a corpus like this has
+  not earned its complexity, and on this corpus, at this depth, it does not.
 - **Recall@10 is reported against its ceiling for a reason.** With 28 relevant documents for one
   manuscript, no system can exceed 10/28 = 0.357 recall in a top-10 list. A bare "recall@10 =
   0.366" would read as poor when it is 54% of what is achievable. NDCG needs no such caveat — its
