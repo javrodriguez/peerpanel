@@ -132,3 +132,14 @@ proves itself by failing on the real defect. Written after, it can pass merely b
 gone — and would not notice the next one.
 The corollary, learned the same day: a mutation proof is only evidence once it proves it is running
 the mutant (D13).
+
+## D16 — Run the checks CI runs, on the paths CI runs them
+CI went red on a pushed head for a lint error in a test file I had written minutes earlier. It had
+been reported to me once, in a command whose output I read for its test results and not its exit
+code, and every validation afterwards ran `ruff check src` — not `src tests`, which is what CI runs.
+So a subset of the checks, on a subset of the paths, said green right up to the push.
+The failure was trivial (an ambiguous Unicode glyph in a regex, now an escape). The process failure
+was not: **before a push, run the pipeline's own commands verbatim, on the pipeline's own paths.**
+Any narrower check is a different question with a more comfortable answer.
+Cheap and worth it: CI caught it in nineteen seconds, which is what CI is for — but it should not
+have been CI's job.

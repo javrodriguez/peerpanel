@@ -107,7 +107,7 @@ class TestAblationTableMatchesItsArtifact:
 
         real = mean("graphrag-local") / mean("bm25")
         for text, where in ((RESULTS, "RESULTS.md"), (README, "README.md")):
-            for claimed in re.findall(r"(\d+(?:\.\d+)?)\s*[x×]\s*(?:slower|faster)", text):
+            for claimed in re.findall(r"(\d+(?:\.\d+)?)\s*[x\u00d7]\s*(?:slower|faster)", text):
                 assert float(claimed) == pytest.approx(real, abs=1.0), (
                     f"{where} claims {claimed}x; the artifact gives {real:.1f}x"
                 )
@@ -162,3 +162,54 @@ class TestIndexTableMatchesBuildStats:
                 assert match, f"no {label} row"
                 cells = [c.strip() for c in match.group(1).split("|") if c.strip()]
                 assert _cell(cells[column - 1]) == stats[field], f"{corpus} {label}"
+
+
+class TestPlantedEvalMatchesItsArtifact:
+    """The newest published numbers, and the ones a reader weighs most."""
+
+    def _report(self) -> dict[str, object]:
+        return json.loads((ROOT / "results" / "planted-eval-demo.json").read_text())
+
+    def _arm(self, name: str) -> dict[str, object]:
+        return next(r for r in self._report()["results"] if r["system"] == name)  # type: ignore[index,arg-type]
+
+    def test_detection_counts(self) -> None:
+        report = self._report()
+        panel, base = self._arm("panel"), self._arm("single-agent-equal-compute")
+        n = int(report["n_errors"])  # type: ignore[call-overload]
+        for text in (RESULTS, README):
+            assert f"**{len(panel['detected'])} / {n}**" in text  # type: ignore[arg-type]
+            assert f"**{len(base['detected'])} / {n}**" in text  # type: ignore[arg-type]
+
+    def test_token_and_wall_figures(self) -> None:
+        panel, base = self._arm("panel"), self._arm("single-agent-equal-compute")
+        for text in (RESULTS, README):
+            assert f"{int(panel['total_tokens']):,}" in text  # type: ignore[call-overload]
+            assert f"{int(base['total_tokens']):,}" in text  # type: ignore[call-overload]
+
+    def test_the_multiplier_claims(self) -> None:
+        """'4.5x the tokens and 8x the wall-clock' must match the artifact."""
+        panel, base = self._arm("panel"), self._arm("single-agent-equal-compute")
+        token_ratio = float(panel["total_tokens"]) / float(base["total_tokens"])  # type: ignore[arg-type]
+        wall_ratio = float(panel["wall_s"]) / float(base["wall_s"])  # type: ignore[arg-type]
+        for text, where in ((RESULTS, "RESULTS.md"), (README, "README.md")):
+            claimed_tokens = re.search(r"(\d+(?:\.\d+)?)[x\u00d7] the tokens", text)
+            claimed_wall = re.search(r"(\d+(?:\.\d+)?)[x\u00d7] the wall-clock", text)
+            if claimed_tokens:
+                assert float(claimed_tokens.group(1)) == pytest.approx(token_ratio, abs=0.2), (
+                    f"{where}: claims {claimed_tokens.group(1)}x tokens; "
+                    f"artifact {token_ratio:.2f}x"
+                )
+            if claimed_wall:
+                assert float(claimed_wall.group(1)) == pytest.approx(wall_ratio, abs=0.5), (
+                    f"{where}: claims {claimed_wall.group(1)}x wall; artifact {wall_ratio:.2f}x"
+                )
+
+    def test_the_budget_share_claim(self) -> None:
+        """'22% of the panel's compute' — the caveat that keeps the loss honest."""
+        panel, base = self._arm("panel"), self._arm("single-agent-equal-compute")
+        share = float(base["total_tokens"]) / float(panel["total_tokens"]) * 100  # type: ignore[arg-type]
+        for match in re.finditer(r"(\d+)% of the panel", RESULTS + README):
+            assert float(match.group(1)) == pytest.approx(share, abs=2), (
+                f"claims {match.group(1)}%; artifact gives {share:.0f}%"
+            )
