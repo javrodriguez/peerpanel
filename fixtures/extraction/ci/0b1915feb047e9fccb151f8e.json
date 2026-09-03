@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13170222:15:b695f4b8",
+ "entities": [
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "HT-29",
+   "type": "organism"
+  },
+  {
+   "name": "Swiss Webster mice",
+   "type": "organism"
+  },
+  {
+   "name": "cyclophosphamide",
+   "type": "chemical"
+  },
+  {
+   "name": "MDM",
+   "type": "chemical"
+  },
+  {
+   "name": "arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "PBS",
+   "type": "chemical"
+  },
+  {
+   "name": "Kaplan–Meier method",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "log-rank test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dr. Adnane Sellam",
+   "type": "organism"
+  },
+  {
+   "name": "Dr. Joachim Morschhäuser",
+   "type": "organism"
+  },
+  {
+   "name": "Dr. Malcolm Whiteway",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. albicans",
+   "predicate": "has_strain",
+   "target": "C. albicans"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has_strain",
+   "target": "C. albicans"
+  },
+  {
+   "source": "HT-29",
+   "predicate": "has_cell_line",
+   "target": "HT-29"
+  },
+  {
+   "source": "Swiss Webster mice",
+   "predicate": "has_mice",
+   "target": "Swiss Webster mice"
+  },
+  {
+   "source": "cyclophosphamide",
+   "predicate": "has_chemical",
+   "target": "cyclophosphamide"
+  }
+ ],
+ "truncated": false
+}

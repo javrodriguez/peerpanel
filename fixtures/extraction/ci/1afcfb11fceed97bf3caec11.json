@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13055380:2:1d086e08",
+ "entities": [
+  {
+   "name": "skatole",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "fermentation solution",
+   "type": "chemical"
+  },
+  {
+   "name": "CON-DLY group",
+   "type": "organism"
+  },
+  {
+   "name": "SC-DLY group",
+   "type": "organism"
+  },
+  {
+   "name": "16S rRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "microbial community structure",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "composition",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Venn diagram",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OTUs",
+   "type": "chemical"
+  },
+  {
+   "name": "Proteobacteria",
+   "type": "organism"
+  },
+  {
+   "name": "Firmicutes",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "skatole",
+   "predicate": "reduced_by",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "reduces",
+   "target": "skatole"
+  },
+  {
+   "source": "CON-DLY group",
+   "predicate": "has",
+   "target": "skatole"
+  },
+  {
+   "source": "SC-DLY group",
+   "predicate": "has",
+   "target": "skatole"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "alters",
+   "target": "microbial community structure"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "alters",
+   "target": "composition"
+  },
+  {
+   "source": "CON-DLY group",
+   "predicate": "has",
+   "target": "OTUs"
+  },
+  {
+   "source": "SC-DLY group",
+   "predicate": "has",
+   "target": "OTUs"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "correlates_with",
+   "target": "skatole"
+  }
+ ],
+ "truncated": false
+}

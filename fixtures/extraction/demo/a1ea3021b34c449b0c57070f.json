@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7382830:3:5b1c8237",
+ "entities": [
+  {
+   "name": "Sankey diagrams",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Escherichia coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "ALE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DAG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Transcription units",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "COGs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pathways",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "operons",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "regulon",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mutation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mutation set",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mutation frequency",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Escherichia coli K-12 MG1655",
+   "predicate": "has mutation",
+   "target": "mutation"
+  },
+  {
+   "source": "mutation",
+   "predicate": "affects",
+   "target": "Transcription units"
+  },
+  {
+   "source": "Transcription units",
+   "predicate": "regulates",
+   "target": "operons"
+  },
+  {
+   "source": "operons",
+   "predicate": "regulates",
+   "target": "pathways"
+  },
+  {
+   "source": "pathways",
+   "predicate": "regulates",
+   "target": "regulon"
+  },
+  {
+   "source": "mutation set",
+   "predicate": "has mutation frequency",
+   "target": "mutation frequency"
+  },
+  {
+   "source": "mutation",
+   "predicate": "contributes to",
+   "target": "mutation frequency"
+  },
+  {
+   "source": "mutation",
+   "predicate": "affects",
+   "target": "Escherichia coli K-12 MG1655"
+  },
+  {
+   "source": "Escherichia coli K-12 MG1655",
+   "predicate": "has mutation set",
+   "target": "mutation set"
+  },
+  {
+   "source": "mutation set",
+   "predicate": "has mutation frequency",
+   "target": "mutation frequency"
+  },
+  {
+   "source": "mutation frequency",
+   "predicate": "is affected by",
+   "target": "mutation"
+  },
+  {
+   "source": "mutation",
+   "predicate": "has effect on",
+   "target": "Escherichia coli K-12 MG1655"
+  }
+ ],
+ "truncated": false
+}

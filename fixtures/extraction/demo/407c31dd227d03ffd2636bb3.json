@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13413155:11:786fa722",
+ "entities": [
+  {
+   "name": "Alternaria",
+   "type": "organism"
+  },
+  {
+   "name": "Alternaria brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "Alternaria alternata",
+   "type": "organism"
+  },
+  {
+   "name": "Arabidopsis thaliana",
+   "type": "organism"
+  },
+  {
+   "name": "Broccoli",
+   "type": "organism"
+  },
+  {
+   "name": "Cabbage",
+   "type": "organism"
+  },
+  {
+   "name": "Camalexin",
+   "type": "chemical"
+  },
+  {
+   "name": "Phytoalexin",
+   "type": "chemical"
+  },
+  {
+   "name": "Phytotoxin",
+   "type": "chemical"
+  },
+  {
+   "name": "Alternaria celosiae",
+   "type": "organism"
+  },
+  {
+   "name": "Alternaria perpunctulata",
+   "type": "organism"
+  },
+  {
+   "name": "Nimbya",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Alternaria brassicicola",
+   "predicate": "pathogen",
+   "target": "Arabidopsis thaliana"
+  },
+  {
+   "source": "Alternaria brassicicola",
+   "predicate": "produce",
+   "target": "Phytotoxin"
+  },
+  {
+   "source": "Alternaria brassicicola",
+   "predicate": "elicite",
+   "target": "Camalexin"
+  },
+  {
+   "source": "Alternaria brassicicola",
+   "predicate": "infect",
+   "target": "Broccoli"
+  },
+  {
+   "source": "Alternaria brassicicola",
+   "predicate": "infect",
+   "target": "Cabbage"
+  },
+  {
+   "source": "Alternaria celosiae",
+   "predicate": "pathogen",
+   "target": "Arabidopsis thaliana"
+  },
+  {
+   "source": "Alternaria perpunctulata",
+   "predicate": "pathogen",
+   "target": "Arabidopsis thaliana"
+  },
+  {
+   "source": "Nimbya",
+   "predicate": "pathogen",
+   "target": "Arabidopsis thaliana"
+  }
+ ],
+ "truncated": false
+}

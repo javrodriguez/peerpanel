@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13228058:13:70ec2846",
+ "entities": [
+  {
+   "name": "Verticillium dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "Verticillium albo-atrum",
+   "type": "organism"
+  },
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "V. albo-atrum",
+   "type": "organism"
+  },
+  {
+   "name": "Fradin EF",
+   "type": "organism"
+  },
+  {
+   "name": "Thomma BPHJ",
+   "type": "organism"
+  },
+  {
+   "name": "Klosterman SJ",
+   "type": "organism"
+  },
+  {
+   "name": "Atallah ZK",
+   "type": "organism"
+  },
+  {
+   "name": "Vallad GE",
+   "type": "organism"
+  },
+  {
+   "name": "Subbarao KV",
+   "type": "organism"
+  },
+  {
+   "name": "Maruthachalam K",
+   "type": "organism"
+  },
+  {
+   "name": "Kang S",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Fradin EF",
+   "predicate": "author",
+   "target": "V. dahliae"
+  },
+  {
+   "source": "Fradin EF",
+   "predicate": "author",
+   "target": "V. albo-atrum"
+  }
+ ],
+ "truncated": false
+}

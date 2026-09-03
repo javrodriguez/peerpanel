@@ -42,12 +42,21 @@ class _StubChat:
     def __init__(self) -> None:
         self.prompts: list[str] = []
 
-    def chat(self, *, system: str, user: str, json_schema: object = None,
-             temperature: float = 0.0, max_tokens: int = 2048) -> ChatResponse:
+    def chat(
+        self,
+        *,
+        system: str,
+        user: str,
+        json_schema: object = None,
+        temperature: float = 0.0,
+        max_tokens: int = 2048,
+    ) -> ChatResponse:
         self.prompts.append(user)
         if json_schema and "scores" in json.dumps(json_schema):
-            body = ('{"scores": {"soundness": 3, "presentation": 3, "contribution": 3},'
-                    ' "confidence": 3, "findings": []}')
+            body = (
+                '{"scores": {"soundness": 3, "presentation": 3, "contribution": 3},'
+                ' "confidence": 3, "findings": []}'
+            )
         elif json_schema and "claims" in json.dumps(json_schema):
             body = '{"claims": []}'
         elif json_schema and "verdict" in json.dumps(json_schema):
@@ -113,9 +122,7 @@ class TestPanelExclusion:
         assert seen, "run_panel never rebuilt the graph for this run"
         assert all(s == {TWIN} for s in seen), seen
 
-    def test_an_unrecorded_manuscript_refuses_rather_than_guessing(
-        self, tmp_path: Path
-    ) -> None:
+    def test_an_unrecorded_manuscript_refuses_rather_than_guessing(self, tmp_path: Path) -> None:
         """A manuscript with no twin-table row cannot have a sound exclusion set,
         so the run must refuse — never fall through to an unfiltered index."""
         header = MANUSCRIPT.read_text().split("# --- end attribution ---", 1)[0]

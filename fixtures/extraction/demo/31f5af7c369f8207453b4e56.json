@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC7382830:8:1b8f9601",
+ "entities": [
+  {
+   "name": "cyaA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crr",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "adenylate cyclase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CRP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glpFKX operon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "IIAGlc",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphotransferase system",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol-3-phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "Mlc regulon",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "NagC regulon",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cyaA",
+   "predicate": "has_product",
+   "target": "adenylate cyclase"
+  },
+  {
+   "source": "adenylate cyclase",
+   "predicate": "synthesizes",
+   "target": "cAMP"
+  },
+  {
+   "source": "cAMP",
+   "predicate": "binds_with",
+   "target": "CRP"
+  },
+  {
+   "source": "CRP",
+   "predicate": "promotes_transcription",
+   "target": "glpFKX operon"
+  },
+  {
+   "source": "adenylate cyclase",
+   "predicate": "produces",
+   "target": "cAMP"
+  },
+  {
+   "source": "cAMP",
+   "predicate": "binds_with",
+   "target": "CRP"
+  },
+  {
+   "source": "phosphotransferase system",
+   "predicate": "inhibits",
+   "target": "adenylate cyclase"
+  },
+  {
+   "source": "adenylate cyclase",
+   "predicate": "has_regulatory_domain",
+   "target": "glycerol-3-phosphate"
+  },
+  {
+   "source": "adenylate cyclase",
+   "predicate": "has_catalytic_domain",
+   "target": "glycerol-3-phosphate"
+  }
+ ],
+ "truncated": false
+}

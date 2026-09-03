@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC5484544:17:d98e7451",
+ "entities": [
+  {
+   "name": "vacuolar proton-translocating ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "chronic oxidative stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "vacuolar H+-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "apoptosis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "V-ATPase assembly",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "tumor cell invasiveness",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fission yeast",
+   "type": "organism"
+  },
+  {
+   "name": "vacuolar acidification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mitochondrial fission",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cellular GMP levels",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lifespan extension",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "vacuolar proton-translocating ATPase",
+   "predicate": "results in",
+   "target": "chronic oxidative stress"
+  },
+  {
+   "source": "vacuolar H+-ATPase",
+   "predicate": "inhibits",
+   "target": "apoptosis"
+  },
+  {
+   "source": "V-ATPase assembly",
+   "predicate": "regulates",
+   "target": "tumor cell invasiveness"
+  },
+  {
+   "source": "fission yeast",
+   "predicate": "has",
+   "target": "vacuolar acidification"
+  },
+  {
+   "source": "mitochondrial fission",
+   "predicate": "regulates",
+   "target": "cellular GMP levels"
+  },
+  {
+   "source": "lifespan extension",
+   "predicate": "results from",
+   "target": "vacuolar acidification"
+  }
+ ],
+ "truncated": false
+}

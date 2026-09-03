@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC12628781:13:7a78cd71",
+ "entities": [
+  {
+   "name": "polysaccharides",
+   "type": "chemical"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula acheniorum MC",
+   "type": "organism"
+  },
+  {
+   "name": "Sporobolomyces salmonicolor AL1",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula mucilaginosa sp. GUMS16",
+   "type": "organism"
+  },
+  {
+   "name": "Lactococcus lactis",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Candida famata",
+   "type": "organism"
+  },
+  {
+   "name": "Candida guilliermondii",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis KCTC 7989",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "mannose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "polysaccharides",
+   "predicate": "composed of",
+   "target": "glucose"
+  },
+  {
+   "source": "polysaccharides",
+   "predicate": "composed of",
+   "target": "mannose"
+  }
+ ],
+ "truncated": false
+}

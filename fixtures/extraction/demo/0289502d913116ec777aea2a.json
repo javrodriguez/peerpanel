@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13524880:9:e0791b2c",
+ "entities": [
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BCAA",
+   "type": "chemical"
+  },
+  {
+   "name": "T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "PCF T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "T. cruzi",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "isoleucine",
+   "type": "chemical"
+  },
+  {
+   "name": "valine",
+   "type": "chemical"
+  },
+  {
+   "name": "L-leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "D-leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "norleucine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AAT10.2",
+   "predicate": "transport",
+   "target": "BCAA"
+  },
+  {
+   "source": "T. brucei",
+   "predicate": "has",
+   "target": "AAT10.2"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "expresses",
+   "target": "AAT10.2"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13092671:0:00449248",
+ "entities": [
+  {
+   "name": "J Biol Chem",
+   "type": "organism"
+  },
+  {
+   "name": "Journal of Biological Chemistry",
+   "type": "organism"
+  },
+  {
+   "name": "American Society for Biochemistry and Molecular Biology",
+   "type": "organism"
+  },
+  {
+   "name": "Kreinbrink Alexia C.",
+   "type": "organism"
+  },
+  {
+   "name": "Lindahl Paul A.",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn(acetate)2",
+   "type": "chemical"
+  },
+  {
+   "name": "FluoZin-3",
+   "type": "chemical"
+  },
+  {
+   "name": "Mössbauer spectroscopy",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "J Biol Chem",
+   "predicate": "published",
+   "target": "Kreinbrink Alexia C."
+  },
+  {
+   "source": "Kreinbrink Alexia C.",
+   "predicate": "author",
+   "target": "Lindahl Paul A."
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "contains",
+   "target": "Zn"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "contains",
+   "target": "Zn"
+  }
+ ],
+ "truncated": false
+}

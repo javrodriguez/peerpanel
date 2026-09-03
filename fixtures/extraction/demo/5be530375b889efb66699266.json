@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13429971:7:f5d1efe4",
+ "entities": [
+  {
+   "name": "Visweswaraiah J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lageix S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Castilho BA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Izotova L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kinzy TG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hinnebusch AG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sattlegger E",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "eEF1A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GCN2 protein C terminus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GCN2 activity",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J Biol Chem",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Protocol Exchange",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Visweswaraiah J",
+   "predicate": "binds",
+   "target": "GCN2 protein C terminus"
+  },
+  {
+   "source": "Visweswaraiah J",
+   "predicate": "inhibits",
+   "target": "GCN2 activity"
+  },
+  {
+   "source": "Hinnebusch AG",
+   "predicate": "binds",
+   "target": "GCN2 protein C terminus"
+  },
+  {
+   "source": "Hinnebusch AG",
+   "predicate": "inhibits",
+   "target": "GCN2 activity"
+  },
+  {
+   "source": "Sattlegger E",
+   "predicate": "generate",
+   "target": "Protocol Exchange"
+  }
+ ],
+ "truncated": false
+}

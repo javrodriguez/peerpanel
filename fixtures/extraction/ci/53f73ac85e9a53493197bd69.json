@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13304748:7:27fa9ae9",
+ "entities": [
+  {
+   "name": "pos5Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZnS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "ROS",
+   "type": "chemical"
+  },
+  {
+   "name": "cell death",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "wild-type",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Hydrogen peroxide",
+   "type": "chemical"
+  },
+  {
+   "name": "H2O2",
+   "type": "chemical"
+  },
+  {
+   "name": "TAR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "POS5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "ribosomes",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pos5Δ",
+   "predicate": "has_hypersensitivity_to",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "ZnS QDs",
+   "predicate": "induces",
+   "target": "ROS"
+  },
+  {
+   "source": "ZnS QDs",
+   "predicate": "induces",
+   "target": "cell death"
+  },
+  {
+   "source": "wild-type",
+   "predicate": "exposed_to",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "pos5Δ",
+   "predicate": "exposed_to",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "Hydrogen peroxide",
+   "predicate": "induces",
+   "target": "ROS"
+  },
+  {
+   "source": "pos5Δ",
+   "predicate": "has_altered_transcriptional_profile",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "wild-type",
+   "predicate": "has_transcriptional_profile",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "ZnS QDs",
+   "predicate": "induces_transcriptional_changes",
+   "target": "wild-type"
+  }
+ ],
+ "truncated": false
+}

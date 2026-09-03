@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515273:1:7be73205",
+ "entities": [
+  {
+   "name": "Pichia manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "P. manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "oregano",
+   "type": "organism"
+  },
+  {
+   "name": "thyme",
+   "type": "organism"
+  },
+  {
+   "name": "sodium benzoate",
+   "type": "chemical"
+  },
+  {
+   "name": "potassium sorbate",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur dioxide",
+   "type": "chemical"
+  },
+  {
+   "name": "fermented foods",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "microbial control",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcriptomics",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

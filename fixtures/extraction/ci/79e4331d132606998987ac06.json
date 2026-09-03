@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13170222:16:1a498045",
+ "entities": [
+  {
+   "name": "Metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fungal pathogenesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "methionine synthase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sulfur amino acid biosynthetic pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus fumigatus",
+   "type": "organism"
+  },
+  {
+   "name": "sulfur assimilation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sulfur natural compounds",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Metabolism",
+   "predicate": "involved_in",
+   "target": "fungal pathogenesis"
+  },
+  {
+   "source": "Candida albicans",
+   "predicate": "has_pathogen",
+   "target": "methionine synthase"
+  },
+  {
+   "source": "methionine synthase",
+   "predicate": "produces",
+   "target": "methionine"
+  },
+  {
+   "source": "methionine synthase",
+   "predicate": "produces",
+   "target": "sulfur"
+  },
+  {
+   "source": "sulfur metabolism",
+   "predicate": "involved_in",
+   "target": "sulfur amino acid biosynthetic pathway"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has_pathogen",
+   "target": "sulfur amino acid biosynthetic pathway"
+  },
+  {
+   "source": "Aspergillus fumigatus",
+   "predicate": "has_pathogen",
+   "target": "sulfur amino acid biosynthetic pathway"
+  },
+  {
+   "source": "sulfur assimilation",
+   "predicate": "involved_in",
+   "target": "sulfur metabolism"
+  },
+  {
+   "source": "sulfur natural compounds",
+   "predicate": "involved_in",
+   "target": "sulfur metabolism"
+  }
+ ],
+ "truncated": false
+}

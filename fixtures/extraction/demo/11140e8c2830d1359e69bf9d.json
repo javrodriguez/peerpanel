@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC5484544:3:5587d891",
+ "entities": [
+  {
+   "name": "vacuolar proteases",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "exponentially growing sch9Δ cells",
+   "type": "organism"
+  },
+  {
+   "name": "CPY",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ALP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ape1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pho8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Atg8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pma1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "vacuolar proteases",
+   "predicate": "processed_by",
+   "target": "exponentially growing sch9Δ cells"
+  },
+  {
+   "source": "CPY",
+   "predicate": "processed_by",
+   "target": "exponentially growing sch9Δ cells"
+  },
+  {
+   "source": "ALP",
+   "predicate": "processed_by",
+   "target": "exponentially growing sch9Δ cells"
+  },
+  {
+   "source": "Ape1",
+   "predicate": "processed_by",
+   "target": "exponentially growing sch9Δ cells"
+  },
+  {
+   "source": "Sch9",
+   "predicate": "regulates",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "Pho8",
+   "predicate": "processed_by",
+   "target": "exponentially growing sch9Δ cells"
+  },
+  {
+   "source": "Atg8",
+   "predicate": "processed_by",
+   "target": "exponentially growing sch9Δ cells"
+  }
+ ],
+ "truncated": false
+}

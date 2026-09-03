@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515017:15:88f0e5ff",
+ "entities": [
+  {
+   "name": "Gresham D",
+   "type": "organism"
+  },
+  {
+   "name": "Desai MM",
+   "type": "organism"
+  },
+  {
+   "name": "Tucker CM",
+   "type": "organism"
+  },
+  {
+   "name": "Jenq HT",
+   "type": "organism"
+  },
+  {
+   "name": "Pai DA",
+   "type": "organism"
+  },
+  {
+   "name": "Ward A",
+   "type": "organism"
+  },
+  {
+   "name": "Martin R",
+   "type": "organism"
+  },
+  {
+   "name": "Espinoza CY",
+   "type": "organism"
+  },
+  {
+   "name": "Large CRL",
+   "type": "organism"
+  },
+  {
+   "name": "Rosswork J",
+   "type": "organism"
+  },
+  {
+   "name": "Van Bruinisse C",
+   "type": "organism"
+  },
+  {
+   "name": "Miller AW",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

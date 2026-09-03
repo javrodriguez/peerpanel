@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC5484544:19:7a493d8b",
+ "entities": [
+  {
+   "name": "vacuoles",
+   "type": "organism"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "TORC1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Snf1/AMPK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kog1/Raptor-bodies",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rag GTPases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "protein kinase A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nhx1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sch9 protein kinase",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "vacuoles",
+   "predicate": "regulates",
+   "target": "mitochondria"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "promotes",
+   "target": "Kog1/Raptor-bodies"
+  },
+  {
+   "source": "Snf1/AMPK",
+   "predicate": "regulates",
+   "target": "TORC1"
+  },
+  {
+   "source": "Rag GTPases",
+   "predicate": "regulates",
+   "target": "TORC1"
+  },
+  {
+   "source": "protein kinase A",
+   "predicate": "regulates",
+   "target": "V-ATPase"
+  }
+ ],
+ "truncated": false
+}

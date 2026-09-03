@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10832132:14:a6cd6217",
+ "entities": [
+  {
+   "name": "AUPRC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fmax",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CAFA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Precision",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Recall",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Heat shock 70 kDa protein 1A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Heat shock 70 kDa protein 2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetGO3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PROFEAT",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

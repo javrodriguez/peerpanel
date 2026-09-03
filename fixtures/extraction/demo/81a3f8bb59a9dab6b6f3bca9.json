@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC7334043:7:3d7557c0",
+ "entities": [
+  {
+   "name": "Indigoidine",
+   "type": "chemical"
+  },
+  {
+   "name": "Streptomyces lavendulae",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "L-glutamine",
+   "type": "chemical"
+  },
+  {
+   "name": "NRPS",
+   "type": "chemical"
+  },
+  {
+   "name": "BpsA gene cluster",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. lavendulae",
+   "type": "organism"
+  },
+  {
+   "name": "IFO",
+   "type": "organism"
+  },
+  {
+   "name": "glutamine",
+   "type": "chemical"
+  },
+  {
+   "name": "indigoidine",
+   "type": "chemical"
+  },
+  {
+   "name": "sorghum hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Indigoidine",
+   "predicate": "produced_by",
+   "target": "Streptomyces lavendulae"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "engineered_for",
+   "target": "indigoidine"
+  },
+  {
+   "source": "BpsA gene cluster",
+   "predicate": "catalyzes",
+   "target": "indigoidine"
+  },
+  {
+   "source": "L-glutamine",
+   "predicate": "converted_into",
+   "target": "indigoidine"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "produced",
+   "target": "indigoidine"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "used_as",
+   "target": "sorghum hydrolysate"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "used_as",
+   "target": "glucose"
+  }
+ ],
+ "truncated": false
+}

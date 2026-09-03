@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13170222:13:3a6318bd",
+ "entities": [
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "MET32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "met32 mutant",
+   "type": "organism"
+  },
+  {
+   "name": "SN250",
+   "type": "organism"
+  },
+  {
+   "name": "Table S6",
+   "type": "other"
+  },
+  {
+   "name": "pFA plasmids",
+   "type": "other"
+  },
+  {
+   "name": "pDUP3 plasmid",
+   "type": "other"
+  },
+  {
+   "name": "CIp-Act plasmid",
+   "type": "other"
+  },
+  {
+   "name": "BioTek Cytation 5 plate reader",
+   "type": "other"
+  },
+  {
+   "name": "YPD",
+   "type": "other"
+  },
+  {
+   "name": "SLD",
+   "type": "other"
+  },
+  {
+   "name": "MDM",
+   "type": "other"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C. albicans",
+   "predicate": "has_strain",
+   "target": "met32 mutant"
+  },
+  {
+   "source": "met32 mutant",
+   "predicate": "has_gene",
+   "target": "MET32"
+  },
+  {
+   "source": "MET32",
+   "predicate": "is_located_in",
+   "target": "pDUP3 plasmid"
+  },
+  {
+   "source": "pDUP3 plasmid",
+   "predicate": "is_transformed_into",
+   "target": "met32 mutant"
+  },
+  {
+   "source": "met32 mutant",
+   "predicate": "is_transformed_into",
+   "target": "SN250"
+  }
+ ],
+ "truncated": false
+}

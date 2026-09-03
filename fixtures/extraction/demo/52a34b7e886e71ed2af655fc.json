@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC10204961:25:ebc8ab25",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Proteomics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Benchmarking accuracy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Precision",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Intensity-based absolute quantification",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Protein abundances",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Elife",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Principles",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cellular resource allocation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Condition-dependent proteome profiling",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Metab Eng Commun",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_protein_abundance",
+   "target": "Proteomics"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_benchmarking_accuracy",
+   "target": "Benchmarking accuracy"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_precision",
+   "target": "Precision"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_intensity_based_absolute_quantification",
+   "target": "Intensity-based absolute quantification"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_protein_abundance",
+   "target": "Protein abundances"
+  },
+  {
+   "source": "Elife",
+   "predicate": "has_principle",
+   "target": "Principles"
+  },
+  {
+   "source": "Elife",
+   "predicate": "has_condition_dependent_proteome_profiling",
+   "target": "Condition-dependent proteome profiling"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_metabolic_engineering",
+   "target": "Metab Eng Commun"
+  }
+ ],
+ "truncated": false
+}

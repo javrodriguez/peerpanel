@@ -14,9 +14,7 @@ import ollama
 from numpy.typing import NDArray
 
 from .base import ChatResponse
-
-# One serving slot's context. Prompts are budgeted to fit inside it.
-NUM_CTX = 4096
+from .context import check_not_truncated, context_for_call, prompt_chars
 
 
 class OllamaNativeChat:
@@ -37,6 +35,12 @@ class OllamaNativeChat:
         temperature: float = 0.0,
         max_tokens: int = 2048,
     ) -> ChatResponse:
+        # The window is sized per call from the prompt and the output budget
+        # (context.py): big enough that Ollama never cuts the prompt, small
+        # enough that the KV cache stays on the GPU (a 32k window with parallel
+        # slots spilled to CPU and crawled — DECISIONS.md D7). A fixed pin did
+        # neither: 4,096 silently halved every reviewer and verifier prompt (D19).
+        num_ctx = context_for_call(system, user, max_tokens, model=self._model)
         resp = self._client.chat(
             model=self._model,
             messages=[
@@ -47,17 +51,19 @@ class OllamaNativeChat:
             options={
                 "temperature": temperature,
                 "num_predict": max_tokens,
-                # Pin the context window. Without it the server uses the model's
-                # own default (32k for qwen2), and with parallel slots that KV
-                # cache spills to CPU and generation crawls — measured.
-                "num_ctx": NUM_CTX,
+                "num_ctx": num_ctx,
             },
+        )
+        prompt_tokens = resp.prompt_eval_count or 0
+        check_not_truncated(
+            prompt_tokens, prompt_chars(system, user), model=self._model, context=num_ctx
         )
         return ChatResponse(
             text=resp.message.content or "",
             model=self._model,
-            prompt_tokens=resp.prompt_eval_count or 0,
+            prompt_tokens=prompt_tokens,
             completion_tokens=resp.eval_count or 0,
+            context=num_ctx,
         )
 
 

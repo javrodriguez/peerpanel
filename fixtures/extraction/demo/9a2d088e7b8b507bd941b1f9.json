@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10832132:15:81abdd2c",
+ "entities": [
+  {
+   "name": "Huang J",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lin Q",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Fei H",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "He Z",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Xu H",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Li Y",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Gligorijević V",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Renfrew PD",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Kosciolek T",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Leman JK",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Berenberg D",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Vatanen T",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

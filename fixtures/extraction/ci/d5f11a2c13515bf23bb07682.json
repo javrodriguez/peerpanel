@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13228058:11:605c562c",
+ "entities": [
+  {
+   "name": "MFS transporters",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mycotoxins",
+   "type": "chemical"
+  },
+  {
+   "name": "fungal virulence",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "host plants",
+   "type": "organism"
+  },
+  {
+   "name": "Candida",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "VdMFS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VdSNF1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VdSSP1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "MFS transporters",
+   "predicate": "enhance",
+   "target": "fungal virulence"
+  }
+ ],
+ "truncated": false
+}

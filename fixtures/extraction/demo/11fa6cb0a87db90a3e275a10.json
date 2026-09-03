@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13513244:12:5c6b8860",
+ "entities": [
+  {
+   "name": "T.N.S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "N.S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R.B.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Z.N.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "K.H.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "N.G.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "N.M.R.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "I.U.H.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YARS1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CMTDIC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ProteomeXchange Consortium",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PRIDE partner repository",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "T.N.S.",
+   "predicate": "conceptualization",
+   "target": "YARS1"
+  },
+  {
+   "source": "T.N.S.",
+   "predicate": "methodology",
+   "target": "YARS1"
+  },
+  {
+   "source": "T.N.S.",
+   "predicate": "formal analysis",
+   "target": "YARS1"
+  },
+  {
+   "source": "T.N.S.",
+   "predicate": "investigation",
+   "target": "YARS1"
+  },
+  {
+   "source": "T.N.S.",
+   "predicate": "writing",
+   "target": "YARS1"
+  },
+  {
+   "source": "T.N.S.",
+   "predicate": "review",
+   "target": "YARS1"
+  },
+  {
+   "source": "T.N.S.",
+   "predicate": "editing",
+   "target": "YARS1"
+  },
+  {
+   "source": "T.N.S.",
+   "predicate": "visualization",
+   "target": "YARS1"
+  },
+  {
+   "source": "N.S.",
+   "predicate": "conceptualization",
+   "target": "YARS1"
+  },
+  {
+   "source": "N.S.",
+   "predicate": "methodology",
+   "target": "YARS1"
+  },
+  {
+   "source": "N.S.",
+   "predicate": "formal analysis",
+   "target": "YARS1"
+  },
+  {
+   "source": "N.S.",
+   "predicate": "investigation",
+   "target": "YARS1"
+  }
+ ],
+ "truncated": false
+}

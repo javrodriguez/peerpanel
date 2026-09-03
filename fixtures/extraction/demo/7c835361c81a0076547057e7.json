@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13450573:8:22f19408",
+ "entities": [
+  {
+   "name": "RNA-seq analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "heat ramp",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "heat shock",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cultivability",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcriptional activity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Ragon et al.",
+   "type": "chemical"
+  },
+  {
+   "name": "Polyadenylated mRNAs",
+   "type": "chemical"
+  },
+  {
+   "name": "chromosomal coding genes",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD medium",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae BY4742",
+   "type": "organism"
+  },
+  {
+   "name": "50 °C",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "exposed_to",
+   "target": "heat ramp"
+  },
+  {
+   "source": "yeast",
+   "predicate": "exposed_to",
+   "target": "heat shock"
+  },
+  {
+   "source": "heat ramp",
+   "predicate": "allowed",
+   "target": "transcriptional activity"
+  },
+  {
+   "source": "heat shock",
+   "predicate": "allowed",
+   "target": "transcriptional activity"
+  },
+  {
+   "source": "Ragon et al.",
+   "predicate": "used_in",
+   "target": "RNA-seq analysis"
+  },
+  {
+   "source": "Polyadenylated mRNAs",
+   "predicate": "analyzed",
+   "target": "chromosomal coding genes"
+  },
+  {
+   "source": "S. cerevisiae BY4742",
+   "predicate": "subject_of",
+   "target": "RNA-seq analysis"
+  },
+  {
+   "source": "50 °C",
+   "predicate": "final_temperature",
+   "target": "heat ramp"
+  },
+  {
+   "source": "50 °C",
+   "predicate": "final_temperature",
+   "target": "heat shock"
+  }
+ ],
+ "truncated": false
+}

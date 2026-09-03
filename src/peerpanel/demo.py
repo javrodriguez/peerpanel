@@ -35,9 +35,7 @@ def run_demo(root: Path, providers: PanelProviders, corpus: str = "demo") -> int
     manifest = CorpusManifest.load(root / "corpus" / f"{corpus}.manifest.json")
     manuscript_path = root / "manuscripts" / f"{MANUSCRIPT}.txt"
     header, _body = read_manuscript(manuscript_path)
-    excluded = load_twins(root / "manuscripts" / "twins.json").excluded_pmcids(
-        header.preprint_doi
-    )
+    excluded = load_twins(root / "manuscripts" / "twins.json").excluded_pmcids(header.preprint_doi)
 
     print(f"PeerPanel demo · captured {started}")
     print(f"reproduce this exactly with: {REPRODUCE}")
@@ -69,9 +67,11 @@ def run_demo(root: Path, providers: PanelProviders, corpus: str = "demo") -> int
         f"  this run's graph:   {run.number_of_nodes():>6} entities · "
         f"{run.number_of_edges():>6} edges"
     )
-    print(f"  withheld for this run: {withheld} chunks, "
-          f"{full.number_of_nodes() - run.number_of_nodes()} entities, "
-          f"{full.number_of_edges() - run.number_of_edges()} edges")
+    print(
+        f"  withheld for this run: {withheld} chunks, "
+        f"{full.number_of_nodes() - run.number_of_nodes()} entities, "
+        f"{full.number_of_edges() - run.number_of_edges()} edges"
+    )
 
     print(_rule("4. The panel — blind, parallel, structurally different lenses"))
     print("  running (this is real model work; expect several minutes)…")
@@ -83,7 +83,8 @@ def run_demo(root: Path, providers: PanelProviders, corpus: str = "demo") -> int
         for finding in output.findings[:4]:
             grounding = (
                 f" (grounded in {len(finding.evidence_chunk_ids)} retrieved chunks)"
-                if finding.evidence_chunk_ids else " (about the manuscript text itself)"
+                if finding.evidence_chunk_ids
+                else " (about the manuscript text itself)"
             )
             print(f"    · {finding.severity}/{finding.dimension}: {finding.text[:150]}{grounding}")
 
@@ -99,15 +100,12 @@ def run_demo(root: Path, providers: PanelProviders, corpus: str = "demo") -> int
     for verdict in (supports + refutes)[:3]:
         print(f"    · {verdict.verdict}: {verdict.claim_text[:120]}")
         for span in verdict.evidence[:1]:
-            print(f"        evidence {span.chunk_id}: \"{span.quote[:100]}\"")
+            print(f'        evidence {span.chunk_id}: "{span.quote[:100]}"')
 
     print(_rule("6. The deterministic lens — no model involved"))
     if review.deterministic_findings:
         for check in review.deterministic_findings:
-            print(
-                f"  · {check.check} ({check.severity}) at {check.location}: "
-                f"{check.detail}"
-            )
+            print(f"  · {check.check} ({check.severity}) at {check.location}: {check.detail}")
     else:
         print("  no findings — this is a published, peer-reviewed manuscript, so the")
         print("  gene-symbol, reference-integrity and statistics checks all pass. The")

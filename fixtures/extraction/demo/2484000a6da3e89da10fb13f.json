@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC6402699:27:e2b93ce6",
+ "entities": [
+  {
+   "name": "Escherichia",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Lys14p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "homocitrate synthase isoenzymes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "overflow metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "efficient proteome allocation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nature",
+   "type": "organism"
+  },
+  {
+   "name": "SAR11",
+   "type": "organism"
+  },
+  {
+   "name": "thiamin",
+   "type": "chemical"
+  },
+  {
+   "name": "Vitamin B12",
+   "type": "chemical"
+  },
+  {
+   "name": "C hloroflexi",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Escherichia",
+   "predicate": "results from",
+   "target": "overflow metabolism"
+  },
+  {
+   "source": "Escherichia",
+   "predicate": "efficient proteome allocation",
+   "target": "overflow metabolism"
+  },
+  {
+   "source": "Lys14p",
+   "predicate": "modulates",
+   "target": "homocitrate synthase isoenzymes"
+  },
+  {
+   "source": "lysine",
+   "predicate": "modulates",
+   "target": "homocitrate synthase isoenzymes"
+  },
+  {
+   "source": "Nature",
+   "predicate": "results from",
+   "target": "efficient proteome allocation"
+  },
+  {
+   "source": "SAR11",
+   "predicate": "growth requirement",
+   "target": "thiamin"
+  },
+  {
+   "source": "Vitamin B12",
+   "predicate": "auxotrophy",
+   "target": "C hloroflexi"
+  }
+ ],
+ "truncated": false
+}

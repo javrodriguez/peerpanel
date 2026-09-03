@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13450799:26:ede549ba",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Ccr4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LRG1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Khd1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ixr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CLB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CLB2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Haa1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pkc1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rho1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mpt5p",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Ccr4"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Puf5"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "LRG1"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Khd1"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Ixr1"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "CLB1"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "CLB2"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Haa1p"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Pkc1p"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Rho1"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Mpt5p"
+  },
+  {
+   "source": "Ccr4",
+   "predicate": "regulates",
+   "target": "LRG1"
+  }
+ ],
+ "truncated": false
+}

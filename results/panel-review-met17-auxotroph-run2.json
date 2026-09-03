@@ -1,0 +1,393 @@
+{
+ "manuscript_doi": "10.1101/2023.05.18.541364",
+ "corpus_manifest": "corpus/demo.manifest.json",
+ "excluded_docs": [
+  "PMC10729969"
+ ],
+ "dropped_chunks": 26,
+ "reviewer_outputs": [
+  {
+   "reviewer": "methods-statistics",
+   "model": "ollama-native:llama3.1:8b",
+   "scores": {
+    "soundness": 4,
+    "presentation": 4,
+    "contribution": 4
+   },
+   "confidence": 4,
+   "findings": [
+    {
+     "dimension": "soundness",
+     "severity": "major",
+     "text": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs [23] and have long been thought to be unable to grow on inorganic sulfate [12].",
+     "quote": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs [23] and have long been thought to be unable to grow on inorganic sulfate [12].",
+     "evidence_chunk_ids": [
+      "PMC13470552:4:92499ba4"
+     ]
+    },
+    {
+     "dimension": "soundness",
+     "severity": "major",
+     "text": "met17Δ yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging (Fig 1C).",
+     "quote": "met17Δ yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging (Fig 1C).",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "minor",
+     "text": "The seemingly erratic growth behavior of met17Δ on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D).",
+     "quote": "The seemingly erratic growth behavior of met17Δ on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D).",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "minor",
+     "text": "At high initial cell densities, growth of met17Δ on sulfate was deterministic. At very low initial cell densities, the cultures did not grow.",
+     "quote": "At high initial cell densities, growth of met17Δ on sulfate was deterministic. At very low initial cell densities, the cultures did not grow.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "presentation",
+     "severity": "minor",
+     "text": "The MET17 gene, also known as MET15 or MET25 [13–15], catalyzes homocysteine synthesis by reacting H2S with O-acetyl homoserine (i.e. displaying OAH sulfhydrylase activity) [16–18].",
+     "quote": "The MET17 gene, also known as MET15 or MET25 [13–15], catalyzes homocysteine synthesis by reacting H2S with O-acetyl homoserine (i.e. displaying OAH sulfhydrylase activity) [16–18].",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "minor",
+     "text": "In Discussions, we reconcile conflicts in earlier studies, highlight considerations for studying gas-mediated microbial interactions, and speculate on the functions of HSU1 in wildtype yeast.",
+     "quote": "In Discussions, we reconcile conflicts in earlier studies, highlight considerations for studying gas-mediated microbial interactions, and speculate on the functions of HSU1 in wildtype yeast.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "major",
+     "text": "A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17Δ on sulfate.",
+     "quote": "A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17Δ on sulfate.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "minor",
+     "text": "This indicated that we were not merely observing residual growth fueled by organosulfurs that the cells had accumulated during exponential growth in methionine-supplemented medium.",
+     "quote": "This indicated that we were not merely observing residual growth fueled by organosulfurs that the cells had accumulated during exponential growth in methionine-supplemented medium.",
+     "evidence_chunk_ids": []
+    }
+   ],
+   "truncated": false
+  },
+  {
+   "reviewer": "prior-work-novelty",
+   "model": "ollama-native:qwen2:7b",
+   "scores": {
+    "soundness": 4,
+    "presentation": 4,
+    "contribution": 3
+   },
+   "confidence": 4,
+   "findings": [
+    {
+     "dimension": "soundness",
+     "severity": "minor",
+     "text": "The manuscript provides a comprehensive introduction to sulfur metabolism and its relevance to various biological processes, including protein synthesis, nucleotide metabolism, redox homeostasis, and microbial behavior. However, it does not explicitly state the novelty of the research question or the specific hypothesis being tested.",
+     "quote": "A deeper understanding of sulfur metabolism can thus have a wide societal impact. Besides these critical roles in cell physiology, secreted sulfur metabolites can also influence population-level behavior in microbes.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "major",
+     "text": "The manuscript does not clearly articulate the specific research question or hypothesis being tested regarding the growth of met17Δ yeast on sulfate.",
+     "quote": "The seemingly erratic growth behavior of met17Δ on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D).",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "presentation",
+     "severity": "minor",
+     "text": "The manuscript effectively introduces the relevance of sulfur metabolism and its various roles in cellular processes and microbial behavior. However, it could benefit from a clearer and more concise summary of the main research question or hypothesis.",
+     "quote": "A deeper understanding of sulfur metabolism can thus have a wide societal impact. Besides these critical roles in cell physiology, secreted sulfur metabolites can also influence population-level behavior in microbes.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "major",
+     "text": "The manuscript contributes to the understanding of sulfur metabolism by describing the roles of sulfur metabolites in various biological processes. However, it does not clearly highlight the novelty of the findings related to the growth of met17Δ yeast on sulfate.",
+     "quote": "The seemingly erratic growth behavior of met17Δ on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D).",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "minor",
+     "text": "The manuscript provides a detailed introduction to sulfur metabolism and its relevance to various biological processes. However, it does not explicitly discuss the limitations or potential confounding factors in the study of met17Δ yeast growth on sulfate.",
+     "quote": "A deeper understanding of sulfur metabolism can thus have a wide societal impact. Besides these critical roles in cell physiology, secreted sulfur metabolites can also influence population-level behavior in microbes.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "presentation",
+     "severity": "minor",
+     "text": "The manuscript presents a clear and structured introduction to sulfur metabolism and its biological significance. However, it could benefit from a more detailed discussion of the experimental setup and methodology for studying met17Δ yeast growth on sulfate.",
+     "quote": "A deeper understanding of sulfur metabolism can thus have a wide societal impact. Besides these critical roles in cell physiology, secreted sulfur metabolites can also influence population-level behavior in microbes.",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "contribution",
+     "severity": "major",
+     "text": "The manuscript contributes to the field by describing the roles of sulfur metabolites in various biological processes. However, it does not clearly articulate the specific contribution or novelty of the findings related to the growth of met17Δ yeast on sulfate.",
+     "quote": "The seemingly erratic growth behavior of met17Δ on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D).",
+     "evidence_chunk_ids": []
+    },
+    {
+     "dimension": "soundness",
+     "severity": "minor",
+     "text": "The manuscript provides a comprehensive introduction to sulfur metabolism and its relevance to various biological processes. However, it does not explicitly discuss the potential implications of the findings for future research or practical applications.",
+     "quote": "A deeper understanding of sulfur metabolism can thus have a wide societal impact. Besides these critical roles in cell physiology, secreted sulfur metabolites can also influence population-level behavior in microbes.",
+     "evidence_chunk_ids": []
+    }
+   ],
+   "truncated": false
+  }
+ ],
+ "verdicts": [
+  {
+   "claim_id": "manuscript:0:951f5223",
+   "claim_text": "The MET17 gene catalyzes homocysteine synthesis by reacting H2S with O-acetyl homoserine.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [
+    {
+     "chunk_id": "PMC9757880:1:c3678430",
+     "quote": "Met17p catalyzes the fixation of inorganic sulfide with O-acetylhomoserine (OAHS) to form homocysteine (Fig 1A)."
+    }
+   ],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "manuscript:1:951f5223",
+   "claim_text": "The purified Met17 protein can also catalyze cysteine synthesis by reacting H2S with O-acetyl serine, but this activity is low.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "manuscript:2:951f5223",
+   "claim_text": "Met17 has been assigned as the sole enzyme for synthesizing homocysteine in S. cerevisiae.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [
+    {
+     "chunk_id": "PMC11701741:3:3b55102d",
+     "quote": "The universality of a gene family suggests a broadly necessary functional role, whereas lineage-restricted genes may be driven by lineage-specific adaptations."
+    },
+    {
+     "chunk_id": "PMC13419736:0:819021a0",
+     "quote": "An estimated 80% of eukaryotic proteins meet their end through degradation by the 26S proteasome as the final stage within the Ubiquitin-Proteasome System (UPS) 1."
+    }
+   ],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "manuscript:3:951f5223",
+   "claim_text": "met17 mutants are auxotrophic for organosulfurs.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false,
+   "swapped": true
+  },
+  {
+   "claim_id": "manuscript:4:951f5223",
+   "claim_text": "met17Δ yeast can grow on sulfate without any organosulfur supplements in a density-dependent manner.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [
+    {
+     "chunk_id": "PMC9757880:16:1aaa1a34",
+     "quote": "met17Δ strain in minimal media without methionine"
+    },
+    {
+     "chunk_id": "PMC9757880:16:1aaa1a34",
+     "quote": "Characterization of the met17Δ prototrophic growth phenotype in the absence of methionine."
+    }
+   ],
+   "swap_consistent": false,
+   "swapped": true
+  },
+  {
+   "claim_id": "manuscript:5:951f5223",
+   "claim_text": "The density-dependence of met17Δ growth on sulfate is mediated via the volatile metabolite H2S.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [
+    {
+     "chunk_id": "PMC9757880:13:4a7ee29e",
+     "quote": "Hydrogen sulfide production quantification"
+    },
+    {
+     "chunk_id": "PMC9757880:13:4a7ee29e",
+     "quote": "Qualitative assessment of hydrogen sulfide production was indicated by the precipitation of lead sulfate in growth media containing 0.1 g/L lead(II) acetate."
+    },
+    {
+     "chunk_id": "PMC9757880:13:4a7ee29e",
+     "quote": "Quantification of hydrogen sulfide was conducted using AzMC, which undergoes selective reduction of the azide moiety in the presence of hydrogen sulfide to form AMC."
+    }
+   ],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "manuscript:6:951f5223",
+   "claim_text": "H2S can be assimilated into organosulfurs through the YLL058W (HSU1) gene in the absence of MET17.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "manuscript:7:951f5223",
+   "claim_text": "A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17Δ on sulfate.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "methods-statistics:0:a2d3e772",
+   "claim_text": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false,
+   "swapped": true
+  },
+  {
+   "claim_id": "methods-statistics:1:a2d3e772",
+   "claim_text": "met17Δ yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "methods-statistics:2:a2d3e772",
+   "claim_text": "growth of met17Δ on sulfate was deterministic at high initial cell densities",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "methods-statistics:3:a2d3e772",
+   "claim_text": "cultures of met17Δ on sulfate did not grow at very low initial cell densities",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "methods-statistics:4:a2d3e772",
+   "claim_text": "a mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17Δ on sulfate",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "methods-statistics:5:a2d3e772",
+   "claim_text": "met17 mutants are unable to grow on inorganic sulfate",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false,
+   "swapped": true
+  },
+  {
+   "claim_id": "prior-work-novelty:0:a32b04d3",
+   "claim_text": "The manuscript describes the roles of sulfur metabolites in various biological processes.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false,
+   "swapped": true
+  },
+  {
+   "claim_id": "prior-work-novelty:1:a32b04d3",
+   "claim_text": "The manuscript provides a comprehensive introduction to sulfur metabolism and its relevance to various biological processes.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "prior-work-novelty:2:a32b04d3",
+   "claim_text": "The manuscript does not explicitly state the novelty of the research question or the specific hypothesis being tested.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "prior-work-novelty:3:a32b04d3",
+   "claim_text": "The manuscript does not clearly articulate the specific research question or hypothesis being tested regarding the growth of met17Δ yeast on sulfate.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [
+    {
+     "chunk_id": "PMC9757880:13:4a7ee29e",
+     "quote": "Systematic growth analysis of met17Δ in minimal media"
+    },
+    {
+     "chunk_id": "PMC9757880:16:1aaa1a34",
+     "quote": "S1 Fig Characterization of the met17Δ prototrophic growth phenotype in the absence of methionine."
+    }
+   ],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "prior-work-novelty:4:a32b04d3",
+   "claim_text": "The manuscript does not clearly highlight the novelty of the findings related to the growth of met17Δ yeast on sulfate.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [
+    {
+     "chunk_id": "PMC9757880:13:4a7ee29e",
+     "quote": "Systematic growth analysis of met17Δ in minimal media"
+    },
+    {
+     "chunk_id": "PMC9757880:16:1aaa1a34",
+     "quote": "S1 Fig Characterization of the met17Δ prototrophic growth phenotype in the absence of methionine."
+    }
+   ],
+   "swap_consistent": true,
+   "swapped": true
+  },
+  {
+   "claim_id": "prior-work-novelty:5:a32b04d3",
+   "claim_text": "The growth of met17Δ yeast on sulfate is a research question or hypothesis being tested in the manuscript.",
+   "verdict": "NOT_ENOUGH_INFO",
+   "evidence": [],
+   "swap_consistent": false,
+   "swapped": true
+  }
+ ],
+ "deterministic_findings": [],
+ "conflicts": [],
+ "summary": "The meta-review synthesizes the findings, verdicts, and conflicts from the provided information:\n\n### Methods and Statistics\n- **Soundness (Major/Minor)**: The identification of met17 mutants through genetic screens and their growth behavior on inorganic sulfate is sound, though the growth dynamics are minorly discussed in terms of potential density dependence.\n- **Presentation (Minor)**: The description of the MET17 gene and its role in homocysteine synthesis is presented clearly, but the manuscript could benefit from a more concise summary of the main research question or hypothesis.\n\n### Prior Work and Novelty\n- **Soundness (Minor/Major)**: The manuscript provides a comprehensive introduction to sulfur metabolism but does not explicitly state the novelty of the research question or the specific hypothesis being tested regarding met17Δ yeast growth on sulfate.\n- **Presentation (Minor)**: The manuscript effectively introduces sulfur metabolism but could improve by providing a clearer and more detailed discussion of the experimental setup and methodology for studying met17Δ yeast growth on sulfate.\n- **Contribution (Major)**: The manuscript contributes to the understanding of sulfur metabolism by describing its roles in various biological processes, but it does not clearly articulate the specific contribution or novelty of the findings related to met17Δ yeast growth on sulfate.\n\n### Claims and Verdicts\n- **Not Enough Info**: The claims about the roles of the MET17 gene, the growth behavior of met17Δ yeast on sulfate, and the involvement of Hsu1 in sulfur metabolism are not supported by enough information in the provided text.\n\n### Conflicts\n- **(None)**: There are no conflicts mentioned in the provided information.\n\nThe meta-review highlights the soundness of the research methods and the comprehensive introduction to sulfur metabolism, while noting areas for improvement in clarity and explicitness regarding the research question, hypothesis, and novelty of the findings. The lack of explicit novelty statements and the absence of clear experimental setups are identified as areas needing clarification.",
+ "swap_consistency_rate": 0.7,
+ "n_swap_checked": 20,
+ "swap_by_source": {
+  "manuscript": {
+   "rate": null,
+   "n": 8
+  },
+  "methods-statistics": {
+   "rate": null,
+   "n": 6
+  },
+  "prior-work-novelty": {
+   "rate": null,
+   "n": 6
+  }
+ },
+ "total_tokens": 226585,
+ "wall_s": 1654.4,
+ "model_calls": {
+  "calls": 46,
+  "largest_prompt_tokens": 7317,
+  "smallest_context": 4096,
+  "smallest_headroom_tokens": 3695
+ }
+}

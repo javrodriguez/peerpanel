@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13501320:5:de375509",
+ "entities": [
+  {
+   "name": "relationships",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "constraints",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "conditional statements",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "case",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "biconditional relationships",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "endpoint",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "module",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "genes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "BPMs",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ILP",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "LocalCut",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Leiserson et al",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "relationships",
+   "predicate": "implement",
+   "target": "constraints"
+  }
+ ],
+ "truncated": false
+}

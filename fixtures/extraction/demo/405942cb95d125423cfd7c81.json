@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC6547517:17:eaf4b845",
+ "entities": [
+  {
+   "name": "hemicellulose",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lipomyces",
+   "type": "organism"
+  },
+  {
+   "name": "pH regulated fed-batch cultivation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Appelqvist L Rapid methods",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid extraction",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fatty acid methyl ester preparation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "seed",
+   "type": "organism"
+  },
+  {
+   "name": "leaf tissue",
+   "type": "organism"
+  },
+  {
+   "name": "Wickerhamomyces anomalus",
+   "type": "organism"
+  },
+  {
+   "name": "Blastobotrys",
+   "type": "organism"
+  },
+  {
+   "name": "MaxQuant",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pH regulated fed-batch cultivation",
+   "predicate": "uses",
+   "target": "Lipomyces"
+  },
+  {
+   "source": "Appelqvist L Rapid methods",
+   "predicate": "uses",
+   "target": "lipid extraction"
+  },
+  {
+   "source": "fatty acid methyl ester preparation",
+   "predicate": "uses",
+   "target": "lipid extraction"
+  }
+ ],
+ "truncated": false
+}

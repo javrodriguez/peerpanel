@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13471478:22:4ab5e732",
+ "entities": [
+  {
+   "name": "Hu W",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Song A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zheng H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SLC26A2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Liu Q",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhang X",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Huang H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chen Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wang F",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hao A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "de Moraes VCS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bernardinelli E",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hu W",
+   "predicate": "used",
+   "target": "SLC26A2"
+  },
+  {
+   "source": "Liu Q",
+   "predicate": "used",
+   "target": "SLC26A2"
+  },
+  {
+   "source": "Hu W",
+   "predicate": "studied",
+   "target": "SLC26A2"
+  },
+  {
+   "source": "Liu Q",
+   "predicate": "studied",
+   "target": "SLC26A2"
+  }
+ ],
+ "truncated": false
+}

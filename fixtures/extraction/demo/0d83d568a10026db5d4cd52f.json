@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC8116571:8:7af6cfec",
+ "entities": [
+  {
+   "name": "R. toruloides CCT 7815",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylitol",
+   "type": "chemical"
+  },
+  {
+   "name": "arabitol",
+   "type": "chemical"
+  },
+  {
+   "name": "torulene",
+   "type": "chemical"
+  },
+  {
+   "name": "carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "CCT",
+   "type": "organism"
+  },
+  {
+   "name": "S. stipitis CBS 5773",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi DSM 70295",
+   "type": "organism"
+  },
+  {
+   "name": "K. marxianus CBS 6556",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "consume",
+   "target": "xylitol"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "consume",
+   "target": "arabitol"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "produce",
+   "target": "xylitol"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "produce",
+   "target": "arabitol"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "produce",
+   "target": "torulene"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "produce",
+   "target": "carotene"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "have",
+   "target": "biomass"
+  },
+  {
+   "source": "S. stipitis CBS 5773",
+   "predicate": "consume",
+   "target": "xylitol"
+  }
+ ],
+ "truncated": false
+}

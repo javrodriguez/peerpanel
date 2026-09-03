@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13471478:13:77d2855e",
+ "entities": [
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EYFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FRET",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NCBI Reference Sequence",
+   "type": "organism"
+  },
+  {
+   "name": "NP_000432.1",
+   "type": "organism"
+  },
+  {
+   "name": "Liu et al",
+   "type": "organism"
+  },
+  {
+   "name": "mouse Slc26a4",
+   "type": "organism"
+  },
+  {
+   "name": "AF-Q05516-F1-v6",
+   "type": "organism"
+  },
+  {
+   "name": "AF-O43511-F1-v6",
+   "type": "organism"
+  },
+  {
+   "name": "PKA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CKII",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ZBTB16",
+   "predicate": "interacts_with",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "EYFP",
+   "predicate": "is_FRET_acceptor",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "FRET",
+   "predicate": "measures_interaction",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "FRET",
+   "predicate": "measures_interaction",
+   "target": "SLC26A4"
+  }
+ ],
+ "truncated": false
+}

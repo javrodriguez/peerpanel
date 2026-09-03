@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC9157227:11:4b525ea8",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "sugarcane bagasse",
+   "type": "chemical"
+  },
+  {
+   "name": "birch",
+   "type": "chemical"
+  },
+  {
+   "name": "brewery effluent",
+   "type": "chemical"
+  },
+  {
+   "name": "HPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "spectrophotometric methods",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "crtI ratio",
+   "type": "chemical"
+  },
+  {
+   "name": "SBY94",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "produces",
+   "target": "carotenoids"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "grown",
+   "target": "glucose"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "produces",
+   "target": "carotenoids"
+  },
+  {
+   "source": "Y. lipolytica",
+   "predicate": "produces",
+   "target": "carotenoids"
+  },
+  {
+   "source": "crtI ratio",
+   "predicate": "used",
+   "target": "SBY94"
+  },
+  {
+   "source": "crtI ratio",
+   "predicate": "used",
+   "target": "SBY94"
+  },
+  {
+   "source": "HPLC",
+   "predicate": "used",
+   "target": "carotenoids"
+  },
+  {
+   "source": "spectrophotometric methods",
+   "predicate": "used",
+   "target": "carotenoids"
+  }
+ ],
+ "truncated": false
+}

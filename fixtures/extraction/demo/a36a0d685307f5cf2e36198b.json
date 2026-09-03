@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC11628909:10:95a7e0e4",
+ "entities": [
+  {
+   "name": "DREB2C",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ABF2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "bZIP protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "abscisic acid-responsive gene expression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "overexpression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "abscisic acid sensitivity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Plant Physiology",
+   "type": "organism"
+  },
+  {
+   "name": "Lee",
+   "type": "organism"
+  },
+  {
+   "name": "Hwang",
+   "type": "organism"
+  },
+  {
+   "name": "Seok",
+   "type": "organism"
+  },
+  {
+   "name": "Tarte",
+   "type": "organism"
+  },
+  {
+   "name": "Jeong",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DREB2C",
+   "predicate": "interacts_with",
+   "target": "ABF2"
+  },
+  {
+   "source": "DREB2C",
+   "predicate": "affects",
+   "target": "abscisic acid sensitivity"
+  },
+  {
+   "source": "ABF2",
+   "predicate": "regulates",
+   "target": "abscisic acid-responsive gene expression"
+  }
+ ],
+ "truncated": false
+}

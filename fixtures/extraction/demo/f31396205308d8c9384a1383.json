@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC9763685:15:e81ad7cf",
+ "entities": [
+  {
+   "name": "Iron(III) chelate complexes",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "mercaptans",
+   "type": "chemical"
+  },
+  {
+   "name": "aqueous solution",
+   "type": "chemical"
+  },
+  {
+   "name": "Inorg",
+   "type": "chemical"
+  },
+  {
+   "name": "Chem",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "tRNA",
+   "type": "chemical"
+  },
+  {
+   "name": "PP2A",
+   "type": "chemical"
+  },
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Iron(III) chelate complexes",
+   "predicate": "contains",
+   "target": "hydrogen sulfide"
+  },
+  {
+   "source": "Iron(III) chelate complexes",
+   "predicate": "contains",
+   "target": "mercaptans"
+  },
+  {
+   "source": "Iron(III) chelate complexes",
+   "predicate": "is_in",
+   "target": "aqueous solution"
+  },
+  {
+   "source": "autophagy",
+   "predicate": "is_inhibited_by",
+   "target": "methionine"
+  }
+ ],
+ "truncated": false
+}

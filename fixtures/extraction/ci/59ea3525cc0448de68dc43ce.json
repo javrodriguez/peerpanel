@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13055380:7:8f6debc4",
+ "entities": [
+  {
+   "name": "Liu Z",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Liu Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Murphy J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Maghirang R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ammonia",
+   "type": "chemical"
+  },
+  {
+   "name": "Methane",
+   "type": "chemical"
+  },
+  {
+   "name": "Cattle operations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Dietary nutrients",
+   "type": "chemical"
+  },
+  {
+   "name": "Energy",
+   "type": "chemical"
+  },
+  {
+   "name": "Agriculture",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Treg/Th1 imbalance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "NF-κB pathway",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Liu Z",
+   "predicate": "studied",
+   "target": "Ammonia"
+  },
+  {
+   "source": "Liu Z",
+   "predicate": "studied",
+   "target": "Methane"
+  },
+  {
+   "source": "Liu Z",
+   "predicate": "studied",
+   "target": "Cattle operations"
+  },
+  {
+   "source": "Liu Z",
+   "predicate": "studied",
+   "target": "Dietary nutrients"
+  },
+  {
+   "source": "Liu Z",
+   "predicate": "studied",
+   "target": "Energy"
+  },
+  {
+   "source": "Liu Z",
+   "predicate": "studied",
+   "target": "Agriculture"
+  }
+ ],
+ "truncated": false
+}

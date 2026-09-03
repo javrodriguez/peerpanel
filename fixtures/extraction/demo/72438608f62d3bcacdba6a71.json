@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC5826700:4:86729772",
+ "entities": [
+  {
+   "name": "Pma1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sit4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tco89",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Gtr1/2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ira1/2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Arf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ras1/2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cyr1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sit4",
+   "predicate": "involved in turnover of",
+   "target": "Pma1"
+  }
+ ],
+ "truncated": false
+}

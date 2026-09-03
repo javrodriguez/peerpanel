@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13524880:6:ba470939",
+ "entities": [
+  {
+   "name": "AAT10.2 protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BCAA concentrations",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "medium",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Haindrich",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "upregulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mRNA levels",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCF T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "amino acids",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "2 or 6 h",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "low amino acid availability",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cellular levels",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein levels",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AAT10.2 protein",
+   "predicate": "is_sensitive_to",
+   "target": "BCAA concentrations"
+  },
+  {
+   "source": "AAT10.2 protein",
+   "predicate": "is_increased_by",
+   "target": "low amino acid availability"
+  }
+ ],
+ "truncated": false
+}

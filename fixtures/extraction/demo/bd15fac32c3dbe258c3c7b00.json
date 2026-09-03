@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13514482:9:0a0491e0",
+ "entities": [
+  {
+   "name": "Z68",
+   "type": "organism"
+  },
+  {
+   "name": "Flammulina",
+   "type": "organism"
+  },
+  {
+   "name": "F. yunnanensis",
+   "type": "organism"
+  },
+  {
+   "name": "FTR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pH",
+   "type": "chemical"
+  },
+  {
+   "name": "iron",
+   "type": "chemical"
+  },
+  {
+   "name": "zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "potassium",
+   "type": "chemical"
+  },
+  {
+   "name": "glutamic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "aspartic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "umami taste",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FTR1",
+   "predicate": "is_expanded_in",
+   "target": "F. yunnanensis"
+  },
+  {
+   "source": "Z68",
+   "predicate": "has_desirable_flavor_quality",
+   "target": "glutamic acid"
+  }
+ ],
+ "truncated": false
+}

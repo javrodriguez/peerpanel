@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13517252:9:7cfaea43",
+ "entities": [
+  {
+   "name": "Phytase",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "Gut-targeted additive",
+   "type": "chemical"
+  },
+  {
+   "name": "Fishmeal",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphorus digestibility",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Phosphorus retention",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Phosphorus mineralization",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Phosphorus discharge outcomes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nutrient gap",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Intermediate biological pathway",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

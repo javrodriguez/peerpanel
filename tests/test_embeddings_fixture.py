@@ -46,13 +46,9 @@ class TestCommittedFixture:
 
 class TestCliSemantics:
     def test_check_exit_codes(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        monkeypatch.setattr(
-            pipeline, "check_live", lambda root, provider: (True, "abc", "abc")
-        )
+        monkeypatch.setattr(pipeline, "check_live", lambda root, provider: (True, "abc", "abc"))
         assert main(["embeddings", "--check"]) == 0
-        monkeypatch.setattr(
-            pipeline, "check_live", lambda root, provider: (False, "abc", "def")
-        )
+        monkeypatch.setattr(pipeline, "check_live", lambda root, provider: (False, "abc", "def"))
         assert main(["embeddings", "--check"]) == 1
 
 

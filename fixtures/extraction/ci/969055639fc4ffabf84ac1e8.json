@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13348253:4:ebeed2be",
+ "entities": [
+  {
+   "name": "SM200",
+   "type": "chemical"
+  },
+  {
+   "name": "MET",
+   "type": "chemical"
+  },
+  {
+   "name": "CYS",
+   "type": "chemical"
+  },
+  {
+   "name": "B5 Def",
+   "type": "chemical"
+  },
+  {
+   "name": "pantothenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "succinic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SM200",
+   "predicate": "has higher levels of",
+   "target": "acetic acid"
+  },
+  {
+   "source": "MET",
+   "predicate": "has higher levels of",
+   "target": "acetic acid"
+  },
+  {
+   "source": "CYS",
+   "predicate": "has higher levels of",
+   "target": "acetic acid"
+  },
+  {
+   "source": "B5 Def",
+   "predicate": "has most dramatic metabolic perturbations of",
+   "target": "glycerol"
+  },
+  {
+   "source": "B5 Def",
+   "predicate": "has most dramatic metabolic perturbations of",
+   "target": "acetic acid"
+  },
+  {
+   "source": "B5 Def",
+   "predicate": "has most dramatic metabolic perturbations of",
+   "target": "succinic acid"
+  },
+  {
+   "source": "methionine",
+   "predicate": "is a sole nitrogen source for",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "cysteine",
+   "predicate": "is a sole nitrogen source for",
+   "target": "S. cerevisiae"
+  }
+ ],
+ "truncated": false
+}

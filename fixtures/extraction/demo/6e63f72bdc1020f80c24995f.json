@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13429971:6:9a2c373e",
+ "entities": [
+  {
+   "name": "GCN4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GCN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "eIF2 alpha kinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hinnebusch AG",
+   "type": "organism"
+  },
+  {
+   "name": "Sattlegger E",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "mammals",
+   "type": "organism"
+  },
+  {
+   "name": "virus",
+   "type": "organism"
+  },
+  {
+   "name": "cancer",
+   "type": "organism"
+  },
+  {
+   "name": "cell",
+   "type": "organism"
+  },
+  {
+   "name": "protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GCN2",
+   "predicate": "phosphorylates",
+   "target": "eIF2 alpha kinase"
+  },
+  {
+   "source": "GCN2",
+   "predicate": "activates",
+   "target": "GCN4"
+  }
+ ],
+ "truncated": false
+}

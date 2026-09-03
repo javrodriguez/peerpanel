@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13514516:21:633a388e",
+ "entities": [
+  {
+   "name": "Zhao L.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pachysolen tannophilus",
+   "type": "organism"
+  },
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Ethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Pichia Stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Spathaspora Passalidarum",
+   "type": "organism"
+  },
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Zymomonas mobilis",
+   "type": "organism"
+  },
+  {
+   "name": "Mucor",
+   "type": "organism"
+  },
+  {
+   "name": "Fusarium",
+   "type": "organism"
+  },
+  {
+   "name": "Pestalotiopsis",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zhao L.",
+   "predicate": "ferment",
+   "target": "Xylose"
+  },
+  {
+   "source": "Pachysolen tannophilus",
+   "predicate": "produce",
+   "target": "Ethanol"
+  },
+  {
+   "source": "Pichia Stipitis",
+   "predicate": "ferment",
+   "target": "Xylose"
+  },
+  {
+   "source": "Spathaspora Passalidarum",
+   "predicate": "ferment",
+   "target": "Xylose"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "ferment",
+   "target": "Xylose"
+  },
+  {
+   "source": "Zymomonas mobilis",
+   "predicate": "ferment",
+   "target": "Xylose"
+  },
+  {
+   "source": "Pestalotiopsis",
+   "predicate": "ferment",
+   "target": "Xylose"
+  },
+  {
+   "source": "Pachysolen tannophilus",
+   "predicate": "produce",
+   "target": "Ethanol"
+  }
+ ],
+ "truncated": false
+}

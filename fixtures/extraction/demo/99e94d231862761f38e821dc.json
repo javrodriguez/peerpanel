@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515280:7:c97b002f",
+ "entities": [
+  {
+   "name": "Serum biochemical parameters",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ALT",
+   "type": "chemical"
+  },
+  {
+   "name": "AST",
+   "type": "chemical"
+  },
+  {
+   "name": "Dezhou jennies",
+   "type": "organism"
+  },
+  {
+   "name": "YH supplementation",
+   "type": "chemical"
+  },
+  {
+   "name": "MYE group",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MCON group",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L-tryptophan",
+   "type": "chemical"
+  },
+  {
+   "name": "L-valine",
+   "type": "chemical"
+  },
+  {
+   "name": "L-methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "L-tyrosine",
+   "type": "chemical"
+  },
+  {
+   "name": "carnitine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

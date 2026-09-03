@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC9757880:21:7e43c556",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "methylmercury",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrosulfide ions",
+   "type": "chemical"
+  },
+  {
+   "name": "HS-",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has methylmercury resistance",
+   "target": "methylmercury"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has hydrosulfide ions",
+   "target": "hydrosulfide ions"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has cysteine",
+   "target": "cysteine"
+  }
+ ],
+ "truncated": false
+}

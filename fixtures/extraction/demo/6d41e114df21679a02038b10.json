@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13514482:15:ccd52e0a",
+ "entities": [
+  {
+   "name": "High-Affinity Iron Uptake",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yeast Science",
+   "type": "organism"
+  },
+  {
+   "name": "Ftr1p iron permease",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast plasma membrane",
+   "type": "organism"
+  },
+  {
+   "name": "Orientation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "topology and structure-function relationships",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Biochem",
+   "type": "organism"
+  },
+  {
+   "name": "Andreini C. Bertini I. Cavallaro G. Holliday G.L. Thornton J.M.",
+   "type": "organism"
+  },
+  {
+   "name": "Metal ions",
+   "type": "chemical"
+  },
+  {
+   "name": "biological catalysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "enzyme",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "databases",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "High-Affinity Iron Uptake",
+   "predicate": "involves",
+   "target": "Yeast Science"
+  },
+  {
+   "source": "Ftr1p iron permease",
+   "predicate": "is located in",
+   "target": "yeast plasma membrane"
+  },
+  {
+   "source": "Orientation",
+   "predicate": "is related to",
+   "target": "topology and structure-function relationships"
+  },
+  {
+   "source": "Andreini C. Bertini I. Cavallaro G. Holliday G.L. Thornton J.M.",
+   "predicate": "studied",
+   "target": "Metal ions"
+  },
+  {
+   "source": "biological catalysis",
+   "predicate": "involves",
+   "target": "enzyme"
+  }
+ ],
+ "truncated": false
+}

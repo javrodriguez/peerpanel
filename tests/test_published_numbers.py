@@ -29,6 +29,17 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULTS = (ROOT / "results" / "RESULTS.md").read_text()
 README = (ROOT / "README.md").read_text()
 
+# Globbed, never hardcoded: these files were renamed once already, and a hardcoded name
+# turns into an unconditional FileNotFoundError that reads like a broken test rather than
+# an unbound number.
+PANEL_RECORDS = sorted((ROOT / "results").glob("panel-review-*.json"))
+PLANTED_RECORDS = sorted((ROOT / "results").glob("planted-eval-*.json"))
+HEADLINE_SUBJECT = "caprin-heterochromatin"  # `make eval`'s default subject
+# Imported, not retyped: the baseline arm was renamed once already and four assertions
+# were still asking the record for "single-agent-equal-compute", which raises
+# StopIteration and reads like a broken test rather than an unbound number.
+from peerpanel.evals.planted_eval import BASELINE_SYSTEM, PANEL_SYSTEM  # noqa: E402
+
 ROW_LABELS = {
     "BM25": "bm25",
     "vector": "vector",
@@ -55,9 +66,7 @@ def _published_demo_rows() -> dict[str, list[str]]:
     rows: dict[str, list[str]] = {}
     for label, rung in ROW_LABELS.items():
         # labels may be bolded when a rung leads its column
-        match = re.search(
-            rf"^\| \**{re.escape(label)}\** \|(.+)$", RESULTS, re.MULTILINE
-        )
+        match = re.search(rf"^\| \**{re.escape(label)}\** \|(.+)$", RESULTS, re.MULTILINE)
         assert match, f"no published row for {label}"
         rows[rung] = [c.strip() for c in match.group(1).split("|") if c.strip()]
     return rows
@@ -71,9 +80,7 @@ class TestAblationTableMatchesItsArtifact:
         for rung, cells in published.items():
             rows = data[rung]
             k = int(json.loads((ROOT / "results" / "ablation-demo.json").read_text())["k"])
-            at_k = sum(
-                1 for r in rows for _, rank in r["hits"] if rank is not None and rank <= k
-            )
+            at_k = sum(1 for r in rows for _, rank in r["hits"] if rank is not None and rank <= k)
             deep = sum(1 for r in rows for _, rank in r["hits"] if rank is not None)
             assert _cell(cells[0].split("/")[0]) == at_k, f"{rung} found@k"
             assert _cell(cells[1].split("/")[0]) == deep, f"{rung} found@deep"
@@ -129,8 +136,8 @@ class TestPanelGlossesMatchTheTable:
 
     def _flipped(self) -> list[tuple[int, int]]:
         out = []
-        for name in ("panel-review-met17.json", "panel-review-met17-run2.json"):
-            data = json.loads((ROOT / "results" / name).read_text())
+        for path in PANEL_RECORDS:
+            data = json.loads(path.read_text())
             flipped = sum(1 for v in data["verdicts"] if not v["swap_consistent"])
             out.append((flipped, int(data["n_swap_checked"])))
         return out
@@ -157,11 +164,13 @@ class TestPanelGlossesMatchTheTable:
     def test_swap_rates_quoted_match_the_records(self) -> None:
         published = {float(m) for m in re.findall(r"swap-consistency (\d\.\d+)", RESULTS + README)}
         actual = set()
-        for name in ("panel-review-met17.json", "panel-review-met17-run2.json"):
-            data = json.loads((ROOT / "results" / name).read_text())
-            actual.add(round(float(data["swap_consistency_rate"]), 2))
+        for path in PANEL_RECORDS:
+            data = json.loads(path.read_text())
+            rate = data["swap_consistency_rate"]
+            if rate is not None:
+                actual.add(round(float(rate), 2))
         for value in published:
-            assert round(value, 2) in actual, f"{value} is not either run's rate: {actual}"
+            assert round(value, 2) in actual, f"{value} is not any run's rate: {actual}"
 
 
 class TestIndexTableMatchesBuildStats:
@@ -179,28 +188,42 @@ class TestPlantedEvalMatchesItsArtifact:
     """The newest published numbers, and the ones a reader weighs most."""
 
     def _report(self) -> dict[str, object]:
-        return json.loads((ROOT / "results" / "planted-eval-demo.json").read_text())
+        """The headline table's record: the default subject of `make eval`.
+
+        Named rather than globbed, because two planted-error records are committed and
+        the published headline is one of them; the other has its own section, and
+        `test_every_committed_eval_record_is_discussed` keeps it from being ignored.
+        """
+        return json.loads((ROOT / "results" / f"planted-eval-{HEADLINE_SUBJECT}.json").read_text())
+
+    def test_every_committed_eval_record_is_discussed(self) -> None:
+        for path in PLANTED_RECORDS:
+            subject = path.stem.replace("planted-eval-", "")
+            assert subject in RESULTS, (
+                f"{path.name} is committed but {subject} is never mentioned in RESULTS.md — "
+                "a measurement nobody reads is a measurement nobody checked"
+            )
 
     def _arm(self, name: str) -> dict[str, object]:
         return next(r for r in self._report()["results"] if r["system"] == name)  # type: ignore[index,arg-type]
 
     def test_detection_counts(self) -> None:
         report = self._report()
-        panel, base = self._arm("panel"), self._arm("single-agent-equal-compute")
+        panel, base = self._arm(PANEL_SYSTEM), self._arm(BASELINE_SYSTEM)
         n = int(report["n_errors"])  # type: ignore[call-overload]
         for text in (RESULTS, README):
             assert f"**{len(panel['detected'])} / {n}**" in text  # type: ignore[arg-type]
             assert f"**{len(base['detected'])} / {n}**" in text  # type: ignore[arg-type]
 
     def test_token_and_wall_figures(self) -> None:
-        panel, base = self._arm("panel"), self._arm("single-agent-equal-compute")
+        panel, base = self._arm(PANEL_SYSTEM), self._arm(BASELINE_SYSTEM)
         for text in (RESULTS, README):
             assert f"{int(panel['total_tokens']):,}" in text  # type: ignore[call-overload]
             assert f"{int(base['total_tokens']):,}" in text  # type: ignore[call-overload]
 
     def test_the_multiplier_claims(self) -> None:
         """'4.5x the tokens and 8x the wall-clock' must match the artifact."""
-        panel, base = self._arm("panel"), self._arm("single-agent-equal-compute")
+        panel, base = self._arm(PANEL_SYSTEM), self._arm(BASELINE_SYSTEM)
         token_ratio = float(panel["total_tokens"]) / float(base["total_tokens"])  # type: ignore[arg-type]
         wall_ratio = float(panel["wall_s"]) / float(base["wall_s"])  # type: ignore[arg-type]
         for text, where in ((RESULTS, "RESULTS.md"), (README, "README.md")):
@@ -218,7 +241,7 @@ class TestPlantedEvalMatchesItsArtifact:
 
     def test_the_budget_share_claim(self) -> None:
         """'22% of the panel's compute' — the caveat that keeps the loss honest."""
-        panel, base = self._arm("panel"), self._arm("single-agent-equal-compute")
+        panel, base = self._arm(PANEL_SYSTEM), self._arm(BASELINE_SYSTEM)
         share = float(base["total_tokens"]) / float(panel["total_tokens"]) * 100  # type: ignore[arg-type]
         for match in re.finditer(r"(\d+)% of the panel", RESULTS + README):
             assert float(match.group(1)) == pytest.approx(share, abs=2), (

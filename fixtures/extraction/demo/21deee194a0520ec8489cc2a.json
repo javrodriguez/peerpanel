@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13485822:7:034974f6",
+ "entities": [
+  {
+   "name": "Malassezia pachydermatis",
+   "type": "organism"
+  },
+  {
+   "name": "Ergosterol",
+   "type": "chemical"
+  },
+  {
+   "name": "Antifungal",
+   "type": "chemical"
+  },
+  {
+   "name": "Azole",
+   "type": "chemical"
+  },
+  {
+   "name": "Miconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "Terbinafine",
+   "type": "chemical"
+  },
+  {
+   "name": "Candida spp.",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Trichophyton rubrum",
+   "type": "organism"
+  },
+  {
+   "name": "Malassezia restricta",
+   "type": "organism"
+  },
+  {
+   "name": "Malassezia furfur",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has resistance",
+   "target": "Azole"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has susceptibility",
+   "target": "Miconazole"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has virulence",
+   "target": "Ergosterol"
+  },
+  {
+   "source": "Candida spp.",
+   "predicate": "has resistance",
+   "target": "Azole"
+  }
+ ],
+ "truncated": false
+}

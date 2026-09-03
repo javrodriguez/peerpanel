@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13513244:16:9ac78cb9",
+ "entities": [
+  {
+   "name": "Tyrosine",
+   "type": "chemical"
+  },
+  {
+   "name": "YARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HARS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tRNA synthetase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Charcot-Marie-Tooth disease",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Histidyl-tRNA synthetase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BDNF",
+   "type": "chemical"
+  },
+  {
+   "name": "mTOR",
+   "type": "chemical"
+  },
+  {
+   "name": "YARS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "tRNA synthetase",
+   "predicate": "is associated with",
+   "target": "Charcot-Marie-Tooth disease"
+  },
+  {
+   "source": "Histidyl-tRNA synthetase",
+   "predicate": "is associated with",
+   "target": "Charcot-Marie-Tooth disease"
+  },
+  {
+   "source": "NARS1",
+   "predicate": "is associated with",
+   "target": "Charcot-Marie-Tooth disease"
+  },
+  {
+   "source": "YARS",
+   "predicate": "is associated with",
+   "target": "Charcot-Marie-Tooth disease"
+  },
+  {
+   "source": "ARS",
+   "predicate": "is associated with",
+   "target": "Charcot-Marie-Tooth disease"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,22 @@
+{
+ "community_id": 59,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "alpha-integrin",
+  "CLUSTAL W",
+  "cochleas",
+  "hereditary breast cancer",
+  "ICln",
+  "IClswell current",
+  "immunoglobulin deposits",
+  "Li-Fraumeni syndrome",
+  "mouse glomeruli",
+  "POU3F4 variants",
+  "SLC6A20",
+  "TP53 missense variants"
+ ],
+ "title": "Genetic Variants and Disease Associations in Mouse Models",
+ "summary": "This cluster explores the relationships between genetic variants and their associations with various diseases in mouse models. TP53 missense variants are linked to both Li-Fraumeni syndrome and hereditary breast cancer. The ICln method_or_tool is involved in activating IClswell current and binding to alpha-integrin. Additionally, POU3F4 variants transcriptionally upregulate SLC6A20. Immunoglobulin deposits are evaluated in mouse glomeruli, providing insight into potential disease mechanisms. These findings highlight the complex interplay between genetic variants and disease processes in mouse models.",
+ "truncated": false
+}

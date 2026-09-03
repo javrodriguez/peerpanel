@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13518488:13:02d29b0b",
+ "entities": [
+  {
+   "name": "Reihani SFS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Khosravi-Darani K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pleurotus albidus",
+   "type": "organism"
+  },
+  {
+   "name": "Pleurotus pulmonarius",
+   "type": "organism"
+  },
+  {
+   "name": "Stropharia rugosoannulata",
+   "type": "organism"
+  },
+  {
+   "name": "Ergothioneine",
+   "type": "chemical"
+  },
+  {
+   "name": "Lovastatin",
+   "type": "chemical"
+  },
+  {
+   "name": "Beta-Glucans",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Field peas",
+   "type": "organism"
+  },
+  {
+   "name": "Sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "Mycelial Fungi",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

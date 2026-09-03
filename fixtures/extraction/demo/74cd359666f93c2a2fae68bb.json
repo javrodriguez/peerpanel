@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13524880:17:f3f60bdf",
+ "entities": [
+  {
+   "name": "Tb927.11.10190",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tb927.10.12970",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TERT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AN1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AAT10.2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Δ35-AAT10",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "eYFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "T. brucei",
+   "type": "organism"
+  },
+  {
+   "name": "Merck KGaA",
+   "type": "organism"
+  },
+  {
+   "name": "Roche",
+   "type": "organism"
+  },
+  {
+   "name": "Takara Bio",
+   "type": "organism"
+  },
+  {
+   "name": "Thermo Fisher Scientific",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Tb927.11.10190",
+   "predicate": "is",
+   "target": "TERT"
+  },
+  {
+   "source": "Tb927.10.12970",
+   "predicate": "is",
+   "target": "AN1"
+  }
+ ],
+ "truncated": false
+}

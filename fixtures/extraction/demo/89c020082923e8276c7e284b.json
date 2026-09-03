@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC7470746:23:b3e45c25",
+ "entities": [
+  {
+   "name": "Jewell JL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Guan K-L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nutrient",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mTOR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cell growth",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Trends Biochem Sci",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zaman S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lippman SI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhao X",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Broach JR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Glucose",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Jewell JL",
+   "predicate": "studied",
+   "target": "Nutrient"
+  },
+  {
+   "source": "Guan K-L",
+   "predicate": "studied",
+   "target": "mTOR"
+  },
+  {
+   "source": "Nutrient",
+   "predicate": "regulates",
+   "target": "cell growth"
+  },
+  {
+   "source": "Trends Biochem Sci",
+   "predicate": "published",
+   "target": "Jewell JL"
+  },
+  {
+   "source": "Zaman S",
+   "predicate": "studied",
+   "target": "Saccharomyces"
+  },
+  {
+   "source": "Lippman SI",
+   "predicate": "studied",
+   "target": "Saccharomyces"
+  },
+  {
+   "source": "Zhao X",
+   "predicate": "studied",
+   "target": "Saccharomyces"
+  },
+  {
+   "source": "Broach JR",
+   "predicate": "studied",
+   "target": "Saccharomyces"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515494:11:de5805bf",
+ "entities": [
+  {
+   "name": "International Organisation of Vine and Wine",
+   "type": "organism"
+  },
+  {
+   "name": "Sparkling Wines|OIV",
+   "type": "organism"
+  },
+  {
+   "name": "Martínez-García",
+   "type": "organism"
+  },
+  {
+   "name": "García-Martínez",
+   "type": "organism"
+  },
+  {
+   "name": "Puig-Pujol",
+   "type": "organism"
+  },
+  {
+   "name": "Mauricio",
+   "type": "organism"
+  },
+  {
+   "name": "Moreno",
+   "type": "organism"
+  },
+  {
+   "name": "Ignacia Lambert-Royo",
+   "type": "organism"
+  },
+  {
+   "name": "Ubeda",
+   "type": "organism"
+  },
+  {
+   "name": "Del Barrio-Galán",
+   "type": "organism"
+  },
+  {
+   "name": "Sieczkowski",
+   "type": "organism"
+  },
+  {
+   "name": "Miquel Canals",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

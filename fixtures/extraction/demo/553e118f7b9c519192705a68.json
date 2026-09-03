@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC12278674:32:f2c90240",
+ "entities": [
+  {
+   "name": "Braisted J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Patt A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tindall C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sheils T",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Neyra J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Spencer K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RaMP-DB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wickham H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ggplot2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Raivo Kolde",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pheatmap",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Day NJ",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Braisted J",
+   "predicate": "developed",
+   "target": "RaMP-DB"
+  },
+  {
+   "source": "Wickham H",
+   "predicate": "developed",
+   "target": "ggplot2"
+  },
+  {
+   "source": "Raivo Kolde",
+   "predicate": "developed",
+   "target": "pheatmap"
+  },
+  {
+   "source": "Day NJ",
+   "predicate": "applied",
+   "target": "RaMP-DB"
+  }
+ ],
+ "truncated": false
+}

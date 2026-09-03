@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12628781:18:a916a2e7",
+ "entities": [
+  {
+   "name": "Stanke M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Schöffmann O",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Morgenstern B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Waack S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TSEBRA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BRAKER",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "OrthoDB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BUSCO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces Genome Database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Julia",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NCBI BLASTP",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

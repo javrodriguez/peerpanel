@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC6402699:29:24233c9f",
+ "entities": [
+  {
+   "name": "Robinson JT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thorvaldsdóttir H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Winckler W",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Guttman M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lander ES",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Getz G",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Integrative Genomics Viewer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nat Biotechnol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jones CB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ott EM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Keener JM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Curtiss M",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Robinson JT",
+   "predicate": "author",
+   "target": "Integrative Genomics Viewer"
+  },
+  {
+   "source": "Thorvaldsdóttir H",
+   "predicate": "author",
+   "target": "Integrative Genomics Viewer"
+  },
+  {
+   "source": "Winckler W",
+   "predicate": "author",
+   "target": "Integrative Genomics Viewer"
+  },
+  {
+   "source": "Guttman M",
+   "predicate": "author",
+   "target": "Integrative Genomics Viewer"
+  },
+  {
+   "source": "Lander ES",
+   "predicate": "author",
+   "target": "Integrative Genomics Viewer"
+  },
+  {
+   "source": "Getz G",
+   "predicate": "author",
+   "target": "Integrative Genomics Viewer"
+  }
+ ],
+ "truncated": false
+}

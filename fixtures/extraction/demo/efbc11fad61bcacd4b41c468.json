@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13467452:7:39418928",
+ "entities": [
+  {
+   "name": "SIRT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FOXO3a",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GLUT4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PPARγ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PGC-1α",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UCP2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "miR-9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Slc39a5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Glp1r",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Slc2a2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pdx1Cre",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ex-527",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SIRT1",
+   "predicate": "regulates",
+   "target": "FOXO3a"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "regulates",
+   "target": "GLUT4"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "regulates",
+   "target": "PPARγ"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "regulates",
+   "target": "PGC-1α"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "represses",
+   "target": "UCP2"
+  },
+  {
+   "source": "miR-9",
+   "predicate": "targets",
+   "target": "SIRT1"
+  },
+  {
+   "source": "miR-9",
+   "predicate": "regulates",
+   "target": "SIRT1"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "downregulates",
+   "target": "UCP2"
+  },
+  {
+   "source": "Ex-527",
+   "predicate": "inhibits",
+   "target": "SIRT1"
+  }
+ ],
+ "truncated": false
+}

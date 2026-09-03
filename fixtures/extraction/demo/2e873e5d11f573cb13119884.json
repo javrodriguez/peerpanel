@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC7334043:9:b74ded3e",
+ "entities": [
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Camelina sativa meal hydrolysate",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "Biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "Rhodosporidium kratochvilovae",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium diobovatum",
+   "type": "organism"
+  },
+  {
+   "name": "ent-kaurene",
+   "type": "chemical"
+  },
+  {
+   "name": "ultraviolet mutagenesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Agrobacterium-mediated transformation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CRISPR/Cas9 system",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produces",
+   "target": "carotenoids"
+  }
+ ],
+ "truncated": false
+}

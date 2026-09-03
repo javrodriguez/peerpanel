@@ -40,6 +40,16 @@ class PlantedManuscript(BaseModel):
     skipped_kinds: dict[str, str] = {}  # kind -> why nothing could be planted
 
 
+def scored_text(text: str, quote: str) -> str:
+    """The string a finding is scored on: its text plus the manuscript text it quotes.
+
+    ONE function for both arms. The panel's reviewers and the single-agent
+    baseline are each asked for a `quote` and each is scored on text + quote, so
+    neither arm can reach a detection token through a channel the other lacks.
+    """
+    return f"{text} {quote}".strip()
+
+
 _GENE = re.compile(r"\b([A-Z][a-z]{2}[0-9]{1,2}|[A-Z]{2,6}[0-9]{1,2})\b")
 _PVALUE = re.compile(r"\bp\s*[<=]\s*0\.0*[0-9]+\b", re.IGNORECASE)
 _PERCENT = re.compile(r"\b([0-9]{1,2}(?:\.[0-9])?)%")
@@ -47,9 +57,12 @@ _DIRECTION = re.compile(
     r"\b(increased|decreased|higher|lower|upregulated|downregulated)\b", re.IGNORECASE
 )
 _FLIP = {
-    "increased": "decreased", "decreased": "increased",
-    "higher": "lower", "lower": "higher",
-    "upregulated": "downregulated", "downregulated": "upregulated",
+    "increased": "decreased",
+    "decreased": "increased",
+    "higher": "lower",
+    "lower": "higher",
+    "upregulated": "downregulated",
+    "downregulated": "upregulated",
 }
 
 
@@ -105,9 +118,7 @@ def plant_errors(
     ]
     for i, symbol in rng.sample(candidates, min(n_per_kind, len(candidates))):
         digits = re.search(r"[0-9]+$", symbol)
-        wrong = (
-            symbol[: digits.start()] + str(int(digits.group()) + 1) if digits else symbol + "2"
-        )
+        wrong = symbol[: digits.start()] + str(int(digits.group()) + 1) if digits else symbol + "2"
         _apply(i, symbol, wrong, "gene_symbol_swap", wrong)
 
     # 2. Effect-direction flip: the classic reviewer catch.
@@ -168,8 +179,11 @@ def plant_errors(
     skipped = {
         kind: "no candidate site inside the reviewed window"
         for kind in (
-            "gene_symbol_swap", "effect_direction_flip", "impossible_pvalue",
-            "fabricated_citation", "impossible_percentage",
+            "gene_symbol_swap",
+            "effect_direction_flip",
+            "impossible_pvalue",
+            "fabricated_citation",
+            "impossible_percentage",
         )
         if kind not in planted_kinds
     }

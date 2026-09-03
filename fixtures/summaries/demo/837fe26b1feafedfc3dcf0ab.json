@@ -1,0 +1,22 @@
+{
+ "community_id": 56,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Cabili MN",
+  "Dewey CN",
+  "Goff L",
+  "Khrebtukova I",
+  "Koziol M",
+  "Li B",
+  "Luo S",
+  "Mayr C",
+  "RSEM",
+  "Sandberg R",
+  "Trapnell C",
+  "Wang ET"
+ ],
+ "title": "Cluster of RNA-Seq Analysis Methods",
+ "summary": "This cluster consists of 12 methods or tools used in RNA-Seq analysis, a technique for measuring gene expression levels. The members of this cluster are likely software tools or algorithms used for processing and analyzing RNA-Seq data, but without further information, their specific functions and relationships are unclear.",
+ "truncated": false
+}

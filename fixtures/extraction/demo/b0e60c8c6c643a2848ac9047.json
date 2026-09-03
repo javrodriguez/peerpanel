@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13485822:0:0563ec6f",
+ "entities": [
+  {
+   "name": "Malassezia pachydermatis",
+   "type": "organism"
+  },
+  {
+   "name": "ketoconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "ERG3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG24",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG25",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Marianna Domán",
+   "type": "organism"
+  },
+  {
+   "name": "HUN-REN Veterinary Medical Research Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Budapest",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hungary",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "University of Veterinary Medicine",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_upregulation",
+   "target": "ERG3"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_upregulation",
+   "target": "ERG5"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_upregulation",
+   "target": "ERG11"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_upregulation",
+   "target": "ERG24"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_upregulation",
+   "target": "ERG25"
+  },
+  {
+   "source": "Marianna Domán",
+   "predicate": "has_conceptualization",
+   "target": "Malassezia pachydermatis"
+  },
+  {
+   "source": "Marianna Domán",
+   "predicate": "has_data_curation",
+   "target": "Malassezia pachydermatis"
+  }
+ ],
+ "truncated": false
+}

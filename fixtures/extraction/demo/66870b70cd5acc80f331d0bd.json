@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC11974387:10:dfa087bc",
+ "entities": [
+  {
+   "name": "2,3-BDO",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Kim et al.",
+   "type": "organism"
+  },
+  {
+   "name": "Bacillus subtilis",
+   "type": "organism"
+  },
+  {
+   "name": "Als",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Alsc",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Bdh1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GPD1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GPD2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NoxE",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. cerevisiae",
+   "predicate": "produces",
+   "target": "2,3-BDO"
+  },
+  {
+   "source": "Kim et al.",
+   "predicate": "introduced",
+   "target": "Als"
+  },
+  {
+   "source": "Kim et al.",
+   "predicate": "introduced",
+   "target": "Alsc"
+  },
+  {
+   "source": "Kim et al.",
+   "predicate": "overexpressed",
+   "target": "Bdh1"
+  }
+ ],
+ "truncated": false
+}

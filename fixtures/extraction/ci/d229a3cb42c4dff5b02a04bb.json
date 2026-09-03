@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13274398:14:09b89954",
+ "entities": [
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein kinase A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "adenylate energy charge",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "adenylate cyclase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphotransferase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "G-protein coupled receptor system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hexose kinase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "adenylate energy system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "homeostasis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "homeorhesis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "optogenetic applications",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cAMP",
+   "predicate": "regulates",
+   "target": "protein kinase A"
+  },
+  {
+   "source": "protein kinase A",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "adenylate energy charge"
+  },
+  {
+   "source": "adenylate cyclase",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "phosphotransferase",
+   "predicate": "regulates",
+   "target": "adenylate cyclase"
+  },
+  {
+   "source": "G-protein coupled receptor system",
+   "predicate": "regulates",
+   "target": "hexose kinase"
+  },
+  {
+   "source": "hexose kinase",
+   "predicate": "regulates",
+   "target": "adenylate energy system"
+  },
+  {
+   "source": "adenylate energy system",
+   "predicate": "regulates",
+   "target": "homeostasis"
+  },
+  {
+   "source": "homeostasis",
+   "predicate": "regulates",
+   "target": "homeorhesis"
+  }
+ ],
+ "truncated": false
+}

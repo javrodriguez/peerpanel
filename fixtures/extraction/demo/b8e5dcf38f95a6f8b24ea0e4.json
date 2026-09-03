@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13518488:11:b663cc73",
+ "entities": [
+  {
+   "name": "Neurospora crassa mycoprotein",
+   "type": "organism"
+  },
+  {
+   "name": "Pleurotus pulmonarius",
+   "type": "organism"
+  },
+  {
+   "name": "Pleurotus albidus",
+   "type": "organism"
+  },
+  {
+   "name": "Fusarium",
+   "type": "organism"
+  },
+  {
+   "name": "Trichoderma",
+   "type": "organism"
+  },
+  {
+   "name": "Basidiomycetes",
+   "type": "organism"
+  },
+  {
+   "name": "Mycelium",
+   "type": "organism"
+  },
+  {
+   "name": "Food Chem",
+   "type": "chemical"
+  },
+  {
+   "name": "Toxicol",
+   "type": "chemical"
+  },
+  {
+   "name": "J Nutr Sci",
+   "type": "chemical"
+  },
+  {
+   "name": "Curr Opin Biotechnol",
+   "type": "chemical"
+  },
+  {
+   "name": "Curr Dev Nutr",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

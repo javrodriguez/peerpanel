@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13410889:3:d0c1b06f",
+ "entities": [
+  {
+   "name": "PAPS pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pseudomonas aeruginosa",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces lactis",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "PPK2CpaN",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATPS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "APSK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NLS-JUB1-XC114-GAL4AD/2X",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NLS-JUB1-XC191-GAL4AD/4X",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NLS-JUB1-XC191-GAL4AD/6X",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pSM11",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pSM12",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Pseudomonas aeruginosa",
+   "predicate": "adopt",
+   "target": "PPK2CpaN"
+  },
+  {
+   "source": "Kluyveromyces lactis",
+   "predicate": "adopt",
+   "target": "ATPS"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "adopt",
+   "target": "APSK"
+  },
+  {
+   "source": "NLS-JUB1-XC114-GAL4AD/2X",
+   "predicate": "express",
+   "target": "PPK2CpaN"
+  },
+  {
+   "source": "NLS-JUB1-XC191-GAL4AD/4X",
+   "predicate": "express",
+   "target": "ATPS"
+  },
+  {
+   "source": "NLS-JUB1-XC191-GAL4AD/6X",
+   "predicate": "express",
+   "target": "APSK"
+  }
+ ],
+ "truncated": false
+}

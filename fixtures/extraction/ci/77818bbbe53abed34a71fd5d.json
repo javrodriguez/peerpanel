@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10729969:23:74c8d1cc",
+ "entities": [
+  {
+   "name": "S-adenosylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "Hydrogen Sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Liver Health",
+   "type": "organism"
+  },
+  {
+   "name": "Cancer",
+   "type": "organism"
+  },
+  {
+   "name": "Physiol Rev.",
+   "type": "organism"
+  },
+  {
+   "name": "Free Radic Biol Med",
+   "type": "organism"
+  },
+  {
+   "name": "AGE",
+   "type": "organism"
+  },
+  {
+   "name": "Eur J Biochem",
+   "type": "organism"
+  },
+  {
+   "name": "J Mol Med Berl Ger",
+   "type": "organism"
+  },
+  {
+   "name": "Nat Microbiol",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S-adenosylmethionine",
+   "predicate": "involved in",
+   "target": "Liver Health"
+  },
+  {
+   "source": "Liver Health",
+   "predicate": "involved in",
+   "target": "Cancer"
+  },
+  {
+   "source": "Physiol Rev.",
+   "predicate": "involved in",
+   "target": "Liver Health"
+  },
+  {
+   "source": "Free Radic Biol Med",
+   "predicate": "involved in",
+   "target": "Glutathione"
+  },
+  {
+   "source": "J Mol Med Berl Ger",
+   "predicate": "involved in",
+   "target": "Hydrogen Sulfide"
+  }
+ ],
+ "truncated": false
+}

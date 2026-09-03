@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC5826700:19:d813a03e",
+ "entities": [
+  {
+   "name": "J Cell Biol",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Schultz M Di Paolo",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "G McCaffery JM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pon LA Role",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lipid Droplet Biogenesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Microlipophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Adaptation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lipid Imbalance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Dev Cell",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Greenberg ML Perturbation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Vacuolar ATPase",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

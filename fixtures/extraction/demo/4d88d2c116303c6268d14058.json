@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13453879:16:bd90a836",
+ "entities": [
+  {
+   "name": "Gao Y.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolites",
+   "type": "chemical"
+  },
+  {
+   "name": "Tieguanyin Food Chem",
+   "type": "chemical"
+  },
+  {
+   "name": "Eurotium cristatum",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "basidiomycetes",
+   "type": "organism"
+  },
+  {
+   "name": "terpenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "flavonoids",
+   "type": "chemical"
+  },
+  {
+   "name": "Pu-erh tea",
+   "type": "chemical"
+  },
+  {
+   "name": "N,N-Dimethylformamide",
+   "type": "chemical"
+  },
+  {
+   "name": "Butyl benzyl phthalate",
+   "type": "chemical"
+  },
+  {
+   "name": "kokumi-active peptides",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gao Y.",
+   "predicate": "studied",
+   "target": "metabolites"
+  },
+  {
+   "source": "Gao Y.",
+   "predicate": "studied",
+   "target": "Tieguanyin Food Chem"
+  }
+ ],
+ "truncated": false
+}

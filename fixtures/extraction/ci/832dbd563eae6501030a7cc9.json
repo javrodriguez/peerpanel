@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13092671:7:2cf0580e",
+ "entities": [
+  {
+   "name": "zrc1cot1ΔΔ cells",
+   "type": "organism"
+  },
+  {
+   "name": "cytosol",
+   "type": "organism"
+  },
+  {
+   "name": "Zn content",
+   "type": "chemical"
+  },
+  {
+   "name": "mutant cells",
+   "type": "organism"
+  },
+  {
+   "name": "media",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn(acetate)2",
+   "type": "chemical"
+  },
+  {
+   "name": "CM104",
+   "type": "organism"
+  },
+  {
+   "name": "background strain",
+   "type": "organism"
+  },
+  {
+   "name": "CM100",
+   "type": "organism"
+  },
+  {
+   "name": "CYT",
+   "type": "chemical"
+  },
+  {
+   "name": "FTSs",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast cells",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "zrc1cot1ΔΔ cells",
+   "predicate": "has",
+   "target": "cytosol"
+  },
+  {
+   "source": "zrc1cot1ΔΔ cells",
+   "predicate": "has",
+   "target": "Zn content"
+  },
+  {
+   "source": "zrc1cot1ΔΔ cells",
+   "predicate": "is",
+   "target": "mutant cells"
+  },
+  {
+   "source": "media",
+   "predicate": "contains",
+   "target": "Zn(acetate)2"
+  },
+  {
+   "source": "CM104",
+   "predicate": "is",
+   "target": "mutant cells"
+  },
+  {
+   "source": "CM100",
+   "predicate": "is",
+   "target": "background strain"
+  },
+  {
+   "source": "yeast cells",
+   "predicate": "has",
+   "target": "cytosol"
+  },
+  {
+   "source": "yeast cells",
+   "predicate": "has",
+   "target": "Zn content"
+  }
+ ],
+ "truncated": false
+}

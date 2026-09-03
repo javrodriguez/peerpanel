@@ -1,0 +1,41 @@
+{
+ "chunk_id": "PMC13515017:5:8f0f4667",
+ "entities": [
+  {
+   "name": "yku70Δ-A",
+   "type": "chemical"
+  },
+  {
+   "name": "yku70Δ-B",
+   "type": "chemical"
+  },
+  {
+   "name": "chr II",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CEN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Y'",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yku70Δ-A",
+   "predicate": "has_location",
+   "target": "chr II"
+  }
+ ],
+ "truncated": false
+}

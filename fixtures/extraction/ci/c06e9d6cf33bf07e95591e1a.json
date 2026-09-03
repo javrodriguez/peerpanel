@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC12994171:4:e37a7b06",
+ "entities": [
+  {
+   "name": "ERFVII protein RAP2.12",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "effector module",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "plant",
+   "type": "organism"
+  },
+  {
+   "name": "HRPE reporter",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "RAP2.12 C-terminal fusion",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "three distinct transcription activation domains",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "native yeast GAL4 AD",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "two synthetic TADs",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "6TAL-VP64",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GAL4STE12",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SYRAP",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "effector module"
+  },
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "plant"
+  },
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "HRPE reporter"
+  },
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "RAP2.12 C-terminal fusion"
+  },
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "three distinct transcription activation domains"
+  },
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "native yeast GAL4 AD"
+  },
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "two synthetic TADs"
+  },
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "6TAL-VP64"
+  },
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "GAL4STE12"
+  },
+  {
+   "source": "ERFVII protein RAP2.12",
+   "predicate": "has_component",
+   "target": "SYRAP"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC5826700:17:f8cb275d",
+ "entities": [
+  {
+   "name": "PLoS Genet",
+   "type": "organism"
+  },
+  {
+   "name": "e1004539",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "journal.pgen.1004539",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PMC4117435",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Liu B",
+   "type": "organism"
+  },
+  {
+   "name": "Larsson L",
+   "type": "organism"
+  },
+  {
+   "name": "Caballero A",
+   "type": "organism"
+  },
+  {
+   "name": "Hao X",
+   "type": "organism"
+  },
+  {
+   "name": "Oling D",
+   "type": "organism"
+  },
+  {
+   "name": "Grantham J",
+   "type": "organism"
+  },
+  {
+   "name": "Nystrom T",
+   "type": "organism"
+  },
+  {
+   "name": "polarisome",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Liu B",
+   "predicate": "required",
+   "target": "polarisome"
+  }
+ ],
+ "truncated": false
+}

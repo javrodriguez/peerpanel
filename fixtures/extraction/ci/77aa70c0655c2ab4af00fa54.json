@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13304748:12:2a3234c0",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Zimorski V.",
+   "type": "organism"
+  },
+  {
+   "name": "Ku C.",
+   "type": "organism"
+  },
+  {
+   "name": "Martin W.F.",
+   "type": "organism"
+  },
+  {
+   "name": "Gould S.B.",
+   "type": "organism"
+  },
+  {
+   "name": "Burden N.",
+   "type": "organism"
+  },
+  {
+   "name": "Sewell F.",
+   "type": "organism"
+  },
+  {
+   "name": "Andersen M.E.",
+   "type": "organism"
+  },
+  {
+   "name": "Boobis A.",
+   "type": "organism"
+  },
+  {
+   "name": "Chipman J.K.",
+   "type": "organism"
+  },
+  {
+   "name": "Cronin M.T.D.",
+   "type": "organism"
+  },
+  {
+   "name": "Hutchinson T.H.",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

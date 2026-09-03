@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC12628781:14:04cf03b6",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Lactococcus lactis",
+   "type": "organism"
+  },
+  {
+   "name": "R. mucilaginosa sp. GUMS16",
+   "type": "organism"
+  },
+  {
+   "name": "Candida famata",
+   "type": "organism"
+  },
+  {
+   "name": "Candida guilliermondii",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Pma1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EPS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glycolytic metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "EPS biosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nitrogen metabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has EPS production",
+   "target": "EPS"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has glycolytic metabolism",
+   "target": "glycolytic metabolism"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has EPS biosynthesis",
+   "target": "EPS biosynthesis"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has nitrogen metabolism",
+   "target": "nitrogen metabolism"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has P-type H-ATPase Pma1",
+   "target": "Pma1"
+  },
+  {
+   "source": "Lactococcus lactis",
+   "predicate": "has EPS production",
+   "target": "EPS"
+  },
+  {
+   "source": "Candida famata",
+   "predicate": "has EPS production",
+   "target": "EPS"
+  },
+  {
+   "source": "Candida guilliermondii",
+   "predicate": "has EPS production",
+   "target": "EPS"
+  }
+ ],
+ "truncated": false
+}

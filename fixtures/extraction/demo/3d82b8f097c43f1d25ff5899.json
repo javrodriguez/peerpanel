@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC12628781:19:d3050fd9",
+ "entities": [
+  {
+   "name": "Proton transport",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pH control",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fungi",
+   "type": "organism"
+  },
+  {
+   "name": "Ramos J",
+   "type": "organism"
+  },
+  {
+   "name": "Sychrová H",
+   "type": "organism"
+  },
+  {
+   "name": "Kschischo M",
+   "type": "organism"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Vph1p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Stv1p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sch9",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Proton transport",
+   "predicate": "involves",
+   "target": "pH control"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "is_mutated",
+   "target": "Vph1p"
+  },
+  {
+   "source": "V-ATPase",
+   "predicate": "is_mutated",
+   "target": "Stv1p"
+  }
+ ],
+ "truncated": false
+}

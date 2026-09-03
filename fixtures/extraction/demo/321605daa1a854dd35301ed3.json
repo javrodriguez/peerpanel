@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13524880:24:e4133582",
+ "entities": [
+  {
+   "name": "Dzhumashev D.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sala R.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FGFR4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NCAM1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CD276",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AGRL2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "JAM3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "L1CAM",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rhabdomyosarcoma",
+   "type": "chemical"
+  },
+  {
+   "name": "procyclic Trypanosoma brucei",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Venny",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Dzhumashev D.",
+   "predicate": "highlight",
+   "target": "AGRL2"
+  },
+  {
+   "source": "Dzhumashev D.",
+   "predicate": "highlight",
+   "target": "JAM3"
+  },
+  {
+   "source": "Dzhumashev D.",
+   "predicate": "highlight",
+   "target": "L1CAM"
+  },
+  {
+   "source": "Dzhumashev D.",
+   "predicate": "surface targets",
+   "target": "rhabdomyosarcoma"
+  }
+ ],
+ "truncated": false
+}

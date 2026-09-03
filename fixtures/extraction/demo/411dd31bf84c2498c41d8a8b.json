@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC1409804:10:d77aadb5",
+ "entities": [
+  {
+   "name": "Stefanie Dahms",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tomáš Vinař",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Broňa Brejová",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Peter Meinicke",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BMBF project",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MediGrid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "01AK803G",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Burge C Identification",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Human Genomic DNA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Stanke M Waack S Gene prediction",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hidden Markov model",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Burge C Identification",
+   "predicate": "identified",
+   "target": "Genes"
+  },
+  {
+   "source": "Stanke M Waack S Gene prediction",
+   "predicate": "used",
+   "target": "hidden Markov model"
+  }
+ ],
+ "truncated": false
+}

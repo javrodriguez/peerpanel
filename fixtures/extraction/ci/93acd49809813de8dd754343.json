@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC12994171:15:e33d9730",
+ "entities": [
+  {
+   "name": "D. J. Gibbs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nitric oxide sensing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "plants",
+   "type": "organism"
+  },
+  {
+   "name": "proteolytic control",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "group VII erf transcription factors",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cell",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "T. A. Lee",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J. Bailey-Serres",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Integrative analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "epigenome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "translatome uncovers patterns",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "D. J. Gibbs",
+   "predicate": "mediated_by",
+   "target": "Nitric oxide sensing"
+  },
+  {
+   "source": "Nitric oxide sensing",
+   "predicate": "controlled_by",
+   "target": "proteolytic control"
+  },
+  {
+   "source": "proteolytic control",
+   "predicate": "regulates",
+   "target": "group VII erf transcription factors"
+  },
+  {
+   "source": "T. A. Lee",
+   "predicate": "performed",
+   "target": "Integrative analysis"
+  },
+  {
+   "source": "Integrative analysis",
+   "predicate": "involved",
+   "target": "epigenome"
+  },
+  {
+   "source": "epigenome",
+   "predicate": "involved",
+   "target": "translatome uncovers patterns"
+  }
+ ],
+ "truncated": false
+}

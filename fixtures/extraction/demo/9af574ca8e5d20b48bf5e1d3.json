@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13471478:9:2eef8795",
+ "entities": [
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NM_006006.4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HEK293 Phoenix cells",
+   "type": "organism"
+  },
+  {
+   "name": "kidney cell line",
+   "type": "organism"
+  },
+  {
+   "name": "HeLa cells",
+   "type": "organism"
+  },
+  {
+   "name": "Zbtb16",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ZBTB16",
+   "predicate": "interacts_with",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "interacts_with",
+   "target": "NM_006006.4"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "interacts_with",
+   "target": "Zbtb16"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "interacts_with",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "interacts_with",
+   "target": "NM_006006.4"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "interacts_with",
+   "target": "Zbtb16"
+  },
+  {
+   "source": "NM_006006.4",
+   "predicate": "interacts_with",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "NM_006006.4",
+   "predicate": "interacts_with",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "NM_006006.4",
+   "predicate": "interacts_with",
+   "target": "Zbtb16"
+  },
+  {
+   "source": "Zbtb16",
+   "predicate": "interacts_with",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "Zbtb16",
+   "predicate": "interacts_with",
+   "target": "NM_006006.4"
+  },
+  {
+   "source": "Zbtb16",
+   "predicate": "interacts_with",
+   "target": "ZBTB16"
+  }
+ ],
+ "truncated": false
+}

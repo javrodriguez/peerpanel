@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC6547517:10:f5cb56dd",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "proteome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CBS",
+   "type": "organism"
+  },
+  {
+   "name": "Westerdijk Fungal Biodiversity Institute",
+   "type": "organism"
+  },
+  {
+   "name": "Utrecht",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Netherlands",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "polypropylene glycol",
+   "type": "chemical"
+  },
+  {
+   "name": "bioreactors",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_proteome",
+   "target": "proteome"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "grows_in",
+   "target": "xylose"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "grows_in",
+   "target": "glucose"
+  }
+ ],
+ "truncated": false
+}

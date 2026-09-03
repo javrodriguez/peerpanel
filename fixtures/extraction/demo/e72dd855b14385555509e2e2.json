@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13450799:13:6f03a95c",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Haa1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YGP1–3HA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ygp1–3HA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP26",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "LRG1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rho1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pum1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pum2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Puf5",
+   "predicate": "regulates",
+   "target": "LRG1"
+  }
+ ],
+ "truncated": false
+}

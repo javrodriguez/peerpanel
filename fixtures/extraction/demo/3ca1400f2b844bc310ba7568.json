@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13467452:1:1394791e",
+ "entities": [
+  {
+   "name": "pancreas",
+   "type": "organism"
+  },
+  {
+   "name": "β-cells",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "insulin",
+   "type": "chemical"
+  },
+  {
+   "name": "ATP",
+   "type": "chemical"
+  },
+  {
+   "name": "K+ATP channel",
+   "type": "chemical"
+  },
+  {
+   "name": "Ca2+",
+   "type": "chemical"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "gastrointestinal tract",
+   "type": "organism"
+  },
+  {
+   "name": "skeletal muscle",
+   "type": "organism"
+  },
+  {
+   "name": "adipose tissue",
+   "type": "organism"
+  },
+  {
+   "name": "liver",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "β-cells",
+   "predicate": "secretes",
+   "target": "insulin"
+  },
+  {
+   "source": "β-cells",
+   "predicate": "takes up",
+   "target": "glucose"
+  },
+  {
+   "source": "mitochondria",
+   "predicate": "produces",
+   "target": "ATP"
+  }
+ ],
+ "truncated": false
+}

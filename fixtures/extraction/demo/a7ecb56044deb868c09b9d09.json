@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13450799:18:7b5367f0",
+ "entities": [
+  {
+   "name": "Megumi Sato",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kaoru Irie",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yasuyuki Suda",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tomoki Mizuno",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kenji Irie",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLOS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NAAS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YGP1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PUF5",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MSN2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MSN4",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Megumi Sato",
+   "predicate": "author",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Megumi Sato",
+   "predicate": "author",
+   "target": "PUF5"
+  },
+  {
+   "source": "Megumi Sato",
+   "predicate": "author",
+   "target": "MSN2"
+  },
+  {
+   "source": "Megumi Sato",
+   "predicate": "author",
+   "target": "MSN4"
+  },
+  {
+   "source": "PLOS",
+   "predicate": "tool",
+   "target": "NAAS"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "expression",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "PUF5",
+   "predicate": "regulation",
+   "target": "YGP1"
+  }
+ ],
+ "truncated": false
+}

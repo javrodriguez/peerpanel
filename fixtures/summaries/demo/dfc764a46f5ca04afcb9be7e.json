@@ -1,0 +1,22 @@
+{
+ "community_id": 60,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "CIT1-2GFP-ter-URA3",
+  "IRE1-2GFP-ter-URA3",
+  "NAB2-GFP-ter-URA3",
+  "NSR1-GFP-ter-URA3",
+  "OM14-2GFP-ter-URA3",
+  "pCU-GFP-PHO8-ter-URA3",
+  "PRC1-2GFP-ter-URA3",
+  "pTPI1-SS-GFP-HDEL-URA3",
+  "PUS1-2GFP-ter-URA3",
+  "UG72-2GFP",
+  "UG72-GFP",
+  "YBH3-2GFP-ter-URA3"
+ ],
+ "title": "GFP-Expressing Plasmids with Various Backbones",
+ "summary": "This cluster consists of 11 GFP-expressing plasmids, each with a unique backbone. UG72-2GFP and UG72-GFP are central plasmids that serve as backbones for several other plasmids, including CIT1-2GFP-ter-URA3, IRE1-2GFP-ter-URA3, NAB2-GFP-ter-URA3, pTPI1-SS-GFP-HDEL-URA3, and OM14-2GFP-ter-URA3. The remaining plasmids, such as CIT1-2GFP-ter-URA3 and IRE1-2GFP-ter-URA3, are derivatives of these central plasmids, indicating a hierarchical relationship between them.",
+ "truncated": false
+}

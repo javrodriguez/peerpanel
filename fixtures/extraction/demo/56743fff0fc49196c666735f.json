@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC3563226:6:e4532ffa",
+ "entities": [
+  {
+   "name": "IMX168",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "amdSYM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IMX200",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IMX201",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IMX206",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CEN.PK113-7D",
+   "type": "organism"
+  },
+  {
+   "name": "CBS8066",
+   "type": "organism"
+  },
+  {
+   "name": "YSBN",
+   "type": "organism"
+  },
+  {
+   "name": "S288c",
+   "type": "organism"
+  },
+  {
+   "name": "CBS1483",
+   "type": "organism"
+  },
+  {
+   "name": "S. eubayanus CBS12357",
+   "type": "organism"
+  },
+  {
+   "name": "CAN1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "IMX168",
+   "predicate": "has_direct_repeats",
+   "target": "amdSYM"
+  },
+  {
+   "source": "IMX168",
+   "predicate": "has_integration",
+   "target": "amdSYM"
+  },
+  {
+   "source": "IMX168",
+   "predicate": "has_mitotic_recombination",
+   "target": "amdSYM"
+  },
+  {
+   "source": "IMX168",
+   "predicate": "has_correct_marker_removal",
+   "target": "IMX200"
+  }
+ ],
+ "truncated": false
+}

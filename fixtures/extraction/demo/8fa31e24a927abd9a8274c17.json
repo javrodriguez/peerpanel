@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12278674:27:e0216f86",
+ "entities": [
+  {
+   "name": "Nat Commun",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Rai R",
+   "type": "organism"
+  },
+  {
+   "name": "Tate JJ",
+   "type": "organism"
+  },
+  {
+   "name": "Nelson DR",
+   "type": "organism"
+  },
+  {
+   "name": "Cooper TG",
+   "type": "organism"
+  },
+  {
+   "name": "gln3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TorC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rapamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen limitation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nitrogen Catabolite Repression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "mammals",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

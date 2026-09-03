@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC6547517:2:5352d805",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon source",
+   "type": "chemical"
+  },
+  {
+   "name": "medium",
+   "type": "chemical"
+  },
+  {
+   "name": "batch cultivations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "C/N ratio",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen limitation",
+   "type": "chemical"
+  },
+  {
+   "name": "sugar consumption",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "optical density",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "DCW measurements",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_growth_rate",
+   "target": "glucose"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_growth_rate",
+   "target": "xylose"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "consumes",
+   "target": "glucose"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "consumes",
+   "target": "xylose"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_optical_density",
+   "target": "optical density"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_DCW",
+   "target": "DCW measurements"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_lipid_content",
+   "target": "lipid production"
+  }
+ ],
+ "truncated": false
+}

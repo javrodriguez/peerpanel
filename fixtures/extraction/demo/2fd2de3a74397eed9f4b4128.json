@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7690147:12:078395bd",
+ "entities": [
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula mucilaginosa",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula graminis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Cladobotryum protrusum",
+   "type": "organism"
+  },
+  {
+   "name": "Gossypium australe",
+   "type": "organism"
+  },
+  {
+   "name": "Gymnocypris selincuoensis",
+   "type": "organism"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "Arachis hypogaea",
+   "type": "organism"
+  },
+  {
+   "name": "Neurospora crassa",
+   "type": "organism"
+  },
+  {
+   "name": "Cystofilobasidium infirmominiatum",
+   "type": "organism"
+  },
+  {
+   "name": "C. capitatum",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

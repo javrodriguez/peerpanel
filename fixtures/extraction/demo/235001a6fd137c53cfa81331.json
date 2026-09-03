@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC7873862:14:9fcb3186",
+ "entities": [
+  {
+   "name": "BOFdat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lee A. K.",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "C-4 sterol demethylation enzymes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bacterial and eukaryotic sterol synthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Proc. Natl. Acad. Sci. U.S.A.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLoS Comput. Biol.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lee H. J.",
+   "type": "organism"
+  },
+  {
+   "name": "3beta-hydroxysteroid Dehydrogenase/3-ketosteroid reductase",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "alpha-tomatine biosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "tomato",
+   "type": "organism"
+  },
+  {
+   "name": "Plant Cell Physiol.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lee A. K.",
+   "predicate": "distinguishes",
+   "target": "C-4 sterol demethylation enzymes"
+  },
+  {
+   "source": "Lee A. K.",
+   "predicate": "involved in",
+   "target": "bacterial and eukaryotic sterol synthesis"
+  },
+  {
+   "source": "Lee H. J.",
+   "predicate": "involved in",
+   "target": "alpha-tomatine biosynthesis"
+  },
+  {
+   "source": "Lee H. J.",
+   "predicate": "in",
+   "target": "tomato"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has",
+   "target": "C-4 sterol demethylation enzymes"
+  },
+  {
+   "source": "Proc. Natl. Acad. Sci. U.S.A.",
+   "predicate": "published in",
+   "target": "Lee A. K."
+  },
+  {
+   "source": "PLoS Comput. Biol.",
+   "predicate": "published in",
+   "target": "BOFdat"
+  },
+  {
+   "source": "Lee H. J.",
+   "predicate": "published in",
+   "target": "Plant Cell Physiol."
+  },
+  {
+   "source": "Lee A. K.",
+   "predicate": "distinguishes",
+   "target": "bacterial and eukaryotic sterol synthesis"
+  },
+  {
+   "source": "Lee H. J.",
+   "predicate": "involved in",
+   "target": "alpha-tomatine biosynthesis"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has",
+   "target": "C-4 sterol demethylation enzymes"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13515273:9:a1a2b9e5",
+ "entities": [
+  {
+   "name": "G. Abagyan",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "G. Siuzdak",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "XCMS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Y.H. Yun",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "F. Liang",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "B.C. Deng",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "G.B. Lai",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C.M. Vicente Gonçalves",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H.M. Lu",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J. Yan",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "X. Huang",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L.Z. Yi",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "G. Abagyan",
+   "predicate": "developed",
+   "target": "XCMS"
+  }
+ ],
+ "truncated": false
+}

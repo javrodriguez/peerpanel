@@ -1,0 +1,11 @@
+panel review of 10.1101/2023.05.18.541364 (excluded: ['PMC10729969'])
+  [methods-statistics · ollama-native:llama3.1:8b] scores {'soundness': 4, 'presentation': 4, 'contribution': 4} confidence 4 · 8 findings
+  [prior-work-novelty · ollama-native:qwen2:7b] scores {'soundness': 4, 'presentation': 4, 'contribution': 3} confidence 4 · 8 findings
+  claims: 0 supported · 0 refuted · 20 NEI (swap-consistency 0.7 over n=20)
+  deterministic lens: 0 findings · conflicts: 0 · tokens 226585 · wall 1859.3s
+  model calls: 46 · largest prompt 7317 tokens · smallest window 4096 (every prompt read whole)
+  summary: The meta-review synthesizes the findings, verdicts, and conflicts from the provided information:
+
+### Methods and Statistics
+- **Soundness (Major/Minor)**: The identification of met17 mutants through genetic screens and their growth behavior on inorganic sulfate is sound, though the growth dynamics 
+review: full record -> /Users/rodrij92/glitch/workspaces/graphrag-review/results/panel-review-met17-auxotroph.json

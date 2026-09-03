@@ -1,0 +1,22 @@
+{
+ "community_id": 54,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Adkins JN",
+  "Daly DS",
+  "Jacobs JM",
+  "MASIC",
+  "Matzke MM",
+  "Metz TO",
+  "Monroe MW",
+  "Shaw JL",
+  "Sims AC Baric RS",
+  "Smith RD",
+  "Waters KM",
+  "Webb-Robertson B-JM"
+ ],
+ "title": "Development of MASIC and Related Methods",
+ "summary": "This cluster consists of various methods or tools related to MASIC, a method developed by Monroe MW. The exact relationships between these methods are not specified, but MASIC is the central entity, indicating that the other methods may be associated with or influenced by it in some way.",
+ "truncated": false
+}

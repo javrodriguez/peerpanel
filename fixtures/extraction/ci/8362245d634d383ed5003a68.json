@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13228058:14:552b658f",
+ "entities": [
+  {
+   "name": "Verticillium dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "Magnaporthe oryzae",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Ustilago maydis",
+   "type": "organism"
+  },
+  {
+   "name": "Fusarium graminearum",
+   "type": "organism"
+  },
+  {
+   "name": "Botrytis cinerea",
+   "type": "organism"
+  },
+  {
+   "name": "Zymoseptoria tritici",
+   "type": "organism"
+  },
+  {
+   "name": "MoImd4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MoPdeH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PHT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PHT2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC7334043:12:0db5780d",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang S",
+   "type": "organism"
+  },
+  {
+   "name": "Zhao X",
+   "type": "organism"
+  },
+  {
+   "name": "Zhou YJ",
+   "type": "organism"
+  },
+  {
+   "name": "Zhu Z",
+   "type": "organism"
+  },
+  {
+   "name": "Appl Microbiol Biotechnol",
+   "type": "organism"
+  },
+  {
+   "name": "Biotechnol Bioeng",
+   "type": "organism"
+  },
+  {
+   "name": "J Ind Microbiol Biotechnol",
+   "type": "organism"
+  },
+  {
+   "name": "Bioprocess Biosyst Eng",
+   "type": "organism"
+  },
+  {
+   "name": "Nat Commun",
+   "type": "organism"
+  },
+  {
+   "name": "Nat Energy",
+   "type": "organism"
+  },
+  {
+   "name": "Microb Cell Fact",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zhang S",
+   "predicate": "Engineering",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Zhao X",
+   "predicate": "Lipid production",
+   "target": "Rhodosporidium toruloides"
+  }
+ ],
+ "truncated": false
+}

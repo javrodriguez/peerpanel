@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13228058:15:a1711a63",
+ "entities": [
+  {
+   "name": "Verticillium dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "Fusarium oxysporum",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Talaromyces marneffei",
+   "type": "organism"
+  },
+  {
+   "name": "Phytophthora sojae",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Candida auris",
+   "type": "organism"
+  },
+  {
+   "name": "plant cell wall",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "jasmonate production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "xylanase VdXyn4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CFEM proteins",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glutathione",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

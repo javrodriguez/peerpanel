@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC11618413:4:4f8dfa81",
+ "entities": [
+  {
+   "name": "ThioT",
+   "type": "chemical"
+  },
+  {
+   "name": "fibers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "curli",
+   "type": "chemical"
+  },
+  {
+   "name": "Nile Red",
+   "type": "chemical"
+  },
+  {
+   "name": "ATR-FTIR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "One-way ANOVA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "biofilm",
+   "type": "organism"
+  },
+  {
+   "name": "urea",
+   "type": "chemical"
+  },
+  {
+   "name": "Trp",
+   "type": "chemical"
+  },
+  {
+   "name": "NATA",
+   "type": "chemical"
+  },
+  {
+   "name": "protein",
+   "type": "chemical"
+  },
+  {
+   "name": "β-sheet",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ThioT",
+   "predicate": "binds_to",
+   "target": "fibers"
+  },
+  {
+   "source": "fibers",
+   "predicate": "has_secondary_structure",
+   "target": "β-sheet"
+  },
+  {
+   "source": "curli",
+   "predicate": "has_secondary_structure",
+   "target": "β-sheet"
+  },
+  {
+   "source": "Nile Red",
+   "predicate": "binds_to",
+   "target": "fibers"
+  },
+  {
+   "source": "ATR-FTIR",
+   "predicate": "analyzes",
+   "target": "fibers"
+  },
+  {
+   "source": "urea",
+   "predicate": "denatures",
+   "target": "fibers"
+  }
+ ],
+ "truncated": false
+}

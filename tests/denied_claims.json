@@ -1,5 +1,5 @@
 {
-  "_note": "Claims this repo must never make about itself. Kept as DATA, not as prose in the test that enforces them — otherwise the enforcing file trips its own sweep and needs a whole-file exemption, which is how the one absolute stopped being enforced anywhere.",
+  "_note": "Claims this repo must never make about itself. Kept as DATA, not as prose in the test that enforces them \u2014 otherwise the enforcing file trips its own sweep and needs a whole-file exemption, which is how the one absolute stopped being enforced anywhere.",
   "denied": {
     "production-ready": "this is a demonstration system",
     "state-of-the-art": "no benchmark here supports it",
@@ -8,5 +8,16 @@
     "autonomous reviewer": "explicitly out of scope",
     "world-class": "marketing register"
   },
-  "denied_everywhere": ["production-ready"]
+  "denied_everywhere": [
+    "production-ready"
+  ],
+  "persona_words": [
+    "expert",
+    "world-class",
+    "rigorous",
+    "experienced",
+    "senior",
+    "renowned"
+  ],
+  "_persona_note": "Adjectives that turn a task prompt into a persona prompt; the reviewer system prompt must not contain them. Data for the same reason as `denied`."
 }

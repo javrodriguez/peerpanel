@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10832132:17:2cfec7b0",
+ "entities": [
+  {
+   "name": "Y Lu C",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Shin HC Roth HR Gao M Lu L Xu Z Nogues",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "De-Ryck T Lanthaler S Mishra S",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zhang T Zhu T Gao K Zhou W Yu",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lin TY Goyal P Girshick R",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Ozenne B Subtil F Maucort-Boulch D",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Necci M Piovesan D Caid P DisProt C Tosatto SCE",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yang H Chen L Cheng Z Yang M Wang J Lin C",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zheng L",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zhang H",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lu M",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Unsal S",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

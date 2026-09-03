@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC12278674:28:8131e93b",
+ "entities": [
+  {
+   "name": "mTOR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Snf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "AMPK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "calcineurin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TFEB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EF-Tu",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MIG1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Synechocystis sp. PCC 6803",
+   "type": "organism"
+  },
+  {
+   "name": "CRZ1/TCN1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mTOR",
+   "predicate": "regulates",
+   "target": "TORC1"
+  }
+ ],
+ "truncated": false
+}

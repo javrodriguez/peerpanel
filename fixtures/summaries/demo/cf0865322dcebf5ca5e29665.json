@@ -1,0 +1,22 @@
+{
+ "community_id": 39,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Das R",
+  "Eismann S",
+  "Evans R",
+  "Figurnov M",
+  "Green T",
+  "Jumper J",
+  "Karelina M",
+  "Pritzel A",
+  "Rangan R",
+  "Ronneberger O",
+  "Townshend RJL",
+  "Watkins AM"
+ ],
+ "title": "List of Process or Phenotype Entities",
+ "summary": "This cluster consists of 12 entities labeled as process or phenotype, but no relationships between them are specified. The entities are listed without any connections or descriptions, suggesting they may be a collection of unrelated concepts or entities from a knowledge graph.",
+ "truncated": false
+}

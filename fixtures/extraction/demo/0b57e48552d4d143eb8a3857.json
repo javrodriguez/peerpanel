@@ -1,0 +1,89 @@
+{
+ "chunk_id": "PMC13429971:5:1e1294c8",
+ "entities": [
+  {
+   "name": "Gcn2-HsC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gcn1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "anti-human GCN2 phospho-Thr899 antibody",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ScGcn2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HsGCN2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "eIF2α",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "3AT",
+   "type": "chemical"
+  },
+  {
+   "name": "gcn1Δ gcn2Δ strain",
+   "type": "organism"
+  },
+  {
+   "name": "Massey University",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gcn2-HsC",
+   "predicate": "dependent_on",
+   "target": "Gcn1"
+  },
+  {
+   "source": "Gcn2-HsC",
+   "predicate": "requires",
+   "target": "Gcn1"
+  },
+  {
+   "source": "Gcn2-HsC",
+   "predicate": "activated_by",
+   "target": "Gcn1"
+  },
+  {
+   "source": "Gcn2-HsC",
+   "predicate": "similar_to",
+   "target": "HsGCN2"
+  },
+  {
+   "source": "Gcn2-HsC",
+   "predicate": "differ_from",
+   "target": "ScGcn2"
+  },
+  {
+   "source": "Gcn1",
+   "predicate": "required_for",
+   "target": "Gcn2-HsC"
+  },
+  {
+   "source": "Gcn1",
+   "predicate": "activated",
+   "target": "Gcn2-HsC"
+  },
+  {
+   "source": "Gcn2-HsC",
+   "predicate": "similar_to",
+   "target": "HsGCN2"
+  },
+  {
+   "source": "Gcn2-HsC",
+   "predicate": "differ_from",
+   "target": "ScGcn2"
+  }
+ ],
+ "truncated": false
+}

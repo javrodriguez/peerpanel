@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13312927:8:4ba97b2d",
+ "entities": [
+  {
+   "name": "Histone 3 (H3)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  },
+  {
+   "name": "SAH",
+   "type": "chemical"
+  },
+  {
+   "name": "Hcy",
+   "type": "chemical"
+  },
+  {
+   "name": "SAM",
+   "type": "chemical"
+  },
+  {
+   "name": "SAHH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mCherry",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CVD",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cardiovascular remodeling",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glutathione synthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "folate cycle",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hcy",
+   "predicate": "indicator",
+   "target": "CVD"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "deletion",
+   "target": "yeast"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "knockdown",
+   "target": "Drosophila"
+  },
+  {
+   "source": "SAH",
+   "predicate": "accumulation",
+   "target": "CVD"
+  },
+  {
+   "source": "yeast",
+   "predicate": "production",
+   "target": "Hcy"
+  },
+  {
+   "source": "Drosophila",
+   "predicate": "production",
+   "target": "Hcy"
+  },
+  {
+   "source": "SAHH",
+   "predicate": "mutation",
+   "target": "yeast"
+  }
+ ],
+ "truncated": false
+}

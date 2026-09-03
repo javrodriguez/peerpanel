@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10729969:25:5d72c75c",
+ "entities": [
+  {
+   "name": "Academic Press",
+   "type": "organism"
+  },
+  {
+   "name": "Hart SFM",
+   "type": "organism"
+  },
+  {
+   "name": "Skelding D",
+   "type": "organism"
+  },
+  {
+   "name": "Waite AJ",
+   "type": "organism"
+  },
+  {
+   "name": "Burton JC",
+   "type": "organism"
+  },
+  {
+   "name": "Shou W",
+   "type": "organism"
+  },
+  {
+   "name": "Schindelin J",
+   "type": "organism"
+  },
+  {
+   "name": "Arganda-Carreras I",
+   "type": "organism"
+  },
+  {
+   "name": "Frise E",
+   "type": "organism"
+  },
+  {
+   "name": "Kaynig V",
+   "type": "organism"
+  },
+  {
+   "name": "Longair M",
+   "type": "organism"
+  },
+  {
+   "name": "Pietzsch T",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

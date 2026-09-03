@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13450573:6:85e44021",
+ "entities": [
+  {
+   "name": "GO Biological Process",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PANTHER Overrepresentation Test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GO Ontology database",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Fisher's exact test",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "false discovery rate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ShinyGO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ensembl Release",
+   "type": "organism"
+  },
+  {
+   "name": "Cytoscape",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RStudio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA sequencing analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WGCNA modules",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GO Biological Process",
+   "predicate": "analyzed_by",
+   "target": "PANTHER Overrepresentation Test"
+  },
+  {
+   "source": "PANTHER Overrepresentation Test",
+   "predicate": "uses",
+   "target": "GO Ontology database"
+  },
+  {
+   "source": "GO Ontology database",
+   "predicate": "contains",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "PANTHER Overrepresentation Test",
+   "predicate": "performed_on",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "ShinyGO",
+   "predicate": "uses",
+   "target": "Ensembl Release"
+  }
+ ],
+ "truncated": false
+}

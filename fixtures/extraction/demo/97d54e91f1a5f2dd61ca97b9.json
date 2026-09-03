@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10832132:16:19de0cbb",
+ "entities": [
+  {
+   "name": "Sureyya Rifaioglu",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "A Dogan",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "T Jesus Martin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "M Cetin-Atalay",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "R Atalay",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "V",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Wang S",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "You R",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Liu Y",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Xiong Y",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Zhu S",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Unsal S",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC3563226:9:777e1d85",
+ "entities": [
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus niger",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus nidulans",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces lactis",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia ciferrii",
+   "type": "organism"
+  },
+  {
+   "name": "Neurospora crassa",
+   "type": "organism"
+  },
+  {
+   "name": "Mol Gen Genet",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "amdS gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNA ligase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DSDA",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "has selectable marker",
+   "target": "amdS gene"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has selectable marker",
+   "target": "URA3 gene"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has gene disruption",
+   "target": "DSDA"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has gene targeting",
+   "target": "DNA ligase"
+  },
+  {
+   "source": "Aspergillus niger",
+   "predicate": "has selectable marker",
+   "target": "amdS gene"
+  },
+  {
+   "source": "Aspergillus nidulans",
+   "predicate": "has selectable marker",
+   "target": "amdS gene"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has gene disruption",
+   "target": "DSDA"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has gene targeting",
+   "target": "DNA ligase"
+  },
+  {
+   "source": "Kluyveromyces lactis",
+   "predicate": "has selectable marker",
+   "target": "URA3 gene"
+  },
+  {
+   "source": "Pichia ciferrii",
+   "predicate": "has gene targeting",
+   "target": "DNA ligase"
+  },
+  {
+   "source": "Neurospora crassa",
+   "predicate": "has selectable marker",
+   "target": "amdS gene"
+  },
+  {
+   "source": "Mol Gen Genet",
+   "predicate": "has gene expression",
+   "target": "yeast"
+  }
+ ],
+ "truncated": false
+}

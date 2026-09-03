@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC8164748:8:82713903",
+ "entities": [
+  {
+   "name": "washed yeast biomass",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "High Throughput Screening eXTension",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Vertex 70 FTIR spectrometer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bruker Optik",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Germany",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cell suspension",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IR-light-transparent silicon 384-well microplate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FTIR analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Spectra",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Partial least squares regression",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLSR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shapaval",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "washed yeast biomass",
+   "predicate": "analyzed_by",
+   "target": "FTIR analysis"
+  },
+  {
+   "source": "High Throughput Screening eXTension",
+   "predicate": "used_with",
+   "target": "Vertex 70 FTIR spectrometer"
+  },
+  {
+   "source": "Vertex 70 FTIR spectrometer",
+   "predicate": "used_with",
+   "target": "Bruker Optik"
+  },
+  {
+   "source": "cell suspension",
+   "predicate": "transferred_to",
+   "target": "IR-light-transparent silicon 384-well microplate"
+  },
+  {
+   "source": "FTIR analysis",
+   "predicate": "performed_on",
+   "target": "Spectra"
+  }
+ ],
+ "truncated": false
+}

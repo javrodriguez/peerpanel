@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13450799:2:7e7f7515",
+ "entities": [
+  {
+   "name": "YCplac33 plasmid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YGP1promoter-ORF-3’UTR fragment",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MCM2 promoter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YGP1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "STRE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ISOGEN reagent",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PrimeScript RT reagent Kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "QuantStudio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SYBR Premix Ex Taq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SCR1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "α-factor",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "YGP1promoter-ORF-3’UTR fragment"
+  },
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "MCM2 promoter"
+  },
+  {
+   "source": "YCplac33 plasmid",
+   "predicate": "contains",
+   "target": "GFP"
+  },
+  {
+   "source": "GFP",
+   "predicate": "contains",
+   "target": "GFP"
+  }
+ ],
+ "truncated": false
+}

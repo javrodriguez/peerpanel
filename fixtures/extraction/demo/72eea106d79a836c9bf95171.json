@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC7470746:22:7679590f",
+ "entities": [
+  {
+   "name": "WY2467",
+   "type": "organism"
+  },
+  {
+   "name": "orgS−",
+   "type": "organism"
+  },
+  {
+   "name": "lys−",
+   "type": "organism"
+  },
+  {
+   "name": "lys−orgS−",
+   "type": "organism"
+  },
+  {
+   "name": "ACI",
+   "type": "organism"
+  },
+  {
+   "name": "CT",
+   "type": "organism"
+  },
+  {
+   "name": "Maxine Linial",
+   "type": "organism"
+  },
+  {
+   "name": "Shannon Murray",
+   "type": "organism"
+  },
+  {
+   "name": "Linda Breeden",
+   "type": "organism"
+  },
+  {
+   "name": "Lucas Sullivan",
+   "type": "organism"
+  },
+  {
+   "name": "Li Xie",
+   "type": "organism"
+  },
+  {
+   "name": "Alex Yuan",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WY2467",
+   "predicate": "has genotype",
+   "target": "orgS−"
+  },
+  {
+   "source": "WY2467",
+   "predicate": "has phenotype",
+   "target": "lys−"
+  },
+  {
+   "source": "lys−",
+   "predicate": "has genotype",
+   "target": "orgS−"
+  },
+  {
+   "source": "lys−orgS−",
+   "predicate": "has genotype",
+   "target": "orgS−"
+  }
+ ],
+ "truncated": false
+}

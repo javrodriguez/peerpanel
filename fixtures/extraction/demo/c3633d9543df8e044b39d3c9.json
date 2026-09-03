@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC8116571:14:4f48b52f",
+ "entities": [
+  {
+   "name": "Candida parapsilosis",
+   "type": "organism"
+  },
+  {
+   "name": "genome shuffling",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "arabitol",
+   "type": "chemical"
+  },
+  {
+   "name": "l-arabinose",
+   "type": "chemical"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Hypocrea jecorina",
+   "type": "organism"
+  },
+  {
+   "name": "lignocellulosic biomass",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Candida parapsilosis",
+   "predicate": "improved_by",
+   "target": "genome shuffling"
+  },
+  {
+   "source": "genome shuffling",
+   "predicate": "produces",
+   "target": "arabitol"
+  }
+ ],
+ "truncated": false
+}

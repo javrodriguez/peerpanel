@@ -10,9 +10,11 @@ import pytest
 
 from peerpanel.agents.claims_verifier import (
     MIN_SWAP_N,
+    REVIEWER_CLAIM_RULE,
     VERDICT_SCHEMA,
     decompose_claims,
     decomposition_schema,
+    swap_consistency_by_source,
     swap_consistency_rate,
     verify_claim,
     verify_claims,
@@ -39,10 +41,24 @@ class _StubChat:
         self.payloads = list(payloads)
         self.calls: list[dict[str, object]] = []
 
-    def chat(self, *, system: str, user: str, json_schema: object = None,
-             temperature: float = 0.0, max_tokens: int = 2048) -> ChatResponse:
-        self.calls.append({"system": system, "user": user, "schema": json_schema,
-                           "temp": temperature, "max_tokens": max_tokens})
+    def chat(
+        self,
+        *,
+        system: str,
+        user: str,
+        json_schema: object = None,
+        temperature: float = 0.0,
+        max_tokens: int = 2048,
+    ) -> ChatResponse:
+        self.calls.append(
+            {
+                "system": system,
+                "user": user,
+                "schema": json_schema,
+                "temp": temperature,
+                "max_tokens": max_tokens,
+            }
+        )
         payload = self.payloads[min(len(self.calls) - 1, len(self.payloads) - 1)]
         return ChatResponse(text=payload, model="stub", prompt_tokens=3, completion_tokens=5)
 
@@ -284,8 +300,9 @@ class TestSpanGrounding:
 class TestLedger:
     def test_every_call_is_recorded(self) -> None:
         ledger = TokenLedger()
-        decompose_claims(PASSAGE, _StubChat(TRUNCATED, _claims_payload("c")), "manuscript",
-                         ledger=ledger)
+        decompose_claims(
+            PASSAGE, _StubChat(TRUNCATED, _claims_payload("c")), "manuscript", ledger=ledger
+        )
         verify_claim(CLAIM, HITS, _StubChat(SUPPORTS_C1), ledger)
         assert ledger.calls == 4  # 2 decomposition (retry) + 2 judgements
         assert ledger.prompt_tokens == 12
@@ -321,16 +338,84 @@ class TestVerifyClaims:
         assert stub.calls == []
         assert verdicts[0].verdict == VERDICT_NEI
         assert verdicts[0].swap_consistent is True
+        assert verdicts[0].swapped is False
+
+    def test_concurrent_verification_keeps_input_order_and_exact_counts(self) -> None:
+        """Claims are judged VERIFY_WORKERS at a time; the record must read in
+        input order whichever finished first, and the shared ledger must count
+        every call exactly once under contention."""
+        import threading
+        import time
+
+        class _SlowStub(_StubChat):
+            def chat(self, **kw: object) -> ChatResponse:  # type: ignore[override]
+                # Later claims answer sooner, so completion order is reversed.
+                claim = str(kw["user"]).split("\n")[1]
+                time.sleep(0.02 * (12 - int(claim.rsplit("#", 1)[1])))
+                return super().chat(**kw)  # type: ignore[arg-type]
+
+        claims = [
+            AtomicClaim(claim_id=f"manuscript:{i}:12345678", text=f"claim #{i}", source="m")
+            for i in range(12)
+        ]
+        stub = _SlowStub(SUPPORTS_C1)
+        ledger = TokenLedger()
+        seen_threads: set[int] = set()
+
+        def retrieve(_q: str) -> list[tuple[str, str]]:
+            seen_threads.add(threading.get_ident())
+            return HITS
+
+        verdicts = verify_claims(claims, retrieve, stub, ledger)
+        assert [v.claim_id for v in verdicts] == [c.claim_id for c in claims]
+        assert all(v.claim_text == c.text for v, c in zip(verdicts, claims, strict=True))
+        assert len(seen_threads) > 1, "verification did not actually run concurrently"
+        assert ledger.calls == 24 and ledger.total_tokens == 24 * 8
 
 
-def _verdict(consistent: bool) -> ClaimVerdict:
+def _verdict(consistent: bool, source: str = "m") -> ClaimVerdict:
     return ClaimVerdict(
-        claim_id="m:0:12345678",
+        claim_id=f"{source}:0:12345678",
         claim_text="a claim",
         verdict=VERDICT_SUPPORTS if consistent else VERDICT_NEI,
         evidence=[],
         swap_consistent=consistent,
+        swapped=True,
     )
+
+
+class TestSwapConsistencyBySource:
+    def test_each_source_gets_its_own_rate_and_n(self) -> None:
+        verdicts = (
+            [_verdict(True, "manuscript")] * MIN_SWAP_N
+            + [_verdict(False, "methods-statistics")] * MIN_SWAP_N
+            + [_verdict(True, "prior-work-novelty")] * 2
+        )
+        by = swap_consistency_by_source(verdicts)
+        assert by["manuscript"] == (1.0, MIN_SWAP_N)
+        assert by["methods-statistics"] == (0.0, MIN_SWAP_N)
+        assert by["prior-work-novelty"] == (None, 2)  # below the reporting n: withheld
+
+    def test_unswapped_claims_do_not_count_toward_any_source(self) -> None:
+        unswapped = ClaimVerdict(
+            claim_id="manuscript:0:12345678",
+            claim_text="c",
+            verdict=VERDICT_NEI,
+            evidence=[],
+            swap_consistent=True,
+            swapped=False,
+        )
+        assert swap_consistency_by_source([unswapped]) == {"manuscript": (None, 0)}
+
+    def test_reviewer_passages_get_the_science_only_rule(self) -> None:
+        """Reviewer findings are opinions; only the propositions about the science
+        inside them are claims. The rule is in the prompt for every non-manuscript
+        source and absent for the manuscript's own text."""
+        stub = _StubChat(_claims_payload("Dcr1 is required for heterochromatin."))
+        decompose_claims("The intro is well organised.", stub, source="methods-statistics")
+        decompose_claims(PASSAGE, stub, source="manuscript")
+        assert REVIEWER_CLAIM_RULE.strip() in str(stub.calls[0]["system"])
+        assert "reviewer's notes" not in str(stub.calls[1]["system"])
 
 
 class TestSwapConsistencyRate:
@@ -384,8 +469,9 @@ class TestLiveVerification:
     def test_real_decomposition_returns_atomic_claims(self) -> None:
         from peerpanel.providers import OllamaOpenAIChat
 
-        claims = decompose_claims(PASSAGE, OllamaOpenAIChat("llama3.1:8b"), "manuscript",
-                                  max_claims=4)
+        claims = decompose_claims(
+            PASSAGE, OllamaOpenAIChat("llama3.1:8b"), "manuscript", max_claims=4
+        )
         assert 1 <= len(claims) <= 4
         assert all(c.claim_id.startswith("manuscript:") for c in claims)
         assert any("met4" in c.text.lower() or "met17" in c.text.lower() for c in claims)

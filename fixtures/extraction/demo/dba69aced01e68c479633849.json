@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13485822:5:b3be4cde",
+ "entities": [
+  {
+   "name": "azoles",
+   "type": "chemical"
+  },
+  {
+   "name": "ergosterol",
+   "type": "chemical"
+  },
+  {
+   "name": "Cdr4 efflux pump",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Neurospora crassa",
+   "type": "organism"
+  },
+  {
+   "name": "Hu et al",
+   "type": "chemical"
+  },
+  {
+   "name": "Arb1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nog1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nop4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nop7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rlp24",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ENO1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FBA1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Neurospora crassa",
+   "predicate": "has",
+   "target": "Cdr4 efflux pump"
+  },
+  {
+   "source": "azoles",
+   "predicate": "depletes",
+   "target": "ergosterol"
+  }
+ ],
+ "truncated": false
+}

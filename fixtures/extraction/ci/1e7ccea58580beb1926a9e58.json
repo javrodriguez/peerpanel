@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13348253:13:ab256998",
+ "entities": [
+  {
+   "name": "Thomas D",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jacquemin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Surdin-Kerjan Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MET4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Centromere-binding factor 1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Mol Cell Biol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Microbiol Mol Biol Rev",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J Agric Food Chem",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J Appl Microbiol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J Biol Chem",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Microbiology",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

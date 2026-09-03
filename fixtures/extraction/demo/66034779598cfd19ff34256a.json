@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC11974387:9:c438feec",
+ "entities": [
+  {
+   "name": "LA",
+   "type": "chemical"
+  },
+  {
+   "name": "PLA",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "pyruvate",
+   "type": "chemical"
+  },
+  {
+   "name": "lactate dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ldh",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADH",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Jen1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cyb2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Dld1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nde1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "LA",
+   "predicate": "is_produced_by",
+   "target": "PLA"
+  },
+  {
+   "source": "LA",
+   "predicate": "requires",
+   "target": "NADH"
+  },
+  {
+   "source": "LA",
+   "predicate": "is_converted_from",
+   "target": "pyruvate"
+  },
+  {
+   "source": "LA",
+   "predicate": "is_catalyzed_by",
+   "target": "lactate dehydrogenase"
+  }
+ ],
+ "truncated": false
+}

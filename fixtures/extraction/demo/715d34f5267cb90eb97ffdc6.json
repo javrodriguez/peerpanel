@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13524880:23:064d674d",
+ "entities": [
+  {
+   "name": "Martín Y. Siverio J.M.",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "nitrate transporter Ynt1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "plasma membrane",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "nitrogen limitation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NH4",
+   "type": "chemical"
+  },
+  {
+   "name": "transport",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AMT monomers",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "carboxyl tails",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "KATP channels",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pH switch",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Martín Y. Siverio J.M.",
+   "predicate": "phosphorylation",
+   "target": "nitrate transporter Ynt1"
+  },
+  {
+   "source": "yeast",
+   "predicate": "delivery",
+   "target": "plasma membrane"
+  },
+  {
+   "source": "NH4",
+   "predicate": "transport",
+   "target": "AMT monomers"
+  },
+  {
+   "source": "AMT monomers",
+   "predicate": "essential cross talk",
+   "target": "carboxyl tails"
+  },
+  {
+   "source": "KATP channels",
+   "predicate": "inward rectification",
+   "target": "pH switch"
+  }
+ ],
+ "truncated": false
+}

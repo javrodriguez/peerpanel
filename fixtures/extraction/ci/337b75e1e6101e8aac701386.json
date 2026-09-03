@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13026841:9:863856ed",
+ "entities": [
+  {
+   "name": "Zhang X.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li Q.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Xu Z.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dou J.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mass spectrometry - based metabolomics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "health and medical science",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "systematic review",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RSC Adv",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nocito M.C.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hantel C.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lerario A.M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mastrorocco F.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zhang X.",
+   "predicate": "uses",
+   "target": "Mass spectrometry - based metabolomics"
+  },
+  {
+   "source": "Zhang X.",
+   "predicate": "applies",
+   "target": "health and medical science"
+  },
+  {
+   "source": "Zhang X.",
+   "predicate": "conducts",
+   "target": "systematic review"
+  }
+ ],
+ "truncated": false
+}

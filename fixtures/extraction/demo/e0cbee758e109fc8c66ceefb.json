@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7382830:16:4f926d00",
+ "entities": [
+  {
+   "name": "Lennen RM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jensen K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mohammed ET",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Malla S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Börner RA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chekina K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Guzmán GI Sandberg TE LaCroix RA Nyerges Á Papp H de Raad M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hunter JD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Waskom M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lupton RC Allwood JM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Schroeder MP Lopez-Bigas N",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Deatherage DE Barrick JE",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

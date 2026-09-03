@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13274398:15:4ff79492",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Snf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TOR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Gcn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GCN4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BCY1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FHL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SCFGrr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "phosphoglucose isomerase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "adenylate cyclase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein kinase A",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

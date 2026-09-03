@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC3563226:3:d92874f4",
+ "entities": [
+  {
+   "name": "Ashbya gossypii",
+   "type": "organism"
+  },
+  {
+   "name": "TEF2ter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pUG6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Guldener",
+   "type": "organism"
+  },
+  {
+   "name": "XhoI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KpnI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Phusion Hot Start Polymerase",
+   "type": "chemical"
+  },
+  {
+   "name": "Finnzymes",
+   "type": "organism"
+  },
+  {
+   "name": "Vantaa",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Finland",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "p426TEF",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mumberg",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Ashbya gossypii",
+   "predicate": "has_gene",
+   "target": "TEF2ter"
+  },
+  {
+   "source": "pUG6",
+   "predicate": "has_gene",
+   "target": "TEF2ter"
+  },
+  {
+   "source": "pUG6",
+   "predicate": "has_restriction_site",
+   "target": "XhoI"
+  },
+  {
+   "source": "pUG6",
+   "predicate": "has_restriction_site",
+   "target": "KpnI"
+  },
+  {
+   "source": "p426TEF",
+   "predicate": "has_gene",
+   "target": "TEF2ter"
+  },
+  {
+   "source": "pUG6",
+   "predicate": "has_vector",
+   "target": "p426TEF"
+  }
+ ],
+ "truncated": false
+}

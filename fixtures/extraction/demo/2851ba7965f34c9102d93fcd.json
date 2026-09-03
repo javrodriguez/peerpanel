@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC3563226:8:481917ba",
+ "entities": [
+  {
+   "name": "Agha-Mohammadi S",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Lotze MT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "tet operator elements",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "transactivator",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "minimal promoter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "basal leakiness",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CAN1 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Alani E",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cao L",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kleckner N",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3 selection",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Agha-Mohammadi S",
+   "predicate": "created",
+   "target": "tet operator elements"
+  },
+  {
+   "source": "Lotze MT",
+   "predicate": "created",
+   "target": "minimal promoter"
+  },
+  {
+   "source": "Alani E",
+   "predicate": "used",
+   "target": "URA3 selection"
+  },
+  {
+   "source": "Kleckner N",
+   "predicate": "used",
+   "target": "URA3 selection"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "CAN1 gene"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "CAN1 gene"
+  },
+  {
+   "source": "Agha-Mohammadi S",
+   "predicate": "created",
+   "target": "minimal promoter"
+  },
+  {
+   "source": "Lotze MT",
+   "predicate": "created",
+   "target": "minimal promoter"
+  }
+ ],
+ "truncated": false
+}

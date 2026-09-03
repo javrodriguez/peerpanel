@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13304748:6:32893073",
+ "entities": [
+  {
+   "name": "glr1Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sod1Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pos5Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GSH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GSH2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GLR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CdSe QD",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnS QD",
+   "type": "chemical"
+  },
+  {
+   "name": "CdS QD",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn2+",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "glr1Δ",
+   "predicate": "has_higher_tolerance",
+   "target": "CdS QD"
+  },
+  {
+   "source": "pos5Δ",
+   "predicate": "has_hypersensitivity",
+   "target": "ZnS QD"
+  },
+  {
+   "source": "ZnS QD",
+   "predicate": "causes_hypersensitivity",
+   "target": "pos5Δ"
+  },
+  {
+   "source": "Zn2+",
+   "predicate": "is_released_from",
+   "target": "ZnS QD"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "is_host_organism",
+   "target": "glr1Δ"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13515017:3:5c3f7164",
+ "entities": [
+  {
+   "name": "Gene amplification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "chemostat",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "culture vessel",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CHEF gel electrophoresis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CEN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chr II",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "FY4",
+   "type": "organism"
+  },
+  {
+   "name": "ars228Δ",
+   "type": "organism"
+  },
+  {
+   "name": "aCGH",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gene amplification",
+   "predicate": "involves",
+   "target": "SUL1"
+  },
+  {
+   "source": "Gene amplification",
+   "predicate": "occurs in",
+   "target": "yeast"
+  },
+  {
+   "source": "yeast",
+   "predicate": "grows in",
+   "target": "chemostat"
+  },
+  {
+   "source": "chemostat",
+   "predicate": "contains",
+   "target": "culture vessel"
+  },
+  {
+   "source": "yeast",
+   "predicate": "undergoes",
+   "target": "CHEF gel electrophoresis"
+  },
+  {
+   "source": "CEN2",
+   "predicate": "is a probe for",
+   "target": "chr II"
+  }
+ ],
+ "truncated": false
+}

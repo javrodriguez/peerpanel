@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13410889:10:0dab71c7",
+ "entities": [
+  {
+   "name": "Datta P",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fu L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "He W",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Koffas MAG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dordick JS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Linhardt RJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li XY",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Deng JQ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhao YH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cao YL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hou J",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

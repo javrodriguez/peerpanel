@@ -1,0 +1,22 @@
+{
+ "community_id": 76,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "1 μM ToPro 3 (T-3605, Molecular Probes, Eugene, OR)",
+  "10 μL",
+  "2 μL",
+  "90 μL",
+  "Culture samples",
+  "Cytek (Fremont, CA) DxP Cytometer",
+  "diluted culture sample",
+  "FlowJo software",
+  "Milli-Q H2O",
+  "Shimadzu (Kyoto, Japan) Nexera X2 series ultra-performance HPLC (UHPLC) system",
+  "stock",
+  "unautoclaved 1.6-mL Eppendorf tubes"
+ ],
+ "title": "Cell Culture Sample Analysis with FlowJo Software and ToPro 3 Staining",
+ "summary": "This cluster involves the analysis of cell culture samples using FlowJo software. The samples are diluted in Milli-Q H2O and stored in unautoclaved 1.6-mL Eppendorf tubes. ToPro 3 staining is used to supplement the samples, which are then analyzed using FlowJo software. The analysis is likely performed on a Cytek DxP Cytometer, and the Shimadzu Nexera X2 series UHPLC system may be used for further analysis of the samples.",
+ "truncated": false
+}

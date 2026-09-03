@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13484205:9:1de68f69",
+ "entities": [
+  {
+   "name": "Heat Shock Factor 1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yeast Genome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Target Genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "eLife",
+   "type": "organism"
+  },
+  {
+   "name": "RP92464",
+   "type": "organism"
+  },
+  {
+   "name": "Russo C. J.",
+   "type": "organism"
+  },
+  {
+   "name": "Husain K.",
+   "type": "organism"
+  },
+  {
+   "name": "Ranganathan R.",
+   "type": "organism"
+  },
+  {
+   "name": "Pincus D.",
+   "type": "organism"
+  },
+  {
+   "name": "Murugan A.",
+   "type": "organism"
+  },
+  {
+   "name": "Santiago A.",
+   "type": "organism"
+  },
+  {
+   "name": "Morano K. A.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Heat Shock Factor 1",
+   "predicate": "restructures",
+   "target": "Yeast Genome"
+  },
+  {
+   "source": "Heat Shock Factor 1",
+   "predicate": "activates",
+   "target": "Target Genes"
+  }
+ ],
+ "truncated": false
+}

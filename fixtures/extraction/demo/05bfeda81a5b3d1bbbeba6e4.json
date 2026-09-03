@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC5826700:13:bf1df5a2",
+ "entities": [
+  {
+   "name": "PDK1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDK2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ypk1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pkc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PKB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S6K",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pkh1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pkh2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pkh3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rim15",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PDK1",
+   "predicate": "phosphorylates",
+   "target": "Ypk1"
+  },
+  {
+   "source": "PDK2",
+   "predicate": "phosphorylates",
+   "target": "Pkc1"
+  },
+  {
+   "source": "PKB",
+   "predicate": "regulates",
+   "target": "S6K"
+  },
+  {
+   "source": "Pkh1",
+   "predicate": "regulates",
+   "target": "PKA"
+  },
+  {
+   "source": "Pkh2",
+   "predicate": "regulates",
+   "target": "PKA"
+  },
+  {
+   "source": "Pkh3",
+   "predicate": "regulates",
+   "target": "PKA"
+  }
+ ],
+ "truncated": false
+}

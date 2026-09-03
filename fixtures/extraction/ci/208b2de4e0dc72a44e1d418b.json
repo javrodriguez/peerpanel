@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13228058:2:15f00e9f",
+ "entities": [
+  {
+   "name": "VdMFS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "Vd592",
+   "type": "organism"
+  },
+  {
+   "name": "Agrobacterium tumefaciens",
+   "type": "organism"
+  },
+  {
+   "name": "GV3101",
+   "type": "organism"
+  },
+  {
+   "name": "GhCHLI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VdMFS2 interference fragment",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pTRV2 vector",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pTRV1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pTRV2-00",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pTRV2-GhCHLI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HIGS",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VdMFS2",
+   "predicate": "is_targeted_by",
+   "target": "HIGS"
+  },
+  {
+   "source": "VdMFS2",
+   "predicate": "is_expressed_in",
+   "target": "V. dahliae"
+  },
+  {
+   "source": "VdMFS2",
+   "predicate": "is_located_in",
+   "target": "Vd592"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "is_host_of",
+   "target": "VdMFS2"
+  },
+  {
+   "source": "Agrobacterium tumefaciens",
+   "predicate": "is_transformed_with",
+   "target": "pTRV2 vector"
+  },
+  {
+   "source": "pTRV2 vector",
+   "predicate": "contains",
+   "target": "VdMFS2 interference fragment"
+  },
+  {
+   "source": "pTRV2-GhCHLI",
+   "predicate": "is_positive_control_for",
+   "target": "VdMFS2"
+  },
+  {
+   "source": "pTRV2-00",
+   "predicate": "is_empty_vector_for",
+   "target": "VdMFS2"
+  },
+  {
+   "source": "HIGS",
+   "predicate": "treats",
+   "target": "VdMFS2"
+  },
+  {
+   "source": "VdMFS2",
+   "predicate": "is_knocked_out_in",
+   "target": "Vd592"
+  },
+  {
+   "source": "Vd592",
+   "predicate": "is_host_of",
+   "target": "VdMFS2"
+  },
+  {
+   "source": "VdMFS2",
+   "predicate": "is_complemented_in",
+   "target": "Vd592"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC11102182:6:e636cc6f",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Nannochloropsis gaditana",
+   "type": "organism"
+  },
+  {
+   "name": "oleochemicals",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "phospholipids",
+   "type": "chemical"
+  },
+  {
+   "name": "storage lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "DAG",
+   "type": "chemical"
+  },
+  {
+   "name": "TAG",
+   "type": "chemical"
+  },
+  {
+   "name": "DHAP",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol-3-phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

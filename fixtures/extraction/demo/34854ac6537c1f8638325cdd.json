@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC11701741:0:c693d4b6",
+ "entities": [
+  {
+   "name": "Nucleic Acids Res",
+   "type": "organism"
+  },
+  {
+   "name": "OrthoDB",
+   "type": "organism"
+  },
+  {
+   "name": "BUSCO",
+   "type": "organism"
+  },
+  {
+   "name": "University of Geneva Medical School",
+   "type": "organism"
+  },
+  {
+   "name": "Swiss Institute of Bioinformatics",
+   "type": "organism"
+  },
+  {
+   "name": "Evgeny M Zdobnov",
+   "type": "organism"
+  },
+  {
+   "name": "Evgenia V Kriventseva",
+   "type": "organism"
+  },
+  {
+   "name": "Fredrik Tegenfeldt",
+   "type": "organism"
+  },
+  {
+   "name": "Dmitry Kuznetsov",
+   "type": "organism"
+  },
+  {
+   "name": "Mosè Manni",
+   "type": "organism"
+  },
+  {
+   "name": "Matthew Berkeley",
+   "type": "organism"
+  },
+  {
+   "name": "Oxford University Press",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nucleic Acids Res",
+   "predicate": "published_in",
+   "target": "Oxford University Press"
+  },
+  {
+   "source": "Evgeny M Zdobnov",
+   "predicate": "correspondence",
+   "target": "Evgenia V Kriventseva"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "update",
+   "target": "BUSCO"
+  },
+  {
+   "source": "University of Geneva Medical School",
+   "predicate": "affiliation",
+   "target": "Evgeny M Zdobnov"
+  },
+  {
+   "source": "Swiss Institute of Bioinformatics",
+   "predicate": "affiliation",
+   "target": "Evgeny M Zdobnov"
+  },
+  {
+   "source": "Fredrik Tegenfeldt",
+   "predicate": "author",
+   "target": "Nucleic Acids Res"
+  },
+  {
+   "source": "Dmitry Kuznetsov",
+   "predicate": "author",
+   "target": "Nucleic Acids Res"
+  },
+  {
+   "source": "Mosè Manni",
+   "predicate": "author",
+   "target": "Nucleic Acids Res"
+  },
+  {
+   "source": "Matthew Berkeley",
+   "predicate": "author",
+   "target": "Nucleic Acids Res"
+  },
+  {
+   "source": "Evgeny M Zdobnov",
+   "predicate": "author",
+   "target": "Nucleic Acids Res"
+  },
+  {
+   "source": "Evgenia V Kriventseva",
+   "predicate": "author",
+   "target": "Nucleic Acids Res"
+  }
+ ],
+ "truncated": false
+}

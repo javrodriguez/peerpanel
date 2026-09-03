@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13515280:10:e4ca6c47",
+ "entities": [
+  {
+   "name": "microorganisms",
+   "type": "organism"
+  },
+  {
+   "name": "experimental concentrate",
+   "type": "chemical"
+  },
+  {
+   "name": "corn",
+   "type": "chemical"
+  },
+  {
+   "name": "middles bran",
+   "type": "chemical"
+  },
+  {
+   "name": "wheat flour middling",
+   "type": "chemical"
+  },
+  {
+   "name": "DDGS",
+   "type": "chemical"
+  },
+  {
+   "name": "wheat bran",
+   "type": "chemical"
+  },
+  {
+   "name": "soybean meal",
+   "type": "chemical"
+  },
+  {
+   "name": "NaCl",
+   "type": "chemical"
+  },
+  {
+   "name": "CaCO3",
+   "type": "chemical"
+  },
+  {
+   "name": "CaHPO4",
+   "type": "chemical"
+  },
+  {
+   "name": "premix 1",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "microorganisms",
+   "predicate": "consume",
+   "target": "experimental concentrate"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "corn"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "middles bran"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "wheat flour middling"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "DDGS"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "wheat bran"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "soybean meal"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "NaCl"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "CaCO3"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "CaHPO4"
+  },
+  {
+   "source": "experimental concentrate",
+   "predicate": "contain",
+   "target": "premix 1"
+  }
+ ],
+ "truncated": false
+}

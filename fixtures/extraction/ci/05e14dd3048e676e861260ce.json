@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC12994171:16:8818a7be",
+ "entities": [
+  {
+   "name": "J. Riith",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H. Hirt",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. Schweyen",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cauliflower mosaic virus 35S promoter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Mol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gen. Genet",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "F. De Amicis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "T. Patti",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. Marchetti",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pBI121 plant expression vector",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "J. Riith",
+   "predicate": "regulates",
+   "target": "cauliflower mosaic virus 35S promoter"
+  },
+  {
+   "source": "F. De Amicis",
+   "predicate": "improves",
+   "target": "pBI121 plant expression vector"
+  }
+ ],
+ "truncated": false
+}

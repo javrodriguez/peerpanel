@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13467452:16:a02faf33",
+ "entities": [
+  {
+   "name": "SIRT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SRT2104",
+   "type": "chemical"
+  },
+  {
+   "name": "NF-κB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NRF2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "p53",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NAD+",
+   "type": "chemical"
+  },
+  {
+   "name": "NR",
+   "type": "chemical"
+  },
+  {
+   "name": "NMN",
+   "type": "chemical"
+  },
+  {
+   "name": "INS-1",
+   "type": "organism"
+  },
+  {
+   "name": "MIN6",
+   "type": "organism"
+  },
+  {
+   "name": "Cercillieux A",
+   "type": "organism"
+  },
+  {
+   "name": "CD38",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SIRT1",
+   "predicate": "activates",
+   "target": "SRT2104"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13514482:14:6135a78b",
+ "entities": [
+  {
+   "name": "GB 5009.88-2023",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GB 5009.124-2016",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GB 5009.268-2025",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GB 5009.84-2016",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GB 5009.85-2016",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GB 5009.86-2016",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Grifola frondosa",
+   "type": "organism"
+  },
+  {
+   "name": "Yang Y.",
+   "type": "organism"
+  },
+  {
+   "name": "Hu X.",
+   "type": "organism"
+  },
+  {
+   "name": "Cheng H.",
+   "type": "organism"
+  },
+  {
+   "name": "Concepcion G.T.",
+   "type": "organism"
+  },
+  {
+   "name": "Feng X.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Yang Y.",
+   "predicate": "studied",
+   "target": "Grifola frondosa"
+  }
+ ],
+ "truncated": false
+}

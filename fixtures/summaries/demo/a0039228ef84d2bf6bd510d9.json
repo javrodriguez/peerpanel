@@ -1,0 +1,22 @@
+{
+ "community_id": 58,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Curtiss M",
+  "Getz G",
+  "Guttman M",
+  "Integrative Genomics Viewer",
+  "Jones CB",
+  "Keener JM",
+  "Lander ES",
+  "Nat Biotechnol",
+  "Ott EM",
+  "Robinson JT",
+  "Thorvaldsdóttir H",
+  "Winckler W"
+ ],
+ "title": "Authors of Integrative Genomics Viewer",
+ "summary": "This cluster consists of authors and a tool related to genomics. The Integrative Genomics Viewer is a method or tool with six authors: Getz G, Guttman M, Lander ES, Robinson JT, Thorvaldsdóttir H, and Winckler W. These authors are associated with the development of the tool, but no further information about their contributions or the tool's purpose is provided.",
+ "truncated": false
+}

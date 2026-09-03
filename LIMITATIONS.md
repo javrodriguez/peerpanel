@@ -15,10 +15,12 @@ manuscripts to language models, and this system would do exactly that.
 
 ## Structural limitations of this implementation
 
-- **The manuscript is reviewed as an excerpt.** Reviewer prompts are budgeted to a 4096-token
-  serving slot, so each reviewer sees roughly the first 900 words plus retrieved literature
-  context — not the full paper, and never the figures or tables. Reviews of a paper's later
-  sections are therefore out of reach by construction. (The reviewer that reads figures does not
+- **The manuscript is reviewed as an excerpt.** Each reviewer sees the first 900 words plus a
+  few retrieved literature chunks — not the full paper, and never the figures or tables — so
+  reviews of a paper's later sections are out of reach by construction. The excerpt is a cost
+  decision, one chunk-sized prompt per reviewer; it is no longer a serving-slot limit, because
+  the window is now sized to whatever the prompt needs (DECISIONS.md D19). Until 2 September
+  2026 it was both, and the slot silently cut what the budget did not. (The reviewer that reads figures does not
   exist here; the best-known automated reviewer cannot read them either, and its evaluators
   called that out.)
 - **Small local models.** Every model call runs against `llama3.1:8b` and `qwen2:7b` on one
@@ -28,10 +30,12 @@ manuscripts to language models, and this system would do exactly that.
   nine LLM judges have been measured to behave like roughly two independent votes under
   correlated error ([arXiv:2605.29800](https://arxiv.org/pdf/2605.29800)) — so this system runs
   two structurally different reviewers rather than performing breadth it cannot deliver.
-- **The converger shares a model family with one reviewer.** Both the novelty reviewer and the
-  converger run on `qwen2`. That is a self-preference risk (see below) and it is a deliberate
-  trade for keeping everything on two locally-available families; a third family would be the
-  clean fix.
+- **Four roles, two model families.** The converger runs on the novelty reviewer's model
+  (`qwen2:7b`) and the claims verifier runs on the methods reviewer's model (`llama3.1:8b`), so the
+  judge of each reviewer's claims shares a family with one of them and the writer of the meta-review
+  shares a family with the other. Both are self-preference risks (see below), taken deliberately to
+  keep everything on two locally-available families; a third family would be the clean fix. The
+  assignment lives in one place, `PanelProviders.local_default()`.
 - **Propositional conflict detection is not implemented.** Conflicts are detected
   deterministically for score divergence (*sentiment*) and for reviewer claims the evidence
   refutes (*evidence*). Detecting that two reviewers assert logically incompatible propositions
@@ -45,13 +49,14 @@ manuscripts to language models, and this system would do exactly that.
   reviewed, its published twin's chunks leave the index and the knowledge graph is *rebuilt* for
   that run with the twin's extractions withheld (a pure merge over cached extractions plus seeded
   Leiden — measured at ~0.2 s, so the exact thing is affordable). On the CI corpus that removes
-  131 entities and additionally strips twin-contributed weight from 38 edges joining entities
-  that both survive — the part node-filtering cannot reach. Chunk-level retrieval and
+  142 entities and additionally strips 27.25 units of twin-contributed weight from 48 edges
+  joining entities that both survive — the part node-filtering cannot reach, and the tests
+  demonstrate it by doing the filtering instead and showing those 48 edges keep their weight. Chunk-level retrieval and
   `graphrag-local` therefore carry no residue at all. Community summary *text*, however, is a
   model artifact generated once over the whole corpus, so `graphrag-global` — which ranks over
   that text — can still be influenced by a document it may not retrieve. **Measured:** on the MET17
-  run, 97 graph entities exist only because of the excluded twin, and all 97 appear in community
-  reports at the resolution retrieval reads. They are mostly the twin's own apparatus and
+  run, 101 graph entities exist only because of the excluded twin, and 96 of them appear in
+  community reports at the resolution retrieval reads. They are mostly the twin's own apparatus and
   acknowledged colleagues — *"Biotek Synergy MX plate reader"*, *"Costar 3370 96-well plate"*,
   personal names — so its fingerprint is in the summary text that ranking scores, even though not
   one of its chunks can be retrieved. Reproduce with
@@ -61,7 +66,7 @@ manuscripts to language models, and this system would do exactly that.
   search (`answer()`, which would put that prose in front of a reviewer) instead refuses to run
   when anything is excluded.
 - **The graph is mostly adjacency, not stated relations.** An extracted relation weighs four times a
-  bare co-mention per edge, but 92.8% of the demo graph's edges (51,176 of 55,146) are co-mention
+  bare co-mention per edge, but 93.1% of the demo graph's edges (58,797 of 63,130) are co-mention
   only. When `graphrag-local` reaches a document lexical matching misses, it is usually because two
   entities appeared in the same chunk — not because the model asserted a link between them.
 - **No entity resolution.** Nodes are case-normalised strings. `MET17`, `Met17` and `met17` merge;
@@ -95,8 +100,8 @@ manuscripts to language models, and this system would do exactly that.
 | **Position bias** | Across 36 models and 193 pairs, the first-shown option is picked 64.3% of the time, and the median model flips on 41.3% of decisive swapped-order cases ([benchmark](https://github.com/lechmazur/position_bias)) | **Mitigated and measured.** Every claim is judged twice with the evidence order reversed; disagreement forces `NOT_ENOUGH_INFO`. The swap-consistency rate is reported with its n, or withheld when n < 10. |
 | **Fabricated citations** | 19.9% of GPT-4o citations across six simulated literature reviews were untraceable ([JMIR Mental Health](https://mental.jmir.org/2025/1/e80371)); retrieval reduces but does not eliminate this ([arXiv:2409.13740](https://arxiv.org/html/2409.13740v1)) | **Mitigated in code, not by instruction.** A verdict's evidence spans survive only if the chunk id was actually retrieved and the quote is a substring of that chunk's own text. Reviewer findings citing unprovided chunks have those citations dropped. |
 | **Prompt injection** | Hidden instructions in a manuscript reach up to 100% acceptance across 1,000 generated reviews ([arXiv:2509.10248](https://arxiv.org/abs/2509.10248)) | **Mitigated.** Every corpus document and manuscript passes a deterministic screen before chunking: invisible and control characters are stripped, instruction-shaped lines are neutralised (prefixed and quoted as data, never silently deleted), and every action is reported. |
-| **Multi-agent may not beat a single agent** | Debate "often fails to outperform simple single-agent baselines… even when consuming significantly more inference-time computation" ([arXiv:2502.08788](https://arxiv.org/abs/2502.08788)) | **Measured, not assumed.** The planted-error evaluation reports the panel beside an equal-compute single-agent baseline driven through the same token ledger. Whatever the delta is, it ships. |
-| **Self-preference** | Judges favour their own generations, and the bias tracks self-recognition causally ([Panickssery et al.](https://arxiv.org/abs/2404.13076)) | **Partly mitigated, partly carried.** The claim verifier runs on a different family from the novelty reviewer; the converger does not. Recorded above rather than hidden. |
+| **Multi-agent may not beat a single agent** | Debate "often fails to outperform simple single-agent baselines… even when consuming significantly more inference-time computation" ([arXiv:2502.08788](https://arxiv.org/abs/2502.08788)) | **Measured, not assumed.** The planted-error evaluation reports the panel beside a single-agent baseline given the panel's token spend as a *ceiling* through the same ledger — a ceiling it has never reached on any committed run, so the baseline always had less. Whatever the delta is, it ships, with each arm's spend beside it. |
+| **Self-preference** | Judges favour their own generations, and the bias tracks self-recognition causally ([Panickssery et al.](https://arxiv.org/abs/2404.13076)) | **Partly mitigated, partly carried.** The claim verifier (`llama3.1`) judges the novelty reviewer's claims across a family boundary but the methods reviewer's within one; the converger (`qwen2`) writes over the novelty reviewer's own family. Recorded above rather than hidden. |
 | **Sycophancy** | 58.19% sycophantic responses with 78.5% persistence, worst under citation-based rebuttals ([SycEval](https://arxiv.org/abs/2502.08177)) | **Reduced by construction.** Judges never see an author, a rebuttal, or their own earlier answer — there is no multi-turn pressure channel. Not separately measured. |
 | **Aggregation anchoring** | LLM meta-reviewers anchor harder than humans (0.255 vs 0.193) and suppress minority views ([arXiv:2503.13879](https://arxiv.org/html/2503.13879)) | **Constrained, not solved.** The converger may only restate the structured findings it is given and is instructed to present both sides of a disagreement, but the structured record — not its prose — is what a reader should trust. Anchoring is not measured here. |
 | **Verbosity bias** | Length control raises correlation with human preference from 0.94 to 0.98 ([arXiv:2404.04475](https://arxiv.org/abs/2404.04475)) | **Not addressed.** Findings are capped in number, not scored for length, and no length control is applied. |

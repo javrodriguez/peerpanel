@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13467452:23:d42c5ed6",
+ "entities": [
+  {
+   "name": "SIRT6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SREBP1c",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AMPKα",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mTORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SIRT7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "Resveratrol",
+   "type": "chemical"
+  },
+  {
+   "name": "Pancreas",
+   "type": "organism"
+  },
+  {
+   "name": "Liver",
+   "type": "organism"
+  },
+  {
+   "name": "NAD+",
+   "type": "chemical"
+  },
+  {
+   "name": "SIRT1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

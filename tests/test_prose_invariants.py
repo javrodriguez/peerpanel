@@ -52,9 +52,7 @@ DISCLAIMERS = ("never", "not ", "avoid", "does not", "must not", "forbidden", "d
 def _disclaimed(text: str, term: str) -> bool:
     """Does every line mentioning this term also disclaim it?"""
     lines = [ln for ln in text.splitlines() if re.search(rf"\b{re.escape(term)}\b", ln, re.I)]
-    return bool(lines) and all(
-        any(d in ln.lower() for d in DISCLAIMERS) for ln in lines
-    )
+    return bool(lines) and all(any(d in ln.lower() for d in DISCLAIMERS) for ln in lines)
 
 
 def _hits(text: str, terms: dict[str, str] | set[str]) -> list[str]:
@@ -103,9 +101,7 @@ class TestAuthoredProse:
         swept = 0
         for directory in EVIDENCE_DIRS:
             root = ROOT / directory
-            assert root.is_dir(), (
-                f"{directory}/ does not exist — this sweep would check nothing"
-            )
+            assert root.is_dir(), f"{directory}/ does not exist — this sweep would check nothing"
             for path in root.glob("**/*"):
                 if path.is_file() and path.suffix in {".log", ".txt", ".json"}:
                     text = path.read_text(encoding="utf-8", errors="ignore")

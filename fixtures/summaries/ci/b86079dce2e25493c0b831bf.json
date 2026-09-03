@@ -1,0 +1,20 @@
+{
+ "community_id": 51,
+ "resolution": 3.0,
+ "size": 10,
+ "member_names": [
+  "CdSe nanoparticles",
+  "CUP1 metallothionein",
+  "EMBO J.",
+  "Engineered nanomaterials",
+  "NADH kinase",
+  "NADPH",
+  "Polystyrene-based nanoparticles",
+  "quantum dots",
+  "Vacuolar membrane permeabilization",
+  "ZIP transporters"
+ ],
+ "title": "Engineered Nanomaterials and Quantum Dots Relationship",
+ "summary": "This cluster focuses on the relationship between engineered nanomaterials and quantum dots. Engineered nanomaterials are found to be equivalent to quantum dots, indicating a direct correspondence between these two chemical entities. The cluster also includes various biological and chemical entities, such as NADPH, CdSe nanoparticles, and CUP1 metallothionein, which may be related to the properties or applications of engineered nanomaterials and quantum dots. Additionally, the cluster contains references to biological processes, including EMBO J. and Vacuolar membrane permeabilization, which may be relevant to the interactions between these nanomaterials and biological systems.",
+ "truncated": false
+}

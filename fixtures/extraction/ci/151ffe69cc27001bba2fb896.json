@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13312927:16:8081dee4",
+ "entities": [
+  {
+   "name": "Polyacrylamide gel electrophoresis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PAGE",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Invitrogen NuPAGE",
+   "type": "chemical"
+  },
+  {
+   "name": "12% BT 1.0 gels",
+   "type": "chemical"
+  },
+  {
+   "name": "sample",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "signals",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "normalization antibody",
+   "type": "chemical"
+  },
+  {
+   "name": "proteins",
+   "type": "chemical"
+  },
+  {
+   "name": "polyvinylidene fluoride (PVDF) Immobilon-P Transfer Membrane",
+   "type": "chemical"
+  },
+  {
+   "name": "0.45 μm",
+   "type": "chemical"
+  },
+  {
+   "name": "Western blot analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "following antibodies",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Polyacrylamide gel electrophoresis",
+   "predicate": "uses",
+   "target": "Invitrogen NuPAGE"
+  },
+  {
+   "source": "Polyacrylamide gel electrophoresis",
+   "predicate": "uses",
+   "target": "12% BT 1.0 gels"
+  },
+  {
+   "source": "Polyacrylamide gel electrophoresis",
+   "predicate": "applies",
+   "target": "sample"
+  },
+  {
+   "source": "Polyacrylamide gel electrophoresis",
+   "predicate": "normalizes",
+   "target": "signals"
+  },
+  {
+   "source": "Polyacrylamide gel electrophoresis",
+   "predicate": "blots",
+   "target": "proteins"
+  },
+  {
+   "source": "Polyacrylamide gel electrophoresis",
+   "predicate": "blots",
+   "target": "polyvinylidene fluoride (PVDF) Immobilon-P Transfer Membrane"
+  },
+  {
+   "source": "Polyacrylamide gel electrophoresis",
+   "predicate": "blots",
+   "target": "0.45 μm"
+  },
+  {
+   "source": "Western blot analysis",
+   "predicate": "uses",
+   "target": "following antibodies"
+  },
+  {
+   "source": "Western blot analysis",
+   "predicate": "uses",
+   "target": "normalization antibody"
+  },
+  {
+   "source": "Western blot analysis",
+   "predicate": "uses",
+   "target": "proteins"
+  },
+  {
+   "source": "Western blot analysis",
+   "predicate": "blots",
+   "target": "polyvinylidene fluoride (PVDF) Immobilon-P Transfer Membrane"
+  },
+  {
+   "source": "Western blot analysis",
+   "predicate": "blots",
+   "target": "0.45 μm"
+  }
+ ],
+ "truncated": false
+}

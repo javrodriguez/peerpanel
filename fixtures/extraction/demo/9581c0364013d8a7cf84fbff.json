@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC8116571:15:178332e1",
+ "entities": [
+  {
+   "name": "Cyberlindnera jadinii",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "NAD(P)H-dependent xylose reductase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "xylose reductase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ethanol and xylitol fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "J. Fungi",
+   "type": "organism"
+  },
+  {
+   "name": "Bioresour",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Pichia stipitis",
+   "predicate": "has_property",
+   "target": "NAD(P)H-dependent xylose reductase"
+  },
+  {
+   "source": "Kluyveromyces marxianus",
+   "predicate": "has_property",
+   "target": "xylose reductase"
+  },
+  {
+   "source": "NAD(P)H-dependent xylose reductase",
+   "predicate": "is_used_in",
+   "target": "ethanol and xylitol fermentation"
+  },
+  {
+   "source": "xylose reductase",
+   "predicate": "is_used_in",
+   "target": "ethanol and xylitol fermentation"
+  },
+  {
+   "source": "glucose",
+   "predicate": "is_used_in",
+   "target": "lipid production"
+  },
+  {
+   "source": "xylose",
+   "predicate": "is_used_in",
+   "target": "lipid production"
+  }
+ ],
+ "truncated": false
+}

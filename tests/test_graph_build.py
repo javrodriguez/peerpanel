@@ -30,21 +30,27 @@ def _ext(
 
 class TestBuild:
     def test_case_variants_merge_and_vote(self) -> None:
-        g = build_graph([
-            _ext("c1", [("Met4", "gene_or_protein"), ("sulfur", "chemical")],
-                 [("Met4", "activates", "sulfur")]),
-            _ext("c2", [("MET4", "gene_or_protein")], []),
-        ])
+        g = build_graph(
+            [
+                _ext(
+                    "c1",
+                    [("Met4", "gene_or_protein"), ("sulfur", "chemical")],
+                    [("Met4", "activates", "sulfur")],
+                ),
+                _ext("c2", [("MET4", "gene_or_protein")], []),
+            ]
+        )
         assert g.has_node("met4")
         assert display_name(g, "met4") in ("Met4", "MET4")
         assert node_type(g, "met4") == "gene_or_protein"
         assert g.nodes["met4"]["chunk_ids"] == {"c1", "c2"}
 
     def test_relation_outweighs_co_mention(self) -> None:
-        g = build_graph([
-            _ext("c1", [("A", "other"), ("B", "other"), ("C", "other")],
-                 [("A", "binds", "B")]),
-        ])
+        g = build_graph(
+            [
+                _ext("c1", [("A", "other"), ("B", "other"), ("C", "other")], [("A", "binds", "B")]),
+            ]
+        )
         assert g.edges["a", "b"]["weight"] == 1.25  # relation + co-mention
         assert g.edges["a", "c"]["weight"] == 0.25  # co-mention only
         assert g.edges["a", "b"]["predicates"]["binds"] == 1
@@ -54,10 +60,15 @@ class TestBuild:
         assert g.number_of_edges() == 0
 
     def test_roundtrip_persistence(self, tmp_path: Path) -> None:
-        g = build_graph([
-            _ext("c1", [("Met4", "gene_or_protein"), ("sulfur", "chemical")],
-                 [("Met4", "activates", "sulfur")]),
-        ])
+        g = build_graph(
+            [
+                _ext(
+                    "c1",
+                    [("Met4", "gene_or_protein"), ("sulfur", "chemical")],
+                    [("Met4", "activates", "sulfur")],
+                ),
+            ]
+        )
         path = tmp_path / "graph.json"
         save_graph(g, path)
         g2 = load_graph(path)
@@ -72,11 +83,13 @@ class TestCommunities:
         for i, cluster in enumerate((["A1", "A2", "A3", "A4"], ["B1", "B2", "B3", "B4"])):
             for j in range(len(cluster)):
                 for k in range(j + 1, len(cluster)):
-                    exts.append(_ext(
-                        f"c{i}{j}{k}",
-                        [(cluster[j], "other"), (cluster[k], "other")],
-                        [(cluster[j], "links", cluster[k])],
-                    ))
+                    exts.append(
+                        _ext(
+                            f"c{i}{j}{k}",
+                            [(cluster[j], "other"), (cluster[k], "other")],
+                            [(cluster[j], "links", cluster[k])],
+                        )
+                    )
         exts.append(_ext("bridge", [("A1", "other"), ("B1", "other")], []))
         return build_graph(exts)
 

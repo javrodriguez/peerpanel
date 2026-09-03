@@ -104,9 +104,7 @@ def ndcg_at_k(ranking: list[str], relevant: set[str], k: int) -> float:
     """Binary-relevance NDCG@k."""
     if not relevant:
         return 0.0
-    dcg = sum(
-        1.0 / math.log2(i + 2) for i, doc in enumerate(ranking[:k]) if doc in relevant
-    )
+    dcg = sum(1.0 / math.log2(i + 2) for i, doc in enumerate(ranking[:k]) if doc in relevant)
     ideal = sum(1.0 / math.log2(i + 2) for i in range(min(k, len(relevant))))
     return dcg / ideal if ideal else 0.0
 

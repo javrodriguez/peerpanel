@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC12278674:25:cc6cfa70",
+ "entities": [
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ROS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "physiology",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pathology",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Trends Biochem",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sci",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "induction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "maturation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "D-amino acid oxidase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "lipid accumulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "gene expression",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "autophagy",
+   "predicate": "regulated_by",
+   "target": "ROS"
+  },
+  {
+   "source": "autophagy",
+   "predicate": "involved_in",
+   "target": "physiology"
+  },
+  {
+   "source": "autophagy",
+   "predicate": "involved_in",
+   "target": "pathology"
+  },
+  {
+   "source": "Trends Biochem",
+   "predicate": "published_in",
+   "target": "Sci"
+  },
+  {
+   "source": "induction",
+   "predicate": "involved_in",
+   "target": "autophagy"
+  },
+  {
+   "source": "maturation",
+   "predicate": "involved_in",
+   "target": "autophagy"
+  },
+  {
+   "source": "D-amino acid oxidase",
+   "predicate": "involved_in",
+   "target": "yeast"
+  },
+  {
+   "source": "lipid accumulation",
+   "predicate": "involved_in",
+   "target": "gene expression"
+  },
+  {
+   "source": "autophagy",
+   "predicate": "regulated_by",
+   "target": "induction"
+  },
+  {
+   "source": "autophagy",
+   "predicate": "involved_in",
+   "target": "maturation"
+  },
+  {
+   "source": "yeast",
+   "predicate": "involved_in",
+   "target": "D-amino acid oxidase"
+  },
+  {
+   "source": "gene expression",
+   "predicate": "involved_in",
+   "target": "lipid accumulation"
+  }
+ ],
+ "truncated": false
+}

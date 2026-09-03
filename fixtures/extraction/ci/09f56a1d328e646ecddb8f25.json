@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13304748:14:e3039e36",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "NADH kinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "EMBO J.",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Mitochondrion",
+   "type": "organism"
+  },
+  {
+   "name": "CUP1 metallothionein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cytosol",
+   "type": "organism"
+  },
+  {
+   "name": "ZIP transporters",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CdSe nanoparticles",
+   "type": "chemical"
+  },
+  {
+   "name": "Vacuolar membrane permeabilization",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Polystyrene-based nanoparticles",
+   "type": "chemical"
+  },
+  {
+   "name": "Engineered nanomaterials",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

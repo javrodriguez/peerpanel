@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC6547517:14:e80bf1a1",
+ "entities": [
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Trichosporon fermentans",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Cunninghamella echinulata",
+   "type": "organism"
+  },
+  {
+   "name": "Mortierella isabellina",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus albidus",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "KU70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KU80",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KU70-deficient mutant",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides Y4",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

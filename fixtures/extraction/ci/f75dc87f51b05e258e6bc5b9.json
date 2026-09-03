@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13026841:3:f0db5e8a",
+ "entities": [
+  {
+   "name": "38 new compounds",
+   "type": "chemical"
+  },
+  {
+   "name": "metabolomics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BioCyc",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ChEBI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LipidMAPS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mzVault",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mzCloud",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae Genome Database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MetaboAnalyst",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CD Metabolika tool",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Epstein et al.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "38 new compounds",
+   "predicate": "annotated",
+   "target": "metabolomics"
+  }
+ ],
+ "truncated": false
+}

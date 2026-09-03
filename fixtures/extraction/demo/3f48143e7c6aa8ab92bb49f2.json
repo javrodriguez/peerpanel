@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13485822:8:348b028a",
+ "entities": [
+  {
+   "name": "Dong J Lai R Jennings JL Link AJ Hinnebusch AG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ARB1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TOR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nog1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fluconazole",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mol Cell Biol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "EMBO J.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J Antimicrob Chemother",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PLoS Pathog",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Eukaryot Cell",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fungal Genet Biol",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Dong J Lai R Jennings JL Link AJ Hinnebusch AG",
+   "predicate": "author",
+   "target": "Mol Cell Biol"
+  }
+ ],
+ "truncated": false
+}

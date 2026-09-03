@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13484205:4:5ebc94ba",
+ "entities": [
+  {
+   "name": "Hsp70",
+   "type": "chemical"
+  },
+  {
+   "name": "Hsf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sis1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSR",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AZC",
+   "type": "chemical"
+  },
+  {
+   "name": "oRPs",
+   "type": "chemical"
+  },
+  {
+   "name": "DZA",
+   "type": "chemical"
+  },
+  {
+   "name": "Arsenite",
+   "type": "chemical"
+  },
+  {
+   "name": "NaCl",
+   "type": "chemical"
+  },
+  {
+   "name": "Hsp42",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Btn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsp70 system",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hsp70",
+   "predicate": "represses",
+   "target": "Hsf1"
+  },
+  {
+   "source": "Sis1",
+   "predicate": "represses",
+   "target": "HSR"
+  },
+  {
+   "source": "Hsp70",
+   "predicate": "acts_with",
+   "target": "Sis1"
+  },
+  {
+   "source": "AZC",
+   "predicate": "induces",
+   "target": "Hsf1"
+  },
+  {
+   "source": "AZC",
+   "predicate": "induces",
+   "target": "HSR"
+  }
+ ],
+ "truncated": false
+}

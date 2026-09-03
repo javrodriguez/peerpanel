@@ -1,0 +1,22 @@
+{
+ "community_id": 77,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "68A",
+  "Appelqvist",
+  "BF3",
+  "double binding or unsaturation index",
+  "Dried lipid samples",
+  "Elysian",
+  "gas chromatography",
+  "hexane",
+  "Methyl esters",
+  "Nu-Check",
+  "retention times",
+  "standard mixture"
+ ],
+ "title": "Lipid Analysis using Gas Chromatography and BF3 Methylation",
+ "summary": "This cluster is about the analysis of lipid samples using gas chromatography. Dried lipid samples are first dissolved in hexane and then methylated with BF3 to produce Methyl esters. These esters are then analyzed by gas chromatography, which calculates retention times from the double binding or unsaturation index. The cluster involves the use of various chemicals, including hexane, BF3, and Methyl esters, in the lipid analysis process. The organisms Appelqvist and Nu-Check are not directly related to the lipid analysis process, but the gene or protein Elysian is not mentioned in the context of this cluster. A standard mixture is also mentioned, but its role is unclear.",
+ "truncated": false
+}

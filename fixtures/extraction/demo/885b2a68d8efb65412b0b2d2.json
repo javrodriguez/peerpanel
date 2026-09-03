@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC10204961:10:8e659bae",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "NADPH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "XPK pathway",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid biosynthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "carbon source",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "TCA cycle",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PDH bypass route",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PDC-ALDH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ACS",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "main suppliers",
+   "target": "NADPH"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "primary source",
+   "target": "acetyl-CoA"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "involved in",
+   "target": "lipid biosynthesis"
+  },
+  {
+   "source": "XPK pathway",
+   "predicate": "generate",
+   "target": "acetyl-CoA"
+  },
+  {
+   "source": "glucose",
+   "predicate": "carbon source",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "xylose",
+   "predicate": "carbon source",
+   "target": "R. toruloides"
+  },
+  {
+   "source": "PDH bypass route",
+   "predicate": "alternative",
+   "target": "XPK pathway"
+  },
+  {
+   "source": "PDC-ALDH",
+   "predicate": "involved in",
+   "target": "lipid biosynthesis"
+  }
+ ],
+ "truncated": false
+}

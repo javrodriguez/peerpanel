@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13055380:8:4a42a622",
+ "entities": [
+  {
+   "name": "Magnolol",
+   "type": "chemical"
+  },
+  {
+   "name": "Microbiota",
+   "type": "organism"
+  },
+  {
+   "name": "Tryptophan",
+   "type": "chemical"
+  },
+  {
+   "name": "Skatole",
+   "type": "chemical"
+  },
+  {
+   "name": "Pigs",
+   "type": "organism"
+  },
+  {
+   "name": "J Hazard Mater",
+   "type": "chemical"
+  },
+  {
+   "name": "Dietary protein levels",
+   "type": "chemical"
+  },
+  {
+   "name": "Odorous compounds",
+   "type": "chemical"
+  },
+  {
+   "name": "Bacterial ecology",
+   "type": "organism"
+  },
+  {
+   "name": "Pig manure",
+   "type": "chemical"
+  },
+  {
+   "name": "Soybean oligosaccharide",
+   "type": "chemical"
+  },
+  {
+   "name": "Stachyose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Magnolol",
+   "predicate": "modulates",
+   "target": "Microbiota"
+  },
+  {
+   "source": "Dietary protein levels",
+   "predicate": "affects",
+   "target": "Odorous compounds"
+  },
+  {
+   "source": "Odorous compounds",
+   "predicate": "affects",
+   "target": "Bacterial ecology"
+  },
+  {
+   "source": "Pig manure",
+   "predicate": "has",
+   "target": "Bacterial ecology"
+  },
+  {
+   "source": "Soybean oligosaccharide",
+   "predicate": "affects",
+   "target": "Microbiota"
+  },
+  {
+   "source": "Stachyose",
+   "predicate": "affects",
+   "target": "Microbiota"
+  }
+ ],
+ "truncated": false
+}

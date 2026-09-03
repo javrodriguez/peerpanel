@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13170222:12:976997f1",
+ "entities": [
+  {
+   "name": "Met4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met32",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met31",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met28",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cbf1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "C. albicans",
+   "type": "organism"
+  },
+  {
+   "name": "C. parapsilosis",
+   "type": "organism"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "Galleria larvae",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met4",
+   "predicate": "interacts",
+   "target": "Met32"
+  },
+  {
+   "source": "Met32",
+   "predicate": "interacts",
+   "target": "Met4"
+  },
+  {
+   "source": "C. albicans",
+   "predicate": "has",
+   "target": "Met32"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "Met32"
+  }
+ ],
+ "truncated": false
+}

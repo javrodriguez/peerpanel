@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13450573:22:3686e25d",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Heterogeneity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "thermal damage",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "membrane",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Environ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Microbiol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Huang D.W.",
+   "type": "organism"
+  },
+  {
+   "name": "Sherman B.T.",
+   "type": "organism"
+  },
+  {
+   "name": "Lempicki R.A.",
+   "type": "organism"
+  },
+  {
+   "name": "DAVID bioinformatics resources",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nat",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "Heterogeneity"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "response"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "thermal damage"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "membrane"
+  },
+  {
+   "source": "Environ",
+   "predicate": "has",
+   "target": "Microbiol"
+  },
+  {
+   "source": "Huang D.W.",
+   "predicate": "has",
+   "target": "DAVID bioinformatics resources"
+  },
+  {
+   "source": "Sherman B.T.",
+   "predicate": "has",
+   "target": "DAVID bioinformatics resources"
+  },
+  {
+   "source": "Lempicki R.A.",
+   "predicate": "has",
+   "target": "DAVID bioinformatics resources"
+  },
+  {
+   "source": "Nat",
+   "predicate": "has",
+   "target": "DAVID bioinformatics resources"
+  }
+ ],
+ "truncated": false
+}

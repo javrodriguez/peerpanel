@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC6402699:3:6ca2de38",
+ "entities": [
+  {
+   "name": "Lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "A−L+",
+   "type": "organism"
+  },
+  {
+   "name": "L−A+",
+   "type": "organism"
+  },
+  {
+   "name": "RM11",
+   "type": "organism"
+  },
+  {
+   "name": "S288C",
+   "type": "organism"
+  },
+  {
+   "name": "CoSMO",
+   "type": "organism"
+  },
+  {
+   "name": "community growth rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolite release rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolite consumption",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cell birth rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "death rate",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L−A+",
+   "predicate": "has death rate",
+   "target": "death rate"
+  },
+  {
+   "source": "community growth rate",
+   "predicate": "is dependent on",
+   "target": "cell birth rate"
+  },
+  {
+   "source": "community growth rate",
+   "predicate": "is dependent on",
+   "target": "death rate"
+  }
+ ],
+ "truncated": false
+}

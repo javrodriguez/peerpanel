@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC7470746:25:1a23cf57",
+ "entities": [
+  {
+   "name": "Ponomarova O",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gabrielli N",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sévin DC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mülleder M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zirngibl K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bulyha K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yeasts",
+   "type": "organism"
+  },
+  {
+   "name": "Symbiotic Lactic Acid Bacteria",
+   "type": "organism"
+  },
+  {
+   "name": "Nitrogen Overflow",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cell Syst",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kinnersley MA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Holben WE",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Ponomarova O",
+   "predicate": "for",
+   "target": "Symbiotic Lactic Acid Bacteria"
+  },
+  {
+   "source": "Ponomarova O",
+   "predicate": "through",
+   "target": "Nitrogen Overflow"
+  }
+ ],
+ "truncated": false
+}

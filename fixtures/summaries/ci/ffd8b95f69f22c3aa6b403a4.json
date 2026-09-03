@@ -1,0 +1,32 @@
+{
+ "community_id": 17,
+ "resolution": 1.0,
+ "size": 22,
+ "member_names": [
+  "100 mg",
+  "ACN",
+  "Ascorbic acid",
+  "Biphasic protocol",
+  "Cell pellets",
+  "Centrifugation",
+  "China",
+  "Fermentation solution samples",
+  "Glass microspheres",
+  "Homogenate",
+  "LC-MS/MS platform",
+  "Liquid chromatography–tandem mass spectrometry",
+  "Liquid nitrogen",
+  "Literature",
+  "MeOH",
+  "Metabolite Extraction",
+  "Metabolites",
+  "Methanol",
+  "Novogene Co.",
+  "Sample",
+  "Supernatant",
+  "TissueLyser LT"
+ ],
+ "title": "Metabolite Extraction Process Involves Multiple Steps and Chemicals",
+ "summary": "The Metabolite Extraction process employs literature and the TissueLyser LT to involve cell pellets and centrifugation, producing supernatant. It uses various chemicals such as ACN, Ascorbic acid, and MeOH, as well as a biphasic protocol and glass microspheres. The LC-MS/MS platform, provided by Novogene Co., is used for analysis. Supernatant is then used to produce Methanol.",
+ "truncated": false
+}

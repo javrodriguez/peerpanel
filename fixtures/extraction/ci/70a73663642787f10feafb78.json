@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13170222:17:f3105424",
+ "entities": [
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfonates",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfate esters",
+   "type": "chemical"
+  },
+  {
+   "name": "ulcerative colitis",
+   "type": "organism"
+  },
+  {
+   "name": "Neurospora crassa",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus flavipes",
+   "type": "organism"
+  },
+  {
+   "name": "Francisella",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sulfur",
+   "predicate": "metabolism",
+   "target": "glutathione"
+  },
+  {
+   "source": "glutathione",
+   "predicate": "utilization",
+   "target": "sulfur"
+  },
+  {
+   "source": "sulfur",
+   "predicate": "pathogenesis",
+   "target": "ulcerative colitis"
+  },
+  {
+   "source": "Francisella",
+   "predicate": "utilization",
+   "target": "glutathione"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "utilization",
+   "target": "sulfonates"
+  },
+  {
+   "source": "Yarrowia lipolytica",
+   "predicate": "metabolism",
+   "target": "sulfate esters"
+  }
+ ],
+ "truncated": false
+}

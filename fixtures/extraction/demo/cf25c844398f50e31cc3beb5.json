@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13453879:15:f8b3b46f",
+ "entities": [
+  {
+   "name": "Aspergillus niger",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus flavus",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Photobacterium phosphoreum ANT-2200",
+   "type": "organism"
+  },
+  {
+   "name": "Xeromyces bisporus",
+   "type": "organism"
+  },
+  {
+   "name": "Eurotium halophilicum",
+   "type": "organism"
+  },
+  {
+   "name": "Puerh tea",
+   "type": "chemical"
+  },
+  {
+   "name": "peanut",
+   "type": "chemical"
+  },
+  {
+   "name": "polished rice",
+   "type": "chemical"
+  },
+  {
+   "name": "osmanthus",
+   "type": "chemical"
+  },
+  {
+   "name": "osmanthus black tea",
+   "type": "chemical"
+  },
+  {
+   "name": "white tea",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

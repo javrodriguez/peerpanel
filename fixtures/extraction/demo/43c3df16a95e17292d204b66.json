@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13450573:0:be6cd5cb",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Guyot Stéphane",
+   "type": "organism"
+  },
+  {
+   "name": "Lucie Bertheau",
+   "type": "organism"
+  },
+  {
+   "name": "Jennifer Dumont",
+   "type": "organism"
+  },
+  {
+   "name": "Jean Demarquoy",
+   "type": "organism"
+  },
+  {
+   "name": "Hazel Marie Davey",
+   "type": "organism"
+  },
+  {
+   "name": "Patrick Gervais",
+   "type": "organism"
+  },
+  {
+   "name": "Université Bourgogne Europe",
+   "type": "organism"
+  },
+  {
+   "name": "Institut Agro",
+   "type": "organism"
+  },
+  {
+   "name": "INRAE",
+   "type": "organism"
+  },
+  {
+   "name": "UMR PAM",
+   "type": "organism"
+  },
+  {
+   "name": "Aberystwyth University",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC9825584:0:978201af",
+ "entities": [
+  {
+   "name": "OrthoDB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kuznetsov Dmitry",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tegenfeldt Fredrik",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Manni Mosè",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Seppey Mathieu",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Berkeley Matthew",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kriventseva Evgenia V",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zdobnov Evgeny M",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Nucleic Acids Res",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Oxford University Press",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Swiss National Science Foundation",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OrthoLoger",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Kuznetsov Dmitry",
+   "predicate": "author_of",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "Tegenfeldt Fredrik",
+   "predicate": "author_of",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "Manni Mosè",
+   "predicate": "author_of",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "Seppey Mathieu",
+   "predicate": "author_of",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "Berkeley Matthew",
+   "predicate": "author_of",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "Kriventseva Evgenia V",
+   "predicate": "author_of",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "Zdobnov Evgeny M",
+   "predicate": "author_of",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "published_in",
+   "target": "Nucleic Acids Res"
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "published_by",
+   "target": "Oxford University Press"
+  },
+  {
+   "source": "Swiss National Science Foundation",
+   "predicate": "funded",
+   "target": "OrthoDB"
+  },
+  {
+   "source": "OrthoLoger",
+   "predicate": "used_by",
+   "target": "OrthoDB"
+  }
+ ],
+ "truncated": false
+}

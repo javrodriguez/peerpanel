@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13485822:1:dfe5d85f",
+ "entities": [
+  {
+   "name": "Malassezia pachydermatis",
+   "type": "organism"
+  },
+  {
+   "name": "clotrimazole",
+   "type": "chemical"
+  },
+  {
+   "name": "itraconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "ketoconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "miconazole",
+   "type": "chemical"
+  },
+  {
+   "name": "lanosterol 14α-demethylase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cdr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cdr2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mdr1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATP-binding cassette",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "major facilitator superfamily",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_treatment",
+   "target": "clotrimazole"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_treatment",
+   "target": "itraconazole"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_treatment",
+   "target": "ketoconazole"
+  },
+  {
+   "source": "Malassezia pachydermatis",
+   "predicate": "has_treatment",
+   "target": "miconazole"
+  },
+  {
+   "source": "lanosterol 14α-demethylase",
+   "predicate": "is_target",
+   "target": "clotrimazole"
+  },
+  {
+   "source": "lanosterol 14α-demethylase",
+   "predicate": "is_target",
+   "target": "itraconazole"
+  },
+  {
+   "source": "lanosterol 14α-demethylase",
+   "predicate": "is_target",
+   "target": "ketoconazole"
+  },
+  {
+   "source": "lanosterol 14α-demethylase",
+   "predicate": "is_target",
+   "target": "miconazole"
+  }
+ ],
+ "truncated": false
+}

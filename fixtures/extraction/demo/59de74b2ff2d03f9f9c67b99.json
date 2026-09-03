@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC5484544:2:3ca6b77e",
+ "entities": [
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CPY",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vps10",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Snc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pho8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ALP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ape1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BioGRiD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Osprey",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SCH9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sch9Δ",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SCH9",
+   "predicate": "interacts_with",
+   "target": "BioGRiD"
+  }
+ ],
+ "truncated": false
+}

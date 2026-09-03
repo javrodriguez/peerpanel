@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC10440040:15:e55ab20e",
+ "entities": [
+  {
+   "name": "BOT-A2",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "YNB-CN80",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulphate",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "potassium buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "K2HPO4",
+   "type": "chemical"
+  },
+  {
+   "name": "KH2PO4",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "YNB2x",
+   "type": "chemical"
+  },
+  {
+   "name": "YNB1x",
+   "type": "chemical"
+  },
+  {
+   "name": "BioLector",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BOT-A2",
+   "predicate": "has genotype",
+   "target": "Rhodotorula"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is cultured in",
+   "target": "YNB-CN80"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is treated with",
+   "target": "ammonium sulphate"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is fed",
+   "target": "glucose"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is measured by",
+   "target": "potassium buffer"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is measured by",
+   "target": "K2HPO4"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is measured by",
+   "target": "KH2PO4"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is cultured in",
+   "target": "YPD"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is cultured in",
+   "target": "YNB2x"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is cultured in",
+   "target": "YNB1x"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "is measured by",
+   "target": "BioLector"
+  }
+ ],
+ "truncated": false
+}

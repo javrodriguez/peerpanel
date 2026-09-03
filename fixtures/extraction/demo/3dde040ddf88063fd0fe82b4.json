@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10398944:8:041155bc",
+ "entities": [
+  {
+   "name": "RTO4_8504",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_16635",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_10421",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_13328",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_9798",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_12248",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_9856",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Pseudomonas putida",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

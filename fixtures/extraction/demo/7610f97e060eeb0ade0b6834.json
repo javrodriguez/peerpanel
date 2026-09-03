@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13450799:7:a12c328a",
+ "entities": [
+  {
+   "name": "Haa1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNR1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SIC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP26",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "bar1Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "puf5Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YCplac33",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YEplac195",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YGP1–3HA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pgk1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rq",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Haa1",
+   "predicate": "regulates",
+   "target": "YGP1"
+  },
+  {
+   "source": "Haa1",
+   "predicate": "partially_contributes",
+   "target": "YGP1"
+  },
+  {
+   "source": "puf5Δ",
+   "predicate": "mutant",
+   "target": "YGP1"
+  },
+  {
+   "source": "puf5Δ",
+   "predicate": "mutant",
+   "target": "HAA1"
+  },
+  {
+   "source": "YCplac33",
+   "predicate": "plasmid",
+   "target": "YGP1–3HA"
+  }
+ ],
+ "truncated": false
+}

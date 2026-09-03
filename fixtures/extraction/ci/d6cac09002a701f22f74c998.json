@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13312927:6:705c284d",
+ "entities": [
+  {
+   "name": "PL methylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SAM",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "mammals",
+   "type": "organism"
+  },
+  {
+   "name": "phosphatidylcholine",
+   "type": "chemical"
+  },
+  {
+   "name": "phosphatidylethanolamine",
+   "type": "chemical"
+  },
+  {
+   "name": "monomethylphosphatidylethanolamine",
+   "type": "chemical"
+  },
+  {
+   "name": "dimethylphosphatidylethanolamine",
+   "type": "chemical"
+  },
+  {
+   "name": "Hcy",
+   "type": "chemical"
+  },
+  {
+   "name": "SAH",
+   "type": "chemical"
+  },
+  {
+   "name": "SAHH",
+   "type": "chemical"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PL methylation",
+   "predicate": "consumes",
+   "target": "SAM"
+  },
+  {
+   "source": "PL methylation",
+   "predicate": "produces",
+   "target": "phosphatidylcholine"
+  },
+  {
+   "source": "PL methylation",
+   "predicate": "produces",
+   "target": "phosphatidylethanolamine"
+  },
+  {
+   "source": "PL methylation",
+   "predicate": "produces",
+   "target": "monomethylphosphatidylethanolamine"
+  },
+  {
+   "source": "PL methylation",
+   "predicate": "produces",
+   "target": "dimethylphosphatidylethanolamine"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "PL methylation"
+  },
+  {
+   "source": "mammals",
+   "predicate": "has",
+   "target": "PL methylation"
+  },
+  {
+   "source": "Drosophila",
+   "predicate": "has",
+   "target": "PL methylation"
+  }
+ ],
+ "truncated": false
+}

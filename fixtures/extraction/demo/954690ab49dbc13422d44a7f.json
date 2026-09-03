@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13513244:17:8a40112d",
+ "entities": [
+  {
+   "name": "Histidine",
+   "type": "chemical"
+  },
+  {
+   "name": "HARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Usher-Like Symptoms",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Methionyl-tRNA Synthetase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tyrosinemia Type III",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pulmonary Alveolar Proteinosis",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HARS Disease",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS2 deficiency",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Methionyl-tRNA Synthetase Cause",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Aminoacyl-tRNA Synthetases",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "HARS1",
+   "predicate": "related_to",
+   "target": "Usher-Like Symptoms"
+  },
+  {
+   "source": "Methionyl-tRNA Synthetase",
+   "predicate": "cause",
+   "target": "Pulmonary Alveolar Proteinosis"
+  },
+  {
+   "source": "HARS Disease",
+   "predicate": "cure",
+   "target": "HARS Disease"
+  }
+ ],
+ "truncated": false
+}

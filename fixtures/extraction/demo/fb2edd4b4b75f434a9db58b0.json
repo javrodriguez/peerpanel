@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC9487109:8:483dd776",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "CBS 6054",
+   "type": "organism"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "Master Cell Banks",
+   "type": "organism"
+  },
+  {
+   "name": "YPD medium",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "NH4)2SO4",
+   "type": "chemical"
+  },
+  {
+   "name": "KH2PO4",
+   "type": "chemical"
+  },
+  {
+   "name": "MgSO4·7H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "EDTA",
+   "type": "chemical"
+  },
+  {
+   "name": "CoCl2·6H2O",
+   "type": "chemical"
+  },
+  {
+   "name": "CuSO4·5H2O",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis",
+   "predicate": "has strain",
+   "target": "CBS 6054"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "is grown in",
+   "target": "YPD medium"
+  },
+  {
+   "source": "YPD medium",
+   "predicate": "contains",
+   "target": "yeast extract"
+  },
+  {
+   "source": "YPD medium",
+   "predicate": "contains",
+   "target": "NH4)2SO4"
+  },
+  {
+   "source": "YPD medium",
+   "predicate": "contains",
+   "target": "KH2PO4"
+  },
+  {
+   "source": "YPD medium",
+   "predicate": "contains",
+   "target": "MgSO4·7H2O"
+  },
+  {
+   "source": "YPD medium",
+   "predicate": "contains",
+   "target": "EDTA"
+  },
+  {
+   "source": "YPD medium",
+   "predicate": "contains",
+   "target": "CoCl2·6H2O"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "is stored in",
+   "target": "glycerol"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "is maintained in",
+   "target": "Master Cell Banks"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13413155:12:5eeaf7c8",
+ "entities": [
+  {
+   "name": "trimAl",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IQ-TREE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fasttree",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Data Processing System (DPS)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Alternaria brassicifolii",
+   "type": "organism"
+  },
+  {
+   "name": "Brassica rapa subsp. pekinensis",
+   "type": "organism"
+  },
+  {
+   "name": "Signalp",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Interpro",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pfam Protein Families Database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dbcan",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gene Ontology",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Magnaporthe oryzae",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Alternaria brassicifolii",
+   "predicate": "isolated from",
+   "target": "Brassica rapa subsp. pekinensis"
+  }
+ ],
+ "truncated": false
+}

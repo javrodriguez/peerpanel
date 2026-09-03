@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC10440040:23:e8e1eae3",
+ "entities": [
+  {
+   "name": "Tkach JM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yimit A Lee AY",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Riffle M Costanzo M Jaschob D Hendry JA Ou J Moffat J Boone C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dissecting DNA",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "damage response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein localization",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "abundance changes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nat Cell Biol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mendes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Faia",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "signature genes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nitrogen deficiency",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Tkach JM",
+   "predicate": "used",
+   "target": "Dissecting DNA"
+  },
+  {
+   "source": "Tkach JM",
+   "predicate": "used",
+   "target": "damage response"
+  },
+  {
+   "source": "Tkach JM",
+   "predicate": "used",
+   "target": "protein localization"
+  },
+  {
+   "source": "Tkach JM",
+   "predicate": "used",
+   "target": "abundance changes"
+  },
+  {
+   "source": "Mendes",
+   "predicate": "used",
+   "target": "signature genes"
+  },
+  {
+   "source": "Mendes",
+   "predicate": "used",
+   "target": "nitrogen deficiency"
+  },
+  {
+   "source": "Riffle M Costanzo M Jaschob D Hendry JA Ou J Moffat J Boone C",
+   "predicate": "used",
+   "target": "Dissecting DNA"
+  },
+  {
+   "source": "Riffle M Costanzo M Jaschob D Hendry JA Ou J Moffat J Boone C",
+   "predicate": "used",
+   "target": "damage response"
+  },
+  {
+   "source": "Riffle M Costanzo M Jaschob D Hendry JA Ou J Moffat J Boone C",
+   "predicate": "used",
+   "target": "protein localization"
+  },
+  {
+   "source": "Riffle M Costanzo M Jaschob D Hendry JA Ou J Moffat J Boone C",
+   "predicate": "used",
+   "target": "abundance changes"
+  }
+ ],
+ "truncated": false
+}

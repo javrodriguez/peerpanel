@@ -6,27 +6,36 @@ capture of the runs that produced the indexes.
 
 | file | what it is | regenerate with |
 |---|---|---|
-| `ablation-ci.json` | retrieval ladder, CI corpus | `make ablation` (no model needed) |
-| `ablation-demo.json` | retrieval ladder, demo corpus | `make ablation-demo` |
-| `build-stats-ci.json` | CI index build: chunks, entities, edges, communities, wall-clock | `make graph` |
+| `ablation-ci.json` | retrieval ladder, CI corpus | `make ablation-publish` (no model needed; only `latency_ms` moves) |
+| `ablation-demo.json` | retrieval ladder, demo corpus | `make ablation-demo-publish` (needs the fetched corpus, no model) |
+| `build-stats-ci.json` | CI index build: chunks, entities, edges, communities, wall-clock | `make graph` after emptying `fixtures/extraction/ci` — the committed record is the cold build; on the committed cache the same target replays with no model calls and reports `cached_before` = 234 |
 | `build-stats-demo.json` | demo index build, same fields | `make demo-index` |
 | `demo-index-build.log` | raw capture of the 6.4-hour demo index build | `make demo-index` |
 | `demo-summaries.log` | raw capture of the demo community-report run | `make demo-summaries` |
-| `panel-review-met17.json` / `.log` | a real panel run on a real manuscript | `make review` |
-| `panel-review-met17-run2.json` | an independent second run of the same panel | `make review` |
-| `planted-eval-demo.json` | planted errors: panel vs single-agent baseline | `make eval` |
+| `panel-review-met17-auxotroph.json` / `.log` | a real panel run on a real manuscript | `make review` |
+| `panel-review-met17-auxotroph-run2.json` / `.log` | the same panel run again — byte-identical apart from wall-clock, which is the evidence that it is deterministic | `make review RUN=2` |
+| `planted-eval-caprin-heterochromatin.json` / `.log` | planted errors on the held-out manuscript: panel vs single-agent baseline | `make eval` |
+| `planted-eval-met17-auxotroph.json` / `.log` | the same protocol on the second manuscript | `make eval SUBJECT=met17-auxotroph` |
+
+Every row's command is bound by a test: `tests/test_regenerate_commands.py` expands each cited
+`make` line, runs the underlying command with `--where`, and fails if the path it names is not the
+file in its row. Model-run records (the panel, the planted evaluation, the index builds) reproduce
+the protocol, not the bytes — small local models are not deterministic across runs, and this file
+says so wherever a number depends on one run.
 
 ## The indexes
 
 |  | CI corpus | demo corpus |
 |---|---|---|
 | documents | 15 | 68 |
-| chunks | 212 | 948 |
-| entities | 1,577 | 6,722 |
-| edges | 12,166 | 55,146 |
-| communities (Leiden, resolution 1.0) | 27 | 66 |
+| chunks | 234 | 1,077 |
+| entities | 1,759 | 7,697 |
+| edges | 13,516 | 63,130 |
+| communities (Leiden, resolution 1.0) | 32 | 79 |
 | extractions truncated | 0 | 0 |
-| build wall-clock | 85 min | 6 h 23 min |
+| extraction calls | 234 | 1,077 |
+| largest prompt / smallest margin | 5,238 / 2,747 tokens | 7,666 / 2,613 tokens |
+| build wall-clock | 2 h 31 min | 11 h 53 min |
 
 Both built by `llama3.1:8b` through the provider seam at temperature 0, one call per chunk, every
 result cached and committed under `fixtures/extraction/`.
@@ -37,11 +46,11 @@ Two query manuscripts, 36 relevant documents between them, k = 10.
 
 | rung | found @10 | found @30 | recall@10 | ceiling | % of ceiling | NDCG@10 | mean latency |
 |---|---|---|---|---|---|---|---|
-| BM25 | 13 / 36 | 25 / 36 | 0.366 | 0.679 | 69% | 0.770 | 20 ms |
-| **vector** | **14 / 36** | **26 / 36** | **0.429** | 0.679 | **75%** | **0.806** | **0.4 ms** |
-| RRF hybrid | 13 / 36 | 25 / 36 | 0.366 | 0.679 | 69% | 0.770 | 22 ms |
-| GraphRAG local | 12 / 36 | 22 / 36 | 0.393 | 0.679 | 65% | 0.713 | 85 ms |
-| GraphRAG global | 13 / 36 | 25 / 36 | 0.366 | 0.679 | 69% | 0.685 | 5 ms |
+| BM25 | 13 / 36 | 24 / 36 | 0.366 | 0.679 | 69% | 0.770 | 30.8 ms |
+| vector | 13 / 36 | 26 / 36 | 0.366 | 0.679 | 69% | 0.770 | 0.5 ms |
+| RRF hybrid | 13 / 36 | 25 / 36 | 0.366 | 0.679 | 69% | 0.770 | 36.2 ms |
+| GraphRAG local | 10 / 36 | 23 / 36 | 0.312 | 0.679 | 54% | 0.641 | 97.2 ms |
+| **GraphRAG global** | **14 / 36** | 25 / 36 | **0.473** | 0.679 | **76%** | **0.830** | 6.7 ms |
 
 Every rung is scored over a document list of the **same length**. That sounds obvious and an
 earlier version of this table did not do it: it retrieved a fixed 30 *chunks* per rung and then
@@ -116,57 +125,105 @@ measure, not to carry evidence.
 ## The panel, on a real manuscript
 
 `make review` on the MET17 preprint against the 68-document demo corpus, with that manuscript's
-own published twin withheld from the index and from the graph. 142,852 tokens, 39 minutes, $0.
+own published twin withheld from the index and from the graph. 226,585 tokens, 31 minutes, $0.
 
 | | |
 |---|---|
 | reviewers | 2, blind and parallel, different retrieval scopes and model families |
-| findings | 8 each |
+| findings | 8 each, and neither reviewer failed to parse |
 | scores | methods 4/4/4 · novelty 4/4/**3** (they disagree on contribution) |
-| claims verified | 24, each judged twice with the evidence order reversed |
-| verdicts | 9 SUPPORTS · 2 REFUTES · 13 NOT_ENOUGH_INFO |
-| conflicts detected | 1 (evidence: a reviewer's own claim refuted by retrieval) |
+| claims verified | 20 verdicts, every one judged twice with the evidence order reversed |
+| verdicts | 0 SUPPORTS · 0 REFUTES · **20 NOT_ENOUGH_INFO** |
+| verdicts carrying an evidence span | 6 of 20 |
+| conflicts detected | 0 |
 | deterministic lens | 0 findings — a published paper; the lens is proven on planted defects |
 
-### The result worth reading: swap-consistency 0.42–0.50, and it is noisy
+### The result worth reading: the verifier decides nothing
 
-Two independent runs of the same panel, same manuscript, same withheld twin, same models:
+Every verdict in both committed runs is an abstention. Not one claim was SUPPORTED or REFUTED.
 
-| run | swap-consistency | verdicts forced to abstain | tokens | wall |
-|---|---|---|---|---|
-| 1 | 0.500 | 12 / 24 | 142,852 | 2,351 s |
-| 2 | 0.417 | 14 / 24 | 137,561 | 2,964 s |
+That is not the swap rule forcing caution. Of the 20 claims, **14 were swap-consistent** — the
+verifier returned `NOT_ENOUGH_INFO` in both evidence orderings, of its own accord — and the other 6
+disagreed with themselves when the order was reversed and were forced to abstain. So on this
+configuration the judge either cannot decide, or decides differently depending on what it read
+first. No claim was ever decided the same way twice.
 
-**Between six and seven of every twelve claim verdicts flipped when the evidence order was
-reversed**, and were forced to abstain. This is the most useful result the system has produced, and
-the spread between the two runs is part of it: a single run's rate is not precise to three digits,
-and an earlier version of this section published `0.50` as though it were. Anyone re-running will
-get a third number in this neighbourhood, not this one.
+The clearest single case: the claim *"The MET17 gene catalyzes homocysteine synthesis by reacting
+H2S with O-acetyl homoserine"* was verified against a retrieved span reading *"Met17p catalyzes the
+fixation of inorganic sulfide with O-acetylhomoserine (OAHS) to form…"* — the evidence states the
+claim, the span survived the substring check, and the verdict is still `NOT_ENOUGH_INFO`.
 
-Position bias in LLM judges is documented — first-shown options are picked ~64% of the time, and
-the median model flips on ~41% of decisive swapped-order cases — and both runs land at or above the
-high end of that on a small local model. Without the order-swap, five to six in every ten of these
-verdicts would have been artifacts of which evidence chunk happened to come first, and they would
-have looked exactly like judgements. The mitigation is not decoration; on this evidence it does
-more work than any other component in the panel.
+An earlier version of this page reported 9 SUPPORTS and 2 REFUTES from this same panel. Those runs
+were measured while every reviewer and verifier prompt was being silently cut to a 4,096-token
+window (DECISIONS.md D19), so the decisive-looking verdicts came from a judge that had read part of
+its evidence and none of its instructions. Reading the prompt whole made it strictly more
+conservative, and the honest reading of that is not an improvement: **a judge that cannot say
+SUPPORTS is not a judge**, and this one is currently an expensive way to produce abstentions.
 
-(The wall-clock figures are not comparable to each other: the two runs overlapped on one GPU. That
-is also why sampling temperature, not timing, explains the token difference.)
+### Swap consistency: 0.70, over a population where it means little
 
-### And one thing the run got wrong
+| run | swap-consistent | forced to abstain | rate | tokens | wall |
+|---|---|---|---|---|---|
+| 1 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,859 s |
+| 2 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,654 s |
 
-One of the 16 findings — *"The authors use a commercial TAG assay kit to quantify triacylglycerol
-content"* — describes a **different paper**. None of `triacylglycerol`, `TAG assay` or `lipid`
-appears anywhere in the MET17 manuscript; the reviewer took retrieved literature context and
-attributed it to the manuscript under review, despite the prompt labelling the two sections
-separately.
+The rate is now exact rather than a bound: each verdict records whether it was actually judged
+twice (`swapped`), and all 20 were, so the denominator is real. An earlier version could only
+publish `[0.00, 0.50]` because the records did not distinguish "agreed" from "never tested".
 
-That is 1 in 16 findings hallucinated by conflation, from an 8-billion-parameter model. It is
-reported here rather than trimmed, because the number a reader needs in order to calibrate how much
-to trust the other fifteen is exactly this one. It is also a concrete argument for the claim
-verifier: a grounding check that demands a quote be a substring of a retrieved chunk is the kind of
-mechanism that catches this class of error, and a larger model would reduce but not eliminate it.
+It is also nearly meaningless as a measure of position bias here, and saying so is the point:
+consistency between two abstentions is not resistance to order effects, because there was no
+decision to lose. What the number really reports is that **30% of claims changed the verifier's
+answer when the evidence order was reversed** — which is the documented position-bias effect
+(~41% flip rates on decisive cases in the literature), reproduced by a small local model, on a
+population that otherwise refuses to commit.
 
+### The two runs are byte-identical, and that is the finding
+
+Run 2 reproduces run 1 exactly: same 20 verdicts, same 16 findings, same converger prose, same
+226,585 tokens — every field identical apart from wall-clock. At temperature 0 this panel is
+deterministic, so a second run is a **reproduction, not an independent sample**.
+
+An earlier version of this page presented two runs as evidence of variability ("12 of 24, then 14
+of 24"). Whatever produced that spread, it is not present in this configuration, and two identical
+runs cannot support a claim about variance. What they do support is reproducibility: anyone with
+the pinned models can re-run `make review` and get this record back.
+
+### What the run got wrong: nothing it quoted
+
+Across both runs, **0 of 32 reviewer findings quote text that is not in the manuscript.** Every
+quote in every finding is real manuscript text.
+
+An earlier version of this section reported three findings in sixteen describing a different paper
+— a reviewer attributing retrieved literature to the manuscript under review. That reviewer was
+reading a cut prompt: the excerpt's head was gone and the rubric with it, leaving retrieved
+literature as the most recent thing in its context. Read whole, the behaviour disappears entirely
+on this manuscript. One manuscript and 32 findings is not a licence to call the failure mode
+solved, and `tests/test_artifact_conformance.py` recomputes this count from the records on every
+run, so if it returns the number returns with it.
+
+Reproduce with a substring check of each finding's `quote` against `manuscripts/met17-auxotroph.txt`
+and the committed `results/panel-review-met17-auxotroph.json`.
+
+### The mechanism that had never fired, and now has
+
+A verdict's citation survives only if the chunk was actually retrieved **and** the quote is a
+substring of that chunk's own text, so a fabricated citation cannot pass the type system. Until
+this rebuild its yield across every committed run was exactly zero — 0 of 24 verdicts carried an
+evidence span — and this page said so, calling it an unfired safety check rather than a
+demonstrated capability.
+
+It fires now: **12 of 40 verdicts across the two committed runs carry a surviving evidence span**,
+6 in each. The spans are real retrieved text that passed the substring check, and one of them is
+quoted above.
+
+Two things keep this from being a success story. The verdicts carrying those spans are all
+`NOT_ENOUGH_INFO`, so the grounding demonstrably works and the judge it feeds does not use it. And
+the reviewers' own citations remain nearly absent: of 16 findings in a run, **1 cites a retrieved
+chunk at all**. The mechanism is proven; what it is attached to is not.
+
+The deterministic lens is the capability still without positive evidence: **0 findings** on every
+committed run, exactly as before. It is proven only on planted defects, in the evaluation below.
 
 ## The headline measurement: the panel loses to a single agent
 
@@ -177,12 +234,19 @@ entirely, so no answer key existed for either.
 
 | system | detected | tokens | wall |
 |---|---|---|---|
-| **panel** (2 reviewers + verifier + deterministic lens + converger) | **1 / 3** | 165,334 | 2,751 s |
-| **single agent**, chain-of-thought + self-consistency | **3 / 3** | 36,857 | 344 s |
+| **panel** (2 reviewers + verifier + deterministic lens + converger) | **1 / 3** | 240,852 | 1,743 s |
+| **single agent**, chain-of-thought + self-consistency | **2 / 3** | 36,062 | 339 s |
 
-**The single agent found every planted error. The panel found one, using 4.5× the tokens and 8× the
-wall-clock.** It missed the swapped gene symbol and the reversed effect direction; it caught only
-the fabricated citation.
+**The single agent found twice what the panel found, using 15% of the tokens.** The panel caught
+the swapped gene symbol and nothing else; the baseline caught that and the reversed effect
+direction. Neither caught the fabricated citation. The panel spent 6.7x the tokens and
+5.1x the wall-clock to find less.
+
+Both arms record how many of their calls produced nothing because the output would not parse:
+**0 for the panel and 0 for the baseline**. That field exists because the run this page used
+to report was measured with one of the panel's two reviewers silently dead — its JSON never parsed,
+it contributed no findings, and nothing in the record said so. A detection count depressed by a
+parse failure is not a measurement of an architecture.
 
 This is the row the multi-agent literature says is always missing. Debate and panel architectures
 "often fail to outperform simple single-agent baselines such as Chain-of-Thought and
@@ -191,6 +255,32 @@ Self-Consistency, even when consuming significantly more inference-time computat
 this repository was built to demonstrate, and it is published for the same reason the losing
 retrieval rung is: a result that only appears when it flatters the architecture is not a
 measurement.
+
+The rebuild did not rescue this. Every other headline on this page moved when the prompts were read
+whole — the retrieval ranking inverted, the hallucinated attributions went to zero, the grounding
+mechanism fired for the first time — and the panel still loses this comparison, now by a slightly
+smaller margin against a baseline that also got worse (2 of 3 where it had scored 3 of 3 while
+reading half its prompt). The loss is the most robust finding here.
+
+### It replicates on a second manuscript
+
+The same protocol on `met17-auxotroph`, whose published twin **is** in the corpus and is therefore
+withheld from both arms' index (26 chunks dropped for each):
+
+| manuscript | twin | panel | single agent | panel tokens | baseline tokens | baseline share |
+|---|---|---|---|---|---|---|
+| `caprin-heterochromatin` | absent from corpus | 1 / 3 | 2 / 3 | 240,852 | 36,062 | 15% |
+| `met17-auxotroph` | in corpus, excluded | 1 / 3 | 2 / 3 | 244,460 | 34,902 | 14% |
+
+Same outcome both times, on two different manuscripts with two different exclusion situations, and
+in both the panel caught only the swapped gene symbol while the baseline caught that and the
+reversed effect direction. Neither system, on either manuscript, caught the fabricated citation —
+the error kind a literature-grounded panel ought to be best placed to catch.
+
+This page previously reported one such record. Two agreeing records is not a rate either (n = 3
+errors each, and two error kinds could not be planted inside the reviewed window at all), but it
+removes the most obvious escape route from the earlier result: that the loss was one unlucky
+manuscript.
 
 ### Reading it honestly — including what would make it fairer
 
@@ -204,7 +294,7 @@ Three things about this comparison a careful reader should weigh, none of which 
   the fact that a general-purpose review panel misses a swapped gene symbol *is itself the finding*,
   because catching that is a reviewer's job.
 - **The budget did not match, in the baseline's disfavour.** The baseline hit its sampling ceiling
-  at 36,857 tokens — 22% of the panel's spend. It won with a fifth of the compute, so the gap is
+  at 36,062 tokens — 15% of the panel's spend. It won on a sixth of the compute, so the gap is
   not explained by resources.
 - **n = 3 errors, one manuscript.** Per D14, this establishes behaviour, not a rate. Two error
   kinds could not be planted inside the reviewed window at all and are recorded as skipped rather

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13470552:14:a5e8eb85",
+ "entities": [
+  {
+   "name": "Atg8",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PE",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "Oxidative stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Apoptosis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nucleus",
+   "type": "organism"
+  },
+  {
+   "name": "Vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "ER",
+   "type": "organism"
+  },
+  {
+   "name": "ER stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "AIF",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Atg8",
+   "predicate": "deconjugation",
+   "target": "PE"
+  },
+  {
+   "source": "Mitochondria",
+   "predicate": "oxidative stress",
+   "target": "Apoptosis"
+  },
+  {
+   "source": "Nucleus",
+   "predicate": "interaction",
+   "target": "Vacuole"
+  },
+  {
+   "source": "ER",
+   "predicate": "stress",
+   "target": "ER stress"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "response",
+   "target": "AIF"
+  },
+  {
+   "source": "Atg8",
+   "predicate": "biogenesis",
+   "target": "Autophagy"
+  },
+  {
+   "source": "Mitochondria",
+   "predicate": "death",
+   "target": "Apoptosis"
+  },
+  {
+   "source": "Nucleus",
+   "predicate": "junction",
+   "target": "Vacuole"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "response",
+   "target": "ER stress"
+  },
+  {
+   "source": "AIF",
+   "predicate": "regulation",
+   "target": "Apoptosis"
+  }
+ ],
+ "truncated": false
+}

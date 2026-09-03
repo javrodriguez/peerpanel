@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13406880:5:432a96e6",
+ "entities": [
+  {
+   "name": "AdoMet",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sam1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "cycloheximide",
+   "type": "chemical"
+  },
+  {
+   "name": "2-deoxyglucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Ded1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsp42",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "stress granules",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolomics",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "host",
+   "target": "Sam1"
+  },
+  {
+   "source": "glucose",
+   "predicate": "affect",
+   "target": "Sam1"
+  },
+  {
+   "source": "YPD",
+   "predicate": "affect",
+   "target": "Sam1"
+  },
+  {
+   "source": "cycloheximide",
+   "predicate": "affect",
+   "target": "Sam1"
+  },
+  {
+   "source": "2-deoxyglucose",
+   "predicate": "affect",
+   "target": "Sam1"
+  },
+  {
+   "source": "Ded1",
+   "predicate": "involved_in",
+   "target": "stress granules"
+  },
+  {
+   "source": "Hsp42",
+   "predicate": "involved_in",
+   "target": "autophagy"
+  }
+ ],
+ "truncated": false
+}

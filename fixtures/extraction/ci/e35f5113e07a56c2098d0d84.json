@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13312927:20:6b623a64",
+ "entities": [
+  {
+   "name": "human methyltransferasome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Drosophila Hox genes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PRMT1 inhibitors",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RNA methylation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dnmt2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "grappa gene",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "histone H3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein arginine methyltransferases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DOT1L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "histone methyltransferase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S-adenosyl-L-homocysteine hydrolase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "human methyltransferasome",
+   "predicate": "has_component",
+   "target": "Dnmt2"
+  },
+  {
+   "source": "grappa gene",
+   "predicate": "encodes",
+   "target": "histone H3"
+  }
+ ],
+ "truncated": false
+}

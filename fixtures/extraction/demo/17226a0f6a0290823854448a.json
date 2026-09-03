@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC5968551:12:e63deb99",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Trichosporon fermentans",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "PhoR-PhoP system",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid accumulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "oleaginous microorganisms",
+   "type": "organism"
+  },
+  {
+   "name": "oleaginous organisms",
+   "type": "organism"
+  },
+  {
+   "name": "lipid droplet proteome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fatty acid-derived oleochemicals",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PhoR-PhoP system",
+   "predicate": "regulate",
+   "target": "lipid production"
+  },
+  {
+   "source": "lipid accumulation",
+   "predicate": "characterize",
+   "target": "oleaginous microorganisms"
+  },
+  {
+   "source": "lipid production",
+   "predicate": "characterize",
+   "target": "oleaginous organisms"
+  },
+  {
+   "source": "lipid droplet proteome",
+   "predicate": "characterize",
+   "target": "Rhodosporidium toruloides"
+  }
+ ],
+ "truncated": false
+}

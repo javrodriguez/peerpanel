@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13450799:9:337522b4",
+ "entities": [
+  {
+   "name": "Msn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STRE1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STRE2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "diauxic shift",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose starvation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "environmental stress response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "general stress responses",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcription",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "plasmid",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Msn2",
+   "predicate": "regulates",
+   "target": "YGP1"
+  },
+  {
+   "source": "Msn4",
+   "predicate": "regulates",
+   "target": "YGP1"
+  },
+  {
+   "source": "Msn2",
+   "predicate": "binds",
+   "target": "STRE2"
+  },
+  {
+   "source": "Msn4",
+   "predicate": "binds",
+   "target": "STRE2"
+  },
+  {
+   "source": "transcription",
+   "predicate": "mediated_by",
+   "target": "Msn2"
+  },
+  {
+   "source": "transcription",
+   "predicate": "mediated_by",
+   "target": "Msn4"
+  }
+ ],
+ "truncated": false
+}

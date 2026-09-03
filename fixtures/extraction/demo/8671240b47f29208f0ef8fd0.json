@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC11628909:8:43ff05c7",
+ "entities": [
+  {
+   "name": "PagERF021 protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "State Key Laboratory",
+   "type": "organism"
+  },
+  {
+   "name": "Tree Genetics",
+   "type": "organism"
+  },
+  {
+   "name": "NCBI's SRA",
+   "type": "organism"
+  },
+  {
+   "name": "PRJNA1067173",
+   "type": "organism"
+  },
+  {
+   "name": "Northeast Forestry University",
+   "type": "organism"
+  },
+  {
+   "name": "Table S1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Table S2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fig. S1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Transcriptional activation analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Stress-related DEGs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "raw sequencing data",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PagERF021 protein",
+   "predicate": "analyzed_by",
+   "target": "Transcriptional activation analysis"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "included_in",
+   "target": "Table S1"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "included_in",
+   "target": "Fig. S1"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "included_in",
+   "target": "Table S2"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "analyzed_by",
+   "target": "Stress-related DEGs"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "included_in",
+   "target": "NCBI's SRA"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "included_in",
+   "target": "PRJNA1067173"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "funded_by",
+   "target": "State Key Laboratory"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "funded_by",
+   "target": "Northeast Forestry University"
+  },
+  {
+   "source": "PagERF021 protein",
+   "predicate": "funded_by",
+   "target": "Tree Genetics"
+  }
+ ],
+ "truncated": false
+}

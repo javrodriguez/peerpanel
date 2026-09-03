@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10398944:5:665d273f",
+ "entities": [
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty alcohol",
+   "type": "chemical"
+  },
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_11990",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tef1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "WT",
+   "type": "organism"
+  },
+  {
+   "name": "OE-Pnt1",
+   "type": "organism"
+  },
+  {
+   "name": "∆Pnt1",
+   "type": "organism"
+  },
+  {
+   "name": "parental strain",
+   "type": "organism"
+  },
+  {
+   "name": "∆11990 OE-Pnt1 strain",
+   "type": "organism"
+  },
+  {
+   "name": "random integration strains",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "∆11990 OE-Pnt1 strain",
+   "predicate": "produces",
+   "target": "fatty alcohol"
+  },
+  {
+   "source": "random integration strains",
+   "predicate": "produces",
+   "target": "fatty alcohol"
+  },
+  {
+   "source": "WT",
+   "predicate": "has",
+   "target": "Pnt1"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "has",
+   "target": "Pnt1"
+  },
+  {
+   "source": "∆Pnt1",
+   "predicate": "lacks",
+   "target": "Pnt1"
+  }
+ ],
+ "truncated": false
+}

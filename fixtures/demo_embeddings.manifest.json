@@ -1,8 +1,8 @@
 {
  "provider": "ollama-native-embed:nomic-embed-text",
- "n_vectors": 948,
+ "n_vectors": 1077,
  "dim": 768,
  "dtype": "float16",
- "sha256": "eaa7a2476f1be06a60fd5f3461c72d387d74e6117645cbc1c6e9467da8c862a8",
+ "sha256": "235fcc6765412e5f4836a44f280ad66d9e4526f059f1bf8c5086d61ecbfd7fae",
  "regenerate": "make demo-index"
 }

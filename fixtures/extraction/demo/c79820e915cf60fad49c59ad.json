@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13471478:23:869cbabf",
+ "entities": [
+  {
+   "name": "cochleas",
+   "type": "organism"
+  },
+  {
+   "name": "immunoglobulin deposits",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mouse glomeruli",
+   "type": "organism"
+  },
+  {
+   "name": "ICln",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "alpha-integrin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IClswell current",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "POU3F4 variants",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SLC6A20",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TP53 missense variants",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li-Fraumeni syndrome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "hereditary breast cancer",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CLUSTAL W",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "immunoglobulin deposits",
+   "predicate": "evaluated",
+   "target": "mouse glomeruli"
+  },
+  {
+   "source": "ICln",
+   "predicate": "binds",
+   "target": "alpha-integrin"
+  },
+  {
+   "source": "IClswell current",
+   "predicate": "activated",
+   "target": "ICln"
+  },
+  {
+   "source": "SLC6A20",
+   "predicate": "transcriptionally upregulated",
+   "target": "POU3F4 variants"
+  },
+  {
+   "source": "TP53 missense variants",
+   "predicate": "associated",
+   "target": "Li-Fraumeni syndrome"
+  },
+  {
+   "source": "TP53 missense variants",
+   "predicate": "associated",
+   "target": "hereditary breast cancer"
+  }
+ ],
+ "truncated": false
+}

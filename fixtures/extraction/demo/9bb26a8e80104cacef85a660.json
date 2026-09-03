@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC4125178:8:912a9acf",
+ "entities": [
+  {
+   "name": "Hodges RJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Buzby JC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bennett B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Heydari A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pessarakli M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tian J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ban X",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zeng H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Huang B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "He J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "García-Cela E",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Crespo-Sempere A",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

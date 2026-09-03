@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC11618413:17:50670466",
+ "entities": [
+  {
+   "name": "Siri M Herrera M Moyano AJ Celej MS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "macromolecular crowder",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fibrillar organization",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "functional amyloid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FapC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pseudomonas aeruginosa Arch",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biochem",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biophys",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sleutel M Pradhan B Volkov AN Remaut H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "architectural principles",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bacterial amyloid curli Nat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Commun",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Siri M Herrera M Moyano AJ Celej MS",
+   "predicate": "influence",
+   "target": "macromolecular crowder"
+  },
+  {
+   "source": "Siri M Herrera M Moyano AJ Celej MS",
+   "predicate": "influence",
+   "target": "fibrillar organization"
+  },
+  {
+   "source": "Siri M Herrera M Moyano AJ Celej MS",
+   "predicate": "influence",
+   "target": "functional amyloid"
+  },
+  {
+   "source": "Siri M Herrera M Moyano AJ Celej MS",
+   "predicate": "influence",
+   "target": "FapC"
+  },
+  {
+   "source": "Siri M Herrera M Moyano AJ Celej MS",
+   "predicate": "influence",
+   "target": "Pseudomonas aeruginosa Arch"
+  },
+  {
+   "source": "Siri M Herrera M Moyano AJ Celej MS",
+   "predicate": "influence",
+   "target": "Biochem"
+  },
+  {
+   "source": "Siri M Herrera M Moyano AJ Celej MS",
+   "predicate": "influence",
+   "target": "Biophys"
+  },
+  {
+   "source": "Sleutel M Pradhan B Volkov AN Remaut H",
+   "predicate": "influence",
+   "target": "architectural principles"
+  },
+  {
+   "source": "Sleutel M Pradhan B Volkov AN Remaut H",
+   "predicate": "influence",
+   "target": "bacterial amyloid curli Nat"
+  },
+  {
+   "source": "Sleutel M Pradhan B Volkov AN Remaut H",
+   "predicate": "influence",
+   "target": "Commun"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC11974387:4:e6617f5a",
+ "entities": [
+  {
+   "name": "PDC-negative strains",
+   "type": "organism"
+  },
+  {
+   "name": "NADH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jouandot",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Snf3",
+   "type": "organism"
+  },
+  {
+   "name": "Rgt2",
+   "type": "organism"
+  },
+  {
+   "name": "Rgt1",
+   "type": "organism"
+  },
+  {
+   "name": "Mth1",
+   "type": "organism"
+  },
+  {
+   "name": "Std1",
+   "type": "organism"
+  },
+  {
+   "name": "Ssn6",
+   "type": "organism"
+  },
+  {
+   "name": "Tup1",
+   "type": "organism"
+  },
+  {
+   "name": "Yck1",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Mth1",
+   "predicate": "prevents phosphorylation of",
+   "target": "Rgt1"
+  },
+  {
+   "source": "Mth1",
+   "predicate": "is phosphorylated by",
+   "target": "Yck1"
+  }
+ ],
+ "truncated": false
+}

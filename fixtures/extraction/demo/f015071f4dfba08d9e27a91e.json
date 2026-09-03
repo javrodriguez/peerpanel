@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13462271:9:bc4622bb",
+ "entities": [
+  {
+   "name": "Waga S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Stillman B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA replication fork",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "eukaryotic cells",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Annu Rev Biochem",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MCM proteins",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "DNA replication",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Bell SP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dutta A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tye BK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhai Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "origin recognition complex",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Waga S",
+   "predicate": "involved in",
+   "target": "DNA replication fork"
+  },
+  {
+   "source": "Stillman B",
+   "predicate": "involved in",
+   "target": "DNA replication fork"
+  },
+  {
+   "source": "Annu Rev Biochem",
+   "predicate": "published in",
+   "target": "Waga S"
+  },
+  {
+   "source": "Annu Rev Biochem",
+   "predicate": "published in",
+   "target": "Stillman B"
+  },
+  {
+   "source": "MCM proteins",
+   "predicate": "involved in",
+   "target": "DNA replication"
+  },
+  {
+   "source": "Bell SP",
+   "predicate": "involved in",
+   "target": "DNA replication"
+  },
+  {
+   "source": "Dutta A",
+   "predicate": "involved in",
+   "target": "DNA replication"
+  },
+  {
+   "source": "Tye BK",
+   "predicate": "involved in",
+   "target": "origin recognition complex"
+  },
+  {
+   "source": "Zhai Y",
+   "predicate": "involved in",
+   "target": "origin recognition complex"
+  }
+ ],
+ "truncated": false
+}

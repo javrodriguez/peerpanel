@@ -51,8 +51,11 @@ class TestMetricMath:
 class TestGate:
     def _case(self, n: int) -> QueryCase:
         return QueryCase(
-            preprint_doi="10.1/x", manuscript_file="m.txt", query="q",
-            relevant_docs=[f"PMC{i}" for i in range(n)], excluded_docs=["PMC0000"],
+            preprint_doi="10.1/x",
+            manuscript_file="m.txt",
+            query="q",
+            relevant_docs=[f"PMC{i}" for i in range(n)],
+            excluded_docs=["PMC0000"],
         )
 
     def test_gate_binds_at_aggregate_twenty(self) -> None:

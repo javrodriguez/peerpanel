@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC10398944:13:32b4e3c1",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OE-Pnt1",
+   "type": "organism"
+  },
+  {
+   "name": "WT R.",
+   "type": "organism"
+  },
+  {
+   "name": "Agile BioFoundry public registry",
+   "type": "organism"
+  },
+  {
+   "name": "Biolector",
+   "type": "organism"
+  },
+  {
+   "name": "Tef1 promoter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_11990 locus",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sandia National Laboratories",
+   "type": "organism"
+  },
+  {
+   "name": "National Technology and Engineering Solutions",
+   "type": "organism"
+  },
+  {
+   "name": "Honeywell International Inc.",
+   "type": "organism"
+  },
+  {
+   "name": "U. S. Department of Energy",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_growth",
+   "target": "OE-Pnt1"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_growth",
+   "target": "WT R."
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "has_protein_abundance",
+   "target": "Pnt1"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "has_protein_abundance",
+   "target": "Tef1 promoter"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "has_protein_abundance",
+   "target": "RTO4_11990 locus"
+  },
+  {
+   "source": "Sandia National Laboratories",
+   "predicate": "is_managed_by",
+   "target": "National Technology and Engineering Solutions"
+  },
+  {
+   "source": "Sandia National Laboratories",
+   "predicate": "is_owned_by",
+   "target": "Honeywell International Inc."
+  },
+  {
+   "source": "U. S. Department of Energy",
+   "predicate": "funds",
+   "target": "Agile BioFoundry public registry"
+  }
+ ],
+ "truncated": false
+}

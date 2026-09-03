@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13456448:2:850bc329",
+ "entities": [
+  {
+   "name": "adenylyl cyclase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "Rca1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cst6p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cyr1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus spp",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium spp",
+   "type": "organism"
+  },
+  {
+   "name": "carbonic anhydrase",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "adenylyl cyclase",
+   "predicate": "involved_in",
+   "target": "cAMP"
+  },
+  {
+   "source": "Rca1p",
+   "predicate": "regulates",
+   "target": "carbonic anhydrase"
+  }
+ ],
+ "truncated": false
+}

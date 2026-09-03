@@ -97,12 +97,21 @@ class _StubChat:
         self.tokens = tokens_per_call
         self.calls: list[float] = []
 
-    def chat(self, *, system: str, user: str, json_schema: object = None,
-             temperature: float = 0.0, max_tokens: int = 2048) -> ChatResponse:
+    def chat(
+        self,
+        *,
+        system: str,
+        user: str,
+        json_schema: object = None,
+        temperature: float = 0.0,
+        max_tokens: int = 2048,
+    ) -> ChatResponse:
         self.calls.append(temperature)
         return ChatResponse(
-            text=self.payload, model="stub",
-            prompt_tokens=self.tokens // 2, completion_tokens=self.tokens // 2,
+            text=self.payload,
+            model="stub",
+            prompt_tokens=self.tokens // 2,
+            completion_tokens=self.tokens // 2,
         )
 
 
@@ -116,8 +125,11 @@ class TestBaseline:
     def test_samples_until_the_panel_budget_is_matched(self) -> None:
         stub = _StubChat(PAYLOAD, tokens_per_call=100)
         result = run_baseline(
-            manuscript_text=SAMPLE, retrieve=self._retrieve, title="t",
-            provider=stub, target_tokens=450,
+            manuscript_text=SAMPLE,
+            retrieve=self._retrieve,
+            title="t",
+            provider=stub,
+            target_tokens=450,
         )
         assert result.samples == 5  # stops once spend reaches the panel's
         assert result.total_tokens >= 450
@@ -127,24 +139,34 @@ class TestBaseline:
     def test_findings_unioned_and_deduped(self) -> None:
         stub = _StubChat(PAYLOAD)
         result = run_baseline(
-            manuscript_text=SAMPLE, retrieve=self._retrieve, title="t",
-            provider=stub, target_tokens=300,
+            manuscript_text=SAMPLE,
+            retrieve=self._retrieve,
+            title="t",
+            provider=stub,
+            target_tokens=300,
         )
         assert result.finding_texts == ["p value impossible p = 1.34"]
 
     def test_max_samples_caps_a_cheap_model(self) -> None:
         stub = _StubChat(PAYLOAD, tokens_per_call=2)
         result = run_baseline(
-            manuscript_text=SAMPLE, retrieve=self._retrieve, title="t",
-            provider=stub, target_tokens=10_000, max_samples=3,
+            manuscript_text=SAMPLE,
+            retrieve=self._retrieve,
+            title="t",
+            provider=stub,
+            target_tokens=10_000,
+            max_samples=3,
         )
         assert result.samples == 3
 
     def test_unparseable_sample_is_skipped_not_fatal(self) -> None:
         stub = _StubChat("{not json")
         result = run_baseline(
-            manuscript_text=SAMPLE, retrieve=self._retrieve, title="t",
-            provider=stub, target_tokens=150,
+            manuscript_text=SAMPLE,
+            retrieve=self._retrieve,
+            title="t",
+            provider=stub,
+            target_tokens=150,
         )
         assert result.finding_texts == []
         assert result.samples >= 1

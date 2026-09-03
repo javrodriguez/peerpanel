@@ -262,7 +262,7 @@ def check_gene_symbol_corruption(text: str) -> list[DeterministicFinding]:
 
 
 def _expand_citation_group(group: str) -> list[int]:
-    """"3,4" -> [3, 4]; "3-5" and its en-dash spelling -> [3, 4, 5]."""
+    """ "3,4" -> [3, 4]; "3-5" and its en-dash spelling -> [3, 4, 5]."""
     numbers: list[int] = []
     for part in re.split(r"[,;]", group):
         part = part.strip()
@@ -347,8 +347,7 @@ def check_reference_integrity(text: str) -> list[DeterministicFinding]:
                     check=CHECK_REFERENCE_INTEGRITY,
                     severity=SEVERITY_MINOR,
                     detail=(
-                        f'"{candidate}" is offered as a DOI but is not DOI syntax '
-                        "(10.NNNN/suffix)"
+                        f'"{candidate}" is offered as a DOI but is not DOI syntax (10.NNNN/suffix)'
                     ),
                     location=_location(index + 1),
                 )

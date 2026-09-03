@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC8116571:13:69f32502",
+ "entities": [
+  {
+   "name": "Oleaginous yeasts",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Lignocellulosic biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "Xylitol",
+   "type": "chemical"
+  },
+  {
+   "name": "Biofuels",
+   "type": "chemical"
+  },
+  {
+   "name": "Oleochemicals",
+   "type": "chemical"
+  },
+  {
+   "name": "Galactitol",
+   "type": "chemical"
+  },
+  {
+   "name": "D-arabitol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Oleaginous yeasts",
+   "predicate": "produce",
+   "target": "oleochemicals"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produce",
+   "target": "galactitol"
+  },
+  {
+   "source": "Kluyveromyces marxianus",
+   "predicate": "produce",
+   "target": "xylitol"
+  }
+ ],
+ "truncated": false
+}

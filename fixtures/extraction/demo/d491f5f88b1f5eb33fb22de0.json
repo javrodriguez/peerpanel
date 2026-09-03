@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514482:13:ad982919",
+ "entities": [
+  {
+   "name": "Flammulina filiformis",
+   "type": "organism"
+  },
+  {
+   "name": "Flammulina velutipes",
+   "type": "organism"
+  },
+  {
+   "name": "Pleurotus eryngii",
+   "type": "organism"
+  },
+  {
+   "name": "Enoki Mushroom",
+   "type": "organism"
+  },
+  {
+   "name": "Scopolamine",
+   "type": "chemical"
+  },
+  {
+   "name": "Polysaccharides",
+   "type": "chemical"
+  },
+  {
+   "name": "Mycorrhizae",
+   "type": "organism"
+  },
+  {
+   "name": "T Lymphocyte",
+   "type": "organism"
+  },
+  {
+   "name": "Interferon-γ",
+   "type": "chemical"
+  },
+  {
+   "name": "p38 mitogen-activated protein kinase",
+   "type": "chemical"
+  },
+  {
+   "name": "Yunnan Wild Mushrooms",
+   "type": "organism"
+  },
+  {
+   "name": "Chinese forests",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

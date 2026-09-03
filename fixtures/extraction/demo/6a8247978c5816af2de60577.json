@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13524880:21:ed5270a3",
+ "entities": [
+  {
+   "name": "Trypanosoma brucei",
+   "type": "organism"
+  },
+  {
+   "name": "Leishmania donovani",
+   "type": "organism"
+  },
+  {
+   "name": "Arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "Proline",
+   "type": "chemical"
+  },
+  {
+   "name": "Alanine",
+   "type": "chemical"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Nutrient",
+   "type": "chemical"
+  },
+  {
+   "name": "Amino acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Ammonium",
+   "type": "chemical"
+  },
+  {
+   "name": "Phosphorylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Transport",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Differentiation",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Trypanosoma brucei",
+   "predicate": "has_phosphorylation",
+   "target": "Phosphorylation"
+  }
+ ],
+ "truncated": false
+}

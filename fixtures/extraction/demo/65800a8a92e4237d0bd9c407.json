@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13471478:2:4fa30e22",
+ "entities": [
+  {
+   "name": "Human embryonic kidney (HEK) 293 Phoenix",
+   "type": "organism"
+  },
+  {
+   "name": "HeLa cells",
+   "type": "organism"
+  },
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Homo sapiens",
+   "type": "organism"
+  },
+  {
+   "name": "Mouse Slc26a4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yue Xiong",
+   "type": "organism"
+  },
+  {
+   "name": "pcDNA3-myc-CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pcDNA3-HA2-ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pFLAG-CMV-4",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Human embryonic kidney (HEK) 293 Phoenix",
+   "predicate": "express",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "HeLa cells",
+   "predicate": "express",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "interact",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "interact",
+   "target": "ROC1"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "interact",
+   "target": "CUL3"
+  },
+  {
+   "source": "SLC26A4",
+   "predicate": "interact",
+   "target": "ROC1"
+  },
+  {
+   "source": "Yue Xiong",
+   "predicate": "gift",
+   "target": "pcDNA3-myc-CUL3"
+  },
+  {
+   "source": "Yue Xiong",
+   "predicate": "gift",
+   "target": "pcDNA3-HA2-ROC1"
+  },
+  {
+   "source": "pcDNA3-myc-CUL3",
+   "predicate": "encode",
+   "target": "CUL3"
+  },
+  {
+   "source": "pcDNA3-HA2-ROC1",
+   "predicate": "encode",
+   "target": "ROC1"
+  },
+  {
+   "source": "pFLAG-CMV-4",
+   "predicate": "encode",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "pFLAG-CMV-4",
+   "predicate": "variant",
+   "target": "SLC26A4"
+  }
+ ],
+ "truncated": false
+}

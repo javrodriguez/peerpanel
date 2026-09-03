@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13462271:10:18e2cec8",
+ "entities": [
+  {
+   "name": "Eukaryotic DNA polymerases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "iron-sulfur cluster",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "formation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "active complexes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nat Chem Biol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sheu YJ",
+   "type": "organism"
+  },
+  {
+   "name": "Kinney JB",
+   "type": "organism"
+  },
+  {
+   "name": "Stillman B",
+   "type": "organism"
+  },
+  {
+   "name": "Mcm4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sld3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Dbf4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "control",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Eukaryotic DNA polymerases",
+   "predicate": "require",
+   "target": "iron-sulfur cluster"
+  },
+  {
+   "source": "Eukaryotic DNA polymerases",
+   "predicate": "form",
+   "target": "active complexes"
+  }
+ ],
+ "truncated": false
+}

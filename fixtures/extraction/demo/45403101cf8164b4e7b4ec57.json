@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13413155:4:dff30d06",
+ "entities": [
+  {
+   "name": "pSUC2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUC2 invertase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YTK12",
+   "type": "organism"
+  },
+  {
+   "name": "Ab0920a",
+   "type": "organism"
+  },
+  {
+   "name": "Alternaria brassicicola",
+   "type": "organism"
+  },
+  {
+   "name": "Bax",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pGR107",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "N. benthamiana",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Agrobacterium tumefaciens",
+   "type": "organism"
+  },
+  {
+   "name": "Koch",
+   "type": "other"
+  },
+  {
+   "name": "PDA",
+   "type": "other"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pSUC2",
+   "predicate": "encodes",
+   "target": "SUC2 invertase"
+  },
+  {
+   "source": "pSUC2",
+   "predicate": "used_in",
+   "target": "YTK12"
+  },
+  {
+   "source": "pGR107",
+   "predicate": "used_in",
+   "target": "N. benthamiana"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "hosts",
+   "target": "pGR107"
+  },
+  {
+   "source": "Agrobacterium tumefaciens",
+   "predicate": "hosts",
+   "target": "pGR107"
+  },
+  {
+   "source": "Koch",
+   "predicate": "postulate",
+   "target": "Ab0920a"
+  },
+  {
+   "source": "PDA",
+   "predicate": "used_in",
+   "target": "Ab0920a"
+  }
+ ],
+ "truncated": false
+}

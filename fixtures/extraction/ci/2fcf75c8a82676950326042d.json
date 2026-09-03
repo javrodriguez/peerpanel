@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13510017:16:258a87e0",
+ "entities": [
+  {
+   "name": "Ultrafast universal RNA-seq aligner Bioinformatics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Liao Y.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Smyth G.K.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shi W.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FeatureCounts",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Danecek P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bonfield J.K.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Liddle J.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Marshall J.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ohan V.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pollard M.O.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Whitwham A.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Liao Y.",
+   "predicate": "is",
+   "target": "FeatureCounts"
+  }
+ ],
+ "truncated": false
+}

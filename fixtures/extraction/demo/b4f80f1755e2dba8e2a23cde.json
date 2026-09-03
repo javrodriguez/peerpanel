@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC5968551:4:aa8cff60",
+ "entities": [
+  {
+   "name": "ProteinPilot software",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AB Sciex",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Paragon algorithm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pro Group algorithm",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "iTRAQ quantification",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ProteinPilot",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mass Profiler software",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Simca-P software",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Agilent",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Accurate-Mass Q-TOF/MS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UPLC C18 column",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "leucine-enkephalin",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ProteinPilot software",
+   "predicate": "uses",
+   "target": "Paragon algorithm"
+  },
+  {
+   "source": "ProteinPilot software",
+   "predicate": "uses",
+   "target": "Pro Group algorithm"
+  }
+ ],
+ "truncated": false
+}

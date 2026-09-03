@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC3923900:8:42d595db",
+ "entities": [
+  {
+   "name": "Nile red",
+   "type": "chemical"
+  },
+  {
+   "name": "Sigma Aldrich Co.",
+   "type": "organism"
+  },
+  {
+   "name": "PBS buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "Nikon Eclypse E600",
+   "type": "chemical"
+  },
+  {
+   "name": "Beckman Coulter Cytomics FC500",
+   "type": "chemical"
+  },
+  {
+   "name": "WinMDI 2.8 software",
+   "type": "chemical"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "C. curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Decanoic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Varian 610-IR infrared microscope",
+   "type": "chemical"
+  },
+  {
+   "name": "Varian 670-IR FTIR spectrometer",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sigma Aldrich Co.",
+   "predicate": "produced",
+   "target": "Nile red"
+  }
+ ],
+ "truncated": false
+}

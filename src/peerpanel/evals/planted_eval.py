@@ -1,9 +1,15 @@
-"""The headline measurement: planted-error detection, panel vs equal-compute baseline.
+"""The headline measurement: planted-error detection, panel vs single-agent baseline.
 
-Both systems see the same perturbed manuscript, the same corpus, the same
-retrieval budget, and — by construction — approximately the same token spend.
-The table reports detection per error kind, totals, tokens and wall-clock for
-each. Whatever the delta is, it ships.
+Both arms read the same perturbed excerpt and search the same index with the
+same exclusions; both are asked for a `quote` and scored on text + quote through
+ONE function (`scored_text`); both report the raw strings they were scored on.
+What is NOT equal is recorded rather than smoothed over: the panel retrieves
+more (three queries per reviewer plus per-claim verifier retrieval, against the
+baseline's single title lookup) and the baseline stops at MAX_SAMPLES, which on
+every committed run came before it matched the panel's tokens — so the token
+column is derived and the note says which arm had less. The table reports
+detection per error kind, totals, tokens and wall-clock for each. Whatever the
+delta is, it ships.
 """
 
 from __future__ import annotations
@@ -14,17 +20,20 @@ from pathlib import Path
 from pydantic import BaseModel
 
 from peerpanel.agents.reviewer_base import EXCERPT_WORDS, excerpt
+from peerpanel.agents.schemas import CallStats
 from peerpanel.corpus.models import CorpusManifest
 from peerpanel.embeddings import store
 from peerpanel.evals.baseline import run_baseline
-from peerpanel.evals.planted import detect, plant_errors
+from peerpanel.evals.planted import PlantedError, detect, plant_errors, scored_text
 from peerpanel.graph.pipeline import chunks_for, embedding_fixture_path
 from peerpanel.manuscripts.store import read_manuscript
 from peerpanel.manuscripts.twins import load_twins
 from peerpanel.orchestration.panel import PanelProviders, run_panel
-from peerpanel.providers import OllamaNativeEmbed
-from peerpanel.providers.base import ChatProvider
+from peerpanel.providers.base import ChatProvider, EmbedProvider
 from peerpanel.retrieval import BM25Retriever, Index, VectorRetriever, rrf
+
+PANEL_SYSTEM = "panel"
+BASELINE_SYSTEM = "single-agent-cot-sc"
 
 
 class SystemResult(BaseModel):
@@ -36,6 +45,14 @@ class SystemResult(BaseModel):
     detail: str
     excluded_docs: list[str]  # what this arm's index withheld
     dropped_chunks: int  # and how many chunks that actually removed
+    finding_texts: list[str]  # the exact strings this arm was scored on
+    model_calls: CallStats  # every prompt read whole: largest prompt < smallest window
+    # Calls that produced nothing because their JSON would not parse: for the panel, a
+    # reviewer that came back empty; for the baseline, a self-consistency sample that
+    # did. Recorded because it silently lowers the arm's detection count — a panel whose
+    # novelty reviewer failed is a one-reviewer panel, and the headline number of this
+    # repository would otherwise report that as a two-reviewer result.
+    unparsed_calls: int
 
 
 class PlantedEvalReport(BaseModel):
@@ -43,6 +60,8 @@ class PlantedEvalReport(BaseModel):
     twin_in_corpus: bool  # was there anything to exclude at all?
     n_errors: int
     error_kinds: dict[str, str]  # error_id -> kind
+    errors: list[PlantedError]  # what was planted, with the token each catch must name
+    skipped_kinds: dict[str, str]  # kinds that could NOT be planted, and why
     results: list[SystemResult]
     note: str
 
@@ -53,7 +72,9 @@ SCORING_NOTE = (
     "baseline. Restatements of the manuscript and the converger's prose are excluded: "
     "counting them would credit the panel for quoting a planted error, or for agreeing "
     "with it. Detection requires a finding to NAME the planted token, which "
-    "under-credits a described-but-unquoted catch — read the numbers as a floor."
+    "under-credits a described-but-unquoted catch — read the numbers as a floor. "
+    "Both arms are asked to quote the text each finding is about and both are scored "
+    "on finding text + quote."
 )
 
 
@@ -84,12 +105,11 @@ def run_planted_eval(
     manuscript_path: Path,
     providers: PanelProviders,
     baseline_provider: ChatProvider,
+    embedder: EmbedProvider,
     corpus: str = "demo",
 ) -> PlantedEvalReport:
     header, body = read_manuscript(manuscript_path)
-    excluded = load_twins(root / "manuscripts" / "twins.json").excluded_pmcids(
-        header.preprint_doi
-    )
+    excluded = load_twins(root / "manuscripts" / "twins.json").excluded_pmcids(header.preprint_doi)
     # Plant only where the reviewers actually look: both arms read excerpt(body).
     planted = plant_errors(body, manuscript_path.name, window_words=EXCERPT_WORDS)
     visible = excerpt(planted.text)
@@ -121,7 +141,7 @@ def run_planted_eval(
     # so including either would hand the panel surface area the baseline lacks.
     # Only a REFUTES verdict is an assertion that something is wrong.
     panel_texts = (
-        [f.text for o in review.reviewer_outputs for f in o.findings]
+        [scored_text(f.text, f.quote) for o in review.reviewer_outputs for f in o.findings]
         + [v.claim_text for v in review.verdicts if v.verdict == "REFUTES"]
         + [f"{d.check} {d.detail}" for d in review.deterministic_findings]
     )
@@ -133,9 +153,7 @@ def run_planted_eval(
     # not be an equal-compute comparison, it would be an answer key.
     index = Index.build(chunks, vectors.astype("float32"), exclude_docs=excluded)
     manifest_rel = "ci.manifest.json" if corpus == "ci" else "demo.manifest.json"
-    twin_present = bool(
-        excluded & CorpusManifest.load(root / "corpus" / manifest_rel).pmcids()
-    )
+    twin_present = bool(excluded & CorpusManifest.load(root / "corpus" / manifest_rel).pmcids())
     if twin_present and not index.dropped_chunk_count:
         raise RuntimeError(
             f"{header.preprint_doi}: the baseline index withheld nothing while the twin "
@@ -145,7 +163,7 @@ def run_planted_eval(
     # The baseline gets the strong non-graph rung (RRF hybrid) — the graph is the
     # panel's advantage to demonstrate, not a handicap to impose on the baseline.
     bm25 = BM25Retriever(index)
-    vector = VectorRetriever(index, OllamaNativeEmbed())
+    vector = VectorRetriever(index, embedder)
 
     def retrieve(query: str) -> list[tuple[str, str]]:
         fused = rrf([bm25.search(query, k=8), vector.search(query, k=8)], k=5)
@@ -162,8 +180,15 @@ def run_planted_eval(
     baseline_wall = time.monotonic() - t1
 
     def _result(
-        name: str, texts: list[str], tokens: int, wall: float, detail: str,
-        dropped: int, arm_excluded: list[str],
+        name: str,
+        texts: list[str],
+        tokens: int,
+        wall: float,
+        detail: str,
+        dropped: int,
+        arm_excluded: list[str],
+        calls: CallStats,
+        unparsed: int,
     ) -> SystemResult:
         hit = [e.error_id for e in planted.errors if detect(e, texts)]
         return SystemResult(
@@ -175,6 +200,9 @@ def run_planted_eval(
             detail=detail,
             excluded_docs=arm_excluded,
             dropped_chunks=dropped,
+            finding_texts=texts,
+            model_calls=calls,
+            unparsed_calls=unparsed,
         )
 
     return PlantedEvalReport(
@@ -182,28 +210,43 @@ def run_planted_eval(
         twin_in_corpus=twin_present,
         n_errors=len(planted.errors),
         error_kinds={e.error_id: e.kind for e in planted.errors},
+        errors=planted.errors,
+        skipped_kinds=planted.skipped_kinds,
         results=[
             # Each arm reports ITS OWN exclusion state (D12). Passing the baseline
             # index's numbers for both made the rows incapable of disagreeing, so a
             # panel that stopped excluding would still have been reported as excluding.
             _result(
-                "panel", panel_texts, review.total_tokens, panel_wall,
-                f"{len(review.reviewer_outputs)} reviewers · {len(review.verdicts)} claims "
-                f"verified · {len(review.deterministic_findings)} deterministic findings",
-                review.dropped_chunks, review.excluded_docs,
+                PANEL_SYSTEM,
+                panel_texts,
+                review.total_tokens,
+                panel_wall,
+                f"{sum(1 for o in review.reviewer_outputs if not o.truncated)} of "
+                f"{len(review.reviewer_outputs)} reviewers returned findings · "
+                f"{len(review.verdicts)} claims verified · "
+                f"{len(review.deterministic_findings)} deterministic findings",
+                review.dropped_chunks,
+                review.excluded_docs,
+                review.model_calls,
+                sum(1 for o in review.reviewer_outputs if o.truncated),
             ),
             _result(
-                "single-agent-equal-compute", baseline.finding_texts, baseline.total_tokens,
-                baseline_wall, f"{baseline.samples} self-consistency samples",
+                BASELINE_SYSTEM,
+                baseline.finding_texts,
+                baseline.total_tokens,
+                baseline_wall,
+                f"{baseline.samples - baseline.unparsed_samples} of {baseline.samples} "
+                "self-consistency samples parsed",
                 # Both arms report what their OWN index actually withheld, not what
                 # was requested — otherwise the two rows describe different things
                 # and cannot be compared, which is the point of recording them.
-                index.dropped_chunk_count, sorted(index.excluded_docs),
+                index.dropped_chunk_count,
+                sorted(index.excluded_docs),
+                baseline.model_calls,
+                baseline.unparsed_samples,
             ),
         ],
-        note=_budget_note(
-            review.total_tokens, baseline.total_tokens, twin_present
-        ),
+        note=_budget_note(review.total_tokens, baseline.total_tokens, twin_present),
     )
 
 
@@ -228,6 +271,10 @@ def render_table(report: PlantedEvalReport) -> str:
     for result in report.results:
         kinds = [report.error_kinds[e] for e in result.detected]
         lines.append(f"  {result.system} caught: {', '.join(kinds) or '(none)'}")
+    if report.skipped_kinds:
+        lines.append("")
+        for kind, why in sorted(report.skipped_kinds.items()):
+            lines.append(f"  not planted: {kind} ({why})")
     lines.append("")
     lines.append(f"  {report.note}")
     return "\n".join(lines)

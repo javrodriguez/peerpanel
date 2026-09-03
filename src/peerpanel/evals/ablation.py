@@ -122,9 +122,7 @@ def load_artifacts(
     else:
         raw = _reports_from_cache(root, corpus, graph, assignment)
     reports = [
-        CommunityReport.model_validate(r)
-        for r in raw
-        if float(r.get("resolution", 0)) == 1.0
+        CommunityReport.model_validate(r) for r in raw if float(r.get("resolution", 0)) == 1.0
     ]
     return graph, assignment, reports
 
@@ -134,10 +132,14 @@ def _reports_from_cache(
 ) -> list[dict[str, object]]:
     """Community reports from the committed summary cache — never a model call."""
     from peerpanel.graph.run_graph import _CacheOnly
-    from peerpanel.graph.summaries import summarise_communities
+    from peerpanel.graph.summaries import SUMMARY_PROVIDER_NAME, summarise_communities
 
     reports = summarise_communities(
-        graph, assignment, 1.0, _CacheOnly(), cache_dir=root / "fixtures" / "summaries" / corpus
+        graph,
+        assignment,
+        1.0,
+        _CacheOnly(SUMMARY_PROVIDER_NAME),
+        cache_dir=root / "fixtures" / "summaries" / corpus,
     )
     return [r.model_dump() for r in reports]
 
@@ -173,9 +175,7 @@ def run_ablation(
             raise RuntimeError(f"exclusion removed no chunks for {case.preprint_doi} (N3 law)")
         # Exact per-run graph: the excluded document's extractions are withheld from
         # the merge, so its edge-weight contribution disappears too (D10).
-        graph, _run_assignment, _withheld = build_run_graph(
-            root, corpus, set(case.excluded_docs)
-        )
+        graph, _run_assignment, _withheld = build_run_graph(root, corpus, set(case.excluded_docs))
         relevant = set(case.relevant_docs)
         for rung_name, search in _rungs(index, graph, reports, assignment, embedder).items():
             # EQUAL DOCUMENT DEPTH. Retrieving a fixed number of CHUNKS and then
@@ -291,7 +291,5 @@ def render_table(report: AblationReport) -> str:
             # Latency belongs here too: its per-case spread is the widest of any
             # column (measured 913ms vs 101ms on one rung), so a mean hides more
             # here than anywhere else — which is exactly what D14 is about.
-            lines.append(
-                f"    {rung_name:16s} {case:22s} {rates} · {row.latency_ms:.1f}ms"
-            )
+            lines.append(f"    {rung_name:16s} {case:22s} {rates} · {row.latency_ms:.1f}ms")
     return "\n".join(lines)

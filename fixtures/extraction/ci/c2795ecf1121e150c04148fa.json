@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13092671:12:77e5dd47",
+ "entities": [
+  {
+   "name": "FluoZin-3",
+   "type": "chemical"
+  },
+  {
+   "name": "Sigma Aldrich",
+   "type": "chemical"
+  },
+  {
+   "name": "DMSO",
+   "type": "chemical"
+  },
+  {
+   "name": "CYT samples",
+   "type": "chemical"
+  },
+  {
+   "name": "total zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "absorbance",
+   "type": "chemical"
+  },
+  {
+   "name": "Dr Colin MacDiarmid",
+   "type": "organism"
+  },
+  {
+   "name": "University of Wisconsin",
+   "type": "organism"
+  },
+  {
+   "name": "National Institutes of Health",
+   "type": "organism"
+  },
+  {
+   "name": "Robert A. Welch Foundation",
+   "type": "organism"
+  },
+  {
+   "name": "A. C. K.",
+   "type": "organism"
+  },
+  {
+   "name": "P. A. L.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FluoZin-3",
+   "predicate": "spiking",
+   "target": "CYT samples"
+  },
+  {
+   "source": "FluoZin-3",
+   "predicate": "solution",
+   "target": "Sigma Aldrich"
+  },
+  {
+   "source": "FluoZin-3",
+   "predicate": "solution",
+   "target": "DMSO"
+  },
+  {
+   "source": "CYT samples",
+   "predicate": "measured",
+   "target": "total zinc"
+  },
+  {
+   "source": "CYT samples",
+   "predicate": "measured",
+   "target": "absorbance"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC9157227:12:9616221e",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Adrio J.L.",
+   "type": "organism"
+  },
+  {
+   "name": "Bolger A.M.",
+   "type": "organism"
+  },
+  {
+   "name": "Bonturi N.",
+   "type": "organism"
+  },
+  {
+   "name": "Celińska E.",
+   "type": "organism"
+  },
+  {
+   "name": "Dias C.",
+   "type": "organism"
+  },
+  {
+   "name": "Dinh H.v",
+   "type": "organism"
+  },
+  {
+   "name": "Engler C.",
+   "type": "organism"
+  },
+  {
+   "name": "Fillet S.",
+   "type": "organism"
+  },
+  {
+   "name": "Gao S.",
+   "type": "organism"
+  },
+  {
+   "name": "Gibson D.G.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Adrio J.L.",
+   "predicate": "engineers",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Celińska E.",
+   "predicate": "engineers",
+   "target": "Yarrowia lipolytica"
+  },
+  {
+   "source": "Fillet S.",
+   "predicate": "engineers",
+   "target": "Rhodosporidium toruloides"
+  }
+ ],
+ "truncated": false
+}

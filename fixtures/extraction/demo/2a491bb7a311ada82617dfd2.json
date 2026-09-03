@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC11618413:18:899ba453",
+ "entities": [
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "biofilm",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "nutrient medium composition",
+   "type": "chemical"
+  },
+  {
+   "name": "heterologous protein expression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Appl Sci",
+   "type": "organism"
+  },
+  {
+   "name": "Ziege R",
+   "type": "organism"
+  },
+  {
+   "name": "ACS Biomater Sci Eng",
+   "type": "organism"
+  },
+  {
+   "name": "Nijjer J",
+   "type": "organism"
+  },
+  {
+   "name": "Nat Commun",
+   "type": "organism"
+  },
+  {
+   "name": "Jo J",
+   "type": "organism"
+  },
+  {
+   "name": "Price-Whelan A",
+   "type": "organism"
+  },
+  {
+   "name": "Dietrich LEP",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

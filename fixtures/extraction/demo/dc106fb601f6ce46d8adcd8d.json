@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13484205:8:4e3bd125",
+ "entities": [
+  {
+   "name": "Hipp M. S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kasturi P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hartl F. U.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Proteostasis Network",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Decline",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Ageing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nature",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ho C.-T.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Grousl T.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shatz O.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cellular Sequestrases",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Basal Hsp70 Capacity Ensuring Balanced Proteostasis",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hipp M. S.",
+   "predicate": "investigate",
+   "target": "Proteostasis Network"
+  },
+  {
+   "source": "Kasturi P.",
+   "predicate": "investigate",
+   "target": "Proteostasis Network"
+  },
+  {
+   "source": "Hartl F. U.",
+   "predicate": "investigate",
+   "target": "Proteostasis Network"
+  },
+  {
+   "source": "Ho C.-T.",
+   "predicate": "investigate",
+   "target": "Basal Hsp70 Capacity Ensuring Balanced Proteostasis"
+  },
+  {
+   "source": "Grousl T.",
+   "predicate": "investigate",
+   "target": "Basal Hsp70 Capacity Ensuring Balanced Proteostasis"
+  },
+  {
+   "source": "Shatz O.",
+   "predicate": "investigate",
+   "target": "Basal Hsp70 Capacity Ensuring Balanced Proteostasis"
+  }
+ ],
+ "truncated": false
+}

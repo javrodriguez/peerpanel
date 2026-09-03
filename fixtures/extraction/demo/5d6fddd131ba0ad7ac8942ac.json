@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13471478:8:fe916671",
+ "entities": [
+  {
+   "name": "Slc26a4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zbtb16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "aquaporin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AQP2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "adult mouse kidney",
+   "type": "organism"
+  },
+  {
+   "name": "non-alpha non-beta intercalated cells",
+   "type": "organism"
+  },
+  {
+   "name": "beta intercalated cells",
+   "type": "organism"
+  },
+  {
+   "name": "distal nephron",
+   "type": "organism"
+  },
+  {
+   "name": "mouse kidney",
+   "type": "organism"
+  },
+  {
+   "name": "Western blot",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "whole kidney lysates",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Slc26a4",
+   "predicate": "expressed_in",
+   "target": "adult mouse kidney"
+  },
+  {
+   "source": "Zbtb16",
+   "predicate": "co-localized_with",
+   "target": "Slc26a4"
+  },
+  {
+   "source": "Zbtb16",
+   "predicate": "expressed_in",
+   "target": "adult mouse kidney"
+  },
+  {
+   "source": "Zbtb16",
+   "predicate": "co-localized_with",
+   "target": "V-ATPase"
+  },
+  {
+   "source": "Zbtb16",
+   "predicate": "co-localized_with",
+   "target": "AQP2"
+  },
+  {
+   "source": "Slc26a4",
+   "predicate": "co-immunoprecipitated_with",
+   "target": "Zbtb16"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13504229:11:7e6df32b",
+ "entities": [
+  {
+   "name": "P. C. Lee",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SARS-CoV-2",
+   "type": "organism"
+  },
+  {
+   "name": "Spike Protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Furin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Human Furin Specificity",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Peptides",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H1N1 Influenza",
+   "type": "organism"
+  },
+  {
+   "name": "BMJ Case",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cryptococcal Meningoencephalitis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Influenza A H7N9",
+   "type": "organism"
+  },
+  {
+   "name": "Influenza A H5N1",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "P. C. Lee",
+   "predicate": "design",
+   "target": "Peptides"
+  },
+  {
+   "source": "P. C. Lee",
+   "predicate": "target",
+   "target": "SARS-CoV-2"
+  },
+  {
+   "source": "P. C. Lee",
+   "predicate": "target",
+   "target": "Spike Protein"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "involved",
+   "target": "Furin"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "involved",
+   "target": "Peptides"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "involved",
+   "target": "H1N1 Influenza"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "involved",
+   "target": "BMJ Case"
+  },
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "involved",
+   "target": "Cryptococcal Meningoencephalitis"
+  },
+  {
+   "source": "Influenza A H7N9",
+   "predicate": "involved",
+   "target": "Influenza A H5N1"
+  }
+ ],
+ "truncated": false
+}

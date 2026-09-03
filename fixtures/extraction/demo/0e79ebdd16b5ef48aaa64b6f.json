@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10398944:15:50a70720",
+ "entities": [
+  {
+   "name": "Salusjärvi L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kankainen M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Solymani R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pitkänen J-P",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Penttilä M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ruohonen L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chen X",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kuhn E",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jennings EW",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nelson R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tao L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhang M",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

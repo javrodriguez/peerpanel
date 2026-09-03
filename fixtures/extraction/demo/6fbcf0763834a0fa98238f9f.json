@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13410889:2:bb707032",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "YPH500",
+   "type": "organism"
+  },
+  {
+   "name": "MAT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3-52",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lys2-801",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ade2-101",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "trp1D63",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "his3D200",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "leu2D1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NLS-JUB1-GAL4AD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NLS-JUB1-EDLLAD",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "JUB1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has_strain",
+   "target": "YPH500"
+  },
+  {
+   "source": "YPH500",
+   "predicate": "has_genome",
+   "target": "MAT"
+  },
+  {
+   "source": "YPH500",
+   "predicate": "has_genome",
+   "target": "URA3-52"
+  },
+  {
+   "source": "YPH500",
+   "predicate": "has_genome",
+   "target": "lys2-801"
+  },
+  {
+   "source": "YPH500",
+   "predicate": "has_genome",
+   "target": "ade2-101"
+  },
+  {
+   "source": "YPH500",
+   "predicate": "has_genome",
+   "target": "trp1D63"
+  },
+  {
+   "source": "YPH500",
+   "predicate": "has_genome",
+   "target": "his3D200"
+  },
+  {
+   "source": "YPH500",
+   "predicate": "has_genome",
+   "target": "leu2D1"
+  }
+ ],
+ "truncated": false
+}

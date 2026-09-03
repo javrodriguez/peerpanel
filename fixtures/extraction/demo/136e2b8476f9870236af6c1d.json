@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC7382830:14:5ca154c5",
+ "entities": [
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "polygenic evolution",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose-limited populations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "chromosomal duplication",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "adaptive laboratory evolution",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "experimental evolution",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "whole-genome sequencing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Escherichia coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "lactate minimal media",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Phosphotransferase system",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "L-serine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Escherichia coli",
+   "predicate": "undergoes",
+   "target": "polygenic evolution"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "experiences",
+   "target": "glucose-limited populations"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "develops",
+   "target": "chromosomal duplication"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "undergoes",
+   "target": "adaptive laboratory evolution"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "experiences",
+   "target": "experimental evolution"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "undergoes",
+   "target": "whole-genome sequencing"
+  },
+  {
+   "source": "Escherichia coli K-12 MG1655",
+   "predicate": "grows",
+   "target": "lactate minimal media"
+  }
+ ],
+ "truncated": false
+}

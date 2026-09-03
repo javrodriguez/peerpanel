@@ -1,0 +1,22 @@
+{
+ "community_id": 46,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Bergkessel M",
+  "Bodenhofer U",
+  "Edgar RC",
+  "Guthrie C",
+  "Inoue H",
+  "msa",
+  "MUSCLE",
+  "Nojima H",
+  "Okayama H",
+  "Russell DW",
+  "Sambrook J",
+  "Smid M"
+ ],
+ "title": "Method Development in Bioinformatics",
+ "summary": "This cluster consists of various bioinformatics methods and tools. Bodenhofer U is associated with the development of msa, indicating a relationship between these two entities. The cluster includes a range of methods and tools, but the specific connections between them are not explicitly stated.",
+ "truncated": false
+}

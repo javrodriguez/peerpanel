@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC11618413:15:8cf0420c",
+ "entities": [
+  {
+   "name": "curli fiber",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CsgA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "formic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "milliQ water",
+   "type": "chemical"
+  },
+  {
+   "name": "ThioT",
+   "type": "chemical"
+  },
+  {
+   "name": "LB medium",
+   "type": "chemical"
+  },
+  {
+   "name": "Tris-HCl",
+   "type": "chemical"
+  },
+  {
+   "name": "NaCl",
+   "type": "chemical"
+  },
+  {
+   "name": "BioTek Cytation5",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Agilent",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "Max Planck Queensland Center",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "curli fiber",
+   "predicate": "denatured by",
+   "target": "formic acid"
+  },
+  {
+   "source": "CsgA",
+   "predicate": "polymerized by",
+   "target": "ThioT"
+  },
+  {
+   "source": "CsgA",
+   "predicate": "monomerized by",
+   "target": "milliQ water"
+  },
+  {
+   "source": "E. coli",
+   "predicate": "expressed in",
+   "target": "curli fiber"
+  },
+  {
+   "source": "Max Planck Queensland Center",
+   "predicate": "funded by",
+   "target": "curli fiber"
+  }
+ ],
+ "truncated": false
+}

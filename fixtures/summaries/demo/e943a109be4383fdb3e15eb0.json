@@ -1,0 +1,22 @@
+{
+ "community_id": 70,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Chen S Zhou Y Chen Y Gu J",
+  "Hoff KJ Lange S Lomsadze A Borodovsky M Stanke M",
+  "Kim D Langmead B Salzberg SL",
+  "Kumar S Stecher G Tamura K",
+  "Lowe TM Eddy SR",
+  "Pertea M Pertea GM Antonescu CM Chang T Mendell JT Salzberg SL",
+  "Simão FA Waterhouse RM Ioannidis P Kriventseva EV Zdobnov EM",
+  "Tarailo Graovac M Chen N",
+  "Ter-Hovhannisyan V Lomsadze A Chernoff YO Borodovsky M",
+  "Wang Y Tang H DeBarry JD",
+  "Xiong Q Zhong L Du J",
+  "Yang B Wang N Wang S"
+ ],
+ "title": "Authors of Bioinformatics Research Papers",
+ "summary": "This cluster consists of 16 authors from various bioinformatics research papers. The authors are grouped together without any explicit connections or relationships between them. Their names suggest they are researchers in the field of bioinformatics, possibly contributing to the development of new methods or tools for analyzing biological data.",
+ "truncated": false
+}

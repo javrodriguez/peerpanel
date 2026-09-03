@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10440040:24:209db049",
+ "entities": [
+  {
+   "name": "Cutadapt",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FastQC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zenodo",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Martin M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kim D",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HISAT2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HISAT-genotype",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wang L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RSeQC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pertea M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "StringTie",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Holt C",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

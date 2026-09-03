@@ -1,0 +1,22 @@
+{
+ "community_id": 17,
+ "resolution": 0.3,
+ "size": 12,
+ "member_names": [
+  "Bonfield J.K.",
+  "Danecek P.",
+  "FeatureCounts",
+  "Liao Y.",
+  "Liddle J.",
+  "Marshall J.",
+  "Ohan V.",
+  "Pollard M.O.",
+  "Shi W.",
+  "Smyth G.K.",
+  "Ultrafast universal RNA-seq aligner Bioinformatics",
+  "Whitwham A."
+ ],
+ "title": "FeatureCounts and its related methods",
+ "summary": "This cluster is centered around FeatureCounts, a method or tool, which is related to Liao Y., another method or tool. The exact nature of their relationship is not specified, but it is clear that they are connected in some way. The cluster also includes other method or tools, such as Bonfield J.K., Danecek P., and Smyth G.K., but their relationships to FeatureCounts and Liao Y. are not defined.",
+ "truncated": false
+}

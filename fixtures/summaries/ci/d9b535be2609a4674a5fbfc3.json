@@ -1,0 +1,22 @@
+{
+ "community_id": 16,
+ "resolution": 0.3,
+ "size": 12,
+ "member_names": [
+  "Academic Press",
+  "Arganda-Carreras I",
+  "Burton JC",
+  "Frise E",
+  "Hart SFM",
+  "Kaynig V",
+  "Longair M",
+  "Pietzsch T",
+  "Schindelin J",
+  "Shou W",
+  "Skelding D",
+  "Waite AJ"
+ ],
+ "title": "Academic Press and Authors",
+ "summary": "This cluster consists of Academic Press and a group of authors. However, there is no information provided about the relationships between these entities, making it difficult to describe their connections. Without any recorded relations, it is unclear how Academic Press and the listed authors are associated.",
+ "truncated": false
+}

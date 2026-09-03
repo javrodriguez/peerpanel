@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC9763685:14:e69ad019",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Thiosulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "O-acetylhomoserine sulfhydrylase",
+   "type": "chemical"
+  },
+  {
+   "name": "Met4 transcriptional complex",
+   "type": "chemical"
+  },
+  {
+   "name": "MetY",
+   "type": "chemical"
+  },
+  {
+   "name": "DMS precursor S-methylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Candida",
+   "type": "organism"
+  },
+  {
+   "name": "Thermotoga maritima",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus Niger",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "utilize",
+   "target": "Thiosulfate"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "synthesize",
+   "target": "methionine"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "produce",
+   "target": "hydrogen sulfide"
+  }
+ ],
+ "truncated": false
+}

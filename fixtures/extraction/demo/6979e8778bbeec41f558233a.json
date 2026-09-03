@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7873862:15:7c5789e0",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus",
+   "type": "organism"
+  },
+  {
+   "name": "Sporobolomyces",
+   "type": "organism"
+  },
+  {
+   "name": "mouse",
+   "type": "organism"
+  },
+  {
+   "name": "human",
+   "type": "organism"
+  },
+  {
+   "name": "Recon 1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BMC Syst. Biol.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Agrobacterium",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ortholog conjecture",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

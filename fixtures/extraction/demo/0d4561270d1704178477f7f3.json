@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC8164748:7:8fb5843f",
+ "entities": [
+  {
+   "name": "Hydrolysate preparation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "steam explosion",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "enzymatic degradation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Wheat straw",
+   "type": "chemical"
+  },
+  {
+   "name": "Lund University",
+   "type": "organism"
+  },
+  {
+   "name": "Sweden",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cellic CTec3 enzyme cocktail",
+   "type": "chemical"
+  },
+  {
+   "name": "Novozyme A/S",
+   "type": "organism"
+  },
+  {
+   "name": "Denmark",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "VWR Filter Upper Cup",
+   "type": "chemical"
+  },
+  {
+   "name": "Belgium",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Infors HT Ecotron",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hydrolysate preparation",
+   "predicate": "involved",
+   "target": "Wheat straw"
+  },
+  {
+   "source": "Wheat straw",
+   "predicate": "hydrolysed",
+   "target": "steam explosion"
+  },
+  {
+   "source": "steam explosion",
+   "predicate": "involved",
+   "target": "enzymatic degradation"
+  },
+  {
+   "source": "Cellic CTec3 enzyme cocktail",
+   "predicate": "used",
+   "target": "enzymatic degradation"
+  },
+  {
+   "source": "Novozyme A/S",
+   "predicate": "produced",
+   "target": "Cellic CTec3 enzyme cocktail"
+  },
+  {
+   "source": "Denmark",
+   "predicate": "located",
+   "target": "Novozyme A/S"
+  },
+  {
+   "source": "Belgium",
+   "predicate": "located",
+   "target": "VWR Filter Upper Cup"
+  }
+ ],
+ "truncated": false
+}

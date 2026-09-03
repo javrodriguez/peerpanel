@@ -97,9 +97,7 @@ class GraphGlobalRetriever:
         ranked = [r for r, s in self.ranked_reports(query)[:top] if s > 0]
         if not ranked:
             return GlobalAnswer(answer="No relevant communities found.", community_ids=[])
-        blocks = "\n\n".join(
-            f"[community {r.community_id}] {r.title}\n{r.summary}" for r in ranked
-        )
+        blocks = "\n\n".join(f"[community {r.community_id}] {r.title}\n{r.summary}" for r in ranked)
         response = provider.chat(
             system=(
                 "Answer the question using ONLY the community reports given. Cite the "
@@ -110,6 +108,10 @@ class GraphGlobalRetriever:
             temperature=0.0,
             max_tokens=1024,
         )
-        cited = [r.community_id for r in ranked if f"[community {r.community_id}]" in response.text
-                 or f"[{r.community_id}]" in response.text]
+        cited = [
+            r.community_id
+            for r in ranked
+            if f"[community {r.community_id}]" in response.text
+            or f"[{r.community_id}]" in response.text
+        ]
         return GlobalAnswer(answer=response.text.strip(), community_ids=cited)

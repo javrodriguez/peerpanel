@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13312927:18:0504a318",
+ "entities": [
+  {
+   "name": "Agha",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mendelson",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ward-Caviness",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Joehanes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Huan",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gondalia",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Salfati",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Brody",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fiorito",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bressler",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Alani",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tamimi",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

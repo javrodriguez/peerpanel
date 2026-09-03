@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13453879:14:7b26f595",
+ "entities": [
+  {
+   "name": "Camellia sinensis",
+   "type": "organism"
+  },
+  {
+   "name": "Pu-erh tea",
+   "type": "organism"
+  },
+  {
+   "name": "Eurotium repens",
+   "type": "organism"
+  },
+  {
+   "name": "Liupao tea",
+   "type": "organism"
+  },
+  {
+   "name": "Wuyi Rock Tea",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang L.",
+   "type": "organism"
+  },
+  {
+   "name": "Ho C.T.",
+   "type": "organism"
+  },
+  {
+   "name": "Zhou J.",
+   "type": "organism"
+  },
+  {
+   "name": "Santos J.S.",
+   "type": "organism"
+  },
+  {
+   "name": "Armstrong L.",
+   "type": "organism"
+  },
+  {
+   "name": "Granato D.",
+   "type": "organism"
+  },
+  {
+   "name": "Lv H.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Liupao tea",
+   "predicate": "has non-volatile metabolites and fungal communities",
+   "target": "Liupao tea"
+  }
+ ],
+ "truncated": false
+}

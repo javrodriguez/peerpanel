@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC6402699:12:8c23a586",
+ "entities": [
+  {
+   "name": "WY1335",
+   "type": "organism"
+  },
+  {
+   "name": "lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WY1340",
+   "type": "organism"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WY2270",
+   "type": "organism"
+  },
+  {
+   "name": "WY1600",
+   "type": "organism"
+  },
+  {
+   "name": "L-A+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "A-L+",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thermo Scientific Teleshake",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BioTek Synergy MX plate reader",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "parafilm",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "WY1335",
+   "predicate": "has_metabolite",
+   "target": "lysine"
+  },
+  {
+   "source": "WY1340",
+   "predicate": "has_metabolite",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "WY2270",
+   "predicate": "has_metabolite",
+   "target": "lysine"
+  },
+  {
+   "source": "WY1600",
+   "predicate": "has_metabolite",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has_metabolite",
+   "target": "lysine"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "has_metabolite",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "WY1335",
+   "predicate": "is_tester_strain",
+   "target": "lysine"
+  },
+  {
+   "source": "WY1340",
+   "predicate": "is_tester_strain",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "WY2270",
+   "predicate": "is_tester_strain",
+   "target": "lysine"
+  },
+  {
+   "source": "WY1600",
+   "predicate": "is_tester_strain",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "is_tester_strain",
+   "target": "lysine"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "is_tester_strain",
+   "target": "hypoxanthine"
+  }
+ ],
+ "truncated": false
+}

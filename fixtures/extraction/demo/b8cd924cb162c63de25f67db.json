@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13514516:20:fc7d0de2",
+ "entities": [
+  {
+   "name": "Robak K.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Balcerek M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ethanol Production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lignocellulosic Feedstocks",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pichia Stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Wickerhamomyces sp.",
+   "type": "organism"
+  },
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Lignocellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "Furfural",
+   "type": "chemical"
+  },
+  {
+   "name": "Bioethanol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Robak K.",
+   "predicate": "produces",
+   "target": "Ethanol Production"
+  },
+  {
+   "source": "Pichia Stipitis",
+   "predicate": "ferments",
+   "target": "Xylose"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "ferments",
+   "target": "Xylose"
+  },
+  {
+   "source": "Scheffersomyces stipitis",
+   "predicate": "ferments",
+   "target": "Xylose"
+  },
+  {
+   "source": "Wickerhamomyces sp.",
+   "predicate": "ferments",
+   "target": "Xylose"
+  },
+  {
+   "source": "Lignocellulose",
+   "predicate": "converted_to",
+   "target": "Bioethanol"
+  },
+  {
+   "source": "Furfural",
+   "predicate": "inhibits",
+   "target": "Pichia Stipitis"
+  }
+ ],
+ "truncated": false
+}

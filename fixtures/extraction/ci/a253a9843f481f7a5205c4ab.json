@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13510017:7:8b4ec0f1",
+ "entities": [
+  {
+   "name": "Genome-Wide Base Substitution Analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "SBS-6",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "C > A",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "C > G",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "C > T",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "T > A",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "T > C",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "T > G",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Low DO",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "High DO",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Mismatches",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Variants",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "SBS-6"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "C > A"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "C > G"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "C > T"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "T > A"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "T > C"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "T > G"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "Low DO"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "High DO"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "Mismatches"
+  },
+  {
+   "source": "Genome-Wide Base Substitution Analysis",
+   "predicate": "involved",
+   "target": "Variants"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13453879:5:611671f2",
+ "entities": [
+  {
+   "name": "tea",
+   "type": "chemical"
+  },
+  {
+   "name": "water",
+   "type": "chemical"
+  },
+  {
+   "name": "RPT",
+   "type": "chemical"
+  },
+  {
+   "name": "Aspergillus niger",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus flavus",
+   "type": "organism"
+  },
+  {
+   "name": "Pu-erh tea",
+   "type": "chemical"
+  },
+  {
+   "name": "GB/T 22,111 – 2008",
+   "type": "chemical"
+  },
+  {
+   "name": "Peleg model",
+   "type": "chemical"
+  },
+  {
+   "name": "GAB model",
+   "type": "chemical"
+  },
+  {
+   "name": "BET model",
+   "type": "chemical"
+  },
+  {
+   "name": "Oswin model",
+   "type": "chemical"
+  },
+  {
+   "name": "Halsey model",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "tea",
+   "predicate": "has",
+   "target": "water"
+  },
+  {
+   "source": "tea",
+   "predicate": "has",
+   "target": "RPT"
+  }
+ ],
+ "truncated": false
+}

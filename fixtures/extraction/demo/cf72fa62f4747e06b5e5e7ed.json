@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13510017:3:cc9851f0",
+ "entities": [
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ribosomal RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "whole-transcriptome RNA sequencing",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WRS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "culture",
+   "type": "chemical"
+  },
+  {
+   "name": "RNAlater",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Invitrogen",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Thermo Fisher Scientific",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Waltham",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "room temperature",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "liquid nitrogen",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "RNA",
+   "predicate": "extracted_from",
+   "target": "culture"
+  },
+  {
+   "source": "culture",
+   "predicate": "treated_with",
+   "target": "RNAlater"
+  },
+  {
+   "source": "RNAlater",
+   "predicate": "used_by",
+   "target": "Invitrogen"
+  },
+  {
+   "source": "Invitrogen",
+   "predicate": "used_by",
+   "target": "Thermo Fisher Scientific"
+  },
+  {
+   "source": "Thermo Fisher Scientific",
+   "predicate": "used_by",
+   "target": "Waltham"
+  },
+  {
+   "source": "Waltham",
+   "predicate": "used_by",
+   "target": "USA"
+  },
+  {
+   "source": "culture",
+   "predicate": "stored_at",
+   "target": "room temperature"
+  },
+  {
+   "source": "culture",
+   "predicate": "stored_at",
+   "target": "liquid nitrogen"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC10204961:12:981814b9",
+ "entities": [
+  {
+   "name": "R. toruloides CCT 7815",
+   "type": "organism"
+  },
+  {
+   "name": "Coleção de Culturas Tropicais",
+   "type": "organism"
+  },
+  {
+   "name": "Fundação André Tosello",
+   "type": "organism"
+  },
+  {
+   "name": "Brazil",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "previous study",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cultivation experiments",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "same study",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "increased lipid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "induction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "hydrolysate-tolerance and lipid accumulation genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "physiological changes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "growth",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "has increased lipid production",
+   "target": "increased lipid production"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "has induction",
+   "target": "induction"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "has hydrolysate-tolerance and lipid accumulation genes",
+   "target": "hydrolysate-tolerance and lipid accumulation genes"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "has physiological changes",
+   "target": "physiological changes"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "has growth",
+   "target": "growth"
+  },
+  {
+   "source": "Coleção de Culturas Tropicais",
+   "predicate": "has Fundação André Tosello",
+   "target": "Fundação André Tosello"
+  },
+  {
+   "source": "Brazil",
+   "predicate": "has R. toruloides CCT 7815",
+   "target": "R. toruloides CCT 7815"
+  },
+  {
+   "source": "previous study",
+   "predicate": "has R. toruloides CCT 7815",
+   "target": "R. toruloides CCT 7815"
+  },
+  {
+   "source": "same study",
+   "predicate": "has R. toruloides CCT 7815",
+   "target": "R. toruloides CCT 7815"
+  },
+  {
+   "source": "cultivation experiments",
+   "predicate": "has R. toruloides CCT 7815",
+   "target": "R. toruloides CCT 7815"
+  }
+ ],
+ "truncated": false
+}

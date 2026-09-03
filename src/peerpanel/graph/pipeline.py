@@ -18,10 +18,11 @@ import json
 import time
 from pathlib import Path
 
+from peerpanel.agents.schemas import CallStats
 from peerpanel.corpus.models import CorpusManifest
 from peerpanel.embeddings import store
 from peerpanel.embeddings.pipeline import ci_chunks
-from peerpanel.providers.base import ChatProvider, EmbedProvider
+from peerpanel.providers.base import ChatProvider, EmbedProvider, TokenLedger
 from peerpanel.text.chunks import Chunk, chunk_document
 from peerpanel.text.sanitize import Finding, sanitize
 
@@ -119,8 +120,11 @@ def graph_build(
         CACHE_README.format(corpus=corpus, version=PROMPT_VERSION, regenerate=_REGENERATE[corpus])
     )
     cached_before = sum(1 for _ in cache_dir.glob("*.json"))
+    ledger = TokenLedger()
     t0 = time.monotonic()
-    extractions = extract_many(chunks, provider, cache_dir=cache_dir, concurrency=concurrency)
+    extractions = extract_many(
+        chunks, provider, cache_dir=cache_dir, concurrency=concurrency, ledger=ledger
+    )
     wall_s = time.monotonic() - t0
     graph = build_graph(extractions)
     communities = detect(graph)
@@ -140,25 +144,26 @@ def graph_build(
             str(r): len(set(m.values())) for r, m in communities.items()
         },
         "provider": provider.name,
+        # The calls THIS build made (cached chunks make none): every prompt read whole
+        # is largest_prompt_tokens < smallest_context, the same proof the panel records carry.
+        "model_calls": CallStats.from_ledger(ledger).model_dump(),
     }
     (out_dir / "build_stats.json").write_text(json.dumps(result, indent=1, sort_keys=True) + "\n")
     return result
 
 
-def ci_graph_build(
-    root: Path, provider: ChatProvider, concurrency: int = 4
-) -> dict[str, object]:
+def ci_graph_build(root: Path, provider: ChatProvider, concurrency: int = 4) -> dict[str, object]:
     return graph_build(root, provider, corpus="ci", concurrency=concurrency)
 
 
 def cache_complete(root: Path, corpus: str = "ci") -> bool:
     """Pure-local: does every current chunk have a committed extraction?
     (What lets CI rebuild the graph with no LLM — any drift is loud.)"""
-    from .extract import _cache_key
+    from .extract import EXTRACTION_PROVIDER_NAME, _cache_key
 
     chunks = chunks_for(root, corpus)
     cache_dir = root / "fixtures" / "extraction" / corpus
-    provider_name = "ollama-openai:llama3.1:8b"
     return all(
-        (cache_dir / f"{_cache_key(c.chunk_id, provider_name)}.json").exists() for c in chunks
+        (cache_dir / f"{_cache_key(c.chunk_id, EXTRACTION_PROVIDER_NAME)}.json").exists()
+        for c in chunks
     )

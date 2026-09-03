@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC11628909:6:3d6152c3",
+ "entities": [
+  {
+   "name": "PagERF021",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DREB A4 subgroup",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "P. trichocarpa",
+   "type": "organism"
+  },
+  {
+   "name": "Arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "rice",
+   "type": "organism"
+  },
+  {
+   "name": "maize",
+   "type": "organism"
+  },
+  {
+   "name": "AT1G71450.1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "A. thaliana",
+   "type": "organism"
+  },
+  {
+   "name": "PagERF021 protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PpERF98-1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PpERF98-2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PpERF1-1/2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

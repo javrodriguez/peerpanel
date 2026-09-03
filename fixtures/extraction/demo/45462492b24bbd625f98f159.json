@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC8620231:7:680be0eb",
+ "entities": [
+  {
+   "name": "Sayers EW Cavanaugh M Clark",
+   "type": "organism"
+  },
+  {
+   "name": "Pruitt KD Schoch CL Sherry ST",
+   "type": "organism"
+  },
+  {
+   "name": "GenBank",
+   "type": "organism"
+  },
+  {
+   "name": "National Center for Biotechnology Information",
+   "type": "organism"
+  },
+  {
+   "name": "NCBI",
+   "type": "organism"
+  },
+  {
+   "name": "Wang Z Gerstein M Snyder M",
+   "type": "organism"
+  },
+  {
+   "name": "RNA-Seq",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "transcriptomics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nat. Rev. Genet.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gremme G",
+   "type": "organism"
+  },
+  {
+   "name": "Computational gene structure prediction",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Staats-und Universitätsbibliothek Hamburg Carl von Ossietzky",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gremme G",
+   "predicate": "author",
+   "target": "Computational gene structure prediction"
+  },
+  {
+   "source": "National Center for Biotechnology Information",
+   "predicate": "maintainer",
+   "target": "NCBI"
+  },
+  {
+   "source": "Gremme G",
+   "predicate": "user",
+   "target": "Computational gene structure prediction"
+  },
+  {
+   "source": "Gremme G",
+   "predicate": "user",
+   "target": "Computational gene structure prediction"
+  }
+ ],
+ "truncated": false
+}

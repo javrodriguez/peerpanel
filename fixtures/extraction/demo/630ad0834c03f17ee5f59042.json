@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC6912988:11:665c2b48",
+ "entities": [
+  {
+   "name": "Tang AD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Soulette CM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "van Baren MJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hart K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hrabeta-Robinson E",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wu CJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Full-length transcript characterization",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mutation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chronic lymphocytic leukemia",
+   "type": "organism"
+  },
+  {
+   "name": "downregulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "retained introns",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bioRxiv",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Tang AD",
+   "predicate": "characterized",
+   "target": "mutation"
+  },
+  {
+   "source": "mutation",
+   "predicate": "causes",
+   "target": "chronic lymphocytic leukemia"
+  },
+  {
+   "source": "chronic lymphocytic leukemia",
+   "predicate": "has",
+   "target": "downregulation"
+  },
+  {
+   "source": "downregulation",
+   "predicate": "affects",
+   "target": "retained introns"
+  },
+  {
+   "source": "Tang AD",
+   "predicate": "used",
+   "target": "bioRxiv"
+  },
+  {
+   "source": "mutation",
+   "predicate": "studied",
+   "target": "Full-length transcript characterization"
+  },
+  {
+   "source": "Full-length transcript characterization",
+   "predicate": "found",
+   "target": "retained introns"
+  }
+ ],
+ "truncated": false
+}

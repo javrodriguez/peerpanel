@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13450799:19:59b009ac",
+ "entities": [
+  {
+   "name": "plasmid",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "plasmid-bearing strains",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PUF5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HAA1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MSN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MSN4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SC-Ura",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "culture",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "regulatory factors",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "plasmid-bearing strains",
+   "predicate": "retain",
+   "target": "plasmid"
+  },
+  {
+   "source": "plasmid",
+   "predicate": "carried_by",
+   "target": "plasmid-bearing strains"
+  },
+  {
+   "source": "YGP1",
+   "predicate": "expressed",
+   "target": "plasmid-bearing strains"
+  },
+  {
+   "source": "PUF5",
+   "predicate": "regulate",
+   "target": "YGP1"
+  },
+  {
+   "source": "HAA1",
+   "predicate": "regulate",
+   "target": "YGP1"
+  },
+  {
+   "source": "MSN2",
+   "predicate": "regulate",
+   "target": "YGP1"
+  },
+  {
+   "source": "MSN4",
+   "predicate": "regulate",
+   "target": "YGP1"
+  },
+  {
+   "source": "SC-Ura",
+   "predicate": "used_in",
+   "target": "culture"
+  },
+  {
+   "source": "YPD",
+   "predicate": "used_in",
+   "target": "culture"
+  },
+  {
+   "source": "glucose",
+   "predicate": "used_in",
+   "target": "culture"
+  }
+ ],
+ "truncated": false
+}

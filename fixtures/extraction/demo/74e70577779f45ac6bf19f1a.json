@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC1409804:3:17e42a8a",
+ "entities": [
+  {
+   "name": "AUGUSTUS+",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "φ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "s",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "h",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "t",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "g",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "q+(t, g)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "q-(t, g)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "P(φ, s, h)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "P(φ, s)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "P(h | φ, s)",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "AUGUSTUS"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "φ"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "s"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "h"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "t"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "g"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "q+(t, g)"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "uses",
+   "target": "q-(t, g)"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "predicts",
+   "target": "φ"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "predicts",
+   "target": "s"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "predicts",
+   "target": "h"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "predicts",
+   "target": "t"
+  }
+ ],
+ "truncated": false
+}

@@ -1,10 +1,26 @@
 """Per-run graph rebuild: exact exclusion, over the REAL committed CI artifacts.
 
-The rebuild is what makes exclusion exact rather than approximate. These tests
-pin both halves of that claim against real data: the entities the rebuild
-removes are exactly the ones post-hoc filtering identifies, AND the rebuild
-additionally removes the edge weight the excluded text contributed — which
-filtering cannot reach.
+The rebuild is what makes exclusion exact rather than approximate. These tests pin both
+halves of that claim against real data: the entities the rebuild removes are exactly the
+ones post-hoc filtering identifies, AND the rebuild additionally removes the edge weight
+the excluded text contributed — which filtering cannot reach.
+
+Every expected value here is DERIVED from an independent mechanism — the full graph's own
+chunk provenance, or a graph built from the twin's extractions alone — never from the
+rebuild being tested and never pasted from a run's output. A constant copied from the
+thing it checks is D14's defect wearing a test's clothes, and this file carried four such
+constants until 2026-09-02.
+
+Both mutations were run against these bytes, and each is red where it should be:
+
+  * build the full graph and REMOVE the twin's nodes, instead of rebuilding from the kept
+    extractions -> 4 red (both edge tests, the weight identity, and the excluded-evidence
+    check) while the node test stays GREEN. That is the point: filtering gets the entity
+    set exactly right, and the edges wrong.
+  * make the exclusion a no-op (`kept = extractions`) -> 7 of 8 red.
+
+If a change here leaves both mutations green, the assertions have stopped measuring
+anything, whatever their numbers say.
 """
 
 from __future__ import annotations
@@ -12,13 +28,43 @@ from __future__ import annotations
 import time
 from pathlib import Path
 
+import networkx as nx
+import pytest
+
 from peerpanel.embeddings import store
 from peerpanel.embeddings.pipeline import ci_chunks
-from peerpanel.graph.run_graph import build_run_graph
+from peerpanel.graph.build import build_graph
+from peerpanel.graph.extract import ChunkExtraction, extract_many
+from peerpanel.graph.pipeline import chunks_for
+from peerpanel.graph.run_graph import _CacheOnly, build_run_graph, doc_of
 from peerpanel.retrieval import Index
 
 ROOT = Path(__file__).resolve().parents[1]
 TWIN = "PMC10729969"
+
+
+def _extractions() -> list[ChunkExtraction]:
+    """The committed CI extractions, replayed — no model, no network."""
+    return extract_many(
+        chunks_for(ROOT, "ci"), _CacheOnly(), cache_dir=ROOT / "fixtures" / "extraction" / "ci"
+    )
+
+
+def _twin_graph() -> nx.Graph[str]:
+    """A graph built from the twin's extractions ALONE. Independent of the exclusion
+    path: it is how much of the full graph the twin was responsible for, computed the
+    long way round."""
+    return build_graph([e for e in _extractions() if doc_of(e.chunk_id) == TWIN])
+
+
+def _twin_evidence_only(full: nx.Graph[str]) -> set[str]:
+    """Entities the full graph saw ONLY in the twin's chunks — derived from `full`, not
+    from the rebuild whose behaviour is under test."""
+    return {
+        n
+        for n, at in full.nodes(data=True)
+        if all(c.startswith(f"{TWIN}:") for c in at["chunk_ids"])
+    }
 
 
 class TestRunGraphRebuild:
@@ -34,34 +80,100 @@ class TestRunGraphRebuild:
         # to fail loudly if a model call is ever reintroduced into this path.
         assert elapsed < 5
 
-    def test_rebuild_removes_twin_only_entities_and_their_edges(self) -> None:
+    def test_rebuild_removes_exactly_the_entities_whose_evidence_was_withheld(self) -> None:
+        """Two independent mechanisms, one answer.
+
+        The expected removal is derived from the FULL graph alone — an entity goes if
+        every chunk it was seen in belongs to the twin — and compared with what the
+        rebuild actually did. Deriving it from `full - run` instead would be a tautology
+        that no mutation can turn red (D11, and round 1's F8/F9/F11).
+
+        Measured at this commit: 142 of 1,759 entities.
+        """
         full, _fa, withheld_none = build_run_graph(ROOT, "ci", set())
         run, _ra, withheld = build_run_graph(ROOT, "ci", {TWIN})
         assert withheld_none == 0
         assert withheld > 0
-        assert run.number_of_nodes() < full.number_of_nodes()
-        assert full.number_of_nodes() - run.number_of_nodes() == 131
-        assert full.number_of_edges() - run.number_of_edges() == 1247
+        twin_only = _twin_evidence_only(full)
+        assert twin_only, "the twin contributed no entity of its own — the check is vacuous"
+        assert set(full) - set(run) == twin_only
 
-    def test_rebuild_strips_twin_weight_from_surviving_edges(self) -> None:
-        """The part post-hoc node filtering structurally cannot reach.
+    def test_rebuild_removes_exactly_the_edges_the_withheld_text_carried(self) -> None:
+        """An edge goes for one of two reasons, and both are derived independently: an
+        endpoint was removed, or every unit of its weight came from the twin's chunks.
+        The second set is computed from a graph built from the twin's extractions alone,
+        which never passes through the exclusion path being tested.
 
-        These 38 edges join two entities that BOTH legitimately survive; the
-        excluded text had inflated the weight of the link between them. Filtering
-        nodes leaves that inflation in place — only a rebuild removes it.
+        Measured at this commit: 1,352 edges gone, 1,260 by endpoint and 92 that joined
+        two surviving entities and existed only because the twin mentioned them together.
         """
         full, _a, _w = build_run_graph(ROOT, "ci", set())
         run, _b, _w2 = build_run_graph(ROOT, "ci", {TWIN})
+        twin_graph = _twin_graph()
+        removed_nodes = _twin_evidence_only(full)
+        gone = {frozenset(e) for e in full.edges()} - {frozenset(e) for e in run.edges()}
+        by_endpoint = {
+            frozenset((a, b)) for a, b in full.edges() if a in removed_nodes or b in removed_nodes
+        }
+        all_weight_from_twin = {
+            frozenset((a, b))
+            for a, b in full.edges()
+            if a not in removed_nodes
+            and b not in removed_nodes
+            and twin_graph.has_edge(a, b)
+            and full.edges[a, b]["weight"] == pytest.approx(twin_graph.edges[a, b]["weight"])
+        }
+        assert all_weight_from_twin, "no edge existed only because of the twin"
+        assert gone == by_endpoint | all_weight_from_twin
+
+    def test_a_surviving_edge_loses_exactly_the_weight_the_twin_contributed(self) -> None:
+        """The part post-hoc node filtering structurally cannot reach.
+
+        These edges join two entities that BOTH legitimately survive; the excluded text
+        had inflated the weight of the link between them. The expected loss is not a
+        constant — it is the weight of that same edge in a graph built from the twin's
+        extractions alone, which is an independent computation of the same quantity.
+
+        Measured at this commit: 48 edges, 27.25 weight units, and the identity holds for
+        every one of the 48.
+        """
+        full, _a, _w = build_run_graph(ROOT, "ci", set())
+        run, _b, _w2 = build_run_graph(ROOT, "ci", {TWIN})
+        twin_graph = _twin_graph()
         lighter = [
-            (a, b)
-            for a, b in run.edges()
-            if run.edges[a, b]["weight"] < full.edges[a, b]["weight"]
+            (a, b) for a, b in run.edges() if run.edges[a, b]["weight"] < full.edges[a, b]["weight"]
         ]
-        assert len(lighter) == 38
-        removed = sum(
-            full.edges[a, b]["weight"] - run.edges[a, b]["weight"] for a, b in lighter
+        assert lighter, (
+            "no surviving edge lost weight: either the rebuild stopped stripping it, or "
+            "this corpus no longer has a twin sharing edges with surviving entities — "
+            "both are findings, neither is a number to update"
         )
-        assert round(removed, 2) == 21.25
+        for a, b in lighter:
+            lost = full.edges[a, b]["weight"] - run.edges[a, b]["weight"]
+            assert twin_graph.has_edge(a, b), (a, b)
+            assert lost == pytest.approx(twin_graph.edges[a, b]["weight"]), (a, b)
+
+    def test_post_hoc_node_filtering_cannot_produce_this_graph(self) -> None:
+        """The mutation, kept as a test rather than a claim in a docstring.
+
+        Filtering the full graph's nodes — the obvious cheap alternative to rebuilding —
+        gets the entity set exactly right and the EDGES wrong, both by leaving edges that
+        existed only through the twin and by leaving twin weight on edges that survive.
+        If this test ever passes trivially, the rebuild has degraded into filtering and
+        the exclusion claim has lost its teeth.
+        """
+        full, _a, _w = build_run_graph(ROOT, "ci", set())
+        run, _b, _w2 = build_run_graph(ROOT, "ci", {TWIN})
+        filtered = build_graph(_extractions())
+        filtered.remove_nodes_from(_twin_evidence_only(full))
+        assert set(filtered) == set(run)  # nodes: filtering is enough
+        assert filtered.number_of_edges() > run.number_of_edges()  # edges: it is not
+        heavier = [
+            (a, b)
+            for a, b in filtered.edges()
+            if run.has_edge(a, b) and filtered.edges[a, b]["weight"] > run.edges[a, b]["weight"]
+        ]
+        assert heavier, "filtering left no inflated edge — then the rebuild buys nothing"
 
     def test_rebuild_agrees_with_live_nodes_on_which_entities_survive(self) -> None:
         """Two independent mechanisms, one answer — a contract-drift check."""

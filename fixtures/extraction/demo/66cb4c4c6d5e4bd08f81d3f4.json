@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC8116571:7:b6a4e572",
+ "entities": [
+  {
+   "name": "S. stipitis CBS 5773",
+   "type": "organism"
+  },
+  {
+   "name": "L. starkeyi DSM 70295",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides CCT 7815",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "arabitol",
+   "type": "chemical"
+  },
+  {
+   "name": "xylitol",
+   "type": "chemical"
+  },
+  {
+   "name": "biomass",
+   "type": "chemical"
+  },
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "O2",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrolysate C5-Birch",
+   "type": "chemical"
+  },
+  {
+   "name": "mineral medium",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis CBS 5773",
+   "predicate": "grew in",
+   "target": "hydrolysate C5-Birch"
+  },
+  {
+   "source": "L. starkeyi DSM 70295",
+   "predicate": "grew in",
+   "target": "hydrolysate C5-Birch"
+  },
+  {
+   "source": "L. starkeyi DSM 70295",
+   "predicate": "consumed",
+   "target": "glucose"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "consumed",
+   "target": "glucose"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "consumed",
+   "target": "xylose"
+  },
+  {
+   "source": "R. toruloides CCT 7815",
+   "predicate": "produced",
+   "target": "arabitol"
+  }
+ ],
+ "truncated": false
+}

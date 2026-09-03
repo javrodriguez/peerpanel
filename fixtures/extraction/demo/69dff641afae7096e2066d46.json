@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13514516:22:4fe35e6d",
+ "entities": [
+  {
+   "name": "Zhang L.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhang L.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ding C.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wang Z.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shi G.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Wild Yeast Chin",
+   "type": "organism"
+  },
+  {
+   "name": "Campos V.J.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ribeiro L.E.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Albuini F.M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "de Castro A.G.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fontes P.P.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zhang L.",
+   "predicate": "use",
+   "target": "xylose"
+  }
+ ],
+ "truncated": false
+}

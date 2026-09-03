@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC9825514:3:77f413d3",
+ "entities": [
+  {
+   "name": "UniProtKB",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProtKB/TrEMBL",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProtKB/Swiss-Prot",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "InterPro",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ARBA",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniRule",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AlphaFold",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "DeepMind",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Google",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ORCID",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UniProtKB entry",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "UniProtKB/TrEMBL"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "UniProtKB/Swiss-Prot"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "InterPro"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "ARBA"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "UniRule"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "AlphaFold"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "DeepMind"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "Google"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "ORCID"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "protein"
+  },
+  {
+   "source": "UniProtKB",
+   "predicate": "has_annotation",
+   "target": "UniProtKB entry"
+  },
+  {
+   "source": "UniProtKB/TrEMBL",
+   "predicate": "has_annotation",
+   "target": "UniProtKB/Swiss-Prot"
+  }
+ ],
+ "truncated": false
+}

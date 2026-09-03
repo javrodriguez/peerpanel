@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10398944:10:d92126ef",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "IFO 0880",
+   "type": "organism"
+  },
+  {
+   "name": "NBRC 0880",
+   "type": "organism"
+  },
+  {
+   "name": "Agile BioFoundry parts registry",
+   "type": "organism"
+  },
+  {
+   "name": "Mycocosm",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides genome version 4",
+   "type": "organism"
+  },
+  {
+   "name": "Ku70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tub2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "hygromycin",
+   "type": "chemical"
+  },
+  {
+   "name": "G418",
+   "type": "chemical"
+  },
+  {
+   "name": "thymidine kinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "herpes simplex virus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has strain",
+   "target": "IFO 0880"
+  },
+  {
+   "source": "IFO 0880",
+   "predicate": "has genome",
+   "target": "R. toruloides genome version 4"
+  },
+  {
+   "source": "R. toruloides genome version 4",
+   "predicate": "has gene",
+   "target": "Ku70"
+  },
+  {
+   "source": "Tub2",
+   "predicate": "regulates",
+   "target": "hygromycin"
+  },
+  {
+   "source": "herpes simplex virus",
+   "predicate": "donates",
+   "target": "thymidine kinase"
+  }
+ ],
+ "truncated": false
+}

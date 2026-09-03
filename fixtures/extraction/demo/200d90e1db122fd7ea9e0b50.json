@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13517252:6:83ef858a",
+ "entities": [
+  {
+   "name": "Phytase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Phosphorus",
+   "type": "chemical"
+  },
+  {
+   "name": "Taurine",
+   "type": "chemical"
+  },
+  {
+   "name": "Protein hydrolysates",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hydroxyproline",
+   "type": "chemical"
+  },
+  {
+   "name": "Lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Fishmeal",
+   "type": "chemical"
+  },
+  {
+   "name": "Red seabream",
+   "type": "organism"
+  },
+  {
+   "name": "Olive flounder",
+   "type": "organism"
+  },
+  {
+   "name": "European seabass",
+   "type": "organism"
+  },
+  {
+   "name": "Gilthead seabream",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Taurine",
+   "predicate": "has_favorable_response_in",
+   "target": "Red seabream"
+  },
+  {
+   "source": "Taurine",
+   "predicate": "has_favorable_response_in",
+   "target": "Olive flounder"
+  },
+  {
+   "source": "Taurine",
+   "predicate": "has_favorable_response_in",
+   "target": "European seabass"
+  },
+  {
+   "source": "Taurine",
+   "predicate": "has_favorable_response_in",
+   "target": "Gilthead seabream"
+  },
+  {
+   "source": "Lysine",
+   "predicate": "is_essential_amino_acid",
+   "target": "Fishmeal"
+  },
+  {
+   "source": "Methionine",
+   "predicate": "is_essential_amino_acid",
+   "target": "Fishmeal"
+  }
+ ],
+ "truncated": false
+}

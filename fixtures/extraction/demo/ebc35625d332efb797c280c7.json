@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13467452:21:3e767a0a",
+ "entities": [
+  {
+   "name": "SIRT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "β-Cell",
+   "type": "organism"
+  },
+  {
+   "name": "AMPK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fatty Acid Oxidation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Stem Cells",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodes",
+   "type": "organism"
+  },
+  {
+   "name": "Type 2 Diabetes",
+   "type": "organism"
+  },
+  {
+   "name": "Matter",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Beta-Cell Life",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Death",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Science",
+   "type": "organism"
+  },
+  {
+   "name": "SIRT2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SIRT1",
+   "predicate": "activates",
+   "target": "β-Cell"
+  },
+  {
+   "source": "AMPK",
+   "predicate": "mediates",
+   "target": "Fatty Acid Oxidation"
+  },
+  {
+   "source": "Rhodes",
+   "predicate": "has",
+   "target": "Type 2 Diabetes"
+  },
+  {
+   "source": "Matter",
+   "predicate": "is",
+   "target": "Beta-Cell Life"
+  },
+  {
+   "source": "Death",
+   "predicate": "is",
+   "target": "Beta-Cell Life"
+  },
+  {
+   "source": "Science",
+   "predicate": "publishes",
+   "target": "Rhodes"
+  }
+ ],
+ "truncated": false
+}

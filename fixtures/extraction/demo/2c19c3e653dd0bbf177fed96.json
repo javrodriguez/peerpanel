@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC9825584:6:4007c569",
+ "entities": [
+  {
+   "name": "Buchfink B.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "XieC.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HusonD.H.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DIAMOND",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Seppey M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ManniM.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ZdobnovE.M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LEMMI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Emms D.M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KellyS.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Trachana K.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "LarssonT.A.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Buchfink B.",
+   "predicate": "use",
+   "target": "DIAMOND"
+  },
+  {
+   "source": "Seppey M.",
+   "predicate": "use",
+   "target": "LEMMI"
+  }
+ ],
+ "truncated": false
+}

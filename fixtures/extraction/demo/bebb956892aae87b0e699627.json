@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13456448:12:ba316c54",
+ "entities": [
+  {
+   "name": "Phan-Canh T Coman C Lackner M Candida auris",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus fumigatus",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus flavus",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus niger",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium apiospermum",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium aurantiacum",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium minutisporum",
+   "type": "organism"
+  },
+  {
+   "name": "Lomentospora prolificans",
+   "type": "organism"
+  },
+  {
+   "name": "Pseudallescheria boydii",
+   "type": "organism"
+  },
+  {
+   "name": "Candida auris",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcosis",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

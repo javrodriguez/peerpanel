@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13517252:19:9276abaf",
+ "entities": [
+  {
+   "name": "FAO",
+   "type": "organism"
+  },
+  {
+   "name": "State",
+   "type": "organism"
+  },
+  {
+   "name": "World Fisheries",
+   "type": "organism"
+  },
+  {
+   "name": "Aquaculture",
+   "type": "organism"
+  },
+  {
+   "name": "Blue Transformation",
+   "type": "organism"
+  },
+  {
+   "name": "Action Food and Agriculture Organization",
+   "type": "organism"
+  },
+  {
+   "name": "United Nations Rome",
+   "type": "organism"
+  },
+  {
+   "name": "Italy",
+   "type": "organism"
+  },
+  {
+   "name": "Tacon A.G.J.",
+   "type": "organism"
+  },
+  {
+   "name": "Metian M.",
+   "type": "organism"
+  },
+  {
+   "name": "Global overview",
+   "type": "organism"
+  },
+  {
+   "name": "use",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FAO",
+   "predicate": "has",
+   "target": "State"
+  },
+  {
+   "source": "FAO",
+   "predicate": "has",
+   "target": "World Fisheries"
+  },
+  {
+   "source": "FAO",
+   "predicate": "has",
+   "target": "Aquaculture"
+  },
+  {
+   "source": "FAO",
+   "predicate": "has",
+   "target": "Blue Transformation"
+  },
+  {
+   "source": "FAO",
+   "predicate": "has",
+   "target": "Action Food and Agriculture Organization"
+  },
+  {
+   "source": "FAO",
+   "predicate": "has",
+   "target": "United Nations Rome"
+  },
+  {
+   "source": "FAO",
+   "predicate": "has",
+   "target": "Italy"
+  },
+  {
+   "source": "Tacon A.G.J.",
+   "predicate": "has",
+   "target": "Metian M."
+  },
+  {
+   "source": "Tacon A.G.J.",
+   "predicate": "has",
+   "target": "Global overview"
+  },
+  {
+   "source": "Tacon A.G.J.",
+   "predicate": "has",
+   "target": "use"
+  }
+ ],
+ "truncated": false
+}

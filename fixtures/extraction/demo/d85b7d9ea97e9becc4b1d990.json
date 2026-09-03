@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13518488:5:51ad67da",
+ "entities": [
+  {
+   "name": "Protein Content",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biomass Yield",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Function",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nitrogen Source",
+   "type": "chemical"
+  },
+  {
+   "name": "Concentration",
+   "type": "chemical"
+  },
+  {
+   "name": "P. albidus mycelium",
+   "type": "organism"
+  },
+  {
+   "name": "PDA",
+   "type": "chemical"
+  },
+  {
+   "name": "control",
+   "type": "chemical"
+  },
+  {
+   "name": "media",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast extract",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "equivalent total nitrogen concentrations",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nitrogen Source",
+   "predicate": "influenced",
+   "target": "Biomass Yield"
+  },
+  {
+   "source": "Nitrogen Source",
+   "predicate": "influenced",
+   "target": "Protein Content"
+  },
+  {
+   "source": "P. albidus mycelium",
+   "predicate": "exhibited",
+   "target": "Biomass Yield"
+  },
+  {
+   "source": "P. albidus mycelium",
+   "predicate": "exhibited",
+   "target": "Protein Content"
+  },
+  {
+   "source": "PDA",
+   "predicate": "exhibited",
+   "target": "Biomass Yield"
+  },
+  {
+   "source": "PDA",
+   "predicate": "exhibited",
+   "target": "Protein Content"
+  }
+ ],
+ "truncated": false
+}

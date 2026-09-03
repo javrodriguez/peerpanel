@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13484205:7:e3b87bec",
+ "entities": [
+  {
+   "name": "Albert B.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kos-Braun I. C.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Henras A. K.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ribosome Assembly Stress Response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Proteome Homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "eLife",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Alberti S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hyman A. A.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biomolecular Condensates",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nexus",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cellular Stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Protein Aggregation Disease",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Albert B.",
+   "predicate": "regulates",
+   "target": "Ribosome Assembly Stress Response"
+  },
+  {
+   "source": "Albert B.",
+   "predicate": "regulates",
+   "target": "Proteome Homeostasis"
+  },
+  {
+   "source": "Alberti S.",
+   "predicate": "regulates",
+   "target": "Biomolecular Condensates"
+  },
+  {
+   "source": "Alberti S.",
+   "predicate": "regulates",
+   "target": "Nexus"
+  },
+  {
+   "source": "Alberti S.",
+   "predicate": "regulates",
+   "target": "Cellular Stress"
+  },
+  {
+   "source": "Alberti S.",
+   "predicate": "regulates",
+   "target": "Protein Aggregation Disease"
+  },
+  {
+   "source": "Albert B.",
+   "predicate": "regulates",
+   "target": "eLife"
+  },
+  {
+   "source": "Albert B.",
+   "predicate": "regulates",
+   "target": "Alberti S."
+  },
+  {
+   "source": "Albert B.",
+   "predicate": "regulates",
+   "target": "Hyman A. A."
+  },
+  {
+   "source": "Albert B.",
+   "predicate": "regulates",
+   "target": "Biomolecular Condensates"
+  },
+  {
+   "source": "Albert B.",
+   "predicate": "regulates",
+   "target": "Nexus"
+  },
+  {
+   "source": "Albert B.",
+   "predicate": "regulates",
+   "target": "Cellular Stress"
+  }
+ ],
+ "truncated": false
+}

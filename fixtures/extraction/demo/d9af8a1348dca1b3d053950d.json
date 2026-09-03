@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13467452:20:de33bd7d",
+ "entities": [
+  {
+   "name": "Sheng C. Li",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "F. Lin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Z. Zhang",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "M. Yang",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "P. Bu",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L. Sheng",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H. Li",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "H. Qu",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S. Reversibility",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "β - Cell - Specific Transcript Factors Expression",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Long - Term Caloric Restriction",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Db / Db Mouse J. Diabetes",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sheng C. Li",
+   "predicate": "expression",
+   "target": "β - Cell - Specific Transcript Factors Expression"
+  },
+  {
+   "source": "Sheng C. Li",
+   "predicate": "reversibility",
+   "target": "S. Reversibility"
+  },
+  {
+   "source": "Long - Term Caloric Restriction",
+   "predicate": "effect",
+   "target": "Db / Db Mouse J. Diabetes"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC11618413:19:95eda059",
+ "entities": [
+  {
+   "name": "Nguyen, P. Q.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Courchesne, N. M. D.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Duraj-Thatte, A.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Praveschotinunt, P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Joshi, N. S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Schindelin, J.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fiji",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sauer, K.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Editor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chapman, M. R.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Reichhardt, C.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cegelski, L.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Schindelin, J.",
+   "predicate": "developed",
+   "target": "Fiji"
+  }
+ ],
+ "truncated": false
+}

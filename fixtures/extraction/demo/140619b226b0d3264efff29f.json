@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC7470746:1:33008fb1",
+ "entities": [
+  {
+   "name": "eukaryotes",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "TORC1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PKA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "organosulfurs",
+   "type": "chemical"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine-auxotrophic mutant",
+   "type": "organism"
+  },
+  {
+   "name": "nutrient limitation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "stress-response programs",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lysine-auxotrophic mutant",
+   "predicate": "experiences_nutrient_limitation",
+   "target": "nutrient limitation"
+  },
+  {
+   "source": "lysine-auxotrophic mutant",
+   "predicate": "experiences_stress_response",
+   "target": "stress-response programs"
+  },
+  {
+   "source": "autophagy",
+   "predicate": "is_involved_in_stress_response",
+   "target": "stress-response programs"
+  },
+  {
+   "source": "organosulfurs",
+   "predicate": "is_released_during_nutrient_limitation",
+   "target": "nutrient limitation"
+  }
+ ],
+ "truncated": false
+}

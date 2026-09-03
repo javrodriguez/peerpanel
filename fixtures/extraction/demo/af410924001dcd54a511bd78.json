@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC1409804:8:63238493",
+ "entities": [
+  {
+   "name": "TWINSCAN",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SGP2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Evan Keibler",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Michael R. Brent",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sanger Center",
+   "type": "organism"
+  },
+  {
+   "name": "human chromosome 22",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS+",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GenomeScan",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HMMGene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EST",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "TWINSCAN",
+   "predicate": "has_prediction",
+   "target": "human chromosome 22"
+  },
+  {
+   "source": "SGP2",
+   "predicate": "has_prediction",
+   "target": "human chromosome 22"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has_prediction",
+   "target": "human chromosome 22"
+  },
+  {
+   "source": "Sanger Center",
+   "predicate": "has_annotation",
+   "target": "human chromosome 22"
+  },
+  {
+   "source": "AUGUSTUS+",
+   "predicate": "has_prediction",
+   "target": "human chromosome 22"
+  },
+  {
+   "source": "GenomeScan",
+   "predicate": "uses",
+   "target": "protein"
+  },
+  {
+   "source": "HMMGene",
+   "predicate": "uses",
+   "target": "protein"
+  }
+ ],
+ "truncated": false
+}

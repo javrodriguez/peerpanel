@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC12278674:16:46f6c66c",
+ "entities": [
+  {
+   "name": "IMAC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphopeptide enrichment",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fe3+–NTA agarose beads",
+   "type": "chemical"
+  },
+  {
+   "name": "Ni–NTA Superflow agarose beads",
+   "type": "chemical"
+  },
+  {
+   "name": "acetonitrile",
+   "type": "chemical"
+  },
+  {
+   "name": "formic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "potassium phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "Waters vials",
+   "type": "chemical"
+  },
+  {
+   "name": "DDM",
+   "type": "chemical"
+  },
+  {
+   "name": "LC–MS/MS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Vanquish Neo UHPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Orbitrap Exploris",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "IMAC",
+   "predicate": "uses",
+   "target": "Fe3+–NTA agarose beads"
+  },
+  {
+   "source": "IMAC",
+   "predicate": "uses",
+   "target": "Ni–NTA Superflow agarose beads"
+  },
+  {
+   "source": "IMAC",
+   "predicate": "uses",
+   "target": "acetonitrile"
+  },
+  {
+   "source": "IMAC",
+   "predicate": "uses",
+   "target": "formic acid"
+  },
+  {
+   "source": "IMAC",
+   "predicate": "uses",
+   "target": "potassium phosphate"
+  },
+  {
+   "source": "IMAC",
+   "predicate": "uses",
+   "target": "Waters vials"
+  },
+  {
+   "source": "IMAC",
+   "predicate": "uses",
+   "target": "DDM"
+  },
+  {
+   "source": "LC–MS/MS",
+   "predicate": "uses",
+   "target": "Vanquish Neo UHPLC"
+  },
+  {
+   "source": "LC–MS/MS",
+   "predicate": "uses",
+   "target": "Orbitrap Exploris"
+  },
+  {
+   "source": "phosphopeptide enrichment",
+   "predicate": "uses",
+   "target": "Fe3+–NTA agarose beads"
+  },
+  {
+   "source": "phosphopeptide enrichment",
+   "predicate": "uses",
+   "target": "Ni–NTA Superflow agarose beads"
+  },
+  {
+   "source": "phosphopeptide enrichment",
+   "predicate": "uses",
+   "target": "acetonitrile"
+  }
+ ],
+ "truncated": false
+}

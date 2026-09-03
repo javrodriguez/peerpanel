@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13504229:10:83e8f45e",
+ "entities": [
+  {
+   "name": "Abramson",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Alphafold3",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biomolecular Interactions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Candida Albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Furin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HADDOCK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Human Fur Gene",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kex2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Omicron Variant",
+   "type": "organism"
+  },
+  {
+   "name": "Protein C Precursor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Protein C",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Abramson",
+   "predicate": "uses",
+   "target": "Alphafold3"
+  },
+  {
+   "source": "Abramson",
+   "predicate": "predicts",
+   "target": "Biomolecular Interactions"
+  }
+ ],
+ "truncated": false
+}

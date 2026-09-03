@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13515273:2:4d84d44c",
+ "entities": [
+  {
+   "name": "P. manshurica",
+   "type": "organism"
+  },
+  {
+   "name": "carvacrol",
+   "type": "chemical"
+  },
+  {
+   "name": "Invitrogen",
+   "type": "organism"
+  },
+  {
+   "name": "Thermo Fisher Scientific",
+   "type": "organism"
+  },
+  {
+   "name": "Illumina",
+   "type": "organism"
+  },
+  {
+   "name": "Agilent Technologies",
+   "type": "organism"
+  },
+  {
+   "name": "MetaboLights database",
+   "type": "organism"
+  },
+  {
+   "name": "NanoDrop 2000 spectrophotometer",
+   "type": "chemical"
+  },
+  {
+   "name": "Trizol reagent",
+   "type": "chemical"
+  },
+  {
+   "name": "HISAT2",
+   "type": "chemical"
+  },
+  {
+   "name": "DESeq2",
+   "type": "chemical"
+  },
+  {
+   "name": "clusterProfiler",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "P. manshurica",
+   "predicate": "treated by",
+   "target": "carvacrol"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "extracted using",
+   "target": "Trizol reagent"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "identified using",
+   "target": "DESeq2"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "enriched using",
+   "target": "clusterProfiler"
+  },
+  {
+   "source": "carvacrol",
+   "predicate": "induced inhibition",
+   "target": "P. manshurica"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "produced gas",
+   "target": "carvacrol"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "accumulated metabolites",
+   "target": "carvacrol"
+  },
+  {
+   "source": "P. manshurica",
+   "predicate": "expressed genes",
+   "target": "carvacrol"
+  }
+ ],
+ "truncated": false
+}

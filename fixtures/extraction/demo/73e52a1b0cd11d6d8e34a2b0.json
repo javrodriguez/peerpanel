@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13470552:4:92499ba4",
+ "entities": [
+  {
+   "name": "triacylglycerol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cellular triacylglycerol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "TAG assay kit",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "E1013",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Applygen Technologies",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Beijing",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "China",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glycerol phosphate oxidase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast cell cultures",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "optical density",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "total",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "4 mL",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "triacylglycerol",
+   "predicate": "quantified_by",
+   "target": "TAG assay kit"
+  },
+  {
+   "source": "TAG assay kit",
+   "predicate": "based_on",
+   "target": "glycerol phosphate oxidase"
+  }
+ ],
+ "truncated": false
+}

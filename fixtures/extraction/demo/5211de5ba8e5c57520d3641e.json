@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC7470746:10:8dfad842",
+ "entities": [
+  {
+   "name": "chemostat vessels",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "SD",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "trehalose",
+   "type": "chemical"
+  },
+  {
+   "name": "sodium phosphate buffer",
+   "type": "chemical"
+  },
+  {
+   "name": "autoclave trays",
+   "type": "chemical"
+  },
+  {
+   "name": "tube racks",
+   "type": "chemical"
+  },
+  {
+   "name": "reservoirs",
+   "type": "chemical"
+  },
+  {
+   "name": "vessels",
+   "type": "chemical"
+  },
+  {
+   "name": "media delivery tubing",
+   "type": "chemical"
+  },
+  {
+   "name": "waste tubing",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "lysine"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "SD"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "YPD"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "trehalose"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "sodium phosphate buffer"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "autoclave trays"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "tube racks"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "reservoirs"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "vessels"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "media delivery tubing"
+  },
+  {
+   "source": "chemostat vessels",
+   "predicate": "contains",
+   "target": "waste tubing"
+  }
+ ],
+ "truncated": false
+}

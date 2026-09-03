@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC9757880:20:9fab05af",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "MET25",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MET17",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cystathionine β-synthase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "O-Acetylserine Sulfhydrylase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "O-Acetylhomoserine Sulfhydrylase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfur metabolism pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "sulfur amino acids",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "MET25"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "MET15"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "MET17"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_process",
+   "target": "sulfur metabolism pathway"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_chemical",
+   "target": "sulfur amino acids"
+  },
+  {
+   "source": "MET25",
+   "predicate": "is_protein",
+   "target": "O-Acetylserine Sulfhydrylase"
+  },
+  {
+   "source": "MET25",
+   "predicate": "is_protein",
+   "target": "O-Acetylhomoserine Sulfhydrylase"
+  },
+  {
+   "source": "cystathionine β-synthase",
+   "predicate": "is_protein",
+   "target": "cystathionine β-synthase"
+  },
+  {
+   "source": "sulfur metabolism pathway",
+   "predicate": "has_gene",
+   "target": "MET25"
+  },
+  {
+   "source": "sulfur metabolism pathway",
+   "predicate": "has_gene",
+   "target": "MET15"
+  },
+  {
+   "source": "sulfur metabolism pathway",
+   "predicate": "has_gene",
+   "target": "MET17"
+  },
+  {
+   "source": "sulfur amino acids",
+   "predicate": "is_chemical",
+   "target": "sulfur amino acids"
+  }
+ ],
+ "truncated": false
+}

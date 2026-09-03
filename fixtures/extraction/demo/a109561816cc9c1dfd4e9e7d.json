@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC11102182:10:4b30c666",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Nannochloropsis gaditana",
+   "type": "organism"
+  },
+  {
+   "name": "Chinese hamster ovary cell",
+   "type": "organism"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "metabolic engineering",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid accumulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "advanced biofuels",
+   "type": "chemical"
+  },
+  {
+   "name": "biodiesel",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has_metabolic_engineering",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "Yarrowia lipolytica",
+   "predicate": "has_metabolic_engineering",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_metabolic_engineering",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_metabolic_engineering",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "Nannochloropsis gaditana",
+   "predicate": "has_metabolic_engineering",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "Chinese hamster ovary cell",
+   "predicate": "has_metabolic_engineering",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has_lipid_accumulation",
+   "target": "lipid accumulation"
+  },
+  {
+   "source": "Yarrowia lipolytica",
+   "predicate": "has_lipid_accumulation",
+   "target": "lipid accumulation"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_lipid_accumulation",
+   "target": "lipid accumulation"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_lipid_accumulation",
+   "target": "lipid accumulation"
+  },
+  {
+   "source": "Nannochloropsis gaditana",
+   "predicate": "has_lipid_accumulation",
+   "target": "lipid accumulation"
+  },
+  {
+   "source": "Chinese hamster ovary cell",
+   "predicate": "has_lipid_accumulation",
+   "target": "lipid accumulation"
+  }
+ ],
+ "truncated": false
+}

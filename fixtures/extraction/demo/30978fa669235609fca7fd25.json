@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC7953724:3:80c88c19",
+ "entities": [
+  {
+   "name": "R. toruloides CBS 14",
+   "type": "organism"
+  },
+  {
+   "name": "R. glutinis CBS 3044",
+   "type": "organism"
+  },
+  {
+   "name": "HH10CG55",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CG55",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "HH",
+   "type": "chemical"
+  },
+  {
+   "name": "CG",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "cell dry weight",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid concentration",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C/N ratio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FT-NIR-based method",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides CBS 14",
+   "predicate": "consumed",
+   "target": "glycerol"
+  },
+  {
+   "source": "R. toruloides CBS 14",
+   "predicate": "produced",
+   "target": "lipid"
+  },
+  {
+   "source": "R. glutinis CBS 3044",
+   "predicate": "consumed",
+   "target": "glycerol"
+  },
+  {
+   "source": "R. glutinis CBS 3044",
+   "predicate": "produced",
+   "target": "lipid"
+  },
+  {
+   "source": "HH10CG55",
+   "predicate": "had",
+   "target": "C/N ratio"
+  },
+  {
+   "source": "HH10CG55",
+   "predicate": "had",
+   "target": "lipid concentration"
+  },
+  {
+   "source": "CG55",
+   "predicate": "had",
+   "target": "lipid concentration"
+  },
+  {
+   "source": "HH10CG55",
+   "predicate": "had",
+   "target": "cell dry weight"
+  },
+  {
+   "source": "CG55",
+   "predicate": "had",
+   "target": "cell dry weight"
+  }
+ ],
+ "truncated": false
+}

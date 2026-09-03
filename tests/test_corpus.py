@@ -85,8 +85,13 @@ class TestManifest:
 
     def test_citations_render_carries_tasl_and_pin(self) -> None:
         text = render(CorpusManifest(name="ci", docs=[_doc("PMC1", "a" * 32)]))
-        for needle in ("**Title:** T", "**Authors:** A One", "**License:** CC BY",
-                       "creativecommons.org/licenses/by/4.0", "**Pinned:** PMC1.1 · md5"):
+        for needle in (
+            "**Title:** T",
+            "**Authors:** A One",
+            "**License:** CC BY",
+            "creativecommons.org/licenses/by/4.0",
+            "**Pinned:** PMC1.1 · md5",
+        ):
             assert needle in text
         assert "MIT license covers code only" in text
 

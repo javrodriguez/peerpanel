@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13515494:12:c0ab5cf9",
+ "entities": [
+  {
+   "name": "Zhang P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hu X.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Arginine Permeases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Urea",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces Cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "World J. Microbiol.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biotechnol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pavlova N.N.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hui S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ghergurovich J.M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fan J.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Intlekofer A.M.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zhang P.",
+   "predicate": "metabolic engineering",
+   "target": "Arginine Permeases"
+  },
+  {
+   "source": "Zhang P.",
+   "predicate": "reduces",
+   "target": "Urea"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC1409804:4:a0677b6f",
+ "entities": [
+  {
+   "name": "hints",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "gene structure",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "exon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "splice site",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AUGUSTUS+",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein search",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "translation start site",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EST",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Combined hints",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DNA sequence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "input DNA sequence",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gene prediction",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "hints",
+   "predicate": "compatible with",
+   "target": "gene structure"
+  },
+  {
+   "source": "hints",
+   "predicate": "incompatible with",
+   "target": "gene structure"
+  },
+  {
+   "source": "hints",
+   "predicate": "give a bonus to",
+   "target": "gene structure"
+  },
+  {
+   "source": "hints",
+   "predicate": "give a penalty to",
+   "target": "gene structure"
+  },
+  {
+   "source": "protein search",
+   "predicate": "lead to",
+   "target": "hints"
+  },
+  {
+   "source": "hints",
+   "predicate": "depend on",
+   "target": "EST"
+  },
+  {
+   "source": "hints",
+   "predicate": "have the same type",
+   "target": "hints"
+  },
+  {
+   "source": "hints",
+   "predicate": "have the most reliable grade",
+   "target": "hints"
+  },
+  {
+   "source": "gene prediction",
+   "predicate": "use",
+   "target": "hints"
+  },
+  {
+   "source": "hints",
+   "predicate": "are compatible with",
+   "target": "gene structure"
+  },
+  {
+   "source": "hints",
+   "predicate": "are incompatible with",
+   "target": "gene structure"
+  },
+  {
+   "source": "hints",
+   "predicate": "give a bonus to",
+   "target": "gene structure"
+  }
+ ],
+ "truncated": false
+}

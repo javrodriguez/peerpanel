@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC9157227:10:b271ff11",
+ "entities": [
+  {
+   "name": "SBY92",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SBY94",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "carotenoid yield",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "biomass",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "YX/CAR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "crtE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtYB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "carotenoid composition",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "γ-carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "β-carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "torulene",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SBY92",
+   "predicate": "has_higher",
+   "target": "carotenoid yield"
+  },
+  {
+   "source": "SBY92",
+   "predicate": "has_lower",
+   "target": "biomass"
+  },
+  {
+   "source": "crtE",
+   "predicate": "is_expressed_in",
+   "target": "SBY94"
+  },
+  {
+   "source": "crtI",
+   "predicate": "is_expressed_in",
+   "target": "SBY94"
+  }
+ ],
+ "truncated": false
+}

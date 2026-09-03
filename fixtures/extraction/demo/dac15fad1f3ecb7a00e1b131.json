@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC10440040:20:9585ae77",
+ "entities": [
+  {
+   "name": "BOT-A2",
+   "type": "organism"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "DNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "electroporation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PCR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Flow cytometry",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BD Accuri C6",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FlowJo",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "G418",
+   "type": "chemical"
+  },
+  {
+   "name": "Sigma-Aldrich",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BOT-A2",
+   "predicate": "transformed_by",
+   "target": "electroporation"
+  },
+  {
+   "source": "BOT-A2",
+   "predicate": "contains",
+   "target": "GFP"
+  },
+  {
+   "source": "BD Accuri C6",
+   "predicate": "used_to_perform",
+   "target": "Flow cytometry"
+  },
+  {
+   "source": "Sigma-Aldrich",
+   "predicate": "supplier_of",
+   "target": "G418"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC7191244:7:f566f1c0",
+ "entities": [
+  {
+   "name": "exopolysaccharide",
+   "type": "chemical"
+  },
+  {
+   "name": "Rhodotorula minuta",
+   "type": "organism"
+  },
+  {
+   "name": "Microbiol Insights",
+   "type": "organism"
+  },
+  {
+   "name": "Berlin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Heidelberg",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Springer",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Delattre C",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "microalgal and cyanobacterial exopolysaccharides",
+   "type": "chemical"
+  },
+  {
+   "name": "Biotechnol Adv",
+   "type": "organism"
+  },
+  {
+   "name": "Pantoea",
+   "type": "organism"
+  },
+  {
+   "name": "BCCS",
+   "type": "organism"
+  },
+  {
+   "name": "physical characterizations",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "exopolysaccharide",
+   "predicate": "produced by",
+   "target": "Rhodotorula minuta"
+  },
+  {
+   "source": "Microbiol Insights",
+   "predicate": "published in",
+   "target": "exopolysaccharide"
+  },
+  {
+   "source": "Berlin",
+   "predicate": "located in",
+   "target": "Heidelberg"
+  },
+  {
+   "source": "Delattre C",
+   "predicate": "studied",
+   "target": "microalgal and cyanobacterial exopolysaccharides"
+  },
+  {
+   "source": "Biotechnol Adv",
+   "predicate": "published in",
+   "target": "exopolysaccharide"
+  },
+  {
+   "source": "Pantoea",
+   "predicate": "produced by",
+   "target": "BCCS"
+  },
+  {
+   "source": "physical characterizations",
+   "predicate": "characterized by",
+   "target": "exopolysaccharide"
+  }
+ ],
+ "truncated": false
+}

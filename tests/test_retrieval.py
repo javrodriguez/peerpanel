@@ -29,9 +29,7 @@ CHUNKS = [
     Chunk("docTwin:0:cccc0000", "docTwin", 0, "Met4 and sulfur metabolism in the twin paper."),
 ]
 
-VECTORS = np.array(
-    [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.9, 0.1, 0.0]], dtype=np.float32
-)
+VECTORS = np.array([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.9, 0.1, 0.0]], dtype=np.float32)
 
 
 class _StubEmbed:
@@ -46,34 +44,50 @@ class _StubEmbed:
 
 
 def _graph() -> object:
-    return build_graph([
-        ChunkExtraction(
-            chunk_id="docA:0:aaaa0000",
-            entities=[Entity(name="Met4", type="gene_or_protein"),
-                      Entity(name="sulfur metabolism", type="process_or_phenotype")],
-            relations=[Relation(source="Met4", predicate="activates", target="sulfur metabolism")],
-        ),
-        ChunkExtraction(
-            chunk_id="docTwin:0:cccc0000",
-            entities=[Entity(name="Met4", type="gene_or_protein")],
-            relations=[],
-        ),
-        ChunkExtraction(
-            chunk_id="docB:0:bbbb0000",
-            entities=[Entity(name="RNA sequencing", type="method_or_tool")],
-            relations=[],
-        ),
-    ])
+    return build_graph(
+        [
+            ChunkExtraction(
+                chunk_id="docA:0:aaaa0000",
+                entities=[
+                    Entity(name="Met4", type="gene_or_protein"),
+                    Entity(name="sulfur metabolism", type="process_or_phenotype"),
+                ],
+                relations=[
+                    Relation(source="Met4", predicate="activates", target="sulfur metabolism")
+                ],
+            ),
+            ChunkExtraction(
+                chunk_id="docTwin:0:cccc0000",
+                entities=[Entity(name="Met4", type="gene_or_protein")],
+                relations=[],
+            ),
+            ChunkExtraction(
+                chunk_id="docB:0:bbbb0000",
+                entities=[Entity(name="RNA sequencing", type="method_or_tool")],
+                relations=[],
+            ),
+        ]
+    )
 
 
 def _reports() -> list[CommunityReport]:
     return [
-        CommunityReport(community_id=0, resolution=1.0, size=2,
-                        member_names=["Met4", "sulfur metabolism"],
-                        title="Sulfur regulation", summary="Met4 drives sulfur pathways."),
-        CommunityReport(community_id=1, resolution=1.0, size=1,
-                        member_names=["RNA sequencing"],
-                        title="Sequencing methods", summary="Transcript measurement methods."),
+        CommunityReport(
+            community_id=0,
+            resolution=1.0,
+            size=2,
+            member_names=["Met4", "sulfur metabolism"],
+            title="Sulfur regulation",
+            summary="Met4 drives sulfur pathways.",
+        ),
+        CommunityReport(
+            community_id=1,
+            resolution=1.0,
+            size=1,
+            member_names=["RNA sequencing"],
+            title="Sequencing methods",
+            summary="Transcript measurement methods.",
+        ),
     ]
 
 
@@ -92,9 +106,7 @@ class _RrfHybrid:
         self._vector = VectorRetriever(index, _StubEmbed([1.0, 0.0, 0.0]))
 
     def search(self, query: str, k: int = 10) -> list[RetrievalHit]:
-        return rrf(
-            [self._bm25.search(query, k=k * 2), self._vector.search(query, k=k * 2)], k=k
-        )
+        return rrf([self._bm25.search(query, k=k * 2), self._vector.search(query, k=k * 2)], k=k)
 
 
 def _all_modes(index: Index) -> list[object]:
@@ -135,9 +147,9 @@ class TestRungs:
 
     def test_rrf_rewards_agreement(self) -> None:
         a = BM25Retriever(Index.build(CHUNKS)).search("Met4 sulfur", k=3)
-        b = VectorRetriever(
-            Index.build(CHUNKS, VECTORS), _StubEmbed([1.0, 0.0, 0.0])
-        ).search("q", k=3)
+        b = VectorRetriever(Index.build(CHUNKS, VECTORS), _StubEmbed([1.0, 0.0, 0.0])).search(
+            "q", k=3
+        )
         fused = rrf([a, b], k=3)
         assert fused[0].chunk_id == "docA:0:aaaa0000"
 
@@ -158,11 +170,20 @@ class TestRungs:
 class _StubChat:
     name = "stub-chat"
 
-    def chat(self, *, system: str, user: str, json_schema: object = None,
-             temperature: float = 0.0, max_tokens: int = 2048) -> ChatResponse:
+    def chat(
+        self,
+        *,
+        system: str,
+        user: str,
+        json_schema: object = None,
+        temperature: float = 0.0,
+        max_tokens: int = 2048,
+    ) -> ChatResponse:
         return ChatResponse(
             text="Sulfur pathways are driven by Met4 [community 0].",
-            model="stub", prompt_tokens=1, completion_tokens=1,
+            model="stub",
+            prompt_tokens=1,
+            completion_tokens=1,
         )
 
 

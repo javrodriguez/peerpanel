@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC5826700:14:991e05e8",
+ "entities": [
+  {
+   "name": "Pfk2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "aldolase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "vacuolar H+-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Skp1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RAVE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vac7p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Vac14p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Fab1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rab5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TOR complex 1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "adenylate cyclase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cAMP",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "aldolase",
+   "predicate": "physical interaction",
+   "target": "vacuolar H+-ATPase"
+  },
+  {
+   "source": "Skp1",
+   "predicate": "forms multiple protein complexes",
+   "target": "RAVE"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13471478:25:77a58dc5",
+ "entities": [
+  {
+   "name": "SLC26A8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CFTR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "asthenozoospermia",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "oxalate transporter",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "enteric hyperoxaluria",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "nephrolithiasis",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "oxalate",
+   "type": "chemical"
+  },
+  {
+   "name": "SLC26A2/DTDST",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "STAS domain",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PLZF",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SLC26A8",
+   "predicate": "activates",
+   "target": "CFTR"
+  },
+  {
+   "source": "SLC26A6",
+   "predicate": "transports",
+   "target": "oxalate"
+  },
+  {
+   "source": "SLC26A6",
+   "predicate": "transports",
+   "target": "sulfate"
+  },
+  {
+   "source": "SLC26A8",
+   "predicate": "associated with",
+   "target": "asthenozoospermia"
+  },
+  {
+   "source": "SLC26A6",
+   "predicate": "associated with",
+   "target": "enteric hyperoxaluria"
+  },
+  {
+   "source": "SLC26A6",
+   "predicate": "associated with",
+   "target": "nephrolithiasis"
+  }
+ ],
+ "truncated": false
+}

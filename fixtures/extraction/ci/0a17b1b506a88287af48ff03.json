@@ -1,0 +1,60 @@
+{
+ "chunk_id": "PMC13304748:11:3b061432",
+ "entities": [
+  {
+   "name": "pos5Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZnS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "Mitochondrion",
+   "type": "organism"
+  },
+  {
+   "name": "DAVID",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GeneMANIA Cytoscape plugin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MDPI",
+   "type": "organism"
+  },
+  {
+   "name": "Table S6",
+   "type": "other"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pos5Δ",
+   "predicate": "regulates",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "pos5Δ",
+   "predicate": "regulates",
+   "target": "ZnSO4"
+  },
+  {
+   "source": "ZnS QDs",
+   "predicate": "regulates",
+   "target": "Mitochondrion"
+  },
+  {
+   "source": "ZnSO4",
+   "predicate": "regulates",
+   "target": "Mitochondrion"
+  }
+ ],
+ "truncated": false
+}

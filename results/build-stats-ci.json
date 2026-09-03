@@ -1,14 +1,21 @@
 {
  "cached_before": 0,
- "chunks": 212,
+ "chunks": 234,
  "communities_per_resolution": {
-  "0.3": 19,
-  "1.0": 27,
-  "3.0": 47
+  "0.3": 23,
+  "1.0": 32,
+  "3.0": 55
  },
- "edges": 12166,
- "extraction_wall_s": 5114.2,
- "nodes": 1577,
- "provider": "ollama-openai:llama3.1:8b",
+ "corpus": "ci",
+ "edges": 13516,
+ "extraction_wall_s": 9082.0,
+ "model_calls": {
+  "calls": 234,
+  "largest_prompt_tokens": 5238,
+  "smallest_context": 4096,
+  "smallest_headroom_tokens": 2747
+ },
+ "nodes": 1759,
+ "provider": "ollama-native:llama3.1:8b",
  "truncated_chunks": 0
 }

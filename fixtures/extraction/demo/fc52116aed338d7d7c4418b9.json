@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC12278674:23:bb3c2b41",
+ "entities": [
+  {
+   "name": "Li C-J",
+   "type": "organism"
+  },
+  {
+   "name": "Zhao D",
+   "type": "organism"
+  },
+  {
+   "name": "Cheng P",
+   "type": "organism"
+  },
+  {
+   "name": "Zheng L",
+   "type": "organism"
+  },
+  {
+   "name": "Yu G-H",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Malassezia",
+   "type": "organism"
+  },
+  {
+   "name": "Glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "Sphingolipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Cardiolipin",
+   "type": "chemical"
+  },
+  {
+   "name": "Ceramide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Li C-J",
+   "predicate": "analyzed",
+   "target": "Rhodotorula glutinis"
+  }
+ ],
+ "truncated": false
+}

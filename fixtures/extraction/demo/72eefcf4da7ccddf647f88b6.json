@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC9487109:10:4f9e5ac3",
+ "entities": [
+  {
+   "name": "HPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "1260 Infinity HPLC system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Agilent Technologies",
+   "type": "organism"
+  },
+  {
+   "name": "USA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UV detector",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zorbax SB-C18 column",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tetrabutylammonium sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "KH2PO4",
+   "type": "chemical"
+  },
+  {
+   "name": "MeOH",
+   "type": "chemical"
+  },
+  {
+   "name": "folic acid vitamers",
+   "type": "chemical"
+  },
+  {
+   "name": "samples",
+   "type": "chemical"
+  },
+  {
+   "name": "Excel",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "HPLC",
+   "predicate": "uses",
+   "target": "UV detector"
+  },
+  {
+   "source": "HPLC",
+   "predicate": "uses",
+   "target": "Zorbax SB-C18 column"
+  },
+  {
+   "source": "HPLC",
+   "predicate": "uses",
+   "target": "Tetrabutylammonium sulfate"
+  },
+  {
+   "source": "HPLC",
+   "predicate": "uses",
+   "target": "KH2PO4"
+  },
+  {
+   "source": "HPLC",
+   "predicate": "uses",
+   "target": "MeOH"
+  },
+  {
+   "source": "HPLC",
+   "predicate": "uses",
+   "target": "folic acid vitamers"
+  },
+  {
+   "source": "HPLC",
+   "predicate": "uses",
+   "target": "samples"
+  }
+ ],
+ "truncated": false
+}

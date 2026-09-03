@@ -42,8 +42,15 @@ class _StubChat:
         self.payload = payload
         self.calls: list[dict[str, object]] = []
 
-    def chat(self, *, system: str, user: str, json_schema: object = None,
-             temperature: float = 0.0, max_tokens: int = 2048) -> ChatResponse:
+    def chat(
+        self,
+        *,
+        system: str,
+        user: str,
+        json_schema: object = None,
+        temperature: float = 0.0,
+        max_tokens: int = 2048,
+    ) -> ChatResponse:
         self.calls.append({"user": user, "schema": json_schema})
         return ChatResponse(text=self.payload, model="stub", prompt_tokens=1, completion_tokens=1)
 

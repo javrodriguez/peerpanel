@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC9487109:12:1d882700",
+ "entities": [
+  {
+   "name": "Gao M Cao M Suástegui M Walker J Rodriguez Quiroz",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wu Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "shikimate",
+   "type": "chemical"
+  },
+  {
+   "name": "nonconventional yeast platform",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Ashbya gossypii",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "folic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "benzoic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "NH3",
+   "type": "chemical"
+  },
+  {
+   "name": "ammonium permeases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MetaCyc database",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gao M Cao M Suástegui M Walker J Rodriguez Quiroz",
+   "predicate": "develop",
+   "target": "nonconventional yeast platform"
+  },
+  {
+   "source": "Gao M Cao M Suástegui M Walker J Rodriguez Quiroz",
+   "predicate": "produce",
+   "target": "shikimate"
+  }
+ ],
+ "truncated": false
+}

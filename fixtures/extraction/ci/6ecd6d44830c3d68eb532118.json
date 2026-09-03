@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13274398:6:247cd165",
+ "entities": [
+  {
+   "name": "β-carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "cAMP",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "cAMP",
+   "type": "chemical"
+  },
+  {
+   "name": "protein kinase A (PKA)",
+   "type": "chemical"
+  },
+  {
+   "name": "Cns1",
+   "type": "chemical"
+  },
+  {
+   "name": "Cns2",
+   "type": "chemical"
+  },
+  {
+   "name": "Cordycepin",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Xanthophyllomyces dendrorhous",
+   "type": "organism"
+  },
+  {
+   "name": "Cordyceps militaris",
+   "type": "organism"
+  },
+  {
+   "name": "bPACy",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "protein kinase A (PKA)",
+   "predicate": "is involved in",
+   "target": "cAMP"
+  },
+  {
+   "source": "Cns1",
+   "predicate": "produces",
+   "target": "cordycepin"
+  },
+  {
+   "source": "Cns2",
+   "predicate": "produces",
+   "target": "cordycepin"
+  }
+ ],
+ "truncated": false
+}

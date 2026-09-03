@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC11701741:6:b5b2e630",
+ "entities": [
+  {
+   "name": "Gabaldon T.",
+   "type": "organism"
+  },
+  {
+   "name": "Koonin E.V.",
+   "type": "organism"
+  },
+  {
+   "name": "Nat. Rev. Genet",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Orthologs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "paralogs",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "evolutionary genomics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Annu. Rev. Genet",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KEGG OC",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kriventseva E.V.",
+   "type": "organism"
+  },
+  {
+   "name": "Zdobnov E.M.",
+   "type": "organism"
+  },
+  {
+   "name": "OrthoDB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OMA",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gabaldon T.",
+   "predicate": "author",
+   "target": "Nat. Rev. Genet"
+  },
+  {
+   "source": "Koonin E.V.",
+   "predicate": "author",
+   "target": "Orthologs"
+  },
+  {
+   "source": "Nat. Rev. Genet",
+   "predicate": "published_in",
+   "target": "Koonin E.V."
+  },
+  {
+   "source": "KEGG OC",
+   "predicate": "constructed_by",
+   "target": "Kriventseva E.V."
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "maintained_by",
+   "target": "Zdobnov E.M."
+  },
+  {
+   "source": "OMA",
+   "predicate": "maintained_by",
+   "target": "Kriventseva E.V."
+  },
+  {
+   "source": "Gabaldon T.",
+   "predicate": "collaborated_with",
+   "target": "Koonin E.V."
+  },
+  {
+   "source": "Koonin E.V.",
+   "predicate": "collaborated_with",
+   "target": "Gabaldon T."
+  },
+  {
+   "source": "KEGG OC",
+   "predicate": "uses",
+   "target": "Kriventseva E.V."
+  },
+  {
+   "source": "OrthoDB",
+   "predicate": "uses",
+   "target": "Zdobnov E.M."
+  },
+  {
+   "source": "OMA",
+   "predicate": "uses",
+   "target": "Kriventseva E.V."
+  },
+  {
+   "source": "Gabaldon T.",
+   "predicate": "published_in",
+   "target": "Nat. Rev. Genet"
+  }
+ ],
+ "truncated": false
+}

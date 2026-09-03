@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC7690147:6:49cead39",
+ "entities": [
+  {
+   "name": "R. glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "Torularhodin",
+   "type": "chemical"
+  },
+  {
+   "name": "Torulene",
+   "type": "chemical"
+  },
+  {
+   "name": "β-carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "Lycopene",
+   "type": "chemical"
+  },
+  {
+   "name": "Microbial lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "Enzymes",
+   "type": "chemical"
+  },
+  {
+   "name": "Phospholipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Sphingolipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Fatty acids",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. glutinis",
+   "predicate": "has_genome",
+   "target": "Rhodotorula"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "produces",
+   "target": "Microbial lipids"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "produces",
+   "target": "Carotenoids"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "produces",
+   "target": "Enzymes"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "has_carotenoid",
+   "target": "Torularhodin"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "has_carotenoid",
+   "target": "Torulene"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "has_carotenoid",
+   "target": "β-carotene"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "has_lipid",
+   "target": "Phospholipids"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "has_lipid",
+   "target": "Sphingolipids"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "has_lipid",
+   "target": "Fatty acids"
+  },
+  {
+   "source": "R. glutinis",
+   "predicate": "has_lipid",
+   "target": "Microbial lipids"
+  }
+ ],
+ "truncated": false
+}

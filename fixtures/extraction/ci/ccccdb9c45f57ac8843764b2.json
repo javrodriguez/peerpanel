@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13092671:9:bbde7e18",
+ "entities": [
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Zn-citrate",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn-GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn-cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "citrate",
+   "type": "chemical"
+  },
+  {
+   "name": "GSH",
+   "type": "chemical"
+  },
+  {
+   "name": "breast milk",
+   "type": "chemical"
+  },
+  {
+   "name": "coconut water",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast cytosol",
+   "type": "chemical"
+  },
+  {
+   "name": "cytosol",
+   "type": "chemical"
+  },
+  {
+   "name": "vacuoles",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "E. coli",
+   "predicate": "has",
+   "target": "Zn-citrate"
+  },
+  {
+   "source": "E. coli",
+   "predicate": "has",
+   "target": "Zn-GSH"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "Zn-citrate"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "Zn-GSH"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "has",
+   "target": "Zn-cysteine"
+  },
+  {
+   "source": "yeast cytosol",
+   "predicate": "has",
+   "target": "Zn-citrate"
+  },
+  {
+   "source": "yeast cytosol",
+   "predicate": "has",
+   "target": "Zn-GSH"
+  },
+  {
+   "source": "yeast cytosol",
+   "predicate": "has",
+   "target": "Zn-cysteine"
+  },
+  {
+   "source": "breast milk",
+   "predicate": "has",
+   "target": "Zn-citrate"
+  },
+  {
+   "source": "coconut water",
+   "predicate": "has",
+   "target": "Zn-citrate"
+  },
+  {
+   "source": "coconut water",
+   "predicate": "has",
+   "target": "Zn-GSH"
+  },
+  {
+   "source": "yeast cytosol",
+   "predicate": "has",
+   "target": "citrate"
+  }
+ ],
+ "truncated": false
+}

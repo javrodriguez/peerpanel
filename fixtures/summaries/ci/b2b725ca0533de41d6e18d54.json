@@ -1,0 +1,25 @@
+{
+ "community_id": 29,
+ "resolution": 3.0,
+ "size": 15,
+ "member_names": [
+  "AICAr",
+  "BAT2",
+  "GCV1",
+  "GCV2",
+  "GCV3",
+  "HMP",
+  "MAE1",
+  "Met31p",
+  "Met32p",
+  "SNO2",
+  "SNZ2",
+  "THI21",
+  "THI5",
+  "THI72",
+  "Thiamine"
+ ],
+ "title": "Genes and Proteins Associated with Thiamine and Chemicals",
+ "summary": "This cluster consists of genes and proteins, including BAT2, GCV1, GCV2, GCV3, MAE1, Met31p, Met32p, SNO2, SNZ2, THI21, THI5, and THI72, which are related to thiamine. Additionally, the cluster includes AICAr, HMP, and Thiamine, which are chemicals. The relationships between these entities are not specified, suggesting that they may be connected through various biochemical pathways or functions.",
+ "truncated": false
+}

@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC12278674:24:84627086",
+ "entities": [
+  {
+   "name": "qPTM",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "PTM dynamics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "human",
+   "type": "organism"
+  },
+  {
+   "name": "mouse",
+   "type": "organism"
+  },
+  {
+   "name": "rat",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Nucleic Acids Res",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Leutert M",
+   "type": "organism"
+  },
+  {
+   "name": "Barente AS",
+   "type": "organism"
+  },
+  {
+   "name": "Fukuda NK",
+   "type": "organism"
+  },
+  {
+   "name": "Rodriguez-Mias RA",
+   "type": "organism"
+  },
+  {
+   "name": "Villén J",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "qPTM",
+   "predicate": "is_updated_database_for",
+   "target": "PTM dynamics"
+  },
+  {
+   "source": "qPTM",
+   "predicate": "in",
+   "target": "human"
+  },
+  {
+   "source": "qPTM",
+   "predicate": "in",
+   "target": "mouse"
+  },
+  {
+   "source": "qPTM",
+   "predicate": "in",
+   "target": "rat"
+  },
+  {
+   "source": "qPTM",
+   "predicate": "in",
+   "target": "yeast"
+  }
+ ],
+ "truncated": false
+}

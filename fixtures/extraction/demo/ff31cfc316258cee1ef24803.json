@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC7334043:10:1e21285a",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Lee JJL",
+   "type": "organism"
+  },
+  {
+   "name": "ChenLW",
+   "type": "organism"
+  },
+  {
+   "name": "CaoBet",
+   "type": "organism"
+  },
+  {
+   "name": "Leong W-H",
+   "type": "organism"
+  },
+  {
+   "name": "LimJ-W",
+   "type": "organism"
+  },
+  {
+   "name": "LamM-K",
+   "type": "organism"
+  },
+  {
+   "name": "Lin J",
+   "type": "organism"
+  },
+  {
+   "name": "ShenH",
+   "type": "organism"
+  },
+  {
+   "name": "ZhangZ",
+   "type": "organism"
+  },
+  {
+   "name": "Liu D",
+   "type": "organism"
+  },
+  {
+   "name": "GeiselmanGM",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lee JJL",
+   "predicate": "engineered",
+   "target": "Rhodosporidium toruloides"
+  }
+ ],
+ "truncated": false
+}

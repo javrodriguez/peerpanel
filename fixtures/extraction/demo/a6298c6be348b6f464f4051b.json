@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC9487109:4:4ddd9e85",
+ "entities": [
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "folate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "THF",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "5MTHF",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "5FTHF",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Verduyn-S2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Verduyn-S2U",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "ESP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "baffled flask",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "tank bioreactors",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S. stipitis",
+   "predicate": "produce",
+   "target": "folate"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "produce",
+   "target": "THF"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "produce",
+   "target": "5MTHF"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "produce",
+   "target": "5FTHF"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grow",
+   "target": "glucose"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grow",
+   "target": "xylose"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grow",
+   "target": "Verduyn-S2"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grow",
+   "target": "Verduyn-S2U"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grow",
+   "target": "baffled flask"
+  },
+  {
+   "source": "S. stipitis",
+   "predicate": "grow",
+   "target": "tank bioreactors"
+  }
+ ],
+ "truncated": false
+}

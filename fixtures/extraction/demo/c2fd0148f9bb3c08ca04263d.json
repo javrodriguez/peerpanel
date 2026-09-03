@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC7690147:10:d745f629",
+ "entities": [
+  {
+   "name": "ZHK",
+   "type": "organism"
+  },
+  {
+   "name": "basidiomycota_odb9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "R. graminis",
+   "type": "organism"
+  },
+  {
+   "name": "R. diobovata",
+   "type": "organism"
+  },
+  {
+   "name": "R. taiwanensis",
+   "type": "organism"
+  },
+  {
+   "name": "CJL",
+   "type": "organism"
+  },
+  {
+   "name": "DZ",
+   "type": "organism"
+  },
+  {
+   "name": "PC",
+   "type": "organism"
+  },
+  {
+   "name": "GHY",
+   "type": "organism"
+  },
+  {
+   "name": "LZ",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ZHK",
+   "predicate": "has_ortholog",
+   "target": "basidiomycota_odb9"
+  },
+  {
+   "source": "ZHK",
+   "predicate": "has_one-to-one_orthologous_genes",
+   "target": "R. glutinis"
+  },
+  {
+   "source": "ZHK",
+   "predicate": "has_genomic_synteny_analysis",
+   "target": "R. graminis"
+  }
+ ],
+ "truncated": false
+}

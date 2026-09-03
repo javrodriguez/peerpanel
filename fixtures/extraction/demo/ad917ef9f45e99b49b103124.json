@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13515017:6:c7e722f6",
+ "entities": [
+  {
+   "name": "SUL1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "yku70Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chr II",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "telomere",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ITS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Y'",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Oxford Nanopore",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces Genome Database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "aCGH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yku70Δ-A",
+   "type": "organism"
+  },
+  {
+   "name": "FY4",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SUL1",
+   "predicate": "has_amplicon_structure",
+   "target": "yeast"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has_mutant_strain",
+   "target": "yku70Δ-A"
+  },
+  {
+   "source": "yku70Δ-A",
+   "predicate": "has_population_sample",
+   "target": "Oxford Nanopore"
+  },
+  {
+   "source": "Oxford Nanopore",
+   "predicate": "performed_sequencing_on",
+   "target": "yku70Δ-A"
+  },
+  {
+   "source": "yku70Δ-A",
+   "predicate": "has_split_reads",
+   "target": "yeast"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has_discontinuities_in_copy_number",
+   "target": "aCGH"
+  },
+  {
+   "source": "aCGH",
+   "predicate": "has_data",
+   "target": "yeast"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has_genomic_locations",
+   "target": "chr II"
+  },
+  {
+   "source": "chr II",
+   "predicate": "has_sequence_homology",
+   "target": "telomere"
+  },
+  {
+   "source": "telomere",
+   "predicate": "has_sequence_homology",
+   "target": "chr II"
+  }
+ ],
+ "truncated": false
+}

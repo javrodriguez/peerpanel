@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC5826700:16:b64a9b81",
+ "entities": [
+  {
+   "name": "Biochem J",
+   "type": "organism"
+  },
+  {
+   "name": "Mira NP",
+   "type": "organism"
+  },
+  {
+   "name": "Becker JD Sa-Correia I",
+   "type": "organism"
+  },
+  {
+   "name": "Haa1p-regulon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces",
+   "type": "organism"
+  },
+  {
+   "name": "response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "OMICS 2010 14 5 587 601 10.1089/omi.2010.0048",
+   "type": "organism"
+  },
+  {
+   "name": "Mira NP Teixeira MC Sa-Correia I",
+   "type": "organism"
+  },
+  {
+   "name": "adaptive response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "tolerance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "weak acids",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Biochem J",
+   "predicate": "involved_in",
+   "target": "Haa1p-regulon"
+  },
+  {
+   "source": "Mira NP",
+   "predicate": "regulates",
+   "target": "Haa1p-regulon"
+  },
+  {
+   "source": "Saccharomyces",
+   "predicate": "responds_to",
+   "target": "acetic acid"
+  },
+  {
+   "source": "Mira NP Teixeira MC Sa-Correia I",
+   "predicate": "involved_in",
+   "target": "adaptive response"
+  },
+  {
+   "source": "Mira NP Teixeira MC Sa-Correia I",
+   "predicate": "involved_in",
+   "target": "tolerance"
+  },
+  {
+   "source": "Mira NP Teixeira MC Sa-Correia I",
+   "predicate": "responds_to",
+   "target": "weak acids"
+  }
+ ],
+ "truncated": false
+}

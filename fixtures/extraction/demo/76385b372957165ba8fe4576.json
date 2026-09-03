@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC9825514:8:d7d8b252",
+ "entities": [
+  {
+   "name": "Porras P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BridgeA.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CesareniG.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DuesburyM.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "JurisicaI.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KotlyarM.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "IMEx Consortium Curators Del-Toro N.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Le Mercier P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "unified open access dataset",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "molecular interactions",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Commun",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Porras P.",
+   "predicate": "contributes_to",
+   "target": "unified open access dataset"
+  },
+  {
+   "source": "BridgeA.",
+   "predicate": "contributes_to",
+   "target": "unified open access dataset"
+  },
+  {
+   "source": "CesareniG.",
+   "predicate": "contributes_to",
+   "target": "unified open access dataset"
+  },
+  {
+   "source": "DuesburyM.",
+   "predicate": "contributes_to",
+   "target": "unified open access dataset"
+  },
+  {
+   "source": "JurisicaI.",
+   "predicate": "contributes_to",
+   "target": "unified open access dataset"
+  },
+  {
+   "source": "KotlyarM.",
+   "predicate": "contributes_to",
+   "target": "unified open access dataset"
+  },
+  {
+   "source": "unified open access dataset",
+   "predicate": "contains",
+   "target": "molecular interactions"
+  },
+  {
+   "source": "Nat",
+   "predicate": "published_in",
+   "target": "Commun"
+  }
+ ],
+ "truncated": false
+}

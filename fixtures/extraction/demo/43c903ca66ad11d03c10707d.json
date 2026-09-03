@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC9825514:7:f2dda45f",
+ "entities": [
+  {
+   "name": "Varadi M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AlphaFold protein structure database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nucleic Acids Res",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein - sequence space",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "high - accuracy models",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Arita M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "international nucleotide sequence database collaboration",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cummins C.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "European Nucleotide Archive",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sayers E.W.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Database resources",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "National Center",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Varadi M.",
+   "predicate": "uses",
+   "target": "AlphaFold protein structure database"
+  },
+  {
+   "source": "Varadi M.",
+   "predicate": "uses",
+   "target": "Nucleic Acids Res"
+  },
+  {
+   "source": "Varadi M.",
+   "predicate": "uses",
+   "target": "protein - sequence space"
+  },
+  {
+   "source": "Varadi M.",
+   "predicate": "uses",
+   "target": "high - accuracy models"
+  },
+  {
+   "source": "Arita M.",
+   "predicate": "uses",
+   "target": "international nucleotide sequence database collaboration"
+  },
+  {
+   "source": "Cummins C.",
+   "predicate": "uses",
+   "target": "European Nucleotide Archive"
+  },
+  {
+   "source": "Sayers E.W.",
+   "predicate": "uses",
+   "target": "Database resources"
+  },
+  {
+   "source": "Sayers E.W.",
+   "predicate": "uses",
+   "target": "National Center"
+  }
+ ],
+ "truncated": false
+}

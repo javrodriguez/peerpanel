@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC5826700:18:f0f5cbf3",
+ "entities": [
+  {
+   "name": "endoplasmic reticulum",
+   "type": "organism"
+  },
+  {
+   "name": "plasma membrane",
+   "type": "organism"
+  },
+  {
+   "name": "ribosome-free membrane microcompartment",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "ceramide",
+   "type": "chemical"
+  },
+  {
+   "name": "sterol",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acid",
+   "type": "chemical"
+  },
+  {
+   "name": "sphingolipid",
+   "type": "chemical"
+  },
+  {
+   "name": "triglyceride",
+   "type": "chemical"
+  },
+  {
+   "name": "steryl ester",
+   "type": "chemical"
+  },
+  {
+   "name": "autophagosome",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "endoplasmic reticulum",
+   "predicate": "involved in",
+   "target": "plasma membrane"
+  },
+  {
+   "source": "endoplasmic reticulum",
+   "predicate": "involved in",
+   "target": "ribosome-free membrane microcompartment"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "lipid"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "ceramide"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "sterol"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "fatty acid"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "sphingolipid"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "triglyceride"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "steryl ester"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "involved in",
+   "target": "autophagosome"
+  },
+  {
+   "source": "lipid",
+   "predicate": "regulates",
+   "target": "autophagosome"
+  },
+  {
+   "source": "ceramide",
+   "predicate": "regulates",
+   "target": "autophagosome"
+  }
+ ],
+ "truncated": false
+}

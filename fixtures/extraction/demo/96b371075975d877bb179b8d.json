@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC6402699:18:39a5127e",
+ "entities": [
+  {
+   "name": "sxi",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "uncertainty",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "six parameters",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "95 % confidence interval",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Table",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "error s.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lysine release rate",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "value",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chemostats",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "7 - h doubling time",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "doubling time",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CoSMO",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sxi",
+   "predicate": "is",
+   "target": "uncertainty"
+  },
+  {
+   "source": "six parameters",
+   "predicate": "are",
+   "target": "95 % confidence interval"
+  },
+  {
+   "source": "Table",
+   "predicate": "contains",
+   "target": "error s."
+  },
+  {
+   "source": "lysine release rate",
+   "predicate": "is",
+   "target": "value"
+  },
+  {
+   "source": "chemostats",
+   "predicate": "use",
+   "target": "7 - h doubling time"
+  },
+  {
+   "source": "doubling time",
+   "predicate": "is",
+   "target": "CoSMO"
+  },
+  {
+   "source": "sxi",
+   "predicate": "is",
+   "target": "uncertainty"
+  },
+  {
+   "source": "six parameters",
+   "predicate": "are",
+   "target": "95 % confidence interval"
+  },
+  {
+   "source": "Table",
+   "predicate": "contains",
+   "target": "error s."
+  },
+  {
+   "source": "lysine release rate",
+   "predicate": "is",
+   "target": "value"
+  },
+  {
+   "source": "chemostats",
+   "predicate": "use",
+   "target": "7 - h doubling time"
+  },
+  {
+   "source": "doubling time",
+   "predicate": "is",
+   "target": "CoSMO"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC6547517:15:a1b898d1",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Scheffersomyces stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "Hansenula polymorpha",
+   "type": "organism"
+  },
+  {
+   "name": "Dekkera bruxellensis",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium",
+   "type": "organism"
+  },
+  {
+   "name": "Glyceraldehyde-3-phosphate dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RtGPD1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Liu Y",
+   "type": "chemical"
+  },
+  {
+   "name": "Koh CM",
+   "type": "chemical"
+  },
+  {
+   "name": "Sun L",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has_gene",
+   "target": "RtGPD1"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has_gene",
+   "target": "Glyceraldehyde-3-phosphate dehydrogenase"
+  },
+  {
+   "source": "Liu Y",
+   "predicate": "characterized",
+   "target": "Rhodosporidium toruloides"
+  }
+ ],
+ "truncated": false
+}

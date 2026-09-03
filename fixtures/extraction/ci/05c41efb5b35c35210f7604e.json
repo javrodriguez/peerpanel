@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC12994171:10:b4579243",
+ "entities": [
+  {
+   "name": "ERFVII",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCO4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HRG",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cys-NDP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MynOx",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PCO1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RAP2.12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CIPK12",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Aux/IAA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "hypoxia",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ERFVII",
+   "predicate": "has_conditional_proteostasis",
+   "target": "Cys-NDP"
+  },
+  {
+   "source": "ERFVII",
+   "predicate": "regulates",
+   "target": "HRG"
+  },
+  {
+   "source": "PCO4",
+   "predicate": "senses",
+   "target": "hypoxia"
+  },
+  {
+   "source": "PCO4",
+   "predicate": "regulates",
+   "target": "ERFVII"
+  },
+  {
+   "source": "MynOx",
+   "predicate": "has_output",
+   "target": "HRG"
+  },
+  {
+   "source": "CIPK12",
+   "predicate": "protects",
+   "target": "ERFVII"
+  },
+  {
+   "source": "PCO1",
+   "predicate": "regulates",
+   "target": "ERFVII"
+  },
+  {
+   "source": "PCO1",
+   "predicate": "regulates",
+   "target": "HRG"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC9763685:9:2253e6fb",
+ "entities": [
+  {
+   "name": "Met15",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Yll058w",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "H2S",
+   "type": "chemical"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "organosulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "SAP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "EtOH",
+   "type": "chemical"
+  },
+  {
+   "name": "Fe-EDTA",
+   "type": "chemical"
+  },
+  {
+   "name": "SD-Met-Cys+Glu",
+   "type": "chemical"
+  },
+  {
+   "name": "FY4-met15Δ ρ-cells",
+   "type": "organism"
+  },
+  {
+   "name": "met15Δ cells",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Met15",
+   "predicate": "encode",
+   "target": "Yll058w"
+  },
+  {
+   "source": "Yll058w",
+   "predicate": "catalyze",
+   "target": "homocysteine"
+  },
+  {
+   "source": "Yll058w",
+   "predicate": "synthesize",
+   "target": "homocysteine"
+  },
+  {
+   "source": "SAP",
+   "predicate": "upregulate",
+   "target": "H2S"
+  },
+  {
+   "source": "met15Δ cells",
+   "predicate": "utilize",
+   "target": "EtOH"
+  }
+ ],
+ "truncated": false
+}

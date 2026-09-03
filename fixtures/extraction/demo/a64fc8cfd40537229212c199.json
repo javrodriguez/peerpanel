@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC5968551:11:9b5189a0",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Pi",
+   "type": "chemical"
+  },
+  {
+   "name": "P0",
+   "type": "chemical"
+  },
+  {
+   "name": "F3",
+   "type": "chemical"
+  },
+  {
+   "name": "Metabolites",
+   "type": "chemical"
+  },
+  {
+   "name": "Acetyl-CoA carboxylase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATP-citrate lyase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Acetyl-CoA synthase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Adenosine monophosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "Cyclin-dependent kinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Diacylglycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "Dry cell weight",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Pi",
+   "predicate": "limited",
+   "target": "P0"
+  },
+  {
+   "source": "Pi",
+   "predicate": "replete",
+   "target": "F3"
+  },
+  {
+   "source": "Acetyl-CoA carboxylase",
+   "predicate": "involved in",
+   "target": "Metabolites"
+  },
+  {
+   "source": "ATP-citrate lyase",
+   "predicate": "involved in",
+   "target": "Metabolites"
+  },
+  {
+   "source": "Acetyl-CoA synthase",
+   "predicate": "involved in",
+   "target": "Metabolites"
+  },
+  {
+   "source": "Adenosine monophosphate",
+   "predicate": "involved in",
+   "target": "Metabolites"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13470552:13:11b72cb9",
+ "entities": [
+  {
+   "name": "Vps4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Vta1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ESCRTs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AAA-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pex1p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pex6p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Arl3p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sys1p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bxi1p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ire1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Atg18",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Atg8",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Vps4",
+   "predicate": "recycles",
+   "target": "ESCRTs"
+  },
+  {
+   "source": "Vta1",
+   "predicate": "regulates",
+   "target": "Vps4"
+  },
+  {
+   "source": "Pex1p",
+   "predicate": "interacts",
+   "target": "Pex6p"
+  },
+  {
+   "source": "Sys1p",
+   "predicate": "acetylates",
+   "target": "Arl3p"
+  },
+  {
+   "source": "Atg8",
+   "predicate": "interacts",
+   "target": "Atg18"
+  }
+ ],
+ "truncated": false
+}

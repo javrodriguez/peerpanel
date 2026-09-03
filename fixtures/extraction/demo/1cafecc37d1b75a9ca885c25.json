@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7334043:0:ea62fa59",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Wen Zhiqiang",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Sufang",
+   "type": "organism"
+  },
+  {
+   "name": "Odoh Chuks Kenneth",
+   "type": "organism"
+  },
+  {
+   "name": "Jin Mingjie",
+   "type": "organism"
+  },
+  {
+   "name": "Zhao Zongbao K",
+   "type": "organism"
+  },
+  {
+   "name": "Dalian Institute of Chemical Physics",
+   "type": "organism"
+  },
+  {
+   "name": "Nanjing University of Science & Technology",
+   "type": "organism"
+  },
+  {
+   "name": "Oxford University Press",
+   "type": "organism"
+  },
+  {
+   "name": "FEMS",
+   "type": "organism"
+  },
+  {
+   "name": "Creative Commons Attribution License",
+   "type": "organism"
+  },
+  {
+   "name": "National Natural Science Foundation of China",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

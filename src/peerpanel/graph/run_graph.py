@@ -21,7 +21,7 @@ import networkx as nx
 
 from peerpanel.graph.build import build_graph
 from peerpanel.graph.communities import detect
-from peerpanel.graph.extract import extract_many
+from peerpanel.graph.extract import EXTRACTION_PROVIDER_NAME, extract_many
 from peerpanel.graph.pipeline import chunks_for
 from peerpanel.providers.base import ChatResponse
 from peerpanel.retrieval.base import doc_of
@@ -30,14 +30,29 @@ RESOLUTION = 1.0
 
 
 class _CacheOnly:
-    """Rebuilds must never call a model: every extraction is already recorded."""
+    """Rebuilds must never call a model: every record is already committed.
 
-    name = "ollama-openai:llama3.1:8b"
+    Extractions and community reports are filed under different cache identities
+    (native wire and OpenAI wire respectively), so the stub is told which one it
+    replays — a wrong name misses every record and raises, never silently re-keys.
+    """
+
+    def __init__(self, name: str = EXTRACTION_PROVIDER_NAME) -> None:
+        self.name = name
 
     def chat(self, **_: object) -> ChatResponse:
+        # The remedy names the road for the identity actually being replayed: sending a
+        # reader to `make graph` because a community report is missing wastes an index
+        # rebuild and does not produce the report.
+        remedy = (
+            "`make graph` / `make demo-index`"
+            if self.name == EXTRACTION_PROVIDER_NAME
+            else "`make summaries` / `make demo-summaries`"
+        )
+        what = "extraction" if self.name == EXTRACTION_PROVIDER_NAME else "community-report"
         raise RuntimeError(
-            "per-run graph rebuild requires a complete extraction cache; a chunk is "
-            "missing — regenerate with `make graph` / `make demo-index`."
+            f"rebuilds replay committed records and never call a model; the {what} cache "
+            f"({self.name}) is missing an entry — regenerate it with {remedy}."
         )
 
 

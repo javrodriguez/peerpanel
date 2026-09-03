@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC6912988:3:e9e90bcb",
+ "entities": [
+  {
+   "name": "StringTie2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Scallop",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FLAIR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Traphlor",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PacBio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ONT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Drosophila melanogaster",
+   "type": "organism"
+  },
+  {
+   "name": "Homo sapiens",
+   "type": "organism"
+  },
+  {
+   "name": "Arabidopsis thaliana",
+   "type": "organism"
+  },
+  {
+   "name": "Zea mays",
+   "type": "organism"
+  },
+  {
+   "name": "Shao",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "StringTie2",
+   "predicate": "more accurate than",
+   "target": "Scallop"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "more time and memory efficient than",
+   "target": "Scallop"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "obtained better sensitivity and precision than",
+   "target": "Scallop"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "obtained a relative increase in sensitivity and precision over",
+   "target": "Scallop"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "obtained a 24% relative increase in sensitivity",
+   "target": "Scallop"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "obtained a higher intron-level precision",
+   "target": "Scallop"
+  },
+  {
+   "source": "StringTie2",
+   "predicate": "used 17 times less memory than",
+   "target": "Scallop"
+  }
+ ],
+ "truncated": false
+}

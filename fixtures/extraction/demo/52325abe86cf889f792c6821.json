@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC7334043:11:4ef188de",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Agrobacterium",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Verticillium dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "Pucciniomycotina",
+   "type": "organism"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoid",
+   "type": "chemical"
+  },
+  {
+   "name": "astaxanthin",
+   "type": "chemical"
+  },
+  {
+   "name": "indigoidine",
+   "type": "chemical"
+  },
+  {
+   "name": "non-ribosomal peptide",
+   "type": "chemical"
+  },
+  {
+   "name": "oleic acid",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produce",
+   "target": "lipid"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produce",
+   "target": "carotenoid"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produce",
+   "target": "astaxanthin"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produce",
+   "target": "indigoidine"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produce",
+   "target": "non-ribosomal peptide"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "accumulate",
+   "target": "lipid"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "accumulate",
+   "target": "carotenoid"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "accumulate",
+   "target": "astaxanthin"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "accumulate",
+   "target": "indigoidine"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "accumulate",
+   "target": "non-ribosomal peptide"
+  },
+  {
+   "source": "Agrobacterium",
+   "predicate": "transform",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Agrobacterium",
+   "predicate": "transform",
+   "target": "Saccharomyces cerevisiae"
+  }
+ ],
+ "truncated": false
+}

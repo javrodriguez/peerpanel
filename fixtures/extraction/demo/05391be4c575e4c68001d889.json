@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC9757880:9:d6a50ab3",
+ "entities": [
+  {
+   "name": "Hsu1p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Met17p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "OAHS",
+   "type": "chemical"
+  },
+  {
+   "name": "OAS",
+   "type": "chemical"
+  },
+  {
+   "name": "PLP",
+   "type": "chemical"
+  },
+  {
+   "name": "EDTA",
+   "type": "chemical"
+  },
+  {
+   "name": "E. coli",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hsu1p",
+   "predicate": "fixes",
+   "target": "sulfur"
+  },
+  {
+   "source": "Hsu1p",
+   "predicate": "uses",
+   "target": "hydrogen sulfide"
+  }
+ ],
+ "truncated": false
+}

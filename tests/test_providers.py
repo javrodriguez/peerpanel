@@ -78,6 +78,27 @@ class TestTokenLedger:
         assert ledger.completion_tokens == 7
         assert ledger.total_tokens == 20
 
+    def test_recording_holds_the_lock(self) -> None:
+        """Reviewers and the verifier record from worker threads, so `record`
+        must run under the ledger's lock. Hammering the counter from threads
+        cannot prove this on a GIL build (measured: 0 lost increments in 20
+        trials of 8x20k unguarded `+=`), so the mechanism is asserted directly:
+        every record acquires the lock, and the counters move inside it."""
+        ledger = TokenLedger()
+        events: list[str] = []
+
+        class _Recording:
+            def __enter__(self) -> None:
+                events.append("acquire")
+
+            def __exit__(self, *_exc: object) -> None:
+                events.append(f"release calls={ledger.calls}")
+
+        ledger._lock = _Recording()  # type: ignore[assignment]
+        ledger.record(ChatResponse(text="a", model="m", prompt_tokens=1, completion_tokens=1))
+        ledger.record(ChatResponse(text="b", model="m", prompt_tokens=1, completion_tokens=1))
+        assert events == ["acquire", "release calls=1", "acquire", "release calls=2"]
+
 
 class TestProtocolConformance:
     """Every adapter satisfies its seam Protocol (construction needs no server)."""

@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13470552:12:76e0de21",
+ "entities": [
+  {
+   "name": "Yca1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Aif1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mmi1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsp104",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pab1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "localization",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "proteins",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast cell death",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "stress granules",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "nucleus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Yca1",
+   "predicate": "involved_in",
+   "target": "stress"
+  },
+  {
+   "source": "Aif1",
+   "predicate": "involved_in",
+   "target": "stress"
+  },
+  {
+   "source": "Mmi1",
+   "predicate": "involved_in",
+   "target": "stress"
+  },
+  {
+   "source": "Pab1",
+   "predicate": "involved_in",
+   "target": "stress granules"
+  },
+  {
+   "source": "Yca1",
+   "predicate": "localizes_to",
+   "target": "mitochondria"
+  },
+  {
+   "source": "Aif1",
+   "predicate": "localizes_to",
+   "target": "nucleus"
+  },
+  {
+   "source": "Mmi1",
+   "predicate": "localizes_to",
+   "target": "mitochondria"
+  },
+  {
+   "source": "Hsp104",
+   "predicate": "localizes_to",
+   "target": "mitochondria"
+  },
+  {
+   "source": "Pab1",
+   "predicate": "localizes_to",
+   "target": "stress granules"
+  }
+ ],
+ "truncated": false
+}

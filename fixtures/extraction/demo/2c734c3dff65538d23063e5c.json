@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515280:11:76489aab",
+ "entities": [
+  {
+   "name": "Bennett R. Pfuderer S.",
+   "type": "organism"
+  },
+  {
+   "name": "donkey",
+   "type": "organism"
+  },
+  {
+   "name": "hides",
+   "type": "organism"
+  },
+  {
+   "name": "Liu Z. Gao Q. Wang T. Chai W. Zhan Y. Akhtar F. Zhang Z. Li Y. Shi X. Wang C.",
+   "type": "organism"
+  },
+  {
+   "name": "NR6A1 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Dezhou donkey",
+   "type": "organism"
+  },
+  {
+   "name": "Multi-thoracolumbar variations",
+   "type": "organism"
+  },
+  {
+   "name": "saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "brewer's yeast",
+   "type": "organism"
+  },
+  {
+   "name": "bioactive peptides",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast hydrolysate",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

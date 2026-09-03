@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC10440040:22:004b6326",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "CRISPR/Cas9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "electroporation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolic model",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "genome editing",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "basidiomycetous yeast",
+   "type": "organism"
+  },
+  {
+   "name": "oleaginous yeast",
+   "type": "organism"
+  },
+  {
+   "name": "FEMS Yeast Res",
+   "type": "organism"
+  },
+  {
+   "name": "Biotechnol Bioeng",
+   "type": "organism"
+  },
+  {
+   "name": "mSphere",
+   "type": "organism"
+  },
+  {
+   "name": "Metabolic Eng Commun",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has_process",
+   "target": "lipid production"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has_process",
+   "target": "metabolic model"
+  },
+  {
+   "source": "CRISPR/Cas9",
+   "predicate": "is_used_for",
+   "target": "genome editing"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "is_type_of",
+   "target": "basidiomycetous yeast"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "is_type_of",
+   "target": "oleaginous yeast"
+  },
+  {
+   "source": "FEMS Yeast Res",
+   "predicate": "is_publication",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Biotechnol Bioeng",
+   "predicate": "is_publication",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "mSphere",
+   "predicate": "is_publication",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Metabolic Eng Commun",
+   "predicate": "is_publication",
+   "target": "Rhodosporidium toruloides"
+  }
+ ],
+ "truncated": false
+}

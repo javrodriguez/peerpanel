@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC9825584:5:dbd9ccd7",
+ "entities": [
+  {
+   "name": "University of Geneva",
+   "type": "organism"
+  },
+  {
+   "name": "Swiss National Science Foundation",
+   "type": "organism"
+  },
+  {
+   "name": "E.Z.",
+   "type": "organism"
+  },
+  {
+   "name": "Swiss Institute of Bioinformatics",
+   "type": "organism"
+  },
+  {
+   "name": "SERI",
+   "type": "organism"
+  },
+  {
+   "name": "SwissOrthology",
+   "type": "organism"
+  },
+  {
+   "name": "E.K.",
+   "type": "organism"
+  },
+  {
+   "name": "Gabaldón T.",
+   "type": "organism"
+  },
+  {
+   "name": "Koonin E.V.",
+   "type": "organism"
+  },
+  {
+   "name": "Huerta-Cepas J.",
+   "type": "organism"
+  },
+  {
+   "name": "SzklarczykD.",
+   "type": "organism"
+  },
+  {
+   "name": "HellerD.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "University of Geneva",
+   "predicate": "funded by",
+   "target": "Swiss National Science Foundation"
+  },
+  {
+   "source": "University of Geneva",
+   "predicate": "funded by",
+   "target": "Swiss Institute of Bioinformatics"
+  },
+  {
+   "source": "E.Z.",
+   "predicate": "author of",
+   "target": "Gabaldón T."
+  },
+  {
+   "source": "E.Z.",
+   "predicate": "author of",
+   "target": "Koonin E.V."
+  },
+  {
+   "source": "E.Z.",
+   "predicate": "author of",
+   "target": "Huerta-Cepas J."
+  },
+  {
+   "source": "E.Z.",
+   "predicate": "author of",
+   "target": "SzklarczykD."
+  },
+  {
+   "source": "E.Z.",
+   "predicate": "author of",
+   "target": "HellerD."
+  },
+  {
+   "source": "Swiss Institute of Bioinformatics",
+   "predicate": "funded",
+   "target": "University of Geneva"
+  },
+  {
+   "source": "Swiss Institute of Bioinformatics",
+   "predicate": "funded",
+   "target": "E.Z."
+  },
+  {
+   "source": "Swiss Institute of Bioinformatics",
+   "predicate": "funded",
+   "target": "E.K."
+  },
+  {
+   "source": "Swiss Institute of Bioinformatics",
+   "predicate": "funded",
+   "target": "SERI"
+  },
+  {
+   "source": "Swiss Institute of Bioinformatics",
+   "predicate": "funded",
+   "target": "SwissOrthology"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,22 @@
+{
+ "community_id": 48,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "ABF2",
+  "abscisic acid sensitivity",
+  "abscisic acid-responsive gene expression",
+  "bZIP protein",
+  "DREB2C",
+  "Hwang",
+  "Jeong",
+  "Lee",
+  "overexpression",
+  "Plant Physiology",
+  "Seok",
+  "Tarte"
+ ],
+ "title": "Regulation of Abscisic Acid-Responsive Gene Expression in Plants",
+ "summary": "This cluster focuses on the regulation of abscisic acid-responsive gene expression in plants. ABF2 regulates this process, while DREB2C affects abscisic acid sensitivity and interacts with ABF2. The relationships between these entities suggest a complex regulatory network involving ABF2 and DREB2C in plant responses to abscisic acid.",
+ "truncated": false
+}

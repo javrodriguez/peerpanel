@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC5826700:11:0709d759",
+ "entities": [
+  {
+   "name": "pH homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pma1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lysosomal storage diseases",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "neurodegenerative disorders",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lysosomal storage disease model",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lysosomal acidification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "vacuolar acidity",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "endocytosis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "vesicular trafficking",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cellular damage control",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "replicative ageing",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "V-ATPase",
+   "predicate": "regulates",
+   "target": "lysosomal acidification"
+  },
+  {
+   "source": "Pma1",
+   "predicate": "regulates",
+   "target": "lysosomal acidification"
+  },
+  {
+   "source": "lysosomal storage diseases",
+   "predicate": "is_associated_with",
+   "target": "neurodegenerative disorders"
+  },
+  {
+   "source": "lysosomal storage disease model",
+   "predicate": "is_model_of",
+   "target": "lysosomal acidification"
+  },
+  {
+   "source": "vacuolar acidity",
+   "predicate": "is_important_for",
+   "target": "endocytosis"
+  },
+  {
+   "source": "vacuolar acidity",
+   "predicate": "is_important_for",
+   "target": "vesicular trafficking"
+  },
+  {
+   "source": "cellular damage control",
+   "predicate": "is_important_for",
+   "target": "replicative ageing"
+  }
+ ],
+ "truncated": false
+}

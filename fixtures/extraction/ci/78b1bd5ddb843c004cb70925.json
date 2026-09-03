@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12994171:14:82a6d77a",
+ "entities": [
+  {
+   "name": "Y. Y. Jiang",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "E. U. Hammarlund",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "M. Becerra",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "T. A. Trendeleva",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "A. Zubrycka",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L. Dalle Carbonare",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "F. Licausi",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Y. Yao",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "D. J. Gibbs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "K. T. Nguyen",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "M. D. White",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "D. M. Gunawardana",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

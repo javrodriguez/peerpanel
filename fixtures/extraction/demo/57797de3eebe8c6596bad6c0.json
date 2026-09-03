@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13419736:16:7c7bdd4b",
+ "entities": [
+  {
+   "name": "Aranda-Diaz A.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mace K.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zuleta I.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Harrigan P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "El-Samad H.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Robust Synthetic Circuits",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Two-Dimensional Control",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gene Expression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "ACS Synth Biol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ruskowitz E.R.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeForest C.A.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Aranda-Diaz A.",
+   "predicate": "developed",
+   "target": "Robust Synthetic Circuits"
+  },
+  {
+   "source": "Aranda-Diaz A.",
+   "predicate": "used",
+   "target": "Yeast"
+  }
+ ],
+ "truncated": false
+}

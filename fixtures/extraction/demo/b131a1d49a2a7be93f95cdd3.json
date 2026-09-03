@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC11974387:13:305b99ba",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "lactic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "pyruvate decarboxylase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NADH",
+   "type": "chemical"
+  },
+  {
+   "name": "NADPH",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "oxygen",
+   "type": "chemical"
+  },
+  {
+   "name": "wine yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia pastoris",
+   "type": "organism"
+  },
+  {
+   "name": "Komagataella pastoris",
+   "type": "organism"
+  },
+  {
+   "name": "GSF2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC2",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "GSF2"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "PDC2"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "produces",
+   "target": "lactic acid"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "uses",
+   "target": "glucose"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "uses",
+   "target": "oxygen"
+  },
+  {
+   "source": "Pichia pastoris",
+   "predicate": "has_gene",
+   "target": "pyruvate decarboxylase"
+  },
+  {
+   "source": "Komagataella pastoris",
+   "predicate": "has_gene",
+   "target": "pyruvate decarboxylase"
+  },
+  {
+   "source": "NADH",
+   "predicate": "is_cofactor_of",
+   "target": "pyruvate decarboxylase"
+  },
+  {
+   "source": "NADPH",
+   "predicate": "is_cofactor_of",
+   "target": "pyruvate decarboxylase"
+  },
+  {
+   "source": "wine yeast",
+   "predicate": "has_gene",
+   "target": "PDC2"
+  }
+ ],
+ "truncated": false
+}

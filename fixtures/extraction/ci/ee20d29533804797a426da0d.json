@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13228058:4:61300ca0",
+ "entities": [
+  {
+   "name": "VdMFS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "V. dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "Xinluzao 7",
+   "type": "organism"
+  },
+  {
+   "name": "Cotton",
+   "type": "organism"
+  },
+  {
+   "name": "Czapek medium",
+   "type": "chemical"
+  },
+  {
+   "name": "Coomassie brilliant blue protein assay kit",
+   "type": "chemical"
+  },
+  {
+   "name": "DAB dye solution",
+   "type": "chemical"
+  },
+  {
+   "name": "Xylenol orange method",
+   "type": "chemical"
+  },
+  {
+   "name": "TMT labeling",
+   "type": "chemical"
+  },
+  {
+   "name": "Biomarker Technologies Co.",
+   "type": "organism"
+  },
+  {
+   "name": "Ross",
+   "type": "organism"
+  },
+  {
+   "name": "GO",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "V. dahliae",
+   "predicate": "has_gene",
+   "target": "VdMFS2"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC7191244:6:3c8b80a1",
+ "entities": [
+  {
+   "name": "EPSs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "MCF-7 cell line",
+   "type": "organism"
+  },
+  {
+   "name": "MDCK cell line",
+   "type": "organism"
+  },
+  {
+   "name": "Halomonas stenophila",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula mucilaginosa CICC 33013",
+   "type": "organism"
+  },
+  {
+   "name": "HepG2 cell line",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "human breast adenocarcinoma",
+   "type": "organism"
+  },
+  {
+   "name": "Madin-Darby Canine Kidney",
+   "type": "organism"
+  },
+  {
+   "name": "sodium alginate",
+   "type": "chemical"
+  },
+  {
+   "name": "guar gum",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "EPSs",
+   "predicate": "has_synergistic_effect",
+   "target": "sodium alginate"
+  },
+  {
+   "source": "EPSs",
+   "predicate": "has_synergistic_effect",
+   "target": "guar gum"
+  },
+  {
+   "source": "EPSs",
+   "predicate": "has_no_antiproliferative_activity",
+   "target": "MCF-7 cell line"
+  },
+  {
+   "source": "EPSs",
+   "predicate": "has_no_antiproliferative_activity",
+   "target": "MDCK cell line"
+  },
+  {
+   "source": "EPSs",
+   "predicate": "has_biocompatibility",
+   "target": "MDCK cell line"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC7470746:17:70397521",
+ "entities": [
+  {
+   "name": "Autophagy assay",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GFP-Atg8 cleavage assay",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "ura3 deletion",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lys−",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lys−met17−",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GFP-Atg8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATG8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "N-terminal GFP tag",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pRS416 vector",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "URA3 selection marker",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WY2520",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Autophagy assay",
+   "predicate": "involved",
+   "target": "GFP-Atg8 cleavage assay"
+  },
+  {
+   "source": "Autophagy assay",
+   "predicate": "measured",
+   "target": "GFP-Atg8 cleavage assay"
+  },
+  {
+   "source": "Yeast",
+   "predicate": "has_deletion",
+   "target": "ura3 deletion"
+  },
+  {
+   "source": "Yeast",
+   "predicate": "has_deletion",
+   "target": "lys−"
+  },
+  {
+   "source": "Yeast",
+   "predicate": "has_deletion",
+   "target": "lys−met17−"
+  },
+  {
+   "source": "GFP-Atg8",
+   "predicate": "expressed_by",
+   "target": "pRS416 vector"
+  },
+  {
+   "source": "GFP-Atg8",
+   "predicate": "tagged_with",
+   "target": "N-terminal GFP tag"
+  },
+  {
+   "source": "WY2520",
+   "predicate": "has_genetic_background",
+   "target": "lys−"
+  }
+ ],
+ "truncated": false
+}

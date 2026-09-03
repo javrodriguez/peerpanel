@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13304748:8:b879ac94",
+ "entities": [
+  {
+   "name": "pos5Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZnS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "TOM7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TIM9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CMC2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "COX7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MCO10",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cup1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cup2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CTR1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pos5Δ",
+   "predicate": "exposed_to",
+   "target": "ZnS QDs"
+  },
+  {
+   "source": "pos5Δ",
+   "predicate": "exposed_to",
+   "target": "ZnSO4"
+  }
+ ],
+ "truncated": false
+}

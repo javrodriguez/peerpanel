@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13467452:22:e9e0d89c",
+ "entities": [
+  {
+   "name": "Pacifici F.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Di Cola D.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pastore D.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Abete P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Guadagni F.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Donadel G.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bellia A.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Esposito E.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Salimei C.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sinibaldi Salimei P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sirtuin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Activation",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

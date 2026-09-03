@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC3923900:2:9799444c",
+ "entities": [
+  {
+   "name": "FTIR spectra",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "biological systems",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Nile red",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "fatty acid",
+   "type": "chemical"
+  },
+  {
+   "name": "oleaginous yeasts",
+   "type": "organism"
+  },
+  {
+   "name": "basidiomycetes",
+   "type": "organism"
+  },
+  {
+   "name": "multivariate analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gas chromatography",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FTIR spectra",
+   "predicate": "is_composed_of",
+   "target": "biological systems"
+  },
+  {
+   "source": "Cryptococcus curvatus",
+   "predicate": "is",
+   "target": "oleaginous yeasts"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "is",
+   "target": "oleaginous yeasts"
+  },
+  {
+   "source": "Cryptococcus curvatus",
+   "predicate": "accumulates",
+   "target": "lipid"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "accumulates",
+   "target": "lipid"
+  },
+  {
+   "source": "S. cerevisiae",
+   "predicate": "accumulates",
+   "target": "lipid"
+  }
+ ],
+ "truncated": false
+}

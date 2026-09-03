@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13450799:15:a59affd7",
+ "entities": [
+  {
+   "name": "PLOS ONE",
+   "type": "organism"
+  },
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PUR5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UTR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "JSPS KAKENHI",
+   "type": "organism"
+  },
+  {
+   "name": "Arthur J. Lustig",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  },
+  {
+   "name": "Protocols.io",
+   "type": "organism"
+  },
+  {
+   "name": "Molecular Cell Biology Laboratory",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS One",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS ONE",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "PLOS ONE",
+   "predicate": "requests_additional_data",
+   "target": "YGP1"
+  },
+  {
+   "source": "PLOS ONE",
+   "predicate": "requests_additional_data",
+   "target": "PUR5"
+  },
+  {
+   "source": "PLOS ONE",
+   "predicate": "requests_additional_data",
+   "target": "UTR"
+  },
+  {
+   "source": "PLOS ONE",
+   "predicate": "requests_additional_data",
+   "target": "JSPS KAKENHI"
+  },
+  {
+   "source": "PLOS ONE",
+   "predicate": "requests_additional_data",
+   "target": "Arthur J. Lustig"
+  },
+  {
+   "source": "PLOS ONE",
+   "predicate": "requests_additional_data",
+   "target": "PLOS"
+  },
+  {
+   "source": "PLOS ONE",
+   "predicate": "requests_additional_data",
+   "target": "Protocols.io"
+  }
+ ],
+ "truncated": false
+}

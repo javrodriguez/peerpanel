@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13406880:9:6c2fc6ef",
+ "entities": [
+  {
+   "name": "SAM homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "S-adenosylmethionine synthetases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "SAM1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S-adenosylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "phospholipid",
+   "type": "chemical"
+  },
+  {
+   "name": "histone methylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "methionine metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "one-carbon units",
+   "type": "chemical"
+  },
+  {
+   "name": "cancer",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cellular starvation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "stress granules",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SAM homeostasis",
+   "predicate": "regulated_by",
+   "target": "S-adenosylmethionine synthetases"
+  },
+  {
+   "source": "S-adenosylmethionine synthetases",
+   "predicate": "involved_in",
+   "target": "methionine metabolism"
+  },
+  {
+   "source": "methionine metabolism",
+   "predicate": "affected_by",
+   "target": "cancer"
+  },
+  {
+   "source": "cellular starvation",
+   "predicate": "leads_to",
+   "target": "stress granules"
+  },
+  {
+   "source": "S-adenosylmethionine synthetases",
+   "predicate": "encoded_by",
+   "target": "SAM1"
+  },
+  {
+   "source": "phospholipid",
+   "predicate": "involved_in",
+   "target": "histone methylation"
+  },
+  {
+   "source": "one-carbon units",
+   "predicate": "involved_in",
+   "target": "methionine metabolism"
+  },
+  {
+   "source": "cancer",
+   "predicate": "affected_by",
+   "target": "methionine metabolism"
+  },
+  {
+   "source": "stress granules",
+   "predicate": "involved_in",
+   "target": "cellular starvation"
+  }
+ ],
+ "truncated": false
+}

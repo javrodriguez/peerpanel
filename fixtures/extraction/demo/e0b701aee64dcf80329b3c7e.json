@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC3923900:10:3e13df8b",
+ "entities": [
+  {
+   "name": "Regione Lombardia ASTIL- Cooperazione scientifica e tecnologica internazionale",
+   "type": "organism"
+  },
+  {
+   "name": "Project “ Diesel - Biotech",
+   "type": "organism"
+  },
+  {
+   "name": "Regione Lombardia",
+   "type": "organism"
+  },
+  {
+   "name": "Fondo per la Promozione di Accordi Istituzionali",
+   "type": "organism"
+  },
+  {
+   "name": "Project BIOGESTECA",
+   "type": "organism"
+  },
+  {
+   "name": "RCC",
+   "type": "organism"
+  },
+  {
+   "name": "SMD",
+   "type": "organism"
+  },
+  {
+   "name": "FAR",
+   "type": "organism"
+  },
+  {
+   "name": "University of Milano-Bicocca",
+   "type": "organism"
+  },
+  {
+   "name": "Andrea Giuzzi",
+   "type": "organism"
+  },
+  {
+   "name": "Single cell oil",
+   "type": "chemical"
+  },
+  {
+   "name": "oleaginous fungi",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Regione Lombardia ASTIL- Cooperazione scientifica e tecnologica internazionale",
+   "predicate": "supported",
+   "target": "Project “ Diesel - Biotech"
+  },
+  {
+   "source": "Regione Lombardia",
+   "predicate": "supported",
+   "target": "Project BIOGESTECA"
+  },
+  {
+   "source": "SMD",
+   "predicate": "acknowledge",
+   "target": "FAR"
+  },
+  {
+   "source": "oleaginous fungi",
+   "predicate": "produce",
+   "target": "Single cell oil"
+  }
+ ],
+ "truncated": false
+}

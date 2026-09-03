@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC12278674:29:2b46f26a",
+ "entities": [
+  {
+   "name": "Anshu A Mannan MA Chakraborty A Chakrabarti S Dey M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kin2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HAC1 mRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Xbp1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CLB gene",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bxi1p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hog1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "calmodulin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Snf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AMPK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sdp1",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Anshu A Mannan MA Chakraborty A Chakrabarti S Dey M",
+   "predicate": "regulates",
+   "target": "HAC1 mRNA"
+  },
+  {
+   "source": "Xbp1",
+   "predicate": "represses",
+   "target": "CLB gene"
+  },
+  {
+   "source": "calmodulin",
+   "predicate": "regulates",
+   "target": "Hog1"
+  },
+  {
+   "source": "Snf1",
+   "predicate": "regulates",
+   "target": "Hog1"
+  },
+  {
+   "source": "AMPK",
+   "predicate": "regulates",
+   "target": "Hog1"
+  }
+ ],
+ "truncated": false
+}

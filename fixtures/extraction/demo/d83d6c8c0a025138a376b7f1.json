@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13471478:24:38d9e7cb",
+ "entities": [
+  {
+   "name": "Xu J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Barone S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Varasteh Kia M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Holliday LS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zahedi K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Soleimani M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Royaux IE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Belyantseva IA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wu T",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kachar B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Everett LA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Marcus DC",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

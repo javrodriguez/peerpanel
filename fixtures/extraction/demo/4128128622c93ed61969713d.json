@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC11974387:16:141f43ad",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Mitochondrial ATP generation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Glycolysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Pyruvate decarboxylase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Threonine aldolase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Lactate dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Carnitine-dependent transport",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Acetyl-CoA",
+   "type": "chemical"
+  },
+  {
+   "name": "PDC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ADH1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATP citrate lyase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Citrate synthase",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_process",
+   "target": "Mitochondrial ATP generation"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_process",
+   "target": "Glycolysis"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Pyruvate decarboxylase"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Threonine aldolase"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Lactate dehydrogenase"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_process",
+   "target": "Carnitine-dependent transport"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_chemical",
+   "target": "Acetyl-CoA"
+  },
+  {
+   "source": "PDC1",
+   "predicate": "is_involved_in",
+   "target": "Mitochondrial ATP generation"
+  },
+  {
+   "source": "ADH1",
+   "predicate": "is_involved_in",
+   "target": "Mitochondrial ATP generation"
+  },
+  {
+   "source": "ATP citrate lyase",
+   "predicate": "is_involved_in",
+   "target": "Citrate synthase"
+  }
+ ],
+ "truncated": false
+}

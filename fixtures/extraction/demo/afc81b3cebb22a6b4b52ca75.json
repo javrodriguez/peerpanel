@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13450573:23:dd8832ce",
+ "entities": [
+  {
+   "name": "Sieber S.A.",
+   "type": "organism"
+  },
+  {
+   "name": "Haslbeck M.",
+   "type": "organism"
+  },
+  {
+   "name": "Zimmer R.",
+   "type": "organism"
+  },
+  {
+   "name": "Buchner J.",
+   "type": "organism"
+  },
+  {
+   "name": "heat shock response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "protein homeostasis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "proteins",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FMP21",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "thermotolerance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Saccharomyces",
+   "type": "organism"
+  },
+  {
+   "name": "AMB Express",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sieber S.A.",
+   "predicate": "involved_in",
+   "target": "heat shock response"
+  },
+  {
+   "source": "Sieber S.A.",
+   "predicate": "maintains",
+   "target": "protein homeostasis"
+  }
+ ],
+ "truncated": false
+}

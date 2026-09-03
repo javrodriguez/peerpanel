@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC7382830:15:5b98c8ce",
+ "entities": [
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "GcvA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvR",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GcvB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "adenylate cyclase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glycerol kinase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "glycerol-3-phosphate",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon catabolite repression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bacterial evolution",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "laboratory timescale",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nat Genet",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Curr Opin Microbiol",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "GcvA"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "GcvR"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "GcvB"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "adenylate cyclase"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "has_gene",
+   "target": "glycerol kinase"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "regulates",
+   "target": "glycerol-3-phosphate"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "experiences",
+   "target": "carbon catabolite repression"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "undergoes",
+   "target": "bacterial evolution"
+  },
+  {
+   "source": "Escherichia coli",
+   "predicate": "is_studied_in",
+   "target": "laboratory timescale"
+  },
+  {
+   "source": "Nat Genet",
+   "predicate": "is_published_in",
+   "target": "Escherichia coli"
+  },
+  {
+   "source": "Curr Opin Microbiol",
+   "predicate": "is_published_in",
+   "target": "Escherichia coli"
+  }
+ ],
+ "truncated": false
+}

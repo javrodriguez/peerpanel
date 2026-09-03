@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC6402699:15:d82565e3",
+ "entities": [
+  {
+   "name": "L-A+",
+   "type": "chemical"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "A-L+",
+   "type": "chemical"
+  },
+  {
+   "name": "WY2447",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "aneuploidy",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mutant A-L+",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ancestor",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "evolved clones",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "SD",
+   "type": "chemical"
+  },
+  {
+   "name": "adenine",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L-A+",
+   "predicate": "has affinity for",
+   "target": "lysine"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "has affinity for",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has fitness trade-off with",
+   "target": "lysine"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "has fitness trade-off with",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "WY2447",
+   "predicate": "has aneuploidy",
+   "target": "A-L+"
+  },
+  {
+   "source": "ancestor",
+   "predicate": "has distinct phenotype",
+   "target": "evolved clones"
+  },
+  {
+   "source": "evolved clones",
+   "predicate": "has increased lysine affinity",
+   "target": "lysine"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "has high abundance",
+   "target": "mutant A-L+"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has similar release rates",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "has similar release rates",
+   "target": "adenine"
+  }
+ ],
+ "truncated": false
+}

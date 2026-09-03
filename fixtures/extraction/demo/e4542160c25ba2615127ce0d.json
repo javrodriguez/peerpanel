@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13471478:16:04514549",
+ "entities": [
+  {
+   "name": "Slc26a4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zbtb16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cul3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Roc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "mouse whole kidney",
+   "type": "organism"
+  },
+  {
+   "name": "human tissues",
+   "type": "organism"
+  },
+  {
+   "name": "thyroid",
+   "type": "organism"
+  },
+  {
+   "name": "kidney",
+   "type": "organism"
+  },
+  {
+   "name": "ZBTB16-CUL3-ROC1 E3 ubiquitin ligase complex",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ubiquitination",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "FRET",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "immunoprecipitation",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Slc26a4",
+   "predicate": "expressed_in",
+   "target": "mouse whole kidney"
+  },
+  {
+   "source": "Zbtb16",
+   "predicate": "co-localized_with",
+   "target": "Slc26a4"
+  },
+  {
+   "source": "Slc26a4",
+   "predicate": "co-immunoprecipitated_with",
+   "target": "Zbtb16"
+  },
+  {
+   "source": "Zbtb16",
+   "predicate": "interacted_with",
+   "target": "Slc26a4"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "co-immunoprecipitated_with",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "interacted_with",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "bound_to",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "recruited",
+   "target": "SLC26A4"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "interacted_with",
+   "target": "CUL3"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "interacted_with",
+   "target": "ROC1"
+  },
+  {
+   "source": "ZBTB16-CUL3-ROC1 E3 ubiquitin ligase complex",
+   "predicate": "degraded",
+   "target": "SLC26A4"
+  }
+ ],
+ "truncated": false
+}

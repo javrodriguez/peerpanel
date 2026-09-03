@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13274398:16:2ecea547",
+ "entities": [
+  {
+   "name": "Klopfenstein DV",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhang L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pedersen BS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ramírez F",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Warwick Vesztrocy A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Naldi A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mungall CJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yunes JM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Botvinnik O",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Weigel M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dampier W",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dessimoz C",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

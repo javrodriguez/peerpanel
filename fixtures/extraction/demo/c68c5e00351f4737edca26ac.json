@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13524880:22:fc4d883c",
+ "entities": [
+  {
+   "name": "Trypanosoma cruzi",
+   "type": "organism"
+  },
+  {
+   "name": "Trypanosoma brucei",
+   "type": "organism"
+  },
+  {
+   "name": "Glossina morsitans",
+   "type": "organism"
+  },
+  {
+   "name": "Leishmania",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "African trypanosomes",
+   "type": "organism"
+  },
+  {
+   "name": "tsetse fly",
+   "type": "organism"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "trypanothione",
+   "type": "chemical"
+  },
+  {
+   "name": "glutathione reductase",
+   "type": "chemical"
+  },
+  {
+   "name": "polyamines",
+   "type": "chemical"
+  },
+  {
+   "name": "amino acids",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

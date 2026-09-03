@@ -1,0 +1,22 @@
+{
+ "community_id": 50,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Braisted J",
+  "Day NJ",
+  "ggplot2",
+  "Neyra J",
+  "Patt A",
+  "pheatmap",
+  "Raivo Kolde",
+  "RaMP-DB",
+  "Sheils T",
+  "Spencer K",
+  "Tindall C",
+  "Wickham H"
+ ],
+ "title": "Development and Application of Data Visualization and Analysis Tools",
+ "summary": "This cluster consists of various data visualization and analysis tools, along with their developers. RaMP-DB, developed by Braisted J, was applied by Day NJ. pheatmap, developed by Raivo Kolde, and ggplot2, developed by Wickham H, are also part of this cluster. These tools are likely used for data analysis and visualization in various fields.",
+ "truncated": false
+}

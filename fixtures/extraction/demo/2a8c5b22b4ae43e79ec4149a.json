@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13510017:15:7a9bdeba",
+ "entities": [
+  {
+   "name": "BRR1",
+   "type": "organism"
+  },
+  {
+   "name": "BRR2",
+   "type": "organism"
+  },
+  {
+   "name": "BRR3",
+   "type": "organism"
+  },
+  {
+   "name": "WRS1",
+   "type": "organism"
+  },
+  {
+   "name": "WRS2",
+   "type": "organism"
+  },
+  {
+   "name": "NanoDrop",
+   "type": "chemical"
+  },
+  {
+   "name": "A260/A280",
+   "type": "chemical"
+  },
+  {
+   "name": "A260/A230",
+   "type": "chemical"
+  },
+  {
+   "name": "RNA",
+   "type": "chemical"
+  },
+  {
+   "name": "DNA",
+   "type": "chemical"
+  },
+  {
+   "name": "8-oxoguanine",
+   "type": "chemical"
+  },
+  {
+   "name": "Xrn-1",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "NanoDrop",
+   "predicate": "assesses_spectrophotometric_purity",
+   "target": "A260/A280"
+  },
+  {
+   "source": "NanoDrop",
+   "predicate": "assesses_spectrophotometric_purity",
+   "target": "A260/A230"
+  }
+ ],
+ "truncated": false
+}

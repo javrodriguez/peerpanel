@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13450799:0:9672a1ce",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Puf5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Haa1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Acetic Acid",
+   "type": "chemical"
+  },
+  {
+   "name": "RNA",
+   "type": "chemical"
+  },
+  {
+   "name": "Messenger RNA",
+   "type": "chemical"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  },
+  {
+   "name": "Sato Megumi",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YGP1",
+   "predicate": "is regulated by",
+   "target": "Puf5"
+  },
+  {
+   "source": "Puf5",
+   "predicate": "regulates",
+   "target": "YGP1"
+  }
+ ],
+ "truncated": false
+}

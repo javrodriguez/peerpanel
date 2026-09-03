@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC7382830:6:69d4ae87",
+ "entities": [
+  {
+   "name": "CRP regulon",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CRP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cAMP receptor protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cAMP",
+   "type": "chemical"
+  },
+  {
+   "name": "catabolite gene activator protein",
+   "type": "chemical"
+  },
+  {
+   "name": "glpK",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cyaA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crr",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "E. coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon catabolite repression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mutation",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CRP regulon",
+   "predicate": "regulates",
+   "target": "carbon catabolite repression"
+  }
+ ],
+ "truncated": false
+}

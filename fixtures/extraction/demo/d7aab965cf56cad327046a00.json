@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC6402699:6:663a9c1b",
+ "entities": [
+  {
+   "name": "Lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "Hypoxanthine",
+   "type": "chemical"
+  },
+  {
+   "name": "L-A+",
+   "type": "organism"
+  },
+  {
+   "name": "SD",
+   "type": "chemical"
+  },
+  {
+   "name": "Synthetic Dextrose",
+   "type": "chemical"
+  },
+  {
+   "name": "minimal medium",
+   "type": "chemical"
+  },
+  {
+   "name": "medium",
+   "type": "chemical"
+  },
+  {
+   "name": "chemostat",
+   "type": "chemical"
+  },
+  {
+   "name": "chemostats",
+   "type": "chemical"
+  },
+  {
+   "name": "batch cultures",
+   "type": "chemical"
+  },
+  {
+   "name": "population density",
+   "type": "chemical"
+  },
+  {
+   "name": "lysine concentration",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "L-A+",
+   "predicate": "consumes",
+   "target": "lysine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "releases",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "grows",
+   "target": "chemostat"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "starves",
+   "target": "lysine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "leaks",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "contains",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "produces",
+   "target": "hypoxanthine"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "has",
+   "target": "lysine"
+  }
+ ],
+ "truncated": false
+}

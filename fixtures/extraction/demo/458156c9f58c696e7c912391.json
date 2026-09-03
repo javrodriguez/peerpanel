@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC10729969:24:70087857",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "MET2 gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Sulfur",
+   "type": "chemical"
+  },
+  {
+   "name": "Glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "Cadmium",
+   "type": "chemical"
+  },
+  {
+   "name": "DMS precursor S-methylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "S-Adenosylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "S-Methylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "L-methionine γ-lyase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pseudomonas ovalis",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "MET2 gene"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_metabolism",
+   "target": "DMS precursor S-methylmethionine"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_metabolism",
+   "target": "S-Adenosylmethionine"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_metabolism",
+   "target": "S-Methylmethionine"
+  },
+  {
+   "source": "Pseudomonas ovalis",
+   "predicate": "has_gene",
+   "target": "L-methionine γ-lyase"
+  }
+ ],
+ "truncated": false
+}

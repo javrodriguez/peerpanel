@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13517252:21:40bedf4d",
+ "entities": [
+  {
+   "name": "Teodósio R. Aragão C.",
+   "type": "organism"
+  },
+  {
+   "name": "Colen R.",
+   "type": "organism"
+  },
+  {
+   "name": "Carrilho R.",
+   "type": "organism"
+  },
+  {
+   "name": "Dias J.",
+   "type": "organism"
+  },
+  {
+   "name": "Engrola S.",
+   "type": "organism"
+  },
+  {
+   "name": "Hissen K.L.",
+   "type": "organism"
+  },
+  {
+   "name": "He W.",
+   "type": "organism"
+  },
+  {
+   "name": "Wu G.",
+   "type": "organism"
+  },
+  {
+   "name": "Criscitiello M.F.",
+   "type": "organism"
+  },
+  {
+   "name": "Kasumyan A.O.",
+   "type": "organism"
+  },
+  {
+   "name": "Døving K.B.",
+   "type": "organism"
+  },
+  {
+   "name": "Morais S.",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

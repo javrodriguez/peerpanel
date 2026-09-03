@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13524880:20:00dac804",
+ "entities": [
+  {
+   "name": "Trypanosoma brucei",
+   "type": "organism"
+  },
+  {
+   "name": "Leishmania mexicana",
+   "type": "organism"
+  },
+  {
+   "name": "Glossina morsitans",
+   "type": "organism"
+  },
+  {
+   "name": "African trypanosomiasis",
+   "type": "chemical"
+  },
+  {
+   "name": "Nifurtimox",
+   "type": "chemical"
+  },
+  {
+   "name": "Eflornithine",
+   "type": "chemical"
+  },
+  {
+   "name": "Arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "Lysine",
+   "type": "chemical"
+  },
+  {
+   "name": "Leucine",
+   "type": "chemical"
+  },
+  {
+   "name": "Methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Amino acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Trypanosoma cruzi",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Glossina morsitans",
+   "predicate": "hosts",
+   "target": "Trypanosoma brucei"
+  },
+  {
+   "source": "African trypanosomiasis",
+   "predicate": "causes",
+   "target": "Trypanosoma brucei"
+  },
+  {
+   "source": "Nifurtimox",
+   "predicate": "treats",
+   "target": "African trypanosomiasis"
+  },
+  {
+   "source": "Eflornithine",
+   "predicate": "treats",
+   "target": "African trypanosomiasis"
+  }
+ ],
+ "truncated": false
+}

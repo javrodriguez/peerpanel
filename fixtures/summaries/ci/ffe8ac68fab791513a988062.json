@@ -1,0 +1,22 @@
+{
+ "community_id": 31,
+ "resolution": 3.0,
+ "size": 12,
+ "member_names": [
+  "ABI StepOnePlus system",
+  "Applied Biosystems",
+  "cDNA",
+  "High-Capacity cDNA Reverse Transcription Kit",
+  "Illumina NovaSeq 6000 sequencing system",
+  "NEB",
+  "NEBNext Ultra II RNA Library Prep Kit",
+  "PowerUp SYBR Green Master Mix",
+  "qPCR",
+  "RNA-seq",
+  "RNase H",
+  "total RNA"
+ ],
+ "title": "RNA Sequencing and Analysis Methods and Tools",
+ "summary": "This cluster consists of various methods and tools used in RNA sequencing and analysis. RNA-seq is performed with the Illumina NovaSeq 6000 sequencing system and the NEBNext Ultra II RNA Library Prep Kit. cDNA is generated from total RNA and added to RNase H. It is also used with the High-Capacity cDNA Reverse Transcription Kit. qPCR is carried out with the ABI StepOnePlus system and uses the PowerUp SYBR Green Master Mix. These methods and tools are likely used in molecular biology research to analyze RNA expression levels.",
+ "truncated": false
+}

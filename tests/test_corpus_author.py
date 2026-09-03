@@ -47,12 +47,11 @@ class TestBuildCandidates:
         from peerpanel.corpus import author as author_mod
 
         monkeypatch.setattr(
-            author_mod.eutils, "elink_pmc",
+            author_mod.eutils,
+            "elink_pmc",
             lambda pmcid, link: ["PMC2", "PMC3"] if link == "pmc_pmc_cites" else ["PMC4"],
         )
-        monkeypatch.setattr(
-            author_mod.eutils, "esearch_pmc", lambda term, retmax: ["PMC3", "PMC5"]
-        )
+        monkeypatch.setattr(author_mod.eutils, "esearch_pmc", lambda term, retmax: ["PMC3", "PMC5"])
         cands = build_candidates(["PMC1", "PMC2"], ["PMC1"], "term")
         assert [(c.pmcid, c.forced, c.origin) for c in cands] == [
             ("PMC1", True, "seed"),
@@ -78,9 +77,7 @@ class TestAuthorManifest:
         assert outcomes["PMC3"] is FetchOutcome.FETCHED
         assert "PMC2" not in outcomes
 
-    def test_refused_forced_is_surfaced_never_silent(
-        self, monkeypatch: pytest.MonkeyPatch
-    ) -> None:
+    def test_refused_forced_is_surfaced_never_silent(self, monkeypatch: pytest.MonkeyPatch) -> None:
         _wire_build_doc(monkeypatch, refuse={"PMC9"})
         cands = [Candidate("PMC9", True, "seed"), Candidate("PMC1", False, "topical")]
         manifest, outcomes = author_manifest("demo", cands, target_size=1)
@@ -91,9 +88,7 @@ class TestAuthorManifest:
     def test_excluded_pmcid_never_fetched(self, monkeypatch: pytest.MonkeyPatch) -> None:
         _wire_build_doc(monkeypatch, refuse=set())
         cands = [Candidate("PMC7", True, "seed"), Candidate("PMC1", False, "topical")]
-        manifest, outcomes = author_manifest(
-            "demo", cands, target_size=2, exclude_pmcids={"PMC7"}
-        )
+        manifest, outcomes = author_manifest("demo", cands, target_size=2, exclude_pmcids={"PMC7"})
         assert "PMC7" not in outcomes
         assert all(d.pmcid != "PMC7" for d in manifest.docs)
 

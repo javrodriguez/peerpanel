@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC12278674:19:db6fe0a1",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Pseudozyma parantarctica CHC28",
+   "type": "organism"
+  },
+  {
+   "name": "oleaginous yeasts",
+   "type": "organism"
+  },
+  {
+   "name": "lipid accumulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolic engineering",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "triacetic acid lactone",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "bio-polyurethane foam",
+   "type": "chemical"
+  },
+  {
+   "name": "polyol",
+   "type": "chemical"
+  },
+  {
+   "name": "polyurethane foams",
+   "type": "chemical"
+  },
+  {
+   "name": "crude glycerol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has_process",
+   "target": "lipid accumulation"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "has_process",
+   "target": "lipid accumulation"
+  },
+  {
+   "source": "oleaginous yeasts",
+   "predicate": "has_process",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "oleaginous yeasts",
+   "predicate": "has_process",
+   "target": "lipid accumulation"
+  },
+  {
+   "source": "oleaginous yeasts",
+   "predicate": "has_process",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "triacetic acid lactone",
+   "predicate": "is_product_of",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "lipids",
+   "predicate": "is_product_of",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "bio-polyurethane foam",
+   "predicate": "is_product_of",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "polyol",
+   "predicate": "is_product_of",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "polyurethane foams",
+   "predicate": "is_product_of",
+   "target": "metabolic engineering"
+  },
+  {
+   "source": "crude glycerol",
+   "predicate": "is_input",
+   "target": "metabolic engineering"
+  }
+ ],
+ "truncated": false
+}

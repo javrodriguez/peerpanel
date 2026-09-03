@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC12278674:20:94a24c5f",
+ "entities": [
+  {
+   "name": "Wu S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhao X",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shen H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wang Q",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhao ZK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "sulfate-limited conditions",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Bioresour Technol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Glutathione",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fungi",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Protein Oxidation",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wu S",
+   "predicate": "produces",
+   "target": "Rhodosporidium toruloides"
+  },
+  {
+   "source": "Wu S",
+   "predicate": "produces",
+   "target": "sulfate-limited conditions"
+  },
+  {
+   "source": "Wu S",
+   "predicate": "produces",
+   "target": "Bioresour Technol"
+  },
+  {
+   "source": "Wu S",
+   "predicate": "produces",
+   "target": "Glutathione"
+  },
+  {
+   "source": "Wu S",
+   "predicate": "produces",
+   "target": "Fungi"
+  },
+  {
+   "source": "Wu S",
+   "predicate": "produces",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Wu S",
+   "predicate": "produces",
+   "target": "Protein Oxidation"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "is produced by",
+   "target": "Wu S"
+  },
+  {
+   "source": "sulfate-limited conditions",
+   "predicate": "is produced by",
+   "target": "Wu S"
+  },
+  {
+   "source": "Bioresour Technol",
+   "predicate": "is produced by",
+   "target": "Wu S"
+  },
+  {
+   "source": "Glutathione",
+   "predicate": "is produced by",
+   "target": "Wu S"
+  },
+  {
+   "source": "Fungi",
+   "predicate": "is produced by",
+   "target": "Wu S"
+  }
+ ],
+ "truncated": false
+}

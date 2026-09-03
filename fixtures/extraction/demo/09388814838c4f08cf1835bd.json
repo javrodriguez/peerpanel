@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC11701741:7:5d900574",
+ "entities": [
+  {
+   "name": "Bansal P.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MorgatA.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AxelsenK.B.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MuthukrishnanV.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CoudertE.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AimoL.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hyka-NouspikelN.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GasteigerE.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KerhornouA.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NetoT.B.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rhea",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Szklarczyk D.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Bansal P.",
+   "predicate": "author",
+   "target": "Rhea"
+  }
+ ],
+ "truncated": false
+}

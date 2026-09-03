@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13304748:4:8efbb105",
+ "entities": [
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sequencing",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bioinformatic Analyses",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mRNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ZnS QDs",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnSO4",
+   "type": "chemical"
+  },
+  {
+   "name": "pos5Δ",
+   "type": "organism"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "IGA Technologies Services",
+   "type": "organism"
+  },
+  {
+   "name": "Tecan Genomics",
+   "type": "organism"
+  },
+  {
+   "name": "Agilent technologies",
+   "type": "organism"
+  },
+  {
+   "name": "Invitrogen",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "RNA",
+   "predicate": "extracted_from",
+   "target": "mRNA"
+  },
+  {
+   "source": "ZnS QDs",
+   "predicate": "exposed_to",
+   "target": "pos5Δ"
+  },
+  {
+   "source": "ZnSO4",
+   "predicate": "exposed_to",
+   "target": "pos5Δ"
+  },
+  {
+   "source": "IGA Technologies Services",
+   "predicate": "performed",
+   "target": "sequencing"
+  }
+ ],
+ "truncated": false
+}

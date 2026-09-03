@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13026841:6:20fe30c7",
+ "entities": [
+  {
+   "name": "HILIC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RP separation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ionization potentials",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "MS1 spectra",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "MS2 spectra",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "MS3 spectra",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Compound Discoverer",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MetaboAnalyst",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "KEGG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BioCyc",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ChEBI",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ChEMBL",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "HILIC",
+   "predicate": "uses",
+   "target": "Ionization potentials"
+  },
+  {
+   "source": "RP separation",
+   "predicate": "uses",
+   "target": "Ionization potentials"
+  },
+  {
+   "source": "Compound Discoverer",
+   "predicate": "uses",
+   "target": "KEGG"
+  },
+  {
+   "source": "Compound Discoverer",
+   "predicate": "uses",
+   "target": "BioCyc"
+  },
+  {
+   "source": "Compound Discoverer",
+   "predicate": "uses",
+   "target": "ChEBI"
+  },
+  {
+   "source": "Compound Discoverer",
+   "predicate": "uses",
+   "target": "ChEMBL"
+  },
+  {
+   "source": "MetaboAnalyst",
+   "predicate": "uses",
+   "target": "KEGG"
+  },
+  {
+   "source": "MetaboAnalyst",
+   "predicate": "uses",
+   "target": "BioCyc"
+  },
+  {
+   "source": "MetaboAnalyst",
+   "predicate": "uses",
+   "target": "ChEBI"
+  }
+ ],
+ "truncated": false
+}

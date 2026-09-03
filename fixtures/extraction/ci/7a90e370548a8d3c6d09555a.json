@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13092671:14:634f0409",
+ "entities": [
+  {
+   "name": "Saccharomyces Cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "ZRC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZRT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Zn-Citrate",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn2+",
+   "type": "chemical"
+  },
+  {
+   "name": "Zn",
+   "type": "chemical"
+  },
+  {
+   "name": "Zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "Yfh1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ISCU",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NFS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Frataxin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Escherichia",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces Cerevisiae",
+   "predicate": "stores_zinc",
+   "target": "zinc"
+  },
+  {
+   "source": "ZRT1",
+   "predicate": "is_inactivated_by",
+   "target": "zinc"
+  },
+  {
+   "source": "Zn",
+   "predicate": "is_toxic_to",
+   "target": "Escherichia"
+  },
+  {
+   "source": "Frataxin",
+   "predicate": "is_homologous_to",
+   "target": "Yfh1"
+  },
+  {
+   "source": "Escherichia",
+   "predicate": "is_affected_by",
+   "target": "Zn"
+  }
+ ],
+ "truncated": false
+}

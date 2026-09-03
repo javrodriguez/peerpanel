@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC6402699:7:3da1bbee",
+ "entities": [
+  {
+   "name": "Hypoxanthine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "L-A+",
+   "type": "organism"
+  },
+  {
+   "name": "Lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CoSMO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "A-L+",
+   "type": "organism"
+  },
+  {
+   "name": "chemostats",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "starvation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fig 5C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Table 1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Model iii",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Methods",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Quantifying phenotypes",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hypoxanthine",
+   "predicate": "release",
+   "target": "L-A+"
+  },
+  {
+   "source": "L-A+",
+   "predicate": "release",
+   "target": "Lysine"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "release",
+   "target": "Lysine"
+  },
+  {
+   "source": "A-L+",
+   "predicate": "content",
+   "target": "Lysine"
+  },
+  {
+   "source": "Methods",
+   "predicate": "use",
+   "target": "Quantifying phenotypes"
+  }
+ ],
+ "truncated": false
+}

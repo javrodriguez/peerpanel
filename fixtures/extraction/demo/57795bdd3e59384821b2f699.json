@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC4125178:9:c62d954d",
+ "entities": [
+  {
+   "name": "Yu T",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chen J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lu H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zheng X",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Indole-3-acetic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Cryptococcus laurentii",
+   "type": "organism"
+  },
+  {
+   "name": "Phytopathology",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Liu X",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wang J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gou P",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mao C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhu ZR",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Yu T",
+   "predicate": "improves",
+   "target": "Cryptococcus laurentii"
+  }
+ ],
+ "truncated": false
+}

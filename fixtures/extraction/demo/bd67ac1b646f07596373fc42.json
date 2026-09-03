@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC7191244:8:529590b4",
+ "entities": [
+  {
+   "name": "Devaraj RD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Reddy CK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Xu B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "konjac glucomannan",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Govarthanan M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shim J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Praburaman L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kim SA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Oh BT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Halomonas",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Garza-Gonzalez MT",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Barboza Perez D",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Devaraj RD",
+   "predicate": "health-promoting effects",
+   "target": "konjac glucomannan"
+  }
+ ],
+ "truncated": false
+}

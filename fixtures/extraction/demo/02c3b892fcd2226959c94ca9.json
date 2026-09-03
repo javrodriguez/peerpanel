@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC7690147:13:42efc5cb",
+ "entities": [
+  {
+   "name": "Simão FA Waterhouse RM Ioannidis P Kriventseva EV Zdobnov EM",
+   "type": "organism"
+  },
+  {
+   "name": "Kumar S Stecher G Tamura K",
+   "type": "organism"
+  },
+  {
+   "name": "Wang Y Tang H DeBarry JD",
+   "type": "organism"
+  },
+  {
+   "name": "Xiong Q Zhong L Du J",
+   "type": "organism"
+  },
+  {
+   "name": "Yang B Wang N Wang S",
+   "type": "organism"
+  },
+  {
+   "name": "Chen S Zhou Y Chen Y Gu J",
+   "type": "organism"
+  },
+  {
+   "name": "Kim D Langmead B Salzberg SL",
+   "type": "organism"
+  },
+  {
+   "name": "Pertea M Pertea GM Antonescu CM Chang T Mendell JT Salzberg SL",
+   "type": "organism"
+  },
+  {
+   "name": "Ter-Hovhannisyan V Lomsadze A Chernoff YO Borodovsky M",
+   "type": "organism"
+  },
+  {
+   "name": "Hoff KJ Lange S Lomsadze A Borodovsky M Stanke M",
+   "type": "organism"
+  },
+  {
+   "name": "Tarailo Graovac M Chen N",
+   "type": "organism"
+  },
+  {
+   "name": "Lowe TM Eddy SR",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC6912988:6:b277dd7e",
+ "entities": [
+  {
+   "name": "Simulated data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Homo sapiens",
+   "type": "organism"
+  },
+  {
+   "name": "GRCh38",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae S288",
+   "type": "organism"
+  },
+  {
+   "name": "D. melanogaster r6",
+   "type": "organism"
+  },
+  {
+   "name": "PacBio",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MinION ONT profiles",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HISAT2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "minimap2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "GMAP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "StringTie2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Scallop",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "Homo sapiens"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "GRCh38"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "S. cerevisiae S288"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "D. melanogaster r6"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "PacBio"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "MinION ONT profiles"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "HISAT2"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "minimap2"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "GMAP"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "StringTie2"
+  },
+  {
+   "source": "Simulated data",
+   "predicate": "generated_by",
+   "target": "Scallop"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13515017:4:2cfc52f3",
+ "entities": [
+  {
+   "name": "SUL1 locus",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "chr II",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ku70/80 complex",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "telomerase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rap1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sir4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tlc1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS228",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yku70Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CEN2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ODIRA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SUL1 locus",
+   "predicate": "amplified",
+   "target": "chr II"
+  },
+  {
+   "source": "CEN2",
+   "predicate": "mapped to",
+   "target": "SUL1 locus"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "Ku70/80 complex"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "telomerase"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "Rap1"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "Sir4"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "Tlc1"
+  },
+  {
+   "source": "yeast",
+   "predicate": "has",
+   "target": "ARS228"
+  }
+ ],
+ "truncated": false
+}

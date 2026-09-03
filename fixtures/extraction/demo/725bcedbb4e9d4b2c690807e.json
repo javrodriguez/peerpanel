@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13471478:26:2ecab036",
+ "entities": [
+  {
+   "name": "Perez-Torrado R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yamada D",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Defossez PA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BTB protein-protein interaction domain",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "BioEssays",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Furukawa M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "He YJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Borchers C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein ubiquitination",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "BTB-Cullin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nat Cell Biol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li X",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Perez-Torrado R",
+   "predicate": "has_protein-protein_interaction_domain",
+   "target": "BTB protein-protein interaction domain"
+  },
+  {
+   "source": "Furukawa M",
+   "predicate": "targets_protein_ubiquitination",
+   "target": "protein ubiquitination"
+  },
+  {
+   "source": "BTB-Cullin",
+   "predicate": "mediates_protein_ubiquitination",
+   "target": "protein ubiquitination"
+  },
+  {
+   "source": "BTB-Cullin",
+   "predicate": "mediates_protein_ubiquitination",
+   "target": "protein ubiquitination"
+  }
+ ],
+ "truncated": false
+}

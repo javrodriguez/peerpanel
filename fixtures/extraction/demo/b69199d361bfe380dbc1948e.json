@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC6402699:1:6eec1666",
+ "entities": [
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "cells",
+   "type": "organism"
+  },
+  {
+   "name": "microbial communities",
+   "type": "organism"
+  },
+  {
+   "name": "vitamin C",
+   "type": "chemical"
+  },
+  {
+   "name": "pathogens",
+   "type": "organism"
+  },
+  {
+   "name": "RNA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "protein expression profiles",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "genome sequences",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolic fluxes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolites",
+   "type": "chemical"
+  },
+  {
+   "name": "acetate excretion",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "interact",
+   "target": "Escherichia coli"
+  },
+  {
+   "source": "pathogens",
+   "predicate": "fight",
+   "target": "microbial communities"
+  },
+  {
+   "source": "RNA",
+   "predicate": "expression",
+   "target": "protein expression profiles"
+  },
+  {
+   "source": "protein expression profiles",
+   "predicate": "use",
+   "target": "genome sequences"
+  },
+  {
+   "source": "genome sequences",
+   "predicate": "predict",
+   "target": "metabolic fluxes"
+  }
+ ],
+ "truncated": false
+}

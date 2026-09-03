@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC11628909:9:349c880a",
+ "entities": [
+  {
+   "name": "Agarwal, P. K.",
+   "type": "organism"
+  },
+  {
+   "name": "Agarwal, P.",
+   "type": "organism"
+  },
+  {
+   "name": "Reddy, M. K.",
+   "type": "organism"
+  },
+  {
+   "name": "Sopory, S.",
+   "type": "organism"
+  },
+  {
+   "name": "DREB transcription factors",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "abiotic and biotic stress tolerance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "plants",
+   "type": "organism"
+  },
+  {
+   "name": "Plant Cell Reports",
+   "type": "organism"
+  },
+  {
+   "name": "Ahmad, P.",
+   "type": "organism"
+  },
+  {
+   "name": "Sarwat, M.",
+   "type": "organism"
+  },
+  {
+   "name": "Sharma, S.",
+   "type": "organism"
+  },
+  {
+   "name": "Reactive oxygen species",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Agarwal, P. K.",
+   "predicate": "Role",
+   "target": "DREB transcription factors"
+  },
+  {
+   "source": "Agarwal, P. K.",
+   "predicate": "abiotic and biotic stress tolerance",
+   "target": "plants"
+  }
+ ],
+ "truncated": false
+}

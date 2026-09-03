@@ -1,0 +1,20 @@
+{
+ "community_id": 52,
+ "resolution": 3.0,
+ "size": 10,
+ "member_names": [
+  "(NH₄)₂SO₄ precipitation",
+  "Bovine serum albumin (BSA) standard curve",
+  "Czapek-Dox media",
+  "DAB stained area",
+  "H₂O₂",
+  "R software",
+  "SDS-PAGE electrophoresis",
+  "Secreted proteins",
+  "ΔVdMFS2 mutants",
+  "ΔVdMFS2-C"
+ ],
+ "title": "Characterization of Secreted Proteins from ΔVdMFS2 Mutants",
+ "summary": "This cluster focuses on the production of secreted proteins from ΔVdMFS2 mutants. The mutants are capable of producing secreted proteins, which can be analyzed using various methods. The cluster includes tools and techniques such as (NH₄)₂SO₄ precipitation, BSA standard curve, Czapek-Dox media, DAB stained area, H₂O₂, R software, and SDS-PAGE electrophoresis, which are likely used to isolate, quantify, and visualize the secreted proteins. The ΔVdMFS2-C mutant is also mentioned, suggesting a comparison or control group in the study.",
+ "truncated": false
+}

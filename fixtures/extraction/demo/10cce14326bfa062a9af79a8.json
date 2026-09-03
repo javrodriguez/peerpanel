@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC6402699:16:ffff3721",
+ "entities": [
+  {
+   "name": "consumption",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "batch cultures",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "exponential cultures",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "exponentially growing cells",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "hypoxanthine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lys2− cells",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "L−A+ cells",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "A−L+ cells",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "N(t)",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "M(t)",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "M",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "exponentially growing cells",
+   "predicate": "grows",
+   "target": "N(t)"
+  }
+ ],
+ "truncated": false
+}

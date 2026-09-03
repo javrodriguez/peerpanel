@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC7334043:2:f1720b9c",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "glycerol metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "carotenoid production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolomics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "acetyl-CoA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lipid synthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "citric acid cleavage",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pyruvate decarboxylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "NADPH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fatty acid synthesis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "phosphorus depletion",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "glycerol metabolism"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "carotenoid production"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "lipid synthesis"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "autophagy"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_process",
+   "target": "phosphorus depletion"
+  },
+  {
+   "source": "glycerol metabolism",
+   "predicate": "has_input",
+   "target": "acetyl-CoA"
+  },
+  {
+   "source": "glycerol metabolism",
+   "predicate": "has_output",
+   "target": "carotenoid production"
+  },
+  {
+   "source": "lipid synthesis",
+   "predicate": "has_input",
+   "target": "acetyl-CoA"
+  },
+  {
+   "source": "NADPH",
+   "predicate": "has_input",
+   "target": "fatty acid synthesis"
+  },
+  {
+   "source": "phosphorus depletion",
+   "predicate": "has_input",
+   "target": "R. toruloides"
+  }
+ ],
+ "truncated": false
+}

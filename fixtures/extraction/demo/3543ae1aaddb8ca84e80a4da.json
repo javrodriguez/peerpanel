@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13501320:4:3b9d9274",
+ "entities": [
+  {
+   "name": "GIDEON",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ILP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gc",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Ec",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Eg",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "we",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "e",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "g",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "u",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "v",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "n",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "BPM",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GIDEON",
+   "predicate": "solve",
+   "target": "ILP"
+  },
+  {
+   "source": "ILP",
+   "predicate": "maximize",
+   "target": "we"
+  },
+  {
+   "source": "gc",
+   "predicate": "in",
+   "target": "BPM"
+  },
+  {
+   "source": "Ec",
+   "predicate": "adjacent_to",
+   "target": "gc"
+  },
+  {
+   "source": "Eg",
+   "predicate": "adjacent_to",
+   "target": "gc"
+  },
+  {
+   "source": "we",
+   "predicate": "weight",
+   "target": "e"
+  },
+  {
+   "source": "u",
+   "predicate": "in",
+   "target": "BPM"
+  },
+  {
+   "source": "v",
+   "predicate": "in",
+   "target": "BPM"
+  },
+  {
+   "source": "n",
+   "predicate": "in",
+   "target": "BPM"
+  },
+  {
+   "source": "BPM",
+   "predicate": "has_primary_contributor",
+   "target": "gc"
+  }
+ ],
+ "truncated": false
+}

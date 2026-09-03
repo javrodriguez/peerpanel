@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13348253:12:be7b8b91",
+ "entities": [
+  {
+   "name": "Kodama Y",
+   "type": "organism"
+  },
+  {
+   "name": "Omura F",
+   "type": "organism"
+  },
+  {
+   "name": "Takahashi K",
+   "type": "organism"
+  },
+  {
+   "name": "Ssy1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Kohl JB",
+   "type": "organism"
+  },
+  {
+   "name": "sulfite oxidase deficiency",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "H2S metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "MUP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "methionine permease",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Kuras L",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Kodama Y",
+   "predicate": "studied",
+   "target": "Ssy1p"
+  },
+  {
+   "source": "Kodama Y",
+   "predicate": "studied",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Kohl JB",
+   "predicate": "studied",
+   "target": "sulfite oxidase deficiency"
+  },
+  {
+   "source": "Kohl JB",
+   "predicate": "studied",
+   "target": "cysteine"
+  },
+  {
+   "source": "Kohl JB",
+   "predicate": "studied",
+   "target": "H2S metabolism"
+  },
+  {
+   "source": "Kuras L",
+   "predicate": "studied",
+   "target": "MUP1"
+  },
+  {
+   "source": "Kuras L",
+   "predicate": "studied",
+   "target": "methionine permease"
+  },
+  {
+   "source": "Kuras L",
+   "predicate": "studied",
+   "target": "Saccharomyces cerevisiae"
+  }
+ ],
+ "truncated": false
+}

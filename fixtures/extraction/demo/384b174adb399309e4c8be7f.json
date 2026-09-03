@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13471478:21:63312e25",
+ "entities": [
+  {
+   "name": "SLC26A4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pendrin",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DTDST",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDS gene",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TRPV5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TRPV6",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A4-related hearing loss",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26A4-related sensorineural hearing loss",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pendred syndrome",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SLC26 anion transporters",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

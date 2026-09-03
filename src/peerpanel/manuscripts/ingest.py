@@ -88,9 +88,7 @@ def fetch_jats(meta: BiorxivVersion, client: httpx.Client | None = None) -> byte
     raise RuntimeError("unreachable")  # pragma: no cover — the loop returns or raises
 
 
-def regenerate_command(
-    doi: str, version: int, slug: str, published_doi: str, pmcid: str
-) -> str:
+def regenerate_command(doi: str, version: int, slug: str, published_doi: str, pmcid: str) -> str:
     return (
         f"uv run python -m peerpanel.manuscripts.ingest {doi} --version {version} "
         f"--slug {slug} --published-doi {published_doi} --pmcid {pmcid}"

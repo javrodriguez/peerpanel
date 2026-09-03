@@ -1,0 +1,22 @@
+{
+ "community_id": 68,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Cegelski, L.",
+  "Chapman, M. R.",
+  "Courchesne, N. M. D.",
+  "Duraj-Thatte, A.",
+  "Editor",
+  "Fiji",
+  "Joshi, N. S.",
+  "Nguyen, P. Q.",
+  "Praveschotinunt, P.",
+  "Reichhardt, C.",
+  "Sauer, K.",
+  "Schindelin, J."
+ ],
+ "title": "Fiji Software Development Team",
+ "summary": "Fiji is a software tool developed by Schindelin, J. The cluster consists of various researchers and scientists who have contributed to the development of Fiji, including Cegelski, L., Chapman, M. R., Courchesne, N. M. D., Duraj-Thatte, A., Joshi, N. S., Nguyen, P. Q., Praveschotinunt, P., Reichhardt, C., and Sauer, K. Editor is also part of this cluster, but its role is unclear. The relationships between these entities are centered around the development of Fiji, with Schindelin, J. being the primary developer.",
+ "truncated": false
+}

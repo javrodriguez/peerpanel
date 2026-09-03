@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC5968551:14:30e9ace4",
+ "entities": [
+  {
+   "name": "Gutteridge A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pir P Castrillo JI Charles PD Lilley KS Oliver SG",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nutrient control",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "eukaryote cell growth",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "systems biology study",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Evans CT Ratledge C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NAD+",
+   "type": "chemical"
+  },
+  {
+   "name": "isocitrate dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "lipid accumulation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "oleaginous yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Gutteridge A",
+   "predicate": "conducted",
+   "target": "systems biology study"
+  },
+  {
+   "source": "Evans CT Ratledge C",
+   "predicate": "studied",
+   "target": "lipid accumulation"
+  }
+ ],
+ "truncated": false
+}

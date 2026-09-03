@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC12278674:7:672ff7ec",
+ "entities": [
+  {
+   "name": "Nitrogen metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nitrogen limitation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Nitrogen catabolite depression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Glutamate dehydrogenase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Glutamine synthase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Glutamate synthase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rt_8962",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "S20",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ATG27",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNM1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Amine oxidase",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nitrogen metabolism",
+   "predicate": "regulated_by",
+   "target": "Autophagy"
+  },
+  {
+   "source": "Nitrogen limitation",
+   "predicate": "causes",
+   "target": "Nitrogen catabolite depression"
+  },
+  {
+   "source": "Glutamate dehydrogenase",
+   "predicate": "involved_in",
+   "target": "Nitrogen metabolism"
+  },
+  {
+   "source": "Glutamine synthase",
+   "predicate": "involved_in",
+   "target": "Nitrogen metabolism"
+  },
+  {
+   "source": "Glutamate synthase",
+   "predicate": "involved_in",
+   "target": "Nitrogen metabolism"
+  },
+  {
+   "source": "Rt_8962",
+   "predicate": "involved_in",
+   "target": "Nitrogen metabolism"
+  },
+  {
+   "source": "S20",
+   "predicate": "involved_in",
+   "target": "Nitrogen metabolism"
+  },
+  {
+   "source": "ATG27",
+   "predicate": "involved_in",
+   "target": "Autophagy"
+  }
+ ],
+ "truncated": false
+}

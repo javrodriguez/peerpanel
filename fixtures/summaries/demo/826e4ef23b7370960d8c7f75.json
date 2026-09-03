@@ -1,0 +1,22 @@
+{
+ "community_id": 41,
+ "resolution": 1.0,
+ "size": 12,
+ "member_names": [
+  "Chen X",
+  "Jennings EW",
+  "Kankainen M",
+  "Kuhn E",
+  "Nelson R",
+  "Penttilä M",
+  "Pitkänen J-P",
+  "Ruohonen L",
+  "Salusjärvi L",
+  "Solymani R",
+  "Tao L",
+  "Zhang M"
+ ],
+ "title": "Collection of Method or Tool Entities",
+ "summary": "This cluster consists of 12 entities labeled as 'method_or_tool'. The relationships between these entities are not specified, indicating that they are presented as a collection without any defined connections or hierarchies. The entities may represent different tools, techniques, or methods used in various contexts, but their specific roles and interactions are unknown based on the provided information.",
+ "truncated": false
+}

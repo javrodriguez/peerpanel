@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC3923900:11:293460b4",
+ "entities": [
+  {
+   "name": "Barbosa Rodrigues de Freitas",
+   "type": "organism"
+  },
+  {
+   "name": "Thiru M Sankh S Rangaswamy V",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus curvatus",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Nile red",
+   "type": "chemical"
+  },
+  {
+   "name": "FTIR spectroscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fourier transform infrared spectroscopy",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biosresour Technol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bioethanol wastewater",
+   "type": "chemical"
+  },
+  {
+   "name": "Biodiesel production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lipid production",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Biodiesel production",
+   "predicate": "target",
+   "target": "Cryptococcus curvatus"
+  },
+  {
+   "source": "Lipid production",
+   "predicate": "target",
+   "target": "Rhodosporidium toruloides"
+  }
+ ],
+ "truncated": false
+}

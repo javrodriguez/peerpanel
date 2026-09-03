@@ -1,0 +1,50 @@
+{
+ "chunk_id": "PMC13456448:13:70ef02f5",
+ "entities": [
+  {
+   "name": "Santos ALS Bittencourt VC Pinto MR Silva BA Barreto-Bergter E",
+   "type": "organism"
+  },
+  {
+   "name": "Pseudallescheria boydii",
+   "type": "organism"
+  },
+  {
+   "name": "Med Mycol",
+   "type": "organism"
+  },
+  {
+   "name": "Aor AC Mello TP Sangenito LS",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium apiospermum",
+   "type": "organism"
+  },
+  {
+   "name": "lung",
+   "type": "organism"
+  },
+  {
+   "name": "macrophage cells",
+   "type": "organism"
+  },
+  {
+   "name": "Oswaldo Cruz",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Santos ALS Bittencourt VC Pinto MR Silva BA Barreto-Bergter E",
+   "predicate": "study",
+   "target": "Pseudallescheria boydii"
+  },
+  {
+   "source": "Aor AC Mello TP Sangenito LS",
+   "predicate": "publish",
+   "target": "Oswaldo Cruz"
+  }
+ ],
+ "truncated": false
+}

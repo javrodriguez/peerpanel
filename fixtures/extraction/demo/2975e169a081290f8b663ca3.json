@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC11628909:11:a1c09090",
+ "entities": [
+  {
+   "name": "TINY",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "dehydration-responsive element",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "transcription factor",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DRE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Arabidopsis",
+   "type": "organism"
+  },
+  {
+   "name": "Glycine soja",
+   "type": "organism"
+  },
+  {
+   "name": "Medicago sativa",
+   "type": "organism"
+  },
+  {
+   "name": "Limonium bicolor",
+   "type": "organism"
+  },
+  {
+   "name": "cassava",
+   "type": "organism"
+  },
+  {
+   "name": "peach",
+   "type": "organism"
+  },
+  {
+   "name": "maize",
+   "type": "organism"
+  },
+  {
+   "name": "rice",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "TINY",
+   "predicate": "binds_to",
+   "target": "dehydration-responsive element"
+  },
+  {
+   "source": "dehydration-responsive element",
+   "predicate": "binds_to",
+   "target": "transcription factor"
+  },
+  {
+   "source": "transcription factor",
+   "predicate": "regulates",
+   "target": "Arabidopsis"
+  }
+ ],
+ "truncated": false
+}

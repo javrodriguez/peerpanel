@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC6547517:12:5d6a6561",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "UniProt R. toruloides proteome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UP000016926",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "human keratin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bovine serum albumin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "MaxQuant",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "MaxLFQ",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Perseus",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "UniProt accession numbers",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "protein N-terminal acetylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "oxidation of methionines",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "deamidation of asparagines and glutamines",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_proteome",
+   "target": "UniProt R. toruloides proteome"
+  },
+  {
+   "source": "UniProt R. toruloides proteome",
+   "predicate": "has_sequence",
+   "target": "UP000016926"
+  },
+  {
+   "source": "human keratin",
+   "predicate": "is_contaminant",
+   "target": "bovine serum albumin"
+  },
+  {
+   "source": "MaxQuant",
+   "predicate": "uses_algorithm",
+   "target": "MaxLFQ"
+  },
+  {
+   "source": "MaxQuant",
+   "predicate": "searches_against",
+   "target": "UniProt R. toruloides proteome"
+  },
+  {
+   "source": "protein N-terminal acetylation",
+   "predicate": "is_variable_modification",
+   "target": "deamidation of asparagines and glutamines"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein_expression",
+   "target": "protein N-terminal acetylation"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein_expression",
+   "target": "oxidation of methionines"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein_expression",
+   "target": "deamidation of asparagines and glutamines"
+  }
+ ],
+ "truncated": false
+}

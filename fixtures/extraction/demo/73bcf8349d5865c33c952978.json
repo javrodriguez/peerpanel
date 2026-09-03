@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13471478:4:e094eadc",
+ "entities": [
+  {
+   "name": "Slc26a4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ZBTB16",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CUL3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ROC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MG132",
+   "type": "chemical"
+  },
+  {
+   "name": "cycloheximide",
+   "type": "chemical"
+  },
+  {
+   "name": "HEK293 Phoenix cells",
+   "type": "organism"
+  },
+  {
+   "name": "mouse",
+   "type": "organism"
+  },
+  {
+   "name": "kidney",
+   "type": "organism"
+  },
+  {
+   "name": "stria vascularis",
+   "type": "organism"
+  },
+  {
+   "name": "human",
+   "type": "organism"
+  },
+  {
+   "name": "NP_035997.1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Slc26a4",
+   "predicate": "ubiquitinated_by",
+   "target": "ZBTB16"
+  },
+  {
+   "source": "Slc26a4",
+   "predicate": "immunoprecipitated_from",
+   "target": "kidney"
+  },
+  {
+   "source": "Slc26a4",
+   "predicate": "expressed_in",
+   "target": "HEK293 Phoenix cells"
+  },
+  {
+   "source": "Slc26a4",
+   "predicate": "treated_with",
+   "target": "MG132"
+  },
+  {
+   "source": "Slc26a4",
+   "predicate": "treated_with",
+   "target": "cycloheximide"
+  },
+  {
+   "source": "ZBTB16",
+   "predicate": "interacts_with",
+   "target": "Slc26a4"
+  },
+  {
+   "source": "CUL3",
+   "predicate": "interacts_with",
+   "target": "Slc26a4"
+  },
+  {
+   "source": "ROC1",
+   "predicate": "interacts_with",
+   "target": "Slc26a4"
+  },
+  {
+   "source": "kidney",
+   "predicate": "contains",
+   "target": "Slc26a4"
+  },
+  {
+   "source": "stria vascularis",
+   "predicate": "contains",
+   "target": "Slc26a4"
+  },
+  {
+   "source": "human",
+   "predicate": "has_homolog",
+   "target": "NP_035997.1"
+  },
+  {
+   "source": "mouse",
+   "predicate": "has_homolog",
+   "target": "NP_035997.1"
+  }
+ ],
+ "truncated": false
+}

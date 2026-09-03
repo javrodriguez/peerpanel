@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13450573:20:f182952c",
+ "entities": [
+  {
+   "name": "BY4742",
+   "type": "organism"
+  },
+  {
+   "name": "Oxygen",
+   "type": "chemical"
+  },
+  {
+   "name": "YPD medium",
+   "type": "chemical"
+  },
+  {
+   "name": "Rhodamine 123",
+   "type": "chemical"
+  },
+  {
+   "name": "PBS",
+   "type": "chemical"
+  },
+  {
+   "name": "Ludovico",
+   "type": "organism"
+  },
+  {
+   "name": "UMS2008 IBSLor",
+   "type": "organism"
+  },
+  {
+   "name": "Valérie Bourguignon-Igel",
+   "type": "organism"
+  },
+  {
+   "name": "Virginie Marchand",
+   "type": "organism"
+  },
+  {
+   "name": "Yuri Motorin",
+   "type": "organism"
+  },
+  {
+   "name": "Gene Expression Omnibus",
+   "type": "organism"
+  },
+  {
+   "name": "GSE276309",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BY4742",
+   "predicate": "consumes",
+   "target": "Oxygen"
+  },
+  {
+   "source": "BY4742",
+   "predicate": "treated_with",
+   "target": "Rhodamine 123"
+  },
+  {
+   "source": "BY4742",
+   "predicate": "treated_with",
+   "target": "PBS"
+  },
+  {
+   "source": "BY4742",
+   "predicate": "contributes_to",
+   "target": "UMS2008 IBSLor"
+  },
+  {
+   "source": "BY4742",
+   "predicate": "contributes_to",
+   "target": "Valérie Bourguignon-Igel"
+  },
+  {
+   "source": "BY4742",
+   "predicate": "contributes_to",
+   "target": "Virginie Marchand"
+  }
+ ],
+ "truncated": false
+}

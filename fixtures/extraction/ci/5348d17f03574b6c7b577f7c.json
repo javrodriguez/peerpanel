@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC13228058:0:8da50dfa",
+ "entities": [
+  {
+   "name": "Verticillium dahliae",
+   "type": "organism"
+  },
+  {
+   "name": "VdMFS2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "cotton",
+   "type": "organism"
+  },
+  {
+   "name": "Sun Tiange",
+   "type": "organism"
+  },
+  {
+   "name": "Li Yongtai",
+   "type": "organism"
+  },
+  {
+   "name": "Yuan Ruixiang",
+   "type": "organism"
+  },
+  {
+   "name": "Liu Feng",
+   "type": "organism"
+  },
+  {
+   "name": "Ma Xiaomei",
+   "type": "organism"
+  },
+  {
+   "name": "Zhang Xinyu",
+   "type": "organism"
+  },
+  {
+   "name": "Sun Yuqiang",
+   "type": "organism"
+  },
+  {
+   "name": "Li Yanjun",
+   "type": "organism"
+  },
+  {
+   "name": "Sun Jie",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Verticillium dahliae",
+   "predicate": "has_pathogenicity",
+   "target": "cotton"
+  },
+  {
+   "source": "VdMFS2",
+   "predicate": "regulates_growth",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "VdMFS2",
+   "predicate": "regulates_development",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "VdMFS2",
+   "predicate": "regulates_resistance",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "VdMFS2",
+   "predicate": "transports_amino_acids",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "Sun Tiange",
+   "predicate": "contributes_to_study",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "Li Yongtai",
+   "predicate": "contributes_to_study",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "Yuan Ruixiang",
+   "predicate": "contributes_to_study",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "Liu Feng",
+   "predicate": "contributes_to_study",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "Ma Xiaomei",
+   "predicate": "contributes_to_study",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "Zhang Xinyu",
+   "predicate": "contributes_to_study",
+   "target": "Verticillium dahliae"
+  },
+  {
+   "source": "Sun Yuqiang",
+   "predicate": "contributes_to_study",
+   "target": "Verticillium dahliae"
+  }
+ ],
+ "truncated": false
+}

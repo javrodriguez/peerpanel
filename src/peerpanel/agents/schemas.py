@@ -7,6 +7,8 @@ prompt-persona different.
 
 from __future__ import annotations
 
+from typing import Any
+
 from pydantic import BaseModel
 
 RUBRIC_DIMENSIONS = ("soundness", "presentation", "contribution")
@@ -18,11 +20,19 @@ VERDICTS = (VERDICT_SUPPORTS, VERDICT_REFUTES, VERDICT_NEI)
 
 CONFLICT_TYPES = ("propositional", "sentiment", "evidence")
 
+# The longest `quote` a finding may carry, enforced in the JSON schema (maxLength) so
+# constrained decoding cannot copy a whole paragraph into every finding and run the
+# output budget dry — measured on qwen2:7b, which did exactly that once the reviewer
+# prompt was read whole (DECISIONS.md D19). 240 characters is a sentence: enough to
+# name the planted token the evaluation scores on, both arms alike.
+QUOTE_MAX_CHARS = 240
+
 
 class ReviewFinding(BaseModel):
     dimension: str  # one of RUBRIC_DIMENSIONS
     severity: str  # "major" | "minor"
     text: str
+    quote: str = ""  # a short exact phrase of manuscript text the finding is about ("" if none)
     evidence_chunk_ids: list[str]  # retrieval grounding; empty = ungrounded (flagged)
 
 
@@ -52,6 +62,10 @@ class ClaimVerdict(BaseModel):
     verdict: str  # one of VERDICTS
     evidence: list[EvidenceSpan]
     swap_consistent: bool  # both evidence orders agreed; False forces NEI (abstain)
+    swapped: bool  # was this claim ACTUALLY judged twice? A claim with no evidence
+    # has no second ordering, so it is trivially 'consistent' and must not pad the
+    # rate's denominator with agreement it was never at risk of losing. Required, no
+    # default: a record that predates the field cannot load as if it had been judged.
 
 
 class DeterministicFinding(BaseModel):
@@ -67,6 +81,40 @@ class Conflict(BaseModel):
     detail: str
 
 
+class SwapStat(BaseModel):
+    """Swap-consistency over one population of claims: the rate and its n."""
+
+    rate: float | None  # None below the reporting N
+    n: int
+
+
+class CallStats(BaseModel):
+    """What one ledger saw: proof, per record, that no prompt was cut.
+
+    `smallest_headroom_tokens` is the proof — the margin between a prompt and the
+    window that prompt ran in, smallest across the record's calls; positive means
+    every call was read whole. The other three describe the run's shape and cannot
+    prove it on their own, because the largest prompt and the smallest window are
+    usually different calls. Required on every record — one that predates the
+    fields cannot load as if it had been measured (DECISIONS.md D19 withdrew every
+    such record).
+    """
+
+    calls: int
+    largest_prompt_tokens: int
+    smallest_context: int | None  # None only from a wire that does not report its window
+    smallest_headroom_tokens: int | None  # window minus prompt, per call, smallest
+
+    @classmethod
+    def from_ledger(cls, ledger: Any) -> CallStats:
+        return cls(
+            calls=ledger.calls,
+            largest_prompt_tokens=ledger.largest_prompt_tokens,
+            smallest_context=ledger.smallest_context,
+            smallest_headroom_tokens=ledger.smallest_headroom_tokens,
+        )
+
+
 class PanelReview(BaseModel):
     manuscript_doi: str
     corpus_manifest: str
@@ -78,6 +126,8 @@ class PanelReview(BaseModel):
     conflicts: list[Conflict]
     summary: str  # converger prose — may only cite reviewer findings + evidence
     swap_consistency_rate: float | None  # None below the reporting N
-    n_swap_checked: int
+    n_swap_checked: int  # claims that were judged twice (the rate's denominator)
+    swap_by_source: dict[str, SwapStat] = {}  # "manuscript" | reviewer name -> its rate
     total_tokens: int
     wall_s: float
+    model_calls: CallStats  # every prompt read whole: largest prompt < smallest window

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC5968551:13:c3dd2058",
+ "entities": [
+  {
+   "name": "Li R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yu C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Li Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lam TW",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yiu SM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kristiansen K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Wang J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SOAP2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Moatazavi A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Williams BA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "McCue K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Schaeffer L",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Li R",
+   "predicate": "developed",
+   "target": "SOAP2"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,21 @@
+{
+ "community_id": 31,
+ "resolution": 1.0,
+ "size": 11,
+ "member_names": [
+  "Dnmt2",
+  "DOT1L",
+  "Drosophila Hox genes",
+  "grappa gene",
+  "histone H3",
+  "histone methyltransferase",
+  "human methyltransferasome",
+  "PRMT1 inhibitors",
+  "protein arginine methyltransferases",
+  "RNA methylation",
+  "S-adenosyl-L-homocysteine hydrolase"
+ ],
+ "title": "Histone Methylation and Modification Methods",
+ "summary": "This cluster is centered around histone modification methods, including histone H3, which is encoded by the grappa gene. The human methyltransferasome, a complex, contains Dnmt2 as one of its components. Other methods in this cluster relate to histone methylation, such as histone methyltransferase and protein arginine methyltransferases, as well as inhibitors of PRMT1. Additionally, RNA methylation and S-adenosyl-L-homocysteine hydrolase are also present, indicating a comprehensive scope of epigenetic modification methods.",
+ "truncated": false
+}

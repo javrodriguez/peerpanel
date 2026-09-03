@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13348253:11:882ac3e1",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces lactis",
+   "type": "organism"
+  },
+  {
+   "name": "Met31p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met32p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MAE1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Bat1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Bat2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AICAr",
+   "type": "chemical"
+  },
+  {
+   "name": "arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "pantothenic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "hydrogen sulfide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

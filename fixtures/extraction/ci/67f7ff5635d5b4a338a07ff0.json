@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13274398:13:c3306ee6",
+ "entities": [
+  {
+   "name": "Nielsen J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Keasling JD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Engineering cellular metabolism",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cell",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Skjoedt ML",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Snoek T",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kildegaard KR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Arsovska D",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Eichenberger M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Goedecke TJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rajkumar AS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhang J",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Nielsen J",
+   "predicate": "used",
+   "target": "Engineering cellular metabolism"
+  },
+  {
+   "source": "Keasling JD",
+   "predicate": "used",
+   "target": "Engineering cellular metabolism"
+  }
+ ],
+ "truncated": false
+}

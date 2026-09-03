@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13470552:9:b2af3c74",
+ "entities": [
+  {
+   "name": "Aif1-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mmi1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsp104-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pab1-2GFP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "nucleus",
+   "type": "organism"
+  },
+  {
+   "name": "stress granules",
+   "type": "organism"
+  },
+  {
+   "name": "protein aggregate/proteostasis-related structures",
+   "type": "organism"
+  },
+  {
+   "name": "stress granule-associated reporter",
+   "type": "organism"
+  },
+  {
+   "name": "basal Hsp104-labeled protein quality-control structures",
+   "type": "organism"
+  },
+  {
+   "name": "Hsp104-positive puncta",
+   "type": "organism"
+  },
+  {
+   "name": "Pab1-2GFP puncta",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Aif1-2GFP",
+   "predicate": "colocalize",
+   "target": "mitochondria"
+  }
+ ],
+ "truncated": false
+}

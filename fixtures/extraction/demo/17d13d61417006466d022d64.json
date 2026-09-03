@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13484205:2:26859493",
+ "entities": [
+  {
+   "name": "condensation index",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cellpose",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CellQuant pipeline",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sis1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsp70",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hsf1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Med15",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pol II",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "oRPs",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "CHX",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "1,6-HD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "NaCl",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sis1",
+   "predicate": "condensation",
+   "target": "condensation index"
+  },
+  {
+   "source": "Hsp70",
+   "predicate": "binding",
+   "target": "Hsf1"
+  },
+  {
+   "source": "Hsf1",
+   "predicate": "condensation",
+   "target": "condensation index"
+  },
+  {
+   "source": "Med15",
+   "predicate": "condensation",
+   "target": "condensation index"
+  },
+  {
+   "source": "Pol II",
+   "predicate": "condensation",
+   "target": "condensation index"
+  },
+  {
+   "source": "oRPs",
+   "predicate": "initiating signal",
+   "target": "Sis1"
+  },
+  {
+   "source": "1,6-HD",
+   "predicate": "dissolution",
+   "target": "Sis1"
+  },
+  {
+   "source": "1,6-HD",
+   "predicate": "dissolution",
+   "target": "Hsf1"
+  },
+  {
+   "source": "1,6-HD",
+   "predicate": "dissolution",
+   "target": "Med15"
+  },
+  {
+   "source": "1,6-HD",
+   "predicate": "dissolution",
+   "target": "Pol II"
+  },
+  {
+   "source": "NaCl",
+   "predicate": "low level oRP accumulation",
+   "target": "oRPs"
+  }
+ ],
+ "truncated": false
+}

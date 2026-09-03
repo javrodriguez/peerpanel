@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13312927:19:fab5c1b9",
+ "entities": [
+  {
+   "name": "S-adenosylmethionine",
+   "type": "chemical"
+  },
+  {
+   "name": "S-adenosylhomocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Homocysteine",
+   "type": "chemical"
+  },
+  {
+   "name": "Arginine",
+   "type": "chemical"
+  },
+  {
+   "name": "DNA",
+   "type": "chemical"
+  },
+  {
+   "name": "Histone",
+   "type": "chemical"
+  },
+  {
+   "name": "Plasma",
+   "type": "chemical"
+  },
+  {
+   "name": "Cardiac DNA methylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Histone methylation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Arginine methyltransferase",
+   "type": "chemical"
+  },
+  {
+   "name": "PRMT5",
+   "type": "chemical"
+  },
+  {
+   "name": "Drosophila",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "S-adenosylmethionine",
+   "predicate": "is associated with",
+   "target": "S-adenosylhomocysteine"
+  },
+  {
+   "source": "Arginine methyltransferase",
+   "predicate": "is involved in",
+   "target": "histone methylation"
+  },
+  {
+   "source": "PRMT5",
+   "predicate": "is involved in",
+   "target": "histone methylation"
+  },
+  {
+   "source": "Drosophila",
+   "predicate": "is a model organism for",
+   "target": "histone methylation"
+  },
+  {
+   "source": "S-adenosylhomocysteine",
+   "predicate": "is a product of",
+   "target": "S-adenosylmethionine"
+  }
+ ],
+ "truncated": false
+}

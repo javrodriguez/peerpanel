@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12278674:22:b12879a8",
+ "entities": [
+  {
+   "name": "Bracharz F",
+   "type": "organism"
+  },
+  {
+   "name": "Redai V",
+   "type": "organism"
+  },
+  {
+   "name": "Bach K",
+   "type": "organism"
+  },
+  {
+   "name": "Qoura F",
+   "type": "organism"
+  },
+  {
+   "name": "Brück T",
+   "type": "organism"
+  },
+  {
+   "name": "Klaus A",
+   "type": "organism"
+  },
+  {
+   "name": "Zorman S",
+   "type": "organism"
+  },
+  {
+   "name": "Berthier A",
+   "type": "organism"
+  },
+  {
+   "name": "Polge C",
+   "type": "organism"
+  },
+  {
+   "name": "Ramirez S",
+   "type": "organism"
+  },
+  {
+   "name": "Michelland S",
+   "type": "organism"
+  },
+  {
+   "name": "Yoshida S",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

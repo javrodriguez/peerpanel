@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC5826700:15:ae27d1ef",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "Nucleus",
+   "type": "organism"
+  },
+  {
+   "name": "Vacuoles",
+   "type": "organism"
+  },
+  {
+   "name": "Peroxisomes",
+   "type": "organism"
+  },
+  {
+   "name": "Endoplasmic Reticulum",
+   "type": "organism"
+  },
+  {
+   "name": "Plasma Membrane",
+   "type": "organism"
+  },
+  {
+   "name": "Lipid Droplets",
+   "type": "organism"
+  },
+  {
+   "name": "Cytosol",
+   "type": "organism"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Front Genet",
+   "type": "organism"
+  },
+  {
+   "name": "Cell Metab",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_part",
+   "target": "Mitochondria"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_part",
+   "target": "Nucleus"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_part",
+   "target": "Vacuoles"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_part",
+   "target": "Peroxisomes"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_part",
+   "target": "Endoplasmic Reticulum"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_part",
+   "target": "Plasma Membrane"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_part",
+   "target": "Lipid Droplets"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_part",
+   "target": "Cytosol"
+  }
+ ],
+ "truncated": false
+}

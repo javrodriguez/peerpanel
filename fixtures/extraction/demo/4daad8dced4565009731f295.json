@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC12628781:17:9445a44c",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Nostoc commune",
+   "type": "organism"
+  },
+  {
+   "name": "Candida yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Vitamin B9",
+   "type": "chemical"
+  },
+  {
+   "name": "exopolysaccharide",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "protein",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoid",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produces",
+   "target": "exopolysaccharide"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "produces",
+   "target": "exopolysaccharide"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "produces",
+   "target": "lipid"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "produces",
+   "target": "carotenoid"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "produces",
+   "target": "lipid"
+  }
+ ],
+ "truncated": false
+}

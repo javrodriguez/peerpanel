@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC13515494:5:964676ed",
+ "entities": [
+  {
+   "name": "39 volatile organic compounds",
+   "type": "chemical"
+  },
+  {
+   "name": "29 compounds",
+   "type": "chemical"
+  },
+  {
+   "name": "HS/SPME-GC/MS analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "closure type",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fermentation time",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "volatile compound",
+   "type": "chemical"
+  },
+  {
+   "name": "amino acid",
+   "type": "chemical"
+  },
+  {
+   "name": "isoamyl alcohol",
+   "type": "chemical"
+  },
+  {
+   "name": "2-phenylethanol",
+   "type": "chemical"
+  },
+  {
+   "name": "phenylacetaldehyde",
+   "type": "chemical"
+  },
+  {
+   "name": "benzaldehyde",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "39 volatile organic compounds",
+   "predicate": "were semi-quantified by",
+   "target": "HS/SPME-GC/MS analysis"
+  },
+  {
+   "source": "closure type",
+   "predicate": "had closure-associated differences in the temporal evolution of a limited number of volatile compounds",
+   "target": "volatile compound"
+  },
+  {
+   "source": "phenylacetaldehyde",
+   "predicate": "generally increased during fermentation",
+   "target": "fermentation"
+  },
+  {
+   "source": "benzaldehyde",
+   "predicate": "generally increased during fermentation",
+   "target": "fermentation"
+  },
+  {
+   "source": "volatile compound",
+   "predicate": "exhibited markedly different initial concentrations and concentration ranges",
+   "target": "fermentation"
+  },
+  {
+   "source": "amino acid",
+   "predicate": "had a positive correlation with volatile compound",
+   "target": "volatile compound"
+  },
+  {
+   "source": "isoamyl alcohol",
+   "predicate": "had a positive correlation with amino acid",
+   "target": "amino acid"
+  },
+  {
+   "source": "2-phenylethanol",
+   "predicate": "had a positive correlation with amino acid",
+   "target": "amino acid"
+  }
+ ],
+ "truncated": false
+}

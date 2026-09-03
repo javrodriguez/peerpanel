@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC8620231:8:33628321",
+ "entities": [
+  {
+   "name": "Stanke M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bruhn W",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Becker F",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hoff KJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "VARUS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kim D",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Paggi JM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Park C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bennett C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Salzberg SL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Haas BJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Grabherr MG",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

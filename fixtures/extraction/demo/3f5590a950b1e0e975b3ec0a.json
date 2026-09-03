@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC12628781:16:15961d6c",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "Enterobacter soli",
+   "type": "organism"
+  },
+  {
+   "name": "Streptococcus thermophilus",
+   "type": "organism"
+  },
+  {
+   "name": "Rhizobium tropici",
+   "type": "organism"
+  },
+  {
+   "name": "Cyanobacteria",
+   "type": "organism"
+  },
+  {
+   "name": "Exopolysaccharides",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Polyhydroxyalkanoates",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biofilms",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Microbial extracellular polymeric substances",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "has",
+   "target": "exopolysaccharides"
+  }
+ ],
+ "truncated": false
+}

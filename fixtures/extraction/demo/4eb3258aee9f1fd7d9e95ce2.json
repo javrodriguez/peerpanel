@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13462271:4:b3864b55",
+ "entities": [
+  {
+   "name": "DNA Pol α (Pol1)",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "pol1-C1372S,F1396S",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pol1-C1372S",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "pol1-F1396S",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "POL1 locus",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "H3K4me3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "H3K56ac",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Rad53",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RPA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS1510-1513",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "WT",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pol1-C1372S,F1396S",
+   "predicate": "has_mutant",
+   "target": "DNA Pol α (Pol1)"
+  },
+  {
+   "source": "pol1-C1372S,F1396S",
+   "predicate": "has_locus",
+   "target": "POL1 locus"
+  },
+  {
+   "source": "pol1-F1396S",
+   "predicate": "has_mutant",
+   "target": "DNA Pol α (Pol1)"
+  },
+  {
+   "source": "pol1-C1372S,F1396S",
+   "predicate": "has_mutant",
+   "target": "DNA Pol α (Pol1)"
+  }
+ ],
+ "truncated": false
+}

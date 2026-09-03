@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC6547517:16:3a200311",
+ "entities": [
+  {
+   "name": "Klose C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Surma MA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gerl MJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Meyenhofer F",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shevchenko A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Simons K",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhu Z",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ding Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gong Z",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Yang L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhang S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Zhang C",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Klose C",
+   "predicate": "author",
+   "target": "Surma MA"
+  },
+  {
+   "source": "Klose C",
+   "predicate": "author",
+   "target": "Gerl MJ"
+  },
+  {
+   "source": "Klose C",
+   "predicate": "author",
+   "target": "Meyenhofer F"
+  },
+  {
+   "source": "Klose C",
+   "predicate": "author",
+   "target": "Shevchenko A"
+  },
+  {
+   "source": "Klose C",
+   "predicate": "author",
+   "target": "Simons K"
+  },
+  {
+   "source": "Zhu Z",
+   "predicate": "author",
+   "target": "Ding Y"
+  },
+  {
+   "source": "Zhu Z",
+   "predicate": "author",
+   "target": "Gong Z"
+  },
+  {
+   "source": "Zhu Z",
+   "predicate": "author",
+   "target": "Yang L"
+  },
+  {
+   "source": "Zhu Z",
+   "predicate": "author",
+   "target": "Zhang S"
+  },
+  {
+   "source": "Zhu Z",
+   "predicate": "author",
+   "target": "Zhang C"
+  }
+ ],
+ "truncated": false
+}

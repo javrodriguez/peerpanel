@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10440040:21:4bac2573",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Pucciniomycotina",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoid",
+   "type": "chemical"
+  },
+  {
+   "name": "terpene",
+   "type": "chemical"
+  },
+  {
+   "name": "indigoidine",
+   "type": "chemical"
+  },
+  {
+   "name": "non-ribosomal peptide",
+   "type": "chemical"
+  },
+  {
+   "name": "triacetic acid lactone",
+   "type": "chemical"
+  },
+  {
+   "name": "ent-kaurene",
+   "type": "chemical"
+  },
+  {
+   "name": "monoterpenes",
+   "type": "chemical"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC7953724:1:15c2cd26",
+ "entities": [
+  {
+   "name": "Crude glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "Hemicellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "Biodiesel production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Transesterification",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Vegetable oils",
+   "type": "chemical"
+  },
+  {
+   "name": "Methanol",
+   "type": "chemical"
+  },
+  {
+   "name": "Soap",
+   "type": "chemical"
+  },
+  {
+   "name": "Ash",
+   "type": "chemical"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula minuta",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Crude glycerol",
+   "predicate": "is produced by",
+   "target": "Biodiesel production"
+  },
+  {
+   "source": "Crude glycerol",
+   "predicate": "contains",
+   "target": "Methanol"
+  },
+  {
+   "source": "Crude glycerol",
+   "predicate": "contains",
+   "target": "Soap"
+  },
+  {
+   "source": "Crude glycerol",
+   "predicate": "contains",
+   "target": "Ash"
+  },
+  {
+   "source": "Yarrowia lipolytica",
+   "predicate": "can convert",
+   "target": "Hemicellulose"
+  },
+  {
+   "source": "Lipomyces starkeyi",
+   "predicate": "can grow on",
+   "target": "Crude glycerol"
+  },
+  {
+   "source": "Lipomyces starkeyi",
+   "predicate": "can grow on",
+   "target": "Hemicellulose"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "can grow on",
+   "target": "Crude glycerol"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "can grow on",
+   "target": "Hemicellulose"
+  },
+  {
+   "source": "Rhodotorula minuta",
+   "predicate": "can grow on",
+   "target": "Crude glycerol"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13518488:12:08abb616",
+ "entities": [
+  {
+   "name": "White JA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Hart RJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fry JC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Waters Pico-Tag system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "amino-acid analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "food materials",
+   "type": "chemical"
+  },
+  {
+   "name": "Lucas B",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sotelo A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FAO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dietary protein quality evaluation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "human nutrition Report",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Tao Z",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "FAO",
+   "predicate": "evaluation",
+   "target": "human nutrition Report"
+  }
+ ],
+ "truncated": false
+}

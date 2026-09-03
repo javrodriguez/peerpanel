@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13515017:16:324486dd",
+ "entities": [
+  {
+   "name": "Giaever G",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Chu AM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ni L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Connelly C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Riles L",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Véronneau S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dunham MJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Badrane H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Ferea T",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Adams J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Brown PO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rosenzweig F",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -23,6 +23,12 @@ from .build import display_name, node_type
 from .communities import members
 
 PROMPT_VERSION = 1
+# The community reports ride the OpenAI-compatible wire on purpose (DECISIONS.md D3):
+# every report prompt fits the daemon's default window by construction, and it keeps
+# a second wire exercised on the same local model. This is the cache identity the
+# committed reports are filed under; the replay stubs present it.
+SUMMARY_MODEL = "llama3.1:8b"
+SUMMARY_PROVIDER_NAME = f"ollama-openai:{SUMMARY_MODEL}"
 MIN_MEMBERS = 3
 MAX_MEMBERS_IN_PROMPT = 30
 
@@ -70,9 +76,7 @@ def write_cache_readme(cache_dir: Path, corpus: str, regenerate: str) -> None:
     """Every recorded-fixture directory says what it is and how to remake it."""
     cache_dir.mkdir(parents=True, exist_ok=True)
     (cache_dir / "README.md").write_text(
-        SUMMARY_CACHE_README.format(
-            corpus=corpus, version=PROMPT_VERSION, regenerate=regenerate
-        )
+        SUMMARY_CACHE_README.format(corpus=corpus, version=PROMPT_VERSION, regenerate=regenerate)
     )
 
 
@@ -86,9 +90,7 @@ class CommunityReport(BaseModel):
     truncated: bool = False
 
 
-def _community_payload(
-    g: nx.Graph[str], nodes: list[str]
-) -> tuple[list[str], list[str]]:
+def _community_payload(g: nx.Graph[str], nodes: list[str]) -> tuple[list[str], list[str]]:
     """Entity lines + relation lines for the prompt, deterministic order."""
     ranked = sorted(nodes, key=lambda n: (-g.degree(n, weight="weight"), n))
     kept = ranked[:MAX_MEMBERS_IN_PROMPT]
@@ -104,9 +106,7 @@ def _community_payload(
     return entity_lines, sorted(relation_lines)
 
 
-def _cache_key(
-    entity_lines: list[str], relation_lines: list[str], provider_name: str
-) -> str:
+def _cache_key(entity_lines: list[str], relation_lines: list[str], provider_name: str) -> str:
     raw = json.dumps([entity_lines, relation_lines, provider_name, PROMPT_VERSION])
     return hashlib.sha256(raw.encode()).hexdigest()[:24]
 
@@ -130,9 +130,7 @@ def summarise_communities(
             if cache_path.exists():
                 cached = CommunityReport.model_validate_json(cache_path.read_text())
                 reports.append(
-                    cached.model_copy(
-                        update={"community_id": cid, "resolution": resolution}
-                    )
+                    cached.model_copy(update={"community_id": cid, "resolution": resolution})
                 )
                 continue
         user = (

@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC7873862:13:39f6740b",
+ "entities": [
+  {
+   "name": "Adeboye P. T.",
+   "type": "organism"
+  },
+  {
+   "name": "Bettiga M.",
+   "type": "organism"
+  },
+  {
+   "name": "Aldaeus F.",
+   "type": "organism"
+  },
+  {
+   "name": "Larsson P. T.",
+   "type": "organism"
+  },
+  {
+   "name": "Olsson L.",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "coniferyl aldehyde",
+   "type": "chemical"
+  },
+  {
+   "name": "ferulic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "p-coumaric acid",
+   "type": "chemical"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Chlamydomonas",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Adeboye P. T.",
+   "predicate": "catabolize",
+   "target": "coniferyl aldehyde"
+  },
+  {
+   "source": "Adeboye P. T.",
+   "predicate": "catabolize",
+   "target": "ferulic acid"
+  },
+  {
+   "source": "Adeboye P. T.",
+   "predicate": "catabolize",
+   "target": "p-coumaric acid"
+  }
+ ],
+ "truncated": false
+}

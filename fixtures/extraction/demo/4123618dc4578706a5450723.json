@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC9757880:8:cc3fe008",
+ "entities": [
+  {
+   "name": "YLL058Wp",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Hsu1p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "homocysteine synthase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "hydrogen sulfide fixation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "methionine",
+   "type": "chemical"
+  },
+  {
+   "name": "Met6p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Str2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Str3p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NaHS",
+   "type": "chemical"
+  },
+  {
+   "name": "OAS",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YLL058Wp",
+   "predicate": "is_responsible_for",
+   "target": "hydrogen sulfide fixation"
+  },
+  {
+   "source": "YLL058Wp",
+   "predicate": "is_homocysteine_synthase",
+   "target": "homocysteine synthase"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "has_bypass",
+   "target": "YLL058Wp"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "has_bypass",
+   "target": "Str2p"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "has_bypass",
+   "target": "hydrogen sulfide fixation"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "has_bypass",
+   "target": "homocysteine synthase"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "has_bypass",
+   "target": "hydrogen sulfide fixation"
+  }
+ ],
+ "truncated": false
+}

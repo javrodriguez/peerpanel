@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13406880:8:b9cac496",
+ "entities": [
+  {
+   "name": "Sam1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ATG2Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HSP42Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "YPD",
+   "type": "chemical"
+  },
+  {
+   "name": "2-deoxyglucose",
+   "type": "chemical"
+  },
+  {
+   "name": "cycloheximide",
+   "type": "chemical"
+  },
+  {
+   "name": "AdoMet",
+   "type": "chemical"
+  },
+  {
+   "name": "AdoMet Fluorescence Assay",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bridge-It",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Principal Component Analysis",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Student’s t-test",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

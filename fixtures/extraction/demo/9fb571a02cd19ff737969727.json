@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13456448:11:3904e165",
+ "entities": [
+  {
+   "name": "CO2",
+   "type": "chemical"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus gattii",
+   "type": "organism"
+  },
+  {
+   "name": "Candida albicans",
+   "type": "organism"
+  },
+  {
+   "name": "Candida glabrata",
+   "type": "organism"
+  },
+  {
+   "name": "Candida tropicalis",
+   "type": "organism"
+  },
+  {
+   "name": "human disease",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "virulence",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "thermotolerance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "tolerance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "carbonic anhydrase",
+   "type": "chemical"
+  },
+  {
+   "name": "carbon dioxide",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cryptococcus neoformans",
+   "predicate": "has",
+   "target": "carbonic anhydrase"
+  }
+ ],
+ "truncated": false
+}

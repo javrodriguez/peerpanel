@@ -17,8 +17,8 @@ from peerpanel.embeddings import store
 from peerpanel.embeddings.pipeline import ci_chunks
 from peerpanel.graph.build import build_graph, display_name, node_type, stats
 from peerpanel.graph.communities import detect
-from peerpanel.graph.extract import extract_many
-from peerpanel.graph.summaries import summarise_communities
+from peerpanel.graph.extract import EXTRACTION_PROVIDER_NAME, extract_many
+from peerpanel.graph.summaries import SUMMARY_PROVIDER_NAME, summarise_communities
 from peerpanel.manuscripts.twins import load_twins
 from peerpanel.providers.base import ChatResponse
 from peerpanel.retrieval import BM25Retriever, GraphLocalRetriever, Index
@@ -29,7 +29,8 @@ QUERY = "How do yeast cells regulate sulfur and methionine metabolism?"
 class _DeterministicOnly:
     """A ChatProvider that refuses: quickstart must run entirely from caches."""
 
-    name = "ollama-openai:llama3.1:8b"  # the cache identity the fixtures were recorded under
+    def __init__(self, name: str) -> None:
+        self.name = name  # the cache identity this replay is filed under
 
     def chat(self, **_: Any) -> ChatResponse:
         raise RuntimeError(
@@ -42,9 +43,10 @@ def run_quickstart(root: Path) -> int:
     chunks, findings = ci_chunks(root)
     n_docs = len({c.chunk_id.split(":", 1)[0] for c in chunks})
     print(f"corpus: {n_docs} docs · {len(chunks)} chunks · {len(findings)} sanitation findings")
-    provider = _DeterministicOnly()
     extractions = extract_many(
-        chunks, provider, cache_dir=root / "fixtures" / "extraction" / "ci"
+        chunks,
+        _DeterministicOnly(EXTRACTION_PROVIDER_NAME),
+        cache_dir=root / "fixtures" / "extraction" / "ci",
     )
     graph = build_graph(extractions)
     graph_stats = stats(graph)
@@ -55,7 +57,11 @@ def run_quickstart(root: Path) -> int:
     communities = detect(graph)
     assignment = communities[1.0]
     reports = summarise_communities(
-        graph, assignment, 1.0, provider, cache_dir=root / "fixtures" / "summaries" / "ci"
+        graph,
+        assignment,
+        1.0,
+        _DeterministicOnly(SUMMARY_PROVIDER_NAME),
+        cache_dir=root / "fixtures" / "summaries" / "ci",
     )
     print(
         f"communities: {len(set(assignment.values()))} at resolution 1.0 · "
@@ -96,6 +102,8 @@ def run_quickstart(root: Path) -> int:
         print(f"  [{report.community_id}] {report.title} ({report.size} members)")
     example = next(iter(sorted(graph.nodes())))
     print(f"\nexample entity: {display_name(graph, example)} ({node_type(graph, example)})")
-    print("\ntier 1 complete — every number above derives from committed bytes; "
-          "live synthesis is tier 2: `make demo` (needs Ollama).")
+    print(
+        "\ntier 1 complete — every number above derives from committed bytes; "
+        "live synthesis is tier 2: `make demo` (needs Ollama)."
+    )
     return 0

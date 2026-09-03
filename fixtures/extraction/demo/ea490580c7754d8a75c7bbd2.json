@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13471478:27:c819d9a0",
+ "entities": [
+  {
+   "name": "Nat Rev Mol Cell Biol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Botta G",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "membrane",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pendrin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "rat thyroid PC Cl3 cells",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J Cell Physiol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Azroyan A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "beta-adrenergic-dependent NaCl retention",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "J Physiol Renal Physiol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bizhanova A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "carboxy-terminal mutants",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "membrane",
+   "predicate": "target",
+   "target": "pendrin"
+  },
+  {
+   "source": "pendrin",
+   "predicate": "translocated_to",
+   "target": "membrane"
+  },
+  {
+   "source": "rat thyroid PC Cl3 cells",
+   "predicate": "cell_type",
+   "target": "pendrin"
+  },
+  {
+   "source": "cAMP",
+   "predicate": "regulates",
+   "target": "pendrin"
+  },
+  {
+   "source": "beta-adrenergic-dependent NaCl retention",
+   "predicate": "involves",
+   "target": "pendrin"
+  },
+  {
+   "source": "carboxy-terminal mutants",
+   "predicate": "mutated",
+   "target": "pendrin"
+  }
+ ],
+ "truncated": false
+}

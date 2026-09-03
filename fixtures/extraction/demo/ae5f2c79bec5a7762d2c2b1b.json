@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC7334043:5:dd4650b5",
+ "entities": [
+  {
+   "name": "RNA interference",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "RNAi",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "RNA molecules",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gene expression",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "translation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "targeted mRNA molecules",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Ku70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RAD52",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CRISPR-Cas9 system",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Cas9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "sgRNA",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "RNAi",
+   "predicate": "inhibit",
+   "target": "gene expression"
+  },
+  {
+   "source": "RNAi",
+   "predicate": "neutralize",
+   "target": "targeted mRNA molecules"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has",
+   "target": "Ku70"
+  }
+ ],
+ "truncated": false
+}

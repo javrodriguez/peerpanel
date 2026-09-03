@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC11102182:4:7365bba4",
+ "entities": [
+  {
+   "name": "R. toruloides IFO0880",
+   "type": "organism"
+  },
+  {
+   "name": "Y. lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "phosphatidylcholine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphatidylethanolamine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphatidylinositol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "phosphatidylglycerol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "glycerol dehydrogenase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "C/N",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "TAG",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "phospholipid",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "phosphatidylcholine"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "phosphatidylethanolamine"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "phosphatidylinositol"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "phosphatidylglycerol"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "glycerol dehydrogenase"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "TAG"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "lipid"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "phospholipid"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "C/N"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "glucose"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "TAG"
+  },
+  {
+   "source": "R. toruloides IFO0880",
+   "predicate": "has_lipid_profile",
+   "target": "lipid"
+  }
+ ],
+ "truncated": false
+}

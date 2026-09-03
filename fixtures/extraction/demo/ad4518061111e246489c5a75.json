@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC9757880:13:4a7ee29e",
+ "entities": [
+  {
+   "name": "met17Δ",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Met17p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Eggnog Database",
+   "type": "organism"
+  },
+  {
+   "name": "Hydrogen sulfide",
+   "type": "chemical"
+  },
+  {
+   "name": "Lead sulfate",
+   "type": "chemical"
+  },
+  {
+   "name": "AzMC",
+   "type": "chemical"
+  },
+  {
+   "name": "AMC",
+   "type": "chemical"
+  },
+  {
+   "name": "NaHS",
+   "type": "chemical"
+  },
+  {
+   "name": "YNB",
+   "type": "chemical"
+  },
+  {
+   "name": "Yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Minimal media",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "met17Δ",
+   "predicate": "has_deletion",
+   "target": "Met17p"
+  },
+  {
+   "source": "met17Δ",
+   "predicate": "is_in",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "Met17p",
+   "predicate": "has_ortholog",
+   "target": "Met17p"
+  },
+  {
+   "source": "Met17p",
+   "predicate": "is_in",
+   "target": "S. cerevisiae"
+  },
+  {
+   "source": "Met17p",
+   "predicate": "is_ortholog_of",
+   "target": "Met17p"
+  },
+  {
+   "source": "Met17p",
+   "predicate": "is_in",
+   "target": "Eggnog Database"
+  },
+  {
+   "source": "Met17p",
+   "predicate": "is_ortholog_of",
+   "target": "Met17p"
+  }
+ ],
+ "truncated": false
+}

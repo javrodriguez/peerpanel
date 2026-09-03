@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13274398:1:4331305e",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Beggiatoa sp.",
+   "type": "organism"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PKA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "adenylyl cyclase Cyr1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pde1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pde2",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bPAC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "β-carotene",
+   "type": "chemical"
+  },
+  {
+   "name": "cordycepin",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "glycogen",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has",
+   "target": "cAMP"
+  },
+  {
+   "source": "Beggiatoa sp.",
+   "predicate": "has",
+   "target": "bPAC"
+  },
+  {
+   "source": "cAMP",
+   "predicate": "regulates",
+   "target": "PKA"
+  },
+  {
+   "source": "adenylyl cyclase Cyr1",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "Pde1",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "Pde2",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "bPAC",
+   "predicate": "regulates",
+   "target": "cAMP"
+  },
+  {
+   "source": "cAMP",
+   "predicate": "increases",
+   "target": "β-carotene"
+  },
+  {
+   "source": "cAMP",
+   "predicate": "increases",
+   "target": "cordycepin"
+  },
+  {
+   "source": "glucose",
+   "predicate": "regulates",
+   "target": "adenylyl cyclase Cyr1"
+  },
+  {
+   "source": "glycogen",
+   "predicate": "is regulated by",
+   "target": "PKA"
+  }
+ ],
+ "truncated": false
+}

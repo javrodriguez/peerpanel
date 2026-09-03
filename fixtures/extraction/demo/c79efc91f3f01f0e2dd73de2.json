@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC9157227:2:dfa631f1",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Hu",
+   "type": "organism"
+  },
+  {
+   "name": "Ji",
+   "type": "organism"
+  },
+  {
+   "name": "KU70",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtE",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "crtYB",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "geranylgeranyl diphosphate synthase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "phytoene dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "phytoene synthase/lycopene cyclase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ARS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NHEJ",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "KU70"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "crtE"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "crtI"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "crtYB"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "ARS"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_gene",
+   "target": "NHEJ"
+  }
+ ],
+ "truncated": false
+}

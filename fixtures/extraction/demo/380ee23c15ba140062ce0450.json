@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC5484544:16:46bb80e7",
+ "entities": [
+  {
+   "name": "Sch9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "TORC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "PKA",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tap42",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "rapamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "autophagy",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "vacuolar H+-ATPase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein kinase A",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "protein kinase B",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AMPK",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sch9",
+   "predicate": "regulates",
+   "target": "autophagy"
+  },
+  {
+   "source": "TORC1",
+   "predicate": "regulates",
+   "target": "Sch9"
+  },
+  {
+   "source": "PKA",
+   "predicate": "regulates",
+   "target": "Sch9"
+  },
+  {
+   "source": "protein kinase A",
+   "predicate": "regulates",
+   "target": "Sch9"
+  },
+  {
+   "source": "protein kinase B",
+   "predicate": "regulates",
+   "target": "Sch9"
+  }
+ ],
+ "truncated": false
+}

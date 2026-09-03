@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC9157227:14:c90f1a24",
+ "entities": [
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Neurospora crassa",
+   "type": "organism"
+  },
+  {
+   "name": "HMG-CoA reductase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "carotenoid",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "brewery effluents",
+   "type": "chemical"
+  },
+  {
+   "name": "2030 agenda",
+   "type": "organism"
+  },
+  {
+   "name": "sustainable development",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "post-2015 development agenda",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "general assembly",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "produces",
+   "target": "carotenoid"
+  },
+  {
+   "source": "HMG-CoA reductase",
+   "predicate": "produces",
+   "target": "carotenoid"
+  },
+  {
+   "source": "2030 agenda",
+   "predicate": "has",
+   "target": "sustainable development"
+  },
+  {
+   "source": "post-2015 development agenda",
+   "predicate": "has",
+   "target": "sustainable development"
+  },
+  {
+   "source": "general assembly",
+   "predicate": "has",
+   "target": "sustainable development"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "cultivated",
+   "target": "brewery effluents"
+  }
+ ],
+ "truncated": false
+}

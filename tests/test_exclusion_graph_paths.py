@@ -49,9 +49,12 @@ EXTRACTIONS = [
 
 REPORTS = [
     CommunityReport(
-        community_id=0, resolution=1.0, size=3,
+        community_id=0,
+        resolution=1.0,
+        size=3,
         member_names=["sulfur metabolism", "sulfate reduction", "Hollingsworth"],
-        title="Sulfur metabolism", summary="Sulfur metabolism and its measurement.",
+        title="Sulfur metabolism",
+        summary="Sulfur metabolism and its measurement.",
     )
 ]
 ASSIGNMENT = {"sulfur metabolism": 0, "sulfate reduction": 0, "hollingsworth": 0}

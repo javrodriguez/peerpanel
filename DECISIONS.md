@@ -15,6 +15,8 @@ When you would NOT build this yourself: with Python ≤3.13 and no need to instr
 
 ## D3 — Two wire protocols, honestly labeled
 The provider seam is exercised over two genuinely different wire protocols against the same local models (the OpenAI client pointed at Ollama, and the native Ollama client).
+Since D19 the assignment is by prompt size: every long-prompt role (the reviewers, the verifier, the converger, the single-agent baseline, graph extraction) runs on the native wire, which sizes the window per call; the community reports run on the OpenAI wire, whose prompts fit the server's default window by construction and which refuses any call that would not.
+Both wires are exercised on the same model in every index build, so the seam claim stays a measured one.
 The Anthropic adapter is implemented and wire-shape-tested but has never made a call from this repo — no API key exists on the development machine and none was requested; the code and tests say exactly that.
 
 ## D4 — Workspace folder keeps its working name
@@ -37,9 +39,10 @@ Keeping twins out of the corpus entirely would make each run's exclusion set emp
 Graph extraction pays one local-LLM call per chunk, so every parameter here was measured, not assumed (all timings on this machine, llama3.1:8b Q4, Apple Silicon, 2026-08-31):
 - **Extractor model**: llama3.1:8b. qwen2:7b measured faster (23.0s vs 31.7s per 300-word chunk) but returned ZERO relations on the same input — edges are what make the graph a graph, so speed lost to quality.
 - **Output caps enforced in the schema**: asking the model for "at most 12 entities" in prose was ignored (40+ entities, >1000 output tokens); `maxItems` in the JSON schema enforces it through constrained decoding (exactly 12 came back, ~half the output tokens). Prompt version bumped so the cache re-keys.
-- **One chunking everywhere, 900 words (~1200 tokens)**: extraction, embeddings and retrieval share one chunk id space (entity→chunk→vector joins by id), and 900 words cuts the CI corpus from 785 to 212 chunks — 3.7× fewer LLM calls for the same coverage. The embedding fixture was regenerated for real (212×768 f16, nomic-embed-text, sha256 in its manifest).
+- **One chunking everywhere, 900 words (~1200 tokens)**: extraction, embeddings and retrieval share one chunk id space (entity→chunk→vector joins by id), and 900 words cuts the CI corpus from 814 to 234 chunks — 3.5× fewer LLM calls for the same coverage. The embedding fixture was regenerated for real (234×768 f16, nomic-embed-text, sha256 in its manifest). Since D19 a chunk may run slightly over the target: an oversize paragraph is split at sentence ends, and a window carrying less than 60 words of new text joins its neighbour rather than becoming a chunk that costs a model call and returns nothing.
 - **Server parallelism**: the local Ollama daemon shipped serving one request at a time (measured 1.0× speedup on 4 concurrent calls). Restarted with OLLAMA_NUM_PARALLEL=4 · OLLAMA_CONTEXT_LENGTH=4096 (per-slot; the first attempt at 16384 per-slot ballooned the KV cache past GPU memory — 65536 total context, partial CPU offload, generation crawled — and was corrected). Post-restart toy-probe speedup 1.9×; the CI bake's own wall-clock is the number that governs demo-corpus sizing (the plan's 8-hour trigger reads the measured rate).
 - A truncated extraction is retried once at doubled output budget, then recorded honestly as `truncated=true` — counted in build stats, never a crash, never an invented result.
+- **The daemon has since been returned to its defaults** — one request at a time, and a **4,096-token window**, not the 32k an earlier version of this line claimed; that mistaken belief is what D19 corrects. Every committed panel and planted-error record ran against that configuration with the window sized per call, so its wall-clock is the *serialised* cost: the verifier's thread pool and the baseline's samples queue at the server. The figures are comparable to each other, not to the parallel-server numbers above.
 
 ## D8 — Demo scope: two query manuscripts, measured against two hard gates
 Two constraints bind the demo corpus in opposite directions: the wall-clock trigger (a full-index build over 8 measured hours forces the minimum cut) and the ground-truth gate (recall/NDCG are only reported at >=20 aggregate relevant documents; below it, per-item hit tables only).
@@ -51,7 +54,7 @@ So the demo runs MET17 + the oleaginous-biopolymer manuscript; caprin is deferre
 Biopolymer was kept over caprin deliberately: nitrogen-metabolism text is topically adjacent to the sulfur-heavy corpus, which makes retrieval harder and the reported numbers more honest than caprin's easily-separable heterochromatin domain would.
 The caprin twin (PMC11918387) stays out of the demo corpus entirely — the non-empty-exclusion assertion binds per RUN, and caprin has no run; it re-enters WITH its manuscript if the three-manuscript expansion lands (its ingest, twin row and ground truth are already committed).
 Why this scope reduction is legal under both laws: the wall-clock trigger sanctions reducing MANUSCRIPT scope (the plan's own minimum cut drops to one manuscript, so whole-manuscript reduction is the designed escape hatch), while the ground-truth tie-break bars cutting ground-truth DOCUMENTS within whatever scope is kept — and every kept manuscript's forced includes are untouched here.
-**Outcome:** the demo index built in 6.4 h against the 6.8 h projection and the 8 h ceiling, 948 chunks, zero truncated — the measure-then-rule ordering was worth it, and a scope guessed rather than measured would have been wrong in one direction or the other.
+**Outcome:** the demo index built in 6.4 h against the 6.8 h projection and the 8 h ceiling, 948 chunks, zero truncated (superseded by D19: rebuilt with prompts read whole and a minimum chunk size, the same corpus is 1,077 chunks and 11.9 h — the projection was sound, the run it was measured against was not) — the measure-then-rule ordering was worth it, and a scope guessed rather than measured would have been wrong in one direction or the other.
 
 ## D9 — Community reports are generated at the resolution retrieval reads
 Leiden runs at three resolutions on both corpora and the full hierarchy is persisted (`artifacts/<corpus>/communities.json`) — that is the cheap, deterministic half.
@@ -104,9 +107,14 @@ though it were settled:
 1. A hits column computed at k=30 published under a `k = 10` heading — which happened to flatter the
    graph rung, and reversed the true ordering at the reported depth (BM25 13, GraphRAG local 12).
 2. Swap-consistency published as `0.50` from a single run; an independent second run of the same
-   panel returned 0.417.
+   panel returned 0.417. (Both withdrawn by D19. On the rebuilt panel the two runs are
+   byte-identical and the rate is 0.70 — the spread that made this a lesson about single runs was
+   itself an artifact of the truncation.)
 3. `GraphRAG local wins on recall, 0.393` — the mean of a decisive win on one manuscript (0.500) and
    a clear loss on the other (0.286), with the rung ordering reversing between the only two cases.
+   (Withdrawn by D19; on the rebuilt index graphrag-local is the worst rung at 0.312 and
+   graphrag-global the best at 0.473 — the split-decision shape survived the rebuild, the ranking
+   did not.)
 4. Latency labelled "median" while the code computed a mean.
 None was a lie and none was caught by a test; each was a number carrying more confidence than its
 evidence supported, in a repo whose entire credibility rests on the opposite.
@@ -162,6 +170,91 @@ is trying to prove will spare its load-bearing assumption.** Several careful pas
 harness asked whether the numbers were right and none asked whether the lists were the same length,
 because that question only occurs to someone with no stake in the answer. Where an assumption is
 load-bearing, encode it as a test rather than trusting review to catch it — including this one.
+
+## D18 — A published record is the output of the code that ships it, and both arms of a comparison are scored by one function
+Two records under `results/` were once the output of an *earlier* commit: a schema had gained a field
+that changed what an aggregate meant, the old records loaded fine because the field had a default,
+and the prose beside them quoted numbers the current code could not have produced. Separately, the
+two arms of the planted-error evaluation were scored through two different paths — one arm on its
+finding text, the other on finding text plus a quoted span — so the comparison carried an asymmetry
+nobody had asserted.
+
+The rules, each of which a test now holds:
+- **A field whose absence changes a number's meaning has no default.** `ClaimVerdict.swapped`
+  decides the swap-consistency denominator, so it is required: a record from before the field
+  cannot load as if it had been judged. When a schema change makes old records unloadable, the
+  records are re-run and replaced, never patched by hand.
+- **Every committed record is a function of the rows it carries.** `tests/test_artifact_conformance.py`
+  finds every record by glob and recomputes each aggregate — swap rates and their n, per-source
+  rates, conflicts, detected/missed — from the record's own rows with the current code. A record
+  whose summary disagrees with its rows was not produced by this commit.
+- **Every regenerate command names the file it regenerates.** Each publishing command answers
+  `--where` with the path it would write, and `tests/test_regenerate_commands.py` expands every
+  `make` line the results table cites and requires that path to be the row's file.
+- **One scoring function for both arms.** `scored_text` is the only road from a finding to the
+  string the detector reads, both arms are asked for a quote, and both records carry the exact
+  strings they were scored on so the detection can be recomputed.
+- **The verifier judges propositions, not opinions.** Reviewer findings on soundness and
+  contribution are decomposed into atomic claims about the science before verification, under a
+  rule that excludes remarks on writing and presentation. A finding judged verbatim produced
+  verdicts about a reviewer's phrasing, and a REFUTES without a retrieved span is the judge's word
+  alone — it no longer counts as an evidence conflict.
+
+What is *not* equalised is disclosed with its direction: the panel retrieves per reviewer and per
+claim while the baseline retrieves once; the baseline's budget is a ceiling it stops short of; the
+detector under-credits a described-but-unquoted catch on either arm. `results/RESULTS.md` lists
+each asymmetry, whom it favours, and whether the conclusion survives them together.
+
+## D19 — A window is sized per call and a cut prompt is refused; every record before 2 September is withdrawn
+Ollama serves a model inside a fixed window (`num_ctx`), 4,096 tokens by default, and a prompt that does not fit is not refused: the runner keeps the first four tokens, drops the middle and evaluates the tail — on a 4,096 window the prompt comes back as 2,050 tokens (`llm/llama_server.go`, `contextShiftPromptLimit`) — and logs a warning the caller never sees.
+The system prompt is the first thing to go.
+This project believed the daemon's default was 32k (D7) and ran every reviewer, verifier, converger, baseline and extraction call on the OpenAI-compatible wire, which cannot set the window at all.
+The reviewer prompt is ~15,000 characters, ~4,100 tokens on qwen2: every reviewer read half a manuscript excerpt and no rubric, the verifier judged claims against evidence it had partly read, and the "headline loss" (a 1-of-3 panel against a 3-of-3 baseline) was measured on a panel that had never seen its own instructions.
+The community-report prompts (≤ ~900 tokens) were the one role that fit.
+
+The rules, each held by `tests/test_context_contract.py`:
+- **Size before the call.** `providers/context.py` bounds the prompt's tokens from its characters, adds the whole output budget and Ollama's reserved token, and picks the smallest power-of-two window from 4,096 up to a 32,768 ceiling (qwen2's trained window; this machine's memory spilled above it, D7).
+  The bound is 1.5 characters per token, and it took three attempts to get there — which is the argument for where it sits.
+  It began at 3.0, from a ratio measured on prose. Measuring the extraction prompt — a passage followed by a JSON list of candidate terms, thick with gene symbols and accession numbers — gave 2.71, so it moved to 2.5. Then the largest prompt in the demo corpus measured 2.21 and overran the window that bound had just chosen for it by 498 tokens: a prompt this code had sized would have been silently cut, which is the defect itself, reappearing inside its own fix.
+  Measured by asking each model to read a real prompt and emit one token: reviewer prompts read 3.49 characters per token on qwen2 and 3.90 on llama3.1; extraction prompts read 4.40 at their thinnest and 2.21 at their worst.
+  The ratio is a property of the text rather than the model, so every look at denser text moved it down again, and the answer is to stop chasing the measurements and sit well under all of them.
+  1.5 leaves the typical prompt where it was — the median extraction prompt in both corpora still takes an 8,192 window, as it did at 3.0 — and moves the largest third up to 16,384: 310 of the demo corpus's 1,077 chunks, where the biggest prompt either corpus contains (16,959 characters, 7,666 real tokens) has more than half the window spare.
+  Nothing reaches the 32,768 ceiling.
+  The native wire passes that window on every call.
+  The OpenAI wire cannot, so it reads the window its own calls run in — after a one-token call of its own, because the server reloads the runner whenever a request's window differs from the resident one, and a `ps` read taken before this wire has spoken reports the *other* wire's window (measured: a model left at 8,192 by the native wire came back at 4,096 on the next OpenAI-wire call) — and refuses, with the remedy, any call that would not fit.
+  A prompt above the ceiling is a budgeting defect upstream and is reported as one, never squeezed.
+- **Check after the call.** A prompt count below one sixth of the characters sent is the truncation signature, and the call raises instead of returning an answer the model never read.
+  What it catches is the case that produced every withdrawn record: a prompt sized for one window served in a much smaller one, which reads far above any real tokenizer — a prompt built for 8,192 tokens and cut on a 4,096 window reads about ten characters per token.
+  What it does not catch is a prompt that overruns, by a little, the window it was correctly given, and no threshold could.
+  The runner cuts such a prompt to about half the window, and half of a window it had nearly filled still reads as an ordinary ratio: the largest prompt an 8,192 window admits under this bound is about 10,400 characters, so cut to 4,096 tokens it reads 2.5 characters per token — inside the 2.21-to-4.40 band that genuine prompts here occupy.
+  A cut of that shape is indistinguishable from dense text by counting characters, whatever the threshold is set to, so the case is *prevented* by the sizing bound's margin rather than detected.
+  `tests/test_context_contract.py` pins that blind spot explicitly instead of asserting a separation that does not exist.
+  The threshold stays at 6 because nothing genuine comes near it: the thinnest prompt measured reads 4.40, and the most sequence-heavy passage in either corpus — 24.5% nucleotide runs in one chunk, the only one above 3% — cannot carry a whole prompt there.
+  Saying so matters more than the check: a guard whose limits are undocumented is read as covering everything.
+- **Every record carries the proof, read per call.** `CallStats` — calls, the largest prompt, the smallest window, and the smallest margin between a prompt and the window *that* prompt ran in — is a required field on every panel review, both planted-evaluation arms and every build record.
+  The margin is the proof and the other three are description: the largest prompt and the smallest window usually belong to different calls, so comparing those two refuses honest records while proving nothing about either call.
+  The committed CI build record is the example — a 5,238-token prompt beside a 4,096-token smallest window, which the discarded comparison reads as a cut prompt, and a smallest margin of 2,747 tokens, which is what actually happened.
+  `tests/test_artifact_conformance.py` requires the margin to be positive on every committed record, and a record that predates the field cannot load.
+  The guarantee is enforced at the wire rather than by the statistic: a prompt that will not fit is refused before the call, and a prompt served in a window far below the one requested raises after it.
+  Between them sits the blind spot above, which is why the margin is described as a record of what happened and not as a proof that nothing was cut — the thing that keeps a marginal overrun from happening at all is the bound's margin, and saying otherwise would claim a guarantee this code does not have.
+- **The roles are assigned by prompt size** (D3): long prompts on the native wire, community reports on the OpenAI wire, so both wires still run on the same model in every build.
+- **An oversize paragraph is split at sentence ends before it reaches a model.** A reference list or a results block of several thousand words used to become one chunk and one prompt, cut to its tail by the window; `text/chunks.py` now splits it into pieces that fit and never carries a piece as overlap (that doubled the size of every chunk of a long paragraph in the first attempt).
+  A sentence end is decided against the word before it, because the pattern that finds boundaries admits a digit or an opening bracket after the full stop — a bibliography's sentences begin `[12]` and `(2019)` as often as they begin with a capital — and that same tolerance splits `et al. (2019)`, `Fig. 3` and the initial in `J. Smith` mid-sentence unless an abbreviation list stops it.
+  A lone sentence longer than the target has no boundary to cut at and stays whole: the provider sizes a window to fit it and refuses only above the ceiling.
+- **A chunk must carry text of its own.** The split's first version ended one document on a chunk containing `2.` — one extraction call and one embedding for one character of text — and mid-document it could close a window holding two new words, producing a chunk that was almost entirely the previous chunk's overlap.
+  Below a 60-word minimum a window now takes the next paragraph in with it, or joins the chunk before it at a document's end; both halves are proven against the rule disabled, because an assertion that passes on a no-op is the D11 defect this repository already shipped once.
+- **A quote is a sentence, enforced in the schema.** Once the reviewer prompt was read whole, qwen2 copied entire paragraphs into every finding's `quote` and ran its output budget dry on the first finding; `maxLength: 240` in the JSON schema bounds it through constrained decoding, in both evaluation arms alike, so the fix cannot favour one.
+- **One structured call, one retry.** `agents/json_call.py` is the single road for every JSON-producing call in the panel and the baseline: the caller's temperature, one retry at double the output budget, both calls ledgered.
+
+What it cost, and why nothing was kept.
+Every extraction record, every community report and every published record was re-made cold by this code: no cache in this repository predates this commit.
+The cheaper road was tried first and the measurement is why it was abandoned.
+Records whose chunk text was unchanged could have been re-filed under the native wire's cache identity, and rebuilding the CI corpus cold to check gave a first answer that looked comfortable — of 197 eligible records, 137 came back byte-identical and the 60 that differed had a median entity overlap of 0.85.
+The second answer settled it. Ollama's own log counts the tokens in every prompt it is given, and on this corpus, under the new and *smaller* chunks, roughly one extraction prompt in fourteen is over 4,096 tokens — 29 of 429 measured across the CI and demo builds, reaching 4,562.
+Under the old default window those could not have been read whole, so a fraction of the retained records were written from prompts the server had already cut, and no amount of output overlap tells you which.
+The log carries the signature plainly: a large cluster of historical calls report a prompt length of exactly 2,050 tokens, which is not a length any prompt here has — it is 4,096 minus half of 4,092, the length the runner cuts to.
+The community reports were kept under the same reasoning until the same doubt applied: their prompts are short by construction, but "by construction" was the belief that produced this decision in the first place, and their cache carried no evidence either way.
+Both caches were wiped. The reports cost twenty minutes to rebuild; the certainty is worth more than the twenty minutes, and the wire now refuses an oversize summary prompt rather than asking a reader to trust that none exists.
 
 ## A note on what this file records
 This log records **decisions, their rationale and the rules they produced** — the questions a reader

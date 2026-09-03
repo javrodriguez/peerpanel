@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC10398944:16:b496066f",
+ "entities": [
+  {
+   "name": "Monroe MW",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shaw JL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Daly DS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Adkins JN",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Smith RD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MASIC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Matzke MM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Waters KM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metz TO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jacobs JM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sims AC Baric RS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Webb-Robertson B-JM",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Monroe MW",
+   "predicate": "developed",
+   "target": "MASIC"
+  }
+ ],
+ "truncated": false
+}

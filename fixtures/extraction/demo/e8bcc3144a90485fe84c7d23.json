@@ -1,0 +1,79 @@
+{
+ "chunk_id": "PMC13515494:10:3ae14618",
+ "entities": [
+  {
+   "name": "microorganisms-14-01623-t001_Table 1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "base wine",
+   "type": "chemical"
+  },
+  {
+   "name": "0.9879",
+   "type": "chemical"
+  },
+  {
+   "name": "12.81",
+   "type": "chemical"
+  },
+  {
+   "name": "4.41",
+   "type": "chemical"
+  },
+  {
+   "name": "0.24",
+   "type": "chemical"
+  },
+  {
+   "name": "3.26",
+   "type": "chemical"
+  },
+  {
+   "name": "MDPI",
+   "type": "organism"
+  },
+  {
+   "name": "editor(s)",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "microorganisms-14-01623-t001_Table 1",
+   "predicate": "has parameter",
+   "target": "base wine"
+  },
+  {
+   "source": "microorganisms-14-01623-t001_Table 1",
+   "predicate": "has parameter",
+   "target": "0.9879"
+  },
+  {
+   "source": "microorganisms-14-01623-t001_Table 1",
+   "predicate": "has parameter",
+   "target": "12.81"
+  },
+  {
+   "source": "microorganisms-14-01623-t001_Table 1",
+   "predicate": "has parameter",
+   "target": "4.41"
+  },
+  {
+   "source": "microorganisms-14-01623-t001_Table 1",
+   "predicate": "has parameter",
+   "target": "0.24"
+  },
+  {
+   "source": "microorganisms-14-01623-t001_Table 1",
+   "predicate": "has parameter",
+   "target": "3.26"
+  },
+  {
+   "source": "MDPI",
+   "predicate": "publishes",
+   "target": "microorganisms-14-01623-t001_Table 1"
+  }
+ ],
+ "truncated": false
+}

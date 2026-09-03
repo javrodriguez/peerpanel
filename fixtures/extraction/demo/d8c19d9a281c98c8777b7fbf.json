@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13513244:15:ff6f129b",
+ "entities": [
+  {
+   "name": "Aminoacyl-tRNA synthetases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Genetic code",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Evolutionary process",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Charcot-Marie-Tooth disease",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Tyrosyl-tRNA synthetase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Histidyl-tRNA synthetase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Methionyl-tRNA synthetase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "IARS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "KARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NARS1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "HARS",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "MetRS",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

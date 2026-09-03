@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC7953724:9:b8fdbfd8",
+ "entities": [
+  {
+   "name": "Papanikolaou S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Aggelis G",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Microbial products",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "wastes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "residues",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FEMS Microbiol Lett",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Knothe G Biodiesel",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "renewable diesel",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "comparison",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Prog Energy Combust Sci",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Okoye PU Hameed BH Review",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "catalytic carboxylation",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Papanikolaou S",
+   "predicate": "author",
+   "target": "Microbial products"
+  },
+  {
+   "source": "Aggelis G",
+   "predicate": "author",
+   "target": "Microbial products"
+  },
+  {
+   "source": "Microbial products",
+   "predicate": "title",
+   "target": "FEMS Microbiol Lett"
+  },
+  {
+   "source": "Knothe G Biodiesel",
+   "predicate": "title",
+   "target": "Prog Energy Combust Sci"
+  },
+  {
+   "source": "Papanikolaou S",
+   "predicate": "author",
+   "target": "FEMS Microbiol Lett"
+  },
+  {
+   "source": "Aggelis G",
+   "predicate": "author",
+   "target": "FEMS Microbiol Lett"
+  },
+  {
+   "source": "Knothe G Biodiesel",
+   "predicate": "title",
+   "target": "Prog Energy Combust Sci"
+  },
+  {
+   "source": "Papanikolaou S",
+   "predicate": "author",
+   "target": "Microbial products"
+  },
+  {
+   "source": "Aggelis G",
+   "predicate": "author",
+   "target": "Microbial products"
+  }
+ ],
+ "truncated": false
+}

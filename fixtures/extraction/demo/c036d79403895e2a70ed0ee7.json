@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13464734:4:864fab2a",
+ "entities": [
+  {
+   "name": "DoUGT71K2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GT1 glycosyltransferase family",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Dendrobium hybrid cultivar",
+   "type": "organism"
+  },
+  {
+   "name": "D. huoshanense",
+   "type": "organism"
+  },
+  {
+   "name": "Orchidaceae",
+   "type": "organism"
+  },
+  {
+   "name": "N. benthamiana",
+   "type": "organism"
+  },
+  {
+   "name": "A0A1S6JYF7.1.A",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoMYB102",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "DoMYB4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "D. officinale",
+   "type": "organism"
+  },
+  {
+   "name": "SWISS-MODEL Workspace",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PlantCARE online database",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DoUGT71K2",
+   "predicate": "has_homodimer",
+   "target": "A0A1S6JYF7.1.A"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC7382830:1:ca59f2c5",
+ "entities": [
+  {
+   "name": "Adaptive Laboratory Evolution",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Escherichia coli K-12 MG1655",
+   "type": "organism"
+  },
+  {
+   "name": "regulons",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pathways",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "clusters of orthologous groups (COG)",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "mutations",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "selection pressure",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "adaptive phenotypes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "industrially relevant strains",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bioproduction",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ALEdb",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "enrichment methods",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mutations",
+   "predicate": "contributes_to",
+   "target": "adaptive phenotypes"
+  },
+  {
+   "source": "mutations",
+   "predicate": "contributes_to",
+   "target": "selection pressure"
+  },
+  {
+   "source": "regulons",
+   "predicate": "involves",
+   "target": "pathways"
+  },
+  {
+   "source": "pathways",
+   "predicate": "involves",
+   "target": "clusters of orthologous groups (COG)"
+  },
+  {
+   "source": "mutations",
+   "predicate": "contributes_to",
+   "target": "bioproduction"
+  },
+  {
+   "source": "ALEdb",
+   "predicate": "reports",
+   "target": "mutations"
+  }
+ ],
+ "truncated": false
+}

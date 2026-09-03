@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC10832132:8:0ce4bf72",
+ "entities": [
+  {
+   "name": "GDF8",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GDF11",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GDF8_HUMAN",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GDF11_HUMAN",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "TGFβ",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "CNS",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "FS288",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Heparin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Follistatin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AnnoPRO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeepGOPlus",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PFmulDL",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

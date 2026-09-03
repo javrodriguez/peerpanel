@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC11102182:11:8b600480",
+ "entities": [
+  {
+   "name": "Zhang S",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Jagtap SS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Deewan A",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rao CV",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "pH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "citric acid",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "Yarrowia lipolytica W29",
+   "type": "organism"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "Bolger AM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Lohse M",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Zhang S",
+   "predicate": "regulates",
+   "target": "Yarrowia lipolytica W29"
+  }
+ ],
+ "truncated": false
+}

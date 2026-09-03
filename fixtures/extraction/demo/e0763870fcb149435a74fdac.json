@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13450799:20:69bb17df",
+ "entities": [
+  {
+   "name": "YGP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Arthur J. Lustig",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS ONE",
+   "type": "organism"
+  },
+  {
+   "name": "PLOS",
+   "type": "organism"
+  },
+  {
+   "name": "reviewer",
+   "type": "organism"
+  },
+  {
+   "name": "Dr. Irie",
+   "type": "organism"
+  },
+  {
+   "name": "manuscript",
+   "type": "organism"
+  },
+  {
+   "name": "tables",
+   "type": "organism"
+  },
+  {
+   "name": "Figures 4B",
+   "type": "organism"
+  },
+  {
+   "name": "S2B",
+   "type": "organism"
+  },
+  {
+   "name": "Figures 5B",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "YGP1",
+   "predicate": "expressed_in",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "Arthur J. Lustig",
+   "predicate": "edited",
+   "target": "manuscript"
+  },
+  {
+   "source": "PLOS ONE",
+   "predicate": "published",
+   "target": "manuscript"
+  },
+  {
+   "source": "reviewer",
+   "predicate": "commented",
+   "target": "manuscript"
+  },
+  {
+   "source": "Dr. Irie",
+   "predicate": "submitted",
+   "target": "manuscript"
+  },
+  {
+   "source": "tables",
+   "predicate": "included_in",
+   "target": "manuscript"
+  },
+  {
+   "source": "Figures 4B",
+   "predicate": "included_in",
+   "target": "manuscript"
+  },
+  {
+   "source": "S2B",
+   "predicate": "included_in",
+   "target": "manuscript"
+  },
+  {
+   "source": "Figures 5B",
+   "predicate": "included_in",
+   "target": "manuscript"
+  }
+ ],
+ "truncated": false
+}

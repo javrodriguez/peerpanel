@@ -1,0 +1,91 @@
+{
+ "chunk_id": "PMC13515017:12:3071f8d0",
+ "entities": [
+  {
+   "name": "Y'",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chr V-R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chr I",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chr II",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chr VIII",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SGD",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "FY4",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yku70Δ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SUL1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SUL1 amplicons",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces Genome Database",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nanopore",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "chr II",
+   "predicate": "is_amplified",
+   "target": "SUL1"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "is_amplified",
+   "target": "chr II"
+  },
+  {
+   "source": "SGD",
+   "predicate": "has_phenotypic_characteristics",
+   "target": "FY4"
+  },
+  {
+   "source": "SGD",
+   "predicate": "has_phenotypic_characteristics",
+   "target": "yku70Δ"
+  },
+  {
+   "source": "SGD",
+   "predicate": "has_phenotypic_characteristics",
+   "target": "SUL1"
+  },
+  {
+   "source": "SGD",
+   "predicate": "has_phenotypic_characteristics",
+   "target": "Saccharomyces Genome Database"
+  },
+  {
+   "source": "SGD",
+   "predicate": "has_phenotypic_characteristics",
+   "target": "Nanopore"
+  }
+ ],
+ "truncated": false
+}

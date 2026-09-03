@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13514482:6:cbf71924",
+ "entities": [
+  {
+   "name": "Z68",
+   "type": "organism"
+  },
+  {
+   "name": "M58",
+   "type": "organism"
+  },
+  {
+   "name": "FV0027",
+   "type": "organism"
+  },
+  {
+   "name": "protein",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "fat",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "dietary fiber",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "lysine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "methionine",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "iron",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "potassium",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "riboflavin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "nutritional value",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

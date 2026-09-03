@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC13515273:8:70619f5b",
+ "entities": [
+  {
+   "name": "Sawant S.S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Park H.Y.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sim E.Y.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kim H.S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Choi H.S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Microbial Fermentation",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Food",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Impact",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Functional Properties",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nutritional Enhancement",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "A Review",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Recent Developments Fermentation",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sawant S.S.",
+   "predicate": "author",
+   "target": "Microbial Fermentation"
+  },
+  {
+   "source": "Park H.Y.",
+   "predicate": "author",
+   "target": "Microbial Fermentation"
+  },
+  {
+   "source": "Sim E.Y.",
+   "predicate": "author",
+   "target": "Microbial Fermentation"
+  },
+  {
+   "source": "Kim H.S.",
+   "predicate": "author",
+   "target": "Microbial Fermentation"
+  },
+  {
+   "source": "Choi H.S.",
+   "predicate": "author",
+   "target": "Microbial Fermentation"
+  },
+  {
+   "source": "Microbial Fermentation",
+   "predicate": "impact",
+   "target": "Food"
+  },
+  {
+   "source": "Microbial Fermentation",
+   "predicate": "functional properties",
+   "target": "Functional Properties"
+  },
+  {
+   "source": "Microbial Fermentation",
+   "predicate": "nutritional enhancement",
+   "target": "Nutritional Enhancement"
+  },
+  {
+   "source": "Microbial Fermentation",
+   "predicate": "review",
+   "target": "A Review"
+  },
+  {
+   "source": "Microbial Fermentation",
+   "predicate": "recent developments",
+   "target": "Recent Developments Fermentation"
+  }
+ ],
+ "truncated": false
+}

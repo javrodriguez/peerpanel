@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC11974387:14:d7426e44",
+ "entities": [
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Pyruvate decarboxylase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Thiamine biosynthetic genes",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pdc2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "L-lactic acid",
+   "type": "chemical"
+  },
+  {
+   "name": "L-lactate dehydrogenase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "2,3-butanediol",
+   "type": "chemical"
+  },
+  {
+   "name": "NADH oxidase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Acetyl-CoA synthetases",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Bacterial pyruvate dehydrogenase complex",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Mth1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Snf3",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Pyruvate decarboxylase"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_gene",
+   "target": "Thiamine biosynthetic genes"
+  },
+  {
+   "source": "Pdc2",
+   "predicate": "regulates",
+   "target": "Pyruvate decarboxylase"
+  },
+  {
+   "source": "Pdc2",
+   "predicate": "regulates",
+   "target": "Thiamine biosynthetic genes"
+  },
+  {
+   "source": "L-lactate dehydrogenase",
+   "predicate": "produces",
+   "target": "L-lactic acid"
+  },
+  {
+   "source": "2,3-butanediol",
+   "predicate": "is_produced_by",
+   "target": "NADH oxidase"
+  },
+  {
+   "source": "Acetyl-CoA synthetases",
+   "predicate": "is_replaced_by",
+   "target": "Bacterial pyruvate dehydrogenase complex"
+  },
+  {
+   "source": "Mth1",
+   "predicate": "receives_signal_from",
+   "target": "Snf3"
+  },
+  {
+   "source": "Snf3",
+   "predicate": "sends_signal_to",
+   "target": "Mth1"
+  }
+ ],
+ "truncated": false
+}

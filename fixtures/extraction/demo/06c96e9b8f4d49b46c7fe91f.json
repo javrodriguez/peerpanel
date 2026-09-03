@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC10204961:13:ae4dcdb5",
+ "entities": [
+  {
+   "name": "dry cell weight (DCW)",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "bioreactors",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "2-mL tubes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "0.3 μm filter",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gravimetric method",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biomass optical density data",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gravimetric cell mass measurements",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "extracellular metabolites measurements",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HPLC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shimadzu instruments",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Shimadzu",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Kyoto",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "2-mL tubes",
+   "predicate": "used_for",
+   "target": "extracellular metabolites measurements"
+  },
+  {
+   "source": "0.3 μm filter",
+   "predicate": "used_for",
+   "target": "extracellular metabolites measurements"
+  },
+  {
+   "source": "Biomass optical density data",
+   "predicate": "used_for",
+   "target": "extracellular metabolites measurements"
+  },
+  {
+   "source": "gravimetric cell mass measurements",
+   "predicate": "used_for",
+   "target": "extracellular metabolites measurements"
+  },
+  {
+   "source": "HPLC",
+   "predicate": "used_for",
+   "target": "extracellular metabolites measurements"
+  },
+  {
+   "source": "Shimadzu instruments",
+   "predicate": "used_for",
+   "target": "extracellular metabolites measurements"
+  },
+  {
+   "source": "Shimadzu",
+   "predicate": "used_for",
+   "target": "extracellular metabolites measurements"
+  },
+  {
+   "source": "Kyoto",
+   "predicate": "used_for",
+   "target": "extracellular metabolites measurements"
+  }
+ ],
+ "truncated": false
+}

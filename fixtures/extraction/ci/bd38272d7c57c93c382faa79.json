@@ -1,0 +1,27 @@
+{
+ "chunk_id": "PMC13274398:2:ccd6ef47",
+ "entities": [
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "bPACy",
+   "type": "organism"
+  },
+  {
+   "name": "cAMP",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PKA",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "WT",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

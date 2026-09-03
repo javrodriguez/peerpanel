@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC11618413:16:668ebd1c",
+ "entities": [
+  {
+   "name": "Serra DO Hengge R Stress responses",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "bacterial macrocolony biofilms",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "spatial order",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "physiological differentiation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "amyloid fibers",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "biofilm matrix",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "curli fibers",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Pseudomonas aeruginosa",
+   "type": "organism"
+  },
+  {
+   "name": "Pseudomonas fluorescens",
+   "type": "organism"
+  },
+  {
+   "name": "Bacillus subtilis",
+   "type": "organism"
+  },
+  {
+   "name": "Vibrio fischeri",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Serra DO Hengge R Stress responses",
+   "predicate": "has spatial order",
+   "target": "bacterial macrocolony biofilms"
+  },
+  {
+   "source": "Serra DO Hengge R Stress responses",
+   "predicate": "has physiological differentiation",
+   "target": "bacterial macrocolony biofilms"
+  }
+ ],
+ "truncated": false
+}

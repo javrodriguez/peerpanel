@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC8164748:9:3a28ec86",
+ "entities": [
+  {
+   "name": "BP Statistical Review of World Energy",
+   "type": "organism"
+  },
+  {
+   "name": "British Petroleum",
+   "type": "organism"
+  },
+  {
+   "name": "World Energy",
+   "type": "organism"
+  },
+  {
+   "name": "Knothe G",
+   "type": "organism"
+  },
+  {
+   "name": "fatty ester composition",
+   "type": "chemical"
+  },
+  {
+   "name": "fuel properties",
+   "type": "chemical"
+  },
+  {
+   "name": "Energy Fuels",
+   "type": "organism"
+  },
+  {
+   "name": "Atabani AE",
+   "type": "organism"
+  },
+  {
+   "name": "Silitonga AS",
+   "type": "organism"
+  },
+  {
+   "name": "Badruddin IA",
+   "type": "organism"
+  },
+  {
+   "name": "Mahlia T",
+   "type": "organism"
+  },
+  {
+   "name": "Mekhilef S",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BP Statistical Review of World Energy",
+   "predicate": "published",
+   "target": "World Energy"
+  },
+  {
+   "source": "Knothe G",
+   "predicate": "created",
+   "target": "fatty ester composition"
+  },
+  {
+   "source": "Energy Fuels",
+   "predicate": "published",
+   "target": "fuel properties"
+  }
+ ],
+ "truncated": false
+}

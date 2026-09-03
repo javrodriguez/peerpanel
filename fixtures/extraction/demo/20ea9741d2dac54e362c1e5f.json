@@ -1,0 +1,116 @@
+{
+ "chunk_id": "PMC11102182:5:c02130e3",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "IFO0880",
+   "type": "organism"
+  },
+  {
+   "name": "lipid accumulation phenotype",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "transcriptomic analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipidomic analysis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "cluster map",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "pathway diagram",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "metabolic pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "lipid biosynthesis pathway",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "inositol phosphate metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glycerolipid metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fatty acid metabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_phenotype",
+   "target": "lipid accumulation phenotype"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "undergoes_transcriptomic_analysis",
+   "target": "transcriptomic analysis"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "undergoes_lipidomic_analysis",
+   "target": "lipidomic analysis"
+  },
+  {
+   "source": "cluster map",
+   "predicate": "represents",
+   "target": "metabolic pathway"
+  },
+  {
+   "source": "pathway diagram",
+   "predicate": "represents",
+   "target": "metabolic pathway"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "undergoes_lipid_biosynthesis",
+   "target": "lipid biosynthesis pathway"
+  },
+  {
+   "source": "inositol phosphate metabolism",
+   "predicate": "is_involved_in",
+   "target": "lipid biosynthesis pathway"
+  },
+  {
+   "source": "glycerolipid metabolism",
+   "predicate": "is_involved_in",
+   "target": "lipid biosynthesis pathway"
+  },
+  {
+   "source": "fatty acid metabolism",
+   "predicate": "is_involved_in",
+   "target": "lipid biosynthesis pathway"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_metabolic_pathway",
+   "target": "metabolic pathway"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "undergoes_metabolic_process",
+   "target": "metabolic pathway"
+  },
+  {
+   "source": "inositol phosphate metabolism",
+   "predicate": "is_involved_in",
+   "target": "glycerolipid metabolism"
+  }
+ ],
+ "truncated": false
+}

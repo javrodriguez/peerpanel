@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13514516:12:0b4448db",
+ "entities": [
+  {
+   "name": "H_60 h",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "L_60 h",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GPH2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GDH3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XYL2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SUT1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "PDC2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NBM8",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "XUT4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. stipitis",
+   "type": "organism"
+  },
+  {
+   "name": "CICC1960",
+   "type": "organism"
+  },
+  {
+   "name": "KEGG",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "H_60 h",
+   "predicate": "has_differential_expression",
+   "target": "XYL2"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_differential_expression",
+   "target": "SUT1"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_differential_expression",
+   "target": "PDC2"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_differential_expression",
+   "target": "NBM8"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_differential_expression",
+   "target": "XUT4"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_differential_expression",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_differential_expression",
+   "target": "CICC1960"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_differential_expression",
+   "target": "KEGG"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_transcriptome_data",
+   "target": "S. stipitis"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_transcriptome_data",
+   "target": "CICC1960"
+  },
+  {
+   "source": "H_60 h",
+   "predicate": "has_transcriptome_data",
+   "target": "KEGG"
+  }
+ ],
+ "truncated": false
+}

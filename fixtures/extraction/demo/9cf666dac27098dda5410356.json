@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13419736:6:27182d39",
+ "entities": [
+  {
+   "name": "Proteasome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "tunicamycin",
+   "type": "chemical"
+  },
+  {
+   "name": "Alg7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "UDP-N-acetyl-glucosamine-1-P transferase",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "GlcNAc-1-P",
+   "type": "chemical"
+  },
+  {
+   "name": "UDP-GlcNAc",
+   "type": "chemical"
+  },
+  {
+   "name": "Dol-P",
+   "type": "chemical"
+  },
+  {
+   "name": "Dolichyl-phosphate lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "ER",
+   "type": "organism"
+  },
+  {
+   "name": "UPR",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "26S proteasome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SEC12",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "tunicamycin",
+   "predicate": "inhibit",
+   "target": "UDP-N-acetyl-glucosamine-1-P transferase"
+  },
+  {
+   "source": "GlcNAc-1-P",
+   "predicate": "transfer",
+   "target": "Dol-P"
+  },
+  {
+   "source": "ER",
+   "predicate": "stress",
+   "target": "UPR"
+  },
+  {
+   "source": "UPR",
+   "predicate": "activate",
+   "target": "26S proteasome"
+  },
+  {
+   "source": "SEC12",
+   "predicate": "degrade",
+   "target": "26S proteasome"
+  }
+ ],
+ "truncated": false
+}

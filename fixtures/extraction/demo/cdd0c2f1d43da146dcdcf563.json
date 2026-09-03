@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13450799:25:49489971",
+ "entities": [
+  {
+   "name": "Brauer MJ",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Huttenhower C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Airoldi EM",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Rosenstein R",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Matese JC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Gresham D",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DeRisi JL",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Iyer VR",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Brown PO",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Msn2p",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Msn4p",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Brauer MJ",
+   "predicate": "coordinated_with",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "DeRisi JL",
+   "predicate": "studied",
+   "target": "Saccharomyces cerevisiae"
+  }
+ ],
+ "truncated": false
+}

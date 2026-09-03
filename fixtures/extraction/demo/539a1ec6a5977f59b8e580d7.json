@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13453879:17:cb18e637",
+ "entities": [
+  {
+   "name": "Fitriani A. Gunadi R.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "β-glucosidase enzyme",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "black tea aroma",
+   "type": "chemical"
+  },
+  {
+   "name": "black tea",
+   "type": "chemical"
+  },
+  {
+   "name": "summer black tea",
+   "type": "chemical"
+  },
+  {
+   "name": "Tieguanyin tea",
+   "type": "chemical"
+  },
+  {
+   "name": "nongxiang Tieguanyin tea",
+   "type": "chemical"
+  },
+  {
+   "name": "fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "stuck fermentation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "GC-MS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chemometrics",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "metabolome",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Fitriani A. Gunadi R.",
+   "predicate": "enhance",
+   "target": "black tea aroma"
+  },
+  {
+   "source": "Fitriani A. Gunadi R.",
+   "predicate": "use",
+   "target": "β-glucosidase enzyme"
+  },
+  {
+   "source": "Fitriani A. Gunadi R.",
+   "predicate": "during",
+   "target": "fermentation"
+  }
+ ],
+ "truncated": false
+}

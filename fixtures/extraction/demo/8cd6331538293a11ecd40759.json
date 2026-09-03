@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13504229:2:91b623d8",
+ "entities": [
+  {
+   "name": "Mjokane et al",
+   "type": "organism"
+  },
+  {
+   "name": "Influenza virus hemagglutinin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PDB ID: 6PD5",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "human furin protease",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PDB ID: 5JXH",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "RCSB",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Protein Data Bank",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "UniProt",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "cryptococcal Kex2p",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "gene CNAG_05446",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "HADDOCK version 2.4 server",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AlphaFold 3 (AF3)",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

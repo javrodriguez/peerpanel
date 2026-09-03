@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC10440040:25:d37e2a8a",
+ "entities": [
+  {
+   "name": "Edgar RC",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "MUSCLE",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bodenhofer U",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "msa",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Inoue H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nojima H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Okayama H",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Bergkessel M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Guthrie C",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sambrook J",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Russell DW",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Smid M",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Bodenhofer U",
+   "predicate": "develops",
+   "target": "msa"
+  }
+ ],
+ "truncated": false
+}

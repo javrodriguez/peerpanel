@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC7953724:10:677852bd",
+ "entities": [
+  {
+   "name": "Passoth V",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Sandgren M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biofuel production",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "straw hydrolysates",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "current achievements",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "perspectives",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Appl Microbiol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Biotechnol",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Boguslawska - Was E",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dlubala",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Laskowska M",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "role",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Passoth V",
+   "predicate": "produces",
+   "target": "Biofuel production"
+  },
+  {
+   "source": "straw hydrolysates",
+   "predicate": "used_for",
+   "target": "Biofuel production"
+  }
+ ],
+ "truncated": false
+}

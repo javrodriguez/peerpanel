@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC13467452:19:26045fc6",
+ "entities": [
+  {
+   "name": "Pancreas",
+   "type": "organism"
+  },
+  {
+   "name": "Insulin",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SIRT1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "AMPK",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "PGC-1α",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "β-Cell",
+   "type": "organism"
+  },
+  {
+   "name": "Type 2 Diabetes",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Dietary Restriction",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Calorie Restriction",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metabolic Syndrome",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Metabolism",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Energy Metabolism",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "AMPK",
+   "predicate": "regulates",
+   "target": "Energy Metabolism"
+  },
+  {
+   "source": "PGC-1α",
+   "predicate": "regulates",
+   "target": "Energy Metabolism"
+  },
+  {
+   "source": "β-Cell",
+   "predicate": "is_affected_by",
+   "target": "Type 2 Diabetes"
+  },
+  {
+   "source": "Dietary Restriction",
+   "predicate": "affects",
+   "target": "Metabolism"
+  },
+  {
+   "source": "Calorie Restriction",
+   "predicate": "affects",
+   "target": "Metabolism"
+  },
+  {
+   "source": "Metabolic Syndrome",
+   "predicate": "is_characterized_by",
+   "target": "Metabolism"
+  },
+  {
+   "source": "Pancreas",
+   "predicate": "is_affected_by",
+   "target": "Dietary Restriction"
+  },
+  {
+   "source": "Pancreas",
+   "predicate": "is_affected_by",
+   "target": "Calorie Restriction"
+  },
+  {
+   "source": "SIRT1",
+   "predicate": "regulates",
+   "target": "Metabolism"
+  }
+ ],
+ "truncated": false
+}

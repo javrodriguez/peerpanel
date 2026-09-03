@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13092671:13:ae631729",
+ "entities": [
+  {
+   "name": "zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Eide D.J.",
+   "type": "organism"
+  },
+  {
+   "name": "Maret W.",
+   "type": "organism"
+  },
+  {
+   "name": "Bird A.J.",
+   "type": "organism"
+  },
+  {
+   "name": "Wang J.",
+   "type": "organism"
+  },
+  {
+   "name": "Zhao H.",
+   "type": "organism"
+  },
+  {
+   "name": "Szewczyk B.",
+   "type": "organism"
+  },
+  {
+   "name": "Plum L.M.",
+   "type": "organism"
+  },
+  {
+   "name": "Rink L.",
+   "type": "organism"
+  },
+  {
+   "name": "Haase H.",
+   "type": "organism"
+  },
+  {
+   "name": "Cyert M.S.",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC13464734:8:2980b7fb",
+ "entities": [
+  {
+   "name": "Dendrobium officinale",
+   "type": "organism"
+  },
+  {
+   "name": "Kimura et Migo",
+   "type": "organism"
+  },
+  {
+   "name": "Li Y.",
+   "type": "organism"
+  },
+  {
+   "name": "Chang Q.X.",
+   "type": "organism"
+  },
+  {
+   "name": "Xia P.G.",
+   "type": "organism"
+  },
+  {
+   "name": "Liang Z.S.",
+   "type": "organism"
+  },
+  {
+   "name": "Chen H.P.",
+   "type": "organism"
+  },
+  {
+   "name": "Li X.W.",
+   "type": "organism"
+  },
+  {
+   "name": "Xu Y.L.",
+   "type": "organism"
+  },
+  {
+   "name": "Lo K.K.",
+   "type": "organism"
+  },
+  {
+   "name": "Zheng H.Z.",
+   "type": "organism"
+  },
+  {
+   "name": "Hu H.Y.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Li Y.",
+   "predicate": "study",
+   "target": "Dendrobium officinale"
+  }
+ ],
+ "truncated": false
+}

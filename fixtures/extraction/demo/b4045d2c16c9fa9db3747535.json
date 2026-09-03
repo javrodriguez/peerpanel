@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13456448:0:2505d821",
+ "entities": [
+  {
+   "name": "carbon dioxide",
+   "type": "chemical"
+  },
+  {
+   "name": "virulence",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "drug response",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "fungal pathogens",
+   "type": "organism"
+  },
+  {
+   "name": "host atmosphere",
+   "type": "organism"
+  },
+  {
+   "name": "Candida",
+   "type": "organism"
+  },
+  {
+   "name": "Aspergillus",
+   "type": "organism"
+  },
+  {
+   "name": "Cryptococcus",
+   "type": "organism"
+  },
+  {
+   "name": "Scedosporium",
+   "type": "organism"
+  },
+  {
+   "name": "LEAMER",
+   "type": "organism"
+  },
+  {
+   "name": "Universidade Federal do Rio de Janeiro",
+   "type": "organism"
+  },
+  {
+   "name": "André L.S. Santos",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "carbon dioxide",
+   "predicate": "regulates",
+   "target": "virulence"
+  },
+  {
+   "source": "carbon dioxide",
+   "predicate": "regulates",
+   "target": "drug response"
+  },
+  {
+   "source": "fungal pathogens",
+   "predicate": "sense",
+   "target": "host atmosphere"
+  }
+ ],
+ "truncated": false
+}

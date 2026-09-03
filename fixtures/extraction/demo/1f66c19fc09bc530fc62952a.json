@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC8164748:2:8254e356",
+ "entities": [
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula babjevae",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula graminis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces starkeyi",
+   "type": "organism"
+  },
+  {
+   "name": "Lipomyces lipofer",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "basidiomycetous species",
+   "type": "organism"
+  },
+  {
+   "name": "ascomycetous species",
+   "type": "organism"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "cell dry weight",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "had_higher_intracellular_lipid_content",
+   "target": "glucose"
+  },
+  {
+   "source": "Lipomyces starkeyi",
+   "predicate": "had_higher_lipid_content",
+   "target": "xylose"
+  },
+  {
+   "source": "Rhodotorula babjevae",
+   "predicate": "grew_to_high_density",
+   "target": "glucose"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "had_good_growth_and_lipid_production",
+   "target": "glucose"
+  },
+  {
+   "source": "Lipomyces starkeyi",
+   "predicate": "had_good_overall_growth_performance",
+   "target": "glucose"
+  },
+  {
+   "source": "Lipomyces starkeyi",
+   "predicate": "had_high_lipid_content",
+   "target": "xylose"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,83 @@
+{
+ "chunk_id": "PMC13406880:3:ffe17b5d",
+ "entities": [
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "Sam1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Sam2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "AdoMet",
+   "type": "chemical"
+  },
+  {
+   "name": "methanol",
+   "type": "chemical"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "lactate",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "stress granules",
+   "type": "organism"
+  },
+  {
+   "name": "Ded1",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yeast",
+   "predicate": "express",
+   "target": "Sam1"
+  },
+  {
+   "source": "yeast",
+   "predicate": "express",
+   "target": "Sam2"
+  },
+  {
+   "source": "yeast",
+   "predicate": "localize",
+   "target": "stress granules"
+  },
+  {
+   "source": "yeast",
+   "predicate": "require",
+   "target": "Sam2"
+  },
+  {
+   "source": "yeast",
+   "predicate": "colocalize",
+   "target": "Sam2"
+  },
+  {
+   "source": "yeast",
+   "predicate": "assemble",
+   "target": "stress granules"
+  },
+  {
+   "source": "yeast",
+   "predicate": "associate",
+   "target": "stress granules"
+  }
+ ],
+ "truncated": false
+}

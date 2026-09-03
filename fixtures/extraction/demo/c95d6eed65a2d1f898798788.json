@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC10398944:7:3b3109ba",
+ "entities": [
+  {
+   "name": "Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "WT",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "OE-Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "∆Pnt1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_8709",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_8504",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_12978",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_12976",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RTO4_12917",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OE-Pnt1",
+   "predicate": "has_higher_abundance_than",
+   "target": "∆Pnt1"
+  },
+  {
+   "source": "OE-Pnt1",
+   "predicate": "has_higher_abundance_than",
+   "target": "WT"
+  },
+  {
+   "source": "∆Pnt1",
+   "predicate": "has_lower_abundance_than",
+   "target": "OE-Pnt1"
+  },
+  {
+   "source": "∆Pnt1",
+   "predicate": "has_lower_abundance_than",
+   "target": "WT"
+  },
+  {
+   "source": "RTO4_8709",
+   "predicate": "has_higher_abundance_than",
+   "target": "∆Pnt1"
+  },
+  {
+   "source": "RTO4_8709",
+   "predicate": "has_higher_abundance_than",
+   "target": "WT"
+  }
+ ],
+ "truncated": false
+}

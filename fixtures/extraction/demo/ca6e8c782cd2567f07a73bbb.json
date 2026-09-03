@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC12278674:21:ff1dd3e0",
+ "entities": [
+  {
+   "name": "Urbano SB",
+   "type": "organism"
+  },
+  {
+   "name": "Di Capua C",
+   "type": "organism"
+  },
+  {
+   "name": "Cortez N",
+   "type": "organism"
+  },
+  {
+   "name": "Farías ME",
+   "type": "organism"
+  },
+  {
+   "name": "Alvarez HM",
+   "type": "organism"
+  },
+  {
+   "name": "Tiukova IA",
+   "type": "organism"
+  },
+  {
+   "name": "Brandenburg J",
+   "type": "organism"
+  },
+  {
+   "name": "Blomqvist J",
+   "type": "organism"
+  },
+  {
+   "name": "Sampels S",
+   "type": "organism"
+  },
+  {
+   "name": "Mikkelsen N",
+   "type": "organism"
+  },
+  {
+   "name": "Skaugen M",
+   "type": "organism"
+  },
+  {
+   "name": "Pinheiro MJ",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

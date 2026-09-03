@@ -1,0 +1,56 @@
+{
+ "chunk_id": "PMC13504229:7:3325e875",
+ "entities": [
+  {
+   "name": "Furin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Hemagglutinin",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Kex2p",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "HADDOCK",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "AlphaFold3",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "E. coli BL21 (DE3)",
+   "type": "organism"
+  },
+  {
+   "name": "John Wiley & Sons, Ltd.",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Furin",
+   "predicate": "interacts_with",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Kex2p",
+   "predicate": "interacts_with",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "Kex2p",
+   "predicate": "mediates_proteolytic_cleavage",
+   "target": "Hemagglutinin"
+  },
+  {
+   "source": "E. coli BL21 (DE3)",
+   "predicate": "expresses",
+   "target": "Kex2p"
+  }
+ ],
+ "truncated": false
+}

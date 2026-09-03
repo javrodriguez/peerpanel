@@ -25,12 +25,17 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
-from peerpanel.providers.base import ChatProvider
+from peerpanel.providers.base import ChatProvider, TokenLedger
 from peerpanel.text.chunks import Chunk
 
 from .models import ENTITY_TYPES, ChunkExtraction, Entity, Relation
 
 PROMPT_VERSION = 3  # v3: caps enforced in the SCHEMA (maxItems), not just asked
+EXTRACTION_MODEL = "llama3.1:8b"
+# The ONE cache identity every committed extraction is filed under: the model on the
+# native wire, which sizes its window per chunk (DECISIONS.md D19). The replay stubs
+# and the completeness check read it from here, so it cannot drift in three places.
+EXTRACTION_PROVIDER_NAME = f"ollama-native:{EXTRACTION_MODEL}"
 
 MAX_ENTITIES = 12
 MAX_RELATIONS = 12
@@ -149,6 +154,7 @@ def extract_chunk(
     provider: ChatProvider,
     cache_dir: Path | None = None,
     max_tokens: int = 1024,
+    ledger: TokenLedger | None = None,
 ) -> ChunkExtraction:
     """Extract one chunk's graph fragment; disk-cached when cache_dir is given.
 
@@ -176,6 +182,8 @@ def extract_chunk(
             temperature=0.0,
             max_tokens=budget,
         )
+        if ledger is not None:
+            ledger.record(response)
         return _parse(response.text)
 
     data = _call(max_tokens)
@@ -198,7 +206,37 @@ def extract_many(
     provider: ChatProvider,
     cache_dir: Path | None = None,
     concurrency: int = 4,
+    ledger: TokenLedger | None = None,
 ) -> list[ChunkExtraction]:
-    """Order-preserving parallel extraction (thread pool; clients are thread-safe)."""
+    """Order-preserving parallel extraction (thread pool; clients are thread-safe).
+
+    Dispatched longest chunk first, which is NOT an optimisation of this code but of the
+    server underneath it: the window a call needs follows its prompt size, and Ollama
+    reloads the runner whenever the window changes between calls. In corpus order the
+    three window sizes interleave and the runner reloads hundreds of times across a build,
+    each reload waiting for the in-flight calls to drain first. Longest-first walks the
+    window sizes downward, so the reloads happen once per size.
+
+    Order in, order out: results are returned in the caller's chunk order regardless of
+    the order they were computed in, because the graph builder's relation pass depends on
+    which entities exist by the time it reads each extraction.
+    """
+    # Results are keyed by chunk id below, which is what preserves the caller's order —
+    # and is also how a repeated id would disappear: the dict would keep one extraction
+    # and the returned list would hand it out twice, at exactly the right LENGTH, so
+    # nothing downstream could notice. Ids carry a content hash, so a repeat means two
+    # chunks with identical text AND index. Refuse rather than merge.
+    if len({c.chunk_id for c in chunks}) != len(chunks):
+        raise ValueError(
+            f"{len(chunks)} chunks carry {len({c.chunk_id for c in chunks})} distinct ids — "
+            "a chunk id repeats, and one extraction would stand in for another"
+        )
     with ThreadPoolExecutor(max_workers=concurrency) as pool:
-        return list(pool.map(lambda c: extract_chunk(c, provider, cache_dir), chunks))
+        by_size = sorted(chunks, key=lambda c: len(c.text), reverse=True)
+        done = {
+            e.chunk_id: e
+            for e in pool.map(
+                lambda c: extract_chunk(c, provider, cache_dir, ledger=ledger), by_size
+            )
+        }
+    return [done[c.chunk_id] for c in chunks]

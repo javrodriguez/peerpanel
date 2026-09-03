@@ -1,0 +1,111 @@
+{
+ "chunk_id": "PMC13515017:7:54f3354e",
+ "entities": [
+  {
+   "name": "Y",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ITS",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "telomere",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "SUL1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "yku70",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ars228",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "chr II",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Oxford Nanopore",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "telomerase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "exonucleases",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "end-recognizing machinery",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "DNA repair",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Y",
+   "predicate": "is_derived_from",
+   "target": "telomere"
+  },
+  {
+   "source": "telomere",
+   "predicate": "is_shortened_by",
+   "target": "exonucleases"
+  },
+  {
+   "source": "telomere",
+   "predicate": "is_recognized_by",
+   "target": "end-recognizing machinery"
+  },
+  {
+   "source": "telomere",
+   "predicate": "is_replicated_by",
+   "target": "DNA repair"
+  },
+  {
+   "source": "SUL1",
+   "predicate": "is_amplified_by",
+   "target": "yku70"
+  },
+  {
+   "source": "yku70",
+   "predicate": "is_mutated_by",
+   "target": "ars228"
+  },
+  {
+   "source": "chr II",
+   "predicate": "is_invaded_by",
+   "target": "telomere"
+  },
+  {
+   "source": "telomere",
+   "predicate": "invades",
+   "target": "ITS"
+  },
+  {
+   "source": "ITS",
+   "predicate": "is_replicated_by",
+   "target": "telomerase"
+  },
+  {
+   "source": "telomerase",
+   "predicate": "is_absent_in",
+   "target": "telomere"
+  },
+  {
+   "source": "telomere",
+   "predicate": "is_shortened_by",
+   "target": "exonucleases"
+  }
+ ],
+ "truncated": false
+}

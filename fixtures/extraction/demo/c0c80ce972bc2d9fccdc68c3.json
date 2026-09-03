@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC9157227:13:d1c246e4",
+ "entities": [
+  {
+   "name": "Ashbya gossypii",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Escherichia coli",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Pichia pastoris",
+   "type": "organism"
+  },
+  {
+   "name": "Kluyveromyces marxianus",
+   "type": "organism"
+  },
+  {
+   "name": "polyunsaturated fatty acids",
+   "type": "chemical"
+  },
+  {
+   "name": "lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "dodecanol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lipids",
+   "predicate": "produced by",
+   "target": "Rhodotorula toruloides"
+  },
+  {
+   "source": "carotenoids",
+   "predicate": "produced by",
+   "target": "Yarrowia lipolytica"
+  },
+  {
+   "source": "dodecanol",
+   "predicate": "produced by",
+   "target": "Escherichia coli"
+  }
+ ],
+ "truncated": false
+}

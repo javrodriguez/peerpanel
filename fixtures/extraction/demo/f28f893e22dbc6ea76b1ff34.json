@@ -1,0 +1,61 @@
+{
+ "chunk_id": "PMC12278674:30:af15b547",
+ "entities": [
+  {
+   "name": "Yap1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Cryptococcus neoformans",
+   "type": "organism"
+  },
+  {
+   "name": "mSphere",
+   "type": "organism"
+  },
+  {
+   "name": "Charizanis C",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Juhnke H",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Krems B",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Entian K-D",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Ccp1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Pos9",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Skn7",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Martins D",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Yap1",
+   "predicate": "regulates",
+   "target": "Cryptococcus neoformans"
+  }
+ ],
+ "truncated": false
+}

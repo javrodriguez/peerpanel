@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC10204961:24:62f9f80a",
+ "entities": [
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "Lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "Carotenoid",
+   "type": "chemical"
+  },
+  {
+   "name": "Oxidative Stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lignocellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "Hemicellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "Glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Staphylococcus aureus",
+   "type": "organism"
+  },
+  {
+   "name": "Eucalyptus",
+   "type": "organism"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "metabolize",
+   "target": "Xylose"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produce",
+   "target": "Lipid"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produce",
+   "target": "Carotenoid"
+  }
+ ],
+ "truncated": false
+}

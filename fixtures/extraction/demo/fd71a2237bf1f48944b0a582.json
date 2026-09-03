@@ -1,0 +1,81 @@
+{
+ "chunk_id": "PMC13450573:21:a232fc7b",
+ "entities": [
+  {
+   "name": "Hsp31",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "ThiJ/DJ-1/PfpI family member protein",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "SFP1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Candida",
+   "type": "organism"
+  },
+  {
+   "name": "Oxidative stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Thermotolerance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Biofilm formation",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Genetic basis",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Acquired stress resistance",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Heat shock proteins",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "Small nuclear ribonucleoprotein particles",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Hsp31",
+   "predicate": "is_member_of",
+   "target": "ThiJ/DJ-1/PfpI family member protein"
+  },
+  {
+   "source": "Saccharomyces cerevisiae",
+   "predicate": "has_process",
+   "target": "Thermotolerance"
+  },
+  {
+   "source": "SFP1",
+   "predicate": "regulates",
+   "target": "Biofilm formation"
+  },
+  {
+   "source": "Candida",
+   "predicate": "has_process",
+   "target": "Biofilm formation"
+  },
+  {
+   "source": "Genetic basis",
+   "predicate": "is_cause_of",
+   "target": "Acquired stress resistance"
+  }
+ ],
+ "truncated": false
+}

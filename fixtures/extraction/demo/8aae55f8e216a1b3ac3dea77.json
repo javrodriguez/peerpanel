@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC10398944:14:a265b520",
+ "entities": [
+  {
+   "name": "Rhodosporidium toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "Yarrowia lipolytica",
+   "type": "organism"
+  },
+  {
+   "name": "Neurospora crassa",
+   "type": "organism"
+  },
+  {
+   "name": "lignocellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "hemicellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "cellulose",
+   "type": "chemical"
+  },
+  {
+   "name": "fermentable sugars",
+   "type": "chemical"
+  },
+  {
+   "name": "indigoidine",
+   "type": "chemical"
+  },
+  {
+   "name": "oleochemicals",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "utilize",
+   "target": "lignocellulose"
+  },
+  {
+   "source": "Rhodotorula toruloides",
+   "predicate": "produce",
+   "target": "oleochemicals"
+  },
+  {
+   "source": "Rhodosporidium toruloides",
+   "predicate": "convert",
+   "target": "lignocellulose"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13517252:20:197580ac",
+ "entities": [
+  {
+   "name": "PRISMA-S Group PRISMA-S",
+   "type": "organism"
+  },
+  {
+   "name": "Gunathilaka G.L.B.E.",
+   "type": "organism"
+  },
+  {
+   "name": "Kim M.-G.",
+   "type": "organism"
+  },
+  {
+   "name": "Lee C.",
+   "type": "organism"
+  },
+  {
+   "name": "Shin J.",
+   "type": "organism"
+  },
+  {
+   "name": "Lee B.-J.",
+   "type": "organism"
+  },
+  {
+   "name": "Lee K.-J.",
+   "type": "organism"
+  },
+  {
+   "name": "Yoo G.Y.",
+   "type": "organism"
+  },
+  {
+   "name": "Bai S.C.",
+   "type": "organism"
+  },
+  {
+   "name": "Yamamoto T.",
+   "type": "organism"
+  },
+  {
+   "name": "Matsunari H.",
+   "type": "organism"
+  },
+  {
+   "name": "Oku H.",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

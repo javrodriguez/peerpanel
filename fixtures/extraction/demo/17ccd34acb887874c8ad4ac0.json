@@ -1,0 +1,101 @@
+{
+ "chunk_id": "PMC7690147:11:b55ad415",
+ "entities": [
+  {
+   "name": "Rhodotorula",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Rhodotorula dairenensis",
+   "type": "organism"
+  },
+  {
+   "name": "Sporidiobolus pararoseus",
+   "type": "organism"
+  },
+  {
+   "name": "Torulene",
+   "type": "chemical"
+  },
+  {
+   "name": "Torularhodin",
+   "type": "chemical"
+  },
+  {
+   "name": "Carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "Glycerol",
+   "type": "chemical"
+  },
+  {
+   "name": "Potato wastewater",
+   "type": "chemical"
+  },
+  {
+   "name": "Wheat straw",
+   "type": "chemical"
+  },
+  {
+   "name": "Miscanthus",
+   "type": "chemical"
+  },
+  {
+   "name": "Biosynthetic pathway",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "has_biosynthetic_pathway",
+   "target": "Biosynthetic pathway"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "produces",
+   "target": "Torulene"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "produces",
+   "target": "Torularhodin"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "has_carotenoid_production",
+   "target": "Carotenoids"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "has_growth_factor",
+   "target": "Glycerol"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "has_carbon_source",
+   "target": "Potato wastewater"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "has_carbon_source",
+   "target": "Wheat straw"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "has_carbon_source",
+   "target": "Miscanthus"
+  },
+  {
+   "source": "Rhodotorula glutinis",
+   "predicate": "has_carotenoid_pigmentation",
+   "target": "Carotenoids"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,71 @@
+{
+ "chunk_id": "PMC13304748:13:363a8964",
+ "entities": [
+  {
+   "name": "Nano",
+   "type": "chemical"
+  },
+  {
+   "name": "Cadmium sulfide quantum dots",
+   "type": "chemical"
+  },
+  {
+   "name": "Saccharomyces cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "CuO nanoparticles",
+   "type": "chemical"
+  },
+  {
+   "name": "ZnO quantum dots",
+   "type": "chemical"
+  },
+  {
+   "name": "CdSe quantum dots",
+   "type": "chemical"
+  },
+  {
+   "name": "Mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "Glutathione",
+   "type": "chemical"
+  },
+  {
+   "name": "Copper-zinc superoxide dismutase",
+   "type": "chemical"
+  },
+  {
+   "name": "Zinc",
+   "type": "chemical"
+  },
+  {
+   "name": "Oxidative stress",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Apoptosis",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "CuO nanoparticles",
+   "predicate": "toxicity",
+   "target": "Saccharomyces cerevisiae"
+  },
+  {
+   "source": "ZnO quantum dots",
+   "predicate": "induce",
+   "target": "oxidative stress"
+  },
+  {
+   "source": "Oxidative stress",
+   "predicate": "involved in",
+   "target": "apoptosis"
+  }
+ ],
+ "truncated": false
+}

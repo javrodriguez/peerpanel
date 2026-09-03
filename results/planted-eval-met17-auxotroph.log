@@ -1,0 +1,15 @@
+Planted-error detection · met17-auxotroph.txt · 3 errors
+  exclusion: twin withheld from both arms (26 chunks)
+
+  system                         detected    tokens   wall_s  detail
+  panel                           1/3        244460   1774.4  2 of 2 reviewers returned findings · 20 claims verified · 0 deterministic findings
+  single-agent-cot-sc             2/3         34902    514.3  12 of 12 self-consistency samples parsed
+
+  panel caught: gene_symbol_swap
+  single-agent-cot-sc caught: gene_symbol_swap, effect_direction_flip
+
+  not planted: impossible_percentage (no candidate site inside the reviewed window)
+  not planted: impossible_pvalue (no candidate site inside the reviewed window)
+
+  Scored over ASSERTION channels only — reviewer findings, REFUTES verdicts and deterministic-lens findings for the panel; model-authored findings for the baseline. Restatements of the manuscript and the converger's prose are excluded: counting them would credit the panel for quoting a planted error, or for agreeing with it. Detection requires a finding to NAME the planted token, which under-credits a described-but-unquoted catch — read the numbers as a floor. Both arms are asked to quote the text each finding is about and both are scored on finding text + quote. Both arms searched the same index with the same exclusions. Token spend: panel 244460, baseline 34902 (14% of the panel's). The baseline hit its sampling ceiling before matching the panel, so this is NOT an equal-compute comparison — the baseline had less.
+eval: full report -> /Users/rodrij92/glitch/workspaces/graphrag-review/results/planted-eval-met17-auxotroph.json

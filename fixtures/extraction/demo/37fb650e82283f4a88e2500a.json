@@ -1,0 +1,76 @@
+{
+ "chunk_id": "PMC13410889:4:3f03f962",
+ "entities": [
+  {
+   "name": "JUB1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "S. cerevisiae",
+   "type": "organism"
+  },
+  {
+   "name": "IPTG",
+   "type": "chemical"
+  },
+  {
+   "name": "yeast",
+   "type": "organism"
+  },
+  {
+   "name": "galactose",
+   "type": "chemical"
+  },
+  {
+   "name": "lacO",
+   "type": "chemical"
+  },
+  {
+   "name": "LacI",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "RNAP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "yeGFP",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "CYC1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "JUB1-X",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "NLS",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "JUB1",
+   "predicate": "has_component",
+   "target": "NLS"
+  },
+  {
+   "source": "JUB1",
+   "predicate": "recruits",
+   "target": "RNAP"
+  },
+  {
+   "source": "JUB1",
+   "predicate": "expresses",
+   "target": "yeGFP"
+  },
+  {
+   "source": "JUB1",
+   "predicate": "has_variant",
+   "target": "JUB1-X"
+  }
+ ],
+ "truncated": false
+}

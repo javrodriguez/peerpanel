@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC5826700:10:d6b6d506",
+ "entities": [
+  {
+   "name": "pH",
+   "type": "chemical"
+  },
+  {
+   "name": "V-ATPase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Pma1",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "ER",
+   "type": "organism"
+  },
+  {
+   "name": "plasma membrane",
+   "type": "organism"
+  },
+  {
+   "name": "mitochondria",
+   "type": "organism"
+  },
+  {
+   "name": "vacuole",
+   "type": "organism"
+  },
+  {
+   "name": "lipid droplet",
+   "type": "organism"
+  },
+  {
+   "name": "lipid",
+   "type": "chemical"
+  },
+  {
+   "name": "ceramide",
+   "type": "chemical"
+  },
+  {
+   "name": "sphingolipid",
+   "type": "chemical"
+  },
+  {
+   "name": "triacylglycerol",
+   "type": "chemical"
+  }
+ ],
+ "relations": [
+  {
+   "source": "ER",
+   "predicate": "interacts with",
+   "target": "plasma membrane"
+  },
+  {
+   "source": "ER",
+   "predicate": "interacts with",
+   "target": "vacuole"
+  },
+  {
+   "source": "lipid",
+   "predicate": "is regulated by",
+   "target": "pH"
+  },
+  {
+   "source": "ceramide",
+   "predicate": "is regulated by",
+   "target": "pH"
+  },
+  {
+   "source": "sphingolipid",
+   "predicate": "is regulated by",
+   "target": "pH"
+  },
+  {
+   "source": "triacylglycerol",
+   "predicate": "is regulated by",
+   "target": "pH"
+  }
+ ],
+ "truncated": false
+}

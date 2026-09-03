@@ -1,0 +1,55 @@
+{
+ "chunk_id": "PMC13410889:9:0d3cee06",
+ "entities": [
+  {
+   "name": "Mattanovich D",
+   "type": "organism"
+  },
+  {
+   "name": "Sauer M",
+   "type": "organism"
+  },
+  {
+   "name": "Gasser B",
+   "type": "organism"
+  },
+  {
+   "name": "Generoso WC",
+   "type": "organism"
+  },
+  {
+   "name": "Schadeweg V",
+   "type": "organism"
+  },
+  {
+   "name": "Oreb M",
+   "type": "organism"
+  },
+  {
+   "name": "Boles E",
+   "type": "organism"
+  },
+  {
+   "name": "Li Y",
+   "type": "organism"
+  },
+  {
+   "name": "Li S",
+   "type": "organism"
+  },
+  {
+   "name": "Thodey K",
+   "type": "organism"
+  },
+  {
+   "name": "Trenchard I",
+   "type": "organism"
+  },
+  {
+   "name": "Cravens A",
+   "type": "organism"
+  }
+ ],
+ "relations": [],
+ "truncated": false
+}

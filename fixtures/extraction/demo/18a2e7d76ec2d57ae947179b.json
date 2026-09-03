@@ -1,0 +1,96 @@
+{
+ "chunk_id": "PMC7690147:0:03c48d9c",
+ "entities": [
+  {
+   "name": "Rhodotorula glutinis",
+   "type": "organism"
+  },
+  {
+   "name": "Li Chun-Ji",
+   "type": "organism"
+  },
+  {
+   "name": "Yu Guo-Hui",
+   "type": "organism"
+  },
+  {
+   "name": "Zhongkai University of Agriculture and Engineering",
+   "type": "organism"
+  },
+  {
+   "name": "Huazhong Agricultural University",
+   "type": "organism"
+  },
+  {
+   "name": "BMC Genomics",
+   "type": "organism"
+  },
+  {
+   "name": "Creative Commons Attribution 4.0 International License",
+   "type": "organism"
+  },
+  {
+   "name": "Lipids",
+   "type": "chemical"
+  },
+  {
+   "name": "Carotenoids",
+   "type": "chemical"
+  },
+  {
+   "name": "Genome assembly",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Lipidomics",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Next-Generation Sequencing",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Li Chun-Ji",
+   "predicate": "is_author_of",
+   "target": "BMC Genomics"
+  },
+  {
+   "source": "Yu Guo-Hui",
+   "predicate": "is_author_of",
+   "target": "BMC Genomics"
+  },
+  {
+   "source": "Zhongkai University of Agriculture and Engineering",
+   "predicate": "is_affiliated_with",
+   "target": "Li Chun-Ji"
+  },
+  {
+   "source": "BMC Genomics",
+   "predicate": "is_published_in",
+   "target": "Creative Commons Attribution 4.0 International License"
+  },
+  {
+   "source": "Lipids",
+   "predicate": "is_subject_of",
+   "target": "Genome assembly"
+  },
+  {
+   "source": "Carotenoids",
+   "predicate": "is_subject_of",
+   "target": "Genome assembly"
+  },
+  {
+   "source": "Genome assembly",
+   "predicate": "uses_technology",
+   "target": "Next-Generation Sequencing"
+  },
+  {
+   "source": "Lipidomics",
+   "predicate": "uses_technology",
+   "target": "Next-Generation Sequencing"
+  }
+ ],
+ "truncated": false
+}

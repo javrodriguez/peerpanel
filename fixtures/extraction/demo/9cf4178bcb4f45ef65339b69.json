@@ -1,0 +1,66 @@
+{
+ "chunk_id": "PMC13419736:15:f1f04fe9",
+ "entities": [
+  {
+   "name": "26S Proteasome",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Collins G.A.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Goldberg A.L.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Logic",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Cell",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Beck M.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Mol Syst Biol",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Inobe T.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Fishbain S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Prakash S.",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "Nature Chemical Biology",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "Komander D.",
+   "type": "method_or_tool"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Collins G.A.",
+   "predicate": "used",
+   "target": "26S Proteasome"
+  },
+  {
+   "source": "Beck M.",
+   "predicate": "studied",
+   "target": "Mol Syst Biol"
+  }
+ ],
+ "truncated": false
+}

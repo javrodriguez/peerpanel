@@ -254,9 +254,7 @@ class TestIngestStubbed:
         monkeypatch.setattr(ingest_mod, "fetch_jats", lambda m, c=None: SYNTHETIC_JATS)
 
     def _run(self, out_dir: Path) -> Path:
-        return ingest_mod.ingest(
-            "10.1101/00.00.000000", 1, "tiny", "10.9/pub", "PMC7", out_dir
-        )
+        return ingest_mod.ingest("10.1101/00.00.000000", 1, "tiny", "10.9/pub", "PMC7", out_dir)
 
     def test_writes_txt_twins_and_citations_deterministically(
         self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch

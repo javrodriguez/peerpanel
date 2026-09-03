@@ -46,9 +46,7 @@ class CachedQueryEmbedder:
         path = root / FIXTURE
         if path.exists():
             data = np.load(path, allow_pickle=False)
-            self._vectors = {
-                str(k): v for k, v in zip(data["keys"], data["vectors"], strict=True)
-            }
+            self._vectors = {str(k): v for k, v in zip(data["keys"], data["vectors"], strict=True)}
         else:
             self._vectors = {}
 

@@ -1,0 +1,86 @@
+{
+ "chunk_id": "PMC13485822:3:f748a249",
+ "entities": [
+  {
+   "name": "KTZ",
+   "type": "chemical"
+  },
+  {
+   "name": "M. pachydermatis",
+   "type": "organism"
+  },
+  {
+   "name": "ergosterol",
+   "type": "chemical"
+  },
+  {
+   "name": "ERG3",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG5",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG11",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG24",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG25",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG1",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG2",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG4",
+   "type": "gene_or_protein"
+  },
+  {
+   "name": "ERG6",
+   "type": "gene_or_protein"
+  }
+ ],
+ "relations": [
+  {
+   "source": "KTZ",
+   "predicate": "treats",
+   "target": "M. pachydermatis"
+  },
+  {
+   "source": "KTZ",
+   "predicate": "upregulates",
+   "target": "ERG3"
+  },
+  {
+   "source": "KTZ",
+   "predicate": "upregulates",
+   "target": "ERG5"
+  },
+  {
+   "source": "KTZ",
+   "predicate": "upregulates",
+   "target": "ERG11"
+  },
+  {
+   "source": "KTZ",
+   "predicate": "upregulates",
+   "target": "ERG24"
+  },
+  {
+   "source": "KTZ",
+   "predicate": "upregulates",
+   "target": "ERG25"
+  }
+ ],
+ "truncated": false
+}

@@ -1,0 +1,106 @@
+{
+ "chunk_id": "PMC6547517:8:dbbe6fa2",
+ "entities": [
+  {
+   "name": "R. toruloides",
+   "type": "organism"
+  },
+  {
+   "name": "glucose",
+   "type": "chemical"
+  },
+  {
+   "name": "xylose",
+   "type": "chemical"
+  },
+  {
+   "name": "nitrogen",
+   "type": "chemical"
+  },
+  {
+   "name": "amino acid transmembrane transporters",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "autophagy-related proteins",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "glutamate dehydrogenase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "allantoicase",
+   "type": "method_or_tool"
+  },
+  {
+   "name": "urea",
+   "type": "chemical"
+  },
+  {
+   "name": "lipid droplet",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "autophagic processes",
+   "type": "process_or_phenotype"
+  },
+  {
+   "name": "ribosomal proteins",
+   "type": "process_or_phenotype"
+  }
+ ],
+ "relations": [
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "amino acid transmembrane transporters"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "autophagy-related proteins"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "glutamate dehydrogenase"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "allantoicase"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "urea"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "ribosomal proteins"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "lipid droplet"
+  },
+  {
+   "source": "R. toruloides",
+   "predicate": "has_protein",
+   "target": "autophagic processes"
+  },
+  {
+   "source": "glucose",
+   "predicate": "is_source_of",
+   "target": "nitrogen"
+  },
+  {
+   "source": "xylose",
+   "predicate": "is_source_of",
+   "target": "nitrogen"
+  }
+ ],
+ "truncated": false
+}
