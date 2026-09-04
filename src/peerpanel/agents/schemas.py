@@ -93,17 +93,24 @@ class CallStats(BaseModel):
 
     `smallest_headroom_tokens` is the proof — the margin between a prompt and the
     window that prompt ran in, smallest across the record's calls; positive means
-    every call was read whole. The other three describe the run's shape and cannot
-    prove it on their own, because the largest prompt and the smallest window are
-    usually different calls. Required on every record — one that predates the
-    fields cannot load as if it had been measured (DECISIONS.md D19 withdrew every
-    such record).
+    every call was read whole. `window_sources` says what that margin was measured
+    AGAINST: the distinct WINDOW_SOURCE_* strings the calls named, each naming the
+    field one wire set or read for the call it served (providers/base.py). The native
+    wire sets `options.num_ctx` per call; the OpenAI-compatible wire reads the loaded
+    runner's `context_length` before every call, because a native call in between can
+    change it. A margin whose source is unnamed cannot be checked by a reader, so the
+    ledger refuses a window without one and this list is EMPTY only when `calls` is 0.
+    The other three describe the run's shape and cannot prove it on their own, because
+    the largest prompt and the smallest window are usually different calls. Required
+    on every record — one that predates the fields cannot load as if it had been
+    measured (DECISIONS.md D19 withdrew every such record).
     """
 
     calls: int
     largest_prompt_tokens: int
     smallest_context: int | None  # None only from a wire that does not report its window
     smallest_headroom_tokens: int | None  # window minus prompt, per call, smallest
+    window_sources: list[str]  # sorted, distinct; [] only when calls == 0
 
     @classmethod
     def from_ledger(cls, ledger: Any) -> CallStats:
@@ -112,6 +119,7 @@ class CallStats(BaseModel):
             largest_prompt_tokens=ledger.largest_prompt_tokens,
             smallest_context=ledger.smallest_context,
             smallest_headroom_tokens=ledger.smallest_headroom_tokens,
+            window_sources=ledger.window_source_list,
         )
 
 
@@ -130,4 +138,8 @@ class PanelReview(BaseModel):
     swap_by_source: dict[str, SwapStat] = {}  # "manuscript" | reviewer name -> its rate
     total_tokens: int
     wall_s: float
-    model_calls: CallStats  # every prompt read whole: largest prompt < smallest window
+    model_calls: CallStats  # every prompt read whole iff smallest_headroom_tokens > 0
+    # Role -> provider name for every model that served this review. The reviewers were
+    # already named per output; the verifier and converger were not named anywhere a
+    # reader could check, which is a run condition the record must carry.
+    models: dict[str, str]

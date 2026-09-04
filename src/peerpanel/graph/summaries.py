@@ -6,6 +6,20 @@ relations. Reports are content-addressed on disk (members + edges + prompt
 version + provider), so an unchanged community never re-summarises and CI
 replays the committed cache as labeled recorded fixtures. Global search
 map-reduces over these reports.
+
+Hand `summarise_communities` a `TokenLedger` and this layer becomes visible from
+its own record: `graph summaries --publish` writes
+`results/summaries-stats-<corpus>.json` out of that ledger — the wire and model
+that served the reports, the calls THIS run made, the per-call margin between each
+prompt and the window it ran in, and the source that window was read from. Until
+round 3 of the review found it, the one model layer feeding graphrag-global's
+ranking, on the one wire that cannot set its own window, shipped no record of its
+run conditions at all (requirement 8).
+
+The ledger counts a CALL, never a report: a report served from the cache above
+makes no call and is counted nowhere. That is why the committed records are cold
+runs — empty `fixtures/summaries/<corpus>` first, as the Makefile target says. A
+warm run publishes `calls: 0`, which is honest and is evidence of nothing.
 """
 
 from __future__ import annotations
@@ -17,7 +31,7 @@ from pathlib import Path
 import networkx as nx
 from pydantic import BaseModel
 
-from peerpanel.providers.base import ChatProvider
+from peerpanel.providers.base import ChatProvider, TokenLedger
 
 from .build import display_name, node_type
 from .communities import members
@@ -117,6 +131,7 @@ def summarise_communities(
     resolution: float,
     provider: ChatProvider,
     cache_dir: Path | None = None,
+    ledger: TokenLedger | None = None,
 ) -> list[CommunityReport]:
     reports: list[CommunityReport] = []
     for cid, nodes in sorted(members(assignment).items()):
@@ -144,6 +159,12 @@ def summarise_communities(
             temperature=0.0,
             max_tokens=1024,
         )
+        # The one model layer that shipped no run record until round 3 found it: these
+        # calls ride the OpenAI wire, which cannot set its window, and they are the only
+        # input to graphrag-global's ranking. A cached report makes no call and records
+        # nothing, which is correct — the record describes what THIS run sent.
+        if ledger is not None:
+            ledger.record(response)
         try:
             data = json.loads(response.text)
             report = CommunityReport(

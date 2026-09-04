@@ -13,7 +13,7 @@ import numpy as np
 import ollama
 from numpy.typing import NDArray
 
-from .base import ChatResponse
+from .base import WINDOW_SOURCE_NATIVE, ChatResponse
 from .context import check_not_truncated, context_for_call, prompt_chars
 
 
@@ -64,6 +64,10 @@ class OllamaNativeChat:
             prompt_tokens=prompt_tokens,
             completion_tokens=resp.eval_count or 0,
             context=num_ctx,
+            # This wire SET the window it is reporting, in this call's own options —
+            # the strongest form of the field, and a different one from the OpenAI
+            # wire's read of the server's resident runner.
+            context_source=WINDOW_SOURCE_NATIVE,
         )
 
 

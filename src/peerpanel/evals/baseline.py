@@ -11,6 +11,16 @@ comes first, through the SAME ledger type. On every committed run the ceiling
 came first, so the baseline had LESS compute than the panel; the published
 record derives that from the numbers rather than asserting a match.
 
+ONE call of this function is ONE arm: one named local model, run alone. The
+planted evaluation calls it once per model in `planted_eval.BASELINE_MODELS`
+(`llama3.1:8b`, `qwen2:7b`), each arm given the same budget — the panel's spend
+— and each published as its own row under `baseline_system(model)`. That is what
+makes "the pass rate for llama3.1:8b" a sentence the record can answer: a single
+arm blending the two models would have published a rate belonging to neither,
+and the panel row (a two-family mixture by design) already carries that shape.
+This function knows nothing about how many arms there are; the models it is
+named for are the caller's to choose, and the record names the provider it ran.
+
 What the baseline is NOT given equally: retrieval. It retrieves ONCE, on the
 title, and reads EVIDENCE_CHUNKS chunks; the panel's reviewers each retrieve on
 three queries and its verifier retrieves per claim. That asymmetry favours the
@@ -75,7 +85,8 @@ class BaselineResult(BaseModel):
     unparsed_samples: int
     finding_texts: list[str]
     total_tokens: int
-    model_calls: CallStats  # samples plus retries; largest prompt < smallest window
+    # Samples plus retries; every prompt was read whole iff smallest_headroom_tokens > 0.
+    model_calls: CallStats
 
 
 def _truncate(text: str, words: int = EVIDENCE_WORDS) -> str:

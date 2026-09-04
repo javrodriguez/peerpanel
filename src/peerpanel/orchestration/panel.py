@@ -293,6 +293,12 @@ def run_panel(
     }
     return PanelReview(
         manuscript_doi=header.preprint_doi,
+        models={
+            "methods-statistics": providers.methods.name,
+            "prior-work-novelty": providers.novelty.name,
+            "verifier": providers.verifier.name,
+            "converger": providers.converger.name,
+        },
         corpus_manifest=f"corpus/{'ci' if corpus == 'ci' else 'demo'}.manifest.json",
         excluded_docs=sorted(index.excluded_docs),
         dropped_chunks=index.dropped_chunk_count,

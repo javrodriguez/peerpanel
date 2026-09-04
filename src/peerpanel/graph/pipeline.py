@@ -144,8 +144,13 @@ def graph_build(
             str(r): len(set(m.values())) for r, m in communities.items()
         },
         "provider": provider.name,
-        # The calls THIS build made (cached chunks make none): every prompt read whole
-        # is largest_prompt_tokens < smallest_context, the same proof the panel records carry.
+        # The calls THIS build made (cached chunks make none). Every prompt read whole
+        # iff smallest_headroom_tokens > 0 — the per-call margin, the same proof the
+        # panel records carry; largest prompt vs smallest window compares two calls.
+        # What that margin was measured against rides in window_sources: the wire's
+        # own field, named per call (providers/base.py WINDOW_SOURCE_*). A fully
+        # cached build makes no call and so names no source — an empty list here is
+        # the replay case, not a missing run condition.
         "model_calls": CallStats.from_ledger(ledger).model_dump(),
     }
     (out_dir / "build_stats.json").write_text(json.dumps(result, indent=1, sort_keys=True) + "\n")

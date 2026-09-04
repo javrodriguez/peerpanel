@@ -7,6 +7,11 @@ wire-shape-only in tests. The send path raises MissingAPIKeyError until an
 ANTHROPIC_API_KEY is present in the caller's environment. There are no
 recorded response fixtures for this adapter, deliberately: a fixture nobody
 recorded would be a mock wearing a recording's label.
+
+Its responses carry no window and therefore no window source (`context=None`,
+`context_source=None`, the ChatResponse defaults): this adapter never sized or read
+one, and requirement 8's field is a measurement, not a label to fill in. If the send
+path is ever exercised, the window it ran in is what has to be read and named here.
 """
 
 from __future__ import annotations

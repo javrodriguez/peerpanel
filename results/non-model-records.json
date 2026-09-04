@@ -1,0 +1,10 @@
+{
+ "_rule": "Every JSON under results/ either carries the run conditions of the model run that produced it (model_calls: the calls made, the largest prompt, the smallest window, the smallest per-call margin between the two, and the window source that margin was measured against) or is named here with the reason no model produced it. tests/test_run_conditions.py sweeps results/**/*.json against exactly this list and fails on a file that is in neither state.",
+ "records": {
+  "ablation-ci.json": "The retrieval ablation ladder over the CI corpus. Every rung \u2014 BM25, vector, RRF, GraphRAG-local, GraphRAG-global \u2014 reads committed chunks, committed community reports and committed query embeddings (CachedQueryEmbedder), so the ladder makes no model call by design; `make ablation` is a Tier 1 target.",
+  "ablation-demo.json": "The same ladder at demo scale, from the same committed bytes and the same cached query embeddings: no model call by design.",
+  "derived-fields.json": "The disclosure of fields written by derivation rather than measurement. It describes records; it is not one, and no model produced it.",
+  "evaluation-loop.json": "The hand-maintained summary of the adversarial review loop \u2014 rounds completed, findings per round, the pinned evaluator prompt's sha256. No model produced it, and the loop's own record is private.",
+  "non-model-records.json": "This manifest. It is hand-maintained, not a run, and it names itself so the sweep over results/ has no file it cannot account for \u2014 including the one file that defines the exemption."
+ }
+}

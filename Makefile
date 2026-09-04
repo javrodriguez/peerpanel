@@ -17,8 +17,9 @@ SHELL := /bin/bash
 # Full reproduction of the demo scale, in order:
 #   make corpus && make demo-index && make demo-summaries && make ablation && make demo
 
-.PHONY: quickstart demo demo-replay demo-index demo-summaries corpus corpus-verify \
-        embeddings query-embeddings graph summaries ablation ablation-demo publish-results eval review test lint
+.PHONY: quickstart demo demo-index demo-summaries corpus corpus-verify \
+        embeddings query-embeddings graph summaries ablation ablation-demo publish-results eval review test lint \
+        token-collisions derive-window-sources
 
 ## --- Tier 1: deterministic, from committed bytes ---
 
@@ -57,21 +58,26 @@ embeddings:
 graph:
 	uv run python -m peerpanel graph build --publish
 
-## Regenerate CI community reports (all Leiden levels).
+## Regenerate CI community reports (all Leiden levels), and publish the run record
+## the prose cites (results/summaries-stats-ci.json): which wire and model served the
+## reports, how many calls THIS run made, and the per-call margin between prompt and
+## window. A WARM run makes no calls and records none — the committed record is the
+## COLD run, reproduced by emptying fixtures/summaries/ci first.
 summaries:
-	uv run python -m peerpanel graph summaries
+	uv run python -m peerpanel graph summaries --publish
 
-## Build the demo-scale index: embeddings + extraction + graph + Leiden (~6.4h).
+## Build the demo-scale index: embeddings + extraction + graph + Leiden (~12h).
 ## Writes the log RESULTS.md cites as this build's raw capture — a documented
 ## regenerate command that produces no artifact is not a regenerate command.
 demo-index:
 	@mkdir -p results
 	set -o pipefail; uv run python -m peerpanel graph build --corpus demo --publish 2>&1 | tee results/demo-index-build.log
 
-## Demo community reports at the resolution retrieval reads (see DECISIONS D9).
+## Demo community reports at the resolution retrieval reads (see DECISIONS D9), with
+## the same run record (results/summaries-stats-demo.json); cold for the same reason.
 demo-summaries:
 	@mkdir -p results
-	set -o pipefail; uv run python -m peerpanel graph summaries --corpus demo --resolution 1.0 2>&1 | tee results/demo-summaries.log
+	set -o pipefail; uv run python -m peerpanel graph summaries --corpus demo --resolution 1.0 --publish 2>&1 | tee results/demo-summaries.log
 
 ## The retrieval ablation ladder — CI corpus, from committed bytes, no model needed.
 ablation:
@@ -107,21 +113,36 @@ review:
 	@mkdir -p results
 	set -o pipefail; uv run python -m peerpanel review $(MANUSCRIPT) --publish --run $(RUN) 2>&1 | tee results/panel-review-$(MANUSCRIPT)$(RUN_SUFFIX).log
 
-## The headline measurement: planted errors, panel vs single-agent baseline
-## (SUBJECT=<stem>). Publishes results/planted-eval-<stem>.json and .log.
+## The headline measurement: planted errors, THREE arms — the panel (a two-family
+## mixture) and one single-agent baseline per named local model (llama3.1:8b,
+## qwen2:7b), so there is a measured pass rate per model rather than one number over
+## a mixture. Every arm publishes BOTH counts: `asserted` (the headline, rule
+## assertion-v1, published even at 0) and `named token` (the labelled upper bound).
+## SUBJECT=<stem>. Publishes results/planted-eval-<stem>.json and .log.
 SUBJECT ?= caprin-heterochromatin
 eval:
 	@mkdir -p results
 	set -o pipefail; uv run python -m peerpanel eval $(SUBJECT) --publish --run $(RUN) 2>&1 | tee results/planted-eval-$(SUBJECT)$(RUN_SUFFIX).log
 
-## The captured demo run — tee'd verbatim to demo/raw-<utc>.log.
-## The captured demo walk. Writes the raw capture to the path --replay reads,
-## so the committed evidence and the replay can never drift apart.
+## The demo walk: the full panel on the demo manuscript, tee'd to results/demo-capture.log.
+## No capture is committed at present — the panel's committed evidence is the two
+## `make review` records in results/ — so there is no replay target; a target that
+## promised to print committed evidence that did not exist was a round-3 finding.
 demo:
 	@mkdir -p results
 	set -o pipefail; uv run python -m peerpanel demo 2>&1 | tee results/demo-capture.log
 
-## Print the committed capture instead of re-running it (no model needed).
-demo-replay:
-	uv run python -m peerpanel demo --replay
+## For every planted token, which corpus documents already contain it. Model-free and
+## committed (corpus/token_collisions.json), so the collision guard the headline leans
+## on runs in every clean clone instead of skipping wherever the fetched corpus is
+## absent — a guard that skips is a guard that cannot fail.
+token-collisions:
+	uv run python -m peerpanel eval --collisions
 
+## Write the ONE derived field on the two index-build records — the window source that
+## the wire each record already names determines — through the emitter's own derivation,
+## and disclose it in results/derived-fields.json. The records are NOT re-run: a
+## non-deterministic re-extraction would move every downstream number to write a string
+## the code path determines. Idempotent; a second run changes nothing.
+derive-window-sources:
+	uv run python -m peerpanel results derive-window-sources results/build-stats-ci.json results/build-stats-demo.json

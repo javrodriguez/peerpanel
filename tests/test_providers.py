@@ -24,6 +24,7 @@ from peerpanel.providers import (
     build_request,
 )
 from peerpanel.providers.anthropic_wire import STRUCTURED_TOOL_NAME
+from peerpanel.providers.base import WINDOW_SOURCE_NATIVE, WINDOW_SOURCE_OPENAI
 
 SCHEMA = {
     "type": "object",
@@ -77,6 +78,56 @@ class TestTokenLedger:
         assert ledger.prompt_tokens == 13
         assert ledger.completion_tokens == 7
         assert ledger.total_tokens == 20
+
+    def test_collects_the_distinct_window_sources_sorted(self) -> None:
+        """A run may mix wires, so the record names every source it used — distinct
+        (three calls here, two wires) and sorted, so the same run writes the same
+        list every time."""
+        ledger = TokenLedger()
+        for context, source in (
+            (8192, WINDOW_SOURCE_NATIVE),
+            (4096, WINDOW_SOURCE_OPENAI),
+            (16384, WINDOW_SOURCE_NATIVE),
+        ):
+            ledger.record(
+                ChatResponse(
+                    text="",
+                    model="m",
+                    prompt_tokens=10,
+                    completion_tokens=1,
+                    context=context,
+                    context_source=source,
+                )
+            )
+        assert ledger.calls == 3
+        assert ledger.window_sources == {WINDOW_SOURCE_NATIVE, WINDOW_SOURCE_OPENAI}
+        assert ledger.window_source_list == [WINDOW_SOURCE_OPENAI, WINDOW_SOURCE_NATIVE]
+        assert ledger.window_source_list == sorted(ledger.window_source_list)
+
+    def test_a_window_without_its_source_is_refused(self) -> None:
+        """Round 3's gap, closed at the door: a record stated the margin without
+        saying which field the window came from, so no reader could check it. A
+        window whose source is unnamed is not recorded at all — it is a defect in
+        the wire that produced it."""
+        ledger = TokenLedger()
+        with pytest.raises(ValueError, match="context_source"):
+            ledger.record(
+                ChatResponse(
+                    text="", model="m", prompt_tokens=10, completion_tokens=1, context=4096
+                )
+            )
+        assert ledger.calls == 0  # refused before anything was counted
+        assert ledger.window_source_list == []
+
+    def test_a_wire_that_reports_no_window_names_no_source(self) -> None:
+        """The Anthropic adapter's shape: no window read or set, so nothing to name.
+        The empty list means no call measured one, never that a measurement is
+        missing — CallStats holds that to calls == 0."""
+        ledger = TokenLedger()
+        ledger.record(ChatResponse(text="a", model="m", prompt_tokens=10, completion_tokens=1))
+        assert ledger.calls == 1
+        assert ledger.smallest_context is None
+        assert ledger.window_source_list == []
 
     def test_recording_holds_the_lock(self) -> None:
         """Reviewers and the verifier record from worker threads, so `record`

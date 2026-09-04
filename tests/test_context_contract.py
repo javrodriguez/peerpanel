@@ -20,6 +20,7 @@ from peerpanel.agents.schemas import CallStats, PanelReview
 from peerpanel.graph.extract import EXTRACTION_MODEL, EXTRACTION_PROVIDER_NAME
 from peerpanel.graph.summaries import SUMMARY_MODEL, SUMMARY_PROVIDER_NAME
 from peerpanel.providers import ChatResponse, OllamaNativeChat, OllamaOpenAIChat, TokenLedger
+from peerpanel.providers.base import WINDOW_SOURCE_NATIVE, WINDOW_SOURCE_OPENAI
 from peerpanel.providers.context import (
     CHARS_PER_TOKEN_SIGNATURE,
     CHARS_PER_TOKEN_SIZING,
@@ -239,6 +240,17 @@ class TestNativeWire:
         provider.chat(system=small[0], user=small[1], max_tokens=256)
         assert stub.calls[-1]["options"]["num_ctx"] == CONTEXT_FLOOR
 
+    def test_names_the_field_it_set_the_window_in(self) -> None:
+        """The window is only checkable if the record says where it came from: this
+        wire SET it, in this call's own `options.num_ctx` (requirement 8)."""
+        provider = OllamaNativeChat("qwen2:7b")
+        provider._client = _NativeStub()  # type: ignore[assignment]
+        system, user = _prompt(2_000)
+        response = provider.chat(system=system, user=user, max_tokens=256)
+        assert response.context_source == WINDOW_SOURCE_NATIVE
+        assert "options.num_ctx" in WINDOW_SOURCE_NATIVE
+        assert "ollama-native" in WINDOW_SOURCE_NATIVE
+
     def test_refuses_the_truncation_signature(self) -> None:
         provider = OllamaNativeChat("qwen2:7b")
         provider._client = _NativeStub(prompt_eval_count=TRUNCATED_COUNT_ON_4096)  # type: ignore[assignment]
@@ -316,7 +328,26 @@ class TestOpenAIWire:
         provider, client = _openai_wire(server_default=4096, resident=8192)
         assert provider.context() == 4096
         assert client.calls[0]["max_tokens"] == 1  # the one-token warm-up went first
-        assert provider.context() == 4096 and len(client.calls) == 1  # read once
+        assert provider.context() == 4096 and len(client.calls) == 1  # warmed once, not again
+
+    def test_the_window_is_read_before_every_call_and_never_cached(self) -> None:
+        """Requirement 8 is a per-call condition, and the resident runner is server
+        state, not a property of this object: a native-wire call (or a restarted
+        server) between two of these calls changes the window. A value read once and
+        reused would publish the first call's condition as every call's."""
+        provider, client = _openai_wire(server_default=4096)
+        system, user = _prompt(15_000)
+        with pytest.raises(ContextTooSmall):  # 4,096 cannot hold this prompt
+            provider.chat(system=system, user=user, max_tokens=1024)
+        warmups = [c for c in client.calls if c["max_tokens"] == 1]
+        assert len(warmups) == 1
+        # The runner is now resident at a different window — `ps` reports 16,384 to
+        # the SAME provider object, and the same prompt is served rather than refused.
+        client.ps.loaded = [_Running("llama3.1:8b", 16_384)]
+        response = provider.chat(system=system, user=user, max_tokens=1024)
+        assert response.context == 16_384  # the second read, not the first value
+        assert response.context_source == WINDOW_SOURCE_OPENAI
+        assert [c for c in client.calls if c["max_tokens"] == 1] == warmups  # warmed once
 
     def test_refuses_a_call_the_default_window_cannot_hold(self) -> None:
         provider, client = _openai_wire(server_default=4096)
@@ -331,6 +362,9 @@ class TestOpenAIWire:
         system, user = _prompt(2_500)  # a community-report-sized prompt
         response = provider.chat(system=system, user=user, max_tokens=512)
         assert response.context == 4096 and response.prompt_tokens == 2_500 // 4
+        # Where that 4,096 came from: this wire READ it (it cannot set one).
+        assert response.context_source == WINDOW_SOURCE_OPENAI
+        assert "ollama ps context_length" in WINDOW_SOURCE_OPENAI
 
     def test_a_larger_server_default_admits_the_reviewer_prompt(self) -> None:
         provider, _ = _openai_wire(server_default=16384)
@@ -358,7 +392,12 @@ class _ScriptedProvider:
         self.budgets.append(kwargs["max_tokens"])
         text = self.replies.pop(0)
         return ChatResponse(
-            text=text, model="m", prompt_tokens=100, completion_tokens=len(text), context=4096
+            text=text,
+            model="m",
+            prompt_tokens=100,
+            completion_tokens=len(text),
+            context=4096,
+            context_source=WINDOW_SOURCE_NATIVE,  # the ledger refuses a sourceless window
         )
 
 
@@ -613,10 +652,24 @@ class TestCallStatsOnEveryRecord:
     def test_from_ledger_carries_the_proof(self) -> None:
         ledger = TokenLedger()
         ledger.record(
-            ChatResponse(text="", model="m", prompt_tokens=4_100, completion_tokens=1, context=8192)
+            ChatResponse(
+                text="",
+                model="m",
+                prompt_tokens=4_100,
+                completion_tokens=1,
+                context=8192,
+                context_source=WINDOW_SOURCE_NATIVE,
+            )
         )
         ledger.record(
-            ChatResponse(text="", model="m", prompt_tokens=900, completion_tokens=1, context=4096)
+            ChatResponse(
+                text="",
+                model="m",
+                prompt_tokens=900,
+                completion_tokens=1,
+                context=4096,
+                context_source=WINDOW_SOURCE_OPENAI,
+            )
         )
         stats = CallStats.from_ledger(ledger)
         # The margin is per call (4096-900=3196), NOT largest-prompt vs smallest-window,
@@ -626,13 +679,24 @@ class TestCallStatsOnEveryRecord:
             largest_prompt_tokens=4_100,
             smallest_context=4096,
             smallest_headroom_tokens=3196,
+            # Both wires served this run, so the record names both — sorted, so the
+            # same run writes the same list every time (the OpenAI string sorts first).
+            window_sources=[WINDOW_SOURCE_OPENAI, WINDOW_SOURCE_NATIVE],
         )
+        assert stats.window_sources == sorted(stats.window_sources)
         assert stats.largest_prompt_tokens > (stats.smallest_context or 0)
 
     def test_the_margin_goes_negative_only_when_a_prompt_did_not_fit(self) -> None:
         ledger = TokenLedger()
         ledger.record(
-            ChatResponse(text="", model="m", prompt_tokens=4_100, completion_tokens=1, context=4096)
+            ChatResponse(
+                text="",
+                model="m",
+                prompt_tokens=4_100,
+                completion_tokens=1,
+                context=4096,
+                context_source=WINDOW_SOURCE_NATIVE,
+            )
         )
         assert CallStats.from_ledger(ledger).smallest_headroom_tokens == -4
 
@@ -650,17 +714,18 @@ class TestCallStatsOnEveryRecord:
             "n_swap_checked": 0,
             "total_tokens": 0,
             "wall_s": 0.0,
+            "models": {},
         }
         with pytest.raises(ValueError):
             PanelReview.model_validate(fields)
-        PanelReview.model_validate(
-            {
-                **fields,
-                "model_calls": {
-                    "calls": 0,
-                    "largest_prompt_tokens": 0,
-                    "smallest_context": None,
-                    "smallest_headroom_tokens": None,
-                },
-            }
-        )
+        stats = {
+            "calls": 0,
+            "largest_prompt_tokens": 0,
+            "smallest_context": None,
+            "smallest_headroom_tokens": None,
+        }
+        # Nor can a record that predates the window source: the field says what the
+        # margin was measured against, and a default would invent that answer.
+        with pytest.raises(ValueError):
+            PanelReview.model_validate({**fields, "model_calls": stats})
+        PanelReview.model_validate({**fields, "model_calls": {**stats, "window_sources": []}})

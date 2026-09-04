@@ -4,9 +4,14 @@ Nodes are case-normalised entities carrying their surface variants and type
 votes; edges combine explicit relations (weight 1 each) with same-chunk
 co-mentions (weight 0.25 each), so a stated link outweighs a bare co-mention
 four to one PER EDGE. That is a statement about weighting, not about the graph
-that results: measured on the demo corpus, 92.8% of edges (51,176 of 55,146)
-are co-mention only and just 3,970 carry an extracted relation. The graph is
+that results: measured on the demo corpus, 93.1% of edges (58,797 of 63,130)
+are co-mention only and just 4,333 carry an extracted relation. The graph is
 mostly adjacency, and any claim resting on its relations should say so.
+
+Those three figures are recomputed from the committed demo extractions by
+`tests/test_run_graph.py::test_relation_share_docstring_is_bound` — they were
+last stated against a pre-D19 index and drifted by four thousand edges before
+anything read them, because a number in a docstring is prose like any other.
 """
 
 from __future__ import annotations

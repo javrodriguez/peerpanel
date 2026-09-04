@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pytest
 
+from peerpanel.agents.schemas import CallStats
 from peerpanel.graph.build import build_graph
 from peerpanel.graph.models import ChunkExtraction, Entity, Relation
 from peerpanel.graph.summaries import (
@@ -13,7 +14,7 @@ from peerpanel.graph.summaries import (
     REPORT_SCHEMA,
     summarise_communities,
 )
-from peerpanel.providers.base import ChatResponse
+from peerpanel.providers.base import ChatResponse, TokenLedger
 
 
 def _graph_and_assignment() -> tuple[object, dict[str, int]]:
@@ -98,6 +99,69 @@ class TestSummaries:
         report = summarise_communities(g, assignment, 1.0, _StubChat('{"tit'))[0]  # type: ignore[arg-type]
         assert report.truncated
         assert report.summary == ""
+
+
+class TestTheRunRecord:
+    """The layer that shipped no run record until round 3 found it (report-2, 3b).
+
+    The community reports are the only input to graphrag-global's ranking — the rung
+    this repository reports as its winner — and they ride the one wire that cannot set
+    its own window. `--publish` writes `results/summaries-stats-<corpus>.json` from the
+    ledger threaded through here, so what the ledger counts IS the published number:
+    one call per report this run generated, and nothing at all for a report served from
+    the committed cache. A warm run recording calls would be a record claiming work it
+    did not do; a cold run recording none would be a layer still invisible.
+    """
+
+    def test_the_ledger_counts_one_call_per_generated_report(self, tmp_path: Path) -> None:
+        g, assignment = _graph_and_assignment()
+        stub = _StubChat(GOOD)
+        ledger = TokenLedger()
+        reports = summarise_communities(
+            g,  # type: ignore[arg-type]
+            assignment,
+            1.0,
+            stub,  # type: ignore[arg-type]
+            cache_dir=tmp_path,
+            ledger=ledger,
+        )
+        assert reports, "nothing was summarised, so this proves nothing about the record"
+        assert (ledger.calls, len(stub.calls)) == (len(reports), len(reports))
+        # The published record is CallStats.from_ledger(ledger) (__main__, `--publish`),
+        # so bind the number a reader sees, not only the counter behind it.
+        assert CallStats.from_ledger(ledger).calls == len(reports)
+        assert ledger.prompt_tokens == len(reports)  # the stub reports one per call
+
+    def test_a_replayed_report_records_no_call(self, tmp_path: Path) -> None:
+        g, assignment = _graph_and_assignment()
+        stub = _StubChat(GOOD)
+        cold = TokenLedger()
+        first = summarise_communities(
+            g,  # type: ignore[arg-type]
+            assignment,
+            1.0,
+            stub,  # type: ignore[arg-type]
+            cache_dir=tmp_path,
+            ledger=cold,
+        )
+        warm = TokenLedger()
+        second = summarise_communities(
+            g,  # type: ignore[arg-type]
+            assignment,
+            1.0,
+            stub,  # type: ignore[arg-type]
+            cache_dir=tmp_path,
+            ledger=warm,
+        )
+        assert [r.summary for r in second] == [r.summary for r in first]
+        assert cold.calls == len(first) and len(stub.calls) == len(first)
+        assert warm.calls == 0, (
+            "the second pass was served entirely from the cache and called nothing; a "
+            "record that counted calls here would describe a run that did not happen"
+        )
+        assert CallStats.from_ledger(warm).window_sources == [], (
+            "a run that made no call read no window, so it names no source for one"
+        )
 
 
 @pytest.mark.ollama

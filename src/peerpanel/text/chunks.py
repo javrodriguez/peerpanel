@@ -108,6 +108,21 @@ def _sentences(para: str) -> list[str]:
     return out
 
 
+
+def sentences(text: str) -> list[str]:
+    """The sentence boundary above, as a public door — one splitter, never a second.
+
+    `peerpanel.evals.planted.asserts` scores a finding sentence by sentence, and it
+    has to see the SAME boundaries the index does — abbreviations and initials kept
+    whole (DECISIONS D19) — so it calls this instead of growing a splitter of its
+    own. The behaviour is `_sentences` exactly, unchanged: the candidates
+    `_SENTENCE_END` finds, minus every candidate whose preceding word is an
+    abbreviation or a single character. A blank line is whitespace like any other
+    here; paragraphs are packed by `chunk_document`, not by this function.
+    """
+    return _sentences(text)
+
+
 def split_oversize(para: str, target_words: int) -> list[str]:
     """A paragraph longer than the window, cut at sentence ends into pieces that fit.
 

@@ -1,0 +1,1166 @@
+      Considerations for the Use of
+     Artificial Intelligence to Support
+     Regulatory Decision-Making for
+      Drug and Biological Products
+          Guidance for Industry and Other
+                Interested Parties
+                              DRAFT GUIDANCE
+        This guidance document is being distributed for comment purposes only.
+
+Comments and suggestions regarding this draft document should be submitted within 90 days of
+publication in the Federal Register of the notice announcing the availability of the draft
+guidance. Submit electronic comments to https://www.regulations.gov. Submit written
+comments to the Dockets Management Staff (HFA-305), Food and Drug Administration, 5630
+Fishers Lane, Rm. 1061, Rockville, MD 20852. All comments should be identified with the
+docket number listed in the notice of availability that publishes in the Federal Register.
+
+
+For questions regarding this draft document, contact (CDER) Tala Fakhouri, 301-837-7407;
+(CBER) Office of Communication, Outreach and Development, 800-835-4709 or 240-402-8010;
+or (CDRH) Digital Health Center of Excellence, digitalhealth@fda.hhs.gov.
+
+
+                      U.S. Department of Health and Human Services
+                               Food and Drug Administration
+                     Center for Drug Evaluation and Research (CDER)
+                   Center for Biologics Evaluation and Research (CBER)
+                    Center for Devices and Radiological Health (CDRH)
+                          Center for Veterinary Medicine (CVM)
+                           Oncology Center of Excellence (OCE)
+                           Office of Combination Products (OCP)
+                       Office of Inspections and Investigations (OII)
+
+                                       January 2025
+                                   Artificial Intelligence
+
+
+59502407dft.docx
+   Considerations for the Use of Artificial
+Intelligence to Support Regulatory Decision-
+ Making for Drug and Biological Products
+Guidance for Industry and Other Interested Parties
+                                      Additional copies are available from:
+
+                           Office of Communications, Division of Drug Information
+                                   Center for Drug Evaluation and Research
+                                        Food and Drug Administration
+                            10001 New Hampshire Ave., Hillandale Bldg., 4th Floor
+                                        Silver Spring, MD 20993-0002
+                          Phone: 855-543-3784 or 301-796-3400; Fax: 301-431-6353
+                                        Email: druginfo@fda.hhs.gov
+               https://www.fda.gov/drugs/guidance-compliance-regulatory-information/guidances-drugs
+                                                    and/or
+                             Office of Communication, Outreach and Development
+                                 Center for Biologics Evaluation and Research
+                                         Food and Drug Administration
+                              10903 New Hampshire Ave., Bldg. 71, Room 3128
+                                        Silver Spring, MD 20993-0002
+                                    Phone: 800-835-4709 or 240-402-8010
+                                           Email: ocod@fda.hhs.gov
+https://www.fda.gov/vaccines-blood-biologics/guidance-compliance-regulatory-information-biologics/biologics-guidances
+                                                     and/or
+                                                 Office of Policy
+                                  Center for Devices and Radiological Health
+                                        Food and Drug Administration
+                               10903 New Hampshire Ave., Bldg. 66, Room 5431
+                                        Silver Spring, MD 20993-0002
+                                    Email: CDRH-Guidance@fda.hhs.gov
+ https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/guidance-documents-medical-
+                                       devicesand-radiation-emitting-products
+
+                        U.S. Department of Health and Human Services
+                                 Food and Drug Administration
+                       Center for Drug Evaluation and Research (CDER)
+                     Center for Biologics Evaluation and Research (CBER)
+                      Center for Devices and Radiological Health (CDRH)
+                            Center for Veterinary Medicine (CVM)
+                             Oncology Center of Excellence (OCE)
+                             Office of Combination Products (OCP)
+                         Office of Inspections and Investigations (OII)
+
+                                                January 2025
+                                            Artificial Intelligence
+                                              Contains Nonbinding Recommendations
+                                                          Draft — Not for Implementation
+                                                          TABLE OF CONTENTS
+
+
+
+I.           INTRODUCTION............................................................................................................. 1
+II.          SCOPE ............................................................................................................................... 3
+III.         BACKGROUND ............................................................................................................... 4
+IV.          CONSIDERATIONS FOR AI USE IN THE DRUG PRODUCT LIFE CYCLE ....... 5
+     A.      A Risk-Based Credibility Assessment Framework ..................................................................... 5
+       1. Step 1: Define the Question of Interest ........................................................................................... 6
+       2. Step 2: Define the Context of Use for the AI Model........................................................................ 7
+       3. Step 3: Assess the AI Model Risk .................................................................................................... 8
+       4. Step 4: Develop a Plan to Establish AI Model Credibility Within the Context of Use ................... 9
+          a. Describe the model and the model development process........................................................ 10
+             i. Describe the model .............................................................................................................. 10
+             ii. Describe the data used to develop the model ..................................................................... 11
+             iii. Describe model training .................................................................................................... 12
+          b. Describe the model evaluation process ................................................................................... 13
+       5. Step 5: Execute the Plan ............................................................................................................... 15
+       6. Step 6: Document the Results of the Credibility Assessment Plan and Discuss Deviations From
+       the Plan .............................................................................................................................................. 15
+       7. Step 7: Determine the Adequacy of the AI Model for the Context of Use ..................................... 15
+     B. Special Consideration: Life Cycle Maintenance of the Credibility of AI Model Outputs in
+     Certain Contexts of Use ....................................................................................................................... 16
+     C.      Early Engagement........................................................................................................................ 17
+                                      Contains Nonbinding Recommendations
+                                                Draft — Not for Implementation
+
+
+ 1        Considerations for the Use of Artificial Intelligence to Support
+ 2        Regulatory Decision-Making for Drug and Biological Products
+ 3            Guidance for Industry 1 and Other Interested Parties
+ 4
+ 5   This draft guidance, when finalized, will represent the current thinking of the Food and Drug
+ 6   Administration (FDA or Agency) on this topic. It does not establish any rights for any person and is not
+ 7   binding on FDA or the public. You can use an alternative approach if it satisfies the requirements of the
+ 8   applicable statutes and regulations. To discuss an alternative approach, contact the FDA staff responsible
+ 9   for this guidance as listed on the title page.
+10
+11   I.       INTRODUCTION
+12
+13   This guidance provides recommendations to sponsors 2 and other interested parties 3 on the use of
+14   artificial intelligence (AI) to produce information or data intended to support regulatory decision-
+15   making 4 regarding safety, effectiveness, or quality for drugs. 5,6 Specifically, this guidance
+
+     1
+      This guidance has been prepared by the Center for Drug Evaluation and Research in collaboration with the Center
+     for Biologics Evaluation and Research, the Center for Devices and Radiological Health, the Center for Veterinary
+     Medicine, the Oncology Center of Excellence, the Office of Inspections and Investigations, and the Office of
+     Combination Products in the Office of the Commissioner at the Food and Drug Administration (FDA).
+     2
+       Depending on the stage of the drug product life cycle, FDA may refer to a person or entity as a sponsor, a
+     requestor, or an applicant. For example, a sponsor may refer to a person or an entity that takes responsibility for and
+     initiates a clinical investigation. The terms requestor and sponsor are used in various contexts for over-the-counter
+     monograph drugs. An applicant may refer to the person or entity that files a marketing application and/or assumes
+     responsibility for the marketing of a human drug, animal drug, or biological product. Because this guidance covers
+     the drug product life cycle, including premarket and postmarketing activities, this guidance uses the single term
+     sponsor to cover sponsors, requestors, and applicants, as applicable.
+     3
+       For the purposes of this guidance, an interested party means any person or organization that may be interested in
+     the use of AI in drug and biological product development. This includes, for example, manufacturers (i.e., a person
+     or entity that manufactures, processes, packs, or holds a drug) that are otherwise not sponsors.
+     4
+       For the purposes of this guidance, regulatory decision-making refers to regulatory determinations made by FDA
+     (e.g., with respect to an application or supplement) and actions taken by sponsors and other interested parties in
+     conformance with FDA’s regulatory authority (e.g., current good manufacturing practices (CGMPs), postmarketing
+     requirements, investigational new drug applications (INDs).
+     5
+      For the purposes of this guidance, the term drug, as defined in section 201(g) of the Federal Food, Drug, and
+     Cosmetic Act (FD&C Act), refers to human and animal drugs and human biological products (as defined in section
+     351(i) of the Public Health Service Act), other than biological products that also meet the definition of a device
+     under section 201(h)(1) of the FD&C Act, unless otherwise specified. It also refers to a drug or biological product
+     constituent part (21 CFR 4.2) of a combination product (21 CFR 3.2).
+     6
+      The recommendations in this guidance focus on the use of AI to produce data or information to support regulatory
+     decision-making for drugs or combination products that include a drug. The recommendations also may be relevant
+     across all medical products, including to support regulatory decision-making for medical devices intended to be used
+
+
+
+
+                                                               1
+                                       Contains Nonbinding Recommendations
+                                                Draft — Not for Implementation
+
+
+16   provides a risk-based credibility assessment framework that may be used for establishing and
+17   evaluating the credibility of an AI model 7 for a particular context of use (COU). For the
+18   purposes of this guidance, credibility refers to trust, established through the collection of
+19   credibility evidence, in the performance of an AI model for a particular COU. Credibility
+20   evidence is any evidence that could support the credibility of an AI model output for a specific
+21   COU. The COU defines the specific role and scope of the AI model used to address a question
+22   of interest. This guidance does not endorse the use of any specific AI approach or technique.
+23
+24   As used in this guidance, AI refers to a machine-based system that can, for a given set of human-
+25   defined objectives, make predictions, recommendations, or decisions influencing real or virtual
+26   environments. 8 AI systems (1) use machine- and human-based inputs to perceive real and virtual
+27   environments, (2) abstract such perceptions into models through analysis in an automated
+28   manner, and (3) use model inference to formulate options for information or action. 9 A subset of
+29   AI that is commonly used in the drug product life cycle 10 is machine learning (ML). ML refers
+30   to a set of techniques that can be used to train AI algorithms to improve performance at a task
+31   based on data. 11 Although ML is currently the most utilized AI modeling technique in the drug
+32   product life cycle, this guidance focuses on AI models more broadly.
+33
+34   In general, FDA’s guidance documents do not establish legally enforceable responsibilities.
+35   Instead, guidances describe the Agency’s current thinking on a topic and should be viewed only
+36   as recommendations, unless specific regulatory or statutory requirements are cited. The use of
+
+
+     with drugs. The term device refers to a device as defined in section 201(h)(1) of the FD&C Act (21 U.S.C.
+     321(h)(1)). For devices, FDA recommends that sponsors refer to device-specific guidances using CDRH’s guidance
+     search web page Guidance Documents (Medical Devices and Radiation-Emitting Products) at
+     https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/guidance-documents-
+     medical-devices-and-radiation-emitting-products.
+     7
+       Depending on the intended use (see 21 CFR 801.4) of an AI model, the AI model may meet the definition of a
+     device under section 201(h)(1) of the FD&C Act. How to determine whether an AI model meets the definition of a
+     device is outside the scope of this guidance. For further information about FDA digital health regulatory policies,
+     see FDA’s web page Digital Health Policy Navigator at https://www.fda.gov/medical-devices/digital-health-center-
+     excellence/digital-health-policy-navigator and FDA’s web page on Guidances with Digital Health Content,
+     https://www.fda.gov/medical-devices/digital-health-center-excellence/guidances-digital-health-content.
+     8
+       See Executive Order 14110 of October 30, 2023; Safe, Secure, and Trustworthy Development and Use of Artificial
+     Intelligence, sec. 3(b) (citing to definition of AI at 15 U.S.C. 9401(3)); https://www.federalregister.gov/d/2023-
+     24283.
+     9
+         Ibid.
+     10
+        For the purposes of this guidance, the term drug product life cycle includes nonclinical, clinical, postmarketing,
+     and manufacturing phases. While the drug product life cycle generally also includes drug discovery, the use of AI
+     for the purposes of drug discovery is not in the scope of this guidance and therefore is not included in our use of the
+     term drug product life cycle.
+     11
+       See Executive Order 14110 of October 30, 2023; Safe, Secure, and Trustworthy Development and Use of
+     Artificial Intelligence, sec. 3(t) (definition of ML); https://www.federalregister.gov/d/2023-24283.
+
+
+                                                                2
+                                       Contains Nonbinding Recommendations
+                                                Draft — Not for Implementation
+
+
+37   the word should in Agency guidances means that something is suggested or recommended, but
+38   not required.
+39
+40
+41   II.      SCOPE
+42
+43   This guidance discusses the use of AI models in the drug product life cycle, where the specific
+44   use of the AI model is to produce information or data to support regulatory decision-making
+45   regarding safety, effectiveness, or quality for drugs.
+46
+47   This guidance does not address the use of AI models (1) in drug discovery or (2) when used for
+48   operational efficiencies (e.g., internal workflows, resource allocation, drafting/writing a
+49   regulatory submission) that do not impact patient safety, drug quality, or the reliability of results
+50   from a nonclinical or clinical study. We encourage sponsors to engage with FDA early if they
+51   are uncertain about whether or not their use of AI is within the scope of this guidance.
+52
+53   The risk-based credibility assessment framework 12,13 described in this guidance is intended to
+54   help sponsors and other interested parties plan, gather, organize, and document information to
+55   establish the credibility of AI model outputs when the model is used to produce information or
+56   data intended to support regulatory decision-making. As described in this guidance, the
+57   activities (e.g., the level of oversight by FDA, the sponsor, or other parties responsible for the
+58   relevant information or data, the stringency of the credibility assessments and the performance
+59   acceptance criteria, the risk mitigation strategy, and the type and extent of documentation and
+60   detail associated with AI use) that may be used to establish credibility of AI model outputs
+61   should be commensurate with the AI model risk and tailored to the specific COU.
+62
+63   This guidance also describes different options by which sponsors and other interested parties
+64   may engage with the Agency on issues related to AI model use, depending on the COU and the
+65   specific development program.
+66
+     12
+       FDA applies benefit-risk principles when assessing the safety, effectiveness, and quality of a drug. For illustrative
+     examples highlighting benefit-risk considerations, see (1) the guidance for industry Benefit-Risk Assessment for New
+     Drug and Biological Products (October 2023), (2) the draft guidance for industry Benefit-Risk Considerations for
+     Product Quality Assessments (May 2022) (when final, this guidance will represent FDA’s current thinking on this
+     topic), (3) the International Council for Harmonisation (ICH) guidance for industry M4E(R2): The Common
+     Technical Document (CTD)—Efficacy (July 2017), (4) the ICH guidance for industry Q9(R1) Quality Risk
+     Management (May 2023), and (5) the ICH guidance for industry Q10 Pharmaceutical Quality System (April 2009).
+     13
+       The high-level key concepts and principles of the risk-based credibility assessment framework described in this
+     guidance (sections IV.A.1 through A.3) were informed by an FDA-recognized consensus standard for medical
+     devices titled “American Society of Mechanical Engineers Assessing Credibility of Computational Modeling
+     through Verification and Validation: Application to Medical Device” (ASME V&V40). While the ASME V&V40
+     was developed specifically for physics-based models for medical device applications, the high-level key concepts
+     related to defining the question of interest, COU, and assessment of model risk, which are outlined in sections 2, 3,
+     and 4 of the ASME V&V40 standard, are used in this guidance’s risk-based credibility assessment framework for
+     the use of AI models to produce information or data intended to support regulatory decision-making regarding
+     safety, effectiveness, or quality for drugs.
+
+
+                                                                3
+                                         Contains Nonbinding Recommendations
+                                                  Draft — Not for Implementation
+
+
+67
+68   III.       BACKGROUND
+69
+70   In recent years, the use of AI in the drug product life cycle has increased. Continuous
+71   advancements in AI hold the potential to accelerate the development of safe and effective drugs
+72   and enhance patient care. Concurrent with these technological advancements, the use of AI in
+73   regulatory submissions to FDA has also increased for some uses. 14 Some examples 15 of AI uses
+74   for producing information or data intended to support regulatory decision-making regarding
+75   safety, effectiveness, or quality for drugs include, but are not limited to, (1) reducing the number
+76   of animal-based pharmacokinetic, pharmacodynamic, and toxicologic studies; (2) using
+77   predictive modeling for clinical pharmacokinetics and/or exposure-response analyses;
+78   (3) integrating data from various sources (e.g., natural history, clinical studies, genetic databases,
+79   clinical trials, social media, registries) to improve understanding of disease presentations,
+80   heterogeneity, predictors of progression, recognition of disease subtypes; (4) processing and
+81   analyzing large sets of data (e.g., data from real-world data sources or data from digital health
+82   technologies) for the development of clinical trial endpoints or assessment of outcomes;
+83   (5) identifying, evaluating, and processing for reporting postmarketing adverse drug experience
+84   information; and (6) facilitating the selection of manufacturing conditions.
+85
+86   However, AI use presents some unique challenges. First, the variability in the quality, size, and
+87   representativeness of datasets for training AI models 16 may introduce bias and raise questions
+88   about the reliability of AI-driven results. As such, data used to develop AI models should be fit
+89   for use, 17 which means the data should be both relevant (e.g., includes key data elements and
+90   sufficient numbers of representative participants 18 or sufficient data that is representative of the
+     14
+       See, e.g., Liu, Q, R Huang, J Hsieh, et al., 2023, Landscape Analysis of the Application of Artificial Intelligence
+     and Machine Learning in Regulatory Submissions for Drug Development From 2016 to 2021, Clin Pharmacol Ther,
+     113(4):771–774, doi:10.1002/cpt.2668.
+     15
+       For more information on using AI and ML in the development of drug and biological products, see
+     https://www.fda.gov/media/167973/download.
+     16
+        For the purposes of this guidance, training data are data used in procedures and training algorithms to build an AI
+     model, including to define model weights, connections, and components. These data typically should be
+     representative of the target patient population or the manufacturing process or operation, as applicable. For further
+     information regarding training data, see the guidance for industry and FDA staff Marketing Submission
+     Recommendations for a Predetermined Change Control Plan for Artificial Intelligence-Enabled Device Software
+     Functions (December 2024) and the draft guidance to industry and FDA staff Artificial Intelligence-Enabled Device
+     Software Functions: Lifecycle Management and Marketing Submission Recommendations (January 2025). When
+     final, this guidance will represent FDA’s current thinking on this topic. We update guidances periodically. For the
+     most recent version of a guidance, check the FDA guidance web page at https://www.fda.gov/regulatory-
+     information/search-fda-guidance-documents.
+     17
+          The terms fit for use and fit for purpose are sometimes used interchangeably.
+     18
+        Human subjects protections are out of the scope of this guidance but should be considered when developing or
+     deploying AI modeling in the drug product life cycle, as applicable. For additional information, see FDA’s web
+     page Regulations: Good Clinical Practice and Clinical Trials at https://www.fda.gov/science-research/clinical-trials-
+     and-human-subject-protection/regulations-good-clinical-practice-and-clinical-trials
+
+
+                                                                 4
+                                      Contains Nonbinding Recommendations
+                                              Draft — Not for Implementation
+
+
+ 91   manufacturing process or operation) and reliable (i.e., accurate, complete, and traceable). 19
+ 92   Second, because of the complex computational and statistical methodology underpinning these
+ 93   models, understanding how AI models are developed and how they arrive at their conclusions
+ 94   may be difficult and necessitate methodological transparency (e.g., detailing in the regulatory
+ 95   submission the methods and processes used to develop a particular AI model). Third,
+ 96   uncertainty of the accuracy in the deployed models’ output may be difficult to interpret, explain,
+ 97   or quantify. Finally, another challenge with some AI models is the potential for the model’s
+ 98   performance to change over time or across deployment environments when new data inputs are
+ 99   introduced and these inputs differ from the data on which the model was trained (i.e., data drift)
+100   requiring life cycle maintenance of these models.
+101
+102
+103   IV.     CONSIDERATIONS FOR AI USE IN THE DRUG PRODUCT LIFE CYCLE
+104
+105   Section IV.A outlines the proposed risk‐based credibility assessment framework for AI use in the
+106   drug product life cycle. Section IV.B discusses the importance of life cycle maintenance of the
+107   credibility of AI model outputs in certain contexts of use. Section IV.C describes different
+108   options by which sponsors, and other interested parties, may engage with the Agency on issues
+109   related to AI model development.
+110
+111           A.       A Risk-Based Credibility Assessment Framework
+112
+113   Among various computational models used in the drug product life cycle, this guidance focuses
+114   on the use of AI models to produce information or data intended to support regulatory decision-
+115   making regarding safety, effectiveness, or quality for drugs.
+116
+117   The risk-based credibility assessment framework described here consists of the following 7-step
+118   process to establish and assess the credibility of an AI model output for a specific COU based on
+119   model risk:
+120
+121           •    Step 1: Define the question of interest that will be addressed by the AI model (see
+122                section IV.A.1 for details).
+123
+124           •    Step 2: Define the COU for the AI model (see section IV.A.2 for details).
+125
+126           •    Step 3: Assess the AI model risk (see section IV.A.3 for details).
+127
+128           •    Step 4: Develop a plan to establish the credibility of AI model output within the COU
+129                (see section IV.A.4 for details).
+130
+131           •    Step 5: Execute the plan (see section IV.A.5 for details).
+132
+
+       For further information, see the guidance for industry Real-World Data: Assessing Electronic Health Records and
+      19
+
+      Medical Claims Data to Support Regulatory Decision-Making for Drug and Biological Products (July 2024).
+
+
+                                                             5
+                                       Contains Nonbinding Recommendations
+                                               Draft — Not for Implementation
+
+
+133           •    Step 6: Document the results of the credibility assessment plan and discuss
+134                deviations from the plan (see section IV.A.6 for details).
+135
+136           •    Step 7: Determine the adequacy of the AI model for the COU (see section IV.A.7 for
+137                details).
+138   For steps 1 through 3, two examples will be used to illustrate the process of describing the
+139   question of interest, defining the COU, and demonstrating how model risk might be assessed.
+140   One example involves AI use in clinical development and the other involves AI use in
+141   manufacturing. These two hypothetical examples do not extend beyond step 3 because the
+142   credibility assessment activities listed in step 4 are intended to provide a general list of activities
+143   that should be considered when establishing the credibility of AI model outputs. The appropriate
+144   credibility assessment activities may vary depending on the nuances of a specific development
+145   program that cannot be captured in the hypothetical examples provided. Additionally, steps 5
+146   through 7 relate to step 4, as they are intended recommendations to execute, document, and
+147   assess the credibility assessment activities of step 4. As such, hypothetical examples illustrate
+148   the concepts described in steps 1 through 3 only.
+149
+150           1.       Step 1: Define the Question of Interest
+151
+152   Step 1 in the framework is to define the question of interest. The question of interest should
+153   describe the specific question, decision, or concern being addressed by the AI model.
+154
+155   As an example of defining the question of interest in clinical development, Drug A is under
+156   development and is associated with a life-threatening drug-related adverse reaction. 20 In
+157   previous trials for Drug A, all participants went through 24-hour inpatient monitoring after
+158   dosing due to concerns about this adverse reaction. However, data from these previous trials
+159   showed that some participants were at low risk for this adverse reaction. In a new study, the
+160   sponsor is exploring a strategy to use an AI model to stratify patients for 24-hour inpatient
+161   monitoring based on their risk for experiencing this adverse reaction. In the sponsor’s proposal,
+162   participants with low risk for the adverse reaction will be sent home for outpatient monitoring
+163   after dosing. For this example, the question of interest would be “Which participants can be
+164   considered low risk and do not need inpatient monitoring after dosing?”
+165
+166   As an example of defining the question of interest in commercial manufacturing, Drug B is a
+167   parenteral injectable dispensed in a multidose vial. The volume is a critical quality attribute for
+168   the release of vials of Drug B. A manufacturer is proposing to implement an AI-based visual
+169   analysis system to perform 100% automated assessment of the fill level in the vials, to enhance
+
+
+
+
+      20
+        The use of AI must comply with all applicable regulatory requirements. This includes, for example, in clinical
+      development, section 505 of the FD&C Act, and 21 CFR parts 50, 56, and 312.
+
+
+                                                               6
+                                       Contains Nonbinding Recommendations
+                                                Draft — Not for Implementation
+
+
+170   the performance of the visual analysis system and identify deviations. 21 For this example, the
+171   question of interest would be “Do vials of Drug B meet established fill volume specifications?”
+172
+173   A variety of evidentiary sources may be used to answer the question of interest. For example,
+174   evidence generated from, but not limited to, in vitro testing, in vivo animal testing, clinical trials,
+175   or manufacturing process validation studies may be used in conjunction with evidence generated
+176   from the AI model to address any specific question of interest. These different evidentiary
+177   sources should be stated when describing the AI model’s COU in step 2 and are relevant when
+178   determining model influence as assessed in step 3. Sponsors should engage with FDA early if
+179   they are uncertain about their evidentiary sources.
+180
+181            2.       Step 2: Define the Context of Use for the AI Model
+182
+183   Step 2 in the framework is to define the COU for the AI model. The COU defines the specific
+184   role and scope of the AI model used to address a question of interest. The description of the
+185   COU should describe in detail what will be modeled and how model outputs will be used. The
+186   COU should also include a statement on whether other information (e.g., animal or clinical
+187   studies) will be used in conjunction with the model output to answer the question of interest.
+188
+189   For example, to answer the question of interest in the clinical development example discussed in
+190   section IV.A.1 (“Which participants can be considered low risk and do not need inpatient
+191   monitoring after dosing?”), a sponsor is proposing to use an AI model to predict a participant’s
+192   risk for the drug-related adverse reaction to Drug A based on baseline characteristics and lab
+193   values. Specifically, the output from the AI model will be used to stratify participants into low-
+194   versus high-risk groups for the potentially life-threatening adverse reaction to Drug A (the AI
+195   model’s role). In this context, the sponsor is proposing that only the AI model will be used to
+196   determine whether the participant is considered low risk and whether they will need inpatient or
+197   outpatient monitoring after dosing (the AI model’s scope). This would be considered the COU
+198   of the AI model for this example.
+199
+200   For the manufacturing example mentioned previously in section IV.A.1 (to answer the question
+201   of interest “Do vials of Drug B meet established fill volume specifications?”), an AI-based
+202   model will be used to analyze data obtained from visual images of the vials to determine if a
+203   deviation in volume has occurred (the AI model’s role). However, as part of release testing,
+204   independent verification of the fill volume is performed on a representative sample for each
+205   batch. Therefore, the AI-based model will not be the sole determinant for the release of product
+206   (the AI model’s scope). This is the COU of the AI model for this example.
+207
+
+
+
+      21
+         The use of AI in manufacturing (e.g., production and process controls) must be implemented in accordance with
+      current good manufacturing practice (see section 501(a)(2)(B) of the FD&C Act and 21 CFR part 211). For
+      example, with regard to finished drug products, the responsibilities of the quality control unit described in 21 CFR
+      211.22 and 211.68 are applicable. The quality control unit is ultimately responsible for ensuring the overall quality
+      of the final drug product (see 21 CFR 210.3).
+
+
+                                                                7
+                                       Contains Nonbinding Recommendations
+                                                Draft — Not for Implementation
+
+
+208            3.       Step 3: Assess the AI Model Risk
+209
+210   Step 3 in the framework is to assess the
+211   model risk. Model risk is a combination
+212   of two factors: (a) model influence, which
+213   is the contribution of the evidence derived
+214   from the AI model relative to other
+215   contributing evidence used to inform the
+216   question of interest and (b) decision
+217   consequence, which describes the
+218   significance of an adverse outcome
+219   resulting from an incorrect decision
+220   concerning the question of interest. 22
+221   Model risk is illustrated in Figure 1.
+222
+223   Model risk is the possibility that the AI
+224   model output may lead to an incorrect
+225   decision that could result in an adverse               Figure 1. Model risk matrix. The model risk moves from
+226   outcome, and not risk intrinsic to the                 low to high as decision consequence or model influence
+                                                             increases. The ratings for decision consequence and model
+227   model. 23 Assessing model risk involves
+                                                             influence are independently determined.
+228   subject matter expertise and judgment
+229   among sponsors and interested parties and
+230   FDA.
+231
+232   This model risk matrix can be applied to the clinical development example described in section
+233   IV.A.1 to address the question of interest “Which participants can be considered low risk and do
+234   not need inpatient monitoring after dosing?” In this example, model influence would likely be
+235   estimated to be high because the AI model will be the sole determinant of which type of patient
+236   monitoring a participant undergoes. The decision consequence is also high because if a
+237   participant who requires inpatient monitoring is placed into the outpatient monitoring category,
+238   that participant could have a potentially life-threatening adverse reaction in a setting where the
+239   participant may not receive proper treatment. Given that model influence is deemed high for this
+240   question of interest and decision consequence is also deemed high, the model risk for this COU
+241   is high.
+      22
+         The decision consequence is the significance of an adverse outcome resulting from an incorrect decision
+      concerning the question of interest. Decision consequence is the potential outcome of the overall decision that is
+      made by answering the question of interest, outside of the scope of the AI model and irrespective of how modeling
+      is used. That is, decision consequence should consider the question of interest, but should not consider the COU of
+      the model. Additionally, when assessing the decision consequence, FDA recommends that sponsors consider both
+      the potential severity of adverse outcome and the probability that the adverse outcome would occur. In some risk
+      management tools, the ability to detect the harm (detectability) also factors into the estimation of risk. For more
+      information, see the guidance for industry and FDA staff Assessing the Credibility of Computational Modeling and
+      Simulation in Medical Device Submissions (November 2023).
+      23
+        Other types of risk, such as cybersecurity risk, are out of scope of this guidance but should be considered when
+      deploying AI modeling in the drug product life cycle.
+
+
+                                                                8
+                                       Contains Nonbinding Recommendations
+                                               Draft — Not for Implementation
+
+
+242
+243   For the commercial manufacturing example described in section IV.A.1, deviations in the
+244   volume of vials containing Drug B could result in a number of issues. For example, the release
+245   of units that do not meet quality standards could potentially lead to medication errors due to
+246   either an inability to withdraw labeled content or pooling of vials to obtain a single dose (if not
+247   identified in labeling). 24 Because volume is a critical quality attribute and incorrect volume
+248   measurements would have a high impact on product quality, the decision consequence would be
+249   high. However, for this example, a manufacturer, as a part of release testing, would measure fill
+250   volume on a representative sample for each batch. Measuring fill volume through release testing
+251   would reduce the AI model influence, and therefore the model influence would be determined to
+252   be low. Given that the decision consequence is deemed high and the model influence is deemed
+253   low with the stated mitigations, the model risk for this COU is medium.
+254
+255   Assessing model risk is important because the credibility assessment activities used to establish
+256   the credibility of AI model outputs, which are described in step 4, should be commensurate with
+257   the AI model risk and tailored to the specific COU.
+258
+259           4.       Step 4: Develop a Plan to Establish AI Model Credibility Within the Context of
+260                    Use
+261
+262   Step 4 of the framework is to develop a plan to establish the credibility of AI model outputs. For
+263   the purposes of this guidance, such plans will be referred to as credibility assessment plans.
+264   Subsections 4.a and 4.b discuss general considerations and assessment activities related to
+265   establishing and evaluating the credibility of AI model outputs that can be included in such
+266   plans. These general considerations and assessment activities are not meant to be exhaustive,
+267   and some may not be applicable for all AI models and contexts of use.
+268
+269   Whether, when, and where the plan will be submitted to FDA depends on how the sponsor
+270   engages with the Agency, and on the AI model and COU. 25 For example, the plan could be
+271   described in a formal meeting package, 26 or another appropriate engagement option (see section
+
+      24
+        For further information, see the guidance for industry Allowable Excess Volume and Labeled Vial Fill Size in
+      Injectable Drug and Biological Products (June 2015).
+      25
+        The Agency recognizes that certain uses of AI occur outside of contexts with established meeting options.
+      Specifically, in the context of postmarketing pharmacovigilance, certain documentation (e.g., processes and
+      procedures) is not generally submitted to the Agency but is maintained according to the sponsor’s standard operating
+      procedures and made available to the Agency upon request (e.g., during an inspection). In such cases, sponsors may
+      choose to complete all the steps outlined in the guidance without seeking early engagement with the Agency.
+      Sponsors remain responsible for compliance with statutory and regulatory requirements, including postmarketing
+      safety surveillance and reporting requirements, regardless of the technology utilized.
+      26
+        See the draft guidances for industry Formal Meetings Between the FDA and Sponsors or Applicants of PDUFA
+      Products (September 2023) and Product-Specific Guidance Meetings Between FDA and ANDA Applicants Under
+      GDUFA (February 2023). When final, these guidances will represent FDA’s current thinking on these topics. Also
+      see the guidances for industry Formal Meetings Between the FDA and ANDA Applicants for Complex Products
+
+
+
+
+                                                               9
+                                     Contains Nonbinding Recommendations
+                                              Draft — Not for Implementation
+
+
+272   IV.C below). The risk-based credibility assessment framework envisions interactive feedback
+273   from FDA concerning the assessment of the AI model risk (step 3) as well as the adequacy of the
+274   credibility assessment plan (step 4) based on the model risk and the COU. Accordingly, FDA
+275   strongly encourages sponsors and other interested parties to engage early with FDA to discuss
+276   the AI model risk, the appropriate credibility assessment activities for the proposed model based
+277   on model risk and the COU. Although detailed information on all the credibility assessment
+278   activities described in subsections 4.a and 4.b may not be available or necessary to include at the
+279   time of early engagement with FDA, the proposed credibility assessment plan about which the
+280   sponsor engages with the Agency should, at a minimum, include the information described in
+281   steps 1, 2, and 3 (i.e., question of interest, COU, and model risk) and the proposed credibility
+282   assessment activities the sponsor plans to undertake based on the results of those steps. In early
+283   discussions with the Agency, the proposed credibility assessment activities in the credibility
+284   assessment plan might be more high-level with a more detailed credibility assessment plan
+285   drafted after the iterative process.
+286
+287   As noted previously, the potential use of AI in the drug product life cycle is broad and rapidly
+288   evolving. Therefore, the activities that may be used to establish credibility of AI model outputs
+289   should generally be tailored to the specific COU and commensurate with model risk. For
+290   example, the performance acceptance criteria should be more stringent and described to FDA in
+291   more detail for high-risk models compared to low-risk models.
+292
+293                    a.      Describe the model and the model development process
+294
+295   The sponsor’s credibility assessment plan submitted to FDA for early consultation should
+296   include the sponsor’s proposed credibility assessment activities based on the question of interest,
+297   COU, and model risk. As noted previously, early descriptions of those activities may be high-
+298   level with further details provided after Agency feedback. In addition, for certain low-risk
+299   models, FDA may request minimal information in the categories described below. For high-risk
+300   models, FDA may request all of the information in the categories described below and additional
+301   information, as applicable, depending on the COU.
+302
+303                    i.      Describe the model
+304
+305   Sponsors and other interested parties should include the following information in the credibility
+306   assessment plan, as applicable, for each AI model used:
+307
+308       •   An explanation of each model used including, but not limited to, descriptions of:
+309
+310           − Model inputs and outputs
+311
+312           − Model architecture (e.g., convolutional neural network)
+
+      under GDUFA (October 2022), and Formal Meetings Between the FDA and Sponsors or Applicants of BsUFA
+      Products (August 2023). For information on combination product meetings, see the guidance for industry and FDA
+      staff Principles of Premarket Pathways for Combination Products (January 2022).
+
+
+                                                            10
+                                        Contains Nonbinding Recommendations
+                                                 Draft — Not for Implementation
+
+
+313
+314            − Model features 27
+315
+316            − Feature selection process and any loss function(s) used for model design and
+317              optimization, as appropriate
+318
+319            − Model parameters 28
+320
+321        •   A rationale for choosing the specific modeling approach
+322
+323                     ii.      Describe the data used to develop the model
+324
+325   For the purposes of this guidance, the data used to develop the model are generally composed of
+326   training and tuning data 29 (collectively, development data) as part of the development stage.
+327   Training data are those used in procedures and training algorithms to build an AI model,
+328   including to define model weights, connections, and components. Tuning data are typically used
+329   to evaluate a small number of trained AI models. More than one tuning dataset may be used as
+330   part of the tuning process. The tuning process involves exploring various aspects for model
+331   development, including different architectures or hyperparameters. The tuning phase happens
+332   before the testing phase of the AI model and is part of the development stage (see subsection 4.b
+333   for information on the testing phase). 30
+334
+335   The performance of an AI model relies heavily on the datasets used to train and tune the model.
+336   Therefore, the data used to develop the AI model should be fit for use, which means the data
+337   should be both relevant (e.g., includes key data elements and sufficient number of representative
+338   participants or sufficient data that is representative of the manufacturing process or operation)
+339   and reliable (i.e., accurate, complete, and traceable).
+340
+
+      27
+        For the purposes of this guidance, a model feature is a measurable property of an object or event with respect to a
+      set of characteristics. Features can include clinical measurements, demographics, and clinical imaging data.
+      Features play a role in training and prediction. In the clinical development example discussed in section IV.A.1,
+      model features include baseline demographic characteristics and lab values for trial participants (adapted from
+      ISO/IEC 23053:2022 - Framework for Artificial Intelligence Systems Using Machine Learning).
+      28
+         For the purposes of this guidance, a model parameter is an internal variable of a model that affects how it
+      computes its outputs. Examples of parameters include the weights in a neural network and the transition
+      probabilities in a Markov model (adapted from ISO/IEC 22989:2022 Information Technology - Artificial
+      Intelligence Concepts and Terminology).
+      29
+        Although some in the AI and ML communities sometimes use the term validation to refer to the tuning data and
+      the tuning process, FDA does not use the word validation in this context.
+      30
+        The definitions of training and tuning data for the purposes of this guidance are consistent with how those terms
+      are discussed in the guidance for industry and FDA staff Marketing Submission Recommendations for a
+      Predetermined Change Control Plan for Artificial Intelligence-Enabled Device Software Functions and the draft
+      guidance for industry and FDA staff Artificial Intelligence-Enabled Device Software Functions: Lifecycle
+      Management and Marketing Submission Recommendations.
+
+                                                                11
+                                        Contains Nonbinding Recommendations
+                                                 Draft — Not for Implementation
+
+
+341   Commensurate with model risk, sponsors and other interested parties should describe the data
+342   management practices for the development datasets (i.e., training and tuning datasets) and
+343   characterize the development datasets. These descriptions may help identify potential limitations
+344   of the data, including potential sources of algorithmic bias 31, and the appropriate credibility
+345   assessment activities to support use of the AI model for a particular COU. Sponsors and other
+346   interested parties should include the following information in the credibility assessment plan, as
+347   applicable:
+348
+349        •   Describe (1) the development datasets, including how the development datasets were split
+350            into training, tuning, and any additional subsets and (2) the specification of which model
+351            development activities were performed using each dataset.
+352
+353        •   Describe how the development data have been or will be collected, processed, annotated,
+354            stored, controlled, and used for training and tuning of the AI model. In addition:
+355
+356            − Provide the rationale for choosing the specific development dataset(s).
+357
+358            − Explain how labels or annotations were established.
+359
+360        •   Describe how the development data is fit for the COU.
+361
+362            − Explain how the development data is relevant (e.g., includes key data elements and
+363              sufficient number of representative participants or sufficient data that is representative
+364              of the manufacturing process or operation) and reliable (i.e., accurate, complete, and
+365              traceable).
+366
+367        •   Describe whether development data are centralized (e.g., use of federated learning).
+368
+369        •   Describe which model development activities were performed using each dataset.
+370
+371                     iii.     Describe model training
+372
+373   Commensurate with model risk, sponsors and other interested parties should include the
+374   following information on model training in the credibility assessment plan, as applicable:
+375
+376
+
+
+      31
+        Data management is also an important means of identifying and mitigating bias and promoting health equity.
+      Algorithmic bias is a potential tendency to produce incorrect results in a systematic, but sometimes unforeseeable,
+      way due to limitations in the training data or erroneous assumptions in the machine learning process. For example,
+      during training, models can be over-trained to recognize features that are unique to specific patient subpopulations,
+      that have little to do with generalizable patient anatomy, physiology, or condition, which can result in AI bias in the
+      resulting model. Additionally, for example, underrepresentation of certain populations in datasets could lead to
+      overfitting (i.e., data fitting too closely to the potential biases of the training data) based on demographic
+      characteristics, which can impact the AI model performance in the underrepresented population.
+
+                                                                12
+                                  Contains Nonbinding Recommendations
+                                         Draft — Not for Implementation
+
+
+377      •   Describe how the model was trained including, but not limited to, the:
+378
+379          − Learning methodology (e.g., supervised, unsupervised).
+380
+381          − Performance metrics used to evaluate the model, such as the area under the receiver
+382            operating characteristic (ROC) curve, recall or sensitivity, specificity,
+383            positive/negative predictive values (PPV/NPV), true/false positive and true/false
+384            negative counts (e.g., in a confusion matrix), positive/negative diagnostic likelihood
+385            ratios (PLR/NLR), precision, and/or F1 scores. All performance estimates should be
+386            provided with confidence intervals.
+387
+388          − Techniques employed to prevent over- or under-fitting (e.g., regularization
+389            techniques).
+390
+391          − Training hyperparameters (e.g., the loss function and learning rate).
+392
+393      •   Specify whether a pre-trained model (or multiple pre-trained models) was used.
+394
+395          − If a pre-trained model was used, specify the dataset that was used for pre-training and
+396            how the pre-trained model was developed and/or obtained.
+397
+398      •   Describe the use of ensemble methods.
+399
+400      •   Explain any calibration of the AI model (e.g., fine adjustment to the output of a trained
+401          model aimed at improving accuracy and/or repeatability).
+402
+403      •   Describe the quality assurance and control procedures of computer software (including its
+404          toolboxes and packages) and how version changes were tracked.
+405
+406                  b.     Describe the model evaluation process
+407
+408   This subsection describes the evaluation of the fully trained model to assess the adequacy of the
+409   model performance for the intended COU on test data. Test data are those used to characterize
+410   the performance of the model. Test data should be independent of the development data and
+411   should not be shown to the algorithm during training. Instead, test data are used to assess the AI
+412   model’s performance after training. Like development data, these data should be fit for use.
+413
+414   Commensurate with model risk, sponsors and other interested parties should include the
+415   following information in the credibility assessment plan regarding model evaluation, as
+416   applicable:
+417
+418      •   Describe how the test data have been or will be collected, processed, annotated, stored,
+419          controlled, and used for evaluating the AI model.
+420
+421
+
+                                                      13
+                              Contains Nonbinding Recommendations
+                                      Draft — Not for Implementation
+
+
+422   •   In addition:
+423
+424       − Specify how data independence was achieved between development (training and
+425         tuning data) and test data. For example, data independence could have been achieved
+426         using data from a different clinical trial or health care system or data acquired using
+427         different batches or products.
+428
+429       − If there was any overlapping use of data between the development stage and the
+430         testing phase, provide an explanation of how those data were used and a justification
+431         for why that use was appropriate.
+432
+433       − As relevant, describe the reference method used to create the test data, and include a
+434         summary of the reference method’s performance.
+435
+436   •   Describe the applicability of the test data to the COU. This issue is important because,
+437       for example, when prediction models are developed using historical development data,
+438       the AI model may not perform as well in the COU if the development data are different
+439       from the data encountered in the deployed environment used in the COU. This
+440       phenomenon is sometimes referred to as data drift.
+441
+442   •   Describe the agreement between the model prediction and the observed data, using test
+443       data that should be independent of the development data.
+444
+445   •   Provide the rationale for the chosen model evaluation method(s) and explain the
+446       applicability of the evaluation methods to the modeling method used and to the COU. If
+447       the COU involves a “human in the loop,” ensure that the evaluation methods consider the
+448       performance of the human-AI team, rather than just the performance of the model in
+449       isolation.
+450
+451   •   Describe the performance metrics used to evaluate the model, such as the area under the
+452       receiver operating characteristic (ROC) curve, recall or sensitivity, specificity,
+453       positive/negative predictive values (PPV/NPV), true/false positive and true/false negative
+454       counts (e.g., in a confusion matrix), positive/negative diagnostic likelihood ratios
+455       (PLR/NLR), precision, and/or F1 scores, including the optimization methods used (e.g.,
+456       use of a gradient descent). All performance estimates should be provided with
+457       confidence intervals. In addition:
+458
+459       − Specify the process by which the uncertainty and confidence level of model
+460         predictions were estimated. If relevant, include any other descriptions or metrics that
+461         quantify confidence or uncertainty. Information regarding the uncertainty of model
+462         output is important because it helps interpret model outputs. Repeatability and/or
+463         reproducibility studies may help quantify the uncertainty associated with model
+464         outputs.
+465
+466   •   Describe the limitations of the modeling approach, including potential biases.
+
+                                                   14
+                                  Contains Nonbinding Recommendations
+                                         Draft — Not for Implementation
+
+
+467
+468      •   Describe the quality assurance and control procedures for code verification, including
+469          resolution of any errors or anomalies (e.g., user-generated codes are error-free,
+470          calculations are accurate).
+471
+472          5.      Step 5: Execute the Plan
+473
+474   This step involves executing the credibility assessment plan. As discussed in step 4, discussing
+475   the plan with FDA prior to execution may help (1) set expectations regarding the appropriate
+476   credibility assessment activities for the proposed model based on model risk and COU and
+477   (2) identify potential challenges and how such challenges can be addressed.
+478
+479          6.      Step 6: Document the Results of the Credibility Assessment Plan and Discuss
+480                  Deviations From the Plan
+481
+482   Step 6 involves documenting the results of the credibility assessment plan and any deviations
+483   from the plan. This step generally occurs during the execution of the credibility assessment plan
+484   and should include a description of the results from steps 1 through 4.
+485
+486   The results of the credibility assessment plan should be included in a report. For the purposes of
+487   this guidance, this report is referred to as a credibility assessment report. The credibility
+488   assessment report is intended to provide information that establishes the credibility of the AI
+489   model for the COU and should describe any deviations from the credibility assessment plan as
+490   outlined in step 4. During early consultation with FDA (described in step 4), the sponsor should
+491   discuss with FDA whether, when, and where to submit the credibility assessment report to the
+492   Agency. The credibility assessment report may, as applicable, be (1) a self-contained document
+493   included as part of a regulatory submission or in a meeting package, depending on the
+494   engagement option, or (2) held and made available to FDA on request (e.g., during an
+495   inspection). Submission of the credibility assessment report should be discussed with FDA.
+496
+497          7.      Step 7: Determine the Adequacy of the AI Model for the Context of Use
+498
+499   Based on the results documented in the credibility assessment report, a model may or may not be
+500   appropriate for the COU. If either the sponsor or FDA determine that model credibility is not
+501   sufficiently established for the model risk, several outcomes are possible: (1) the sponsor may
+502   downgrade the model influence by incorporating additional types of evidence in conjunction
+503   with the evidence from the AI model to answer the question of interest; (2) the sponsor may
+504   increase the rigor of the credibility assessment activities or augment the model’s output by
+505   adding additional development data; (3) the sponsor may establish appropriate controls to
+506   mitigate risk; (4) the sponsor may change the modeling approach; or (5) the sponsor may
+507   consider the credibility of the AI model’s output inadequate for the COU; therefore, the model’s
+508   COU would be rejected or revised in an iterative fashion.
+509
+
+
+
+
+                                                      15
+                                       Contains Nonbinding Recommendations
+                                                Draft — Not for Implementation
+
+
+510            B.       Special Consideration: Life Cycle Maintenance of the Credibility of AI
+511                     Model Outputs in Certain Contexts of Use
+512
+513   For the purposes of this guidance, life cycle maintenance refers to the management of changes to
+514   AI models whether incidentally or deliberately, to ensure the model remains fit for use over the
+515   drug product life cycle for its COU. Life cycle maintenance of AI models is a set of planned
+516   activities to monitor and ensure the model’s performance and its suitability throughout its life
+517   cycle for the COU.
+518
+519   As mentioned in section III, life cycle maintenance of the credibility of AI model outputs is
+520   important because a model’s performance can change over time or across deployment
+521   environments. While the use of AI to support regulatory decision-making for drugs is typically
+522   assessed on locked data and information produced by an AI model at a given point in time, there
+523   are instances where the use of AI models extends over the drug product life cycle, and life cycle
+524   maintenance of the credibility of AI model outputs is critical. For example, life cycle
+525   maintenance of the credibility of AI model outputs is important for the application of AI
+526   modeling in the pharmaceutical manufacturing phase of the drug product life cycle. 32
+527
+528   AI-based models may be highly sensitive to variations or changes in model inputs, for example,
+529   because they are data-driven and can be self-evolving (i.e., capable of autonomously adapting
+530   without any human intervention). Model performance metrics should be monitored on an
+531   ongoing basis to ensure that the model remains fit for use and appropriate changes are made to
+532   the model, as needed. The level of oversight for a model over its life cycle should be risk-based
+533   (i.e., commensurate with the model risk and the COU). Due to the evolving nature of AI models,
+534   sponsors should anticipate inherent, model-directed changes and the need to identify and
+535   evaluate those changes, as well as any intentional changes to the model over the drug product life
+536   cycle.
+537
+538   A risk-based approach 33 for life cycle maintenance may help sponsors assess the impact of a
+539   change or changes to the AI model performance. For example, in pharmaceutical manufacturing,
+540   it is important that changes to the AI model or changes in manufacturing that may impact the
+541   performance of the AI model be evaluated by the manufacturer’s change management system
+542   within their pharmaceutical quality system (e.g., newly available manufacturing data or
+543   information, new signals requiring manual changes in the model, model-directed changes that
+544   may impact AI model performance). 34 The impact of a model change may be determined based
+
+      32
+        Life cycle maintenance of AI modeling may be important during other phases of the drug product life cycle
+      including, but not limited to, the application of AI modeling in the postmarketing phase. Section IV.B is focused on
+      AI modeling in the pharmaceutical manufacturing phase as an example.
+      33
+         See footnote 12, which provides additional references discussing FDA’s application of benefit-risk principles
+      when assessing the safety, effectiveness, and quality of a drug.
+      34
+        See the ICH guidance for industry Q10 Pharmaceutical Quality System (April 2009). For further information,
+      visit FDA’s web page Quality Systems Approach to Pharmaceutical Current Good Manufacturing Practice
+
+
+
+
+                                                               16
+                                          Contains Nonbinding Recommendations
+                                                Draft — Not for Implementation
+
+
+545   on factors such as model risk (see step 3 in section IV.A.3) and change in model performance.
+546   Depending on the extent of the change and its impact on model performance, some steps in the
+547   credibility assessment plan may need to be re-executed, including retraining and retesting the
+548   model for the COU. Additionally, depending on the impact of model change (i.e., if the model
+549   change impacts model performance), the change should be reported to the Agency in accordance
+550   with regulatory requirements. 35
+551
+552   In general, detailed plans about life cycle maintenance (e.g., model performance metrics, the
+553   risk-based frequency for monitoring model performance, and triggers for model retesting) should
+554   be made available for review as a component of the manufacturing site’s pharmaceutical quality
+555   system, with a summary included in the marketing application for any product or process-
+556   specific models, in accordance with regulatory requirements. 36 FDA recommends that the level
+557   of detail regarding life cycle maintenance of the AI model be commensurate with model risk.
+558
+559   Sponsors may also choose to use tools outlined in the ICH guidance for industry Q12 Technical
+560   and Regulatory Considerations for Pharmaceutical Product Lifecycle Management (May 2021),
+561   such as established conditions and comparability protocols (referred to as postapproval change
+562   management plans), which leverages increased product and process knowledge. Sponsors may
+563   propose model-related elements to be considered established conditions, along with a plan to
+564   manage changes to these established conditions over the drug product life cycle. By including
+565   such plans in the marketing application, sponsors may prospectively obtain input from the
+566   Agency regarding management of such changes, including which changes would not require
+567   submission to the Agency prior to making modifications.
+568
+569              C.      Early Engagement
+570
+571   As noted previously, FDA strongly encourages sponsors and other interested parties to engage
+572   early with FDA to (1) set expectations regarding the appropriate credibility assessment activities
+573   for the proposed model based on model risk and COU and (2) help identify potential challenges
+574   and how such challenges may be addressed.
+575
+576   Various options can be used to engage with the Agency, depending on how the sponsor or other
+577   interested parties intend to use the AI model. To discuss the use of AI in connection with a
+578   specific development program, sponsors may request an appropriate formal meeting (e.g., Initial
+
+
+
+      Regulations at https://www.fda.gov/regulatory-information/search-fda-guidance-documents/quality-systems-
+      approach-pharmaceutical-current-good-manufacturing-practice-regulations
+      35
+        For example, as appropriate for the application type, such update would generally be made as a postapproval
+      change in accordance with section 506A of the FD&C Act and 21 CFR 314.70 (for human drugs), 21 CFR 601.12
+      (for human biological products), or 21 CFR 514.8 (for animal drugs). The mechanism for postapproval notification
+      of changes to models can be determined on the basis of the following two factors: (1) impact of the change on
+      model’s performance and (2) impact of the change on product quality.
+      36
+           See 21 CFR 314.50 and 601.2.
+
+
+                                                             17
+                                 Contains Nonbinding Recommendations
+                                         Draft — Not for Implementation
+
+
+579   Targeted Engagement for Regulatory Advice (INTERACT) on CBER/CDER Products, Pre-
+580   Investigational New Drug Application (Pre-IND)). 37
+581
+582   Table 1 provides a list of various other engagement options depending on the intended use of the
+583   AI model. Where the meeting request covers a specific development program under an
+584   investigational new drug application (IND) or a pre-IND, sponsors should include the IND or
+585   pre-IND number and notify the relevant review team of the meeting request.
+586
+587   Table 1. Engagement Options Other Than Formal Meetings
+588
+       Engagement Option        Intended Use of AI        Contact Information
+                                Model
+       Center for Clinical      Sponsor is interested in  Email CDER C3TI program at
+       Trial Innovation         discussing the use of AI CDERclinicaltrialinnovation@fda.hhs.gov
+       (C3TI)                   in clinical trial designs
+                                with CDER before
+                                formally submitting
+                                them to their
+                                investigational new drug
+                                (IND) application
+
+       Complex Innovative       Sponsor is interested in     For details about how to apply for the CID
+       Trial Design Meeting     using AI in novel            program, please see
+       Program (CID)            clinical trial designs       http://www.fda.gov/drugs/development-
+                                                             resources/complex-innovative-trial-design-
+                                                             meeting-program
+
+                                                             FDA encourages sponsors to send an email
+                                                             to CID.Meetings@fda.hhs.gov to provide
+                                                             notification that your CID meeting request
+                                                             application has been submitted.
+
+       Drug Development         Sponsor or other             Email CDER Biomarker Qualification
+       Tools (DDTs) and         interested party is          Program at CDER-
+       Innovative Science       interested in qualifying a   BiomarkerQualificationProgram@fda.hhs.
+       and Technology           drug development tool        gov
+       Approaches for New       that uses AI, such as use
+       Drugs (ISTAND)           of AI-based algorithms       Email CDER Clinical Outcome
+                                to evaluate patients,        Assessment Qualification Program at
+                                adjudicate endpoints, or     COADDTQualification@fda.hhs.gov
+                                analyze clinical trial
+                                data                         Email CDER and CBER Animal Model
+                                                             Qualification Program at
+
+      37
+           See footnote 26.
+
+                                                      18
+                       Contains Nonbinding Recommendations
+                               Draft — Not for Implementation
+
+
+Engagement Option     Intended Use of AI           Contact Information
+                      Model
+                                                   CDERAnimalModelQualification@fda.hhs
+                                                   .gov
+
+                                                   Email CBER DDT Qualification Programs
+                                                   (includes Biologics Biomarkers and
+                                                   Clinical Outcome Assessments) at CBER-
+                                                   DDTQualificationProgram@fda.hhs.gov
+
+                                             Email the ISTAND Pilot Program at
+                                             ISTAND@fda.hhs.gov
+Digital Health        Sponsor or other       To discuss general feasibility for a
+Technologies (DHTs)   interested party is    proposed DHT, or for those with general
+Program               interested in using an questions about the potential use of their
+                      AI-enabled DHT used in DHT, email
+                      the context of a drug  DHTsforDrugDevelopment@hhs.fda.gov
+                      development program
+
+Emerging Drug         Sponsor or other             EDSTP is not an avenue to seek regulatory
+Safety Technology     interested party is          advice on compliance with
+Program (EDSTP)       interested in using AI in    pharmacovigilance regulations. Questions
+                      pharmacovigilance (PV)       about a specific development program
+                                                   should be addressed through other
+                                                   channels. Please contact
+                      EDSTP is specifically        AIMLforDrugDevelopment@fda.hhs.gov
+                      focused on the use of AI     with the subject line “EDSTP” for more
+                      in PV for postmarketing      information.
+                      activities; it is part of
+                      CDER’s multifaceted
+                      approach to enhance
+                      mutual learning of
+                      where and how specific
+                      innovations, such as AI,
+                      can best be used
+                      throughout the drug
+                      product life cycle
+
+CDER’s Emerging       Sponsor or other             Early engagement with the ETP or CATT is
+Technology Program    interested party is          highly encouraged before submitting a
+(ETP) and CBER’s      interested in uses of AI     regulatory application or implementing an
+Advanced              in pharmaceutical            AI technology for drug or biological
+Technologies Team     manufacturing                product manufacturing.
+(CATT)
+                                                   Requests and proposals may be sent by
+
+                                            19
+                              Contains Nonbinding Recommendations
+                                     Draft — Not for Implementation
+
+
+      Engagement Option     Intended Use of AI           Contact Information
+                            Model
+                                                         email: For CDER regulated drugs CDER-
+                                                         ETT@fda.hhs.gov, and for CBER
+                                                         regulated biological products
+                                                         Industry.Biologics@fda.hhs.gov, include
+                                                         “CATT” in the subject line.
+
+      Model-Informed        Sponsor is interested in     Sponsors with a pre-IND or an IND who
+      Drug Development      using Model-informed         are considering the application of MIDD
+      Paired Meeting        drug development using       approaches to the development and
+      Program (MIDD)        AI                           regulatory evaluation of medical products
+                                                         in development should email
+                                                         MIDD@fda.hhs.gov with “MIDD Program
+                                                         Meeting Package for CDER” (CDER
+                                                         applications) or “MIDD Program Meeting
+                                                         Package for CBER” (CBER applications)
+                                                         in the subject line.
+
+      Real-World Evidence Sponsor or other               For more information on the CDER,
+      (RWE) Program       interested party is            CBER, or OCE RWE programs, please
+                          interested in using AI in      visit each center’s web page or contact
+                          a study using real-world       CDERMedicalPolicy-
+                          data to produce RWE            RealWorldEvidence@fda.hhs.gov
+
+589
+
+
+
+
+                                                  20
+

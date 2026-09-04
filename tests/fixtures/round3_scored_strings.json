@@ -1,0 +1,1698 @@
+{
+ "errors": {
+  "results/planted-eval-caprin-heterochromatin.json": [
+   {
+    "detection_token": "Dcr2",
+    "error_id": "gene_symbol_swap-0",
+    "kind": "gene_symbol_swap",
+    "line_no": 5,
+    "original": "Dcr1",
+    "replacement": "Dcr2"
+   },
+   {
+    "detection_token": "decreased accumulation of",
+    "error_id": "effect_direction_flip-1",
+    "kind": "effect_direction_flip",
+    "line_no": 7,
+    "original": "increased",
+    "replacement": "decreased"
+   },
+   {
+    "detection_token": "Hollingsworth",
+    "error_id": "fabricated_citation-2",
+    "kind": "fabricated_citation",
+    "line_no": 7,
+    "original": "",
+    "replacement": "(Hollingsworth and Vance, 2019, Nat. Metab. 7:e91188)"
+   }
+  ],
+  "results/planted-eval-met17-auxotroph.json": [
+   {
+    "detection_token": "MET18",
+    "error_id": "gene_symbol_swap-0",
+    "kind": "gene_symbol_swap",
+    "line_no": 9,
+    "original": "MET17",
+    "replacement": "MET18"
+   },
+   {
+    "detection_token": "increased glutathione levels",
+    "error_id": "effect_direction_flip-1",
+    "kind": "effect_direction_flip",
+    "line_no": 3,
+    "original": "decreased",
+    "replacement": "increased"
+   },
+   {
+    "detection_token": "Hollingsworth",
+    "error_id": "fabricated_citation-2",
+    "kind": "fabricated_citation",
+    "line_no": 11,
+    "original": "",
+    "replacement": "(Hollingsworth and Vance, 2019, Nat. Metab. 7:e91188)"
+   }
+  ]
+ },
+ "source_commit": "52238c8bb6a5e952a6398ed7be1eed27d021202e",
+ "strings": [
+  {
+   "credited_for": [],
+   "finding_index": 0,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "We previously showed that Mkt1, similar to Ccr4-Not complex, is required to prevent excess accumulation of transcripts on chromatin and formation of RNA-DNA hybrids, suggesting that excess RNA may be a particular impediment to the initial conversion of highly transcribed chromatin to heterochromatin. excess accumulation of transcripts on chromatin"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 1,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The resulting H3K9 methylation in turn helps to stabilise recruitment of both RNAi and heterochromatin factors via binding of chromodomain-containing proteins including the RITS subunit Chp1, HP1 protein Swi6, and Clr4 (16), stabilise recruitment of both RNAi and heterochromatin factors"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 2,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "Here, through an assay involving genetic abolition and re-establishment of heterochromatin, we identify the product of a previously uncharacterised gene, SPAC12G12.07c, as a novel factor required for efficient heterochromatin establishment in S. pombe. genetic abolition and re-establishment of heterochromatin"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 3,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "Together, our findings unveil a novel mechanism of heterochromatin establishment and highlight the importance of RNA processing factors in this process. novel mechanism of heterochromatin establishment"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 4,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The SPAC12G12.07c gene product is orthologous to human RNA-binding protein CAPRIN1, and we therefore name it Cpn1. orthologous to human RNA-binding protein CAPRIN1"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 5,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "Moreover, we find evidence of crosstalk between heterochromatin integrity and RNP granule formation, suggesting the involvement of common limiting factors in control of both transcripts released from polysomes during stress, and those accumulating as a result of de-repression of heterochromatin. crosstalk between heterochromatin integrity and RNP granule formation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 6,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "RNA-FISH analyses revealed that, when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts that localise in cis at centromeres. RNA-FISH analyses revealed"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 7,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "Our findings provide new insights into the mechanisms of heterochromatin establishment and maintenance, and highlight the importance of RNA processing factors in this process. new insights into the mechanisms of heterochromatin establishment and maintenance"
+  },
+  {
+   "credited_for": [
+    "gene_symbol_swap-0"
+   ],
+   "finding_index": 8,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The excerpt discusses the role of RNA interference (RNAi) in heterochromatin maintenance in fission yeast Schizosaccharomyces pombe, focusing on the RNAi pathway and its components. It mentions the involvement of non-coding RNAs, Dicer (Dcr2), Argonaute (Ago1), and the RITS complex in heterochromatin formation and maintenance. The text also highlights the importance of RNA processing factors like the exosome adapter MTREC, the 5\u2032-3\u2032 exonuclease Dhp1/Xrn2, and the Ccr4-Not complex in heterochromatin assembly, particularly in RNAi-independent pathways. In fission yeast, the RNA interference (RNAi) pathway plays a major role in maintenance of constitutive pericentromeric heterochromatin. Non-coding RNAs derived from pericentromeric repeat sequences are processed by Dicer (Dcr2) to generate"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 9,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The manuscript excerpt does not provide a clear, novel contribution to the field of heterochromatin research. Instead, it appears to summarize existing knowledge on the role of RNA interference and RNA processing factors in heterochromatin formation and maintenance in fission yeast. The manuscript excerpt does not provide a clear, novel contribution to the field of heterochromatin research."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 10,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The excerpt is well-organized and provides a comprehensive overview of the RNAi pathway and its role in heterochromatin maintenance. However, it lacks a clear statement of the novel findings or the specific contribution of the research. The manuscript excerpt is well-organized and provides a comprehensive overview of the RNAi pathway and its role in heterochromatin maintenance."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 11,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The manuscript excerpt does not introduce any new experimental data or findings. It appears to be a review of existing literature on the topic, which may not be suitable for submission as a novel research paper. The manuscript excerpt does not introduce any new experimental data or findings."
+  },
+  {
+   "credited_for": [
+    "gene_symbol_swap-0"
+   ],
+   "finding_index": 12,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The excerpt discusses the role of RNA interference (RNAi) in heterochromatin maintenance in fission yeast Schizosaccharomyces pombe, focusing on the RNAi pathway and its components. It mentions the involvement of non-coding RNAs, Dicer (Dcr2), Argonaute (Ago1), and the RITS complex in heterochromatin formation and maintenance. The text also highlights the importance of RNA processing factors like the exosome adapter MTREC, the 5\u2032-3\u2032 exonuclease Dhp1/Xrn2, and the Ccr4-Not complex in heterochromatin assembly, particularly in RNAi-independent pathways. The manuscript excerpt discusses the role of RNA interference (RNAi) in heterochromatin maintenance in fission yeast Schizosaccharomyces pombe, focusing on the RNAi pathway and its components."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 13,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The excerpt presents information in a clear and concise manner, using technical terms relevant to the field of heterochromatin research. However, it lacks a clear introduction or conclusion that would help frame the information within a broader context. The excerpt presents information in a clear and concise manner, using technical terms relevant to the field of heterochromatin research."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 14,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The manuscript excerpt does not provide a clear statement of the novel findings or the specific contribution of the research. It appears to be a review of existing literature on the topic, which may not be suitable for submission as a novel research paper. The manuscript excerpt does not provide a clear statement of the novel findings or the specific contribution of the research."
+  },
+  {
+   "credited_for": [
+    "gene_symbol_swap-0"
+   ],
+   "finding_index": 15,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "panel",
+   "text": "The excerpt discusses the role of RNA interference (RNAi) in heterochromatin maintenance in fission yeast Schizosaccharomyces pombe, focusing on the RNAi pathway and its components. It mentions the involvement of non-coding RNAs, Dicer (Dcr2), Argonaute (Ago1), and the RITS complex in heterochromatin formation and maintenance. The text also highlights the importance of RNA processing factors like the exosome adapter MTREC, the 5\u2032-3\u2032 exonuclease Dhp1/Xrn2, and the Ccr4-Not complex in heterochromatin assembly, particularly in RNAi-independent pathways. The manuscript excerpt discusses the role of RNA interference (RNAi) in heterochromatin maintenance in fission yeast Schizosaccharomyces pombe, focusing on the RNAi pathway and its components."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 0,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Heterochromatin is characterised by relatively low levels of histone acetylation Heterochromatin is characterised by relatively low levels of histone acetylation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 1,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "local transcription is commonly required to support heterochromatin assembly local transcription is commonly required to support heterochromatin assembly"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 2,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "excess accumulation of heterochromatic transcripts can negatively impact heterochromatin integrity excess accumulation of such transcripts can negatively impact heterochromatin integrity"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 3,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "histone deacetylase (HDAC) activity is required to promote heterochromatin assembly histone deacetylase (HDAC) activity is required to promote heterochromatin assembly"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 4,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 5,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Triman (Tri1), a 3\u2032-5\u2032 exonuclease involved in siRNA biogenesis, is specifically required for heterochromatin establishment Triman (Tri1), a 3\u2032-5\u2032 exonuclease involved in siRNA biogenesis"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 6,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "the product of a previously uncharacterised gene, SPAC12G12.07c, is a novel factor required for efficient heterochromatin establishment the product of a previously uncharacterised gene, SPAC12G12.07c, is a novel factor required for efficient heterochromatin establishment"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 7,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "RNA-FISH analyses revealed that, when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts hyperaccumulation of non-coding pericentromeric transcripts"
+  },
+  {
+   "credited_for": [
+    "effect_direction_flip-1"
+   ],
+   "finding_index": 8,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "absence of the Ccr4-Not complex has been shown to be associated with decreased accumulation of heterochromatic transcripts on chromatin absence of the Ccr4-Not complex"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 9,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "excess accumulation of such transcripts can negatively impact heterochromatin integrity excess accumulation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 10,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "histone deacetylase (HDAC) activity is required to promote heterochromatin assembly histone deacetylase (HDAC)"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 11,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin Deletion of HDACs Sir2 or Clr3"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 12,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "excess RNA may be a particular impediment to the initial conversion of highly transcribed chromatin to heterochromatin excess RNA"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 13,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The SPAC12G12.07c gene product is orthologous to human RNA-binding protein CAPRIN1 The SPAC12G12.07c gene product"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 14,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "fission yeast Cpn1 both associates with stress granule-related factors, and accumulates in granules during stress fission yeast Cpn1"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 15,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts that localise in cis at centromeres absence of Cpn1"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 16,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "This epigenetic maintenance phase can be distinguished from de novo heterochromatin establishment, which occurs through two consecutive stochastic steps This epigenetic maintenance phase"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 17,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "dependent on context, some factors and processes required for de novo heterochromatin establishment are redundant for subsequent maintenance dependent on context"
+  },
+  {
+   "credited_for": [
+    "effect_direction_flip-1"
+   ],
+   "finding_index": 18,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "absence of the Ccr4-Not complex has been shown to be associated with decreased accumulation of heterochromatic transcripts on chromatin that leads to impaired silencing absence of the Ccr4-Not complex has been shown to be associated with decreased accumulation of heterochromatic transcripts on chromatin that leads to impaired silencing"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 19,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "the resulting H3K9 methylation in turn helps to stabilise recruitment of both RNAi and heterochromatin factors via binding of chromodomain-containing proteins including the RITS subunit Chp1, HP1 protein Swi6, and Clr4 the resulting H3K9 methylation in turn helps to stabilise recruitment of both RNAi and heterochromatin factors"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 20,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "additional RNA-dependent but RNAi-independent pathways have also been found to contribute to heterochromatin assembly, particularly at domains of facultative heterochromatin additional RNA-dependent but RNAi-independent pathways have also been found to contribute to heterochromatin assembly"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 21,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "a key feature of heterochromatin is its capacity for epigenetic inheritance through reader-writer coupling a key feature of heterochromatin is its capacity for epigenetic inheritance"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 22,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin, but strongly impacts de novo heterochromatin nucleation and spreading on pericentromeric repeat sequences deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 23,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Triman (Tri1), a 3\u2032-5\u2032 exonuclease involved in siRNA biogenesis, and the RNA-binding protein Mkt1 that is involved in RNAi-dependent post-transcriptional regulation of heterochromatic transcripts Triman (Tri1), a 3\u2032-5\u2032 exonuclease involved in siRNA biogenesis"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 24,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "we identify the product of a previously uncharacterised gene, SPAC12G12.07c, as a novel factor required for efficient heterochromatin establishment in S. pombe we identify the product of a previously uncharacterised gene, SPAC12G12.07c, as a novel factor"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 25,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "our findings unveil crosstalk between heterochromatin integrity and RNP granule formation our findings unveil crosstalk between heterochromatin integrity and RNP granule formation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 26,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts that localise in cis at centromeres when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 27,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Eukaryotic DNA polymerases require an iron-sulfur cluster for the formation of active complexes Eukaryotic DNA polymerases require an iron-sulfur cluster for the formation of active complexes"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 28,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "In the fission yeast Schizosaccharomyces pombe, the RNA interference (RNAi) pathway plays a major role in maintenance of constitutive pericentromeric heterochromatin. the RNAi pathway plays a major role in maintenance of constitutive pericentromeric heterochromatin"
+  },
+  {
+   "credited_for": [
+    "gene_symbol_swap-0"
+   ],
+   "finding_index": 29,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Non-coding RNAs derived from pericentromeric repeat sequences are processed by Dicer (Dcr2) to generate short interfering (si)RNAs. Non-coding RNAs derived from pericentromeric repeat sequences are processed by Dicer"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 30,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The resulting H3K9 methylation in turn helps to stabilise recruitment of both RNAi and heterochromatin factors via binding of chromodomain-containing proteins. The resulting H3K9 methylation in turn helps to stabilise recruitment"
+  },
+  {
+   "credited_for": [
+    "effect_direction_flip-1"
+   ],
+   "finding_index": 31,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Absence of the Ccr4-Not complex has been shown to be associated with decreased accumulation of heterochromatic transcripts on chromatin that leads to impaired silencing. Absence of the Ccr4-Not complex has been shown to be associated"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 32,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin, but strongly impacts de novo heterochromatin nucleation and spreading. Deletion of HDACs Sir2 or Clr3 has only modest effects"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 33,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Human CAPRIN1 is involved in stress granule formation, and we confirm that fission yeast Cpn1 both associates with stress granule-related factors, and accumulates in granules during stress. Human CAPRIN1 is involved in stress granule formation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 34,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Together, our findings unveil crosstalk between heterochromatin integrity and RNP granule formation, suggesting the involvement of common limiting factors in control of both transcripts released from polysomes during stress, and those accumulating as a result of de-repression of heterochromatin. crosstalk between heterochromatin integrity and RNP granule formation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 35,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "RNA-FISH analyses revealed that, when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts that localise in cis at centromeres. absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 36,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Heterochromatin is characterised by relatively low levels of histone acetylation characterised by relatively low levels of histone acetylation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 37,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "This histone methyl mark provides binding sites for chromodomain proteins including heterochromatin protein HP1 This histone methyl mark provides binding sites for chromodomain proteins"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 38,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Local transcription is commonly required to support heterochromatin assembly Local transcription is commonly required to support heterochromatin assembly"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 39,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The resulting H3K9 methylation in turn helps to stabilise recruitment of both RNAi and heterochromatin factors The resulting H3K9 methylation in turn helps to stabilise recruitment"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 40,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Additional RNA-dependent but RNAi-independent pathways have also been found to contribute to heterochromatin assembly Additional RNA-dependent but RNAi-independent pathways"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 41,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "A key feature of heterochromatin is its capacity for epigenetic inheritance through reader-writer coupling A key feature of heterochromatin is its capacity for epigenetic inheritance"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 42,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Dependent on context, some factors and processes required for de novo heterochromatin establishment are redundant for subsequent maintenance Dependent on context, some factors and processes required"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 43,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "A small number of additional factors have also been identified as being specifically required for heterochromatin establishment with little or no role in subsequent maintenance A small number of additional factors have also been identified"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 44,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The SPAC12G12.07c gene product is orthologous to human RNA-binding protein CAPRIN1 The SPAC12G12.07c gene product is orthologous to human RNA-binding protein"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 45,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "RNA-FISH analyses revealed that, when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts RNA-FISH analyses revealed that, when heterochromatin is disrupted"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 46,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "excess accumulation of such transcripts can negatively impact heterochromatin integrity excess accumulation of such transcripts can negatively impact heterochromatin integrity"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 47,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "histone deacetylase (HDAC) activity is required to promote heterochromatin assembly by increasing availability of deacetylated H3K9 residues for methylation as well as suppressing acetylation-dependent histone turnover histone deacetylase (HDAC) activity is required to promote heterochromatin assembly by increasing availability of deacetylated H3K9 residues for methylation as well as suppressing acetylation-dependent histone turnover"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 48,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin, but strongly impacts de novo heterochromatin nucleation and spreading on pericentromeric repeat sequences deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin, but strongly impacts de novo heterochromatin nucleation and spreading on pericentromeric repeat sequences"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 49,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "excess RNA may be a particular impediment to the initial conversion of highly transcribed chromatin to heterochromatin excess RNA may be a particular impediment to the initial conversion of highly transcribed chromatin to heterochromatin"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 50,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "crosstalk between heterochromatin integrity and RNP granule formation crosstalk between heterochromatin integrity and RNP granule formation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 51,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts that localise in cis at centromeres absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts that localise in cis at centromeres"
+  },
+  {
+   "credited_for": [
+    "effect_direction_flip-1"
+   ],
+   "finding_index": 52,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "absence of the Ccr4-Not complex has been shown to be associated with decreased accumulation of heterochromatic transcripts on chromatin that leads to impaired silencing absence of the Ccr4-Not complex has been shown to be associated with"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 53,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "excess accumulation of such transcripts can negatively impact heterochromatin integrity excess accumulation of such transcripts can negatively impact"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 54,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin deletion of HDACs Sir2 or Clr3 has only modest effects on"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 55,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "a small number of additional factors have also been identified as being specifically required for heterochromatin establishment with little or no role in subsequent maintenance a small number of additional factors have also been identified"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 56,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "we previously showed that Mkt1, similar to Ccr4-Not complex, is required to prevent excess accumulation of transcripts on chromatin and formation of RNA-DNA hybrids we previously showed that Mkt1, similar to Ccr4-Not complex, is required"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 57,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Human CAPRIN1 is involved in stress granule formation, and we confirm that fission yeast Cpn1 both associates with stress granule-related factors, and accumulates in granules during stress Human CAPRIN1 is involved in stress granule formation, and"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 58,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "RNA-FISH analyses revealed that, when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts that localise in cis at centromeres RNA-FISH analyses revealed that, when heterochromatin is disrupted"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 59,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "S phase checkpoint activation generally results from an extended long-stretch of single-stranded DNA (ssDNA) accumulation, coated with replication protein A (RPA) S phase checkpoint activation generally results from an"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 60,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The double mutant pol1-C1372S,F1396S and pol1-F1396S displayed a slightly stronger leading-strand bias than WT (Fig 2A and B), indicating impaired lagging strand synthesis The double mutant pol1-C1372S,F1396S and pol1-F1396S displayed"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 61,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "RPA-IP-ssSeq (RPA immunoprecipitation plus strand-specific next-generation DNA sequencing), which marks exposed single-stranded DNA, exhibited even stronger leading-strand bias in the pol1-C1372S,F1396S and pol1-F1396S mutant (Fig 2C and D) RPA-IP-ssSeq (RPA immunoprecipitation plus strand-specific"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 62,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The resulting H3K9 methylation in turn helps to stabilise recruitment of both RNAi and heterochromatin factors via binding of chromodomain-containing proteins including the RITS subunit Chp1, HP1 protein Swi6, and Clr4 (16) The resulting H3K9 methylation in turn helps to stabilise recruitment of both RNAi and heterochromatin factors via binding of chromodomain-containing proteins including the RITS subunit Chp1, HP1 protein Swi6, and Clr4 (16)"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 63,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "While HOODs are partially RNAi-dependent, heterochromatin islands are RNAi-independent, and both rely to varying degrees on other RNA processing factors including the exosome adapter Mtl1-Red1 core complex MTREC (20,21), the 5\u2032-3\u02b9 exonuclease Dhp1/Xrn2 (22,23), and the Ccr4-Not deadenylase complex (24\u201327), for coupled RNA elimination and heterochromatin assembly. While HOODs are partially RNAi-dependent, heterochromatin islands are RNAi-independent, and both rely to varying degrees on other RNA processing factors including the exosome adapter Mtl1-Red1 core complex MTREC (20,21), the 5\u2032-3\u02b9 exonucase"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 64,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "A small number of additional factors have also been identified as being specifically required for heterochromatin establishment with little or no role in subsequent maintenance, including Triman (Tri1), a 3\u2032-5\u2032 exonuclease involved in siRNA biogenesis (34), and the RNA-binding protein Mkt1 that is involved in RNAi-dependent post-transcriptional regulation of heterochromatic transcripts (35). A small number of additional factors have also been identified as being specifically required for heterochromatin establishment with little or no role in subsequent maintenance"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 65,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The SPAC12G12.07c gene product is orthologous to human RNA-binding protein CAPRIN1, and we therefore name it Cpn1. The SPAC12G12.07c gene product is orthologous to human RNA-binding protein CAPRIN1, and we therefore name it Cpn1"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 66,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Consistent with this, RNA-FISH analyses revealed that, when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts that localise in cis at centromeres. Consistent with this, RNA-FISH analyses revealed that, when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 67,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "This histone methyl mark provides binding sites for chromodomain proteins including heterochromatin protein HP1 histone methyl mark provides binding sites"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 68,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "excess accumulation of heterochromatic transcripts can negatively impact heterochromatin integrity excess accumulation of heterochromatic transcripts can negatively impact heterochromatin integrity"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 69,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Heterochromatin is characterised by relatively low levels of histone acetylation, histone acetylation,"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 70,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "In most eukaryotes by enrichment for methylation of histone H3 at lysine 9 (H3K9me). methylation of histone H3 at lysine 9 (H3K9me)"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 71,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "local transcription is commonly required to support heterochromatin assembly local transcription"
+  },
+  {
+   "credited_for": [
+    "gene_symbol_swap-0"
+   ],
+   "finding_index": 72,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Non-coding RNAs derived from pericentromeric repeat sequences are processed by Dicer (Dcr2) to generate short interfering (si)RNAs. short interfering (si)RNAs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 73,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "This epigenetic maintenance phase can be distinguished from de novo heterochromatin establishment, which occurs through two consecutive stochastic steps: initiation at nucleation sites, followed by subsequent spreading to form extended domains. de novo heterochromatin establishment"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 74,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin, but strongly impacts de novo heterochromatin nucleation and spreading on pericentromeric repeat sequences. de novo heterochromatin nucleation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 75,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The SPAC12G12.07c gene product is orthologous to human RNA-binding protein CAPRIN1, and we therefore name it Cpn1. human RNA-binding protein CAPRIN1"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 76,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "RNA-FISH analyses revealed that, when heterochromatin is disrupted, absence of Cpn1 is associated with hyperaccumulation of non-coding pericentromeric transcripts that localise in cis at centromeres. non-coding pericentromeric transcripts"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 77,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The resulting H3K9 methylation in turn helps to stabilise recruitment of both RNAi and heterochromatin factors via binding of chromodomain-containing proteins including the RITS subunit Chp1, HP1 protein Swi6, and Clr4. H3K9 methylation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 78,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Heterochromatin is characterised by relatively low levels of histone acetylation low levels of histone acetylation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 79,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "In most eukaryotes by enrichment for methylation of histone H3 at lysine 9 (H3K9me) enrichment for methylation of histone H3 at lysine 9 (H3K9me)"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 80,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "RNA processing and surveillance pathways have been shown to play dual roles in co-/post-transcriptional silencing and RNA-based targeting of chromatin modifiers RNA processing and surveillance pathways"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 81,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "The resulting H3K9 methylation in turn helps to stabilise recruitment of both RNAi and heterochromatin factors via binding of chromodomain-containing proteins chromodomain-containing proteins"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 82,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "While HOODs are partially RNAi-dependent, heterochromatin islands are RNAi-independent heterochromatin islands are RNAi-independent"
+  },
+  {
+   "credited_for": [
+    "effect_direction_flip-1"
+   ],
+   "finding_index": 83,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Absence of the Ccr4-Not complex has been shown to be associated with decreased accumulation of heterochromatic transcripts on chromatin Ccr4-Not complex"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 84,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "A key feature of heterochromatin is its capacity for epigenetic inheritance through reader-writer coupling reader-writer coupling"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 85,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Histone deacetylase (HDAC) activity is required to promote heterochromatin assembly histone deacetylase (HDAC)"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 86,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "Deletion of HDACs Sir2 or Clr3 has only modest effects on maintenance of pericentromeric heterochromatin deletion of HDACs Sir2 or Clr3"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 87,
+   "record": "results/planted-eval-caprin-heterochromatin.json",
+   "system": "single-agent-cot-sc",
+   "text": "We previously showed that Mkt1, similar to Ccr4-Not complex, is required to prevent excess accumulation of transcripts on chromatin excess accumulation of transcripts"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 0,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs [23] and have long been thought to be unable to grow on inorganic sulfate [12]. met17 mutants were first identified in genetic screens for organosulfur auxotrophs [23] and have long been thought to be unable to grow on inorganic sulfate [12]."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 1,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "met17\u0394 yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging (Fig 1C). met17\u0394 yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging (Fig 1C)."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 2,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The seemingly erratic growth behavior of met17\u0394 on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D). The seemingly erratic growth behavior of met17\u0394 on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D)."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 3,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "At high initial cell densities, growth of met17\u0394 on sulfate was deterministic. At very low initial cell densities, the cultures did not grow. At high initial cell densities, growth of met17\u0394 on sulfate was deterministic. At very low initial cell densities, the cultures did not grow."
+  },
+  {
+   "credited_for": [
+    "gene_symbol_swap-0"
+   ],
+   "finding_index": 4,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The MET18 gene, also known as MET15 or MET25 [13\u201315], catalyzes homocysteine synthesis by reacting H2S with O-acetyl homoserine (i.e. displaying OAH sulfhydrylase activity) [16\u201318]. The MET18 gene, also known as MET15 or MET25 [13\u201315], catalyzes homocysteine synthesis by reacting H2S with O-acetyl homoserine (i.e. displaying OAH sulfhydrylase activity) [16\u201318]."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 5,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "In Discussions, we reconcile conflicts in earlier studies, highlight considerations for studying gas-mediated microbial interactions, and speculate on the functions of HSU1 in wildtype yeast. In Discussions, we reconcile conflicts in earlier studies, highlight considerations for studying gas-mediated microbial interactions, and speculate on the functions of HSU1 in wildtype yeast."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 6,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17\u0394 on sulfate. A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17\u0394 on sulfate."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 7,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "This indicated that we were not merely observing residual growth fueled by organosulfurs that the cells had accumulated during exponential growth in methionine-supplemented medium. This indicated that we were not merely observing residual growth fueled by organosulfurs that the cells had accumulated during exponential growth in methionine-supplemented medium."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 8,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The manuscript excerpt provides a comprehensive overview of sulfur metabolism and its relevance to various biological processes, including protein synthesis, nucleotide metabolism, redox homeostasis, and the role of sulfur metabolites in microbial behavior. It also discusses the discovery of sulfur metabolism genes in Saccharomyces cerevisiae and the role of the MET17 gene in homocysteine synthesis. Besides these critical roles in cell physiology, secreted sulfur metabolites can also influence population-level behavior in microbes. For example, in the budding yeast Saccharomyces cerevisiae, populations can expand the range of \ntemperat"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 9,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The manuscript excerpt does not provide enough detail about the specific findings or results of the research conducted by the authors, which makes it difficult to assess the novelty and contribution of their work. The seemingly erratic growth behavior of met17\u0394 on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D)."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 10,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The manuscript excerpt is well-organized and provides a clear introduction to the topic of sulfur metabolism and its relevance to various biological processes. It effectively sets the stage for the subsequent discussion of the research findings. INTRODUCTION Sulfur metabolism is vital to all organisms and produces a range of essential metabolites."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 11,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The manuscript excerpt uses technical terms and concepts related to sulfur metabolism and yeast genetics, which might be challenging for readers without a background in these fields. met17\u0394 yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging (Fig 1C)."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 12,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The manuscript excerpt highlights the importance of sulfur metabolism in various biological contexts, including its role in cell physiology and microbial behavior. However, it does not provide specific details about the novel findings or contributions of the research conducted by the authors. A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17\u0394 on sulfate."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 13,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The manuscript excerpt does not clearly articulate the specific novel findings or contributions of the research conducted by the authors. It focuses on summarizing existing knowledge about sulfur metabolism and its biological relevance, rather than presenting new research results. met17\u0394 show density-dependent growth on sulfate"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 14,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The manuscript excerpt mentions that the met17\u0394 mutant can grow on sulfate without organosulfur supplements, which is a novel finding that challenges the long-held belief that met17\u0394 mutants are auxotrophic for organosulfurs. met17\u0394 yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging (Fig 1C)."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 15,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "panel",
+   "text": "The manuscript excerpt discusses the role of the volatile metabolite H2S in mediating the density-dependent growth of met17\u0394 on sulfate, which is a novel aspect of sulfur metabolism that was not previously well-understood. The seemingly erratic growth behavior of met17\u0394 on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D)."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 0,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs met17 mutants were first identified in genetic screens for organosulfur auxotrophs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 1,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants have long been thought to be unable to grow on inorganic sulfate met17 mutants have long been thought to be unable to grow on inorganic sulfate"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 2,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17\u0394 yeast can in fact grow on sulfate without any organosulfur supplements, albeit in a density-dependent manner met17\u0394 yeast can in fact grow on sulfate without any organosulfur supplements"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 3,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "the seemingly erratic growth behavior of met17\u0394 on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures the seemingly erratic growth behavior of met17\u0394 on sulfate"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 4,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17\u0394 cells were growing exponentially in minimal medium supplemented with methionine before being washed and transferred to minimal medium without organosulfurs met17\u0394 cells were growing exponentially in minimal medium supplemented with methionine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 5,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "previous work from us and others has shown that communal yeast cells can effectively share metabolites to overcome auxotrophies previous work from us and others has shown that communal yeast cells can effectively share metabolites"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 6,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "The ability of met17\u0394 yeast strains to overcome organosulfur auxotrophy at high cell density was first described by Cost and Boeke The ability of met17\u0394 yeast strains to overcome organosulfur auxotrophy"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 7,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "As previously observed by Cost and Boeke, our met17\u0394 strain was also able to grow in the absence of methionine over the course of 8 days our met17\u0394 strain was also able to grow in the absence of methionine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 8,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "All relevant data are within the paper and its Supporting Information files All relevant data are within the paper and its Supporting Information files"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 9,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "cells can adapt to nutrient\u2013growth dysregulation by evolving major metabolic defects cells can adapt to nutrient\u2013growth dysregulation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 10,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs [23] and have long been thought to be unable to grow on inorganic sulfate [12]. met17 mutants were first identified in genetic screens for organosulfur auxotrophs [23] and have long been thought to be unable to grow on inorganic sulfate [12]."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 11,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17\u0394 yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging (Fig 1C). met17\u0394 yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 12,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Similar observations have since been reported by other labs [24,25], and chromatographic analyses has confirmed that organosulfur contaminants occur in negligible quantities in the commercially available yeast nitrogenous base that was used to prepare SD medium [25]. Similar observations have since been reported by other labs [24,25]"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 13,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "The ability to overcome organosulfur auxotrophy does not require the exchange of homocysteine or methionine Cost and Boeke [21] speculated that met17\u0394 cells could overcome the growth defect through the sharing of organosulfur metabolites between cells to growth-relevant levels. The ability to overcome organosulfur auxotrophy does not require the exchange of homocysteine or methionine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 14,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "This phenotype is nonheritable, which ruled out adaptive, secondary mutations concurrent with met17\u0394 as the cause. This phenotype is nonheritable, which ruled out adaptive, secondary mutations concurrent with met17\u0394 as the cause."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 15,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "As previously observed by Cost and Boeke [19,21], our met17\u0394 strain was also able to grow in the absence of methionine over the course of 8 passages. As previously observed by Cost and Boeke [19,21]"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 16,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "All relevant data are within the paper and its Supporting Information files. All relevant data are within the paper and its Supporting Information files."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 17,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Overactive growth during nutrient limitation (\u201cnutrient\u2013growth dysregulation\u201d) can lead to rapid cell death. Overactive growth during nutrient limitation (\u201cnutrient\u2013growth dysregulation\u201d) can lead to rapid cell death."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 18,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "A subpopulation repeatedly evolved to lose the ability to synthesize organosulfurs (lys\u2212orgS\u2212). A subpopulation repeatedly evolved to lose the ability to synthesize organosulfurs (lys\u2212orgS\u2212)."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 19,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "a deeper understanding of sulfur metabolism can thus have a wide societal impact A deeper understanding of sulfur metabolism can thus have a wide societal impact"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 20,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "secreted sulfur metabolites can also influence population-level behavior in microbes secreted sulfur metabolites can also influence population-level behavior in microbes"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 21,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs [23] and have long been thought to be unable to grow on inorganic sulfate [12] met17 mutants were first identified in genetic screens for organosulfur auxotrophs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 22,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17\u0394 yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging (Fig 1C) met17\u0394 yeast could sometimes grow to high cell densities in liquid SD medium"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 23,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Truly prototrophic cells would exhibit similar growth behaviors independent of the initial culture density upon such a transition Truly prototrophic cells would exhibit similar growth behaviors independent of the initial culture density"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 24,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "The ability to overcome organosulfur auxotrophy does not require the exchange of homocysteine or methionine The ability to overcome organosulfur auxotrophy does not require the exchange of homocysteine or methionine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 25,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "This phenotype is nonheritable, which ruled out adaptive, secondary mutations concurrent with met17\u0394 as the cause This phenotype is nonheritable, which ruled out adaptive, secondary mutations concurrent with met17\u0394 as the cause"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 26,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Overactive growth during nutrient limitation (\u201cnutrient\u2013growth dysregulation\u201d) can lead to rapid cell death Overactive growth during nutrient limitation (\u201cnutrient\u2013growth dysregulation\u201d) can lead to rapid cell death"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 27,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "cells suffered nutrient\u2013growth dysregulation. A subpopulation repeatedly evolved to lose the ability to synthesize organosulfurs (lys\u2212orgS\u2212) cells suffered nutrient\u2013growth dysregulation. A subpopulation repeatedly evolved to lose the ability to synthesize organosulfurs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 28,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Perhaps the best-known organosulfurs\u2014sulfur-containing organic compounds\u2014are the essential amino acids methionine and cysteine. Perhaps the best-known organosulfurs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 29,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "AdoMet, an activated form of methionine, serves as a universal methyl donor for nucleotides, proteins and small metabolites, and perturbations of AdoMet metabolism are implicated in liver pathologies [1]. perturbations of AdoMet metabolism"
+  },
+  {
+   "credited_for": [
+    "effect_direction_flip-1"
+   ],
+   "finding_index": 30,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Glutathione, generated from cysteine, is crucial for cellular redox homeostasis [2]; increased glutathione levels leads to oxidative stress which has been implicated in ageing and neurodegeneration [3,4]. increased glutathione levels leads"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 31,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Hydrogen sulfide (H2S), an inorganic gas which can be produced during organosulfur metabolism, has therapeutic potential in gastrointestinal, cardiovascular, inflammatory, and nervous systems [5,6]. Hydrogen sulfide (H2S)"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 32,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants are auxotrophic for organosulfurs, and the met17 deletion mutation (met17\u0394) [20] is commonly used in genetic studies of yeast, for example as a background mutation in the yeast deletion library [21,22]. met17 mutants are auxotrophic"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 33,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Surprisingly, we found that met17\u0394 yeast can in fact grow on sulfate without any organosulfur supplements, albeit in a density-dependent manner. met17\u0394 yeast can in fact grow"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 34,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17\u0394 on sulfate. A mathematical model based on low activity"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 35,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "In the patches of the met17 deletion (met17\u0394) mutant, individual colonies would appear after 1-3 days of incubation (Fig 1B), even though such patches usually remain clear for true auxotrophs. such patches usually remain clear"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 36,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Truly prototrophic cells would exhibit similar growth behaviors independent of the initial culture density upon such a transition. Truly prototrophic cells would exhibit"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 37,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Cost and Boeke [21] speculated that met17\u0394 cells could overcome the growth defect through the sharing of organosulfur metabolites between cells to growth-relevant levels. Cost and Boeke speculated"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 38,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs [23] and have long been thought to be unable to grow on inorganic sulfate [12]. met17 mutants were first identified"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 39,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Surprisingly, in the patches of the met17 deletion (met17\u0394) mutant, individual colonies would appear after 1-3 days of incubation (Fig 1B), even though such patches usually remain clear for true auxotrophs. Surprisingly, in the patches"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 40,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Furthermore, met17\u0394 yeast could sometimes grow to high cell densities in liquid SD medium over repeated passaging (Fig 1C). met17\u0394 yeast could sometimes"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 41,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Chromatographic analyses has confirmed that organosulfur contaminants occur in negligible quantities in the commercially available yeast nitrogenous base that was used to prepare SD medium [25]. Chromatographic analyses has confirmed"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 42,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "The seemingly erratic growth behavior of met17\u0394 on sulfate could potentially be explained by growth being dependent on the initial cell density in liquid cultures (Fig 1D). The seemingly erratic growth"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 43,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "At high initial cell densities, growth of met17\u0394 on sulfate was deterministic. At very low initial cell densities, the cultures did not grow. At high initial cell densities"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 44,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Strikingly, at intermediate cell densities, growth in the cultures was stochastic: three replicate cultures started from the same parent culture would deviate in the lag time before population growth took off (Fig 1D, green asterisks). Strikingly, at intermediate cell"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 45,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Thus, met17\u0394 were not actual prototrophs Thus, met17\u0394 were not"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 46,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Indeed, previous work from us and others has shown that communal yeast cells can effectively share metabolites to overcome auxotrophies [26,27]. Indeed, previous work from"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 47,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "In order to better understand the possible impact of metabolite exchange in the context of the ability of met17\u0394 cells to grow in the absence of methionine, we employed self-establishing metabolically cooperating (SeMeCo) communities, a synthetic yeast community designed to study metabolite exchange interactions between auxotrophs [27]. In order to better understand"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 48,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs genetic screens for organosulfur auxotrophs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 49,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants were long thought to be unable to grow on inorganic sulfate unable to grow on inorganic sulfate"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 50,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "chromatographic analyses has confirmed that organosulfur contaminants occur in negligible quantities in the commercially available yeast nitrogenous base negligible quantities in the commercially available yeast nitrogenous base"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 51,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "the cultures did not grow when the initial cell density was very low very low initial cell densities"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 52,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "three replicate cultures started from the same parent culture would deviate in the lag time before population growth took off three replicate cultures started from the same parent culture"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 53,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "we studied the phenotype in two haploid yeast strains in the BY4741 background two haploid yeast strains in the BY4741 background"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 54,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "cells suffered nutrient\u2013growth dysregulation when lysine limitation was encountered nutrient\u2013growth dysregulation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 55,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "a subpopulation repeatedly evolved to lose the ability to synthesize organosulfurs lose the ability to synthesize organosulfurs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 56,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "organosulfurs, mainly reduced glutathione (GSH) and GSH conjugates, were released by lys\u2212 cells during lysine limitation released by lys\u2212 cells during lysine limitation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 57,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "limiting organosulfurs conferred a frequency-dependent fitness advantage to lys\u2212 cells limiting organosulfurs conferred a frequency-dependent fitness advantage"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 58,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "The relevance of sulfur metabolites however extends far beyond protein synthesis. protein synthesis"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 59,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "AdoMet metabolism are implicated in liver pathologies [1]. AdoMet metabolism"
+  },
+  {
+   "credited_for": [
+    "effect_direction_flip-1"
+   ],
+   "finding_index": 60,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Glutathione, generated from cysteine, is crucial for cellular redox homeostasis [2]; increased glutathione levels leads to oxidative stress which has been implicated in ageing and neurodegeneration [3,4]. cellular redox homeostasis"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 61,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Hydrogen sulfide (H2S) is thought to promote population synchrony during ultradian respiratory oscillations in aerobic continuous cultures by inhibiting the respiratory chain, and exogenous sulfide can shift the phase of these oscillations [8,9]. population synchrony"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 62,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Unlike humans, yeast can synthesize essential organosulfurs de novo by assimilating inorganic sulfates (SO42-) from their environment. essential organosulfurs de novo"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 63,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "These studies, together with biochemical analyses, led to the current model of sulfur metabolism in yeast [12]. current model of sulfur metabolism"
+  },
+  {
+   "credited_for": [
+    "gene_symbol_swap-0"
+   ],
+   "finding_index": 64,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "The MET18 gene, also known as MET15 or MET25 [13\u201315], catalyzes homocysteine synthesis by reacting H2S with O-acetyl homoserine (i.e. displaying OAH sulfhydrylase activity) [16\u201318]. MET18 gene"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 65,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Although purified Met17 protein could also catalyze cysteine synthesis by reacting H2S with O-acetyl serine (i.e. displaying OAS sulfhydrylase activity), this activity was low [18] and unlikely to be relevant in vivo in S. cerevisae [19]. Met17 protein"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 66,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17\u0394 on sulfate. low activity of Hsu1"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 67,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants were first identified in genetic screens for organosulfur auxotrophs [23] and have long been thought to be unable to grow on inorganic sulfate [12]. met17 mutants"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 68,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17\u0394 yeast can in fact grow on sulfate without any organosulfur supplements grow on sulfate without any organosulfur supplements"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 69,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "density-dependence is mediated via the volatile metabolite H2S density-dependence is mediated via the volatile metabolite H2S"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 70,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "a mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17\u0394 on sulfate a mathematical model based on low activity of Hsu1"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 71,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "the ability to overcome organosulfur auxotrophy does not require the exchange of homocysteine or methionine the ability to overcome organosulfur auxotrophy does not require"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 72,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "communal yeast cells can effectively share metabolites to overcome auxotrophies communal yeast cells can effectively share metabolites"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 73,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "the ability of met17\u0394 yeast strains to overcome organosulfur auxotrophy at high cell density was first described by Cost and Boeke the ability of met17\u0394 yeast strains to overcome organosulfur auxotrophy"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 74,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "this phenotype is nonheritable, which ruled out adaptive, secondary mutations concurrent with met17\u0394 as the cause this phenotype is nonheritable"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 75,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "limiting organosulfurs conferred a frequency-dependent fitness advantage to the mutant population limiting organosulfurs conferred a frequency-dependent fitness advantage"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 76,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants have long been thought to be unable to grow on inorganic sulfate inorganic sulfate"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 77,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17\u0394 yeast can in fact grow on sulfate without any organosulfur supplements sulfate without any organosulfur supplements"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 78,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "H2S, which can be assimilated into organosulfurs through the YLL058W (HSU1) gene H2S, which can be assimilated into organosulfurs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 79,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants are auxotrophic for organosulfurs auxotrophic for organosulfurs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 80,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "truly prototrophic cells would exhibit similar growth behaviors independent of the initial culture density truly prototrophic cells"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 81,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17\u0394 cells were growing exponentially in minimal medium supplemented with methionine minimal medium supplemented with methionine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 82,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "growth of met17\u0394 on sulfate was deterministic at high initial cell densities growth of met17\u0394 on sulfate"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 83,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "growth of met17\u0394 on sulfate was stochastic at intermediate cell densities growth of met17\u0394 on sulfate"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 84,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "the ability to overcome organosulfur auxotrophy does not require the exchange of homocysteine or methionine homocysteine or methionine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 85,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "perhaps the best-known organosulfurs\u2014sulfur-containing organic compounds\u2014are the essential amino acids methionine and cysteine. essential amino acids methionine and cysteine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 86,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "the met17 deletion mutation (met17\u0394) [20] is commonly used in genetic studies of yeast, for example as a background mutation in the yeast deletion library [21,22]. the met17 deletion mutation (met17\u0394)"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 87,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Truly prototrophic cells would exhibit similar growth behaviors independent of the initial culture density upon such a transition. Truly prototrophic cells"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 88,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "The ability to overcome organosulfur auxotrophy does not require the exchange of homocysteine or methionine Cost and Boeke [21] speculated that met17\u0394 cells could overcome the growth defect through the sharing of organosulfur metabolites between cells to growth-relevant levels. the exchange of homocysteine or methionine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 89,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "This phenotype is nonheritable, which ruled out adaptive, secondary mutations concurrent with met17\u0394 as the cause. adaptive, secondary mutations"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 90,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Specifically, when yeast lysine-auxotrophic mutant lys\u2212 encountered lysine limitation, an evolutionarily novel stress, cells suffered nutrient\u2013growth dysregulation. an evolutionarily novel stress"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 91,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "the ability of met17\u0394 yeast strains to overcome organosulfur auxotrophy at high cell density was first described by Cost and Boeke [19,21]. the ability of met17\u0394 yeast strains"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 92,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "As previously observed by Cost and Boeke [19,21], our met17\u0394 strain was also able to grow in the absence of methionine over the course of 8 \u2026 our met17\u0394 strain was also able to grow"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 93,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "All relevant data are within the paper and its Supporting Information files. All relevant data"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 94,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Overactive growth during nutrient limitation (\u201cnutrient\u2013growth dysregulation\u201d) can lead to rapid cell death. Overactive growth during nutrient limitation"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 95,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "In fact, microorganisms release a constellation of volatile sulfur compounds [10], which have been of interest to the food industry (e.g. in optimizing wine aroma [11]), but the significance of many of these compounds to the microbes themselves is poorly understood. the significance of many of these compounds to the microbes themselves is poorly understood."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 96,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17\u0394 on sulfate. A mathematical model based on low activity of Hsu1 can explain the density-dependent growth of met17\u0394 on sulfate."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 97,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Chromatographic analyses has confirmed that organosulfur contaminants occur in negligible quantities in the commercially available yeast nitrogenous base that was used to prepare SD medium [25]. organosulfur contaminants occur in negligible quantities in the commercially available yeast nitrogenous base that was used to prepare SD medium"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 98,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Strikingly, at intermediate cell densities, growth in the cultures was stochastic: three replicate cultures started from the same parent culture would deviate in the lag time before population growth took off (Fig 1D, green asterisks). growth in the cultures was stochastic: three replicate cultures started from the same parent culture would deviate in the lag time before population growth took off"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 99,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Truly prototrophic cells would exhibit similar growth behaviors independent of the initial culture density upon such a transition. Truly prototrophic cells would exhibit similar growth behaviors independent of the initial culture density upon such a transition."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 100,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Cost and Boeke [21] speculated that met17\u0394 cells could overcome the growth defect through the sharing of organosulfur metabolites between cells to growth-relevant levels. met17\u0394 cells could overcome the growth defect through the sharing of organosulfur metabolites between cells to growth-relevant levels"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 101,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "A deeper understanding of sulfur metabolism can thus have a wide societal impact. A deeper understanding of sulfur metabolism can thus have a wide societal impact."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 102,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Unlike humans, yeast can synthesize essential organosulfurs de novo by assimilating inorganic sulfates (SO42-) from their environment. Unlike humans, yeast can synthesize essential organosulfurs de novo by assimilating inorganic sulfates (SO42-) from their environment."
+  },
+  {
+   "credited_for": [],
+   "finding_index": 103,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Although purified Met17 protein could also catalyze cysteine synthesis by reacting H2S with O-acetyl serine (i.e. displaying OAS sulfhydrylase activity), this activity was low [18] and unlikely to be relevant in vivo in S. cerevisae [19]. Although purified Met17 protein could also catalyze cysteine synthesis by reacting H2S with O-acetyl serine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 104,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "met17 mutants are auxotrophic for organosulfurs, and the met17 deletion mutation (met17\u0394) [20] is commonly used in genetic studies of yeast, for example as a background mutation in the yeast deletion library [21,22]. met17 mutants are auxotrophic for organosulfurs"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 105,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Surprisingly, we found that met17\u0394 yeast can in fact grow on sulfate without any organosulfur supplements, albeit in a density-dependent manner. Surprisingly, we found that met17\u0394 yeast can in fact grow on sulfate without any organosulfur supplements"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 106,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Note that the met17\u0394 cells were growing exponentially in minimal medium supplemented with methionine before being washed and transferred to minimal medium without organosulfurs. Note that the met17\u0394 cells were growing exponentially in minimal medium supplemented with methionine"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 107,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "Truly prototrophic cells would exhibit similar growth behaviors independent of the initial culture density upon such a transition. Truly prototrophic cells would exhibit similar growth behaviors independent of the initial culture density"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 108,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "In order to better understand the possible impact of metabolite exchange in the context of the ability of met17\u0394 cells to grow in the absence of methionine, we employed self-establishing metabolically cooperating (SeMeCo) communities, a synthetic yeast community designed to study metabolite exchange interactions between auxotrophs [27]. In order to better understand the possible impact of metabolite exchange in the context of the ability of met17\u0394 cells"
+  },
+  {
+   "credited_for": [],
+   "finding_index": 109,
+   "record": "results/planted-eval-met17-auxotroph.json",
+   "system": "single-agent-cot-sc",
+   "text": "The ability of met17\u0394 yeast strains to overcome organosulfur auxotrophy at high cell density was first described by Cost and Boeke [19,21]. The ability of met17\u0394 yeast strains to overcome organosulfur auxotrophy"
+  }
+ ],
+ "why": "Every string the round-3 planted-error evaluation scored, at the bytes it was scored on. Round 3 found unanimously that each credited 'detection' was a verbatim quotation of the perturbed manuscript rather than an assertion of a defect (gauntlet/round-3/report-2.md, Finding 1), so the assertion rule that replaced the substring rule is run against all of them as a negative control: not one may be credited by peerpanel.evals.planted.asserts. credited_for records what the OLD substring rule (peerpanel.evals.planted.detect, unchanged, now published as the 'named the token' upper bound) credited each string for, so the control's two halves are both pinned. The control is a FLOOR, not evidence: none of these strings contains an assertion cue at all, so the rule's same-sentence and negation clauses are exercised by the boundary controls in tests/test_planted_soundness.py, which are built from real manuscript text."
+}

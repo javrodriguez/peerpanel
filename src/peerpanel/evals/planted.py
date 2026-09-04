@@ -21,7 +21,73 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
+from peerpanel.text.chunks import sentences
+
 SEED = 20260831
+DETECTION_RULE = "assertion-v1"
+
+# The assertion rule, frozen before any control was run against it (plan D-1) and
+# implemented exactly as specified: one word-anchored alternation, in this order,
+# joined into a single pattern. Order is load-bearing — the multi-word cues that
+# CARRY a negation ("not correct", "does not exist", "cannot verify") must match as
+# whole phrases, so that the negation sits INSIDE the cue rather than in the window
+# scanned before it. Domain collisions were removed on purpose: `invert` (inverted
+# microscope), `opposite` (an opposite effect), bare `revers` (reverse transcribed),
+# `no such` (no such enrichment was observed), `suspicious` and `questionable` all
+# occur in these manuscripts as ordinary vocabulary, and `error` keeps its `error
+# bars` exception for the same reason. Never tune this list to make a control pass:
+# a control that trips is a finding about the rule (requirement 7d).
+_CUES: tuple[str, ...] = (
+    r"\bincorrect\b",
+    r"\bnot correct\b",
+    r"\bwrong(ly)?\b",
+    r"\berroneous(ly)?\b",
+    r"\berror\b(?!\s*bars?)",
+    r"\bmistake[sn]?\b",
+    r"\btypo\b",
+    r"\bmisnam",
+    r"\bmislabel",
+    r"\bmisidentif",
+    r"\bshould (?:be|read)\b",
+    r"\binconsisten",
+    r"\bcontradict",
+    r"\breversed\b",
+    r"\breversal\b",
+    r"\bimplausib",
+    r"\bimpossib",
+    r"\bfabricat",
+    r"\bdoes not exist\b",
+    r"\bnot (?:a )?(?:real|valid|known|traceable|verifiable)\b",
+    r"\bcannot (?:be )?(?:find|found|locate[d]?|verif(?:y|ied))\b",
+    r"\bcould not (?:be )?(?:find|found|locate[d]?|verif(?:y|ied))\b",
+    r"\buntraceab",
+    r"\bunverifiab",
+    r"\binvalid\b",
+    r"\bmisnomer\b",
+)
+# Case-insensitive because a finding capitalises its first word; nothing else about
+# the alternation is relaxed.
+ASSERTION_CUES = re.compile("|".join(_CUES), re.IGNORECASE)
+NEGATION = re.compile(
+    r"\b(no|not|never|without|none|nothing|neither|nor|unlikely|fails? to)\b", re.IGNORECASE
+)
+# A negation counts against a cue only inside the cue's own CLAUSE: from the sentence
+# start, or from the last of these breaks before the cue. Commas are deliberately NOT
+# breaks — "Dcr2, not Dcr1, is incorrect" would otherwise lose the negation that its
+# own clause carries. The first cut of this rule read a fixed five words back instead,
+# and missed "Nothing about the Dcr2 reference is incorrect" because "Nothing" sits six
+# words before the cue; clause scope is the string-agnostic fix, and it errs by
+# UNDER-crediting (see `asserts`), which is the safe direction for a published count.
+CLAUSE_BREAKS = re.compile(r";|:|\s+but\s+|\s+however\s+|\s+although\s+|\s+whereas\s+", re.I)
+# A citation parenthetical is one span of text, never a sentence boundary: the shared
+# splitter cuts "(Hollingsworth and Vance, 2019, Nat. Metab. 7:e91188)" at "Nat." and
+# "Metab.", which are not in its abbreviation list, and that would put the token in one
+# sentence and the assertion about it in the next. So `asserts` — and ONLY `asserts` —
+# masks parenthesised spans before splitting and restores them afterwards. The shared
+# list in `text.chunks` is not touched: its boundaries key the extraction cache, and
+# moving them would move every downstream artifact.
+_PARENTHETICAL = re.compile(r"\([^()]*\)")
+_MASKED_SPAN = re.compile(r"\(\x00(\d+)\x00\)")
 
 
 class PlantedError(BaseModel):
@@ -41,13 +107,19 @@ class PlantedManuscript(BaseModel):
 
 
 def scored_text(text: str, quote: str) -> str:
-    """The string a finding is scored on: its text plus the manuscript text it quotes.
+    """The string a finding is scored on: its own prose, never the text it quotes.
 
-    ONE function for both arms. The panel's reviewers and the single-agent
-    baseline are each asked for a `quote` and each is scored on text + quote, so
-    neither arm can reach a detection token through a channel the other lacks.
+    ONE function for both arms, and it discards the quote on purpose. A `quote`
+    is by definition a verbatim slice of the manuscript, and the planted token
+    is planted INTO the manuscript — so scoring text + quote credited an arm for
+    reproducing the perturbed sentence, which is what every credited detection
+    in the first committed records turned out to be (round-3 review, all three
+    evaluators). What an arm wrote in its own words is the only thing that can
+    carry an assertion, so it is the only thing scored. The quote is still
+    collected and committed, so a reader can see what each finding pointed at.
     """
-    return f"{text} {quote}".strip()
+    del quote  # collected for the record, deliberately not scored
+    return text.strip()
 
 
 _GENE = re.compile(r"\b([A-Z][a-z]{2}[0-9]{1,2}|[A-Z]{2,6}[0-9]{1,2})\b")
@@ -195,15 +267,137 @@ def plant_errors(
     )
 
 
-def detect(error: PlantedError, finding_texts: list[str]) -> bool:
-    """Was this planted error caught?
 
-    The rule is deliberately literal: some finding must NAME the planted token
-    (case-insensitive substring). That under-credits a reviewer who describes
-    the problem without quoting it ("the reported significance is impossible"
-    does not count for `p = 1.34`), and it cannot credit a reviewer for
-    catching something it never wrote down. Both directions are stated so the
-    reported recall is read as a floor, not a ceiling.
+def _mask_parentheticals(text: str) -> tuple[str, list[str]]:
+    """Replace each parenthesised span with a period-free placeholder of the same shape.
+
+    The placeholder keeps the outer brackets, so a sentence that BEGINS with a
+    parenthetical still starts where it did — the splitter's lookahead admits "(" on
+    purpose. Nested or unbalanced brackets are left exactly as they are: masking them
+    would need a matcher this rule does not earn, and the plain splitter is then what
+    scores the text, with the same limits it has everywhere else.
+    """
+    depth = 0
+    for char in text:
+        if char == "(":
+            depth += 1
+            if depth > 1:
+                return text, []  # nested — leave it to the plain splitter
+        elif char == ")":
+            depth -= 1
+            if depth < 0:
+                return text, []  # unbalanced — same
+    if depth != 0:
+        return text, []
+    spans: list[str] = []
+
+    def _swap(match: re.Match[str]) -> str:
+        spans.append(match.group(0))
+        return f"(\x00{len(spans) - 1}\x00)"
+
+    return _PARENTHETICAL.sub(_swap, text), spans
+
+
+def _assertion_sentences(text: str) -> list[str]:
+    """The sentences `asserts` scores: the shared boundary, with citations kept whole."""
+    masked, spans = _mask_parentheticals(text)
+    if not spans:
+        return sentences(text)
+    return [
+        _MASKED_SPAN.sub(lambda m: spans[int(m.group(1))], sentence)
+        for sentence in sentences(masked)
+    ]
+
+
+def _is_negated(sentence: str, cue_start: int) -> bool:
+    """Does a negation stand between the start of the cue's clause and the cue?
+
+    A cue that carries its own negation ("does not exist", "not correct", "cannot be
+    verified") matches as a whole phrase beginning AT that negation, so the negation is
+    inside the cue and never in the text scanned in front of it.
+    """
+    clause_start = 0
+    for break_ in CLAUSE_BREAKS.finditer(sentence, 0, cue_start):
+        clause_start = break_.end()
+    return NEGATION.search(sentence[clause_start:cue_start]) is not None
+
+
+def asserts(error: PlantedError, finding_texts: list[str]) -> bool:
+    """Did some finding ASSERT the defect this planted error records, in its own prose?
+
+    The rule (`DETECTION_RULE`, "assertion-v1"): a finding is credited iff ONE of its
+    sentences — cut on the abbreviation-aware boundary the index uses
+    (`peerpanel.text.chunks.sentences`, never a second splitter), with parenthesised
+    spans held whole — contains both the detection token (case-insensitive substring,
+    exactly as `detect`) and an assertion cue from `ASSERTION_CUES` that no negation in
+    the cue's own clause stands in front of.
+
+    It errs in BOTH directions, and a published number must carry both with it:
+
+    - it does not credit a finding that asserts the defect without naming the token
+      ("the direction of this effect is reversed" earns nothing for
+      "decreased accumulation of"), so the count is a FLOOR on detection;
+    - it does credit a finding that names the token and uses a cue about something
+      else in the same sentence ("Dcr2 is discussed, and the error in Figure 2 is
+      obvious" counts for the Dcr1->Dcr2 swap), so the floor is not a clean one;
+    - a negation anywhere earlier in the cue's clause suppresses the cue, so
+      "Dcr2, not Dcr1, is incorrect" — a real assertion — is NOT credited: clause scope
+      cannot tell a negated claim from a corrected one, and it under-credits rather
+      than over-credits on purpose;
+    - it is same-sentence only, so an assertion split across two sentences ("Dcr2 is
+      named here. That symbol is incorrect.") earns nothing.
+
+    Cues that occur in these manuscripts as ordinary vocabulary were dropped before
+    any control was run, and `error` keeps an `error bars` exception, so that quoted
+    methods prose cannot mint a catch: `invert` (inverted microscope), `opposite`,
+    bare `revers` (reverse transcribed), `no such` (no such enrichment was observed),
+    `suspicious`, `questionable`.
+
+    Calibrated before first use. The first cut of the mechanism read a fixed five words
+    back for a negation and split sentences with the shared boundary untouched. Two
+    pre-run controls defeated it, before it had scored any record: "Nothing about the
+    Dcr2 reference is incorrect." was CREDITED (the negation sits six words before the
+    cue), and "The citation (Hollingsworth and Vance, 2019, Nat. Metab. 7:e91188) does
+    not exist." was NOT credited (the splitter cut the citation at "Nat." and "Metab.",
+    leaving the token in one sentence and the assertion in the next). The cue list was
+    not touched; the two mechanisms around it were replaced with clause-scoped negation
+    and masked parentheticals, both string-agnostic. `DETECTION_RULE` keeps its name
+    because no record was ever produced by the pre-calibration code.
+
+    Every string this rule scored is committed beside the number it produced, in the
+    record's `finding_texts`, so a reader can judge each decision rather than trust
+    the count. `detect` stays beside it as the "named the token" upper bound.
+    """
+    token = error.detection_token.lower()
+    for text in finding_texts:
+        for sentence in _assertion_sentences(text):
+            if token not in sentence.lower():
+                continue
+            for cue in ASSERTION_CUES.finditer(sentence):
+                if not _is_negated(sentence, cue.start()):
+                    return True
+    return False
+
+
+
+def detect(error: PlantedError, finding_texts: list[str]) -> bool:
+    """Did some finding NAME the planted token, in its own prose?
+
+    The rule is a case-insensitive substring test, and it errs in BOTH
+    directions, which the published numbers must carry with them:
+
+    - it under-credits a finding that describes the problem without naming the
+      token ("the reported significance is impossible" does not count for
+      `p = 1.34`);
+    - it over-credits a finding that names the token while merely restating the
+      manuscript ("the excerpt mentions Dicer (Dcr2)" counts for a Dcr1->Dcr2
+      swap, though it asserts nothing wrong). A substring rule cannot tell an
+      assertion from a restatement, and no mechanical rule here tries to.
+
+    So the number this returns is "named the token", an UPPER bound on
+    detection rather than a floor. The strings it credited are committed with
+    every record so a reader can judge each one; the round-3 review did, and
+    found that on the first records none asserted an error.
     """
     token = error.detection_token.lower()
     return any(token in text.lower() for text in finding_texts)

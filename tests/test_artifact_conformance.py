@@ -38,9 +38,15 @@ from peerpanel.agents.schemas import (
     PanelReview,
 )
 from peerpanel.embeddings.query_cache import CachedQueryEmbedder
-from peerpanel.evals.ablation import run_ablation
-from peerpanel.evals.planted import detect
-from peerpanel.evals.planted_eval import BASELINE_SYSTEM, PANEL_SYSTEM, PlantedEvalReport
+from peerpanel.evals.ablation import RUN_VARYING_FIELDS, run_ablation
+from peerpanel.evals.planted import DETECTION_RULE, asserts, detect
+from peerpanel.evals.planted_eval import (
+    BASELINE_MODELS,
+    PANEL_SYSTEM,
+    PlantedEvalReport,
+    baseline_system,
+)
+from peerpanel.evals.records import assert_run_conditions
 from peerpanel.graph.extract import EXTRACTION_PROVIDER_NAME
 from peerpanel.orchestration.panel import detect_conflicts
 
@@ -153,22 +159,49 @@ class TestPlantedEvalRecords:
     def test_loads_under_the_current_schema(self, name: str) -> None:
         _planted(name)
 
-    def test_the_two_arms_are_the_two_systems_the_code_names(self, name: str) -> None:
-        assert {arm.system for arm in _planted(name).results} == {PANEL_SYSTEM, BASELINE_SYSTEM}
+    def test_the_arms_are_the_systems_the_code_names(self, name: str) -> None:
+        """One panel row and one single-agent row PER NAMED MODEL (DECISIONS D-2).
+
+        The panel is a two-family mixture by design, so its row names a mixture and
+        cannot carry a pass rate for either model on its own; the single-agent arm runs
+        once per model, in the same record, so every model this repository names has a
+        rate of its own. A record with fewer arms than the code names is a record whose
+        table cannot say what its heading says.
+        """
+        expected = {PANEL_SYSTEM, *(baseline_system(m) for m in BASELINE_MODELS)}
+        assert {arm.system for arm in _planted(name).results} == expected
 
     def test_detection_recomputes_from_the_scored_texts(self, name: str) -> None:
-        """Both arms commit the exact strings they were scored on. Re-running the
-        detector over them must reproduce detected/missed to the id."""
+        """Every arm commits the exact strings it was scored on. Re-running BOTH rules
+        over them must reproduce both counts to the id.
+
+        Two counts, two rules, one direction between them. `detected` is the published
+        headline and credits a finding whose own prose asserts the defect its planted
+        record names (`asserts`, rule `assertion-v1`); `named_token` is the labelled
+        upper bound and credits a finding that merely names the token (`detect`). An
+        assertion names the token by construction, so the headline can never exceed its
+        own upper bound — a record where it does was produced by neither rule.
+        """
         report = _planted(name)
+        assert report.detection_rule == DETECTION_RULE, (
+            f"{name}: scored under {report.detection_rule!r}, which is not the rule this "
+            f"code credits ({DETECTION_RULE!r})"
+        )
         ids = [e.error_id for e in report.errors]
         assert report.n_errors == len(ids)
         assert report.error_kinds == {e.error_id: e.kind for e in report.errors}
         for arm in report.results:
-            detected = [e.error_id for e in report.errors if detect(e, arm.finding_texts)]
-            missed = [e.error_id for e in report.errors if not detect(e, arm.finding_texts)]
+            detected = [e.error_id for e in report.errors if asserts(e, arm.finding_texts)]
+            missed = [e.error_id for e in report.errors if not asserts(e, arm.finding_texts)]
+            named = [e.error_id for e in report.errors if detect(e, arm.finding_texts)]
             assert (arm.detected, arm.missed) == (detected, missed), arm.system
+            assert arm.named_token == named, arm.system
             assert set(arm.detected) | set(arm.missed) == set(ids), arm.system
             assert not set(arm.detected) & set(arm.missed), arm.system
+            assert set(arm.detected) <= set(arm.named_token), (
+                f"{arm.system}: {sorted(set(arm.detected) - set(arm.named_token))} credited as "
+                "asserting a defect whose token the upper bound says no finding named"
+            )
 
     def test_a_kind_is_planted_or_skipped_never_both(self, name: str) -> None:
         report = _planted(name)
@@ -192,17 +225,24 @@ class TestPlantedEvalRecords:
                 f"{arm.system}: excluded_docs and dropped_chunks disagree"
             )
 
-    def test_both_arms_report_the_same_exclusion(self, name: str) -> None:
+    def test_every_arm_reports_the_same_exclusion(self, name: str) -> None:
         states = {(tuple(a.excluded_docs), a.dropped_chunks) for a in _planted(name).results}
-        assert len(states) == 1, f"the two arms searched different indexes: {states}"
+        assert len(states) == 1, f"the arms searched different indexes: {states}"
 
 
 class TestAblationRecordIsThisCodesOutput:
     def test_ci_ladder_regenerates_byte_for_byte_except_latency(self) -> None:
         """The committed CI ablation is a deterministic function of committed bytes
-        (corpus, extractions, query vectors). Regenerate it here and compare
-        everything but wall-clock: any other difference means the record was not
-        produced by this code."""
+        (corpus, extractions, query vectors). Regenerate it here and compare everything
+        but the fields the schema itself DECLARES run-varying: any other difference
+        means the record was not produced by this code.
+
+        The declared list is imported rather than repeated, so a field that becomes
+        run-varying is exempted in one place and a field that stops being run-varying
+        cannot stay quietly exempt here. `run_utc` is then checked to have MOVED —
+        checklist line 3's "the regenerated record's run timestamp moved" — because a
+        stripped field nobody looks at is a record that need never have been re-run.
+        """
         committed = json.loads((RESULTS / "ablation-ci.json").read_text())
         fresh = run_ablation(ROOT, CachedQueryEmbedder(ROOT), corpus="ci").model_dump()
 
@@ -210,11 +250,21 @@ class TestAblationRecordIsThisCodesOutput:
             rows = report["results"]
             assert isinstance(rows, list)
             return {
-                **report,
-                "results": [{k: v for k, v in row.items() if k != "latency_ms"} for row in rows],
+                **{k: v for k, v in report.items() if k not in RUN_VARYING_FIELDS},
+                "results": [
+                    {k: v for k, v in row.items() if k not in RUN_VARYING_FIELDS} for row in rows
+                ],
             }
 
         assert strip(fresh) == strip(committed)
+        assert "run_utc" in committed, (
+            "the committed ladder carries no run timestamp, so nothing can show it moved; "
+            "regenerate it (`make ablation-publish`)"
+        )
+        assert fresh["run_utc"] != committed["run_utc"], (
+            f"a fresh ladder came back stamped {fresh['run_utc']}, the committed record's own "
+            "timestamp — the regeneration this test claims to have run did not happen"
+        )
 
 
 _WORD_NUMBERS = {
@@ -257,29 +307,22 @@ def _as_number(token: str) -> int | None:
     return int(token) if token.isdigit() else _WORD_NUMBERS.get(token)
 
 
-def _read_whole(stats: CallStats, where: str, *, calls_required: bool = True) -> None:
-    """The D19 proof: every prompt this record's calls sent fit the window it ran in.
+def _read_whole(
+    stats: CallStats,
+    where: str,
+    *,
+    calls_required: bool = True,
+    record: dict[str, object] | None = None,
+) -> None:
+    """The D19 proof, asked through the ONE rule: `evals.records.assert_run_conditions`.
 
-    Read per call, not across the record: the largest prompt and the smallest window
-    usually belong to different calls, so comparing those two refuses honest records
-    (a 4,100-token reviewer prompt in an 8,192 window beside a short converger call in
-    a 4,096 one) while proving nothing about either.
+    The body used to live here, which meant the requirement-8 sweep over every
+    `results/**/*.json` could only re-implement it — and two implementations of one rule
+    drift until a record passes one and fails the other. The rule, its rationale and its
+    messages are in `peerpanel/evals/records.py`; this stays as the local spelling
+    (`calls_required=False` is the replay branch) so the tests below read as they did.
     """
-    if stats.calls == 0:
-        # A rebuild that replayed a complete cache called no model. It may not claim
-        # measurements it never made — that would be a mock in the numbers.
-        assert not calls_required, f"{where}: a record with no model calls measured nothing"
-        assert stats.largest_prompt_tokens == 0, f"{where}: no calls, but a prompt measured"
-        assert stats.smallest_context is None and stats.smallest_headroom_tokens is None, where
-        return
-    assert stats.largest_prompt_tokens > 0, where
-    assert stats.smallest_context is not None, f"{where}: a wire that reports no window"
-    assert stats.smallest_headroom_tokens is not None, f"{where}: no per-call margin recorded"
-    assert stats.smallest_headroom_tokens > 0, (
-        f"{where}: a prompt came within {stats.smallest_headroom_tokens} tokens of the window "
-        f"it ran in (largest prompt {stats.largest_prompt_tokens:,}, smallest window "
-        f"{stats.smallest_context:,}); a prompt was cut"
-    )
+    assert_run_conditions(stats, where, replay_allowed=not calls_required, record=record)
 
 
 class TestEveryPromptWasReadWhole:
@@ -321,7 +364,7 @@ class TestEveryPromptWasReadWhole:
                     )
 
     @pytest.mark.parametrize("name", PLANTED_RECORDS)
-    def test_both_arms_of_the_planted_evaluation(self, name: str) -> None:
+    def test_every_arm_of_the_planted_evaluation(self, name: str) -> None:
         for arm in _planted(name).results:
             _read_whole(arm.model_calls, f"{name}:{arm.system}")
 
@@ -337,17 +380,10 @@ class TestEveryPromptWasReadWhole:
         # measurements it did not make, or a chunk it recorded as truncated.
         assert record["chunks"] > 0, f"{name}: a zero-chunk build proves nothing"
         stats = CallStats.model_validate(record["model_calls"])
-        _read_whole(stats, name, calls_required=False)
-        if stats.calls == 0:
-            # Nothing was extracted, so every chunk must already have been on disk. Only
-            # this direction is sound: `cached_before` counts FILES in the cache directory
-            # (pipeline.py) while a hit is keyed by chunk id, provider and PROMPT_VERSION,
-            # so orphans and a bumped prompt version both inflate it above the number of
-            # usable records — an honest cold build can show cached_before == chunks.
-            assert record["cached_before"] >= record["chunks"], (
-                f"{name}: no model calls, but only {record['cached_before']} cached "
-                f"records for {record['chunks']} chunks"
-            )
+        # The replay branch needs the record itself: a build that called nothing has to
+        # show every chunk was already on disk. That check, and why only this direction
+        # of it is sound, moved into the one rule with the rest of it.
+        _read_whole(stats, name, calls_required=False, record=record)
         assert record["truncated_chunks"] == 0, f"{name}: a chunk recorded as truncated"
 
 
@@ -399,7 +435,11 @@ class TestClaimedYieldsMatchTheRecords:
         # digit from 1 to 10 appears somewhere in both files, so a substring test passes
         # whatever the records say. The first version of this test did exactly that —
         # the defect this file exists to catch, in the file that catches it.
-        claim = re.compile(r"(\w+) hallucinated findings? in (\w+)")
+        # `\s+`, not a literal space: the claim is a sentence, and a sentence gets
+        # re-wrapped. The first version of this guard matched a single line only, so
+        # re-flowing the paragraph would have silenced it without changing a word — the
+        # dead-guard class round 3 filed three of.
+        claim = re.compile(r"(\w+)\s+hallucinated\s+findings?\s+in\s+(\w+)")
         for where, text in (
             ("RESULTS.md", (RESULTS / "RESULTS.md").read_text()),
             ("README.md", (ROOT / "README.md").read_text()),
@@ -411,6 +451,8 @@ class TestClaimedYieldsMatchTheRecords:
                     f"finding quotes text outside its manuscript across {total} findings"
                 )
                 continue
+            # The >= 1 real match this binding needs: the regex is proven against the
+            # real file, in both files, every time the records show a count to state.
             assert found, (
                 f"{where} must state the measured count as a claim a reader can check: "
                 f"{offending} of {total} reviewer findings quote text not in the "

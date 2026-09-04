@@ -6,10 +6,20 @@ import json
 import sys
 from collections import Counter
 from pathlib import Path
+from typing import Any
 
 from peerpanel.graph.pipeline import DemoCorpusMissing
 
-PLANNED = ("quickstart", "demo", "corpus", "embeddings", "graph", "ablation", "eval")
+PLANNED = (
+    "quickstart",
+    "demo",
+    "corpus",
+    "embeddings",
+    "graph",
+    "ablation",
+    "eval",
+    "results",
+)
 
 
 def _corpus(args: list[str]) -> int:
@@ -160,9 +170,18 @@ def _graph(args: list[str]) -> int:
         # cited command with --where, ran the real community-report pass — 122 live model
         # calls inside `make test`, and a hard failure anywhere without Ollama.
         summaries_out = root / "artifacts" / corpus / "summaries.json"
-        if _where(args, summaries_out):
+        # --publish also writes the tracked run record the prose cites: which wire and
+        # model produced the reports, how many calls THIS run made, and the per-call
+        # margin between prompt and window. Until round 3 this layer — the only input to
+        # graphrag-global's ranking, on the one wire that cannot set its window — shipped
+        # no record of its run conditions at all.
+        stats_out = root / "results" / f"summaries-stats-{corpus}.json"
+        if "--where" in args:
+            for path in (summaries_out, *([stats_out] if "--publish" in args else [])):
+                print(path.relative_to(Path.cwd()).as_posix())
             return 0
 
+        from peerpanel.agents.schemas import CallStats
         from peerpanel.graph.build import load_graph
         from peerpanel.graph.summaries import (
             SUMMARY_MODEL,
@@ -170,6 +189,7 @@ def _graph(args: list[str]) -> int:
             write_cache_readme,
         )
         from peerpanel.providers import OllamaOpenAIChat
+        from peerpanel.providers.base import TokenLedger
 
         graph = load_graph(root / "artifacts" / corpus / "graph.json")
         communities = json.loads((root / "artifacts" / corpus / "communities.json").read_text())
@@ -186,12 +206,13 @@ def _graph(args: list[str]) -> int:
             {args[args.index("--resolution") + 1]} if "--resolution" in args else set(communities)
         )
         all_reports: list[dict[str, object]] = []
+        ledger = TokenLedger()
         for resolution, assignment in communities.items():
             if resolution not in wanted:
                 continue
             typed = {n: int(c) for n, c in assignment.items()}
             reports = summarise_communities(
-                graph, typed, float(resolution), provider, cache_dir=cache
+                graph, typed, float(resolution), provider, cache_dir=cache, ledger=ledger
             )
             all_reports.extend(r.model_dump() for r in reports)
             print(f"resolution {resolution}: {len(reports)} community reports")
@@ -201,9 +222,138 @@ def _graph(args: list[str]) -> int:
         if truncated:
             print(f"graph summaries: {truncated} report(s) truncated", file=sys.stderr)
         print(f"graph summaries: {len(all_reports)} reports -> {out}")
+        if "--publish" in args:
+            record = {
+                "corpus": corpus,
+                "provider": provider.name,
+                "resolutions": sorted(wanted, key=float),
+                "reports": len(all_reports),
+                "reports_truncated": truncated,
+                # calls THIS run made; a report served from the committed cache makes none
+                "model_calls": CallStats.from_ledger(ledger).model_dump(),
+            }
+            stats_out.parent.mkdir(parents=True, exist_ok=True)
+            stats_out.write_text(json.dumps(record, indent=1, sort_keys=True) + "\n")
+            print(f"graph summaries: published -> {stats_out}")
         return 0
     print(f"graph: unknown subcommand {sub!r} (build | summaries)", file=sys.stderr)
     return 2
+
+
+# The rule text `results/derived-fields.json` opens with. Written here only when the
+# manifest does not exist yet; the committed file is the authority once it does.
+_DERIVED_FIELDS_RULE = (
+    "every entry names a field written by derivation, not measurement; "
+    "tests/test_run_conditions.py proves each equals the emitter's own derivation"
+)
+
+# The regenerate command for each record this door may derive a field onto. A CLOSED
+# map on purpose: an entry in derived-fields.json is read as the instruction that
+# reproduces the record's shape, and a manifest carrying an invented `make` line is the
+# documented-command-that-does-not-reproduce defect this repository has shipped before.
+_DERIVE_REGENERATE = {
+    "build-stats-ci.json": "make graph after emptying fixtures/extraction/ci",
+    "build-stats-demo.json": "make demo-index",
+}
+
+
+def _rel(path: Path, root: Path) -> str:
+    try:
+        return path.relative_to(root).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def _results(args: list[str]) -> int:
+    """`results derive-window-sources <record>...` — the disclosed derivation door.
+
+    The two index-build records are NOT re-run to gain `model_calls.window_sources`: a
+    non-deterministic re-extraction would move every downstream number in order to write
+    a string the code path already determines from the wire the record names. So the
+    field is written by the emitter's own derivation (`evals.records.derive_window_sources`
+    — the same `provider` prefix -> constant mapping `graph build --publish` emits), and
+    NOTHING else is written into the record: a provenance key inside a record the emitter
+    cannot produce is a mock by drift. That the field was derived rather than measured is
+    disclosed BESIDE the record, in `results/derived-fields.json`, which is in the
+    evaluators' scope. Idempotent: a second run writes nothing and keeps the first run's
+    date, because when the field was derived is a fact about the record, not about the
+    last time someone re-ran the door.
+    """
+    root = Path.cwd()
+    sub = args[0] if args else ""
+    if sub != "derive-window-sources":
+        print(f"results: unknown subcommand {sub!r} (derive-window-sources)", file=sys.stderr)
+        return 2
+    targets = [root / name for name in _positionals(args[1:])]
+    manifest_path = root / "results" / "derived-fields.json"
+    if not targets:
+        print(
+            "results derive-window-sources: name at least one record, e.g. "
+            "results/build-stats-ci.json",
+            file=sys.stderr,
+        )
+        return 2
+    if "--where" in args:
+        # Every path this invocation would write: the records themselves and the
+        # manifest that discloses the derivation. --where does no work, so it cannot
+        # know which of them a run would actually change.
+        for path in (*targets, manifest_path):
+            print(_rel(path, root))
+        return 0
+
+    from datetime import UTC, datetime
+
+    from peerpanel.evals.records import WINDOW_SOURCES_FIELD, derive_window_sources
+
+    missing = [_rel(p, root) for p in targets if not p.exists()]
+    if missing:
+        print(f"results derive-window-sources: no such record(s): {missing}", file=sys.stderr)
+        return 2
+    unmapped = [p.name for p in targets if p.name not in _DERIVE_REGENERATE]
+    if unmapped:
+        print(
+            f"results derive-window-sources: no regenerate command is recorded for "
+            f"{unmapped} — add it to _DERIVE_REGENERATE beside this door rather than "
+            "letting the manifest carry a guess",
+            file=sys.stderr,
+        )
+        return 2
+
+    manifest: dict[str, Any] = (
+        json.loads(manifest_path.read_text())
+        if manifest_path.exists()
+        else {"_rule": _DERIVED_FIELDS_RULE, "records": {}}
+    )
+    records: dict[str, Any] = manifest.setdefault("records", {})
+    today = datetime.now(UTC).date().isoformat()
+    written: list[str] = []
+    for path in targets:
+        before = path.read_text()
+        derived = derive_window_sources(json.loads(before))
+        after = json.dumps(derived, indent=1, sort_keys=True) + "\n"
+        if after != before:
+            path.write_text(after)
+            written.append(_rel(path, root))
+        previous: dict[str, Any] = records.get(path.name) or {}
+        records[path.name] = {
+            # Imported, never retyped: the manifest's `field` and the field the
+            # derivation writes are one name, and a test reads both.
+            "field": WINDOW_SOURCES_FIELD,
+            "derived_from": "provider",
+            "derived_on": previous.get("derived_on", today),
+            "re_measured": False,
+            "regenerate": _DERIVE_REGENERATE[path.name],
+        }
+    manifest_text = json.dumps(manifest, indent=1, sort_keys=True) + "\n"
+    if not manifest_path.exists() or manifest_text != manifest_path.read_text():
+        manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        manifest_path.write_text(manifest_text)
+        written.append(_rel(manifest_path, root))
+    print(
+        f"results derive-window-sources: {len(targets)} record(s) read · "
+        + (f"wrote {', '.join(written)}" if written else "nothing changed (already derived)")
+    )
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -231,6 +381,8 @@ def _main(args: list[str]) -> int:
         return _embeddings(rest)
     if command == "graph":
         return _graph(rest)
+    if command == "results":
+        return _results(rest)
     if command == "ablation":
         from peerpanel.embeddings.query_cache import CachedQueryEmbedder
         from peerpanel.evals.ablation import render_table, run_ablation
@@ -282,8 +434,24 @@ def _main(args: list[str]) -> int:
             return replay(Path.cwd())
         return run_demo(Path.cwd(), PanelProviders.local_default())
     if command == "eval":
+        if "--collisions" in rest:
+            # The model-free half of this evaluation's soundness: for every planted
+            # token, which corpus documents already contain it. Committed so the
+            # collision guard the headline leans on runs in EVERY clean clone rather
+            # than skipping wherever the fetched corpus is absent (round-3 F12).
+            collisions_out = Path.cwd() / "corpus" / "token_collisions.json"
+            if _where(rest, collisions_out):
+                return 0
+            from peerpanel.evals.collisions import write_token_collisions
+
+            collisions_corpus = _corpus_arg(rest) if "--corpus" in rest else "demo"
+            subjects = sorted(p.stem for p in (Path.cwd() / "manuscripts").glob("*.txt"))
+            out_path = write_token_collisions(Path.cwd(), collisions_corpus, subjects)
+            print(f"eval collisions: {len(subjects)} manuscript(s) -> {out_path}")
+            return 0
+
+        from peerpanel.evals.planted_eval import BASELINE_MODELS, run_planted_eval
         from peerpanel.evals.planted_eval import render_table as render_planted
-        from peerpanel.evals.planted_eval import run_planted_eval
         from peerpanel.orchestration import PanelProviders
         from peerpanel.providers import OllamaNativeChat, OllamaNativeEmbed
 
@@ -303,9 +471,12 @@ def _main(args: list[str]) -> int:
             Path.cwd(),
             manuscript,
             PanelProviders.local_default(),
-            # The same model and wire as the panel's methods reviewer, so the
-            # arms differ in architecture, never in transport or window.
-            baseline_provider=OllamaNativeChat("llama3.1:8b"),
+            # D-2: ONE single-agent arm per named local model, published as its own
+            # row, so "pass rates for both local models" is a rate per model rather
+            # than one number over a mixture. Both ride the native wire — the same
+            # transport and per-call window sizing as the panel — so the arms differ
+            # in architecture and model, never in transport or window.
+            baseline_providers=[OllamaNativeChat(model) for model in BASELINE_MODELS],
             embedder=OllamaNativeEmbed(),
             corpus=corpus,
         )
@@ -349,9 +520,18 @@ def _main(args: list[str]) -> int:
             f"wall {review.wall_s}s"
         )
         calls = review.model_calls
+        # The margin is the proof; the largest prompt and the smallest window are usually
+        # different calls, and printing only those two beside "read whole" made the log
+        # read as a cut prompt with a parenthesis denying it (round-3 review).
+        margin = calls.smallest_headroom_tokens
+        verdict = (
+            f"smallest margin {margin} tokens — every prompt read whole"
+            if margin is not None and margin > 0
+            else f"smallest margin {margin} — NOT every prompt read whole"
+        )
         print(
             f"  model calls: {calls.calls} · largest prompt {calls.largest_prompt_tokens} "
-            f"tokens · smallest window {calls.smallest_context} (every prompt read whole)"
+            f"tokens · smallest window {calls.smallest_context} · {verdict}"
         )
         print(f"  summary: {review.summary[:300]}")
         print(f"review: full record -> {out}")

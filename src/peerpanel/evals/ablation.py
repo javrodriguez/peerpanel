@@ -4,12 +4,22 @@ run per query case over the exclusion-filtered index, reported honestly.
 Per case and rung: the per-item hits table (always) and latency; recall@k /
 NDCG@k only when the N gate allows (retrieval_eval.rates_allowed). The losing
 rung ships — that is the point.
+
+`RUN_VARYING_FIELDS` names every field of this schema whose value is expected to
+differ between two runs over identical bytes: `latency_ms` (a wall-clock
+measurement) and `run_utc` (when the run happened). Everything else is a
+deterministic function of the committed corpus, extractions and query vectors, so
+a difference anywhere else means the record was not produced by this code. The
+list lives here, beside the models, because the conformance test imports it
+rather than repeating it — a field that becomes run-varying is exempted in one
+place, and a field that stops being run-varying cannot stay quietly exempt.
 """
 
 from __future__ import annotations
 
 import json
 import time
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Protocol
 
@@ -47,6 +57,11 @@ K = 10
 DOC_DEPTH_MULTIPLIER = 3  # the deeper list, in DOCUMENTS
 MAX_CHUNKS = 2000
 
+# Declared run-varying, at both levels of the schema: `latency_ms` on a rung row and
+# `run_utc` on the report. Anything else that moves between two runs over the same
+# committed bytes is a defect, not a timestamp.
+RUN_VARYING_FIELDS = ("latency_ms", "run_utc")
+
 
 class _SearchFn(Protocol):
     def __call__(self, query: str, k: int) -> list[RetrievalHit]: ...
@@ -65,7 +80,19 @@ class RungResult(BaseModel):
 
 
 class AblationReport(BaseModel):
+    """One ladder run.
+
+    `run_utc` is REQUIRED and has no default: a record that cannot say when it was
+    produced cannot show that a regeneration actually happened, and a default would
+    let a record carrying no timestamp load as though it carried one (D18 — a field
+    whose absence changes a number's meaning has no default). It is written as
+    ISO-8601 UTC to the second, and it is declared run-varying in
+    `RUN_VARYING_FIELDS` alongside `latency_ms`; those two are the only fields a
+    regeneration over identical bytes may move.
+    """
+
     corpus_manifest: str
+    run_utc: str  # ISO-8601 UTC, seconds — run-varying by declaration
     n_cases: int
     skipped_cases: dict[str, str]  # doi -> reason (e.g. twin not a corpus member: no valid run)
     aggregate_relevant: int
@@ -216,6 +243,8 @@ def run_ablation(
             )
     return AblationReport(
         corpus_manifest=str(manifest_rel),
+        # Stamped at the END of the run, so the value names a run that completed.
+        run_utc=datetime.now(UTC).isoformat(timespec="seconds"),
         n_cases=len(cases),
         skipped_cases=skipped,
         aggregate_relevant=sum(len(c.relevant_docs) for c in cases),

@@ -25,6 +25,8 @@ anything, whatever their numbers say.
 
 from __future__ import annotations
 
+import json
+import re
 import time
 from pathlib import Path
 
@@ -33,6 +35,7 @@ import pytest
 
 from peerpanel.embeddings import store
 from peerpanel.embeddings.pipeline import ci_chunks
+from peerpanel.graph import build as build_module
 from peerpanel.graph.build import build_graph
 from peerpanel.graph.extract import ChunkExtraction, extract_many
 from peerpanel.graph.pipeline import chunks_for
@@ -195,3 +198,99 @@ class TestRunGraphRebuild:
         assert set(a.nodes()) == set(b.nodes())
         assert a.number_of_edges() == b.number_of_edges()
         assert aa == bb  # seeded Leiden
+
+
+def _demo_graph() -> nx.Graph[str]:
+    """The demo graph, from the COMMITTED extraction fixtures only.
+
+    `build_run_graph` cannot be used here: it re-chunks `corpus/demo/`, which is
+    gitignored and fetched, so the recipe LIMITATIONS.md used to give raised
+    `DemoCorpusMissing` from a clean clone (round-3 report-2 F5). Merging the committed
+    per-chunk records is a pure aggregation and reproduces `build-stats-demo.json`
+    exactly — that is the offline road, and it is the one the bindings take.
+    """
+    records = [
+        ChunkExtraction.model_validate_json(path.read_text())
+        for path in sorted((ROOT / "fixtures" / "extraction" / "demo").glob("*.json"))
+    ]
+    assert records, "no committed demo extractions — this binding would check nothing"
+    return build_graph(records)
+
+
+class TestTheBuildRecordsAreThisCodesOutput:
+    """The published index numbers, recomputed from the committed extractions.
+
+    `results/build-stats-*.json` is quoted in RESULTS.md's index table, in the README
+    and in LIMITATIONS.md. Nothing compared it with what this code produces from the
+    fixtures beside it, so a rebuild that changed the graph would have left three
+    documents describing the old one.
+    """
+
+    def test_ci_graph_stats_match_the_build_record(self) -> None:
+        record = json.loads((ROOT / "results" / "build-stats-ci.json").read_text())
+        graph, assignment, withheld = build_run_graph(ROOT, "ci", set())
+        assert withheld == 0
+        assert graph.number_of_nodes() == record["nodes"], (
+            f"the CI extractions merge to {graph.number_of_nodes()} entities; "
+            f"build-stats-ci.json says {record['nodes']}"
+        )
+        assert graph.number_of_edges() == record["edges"], (
+            f"the CI extractions merge to {graph.number_of_edges()} edges; "
+            f"build-stats-ci.json says {record['edges']}"
+        )
+        communities = len(set(assignment.values()))
+        published = record["communities_per_resolution"]["1.0"]
+        assert communities == published, (
+            f"seeded Leiden finds {communities} communities at resolution 1.0; "
+            f"build-stats-ci.json says {published}"
+        )
+
+    def test_relation_share_docstring_is_bound(self) -> None:
+        """`graph/build.py`'s own docstring says how much of the graph is bare
+        adjacency — the sentence LIMITATIONS.md and the README both lean on. It was
+        written against a pre-D19 index and drifted by four thousand edges with nothing
+        to notice, because a docstring is prose that no test reads. This one does.
+        """
+        graph = _demo_graph()
+        total = graph.number_of_edges()
+        co_only = sum(1 for _a, _b, at in graph.edges(data=True) if not at["predicates"])
+        with_relation = total - co_only
+        share = 100 * co_only / total
+        measured = (
+            f"measured: {share:.1f}% of edges ({co_only:,} of {total:,}) are co-mention "
+            f"only, {with_relation:,} carry an extracted relation"
+        )
+        doc = build_module.__doc__ or ""
+
+        percent = re.search(r"(\d+(?:\.\d+)?)\s*%\s+of edges", doc)
+        assert percent, f"build.py's docstring states no co-mention share — {measured}"
+        decimals = len(percent.group(1).split(".")[1]) if "." in percent.group(1) else 0
+        assert float(percent.group(1)) == pytest.approx(share, abs=0.5 * 10.0**-decimals + 1e-9), (
+            f"build.py says {percent.group(1)}% of edges are co-mention only; {measured}"
+        )
+
+        pair = re.search(r"\(([\d,]+) of ([\d,]+)\)", doc)
+        assert pair, f"build.py's docstring states no edge counts — {measured}"
+        assert [int(g.replace(",", "")) for g in pair.groups()] == [co_only, total], (
+            f"build.py says {pair.group(0)}; {measured}"
+        )
+
+        relations = re.search(r"([\d,]+) carry an extracted relation", doc)
+        assert relations, f"build.py's docstring states no relation count — {measured}"
+        assert int(relations.group(1).replace(",", "")) == with_relation, (
+            f"build.py says {relations.group(1)} edges carry a relation; {measured}"
+        )
+
+    def test_the_demo_merge_reproduces_the_published_index(self) -> None:
+        """The offline road LIMITATIONS.md now names, proven to arrive where it claims:
+        merging the committed demo extractions gives the published graph exactly."""
+        record = json.loads((ROOT / "results" / "build-stats-demo.json").read_text())
+        graph = _demo_graph()
+        assert (graph.number_of_nodes(), graph.number_of_edges()) == (
+            record["nodes"],
+            record["edges"],
+        ), (
+            f"the committed demo extractions merge to {graph.number_of_nodes()} entities "
+            f"and {graph.number_of_edges()} edges; build-stats-demo.json says "
+            f"{record['nodes']} and {record['edges']}"
+        )

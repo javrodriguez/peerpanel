@@ -1,0 +1,38 @@
+{
+  "_what": "The FDA draft guidance this repository's CREDIBILITY.md maps onto, saved with the provenance a reader needs to check that the page quotes the real document.",
+  "title": "Considerations for the Use of Artificial Intelligence To Support Regulatory Decision-Making for Drug and Biological Products",
+  "issuer": "U.S. Food and Drug Administration",
+  "guidance_date": "January 2025",
+  "docket": "FDA-2024-D-4689",
+  "url": "https://www.fda.gov/media/184830/download",
+  "landing_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considerations-use-artificial-intelligence-support-regulatory-decision-making-drug-and-biological",
+  "fetched_utc": "2026-09-04T02:38:53Z",
+  "landing_checked_utc": "2026-09-04T02:39:59Z",
+  "status_at_fetch": "Draft Guidance",
+  "status_block_at_fetch": [
+    "Draft Guidance for Industry and Other Interested Parties",
+    "January 2025",
+    "Draft",
+    "Level 1 Guidance",
+    "Not for implementation. Contains non-binding recommendations."
+  ],
+  "_status_note": "Read from the landing page at landing_checked_utc, verbatim. The page still carried the draft status on that read; if it ever reads Final, this record is re-fetched rather than edited.",
+  "file_pdf": "docs/fda/considerations-ai-regulatory-decision-making-draft-2025-01.pdf",
+  "file_txt": "docs/fda/considerations-ai-regulatory-decision-making-draft-2025-01.txt",
+  "sha256_pdf": "62352ed0fc17c07a670ed1381a8cdb1173f1c8988fb6e066da270e7cc72d4aaa",
+  "sha256_txt": "50a97a941e7643d6d1a6c7fbcf1a7d26bd8928745389e398e2f360895263cf43",
+  "extraction_command": "pdftotext -layout docs/fda/considerations-ai-regulatory-decision-making-draft-2025-01.pdf docs/fda/considerations-ai-regulatory-decision-making-draft-2025-01.txt",
+  "extraction_tool": "pdftotext version 26.08.0 (poppler)",
+  "_extraction_note": "sha256_txt is the sha256 of the text this exact poppler build produced; another build may lay the page out differently, so the PDF's own sha256 is the pin that matters and the text is the searchable copy beside it.",
+  "public_domain": "17 U.S.C. §105 — a work of the United States Government",
+  "steps": [
+    "Step 1: Define the Question of Interest",
+    "Step 2: Define the Context of Use for the AI Model",
+    "Step 3: Assess the AI Model Risk",
+    "Step 4: Develop a Plan to Establish AI Model Credibility Within the Context of Use",
+    "Step 5: Execute the Plan",
+    "Step 6: Document the Results of the Credibility Assessment Plan and Discuss Deviations From the Plan",
+    "Step 7: Determine the Adequacy of the AI Model for the Context of Use"
+  ],
+  "_steps_note": "The seven step headings of the risk-based credibility assessment framework, extracted from the saved text (never retyped); CREDIBILITY.md uses these strings as its section headings and tests/test_credibility_map.py compares them back to the saved text."
+}
