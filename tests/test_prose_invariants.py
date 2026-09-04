@@ -30,7 +30,11 @@ _SPEC = json.loads((Path(__file__).parent / "denied_claims.json").read_text())
 DENIED: dict[str, str] = _SPEC["denied"]
 DENIED_EVERYWHERE: set[str] = set(_SPEC["denied_everywhere"])
 
-AUTHORED_SUFFIXES = {".md", ".py", ".toml", ".yml", ".yaml"}
+# `.diff` is here because `prepared-diffs/` holds authored prose in a diff's clothing:
+# staged cross-link lines that will one day appear on two public pages. A deny-listed
+# claim is no less a claim for sitting behind a `+`, and the flip is exactly the moment
+# nobody would re-read them.
+AUTHORED_SUFFIXES = {".md", ".py", ".toml", ".yml", ".yaml", ".diff"}
 # Directories whose contents are CAPTURED rather than written: model output under
 # `results/`, and under `docs/fda/` a federal guidance document saved verbatim with its
 # sha256. Neither may be edited to pass a sweep — the only way to "fix" a word in a

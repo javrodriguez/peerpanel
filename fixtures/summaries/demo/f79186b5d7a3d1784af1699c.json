@@ -144,6 +144,6 @@
   "γ-carotene"
  ],
  "title": "Gene Expression and Enzyme Function in Rhodotorula Species",
- "summary": "This cluster focuses on the gene expression and enzyme function in Rhodotorula species, particularly R. toruloides CCT7815. Genes crtE, crtI, and crtYB are associated with this organism, and are involved in various processes, including overexpression of RtGGA. Other genes, such as pADH2 and GAPDH, are also linked to R. toruloides CCT7815. The cluster also includes various methods and tools, such as GGA, RtGGA, and Biochem, which are used in the analysis of gene expression and enzyme function.",
+ "summary": "This cluster focuses on the gene expression and enzyme function in Rhodotorula species, particularly R. toruloides CCT7815. Genes crtE, crtI, and crtYB are associated with this organism, and are expressed in the presence of SBY94. These genes are also overexpressed in RtGGA, a method or tool, and use GGA, another method or tool. The enzyme GAPDH is also associated with R. toruloides CCT7815. Additionally, the dataset NAT is published in Commun, and the method Biochem is influenced by Siri M Herrera M Moyano AJ Celej MS. The unified open access dataset is also mentioned, but its relation to the other entities is unclear.",
  "truncated": false
 }

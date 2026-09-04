@@ -1,2 +1,3 @@
 resolution 1.0: 79 community reports
 graph summaries: 79 reports -> /Users/rodrij92/glitch/workspaces/graphrag-review/artifacts/demo/summaries.json
+graph summaries: published -> /Users/rodrij92/glitch/workspaces/graphrag-review/results/summaries-stats-demo.json

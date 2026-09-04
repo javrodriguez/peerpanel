@@ -1,0 +1,18 @@
+Target:  javrodriguez/genomics-agentic-research-system — README.md
+Cut against head c0c5f47f1aed6839e2bdc6e6ac50e2a668e7825f (read 2026-09-04).
+Applied only inside the flip's yes (member gate 2); the wording is Javier's to
+approve or replace (member gate 4).
+
+Placement: the last bullet of the "Evidence, if you want it before the design:"
+list, after the cold-clone test line. That list is where a reader already goes
+for evidence, and this repository is a second piece of it rather than a new
+claim about GARS.
+
+--- a/README.md
++++ b/README.md
+@@
+ - `python3 tests/run_tests.py` and `python3 tests/check_contracts.py` run green from a cold clone
+   with no setup, and in CI on every push.
++- [PeerPanel](https://github.com/javrodriguez/peerpanel) — a separate demonstration system that
++  evaluates its own multi-agent review pipeline against a single-agent baseline and publishes the
++  result the record shows, including where the panel loses.

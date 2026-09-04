@@ -1,0 +1,16 @@
+{
+ "_what": "The adversarial evaluation loop that judges this repository, summarised. Three fresh evaluators per round, each given a clean clone of one named commit and the same pinned prompt, none of them shown the builder's work, the other evaluators, or any prior round. A round is clean only when all three reports end in the literal token CLEAN.",
+ "_why_this_file_exists": "The README's first screen states what this loop has found. The evaluators' reports are the project's private record (see `record` below), so that sentence cannot quote them; it reports counts instead, and counts nobody can check are worth nothing. These are the numbers it reads, and the pin below is what makes the rounds comparable to each other.",
+ "evaluator_sha256": "6e1bcda63fe82901ec75e0d465f102a86f67ccaee47f1de70f567da7e1551cd0",
+ "findings_by_round": [
+  21,
+  30,
+  27
+ ],
+ "record": "private",
+ "_record_note": "The reports and their convergence logs live in a nested git repository that is never part of this repo and never travels with it. Kept private on purpose: an evaluator that expects to be published writes for an audience, and the value of the round is that it does not.",
+ "rounds_completed": 3,
+ "rounds_clean": 0,
+ "_streak_note": "A finding count is not a defect count: findings overlap across the three independent reports of a round, and a round's number is the sum of what each evaluator filed, not a deduplicated total.",
+ "cap": 8
+}

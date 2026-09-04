@@ -383,11 +383,20 @@
   }
  },
  "total_tokens": 226585,
- "wall_s": 1654.4,
+ "wall_s": 1328.7,
  "model_calls": {
   "calls": 46,
   "largest_prompt_tokens": 7317,
   "smallest_context": 4096,
-  "smallest_headroom_tokens": 3695
+  "smallest_headroom_tokens": 3695,
+  "window_sources": [
+   "options.num_ctx: the window this wire configured for the call (ollama-native)"
+  ]
+ },
+ "models": {
+  "methods-statistics": "ollama-native:llama3.1:8b",
+  "prior-work-novelty": "ollama-native:qwen2:7b",
+  "verifier": "ollama-native:llama3.1:8b",
+  "converger": "ollama-native:qwen2:7b"
  }
 }

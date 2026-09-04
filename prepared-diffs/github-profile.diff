@@ -1,0 +1,29 @@
+Target:  javrodriguez/javrodriguez — README.md (the GitHub profile page)
+Cut against the profile README read 2026-09-04.
+Applied only inside the flip's yes (member gate 2); every sentence below has
+Javier as its subject, so the wording is his to approve or replace verbatim
+(member gate 4). Nothing here is published until he says so.
+
+Placement: a new bullet under "📄 Research frameworks", or — if he would rather
+lead with the evaluation work — as its own line directly beneath the Flagship
+line. Both placements are offered; the diff below shows the second, because the
+profile's opening currently names orchestration before measurement.
+
+--- a/README.md
++++ b/README.md
+@@
+ **🔭 Flagship:** [GARS — Genomics Agentic Research System](https://github.com/javrodriguez/genomics-agentic-research-system) — reproducible bioinformatics workflows through an LLM agent on HPC · **[▶ try the interactive demo](https://gars.javrodriguez.dev/)** — recorded real runs, playable human gate, in the browser.
+
++**🔬 Evaluating the systems:** [PeerPanel](https://github.com/javrodriguez/peerpanel) — a multi-agent scientific-review system built to be measured: planted-error detection graded by a committed rule with its own negative control, per-call run conditions on every record, and the headline published as the record shows it, a loss included.
++
+ **📄 Research frameworks (manuscripts in preparation):**
+
+ALTERNATIVE WORDING for the same line, if he prefers the report's framing of the
+durable skill over the project name:
+
++**🔬 Evaluation and validation:** [PeerPanel](https://github.com/javrodriguez/peerpanel) — building AI analysis systems that can tell when they are wrong: deterministic graders, published pass rates per model, run conditions on every record, and results published whichever way they fall.
+
+NOT DRAFTED, deliberately: any change to the profile's opening sentence
+("Senior Bioinformatics Engineer at NYU Langone…"). That sentence is about his
+employment and his own positioning, and rewriting it is his call to make from
+scratch rather than mine to propose.

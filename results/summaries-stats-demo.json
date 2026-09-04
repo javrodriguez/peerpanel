@@ -1,0 +1,20 @@
+{
+ "corpus": "demo",
+ "model_calls": {
+  "calls": 79,
+  "largest_prompt_tokens": 1030,
+  "smallest_context": 4096,
+  "smallest_headroom_tokens": 3066,
+  "window_sources": [
+   "ollama ps context_length: the server's loaded window, read on this wire before each call (ollama-openai)"
+  ]
+ },
+ "provider": "ollama-openai:llama3.1:8b",
+ "reports": 79,
+ "reports_from_cache": 0,
+ "reports_generated": 79,
+ "reports_truncated": 0,
+ "resolutions": [
+  "1.0"
+ ]
+}

@@ -285,10 +285,26 @@ class TestTheCommunityReportLayerPublishesItsRunConditions:
         assert record["reports"] > 0, f"{name}: a record of no reports proves nothing"
         where = f"{name}:model_calls"
         stats = _call_stats(where, record["model_calls"])
-        assert stats.calls >= record["reports"], (
-            f"{name}: {stats.calls} call(s) for {record['reports']} report(s) — a report "
-            "served from the committed cache makes no call, so this is a warm run and the "
-            "committed record must be a cold one"
+        # A cold run is NOT "one call per report". The report cache is keyed by a
+        # community's content and not by its resolution, so the same community recurs
+        # across Leiden levels and a run beginning with an empty cache still reads back
+        # entries it wrote itself minutes earlier: the CI record is 110 reports from 75
+        # distinct communities and 75 calls. The record therefore says how each report
+        # was produced, and the two counts must account for every one of them.
+        generated, from_cache = record["reports_generated"], record["reports_from_cache"]
+        assert generated + from_cache == record["reports"], (
+            f"{name}: {generated} generated + {from_cache} from cache != "
+            f"{record['reports']} reports — the record cannot say how it was produced"
+        )
+        assert stats.calls == generated, (
+            f"{name}: {stats.calls} call(s) for {generated} generated report(s) — each "
+            "report this run generated is exactly one call on this layer"
+        )
+        # What a warm run looks like, and what disqualifies a committed record: every
+        # report read from a cache that was already on disk, so nothing was measured.
+        assert generated > 0, (
+            f"{name}: every report came from the cache, so this run measured nothing — "
+            "empty fixtures/summaries/<corpus> and run the target again"
         )
         assert_run_conditions(stats, where)
         assert stats.window_sources == derive_window_sources(record)["model_calls"][

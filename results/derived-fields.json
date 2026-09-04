@@ -1,4 +1,19 @@
 {
  "_rule": "every entry names a field written by derivation, not measurement; tests/test_run_conditions.py proves each equals the emitter's own derivation",
- "records": {}
+ "records": {
+  "build-stats-ci.json": {
+   "derived_from": "provider",
+   "derived_on": "2026-09-04",
+   "field": "model_calls.window_sources",
+   "re_measured": false,
+   "regenerate": "make graph after emptying fixtures/extraction/ci"
+  },
+  "build-stats-demo.json": {
+   "derived_from": "provider",
+   "derived_on": "2026-09-04",
+   "field": "model_calls.window_sources",
+   "re_measured": false,
+   "regenerate": "make demo-index"
+  }
+ }
 }

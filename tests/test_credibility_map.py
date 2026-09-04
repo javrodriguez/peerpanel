@@ -254,7 +254,16 @@ class TestTheReadinessRuleHolds:
     def test_a_verdict_sentence_would_be_caught(self) -> None:
         assert _readiness_offenders("This system is validated for its context of use.")
         assert _readiness_offenders("This repository is compliant with the framework.")
-        assert _readiness_offenders("The pipeline is production-ready.")
+        # The readiness vocabulary and the deny list overlap, and a sentence in the
+        # overlap is the worst one this page could carry. The term is READ from
+        # `denied_claims.json` rather than typed, because this file is itself swept as
+        # authored prose: a control that spells the claim out turns the file enforcing
+        # the rule into a file that makes the claim — which is the whole reason those
+        # terms live in a data file. Every overlapping term is checked, not one.
+        readiness_denied = [term for term in sorted(DENIED_TERMS) if READINESS.search(term)]
+        assert readiness_denied, "no denied term uses the readiness vocabulary"
+        for term in readiness_denied:
+            assert _readiness_offenders(f"The pipeline is {term}.")
         assert not _readiness_offenders("This system is not validated for any context of use.")
 
 

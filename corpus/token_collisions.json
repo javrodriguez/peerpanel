@@ -1,0 +1,20 @@
+{
+ "corpus": "demo",
+ "documents_scanned": 68,
+ "generated_from": "make corpus + plant_errors(SEED)",
+ "subjects": {
+  "caprin-heterochromatin": {
+   "Dcr2": [],
+   "Hollingsworth": [],
+   "decreased accumulation of": []
+  },
+  "met17-auxotroph": {
+   "Hollingsworth": [],
+   "MET18": [],
+   "increased glutathione levels": []
+  },
+  "oleaginous-yeast-biopolymer": {
+   "Hollingsworth": []
+  }
+ }
+}

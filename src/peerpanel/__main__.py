@@ -185,6 +185,7 @@ def _graph(args: list[str]) -> int:
         from peerpanel.graph.build import load_graph
         from peerpanel.graph.summaries import (
             SUMMARY_MODEL,
+            SummaryRunStats,
             summarise_communities,
             write_cache_readme,
         )
@@ -207,12 +208,19 @@ def _graph(args: list[str]) -> int:
         )
         all_reports: list[dict[str, object]] = []
         ledger = TokenLedger()
+        run_stats = SummaryRunStats()
         for resolution, assignment in communities.items():
             if resolution not in wanted:
                 continue
             typed = {n: int(c) for n, c in assignment.items()}
             reports = summarise_communities(
-                graph, typed, float(resolution), provider, cache_dir=cache, ledger=ledger
+                graph,
+                typed,
+                float(resolution),
+                provider,
+                cache_dir=cache,
+                ledger=ledger,
+                stats=run_stats,
             )
             all_reports.extend(r.model_dump() for r in reports)
             print(f"resolution {resolution}: {len(reports)} community reports")
@@ -229,7 +237,15 @@ def _graph(args: list[str]) -> int:
                 "resolutions": sorted(wanted, key=float),
                 "reports": len(all_reports),
                 "reports_truncated": truncated,
-                # calls THIS run made; a report served from the committed cache makes none
+                # How the reports were produced, so a reader can tell a cold run from a
+                # warm one without leaving the record. These two always sum to `reports`.
+                # `from_cache` is not only the committed cache: the cache is keyed by a
+                # community's content and not by its resolution, so the same community
+                # recurs across Leiden levels and a run that began with an empty cache
+                # still reads back entries it wrote itself minutes earlier.
+                "reports_generated": run_stats.generated,
+                "reports_from_cache": run_stats.from_cache,
+                # calls THIS run made; a report read from cache makes none
                 "model_calls": CallStats.from_ledger(ledger).model_dump(),
             }
             stats_out.parent.mkdir(parents=True, exist_ok=True)

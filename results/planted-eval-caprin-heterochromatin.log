@@ -1,15 +1,18 @@
 Planted-error detection · caprin-heterochromatin.txt · 3 errors
   exclusion: subject held out of the corpus entirely — nothing to withhold
+  rule: assertion-v1 — 'asserted' IS the headline, even at 0; 'named token' is the labelled upper bound
 
-  system                         detected    tokens   wall_s  detail
-  panel                           1/3        240852   1743.3  2 of 2 reviewers returned findings · 20 claims verified · 0 deterministic findings
-  single-agent-cot-sc             2/3         36062    339.4  12 of 12 self-consistency samples parsed
+  system                              asserted   named token    tokens   wall_s  detail
+  panel                                    0/3           1/3    240852   1354.7  2 of 2 reviewers returned findings · 20 claims verified · 0 deterministic findings
+  single-agent-cot-sc:llama3.1:8b          0/3           1/3     36669    349.7  12 of 12 self-consistency samples parsed
+  single-agent-cot-sc:qwen2:7b             0/3           2/3     37773    184.4  12 of 12 self-consistency samples parsed
 
-  panel caught: gene_symbol_swap
-  single-agent-cot-sc caught: gene_symbol_swap, effect_direction_flip
+  panel asserted: (none) · named the token: gene_symbol_swap
+  single-agent-cot-sc:llama3.1:8b asserted: (none) · named the token: effect_direction_flip
+  single-agent-cot-sc:qwen2:7b asserted: (none) · named the token: gene_symbol_swap, effect_direction_flip
 
   not planted: impossible_percentage (no candidate site inside the reviewed window)
   not planted: impossible_pvalue (no candidate site inside the reviewed window)
 
-  Scored over ASSERTION channels only — reviewer findings, REFUTES verdicts and deterministic-lens findings for the panel; model-authored findings for the baseline. Restatements of the manuscript and the converger's prose are excluded: counting them would credit the panel for quoting a planted error, or for agreeing with it. Detection requires a finding to NAME the planted token, which under-credits a described-but-unquoted catch — read the numbers as a floor. Both arms are asked to quote the text each finding is about and both are scored on finding text + quote. The subject is held out of this corpus entirely, so neither arm had anything to withhold and no answer key existed for either. Token spend: panel 240852, baseline 36062 (15% of the panel's). The baseline hit its sampling ceiling before matching the panel, so this is NOT an equal-compute comparison — the baseline had less.
+  Scored over the channels an arm AUTHORS — reviewer findings, REFUTES verdicts and deterministic-lens findings for the panel; model-authored findings for the baseline — and, within a finding, over its own prose only. The manuscript text a finding quotes is committed beside it but never scored: the planted token sits in the manuscript, so scoring the quote credited an arm for reproducing the perturbed sentence, which is what every credited detection in the first committed records turned out to be. THE HEADLINE IS 'detected' under rule 'assertion-v1': some sentence of the finding's own prose both names the planted token and asserts that something is wrong, with a negation in the five words before the assertion cue disqualifying it. It is the published number even when it is 0. Beside it, 'named the token' is the older substring rule, published as a LABELLED UPPER BOUND and never instead of the headline: every credited assertion also named the token, so the gap between the two counts is restatement. Both rules err in stated directions — the assertion rule does not credit a finding that asserts the defect without naming the token, and does credit a cue used about something else in the same sentence as the token; the substring rule credits a finding that names the token while asserting nothing. Every string either rule ran over is committed in this record under finding_texts; read them. The panel row is a two-family mixture — its record names the model that served each role — while each single-agent row is ONE named model run alone under the same protocol, so its rate is that model's rate and nobody else's. The subject is held out of this corpus entirely, so no arm had anything to withhold and no answer key existed for any of them. Token spend: panel 240852; single-agent-cot-sc:llama3.1:8b 36669 (15% of the panel's) — this arm hit its sampling ceiling before matching the panel, so it is NOT an equal-compute comparison: the baseline had less; single-agent-cot-sc:qwen2:7b 37773 (16% of the panel's) — this arm hit its sampling ceiling before matching the panel, so it is NOT an equal-compute comparison: the baseline had less.
 eval: full report -> /Users/rodrij92/glitch/workspaces/graphrag-review/results/planted-eval-caprin-heterochromatin.json

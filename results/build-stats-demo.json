@@ -13,7 +13,10 @@
   "calls": 1077,
   "largest_prompt_tokens": 7666,
   "smallest_context": 4096,
-  "smallest_headroom_tokens": 2613
+  "smallest_headroom_tokens": 2613,
+  "window_sources": [
+   "options.num_ctx: the window this wire configured for the call (ollama-native)"
+  ]
  },
  "nodes": 7697,
  "provider": "ollama-native:llama3.1:8b",
