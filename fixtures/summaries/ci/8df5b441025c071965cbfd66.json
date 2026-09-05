@@ -42,6 +42,6 @@
   "ρ0 cells"
  ],
  "title": "Metabolomics Tools and Methods Cluster",
- "summary": "This cluster is centered around various tools and methods used in metabolomics, a field of study that focuses on the comprehensive analysis of small molecules within cells. The cluster includes databases such as BioCyc and ChEBI, which are used by tools like Compound Discoverer and MetaboAnalyst. Additionally, the cluster contains various separation and analysis methods, including HILIC, RP separation, and HRMS, which are used to study ionization potentials and generate MS1, MS2, and MS3 spectra. The cluster also includes organisms such as ρ+ cells and ρ0 cells, which are compared to each other using the ρ+ and ρ0 methods. Overall, this cluster highlights the various tools and methods used in metabolomics research.",
+ "summary": "This cluster is centered around various tools and methods used in metabolomics, a field of study that focuses on the comprehensive analysis of small molecules within cells. The cluster includes databases such as BioCyc and ChEBI, which are used by tools like Compound Discoverer and MetaboAnalyst. Additionally, the cluster contains various separation and analysis methods, including HILIC, RP separation, and HRMS, which are used to study ionization potentials and generate MS1, MS2, and MS3 spectra. The cluster also includes organism-related entities, such as ρ+ and ρ0 cells, which are used in comparative studies.",
  "truncated": false
 }

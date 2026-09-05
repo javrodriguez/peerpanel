@@ -4,6 +4,10 @@ PeerPanel is a demonstration system. This page is the part of the repo most wort
 carefully: it says what the design does not do, what the numbers do not prove, and which known
 failure modes of multi-agent LLM review it mitigates, measures, or simply carries.
 
+Every figure this page measures about this system is recomputed from committed bytes by `tests/test_limitations_numbers.py` or `tests/test_run_graph.py`, so a number that drifts from the measurement fails the suite rather than sitting here unread.
+The demo-corpus figures are recomputed offline, by merging the per-chunk extractions in `fixtures/extraction/demo`, with no network, no model and no fetched corpus text.
+The percentages in the failure-mode table further down are other people's published measurements, cited to their source.
+
 ## Scope
 
 **What this is for:** a pre-submission self-check on manuscripts that are already public, run
@@ -54,21 +58,43 @@ manuscripts to language models, and this system would do exactly that.
   demonstrate it by doing the filtering instead and showing those 48 edges keep their weight. Chunk-level retrieval and
   `graphrag-local` therefore carry no residue at all. Community summary *text*, however, is a
   model artifact generated once over the whole corpus, so `graphrag-global` — which ranks over
-  that text — can still be influenced by a document it may not retrieve. **Measured:** on the MET17
-  run, 101 graph entities exist only because of the excluded twin, and 96 of them appear in
-  community reports at the resolution retrieval reads. They are mostly the twin's own apparatus and
-  acknowledged colleagues — *"Biotek Synergy MX plate reader"*, *"Costar 3370 96-well plate"*,
-  personal names — so its fingerprint is in the summary text that ranking scores, even though not
-  one of its chunks can be retrieved. Reproduce with
-  `build_run_graph(root, "demo", {"PMC10729969"})` against the unexcluded graph and intersect the
-  removed entities with `artifacts/demo/summaries.json`. Regenerating summaries per run would cost
-  roughly an hour of local model time per manuscript and is not done; the LLM face of global
-  search (`answer()`, which would put that prose in front of a reviewer) instead refuses to run
-  when anything is excluded.
+  that text — can still be influenced by a document it may not retrieve.
+  **Measured on the committed bytes:** on the MET17 run, 101 graph entities exist only because of the excluded twin.
+  All 101 of them appear in the community reports' `member_names` at the resolution retrieval reads, which is the honest measure of this residue: `graphrag-global` tokenises `title`, `summary` and `member_names` together, so membership in that list is what carries a twin-only entity into the scores the rung ranks by.
+  At most 5 of the 101 are named in a report's own title or summary prose — a substring test, and therefore an over-count: two of the five (`age`, `cre`) match only inside ordinary words such as *management* and *creation*, while `academic press`, `arganda-carreras i` and `longair m` are named outright.
+  The figure published until this commit, 96, was 101 minus those five, stated with its sense inverted: in the text that ranking actually reads the residue is complete rather than partial, so the page understated the weakness it exists to disclose.
+  The 101 are mostly the twin's own apparatus and acknowledged colleagues — "Costar 3370 96-well plate", "Teleshake magnetic shaking device", "Nikon AZ100 upright microscope", "Maitreya Dunham" — so its fingerprint is in the summary text that ranking scores, even though not one of its chunks can be retrieved.
+  Reproduce it from a clean clone, with no network and no model, by merging the committed per-chunk extractions rather than the fetched corpus text:
+
+  ```python
+  import json, pathlib
+  from peerpanel.graph.build import build_graph, _norm
+  from peerpanel.graph.models import ChunkExtraction
+
+  root = pathlib.Path('.')
+  records = [ChunkExtraction.model_validate_json(f.read_text())
+             for f in sorted((root / 'fixtures/extraction/demo').glob('*.json'))]
+  full = build_graph(records)
+  without_twin = build_graph([r for r in records if not r.chunk_id.startswith('PMC10729969:')])
+  twin_only = set(full) - set(without_twin)
+  members, summary_text = set(), []
+  for path in sorted((root / 'fixtures/summaries/demo').glob('*.json')):
+      report = json.loads(path.read_text())
+      members |= {_norm(name) for name in report['member_names']}
+      summary_text.append((report['title'] + ' ' + report['summary']).lower())
+  blob = ' '.join(summary_text)
+  print(len(twin_only), len(twin_only & members), sum(1 for e in twin_only if e in blob))
+  ```
+
+  It prints `101 101 5`, and the same merge reproduces the published index exactly (7,697 entities, 63,130 edges — `results/build-stats-demo.json`).
+  The recipe this page gave until this commit ran `build_run_graph` over the demo corpus, which raises `DemoCorpusMissing` in a clean clone because that corpus is fetched, so the figure it claimed to reproduce could not be checked by anyone who had not already run the fetch.
+  Regenerating summaries per run would cost roughly an hour of local model time per manuscript and is not done; the LLM face of global search (`answer()`, which would put that summary text in front of a reviewer) instead refuses to run when anything is excluded.
 - **The graph is mostly adjacency, not stated relations.** An extracted relation weighs four times a
   bare co-mention per edge, but 93.1% of the demo graph's edges (58,797 of 63,130) are co-mention
-  only. When `graphrag-local` reaches a document lexical matching misses, it is usually because two
+  only, and just 4,333 edges carry a relation the model actually asserted.
+  When `graphrag-local` reaches a document lexical matching misses, it is usually because two
   entities appeared in the same chunk — not because the model asserted a link between them.
+  All three figures come from the same offline merge as the residue above, and `tests/test_run_graph.py` holds `graph/build.py`'s own docstring to the same measurement.
 - **No entity resolution.** Nodes are case-normalised strings. `MET17`, `Met17` and `met17` merge;
   `S. cerevisiae` and `Saccharomyces cerevisiae` do not, and neither do a protein and the gene that
   encodes it. The entity count is therefore an upper bound on distinct concepts.
@@ -80,15 +106,14 @@ manuscripts to language models, and this system would do exactly that.
   with cosine similarity; the panel's reviewer runs it with the embedding blend off. The retrieval
   numbers above therefore describe a configuration the panel does not use, and the two should not
   be read as measuring the same component.
-- **Attribution covers the committed corpus, not the fetched one.** `CITATIONS.md` carries per-
-  document TASL attribution for the 15 documents committed to this repository. The 68-document demo
-  corpus is fetched at run time and its attribution is generated then, into
-  `corpus/DEMO_CITATIONS.md`, so a reader of the repository alone sees attribution for 15 of the 83
-  documents the project touches.
-- **No random-selection floor.** Roughly 42% of the demo corpus is relevant to one query or another
-  by construction, so a rung that returned documents at random would not score zero — and nothing
-  here measures what it *would* score. Every reported rate should be read against that missing
-  baseline rather than against zero.
+- **Attribution travels with the repository; the corpus text does not.** `CITATIONS.md` carries per-document TASL attribution for the 15 documents committed to this repository, and `corpus/DEMO_CITATIONS.md` — tracked at this commit — carries the same for all 68 pinned documents of the demo corpus, with title, authors, source, licence, changes and md5 for each.
+  A reader of the repository alone therefore sees attribution for 83 of 83 documents the project touches.
+  What that reader does not get offline is the corpus TEXT: the demo documents are fetched by `make corpus` against the pinned md5s, and only their attribution is committed.
+  Until this commit this paragraph said 15 of 83: it was written before `corpus/DEMO_CITATIONS.md` was tracked, and it left the page understating — in the paragraph about licence compliance — work the repository had already done.
+- **No random-selection floor.** 52.9% of the demo corpus is relevant to one query or another by construction — the two query manuscripts' own cited sets, intersected with the pinned manifest and unioned, cover 36 of 68 documents — so a rung that returned documents at random would not score zero, and nothing here measures what it *would* score.
+  Every reported rate should be read against that missing baseline rather than against zero.
+  Recompute the share from `corpus/ground_truth.json` and `corpus/demo.manifest.json`, both committed.
+  The share published until this commit, 42%, was one manuscript's own cited share against a single run's 67-document index rather than the union this sentence describes, and it understated the missing baseline by eleven points.
 - **A stale corpus, deliberately.** The corpus is a pinned snapshot with per-document md5s, not a
   live search. The demo therefore re-runs identically next year and cannot see anything published
   after the snapshot. That trade is the point: reproducible verdicts over current ones.

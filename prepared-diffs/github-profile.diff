@@ -23,7 +23,8 @@ durable skill over the project name:
 
 +**🔬 Evaluation and validation:** [PeerPanel](https://github.com/javrodriguez/peerpanel) — building AI analysis systems that can tell when they are wrong: deterministic graders, published pass rates per model, run conditions on every record, and results published whichever way they fall.
 
-NOT DRAFTED, deliberately: any change to the profile's opening sentence
-("Senior Bioinformatics Engineer at NYU Langone…"). That sentence is about his
-employment and his own positioning, and rewriting it is his call to make from
-scratch rather than mine to propose.
+NOT DRAFTED, deliberately: any change to the profile's opening sentence — the one
+naming his current role. That sentence is about his employment and his own
+positioning, and rewriting it is his call to make from scratch rather than mine to
+propose. It is referred to here by position rather than quoted, so that nothing about
+his employer enters a repository that becomes public at the flip.

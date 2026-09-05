@@ -1,0 +1,22 @@
+{
+ "corpus": "ci",
+ "model_calls": {
+  "calls": 75,
+  "largest_prompt_tokens": 903,
+  "smallest_context": 4096,
+  "smallest_headroom_tokens": 3193,
+  "window_sources": [
+   "ollama ps context_length: the server's loaded window, read on this wire before each call (ollama-openai)"
+  ]
+ },
+ "provider": "ollama-openai:llama3.1:8b",
+ "reports": 110,
+ "reports_from_cache": 35,
+ "reports_generated": 75,
+ "reports_truncated": 0,
+ "resolutions": [
+  "0.3",
+  "1.0",
+  "3.0"
+ ]
+}

@@ -74,12 +74,25 @@ So the exact thing is affordable and the approximation was never needed: `build_
 **The residual is now narrow and accurately priced:** community summary TEXT is an LLM artifact generated once over the full corpus, so `graph-global`, which ranks over that text, is the one mode where an excluded document can still influence wording. Everything chunk-level and `graph-local` carry no residual at all.
 Note also what the non-empty-exclusion assertion does and does not prove: it shows the exclusion SET is non-empty, not that anything was removed. The assertion is now `dropped_chunk_count > 0` — by this repo's own D6 argument, an assertion that passes when the mechanism is a no-op is an untested mechanism wearing a passing test.
 
+**Superseded figures (recorded 4 September 2026).**
+Every measurement in this entry was taken on the index this repository built before D19, and D19 re-made every extraction record cold, so the graph those numbers describe no longer exists.
+The committed CI graph is **1,759 nodes / 13,516 edges** (`results/build-stats-ci.json`), withholding the twin now removes **142** entities rather than 131, and the rebuild strips **27.25** weight units from **48** edges rather than 21.25 from 38.
+The phrase "matching the committed graph" was true when it was written and false from the moment the index was re-made — which is the drift D18 exists to catch, in the file that records D18: a number in a decision log is as much a published number as one in a results table.
+The rule this entry records is unchanged and its argument never depended on the figures: `build_graph()` is a merge over cached extractions, so a per-run rebuild costs a merge rather than an extraction, and only the rebuild reaches twin-contributed weight on an edge whose two endpoints both survive.
+The current figures are held by `tests/test_run_graph.py`, which recomputes each of them from the committed extractions rather than reading them from here.
+
 ## D11 — The same failure shape, three times: assertions that pass on a no-op
 Three separate defects in this build shared one shape — a check that could not fail when the thing it guarded stopped working.
 (1) The self-exclusion law was asserted as "the exclusion SET is non-empty", which passes when exclusion removes nothing; now `dropped_chunk_count > 0`.
 (2) That strengthened assertion immediately earned its keep by catching a real defect of its own: the planted-error subject is held out by construction, so nothing drops, and the check had to learn the difference between *nothing to exclude* and *exclusion failed*.
 (3) Worst of the three: no test imported `run_ablation`, `run_panel` or `run_planted_eval` at all, so every exclusion guard in the orchestration layer could be deleted with a green suite — demonstrated by mutation (five guards disabled, 252 passed → 252 passed, identical).
 The standing rule this leaves: **an invariant is only defended where a test drives the real entry point.** Toy-fixture sweeps and data-membership pins are worth having, but they do not defend orchestration, and a suite that stays green through a mutation of the mechanism is measuring something other than the mechanism.
+
+A fourth instance turned up later, on a file's tracked/untracked boundary rather than inside a mechanism.
+`tests/test_credibility_map.py` enforces that `CREDIBILITY.md` states none of the claims this repository forbids itself, and the first version did that by typing one of those claims into itself as a control literal.
+It passed for as long as the file was untracked, because the authored-prose sweep reads `git ls-files`; the moment the test was committed the sweep could see it, and the enforcing file failed the rule it enforces.
+The repair is the shape `tests/denied_claims.json` exists to make possible: the control now READS the overlapping terms from that data file and checks every one, so the file that enforces the rule can never make the claim it forbids.
+The rule beside D11's: a check that holds its own subject as a literal is only as good as the boundary it sits on, and "it passes here" is not "it passes where it will live".
 
 ## D12 — Both evaluation arms must withhold the same documents
 The planted-error evaluation built the panel's index with exclusions and the baseline's without.
@@ -142,9 +155,9 @@ The corollary, learned the same day: a mutation proof is only evidence once it p
 the mutant (D13).
 
 ## D16 — Run the checks CI runs, on the paths CI runs them
-CI went red on a pushed head for a lint error in a test file I had written minutes earlier. It had
-been reported to me once, in a command whose output I read for its test results and not its exit
-code, and every validation afterwards ran `ruff check src` — not `src tests`, which is what CI runs.
+CI went red on a pushed head for a lint error in a test file written minutes earlier. It had been
+reported once, in a command whose output was read for its test results and not its exit code, and
+every validation afterwards ran `ruff check src` — not `src tests`, which is what CI runs.
 So a subset of the checks, on a subset of the paths, said green right up to the push.
 The failure was trivial (an ambiguous Unicode glyph in a regex, now an escape). The process failure
 was not: **before a push, run the pipeline's own commands verbatim, on the pipeline's own paths.**
@@ -255,6 +268,67 @@ Under the old default window those could not have been read whole, so a fraction
 The log carries the signature plainly: a large cluster of historical calls report a prompt length of exactly 2,050 tokens, which is not a length any prompt here has — it is 4,096 minus half of 4,092, the length the runner cuts to.
 The community reports were kept under the same reasoning until the same doubt applied: their prompts are short by construction, but "by construction" was the belief that produced this decision in the first place, and their cache carried no evidence either way.
 Both caches were wiped. The reports cost twenty minutes to rebuild; the certainty is worth more than the twenty minutes, and the wire now refuses an oversize summary prompt rather than asking a reader to trust that none exists.
+
+## D20 — Every model-run record names the window each call ran in, and the one derived field says so beside the record
+D19 made the per-call margin a required field on every model-run record, and left the reader to work out what the margin had been measured against.
+A margin is only readable if the window it was measured from is named: 4,096 tokens configured by this wire for this call and 4,096 tokens found already loaded on the server are different claims, and only one of them is a property of the call.
+So `CallStats.window_sources` is required on every model-run record, filled by the ledger from a constant each wire stamps on its own responses, and the ledger refuses a response that reports a window with no source — a window without a source is the gap, not a smaller version of it.
+The native wire names `options.num_ctx`: the window this wire configured for that call.
+The OpenAI-compatible wire cannot set a window at all, so it names the loaded runner's `context_length`, read from the server before EVERY call rather than cached once per provider.
+The runner reloads whenever a request's window differs from the resident one, so a native-wire call in between changes the answer; a value cached at construction would describe a call that had not happened yet, which is the same defect one layer up.
+
+The two index-build records are the single exception, and it is a derivation rather than a measurement.
+`results/build-stats-ci.json` (234 chunks, 2 h 31 min of cold extraction) and `results/build-stats-demo.json` (1,077 chunks, 11 h 53 min) predate the field, and re-running them would not measure it.
+Extraction is not deterministic: a re-run would move the graph, the communities, the community reports, both retrieval ladders and every figure quoted from them — every downstream number in the repository — in order to write a string the code path already determines from the wire.
+So both records gain the field through `peerpanel.evals.records.derive_window_sources`, which is the mapping the emitter itself uses, applied as a pure and idempotent function; the door is `python -m peerpanel results derive-window-sources`, and `tests/test_run_conditions.py` proves the derived value equals what `graph build --publish` would have written for the wire the record names in `provider`, and that re-deriving changes nothing.
+Nothing else about a record is ever derived, and no provenance key is written INTO the record: the emitter cannot produce one, and a field the emitter cannot produce is a mock wearing a record's clothes.
+The disclosure lives beside the record where an evaluator reads it — the tracked manifest `results/derived-fields.json` names the file, the field, what it was derived from, the date, `re_measured: false`, and the command that would re-measure it.
+
+Making the community-report layer carry the same fields taught this schema one more thing, so record it here: **a cold run is not one model call per report.**
+The report cache is keyed by a community's CONTENT and deliberately not by its resolution, so a community that is identical at two Leiden levels is generated once and read back from an entry the same run wrote minutes earlier — measured on the CI corpus, 110 reports over 75 distinct member sets and exactly 75 calls.
+An invariant of `calls >= reports` would have read that honest cold run as a warm one, so `SummaryRunStats` carries `reports_generated` and `reports_from_cache` beside `reports`: `generated + from_cache == reports` and `calls == generated` are checkable from the record alone, and `generated > 0` is the real cold-run test, because a warm run publishes `calls: 0` and is describing a cache rather than a run.
+
+## D21 — The detector credits an assertion, not a quotation, and the rule was frozen before it was run
+The detector this replaces asked only whether a finding NAMED the planted token, so quoting the perturbed sentence back scored as a detection — and on the records at `52238c8` every credited catch was exactly that, a verbatim sentence of the manuscript.
+The replacement rule is `planted.asserts` (`DETECTION_RULE = "assertion-v1"`): a planted error is credited only when ONE sentence of a finding's own prose contains the detection token AND an assertion cue that no negation inside the cue's clause stands in front of.
+`planted.detect` stays beside it unchanged as the "named the token" upper bound — labelled as a bound, published beside the assertion count, never instead of it and never more prominently.
+The assertion count is the headline even at 0, which is what the committed records show.
+
+The rule was specified in full — cue alternation, negation scope, sentence boundary — and FROZEN before any control was run against it, because a detector tuned until its control passes is the defect it was written to fix, wearing a green test.
+Its negative control is every string the old detector ever scored: all 230 of them, from the two planted-evaluation records at `52238c8`, re-derived inside the test with `git show` rather than retyped, giving 690 string-against-error decisions — 0 credited by `asserts`, and exactly 14 by `detect`.
+**That control is a floor, not evidence**, and the test says so in its own name: not one of the 230 strings contains an assertion cue at all, so it cannot go red, and it exercises neither the same-sentence clause nor the negation clause.
+Those two are exercised by boundary controls built from real text instead — real manuscript sentences carrying a planted token beside `error bars`, `reverse transcribed`, `inverted microscope` and `no such enrichment`, which must score 0; real record strings with a genuine assertion sentence appended, which must score 1; and a negated one, which must score 0.
+
+Two of those controls defeated the first cut of the mechanism, before it had scored a single record.
+"Nothing about the Dcr2 reference is incorrect." was credited, because the negation sits six words in front of the cue and the window read five; and a real citation sentence ending "Nat. Metab. 7:e91188) does not exist." was not credited, because the shared sentence splitter cut at those abbreviations and left the token in one sentence and the assertion in the next.
+The cue list was not touched.
+Negation became clause-scoped and parentheticals are masked before splitting — both mechanisms, neither of them a string added because a particular control needed it — and the rule kept its name because no record had ever been produced by the pre-calibration code.
+The standing rule: **a control that trips is a finding about the rule, never a reason to edit the cue list.**
+
+The rule errs in both directions, and any number it produces has to carry both.
+It does not credit a finding that asserts the defect without naming the token, so the count is a floor on detection; and it does credit a finding that names the token while using a cue about something else in the same sentence, so the floor is not a clean one.
+It is same-sentence only, and clause-scoped negation under-credits a corrected claim ("Dcr2, not Dcr1, is incorrect") rather than over-crediting it, which is the direction to err in for a headline number.
+Every string the rule scored is committed in the record's own `finding_texts`, so a reader can judge each decision instead of trusting the count.
+
+## D22 — A cached community report may lend its prose, never its identity
+The report cache is keyed by the PROMPT — a community's top 30 members by degree, and the relations among them — so two communities that agree on that head and differ only in their tail share one entry.
+Lending the PROSE is correct: the summary was written from the head alone, and generating it twice would spend a model call to produce the same paragraph.
+Lending the IDENTITY is not, and it was happening: 2 of the CI corpus's 35 cache hits came back carrying another community's `member_names` and `size` — 255 members served under a community of 250, and 111 under a community of 102.
+That is not cosmetic. `graphrag-global` ranks over `member_names`, and `LIMITATIONS.md` counts residual contamination in it, so a lent membership put a wrong list underneath two published numbers.
+Fixed at the serving point: `community_id` and `resolution` were already recomputed per community when a cached entry is served, and `member_names` and `size` now are too, so an entry lends only the text it was written from.
+Pinned by a test that constructs the collision deliberately — the same 30 connected members, a different isolated tail — and mutation-proven: removing the fix turns it red, and the file was restored byte-identical afterwards.
+The demo corpus is unaffected, and that was checked rather than assumed: it is summarised at one resolution and took 0 cache hits, so no published demo number moved.
+
+## D23 — Latency is the one published column that moves with the machine
+Both retrieval ladders were once republished immediately after a summaries run had saturated the GPU, and every rung roughly doubled — BM25 30.8 → 63.3 ms, `graphrag-local` 97.2 → 118.6 ms — which moved the published speed claim from 3.16x to 1.87x.
+Three consecutive runs of the same ladder over the same committed bytes then gave BM25 between 24.5 and 55.5 ms and `graphrag-local` between 97.9 and 136.2 ms, while recall, the ceiling, the share of it and NDCG came back identical every time.
+The quality columns are a function of the committed bytes; the latency column is a function of the machine.
+The rules that leaves: the committed ladders are measured with nothing else running, and are republished last, after every model run in a regeneration chain has finished; `latency_ms` and `run_utc` are declared run-varying in `evals.ablation.RUN_VARYING_FIELDS`, and the conformance test strips exactly those two before comparing a fresh ladder against the committed one; and a precise multiple read off that column is a reading of one quiet run rather than a property of the two rungs, so it is published with that condition attached and never as a bare ratio.
+"Run-varying" describes which fields move between honest runs; it is not a licence to publish a number measured under load.
+
+Measured in the same regeneration and worth stating beside it, because it is the same question asked of the model layers: the summariser is nearly but not perfectly reproducible at temperature 0.
+A cold re-run of the demo corpus changed the wording of 1 of the 79 committed reports — same prompt, same model, same wire — while both panel records regenerated byte-identical apart from `wall_s` and the fields this work added.
+That is what "the model layers reproduce the protocol, not the bytes" is worth as a number rather than as a hedge.
 
 ## A note on what this file records
 This log records **decisions, their rationale and the rules they produced** — the questions a reader
