@@ -32,8 +32,8 @@ import re
 from pathlib import Path
 
 import pytest
-from _prose_rules import LOSS_WORDS, WIN_WORDS
 
+from _prose_rules import LOSS_WORDS, WIN_WORDS
 from peerpanel.evals.planted_eval import BASELINE_MODELS, baseline_system
 
 ROOT = Path(__file__).resolve().parents[1]

@@ -165,6 +165,19 @@ Any narrower check is a different question with a more comfortable answer.
 Cheap and worth it: CI caught it in nineteen seconds, which is what CI is for — but it should not
 have been CI's job.
 
+**A second instance, and the rule needs one more clause.** The same thing happened again on the
+commit that rewrote every page: the pre-push lint ran `ruff check src tests` — the pipeline's own
+command, on the pipeline's own paths, exactly as the paragraph above requires — and reported the
+whole tree clean. CI went red fifteen seconds after the push, on an unsorted import block in
+`tests/test_planted_published_numbers.py`. The difference was not the command and not the paths:
+it was `.ruff_cache`, which held a verdict for that file from before it was last written. Removing
+the cache reproduces the failure locally in one run.
+So the green belonged to the cache rather than to the code, which makes it the same defect this
+repository keeps finding in itself — a check that could not fail, reporting success — this time in
+the checking apparatus rather than in a test. The clause the rule was missing: **a verification has
+to be able to fail before its green means anything**, so a check that memoises its own verdict is
+run against a cleared cache before a push, or it is not evidence.
+
 ## D17 — A comparison must equalise what it compares, and a test must say so
 Retrieval depth was configured in **chunks** while scoring ran over **documents**. The document
 lists actually judged therefore differed by a factor of three between rungs, while every reported
