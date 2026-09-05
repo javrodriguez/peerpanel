@@ -14,5 +14,5 @@ claim about GARS.
  - `python3 tests/run_tests.py` and `python3 tests/check_contracts.py` run green from a cold clone
    with no setup, and in CI on every push.
 +- [PeerPanel](https://github.com/javrodriguez/peerpanel) — a separate demonstration system that
-+  evaluates its own multi-agent review pipeline against a single-agent baseline and publishes the
-+  result the record shows, including where the panel loses.
++  evaluates its own multi-agent review pipeline against single-agent baselines and publishes the
++  result the record shows, including when that result is that nothing was found.
