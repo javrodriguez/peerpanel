@@ -1,6 +1,6 @@
 {
  "corpus_manifest": "corpus/demo.manifest.json",
- "run_utc": "2026-09-05T02:48:24+00:00",
+ "run_utc": "2026-09-05T12:48:18+00:00",
  "n_cases": 2,
  "skipped_cases": {
   "10.1101/2024.06.19.598224": "twin not a member of this corpus — no valid run"
@@ -12,7 +12,7 @@
   {
    "rung": "bm25",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 37.0,
+   "latency_ms": 25.6,
    "chunks_retrieved": 120,
    "docs_ranked": 30,
    "hits": [
@@ -56,7 +56,7 @@
   {
    "rung": "vector",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 0.5,
+   "latency_ms": 0.4,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [
@@ -100,7 +100,7 @@
   {
    "rung": "rrf-hybrid",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 29.9,
+   "latency_ms": 25.3,
    "chunks_retrieved": 120,
    "docs_ranked": 30,
    "hits": [
@@ -144,7 +144,7 @@
   {
    "rung": "graphrag-local",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 97.8,
+   "latency_ms": 94.3,
    "chunks_retrieved": 120,
    "docs_ranked": 30,
    "hits": [
@@ -188,7 +188,7 @@
   {
    "rung": "graphrag-global",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 6.8,
+   "latency_ms": 5.9,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [
@@ -232,7 +232,7 @@
   {
    "rung": "bm25",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 24.8,
+   "latency_ms": 28.4,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [
@@ -480,7 +480,7 @@
   {
    "rung": "rrf-hybrid",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 43.7,
+   "latency_ms": 29.2,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [
@@ -604,7 +604,7 @@
   {
    "rung": "graphrag-local",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 101.4,
+   "latency_ms": 94.4,
    "chunks_retrieved": 120,
    "docs_ranked": 30,
    "hits": [
@@ -728,7 +728,7 @@
   {
    "rung": "graphrag-global",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 6.9,
+   "latency_ms": 6.6,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [

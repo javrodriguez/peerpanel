@@ -4,7 +4,7 @@ PeerPanel is a demonstration system. This page is the part of the repo most wort
 carefully: it says what the design does not do, what the numbers do not prove, and which known
 failure modes of multi-agent LLM review it mitigates, measures, or simply carries.
 
-Every figure this page measures about this system is recomputed from committed bytes by `tests/test_limitations_numbers.py` or `tests/test_run_graph.py`, so a number that drifts from the measurement fails the suite rather than sitting here unread.
+Every figure this page measures about this system is recomputed from committed bytes: most by `tests/test_limitations_numbers.py` or `tests/test_run_graph.py`, so a number that drifts from the measurement fails the suite rather than sitting here unread; the two counts in the quotation bullet further down are lengths of lists committed inside the planted-evaluation records, recomputed from those records by `tests/test_planted_soundness.py`, which measures the share per arm, and by `tests/test_artifact_conformance.py`, which recomputes each record's scored residue from the unstripped text the arm wrote.
 The demo-corpus figures are recomputed offline, by merging the per-chunk extractions in `fixtures/extraction/demo`, with no network, no model and no fetched corpus text.
 The percentages in the failure-mode table further down are other people's published measurements, cited to their source.
 
@@ -52,7 +52,9 @@ manuscripts to language models, and this system would do exactly that.
 - **Exclusion is exact for the graph, approximate for summary wording.** When a manuscript is
   reviewed, its published twin's chunks leave the index and the knowledge graph is *rebuilt* for
   that run with the twin's extractions withheld (a pure merge over cached extractions plus seeded
-  Leiden — measured at ~0.2 s, so the exact thing is affordable). On the CI corpus that removes
+  Leiden — measured at ~0.2 s, so the exact thing is affordable).
+  Which of the two planted-error subjects that applies to is a property of the subject rather than of the design: `met17-auxotroph` has a twin in the demo corpus, `PMC10729969`, and every arm of that run drops the same 26 chunks with it, while `caprin-heterochromatin` has no twin to withhold at all, so its record shows nothing excluded because there was nothing to exclude — both records carry the difference in `twin_in_corpus`, and DECISIONS.md D25 states what the asymmetry costs.
+  On the CI corpus the rebuild removes
   142 entities and additionally strips 27.25 units of twin-contributed weight from 48 edges
   joining entities that both survive — the part node-filtering cannot reach, and the tests
   demonstrate it by doing the filtering instead and showing those 48 edges keep their weight. Chunk-level retrieval and
@@ -123,7 +125,7 @@ manuscripts to language models, and this system would do exactly that.
 | Failure mode | Evidence | What PeerPanel does |
 |---|---|---|
 | **Position bias** | Across 36 models and 193 pairs, the first-shown option is picked 64.3% of the time, and the median model flips on 41.3% of decisive swapped-order cases ([benchmark](https://github.com/lechmazur/position_bias)) | **Mitigated and measured.** Every claim is judged twice with the evidence order reversed; disagreement forces `NOT_ENOUGH_INFO`. The swap-consistency rate is reported with its n, or withheld when n < 10. |
-| **Fabricated citations** | 19.9% of GPT-4o citations across six simulated literature reviews were untraceable ([JMIR Mental Health](https://mental.jmir.org/2025/1/e80371)); retrieval reduces but does not eliminate this ([arXiv:2409.13740](https://arxiv.org/html/2409.13740v1)) | **Mitigated in code, not by instruction.** A verdict's evidence spans survive only if the chunk id was actually retrieved and the quote is a substring of that chunk's own text. Reviewer findings citing unprovided chunks have those citations dropped. |
+| **Fabricated citations** | 19.9% of GPT-4o citations across six simulated literature reviews were untraceable ([JMIR Mental Health](https://mental.jmir.org/2025/1/e80371)); retrieval reduces but does not eliminate this ([arXiv:2409.13740](https://arxiv.org/html/2409.13740v1)) | **Mitigated in code, not by instruction.** A verdict's evidence spans survive only if the chunk id was actually retrieved and the quote is a substring of that chunk's own text. Reviewer findings citing unprovided chunks have those citations dropped. **The pass publishes its own yield on every record — 0 citations dropped and 0 findings discarded, on both reviewers of both committed panel runs — so the near-absence of citations in those reviews is the reviewers' behaviour and not this filter's.** |
 | **Prompt injection** | Hidden instructions in a manuscript reach up to 100% acceptance across 1,000 generated reviews ([arXiv:2509.10248](https://arxiv.org/abs/2509.10248)) | **Mitigated.** Every corpus document and manuscript passes a deterministic screen before chunking: invisible and control characters are stripped, instruction-shaped lines are neutralised (prefixed and quoted as data, never silently deleted), and every action is reported. |
 | **Multi-agent may not beat a single agent** | Debate "often fails to outperform simple single-agent baselines… even when consuming significantly more inference-time computation" ([arXiv:2502.08788](https://arxiv.org/abs/2502.08788)) | **Measured, not assumed.** The planted-error evaluation reports the panel beside a single-agent baseline given the panel's token spend as a *ceiling* through the same ledger — a ceiling it has never reached on any committed run, so the baseline always had less. Whatever the delta is, it ships, with each arm's spend beside it. |
 | **Self-preference** | Judges favour their own generations, and the bias tracks self-recognition causally ([Panickssery et al.](https://arxiv.org/abs/2404.13076)) | **Partly mitigated, partly carried.** The claim verifier (`llama3.1`) judges the novelty reviewer's claims across a family boundary but the methods reviewer's within one; the converger (`qwen2`) writes over the novelty reviewer's own family. Recorded above rather than hidden. |
@@ -133,10 +135,35 @@ manuscripts to language models, and this system would do exactly that.
 
 ## What the numbers do not prove
 
+- **These models mostly quote the manuscript rather than assert anything about it, and the naming
+  column has to be read knowing that.**
+  Of the 256 strings the six arms wrote across the two committed evaluations, 104 carry anything of
+  the arm's own once verbatim manuscript sentences are taken out, so 152 of them — 59% — are
+  entirely copied text with nothing of the arm's in them at all.
+  Round 4 measured the same quantity at 63% (147 of 235) on the records it judged, and these records
+  are a re-run of the same six arms, so the two readings are one measurement on two samples rather
+  than a change.
+  Since that round, a sentence that is a verbatim slice of the manuscript is dropped before either
+  scoring rule sees it (`planted.own_prose`, rule `assertion-v2`), and every record commits the
+  residue it was actually scored on as `scored_texts` beside the unstripped `finding_texts`.
+  What that leaves is still an upper bound rather than a clean count: the stripping is
+  whole-sentence, so a sentence that copies the manuscript and adds three words of its own survives
+  intact, and so does a copy carrying a typo or a reflowed dash.
+  Read a `named token` credit as no more than this — some sentence an arm wrote, which is not a
+  sentence of the manuscript it was shown, contains the planted token — and read the gap between
+  that column and the headline beside it as the distance between naming something and saying
+  anything about it.
+  DECISIONS.md D24 records why the input to the rule moved while the rule itself did not.
 - Retrieval metrics are reported only when at least 20 relevant documents exist across the
   evaluated manuscripts; below that the per-item hit table is shown and rates are withheld
   entirely. A rate over a handful of items is decorative.
-- Inter-reviewer correlation is reported only at n ≥ 30 observations, for the same reason.
+- Inter-reviewer correlation is **not computed at all**, and until this commit this page claimed a
+  reporting gate for it (n ≥ 30) as though it were a third discipline alongside the two real ones
+  above and below. There is no such statistic anywhere in this repository — no constant, no
+  function, no record field, no published value — so the gate guarded nothing. A rule for a
+  measurement that does not exist is a check that cannot fire, which is the failure this page
+  spends most of its length warning about, sitting in the section where an overstatement of
+  discipline costs the most.
 - The graph, communities and retrieval run for real in CI; the model-dependent layers are proven
   by captured real runs whose artifacts are committed and labelled with the command that
   regenerates them. Which is which is stated in the README, and no result anywhere is produced by

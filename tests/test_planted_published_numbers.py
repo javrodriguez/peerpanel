@@ -13,9 +13,9 @@ The shape both tables must carry (D-2 / D-7):
   `planted_eval.BASELINE_MODELS`; the row label names the model, because two rows that
   differ only in a wire cannot report two models' pass rates;
 - per manuscript, four columns whose headers name the manuscript and the measure:
-  `asserted` (the headline, rule `assertion-v1`), `named token` (the labelled upper
-  bound), `tokens` and `wall` — e.g. `| caprin asserted | caprin named token |
-  caprin tokens | caprin wall |`.
+  `asserted` (the headline, produced by the rule `planted.DETECTION_RULE` names),
+  `named token` (the labelled upper bound), `tokens` and `wall` — e.g.
+  `| caprin asserted | caprin named token | caprin tokens | caprin wall |`.
 
 `results/RESULTS.md` must carry EVERY committed record; the README's first screen must
 carry at least one, and every manuscript it does carry is bound the same way. Header
@@ -30,6 +30,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from typing import NamedTuple
 
 import pytest
 
@@ -334,46 +335,163 @@ class TestTheThreeArmTableMatchesItsRecords:
         )
 
 
+def _slack(shown: str) -> float:
+    """Half of the last digit the claim published — the honest rounding window.
+
+    The rule this repository already states for its other published ratio, applied
+    here word for word (`tests/test_published_numbers.py::_slack`): "6.6x" must round
+    to the record's ratio one digit finer than "7x" would. A fixed tolerance is how a
+    published 4x survived a measured 3.2x — and how a fixed +/-0.2 on these multiples
+    accepted a claim about the wrong manuscript (round 4, report 3, finding 5).
+    """
+    decimals = len(shown.split(".")[1]) if "." in shown else 0
+    return 0.5 * 10.0**-decimals + 1e-9
+
+
+# How a reader resolves a cost sentence that does not repeat the manuscript's name.
+# These are the ONLY two shortcuts read; anything else unbound fails and asks for the
+# manuscript by name, so the resolver can never quietly invent a subject.
+_ORDINALS = {"first": 0, "second": 1, "third": 2}
+_CONTINUATIONS = ("the same run", "the same manuscript", "that run", "the same one")
+
+
+def _paragraph_bounds(text: str, at: int) -> tuple[int, int]:
+    start = text.rfind("\n\n", 0, at)
+    end = text.find("\n\n", at)
+    return (0 if start == -1 else start + 2, len(text) if end == -1 else end)
+
+
+def _sentence_bounds(text: str, at: int) -> tuple[int, int]:
+    """The sentence around `at`, never crossing its paragraph."""
+    para_start, para_end = _paragraph_bounds(text, at)
+    breaks = (". ", ".\n", "! ", "? ")
+    starts = [text.rfind(end, para_start, at) for end in breaks]
+    ends = [text.find(end, at, para_end) for end in breaks]
+    return (
+        max([s + 2 for s in starts if s != -1], default=para_start),
+        min([e + 1 for e in ends if e != -1], default=para_end),
+    )
+
+
+def _named_in(scope: str, subjects: list[str]) -> list[str]:
+    """Which manuscripts a span of prose names, by full name or short key."""
+    low = scope.lower()
+    return [s for s in subjects if s.lower() in low or _key(s) in low]
+
+
+def _subject_order(scope: str, subjects: list[str]) -> list[str]:
+    """The manuscripts a passage names, in the order it first names them.
+
+    What "the second" means to a reader is the second manuscript THIS passage has
+    discussed, so the order is read from the claim's own paragraph and never from the
+    whole document (where an unrelated earlier mention would silently reverse it).
+    Manuscripts the passage never names are not in the list, so an ordinal that points
+    past its end fails instead of guessing.
+    """
+    low = scope.lower()
+
+    def first(subject: str) -> int:
+        hits = [i for i in (low.find(subject.lower()), low.find(_key(subject))) if i != -1]
+        return min(hits) if hits else len(scope)
+
+    return [s for s in sorted(subjects, key=first) if first(s) < len(scope)]
+
+
+class Claim(NamedTuple):
+    """One published cost claim: what it says, about which arm, on which manuscript.
+
+    `shown` is the literal digits as published, so the rounding window is read from the
+    claim's own precision; `subject` is the manuscript its sentence names, because a
+    multiple is true of one manuscript and false of the other.
+    """
+
+    model: str
+    subject: str
+    kind: str
+    shown: str
+    at: int
+    where: str
+
+
 class TestTheCostClaims:
-    """A multiplier or share sentence must say WHICH baseline it compares against: with
-    one baseline arm '6.7x the tokens' was unambiguous, with one arm per model it is a
-    number a reader cannot check."""
+    """A multiplier or share sentence must say WHICH baseline it compares against and
+    WHICH manuscript it is about: with one baseline arm and one manuscript "6.7x the
+    tokens" was unambiguous; with two of each it is a number a reader cannot check.
+
+    Round 4 (report 3, finding 5) demonstrated what the old guard let through. It
+    accepted a multiple matching ANY committed record, on a fixed +/-0.2, so
+
+        "The panel spent 7.9x the tokens of the llama3.1:8b single agent on caprin"
+
+    PASSED on met17's 7.85 while being wrong for caprin by 1.3x — the "a guard that
+    asserts a string appears SOMEWHERE" class this file exists to keep out. Both halves
+    of the fix are below: the manuscript is attributed the way the model already was,
+    and the tolerance is this repository's own rounding rule (`_slack`), not a fixed
+    window it has ruled insufficient in writing.
+
+    Attribution reads the prose the way a reader does, in this order, from the claim's
+    own side of the sentence outwards: the manuscript named after the claim (up to the
+    next claim), then before it (back to the previous one), then in its sentence, then
+    in its paragraph. A span that names exactly one manuscript binds. Failing a name,
+    an ordinal ("the second") indexes the manuscripts in the order this document names
+    them, and a continuation ("the same run") carries the previous claim's manuscript
+    forward. A claim none of those resolve FAILS, naming what to write instead.
+    """
 
     MULTIPLIER = re.compile(
         r"(\d+(?:\.\d+)?)\s*[x\u00d7]\s*the\s+(tokens|wall-clock|wall clock)", re.IGNORECASE
     )
-    SHARE = re.compile(r"(\d+(?:\.\d+)?)\s*% of the panel", re.IGNORECASE)
+    # Any percentage in a sentence that states a share of the panel is a share claim —
+    # "16% of the panel's tokens on the same manuscript and 12% on the second" publishes
+    # TWO numbers, and a pattern that reads only the first leaves the second bound by
+    # nothing, which is the same defect one clause later.
+    SHARE = re.compile(r"(\d+(?:\.\d+)?)\s*%")
+    SHARE_SENTENCE = re.compile(r"\d+(?:\.\d+)?\s*% of the panel", re.IGNORECASE)
 
-    def _claims(self, text: str, where: str) -> list[tuple[str, str, float, str]]:
-        """(model, kind, claimed value, where) for every cost claim in `text`.
+    # The evaluator's own demonstration, kept live as a control: the first sentence must
+    # be rejected (7.9 is met17's multiple, not caprin's) and the second accepted.
+    WRONG_SENTENCE = (
+        "The panel spent 7.9x the tokens of the llama3.1:8b single agent on "
+        "caprin-heterochromatin."
+    )
+    RIGHT_SENTENCE = (
+        "The panel spent 6.6x the tokens of the llama3.1:8b single agent on "
+        "caprin-heterochromatin."
+    )
+
+    def _claims(self, text: str, where: str) -> list[Claim]:
+        """Every cost claim in `text`, each bound to a model and a manuscript.
 
         `kind` is one of `tokens`, `wall-clock` (a multiplier of the panel's) or
         `share` (a percentage of the panel's tokens).
         """
-        found: list[tuple[str, str, float, str]] = []
-        for pattern, is_share in ((self.MULTIPLIER, False), (self.SHARE, True)):
-            for match in pattern.finditer(text):
-                kind = "share" if is_share else match.group(2).lower().replace(" ", "-")
-                model = self._attribute(text, match.start(), match.group(0), where)
-                found.append((model, kind, float(match.group(1)), where))
+        subjects = sorted(_records())
+        pairs: list[tuple[re.Match[str], str]] = [
+            (match, match.group(2).lower().replace(" ", "-"))
+            for match in self.MULTIPLIER.finditer(text)
+        ]
+        for match in self.SHARE.finditer(text):
+            start, end = _sentence_bounds(text, match.start())
+            if self.SHARE_SENTENCE.search(text[start:end]):
+                pairs.append((match, "share"))
+        matches = sorted(pairs, key=lambda pair: pair[0].start())
+        spans = [match.span() for match, _kind in matches]
+        found: list[Claim] = []
+        for index, (match, kind) in enumerate(matches):
+            model = self._attribute(text, match.start(), match.group(0), where)
+            subject = self._subject(text, spans, index, subjects, found, match.group(0), where)
+            found.append(Claim(model, subject, kind, match.group(1), match.start(), where))
         return found
 
     def _attribute(self, text: str, at: int, claim: str, where: str) -> str:
         """Which baseline arm a claim is about: the model named in its own sentence,
         or failing that in its own paragraph."""
-        para_start = text.rfind("\n\n", 0, at) + 2
-        para_end = text.find("\n\n", at)
-        paragraph = text[para_start : para_end if para_end != -1 else len(text)]
-        offset = at - para_start
-        sentence_start = max(
-            (paragraph.rfind(end, 0, offset) for end in (". ", ".\n", "! ", "? ")), default=-1
-        )
-        sentence_end = min(
-            (e for e in (paragraph.find(end, offset) for end in (". ", ".\n")) if e != -1),
-            default=len(paragraph),
-        )
-        sentence = paragraph[sentence_start + 1 : sentence_end + 1]
-        for scope in (sentence, paragraph):
+        sentence_start, sentence_end = _sentence_bounds(text, at)
+        paragraph_start, paragraph_end = _paragraph_bounds(text, at)
+        for scope in (
+            text[sentence_start:sentence_end],
+            text[paragraph_start:paragraph_end],
+        ):
             named = [m for m in BASELINE_MODELS if m.lower() in scope.lower()]
             if len(named) == 1:
                 return named[0]
@@ -383,49 +501,152 @@ class TestTheCostClaims:
             "it compares the panel against. Name the model in the same sentence."
         )
 
-    def _all(self) -> list[tuple[str, str, float, str]]:
-        return self._claims(RESULTS, "results/RESULTS.md") + self._claims(
-            README, "README.md"
+    def _subject(
+        self,
+        text: str,
+        spans: list[tuple[int, int]],
+        index: int,
+        subjects: list[str],
+        earlier: list[Claim],
+        claim: str,
+        where: str,
+    ) -> str:
+        """Which manuscript a claim is about — the same discipline as `_attribute`.
+
+        Windows are read innermost first (see the class docstring); a window naming two
+        manuscripts is ambiguous, not a match, so the next window is tried.
+        """
+        start, end = spans[index]
+        sentence_start, sentence_end = _sentence_bounds(text, start)
+        paragraph_start, paragraph_end = _paragraph_bounds(text, start)
+        after = next((s for s, _e in spans[index + 1 :] if s >= end), sentence_end)
+        before = next((e for _s, e in reversed(spans[:index]) if e <= start), sentence_start)
+        windows = (
+            text[end : max(end, min(after, sentence_end))],
+            text[min(start, max(before, sentence_start)) : start],
+            text[sentence_start:sentence_end],
+            text[paragraph_start:paragraph_end],
+        )
+        for scope in windows:
+            named = _named_in(scope, subjects)
+            if len(named) == 1:
+                return named[0]
+            if named:
+                continue
+            ordinals = [word for word in _ORDINALS if f"the {word}" in scope.lower()]
+            if len(ordinals) == 1:
+                position = _ORDINALS[ordinals[0]]
+                order = _subject_order(text[paragraph_start:paragraph_end], subjects)
+                assert position < len(order), (
+                    f"{where}: the claim {claim!r} points at 'the {ordinals[0]}' manuscript, "
+                    f"but its paragraph names {len(order)} ({order}). Name the manuscript."
+                )
+                return order[position]
+            if any(phrase in scope.lower() for phrase in _CONTINUATIONS):
+                assert earlier and paragraph_start <= earlier[-1].at < paragraph_end, (
+                    f"{where}: the claim {claim!r} carries its manuscript forward from a "
+                    "previous claim, but no earlier cost claim stands in the same "
+                    "paragraph. Name the manuscript in the sentence."
+                )
+                return earlier[-1].subject
+        raise AssertionError(
+            f"{where}: the claim {claim!r} names no single manuscript in its own clause, "
+            f"sentence or paragraph, so a reader cannot tell which of {subjects} it is "
+            "about — and a multiple true of one is false of the other. Name the "
+            "manuscript in the same clause (or say 'the same run' to carry the previous "
+            "claim's manuscript forward)."
         )
 
+    def _all(self) -> list[Claim]:
+        return self._claims(RESULTS, "results/RESULTS.md") + self._claims(README, "README.md")
+
+    def _record_values(self, claim: Claim) -> dict[str, float]:
+        """{manuscript: what the record gives for this claim's arm and measure}."""
+        system = baseline_system(claim.model)
+        values: dict[str, float] = {}
+        for subject, record in _records().items():
+            panel = _arm(record, PANEL_ROW)
+            arm = _arm(record, system)
+            if claim.kind == "tokens":
+                values[subject] = float(panel["total_tokens"]) / float(arm["total_tokens"])  # type: ignore[arg-type]
+            elif claim.kind == "share":
+                values[subject] = (
+                    float(arm["total_tokens"]) / float(panel["total_tokens"]) * 100  # type: ignore[arg-type]
+                )
+            else:  # wall-clock
+                values[subject] = float(panel["wall_s"]) / float(arm["wall_s"])  # type: ignore[arg-type]
+        return values
+
+    def _check(self, claims: list[Claim]) -> None:
+        for claim in claims:
+            values = self._record_values(claim)
+            assert claim.subject in values, (
+                f"{claim.where}: the claim is about {claim.subject}, which has no "
+                f"committed record ({sorted(values)})"
+            )
+            unit = "%" if claim.kind == "share" else "x"
+            slack = _slack(claim.shown)
+            assert float(claim.shown) == pytest.approx(values[claim.subject], abs=slack), (
+                f"{claim.where}: publishes {claim.shown}{unit} ({claim.kind}) for "
+                f"{claim.model} on {claim.subject}, where the record gives "
+                f"{values[claim.subject]:.2f} (the rounding window this claim's own "
+                f"precision allows is +/-{slack:.3g}). Every record: "
+                + ", ".join(f"{s} {v:.2f}" for s, v in sorted(values.items()))
+                + ". A multiple that matches a DIFFERENT manuscript is the defect this "
+                "guard exists for."
+            )
+
     def test_every_cost_claim_matches_a_record(self) -> None:
-        records = _records()
-        for model, kind, claimed, where in self._all():
-            system = baseline_system(model)
-            candidates = []
-            for subject, record in records.items():
-                panel = _arm(record, PANEL_ROW)
-                arm = _arm(record, system)
-                if kind == "tokens":
-                    value = float(panel["total_tokens"]) / float(arm["total_tokens"])  # type: ignore[arg-type]
-                    tolerance = 0.2
-                elif kind == "share":
-                    value = float(arm["total_tokens"]) / float(panel["total_tokens"]) * 100  # type: ignore[arg-type]
-                    tolerance = 2.0
-                else:  # wall-clock
-                    value = float(panel["wall_s"]) / float(arm["wall_s"])  # type: ignore[arg-type]
-                    tolerance = 0.5
-                candidates.append((subject, value, tolerance))
-            assert any(
-                claimed == pytest.approx(value, abs=tolerance)
-                for _subject, value, tolerance in candidates
-            ), (
-                f"{where}: claims {claimed} ({kind}) for {model}; the records give "
-                + ", ".join(f"{subject} {value:.2f}" for subject, value, _t in candidates)
+        self._check(self._all())
+
+    def test_the_guard_reads_the_manuscript_the_sentence_names(self) -> None:
+        """Round 4's demonstration, kept as a control that can go red.
+
+        A guard is worth what its failure proves, so the sentence that passed the old
+        binding is checked here against the manuscript it names.
+        """
+        wrong = self._claims(self.WRONG_SENTENCE, "<control>")
+        assert [(c.model, c.subject, c.kind, c.shown) for c in wrong] == [
+            ("llama3.1:8b", "caprin-heterochromatin", "tokens", "7.9")
+        ], f"the control sentence did not parse as one caprin claim about llama: {wrong}"
+        with pytest.raises(AssertionError, match="caprin-heterochromatin"):
+            self._check(wrong)
+        self._check(self._claims(self.RIGHT_SENTENCE, "<control>"))
+
+    def test_the_rounding_rule_is_this_repositorys_one_rule(self) -> None:
+        """`_slack` here is the rule stated in `test_published_numbers.py`, not a second
+        one that happens to agree today: two tolerances for one written standard is how
+        the standard drifts (round 4's shape — a description coming apart from what it
+        describes)."""
+        from test_published_numbers import _slack as latency_slack
+
+        for shown in ("4", "3.2", "6.57", "15", "0.125"):
+            assert _slack(shown) == latency_slack(shown), (
+                f"the cost guard and the latency guard round {shown!r} differently"
             )
 
     def test_every_baseline_arm_carries_a_cost_claim(self) -> None:
         """The guard is proven live, per arm: a regex that matches nothing is round 3's
         defect class, and an arm nobody compares is an arm nobody reads."""
-        named = {model for model, _kind, _value, _where in self._all()}
+        named = {claim.model for claim in self._all()}
         missing = [m for m in BASELINE_MODELS if m not in named]
         assert not missing, (
             f"no cost claim in README.md or results/RESULTS.md is attributed to {missing}. "
             "Each baseline arm needs one sentence naming its model and stating the panel's "
             "cost against it — e.g. 'the panel spent 6.7x the tokens of the llama3.1:8b "
-            "baseline' or 'qwen2:7b used 15% of the panel's tokens'."
+            "baseline on caprin' or 'qwen2:7b used 15% of the panel's tokens on met17'."
         )
 
+    def test_every_manuscript_carries_a_cost_claim(self) -> None:
+        """The subject binding is proven live too: if every published claim resolved to
+        one manuscript, the attribution above would be guarding nothing."""
+        named = {claim.subject for claim in self._all()}
+        missing = [s for s in _records() if s not in named]
+        assert not missing, (
+            f"no cost claim in README.md or results/RESULTS.md is about {missing}, so the "
+            "manuscript each claim names is never exercised on the real pages. Every "
+            "committed manuscript's cost is published."
+        )
 
 class TestTheResultSentenceFollowsTheRecord:
     def _panel_wins_anywhere(self) -> bool:

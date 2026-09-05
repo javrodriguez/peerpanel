@@ -75,6 +75,8 @@
      "evidence_chunk_ids": []
     }
    ],
+   "unretrieved_citations_dropped": 0,
+   "malformed_findings_dropped": 0,
    "truncated": false
   },
   {
@@ -144,6 +146,8 @@
      "evidence_chunk_ids": []
     }
    ],
+   "unretrieved_citations_dropped": 0,
+   "malformed_findings_dropped": 0,
    "truncated": false
   }
  ],
@@ -383,7 +387,7 @@
   }
  },
  "total_tokens": 226585,
- "wall_s": 1328.7,
+ "wall_s": 1296.7,
  "model_calls": {
   "calls": 46,
   "largest_prompt_tokens": 7317,

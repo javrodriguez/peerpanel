@@ -3,31 +3,40 @@
 **A scientific-review system built so that its own measurements can be checked.**
 Every number on this page is read out of a committed record under [results/](results/) by a test in this repository — including the numbers that look bad.
 
-This repository is a **demonstration system**. It plants known defects into held-out manuscripts, runs a review panel and single agents over them
-under one protocol, and publishes what each arm asserted, what it cost and under what run conditions — so a reader can check the headline, not take it.
+This repository is a **demonstration system**. It plants known defects into two manuscripts, runs a review panel and single agents over them under one
+protocol, and publishes what each arm asserted, what it cost and under what run conditions — so a reader can check the headline, not take it.
+Only one of the two is held out: `caprin-heterochromatin` is absent from the retrieval corpus, while `met17-auxotroph`'s published twin *is* a corpus
+member, withheld from every arm at run time (26 chunks dropped on each) — a weaker guarantee, whose residue [LIMITATIONS.md](LIMITATIONS.md) measures.
 
 ## The headline: three defects planted per manuscript, and no arm asserted one
 
-A finding is credited only when one sentence of its own prose names the planted token **and asserts that something is wrong** — rule `assertion-v1`,
-in [src/peerpanel/evals/planted.py](src/peerpanel/evals/planted.py). Quoting the perturbed sentence back is not a detection; counting that was the old flaw.
+A finding is credited only when one sentence of its **own prose** names the planted token **and asserts that something is wrong** — rule `assertion-v2`,
+in [src/peerpanel/evals/planted.py](src/peerpanel/evals/planted.py). Manuscript text an arm quotes back is stripped before scoring, out of the `text`
+field as readily as the `quote` field: counting quotation as detection was the old flaw.
 
 | arm | caprin asserted | caprin named token | caprin tokens | caprin wall | met17 asserted | met17 named token | met17 tokens | met17 wall |
 |---|---|---|---|---|---|---|---|---|
-| **panel** (llama3.1:8b + qwen2:7b) | **0 / 3** | 1 / 3 | 240,852 | 1,355 s | **0 / 3** | 1 / 3 | 244,460 | 1,395 s |
-| **single agent** llama3.1:8b | **0 / 3** | 1 / 3 | 36,669 | 350 s | **0 / 3** | 1 / 3 | 31,128 | 284 s |
-| **single agent** qwen2:7b | **0 / 3** | 2 / 3 | 37,773 | 184 s | **0 / 3** | 0 / 3 | 30,063 | 134 s |
+| **panel** (llama3.1:8b + qwen2:7b) | **0 / 3** | 1 / 3 | 240,852 | 1,383.5 s | **0 / 3** | 0 / 3 | 244,460 | 1,438.4 s |
+| **single agent** llama3.1:8b | **0 / 3** | 2 / 3 | 36,577 | 330.5 s | **0 / 3** | 0 / 3 | 32,395 | 358.6 s |
+| **single agent** qwen2:7b | **0 / 3** | 2 / 3 | 41,747 | 234.9 s | **0 / 3** | 0 / 3 | 29,737 | 122.5 s |
 
 **Asserted is the headline, and it reads 0 for every arm on both manuscripts: a null result.** The `named token` column beside it is the older
 substring rule, kept as a labelled upper bound only — the gap between the two columns is restatement, not detection.
 
-The panel spent 6.6x the tokens of the llama3.1:8b single agent on caprin and 7.9x the tokens of that arm on met17.
-Against qwen2:7b it spent 6.4x the tokens on caprin and 8.1x the tokens on met17 — for the same asserted count as the cheapest arm: none.
+That upper bound used to be higher, and it fell because quotation stopped counting rather than because any arm got worse. Sentences an arm copies from
+the manuscript are now dropped before either rule sees them: the panel's caprin arm was scored on 10 of the 16 strings it wrote, and every record
+publishes the residue it was scored on (`scored_texts`) beside the count of quoted sentences removed (`quoted_sentences_dropped`). Stripping only ever
+removes text before the rule reads it, so it can only lower a count — which is how a scoring change made after the fact can be told apart from a tune.
+
+The panel spent 6.6x the tokens of the llama3.1:8b single agent on caprin and 7.5x the tokens of that arm on met17.
+Against qwen2:7b it spent 5.8x the tokens on caprin and 8.2x the tokens on met17 — for the same asserted count as the cheapest arm: none.
 
 Every committed model-run record names the model and wire that served it, how many calls it made, the margin between each prompt and the window that
 call was given, and where that window figure was read from — so a reader can tell from the record alone that no prompt was silently truncated.
 
 This repository is also judged from outside, by evaluators handed a clean clone of one commit and a pinned prompt and nothing else:
-3 blind rounds under a pinned evaluator prompt (sha256 `6e1bcda6…`) have filed 78 findings against it; the reports are this project's private record.
+4 blind rounds under a pinned evaluator prompt (sha256 `6e1bcda6…`) have filed 89 findings against it; the reports are this project's private record.
+None of the four has come back clean; the bar is all three reports of a round ending in the literal token CLEAN, and the loop's cap is 8 rounds.
 
 Where this evaluation design does and does not line up with the seven-step credibility framework in FDA's draft guidance on AI in regulatory decision-making:
 **[CREDIBILITY.md](CREDIBILITY.md)** — a mapping onto that vocabulary, never a claim about this system's regulatory standing.
@@ -39,7 +48,7 @@ git clone https://github.com/javrodriguez/peerpanel && cd peerpanel
 uv sync --dev
 make quickstart     # ~3s: rebuilds the graph from committed extractions, detects communities, runs retrieval
 make ablation       # ~3s: the retrieval ladder, from committed bytes
-make test           # ~40s: the deterministic suite — every binding on this page is checked here
+make test           # ~1 min: the deterministic suite — every binding on this page is checked here
 ```
 
 None of those touch a model, the network or an API key. They rebuild the knowledge graph from committed extraction records, run Leiden, and execute real
@@ -124,7 +133,11 @@ citation cannot pass the type system. Its yield was zero across every run this p
 until 2 September 2026; on the rebuilt index it is **12 of 40 verdicts**, 6 in each run. What that
 buys is smaller than it sounds: every verdict carrying a span is still an abstention, so the
 grounding works and the judge it feeds ignores it, and only 1 reviewer finding in 16 cites a
-retrieved chunk at all.
+retrieved chunk at all. That 16 is a ceiling, not an output: each reviewer returned exactly 8
+findings, which is `MAX_FINDINGS`, the hard cap in `src/peerpanel/agents/reviewer_base.py`, and both
+runs record `malformed_findings_dropped: 0` and `unretrieved_citations_dropped: 0`, so the cap is
+what set the denominator and how much more either reviewer would have written is unmeasured. The
+same ceiling sets the 32 below.
 
 **The deterministic lens has no positive evidence at all.** It finds **0 findings on every committed
 run**, and fires only on the constructed cases in `tests/test_deterministic_lens.py`. It is a
@@ -133,8 +146,8 @@ mechanism this repository ships and has never seen catch anything — not a demo
 **One earlier self-report was itself wrong, and this is the correction.** A previous version of this
 page reported that three of sixteen reviewer findings quoted text absent from the manuscript. Read
 whole, no reviewer finding in either committed run quotes text that is not in the manuscript (0 of
-32), and the swap rate is exact rather than a bound because each verdict now records whether it was
-really judged twice.
+32 — two runs, two reviewers, eight findings each, the cap again), and the swap rate is exact rather
+than a bound because each verdict now records whether it was really judged twice.
 
 The null result above is the same shape the literature reports for architectures that "often fail to
 outperform simple single-agent baselines… even when consuming significantly more inference-time

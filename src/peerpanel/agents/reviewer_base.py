@@ -3,7 +3,9 @@
 Reviewers differ STRUCTURALLY (retrieval scope, rubric focus, model family) —
 never by persona (personas measurably do not improve performance and read as
 naive; the differentiation must be real). Findings must cite provided chunk
-ids; ungrounded citations are dropped in the hygiene pass, not trusted.
+ids; ungrounded citations are dropped in the hygiene pass, not trusted — and
+COUNTED there, because a drop nobody counts cannot be told apart from a
+reviewer that cited nothing (schemas.ReviewerOutput).
 
 Context budget: the prompt is the manuscript EXCERPT (title + lead, 900 words)
 plus a handful of truncated evidence chunks — about 4,100 tokens on qwen2's
@@ -67,9 +69,13 @@ SYSTEM_TEMPLATE = (
     "(at most 25 words; empty if none). Judge only what the text supports; never invent "
     "facts or citations."
 )
-# The `quote` ask is the same channel the single-agent baseline gets (evals/baseline.py):
-# both arms of the planted-error evaluation are scored on text + quote, so neither can
-# reach the detection token through a channel the other was not offered.
+# The `quote` ask is the same channel the single-agent baseline gets (evals/baseline.py),
+# so no arm is offered a route to the detection token another lacks. What is SCORED is a
+# narrower thing, and this comment claimed the old rule long after it changed: the quote
+# field has not been scored since the round-3 review found every credited detection was a
+# restatement, and under `assertion-v2` any sentence of `text` that is itself a slice of
+# the manuscript is stripped too (evals/planted.own_prose). The quote is collected and
+# committed so a reader can see what each finding pointed at — it is evidence, not score.
 
 _SEVERITIES = ("major", "minor")
 
@@ -90,22 +96,43 @@ def _clamp_score(value: object, default: int) -> int:
     return max(1, min(5, number))
 
 
-def _finding(raw: object, seen: set[str]) -> ReviewFinding | None:
-    """One finding, or None when it lacks a rubric dimension or any text."""
+def _finding(raw: object, seen: set[str]) -> tuple[ReviewFinding | None, int]:
+    """One finding and the number of citations hygiene removed from it.
+
+    The finding is None when it is not an object, lacks a rubric dimension or carries
+    no text; the caller counts those. The int is separate because a kept finding hides
+    its own losses completely — the citations that named a chunk this reviewer was
+    never given are simply gone from the list a reader sees, so a finding that cited
+    three unretrieved ids and one that cited nothing are the same finding in the
+    record. Both counts land on ReviewerOutput.
+    """
     if not isinstance(raw, dict):
-        return None
+        return None, 0
     dimension = raw.get("dimension")
     text = raw.get("text")
     if dimension not in RUBRIC_DIMENSIONS or not isinstance(text, str) or not text.strip():
-        return None
+        return None, 0
     severity = raw.get("severity")
-    ids = raw.get("evidence_chunk_ids")
-    return ReviewFinding(
-        dimension=dimension,
-        severity=severity if severity in _SEVERITIES else "minor",
-        text=text.strip(),
-        quote=str(raw.get("quote") or "").strip(),
-        evidence_chunk_ids=[cid for cid in (ids if isinstance(ids, list) else []) if cid in seen],
+    cited = raw.get("evidence_chunk_ids")
+    if isinstance(cited, list):
+        grounded = [cid for cid in cited if cid in seen]
+        dropped = len(cited) - len(grounded)
+    else:
+        # An absent citation field means nothing was cited, so nothing was removed. A
+        # PRESENT one that is not a list is discarded whole (constrained decoding binds
+        # on one wire only) and counts as one removal: how many ids it meant is
+        # unknowable, and a 0 here would be the silent drop this counter exists to end.
+        grounded = []
+        dropped = 0 if cited is None else 1
+    return (
+        ReviewFinding(
+            dimension=dimension,
+            severity=severity if severity in _SEVERITIES else "minor",
+            text=text.strip(),
+            quote=str(raw.get("quote") or "").strip(),
+            evidence_chunk_ids=grounded,
+        ),
+        dropped,
     )
 
 
@@ -155,6 +182,10 @@ def run_reviewer(
             scores={},
             confidence=0,
             findings=[],
+            # Nothing parsed, so hygiene removed nothing: the loss this record carries
+            # is `truncated`, and these two must not borrow credit for measuring it.
+            unretrieved_citations_dropped=0,
+            malformed_findings_dropped=0,
             truncated=True,
         )
     raw_scores = data.get("scores")
@@ -162,13 +193,28 @@ def run_reviewer(
     scores = {dim: _clamp_score(raw_scores.get(dim), 1) for dim in RUBRIC_DIMENSIONS}
     raw_findings = data.get("findings")
     raw_findings = raw_findings if isinstance(raw_findings, list) else []
-    parsed = (_finding(f, seen) for f in raw_findings)
-    # MAX_FINDINGS is a hard cap in code, not a hope pinned on the schema's maxItems.
-    findings = [f for f in parsed if f is not None][:MAX_FINDINGS]
+    findings: list[ReviewFinding] = []
+    citations_dropped = 0
+    findings_dropped = 0
+    for raw in raw_findings:
+        # MAX_FINDINGS is a hard cap in code, not a hope pinned on the schema's maxItems.
+        # Both counters describe the hygiene applied to the findings this record CARRIES:
+        # past the cap nothing is kept, and what the cap removed the cap is answerable
+        # for — the record's own `findings` length against this constant shows it.
+        if len(findings) >= MAX_FINDINGS:
+            break
+        finding, dropped = _finding(raw, seen)
+        if finding is None:
+            findings_dropped += 1
+            continue
+        findings.append(finding)
+        citations_dropped += dropped
     return ReviewerOutput(
         reviewer=reviewer_name,
         model=provider.name,
         scores=scores,
         confidence=_clamp_score(data.get("confidence"), 1),
         findings=findings,
+        unretrieved_citations_dropped=citations_dropped,
+        malformed_findings_dropped=findings_dropped,
     )

@@ -5,21 +5,24 @@ Three arms, one protocol. The panel is a two-family mixture by design
 alone, so "pass rates for both local models" has a measured rate PER MODEL rather than
 one number over a mixture. Every arm reads the same perturbed excerpt and searches the
 same index with the same exclusions; every arm is asked for a `quote` and scored on its
-own prose through ONE function (`scored_text`); every arm commits the raw strings it
-was scored on.
+own prose through the SAME two strippings (`scored_text`, then `own_prose`); every arm
+commits both what it wrote (`finding_texts`) and the residue it was scored on
+(`scored_texts`).
 
 Two counts ship per arm, and which one is the headline is not negotiable:
 
 - `detected` — the assertion rule (`planted.asserts`, `DETECTION_RULE`): some sentence
-  of the finding's OWN prose names the planted token AND asserts a defect. This is the
-  published number, even when it is 0.
+  of the finding's own, non-quoted prose names the planted token AND asserts a defect.
+  This is the published number, even when it is 0.
 - `named_token` — the older substring rule (`planted.detect`): a finding merely names
   the token somewhere. Published beside the headline, labelled, as an UPPER bound,
   because round 3 found that every catch credited under this rule alone was a verbatim
   quotation of the perturbed manuscript sentence.
 
 `detected` is a subset of `named_token` by construction (asserting requires naming),
-and the conformance test recomputes both from the committed `finding_texts`.
+and the conformance test recomputes both from the committed `scored_texts` — and
+recomputes `scored_texts` itself from `finding_texts`, so the stripping is checkable
+rather than asserted.
 
 What is NOT equal between the arms is recorded rather than smoothed over: the panel
 retrieves more (three queries per reviewer plus per-claim verifier retrieval, against
@@ -46,6 +49,7 @@ from peerpanel.evals.planted import (
     PlantedError,
     asserts,
     detect,
+    own_prose,
     plant_errors,
     scored_text,
 )
@@ -55,6 +59,7 @@ from peerpanel.manuscripts.twins import load_twins
 from peerpanel.orchestration.panel import PanelProviders, run_panel
 from peerpanel.providers.base import ChatProvider, EmbedProvider
 from peerpanel.retrieval import BM25Retriever, Index, VectorRetriever, rrf
+from peerpanel.text.chunks import sentences
 
 PANEL_SYSTEM = "panel"
 BASELINE_SYSTEM = "single-agent-cot-sc"
@@ -99,7 +104,20 @@ class SystemResult(BaseModel):
     detail: str
     excluded_docs: list[str]  # what this arm's index withheld
     dropped_chunks: int  # and how many chunks that actually removed
-    finding_texts: list[str]  # the exact strings this arm was scored on
+    finding_texts: list[str]  # everything this arm wrote, unstripped
+    # The strings actually scored: each finding's own prose (`scored_text` drops the
+    # `quote`) with every sentence that is verbatim perturbed manuscript removed
+    # (`own_prose`). Required, never defaulted, and committed beside the unstripped
+    # text: round 4 measured 63% of the previously scored strings as verbatim
+    # manuscript reaching the surface through `text` — the route `scored_text` alone
+    # does not close — and every "named token" credit those records carried was one of
+    # them. Both counts below are computed over THIS list.
+    scored_texts: list[str]
+    # How many sentences that second stripping removed across this arm's findings.
+    # Stripping can only remove text before an existential rule sees it, so both counts
+    # can only fall: that is what makes this a fix rather than a tune, and the number
+    # says how much of the arm's surface was quotation.
+    quoted_sentences_dropped: int
     model_calls: CallStats  # every prompt read whole iff smallest_headroom_tokens > 0
     # Calls that produced nothing because their JSON would not parse: for the panel, a
     # reviewer that came back empty; for the baseline, a self-consistency sample that
@@ -128,26 +146,76 @@ class PlantedEvalReport(BaseModel):
     note: str
 
 
+# The record's own account of how its number was produced. It is a LIVE constant — the
+# next run writes it into the next record — and `tests/test_planted.py` holds it to the
+# mechanism in `planted.py` rather than to a phrase, because the sentence it replaces
+# was not wrong when it was written: the negation mechanism was re-calibrated under it
+# (clause scope replacing a fixed five-word lookback) and the description stayed. Round
+# 4 found that unanimously, in all three reports, from the committed records. A note
+# that describes a rule the code does not run is worse than no note, so any edit here
+# must keep that test green — and the test fails if the two ever describe different
+# behaviour on the controls, not merely if the wording drifts.
 SCORING_NOTE = (
     "Scored over the channels an arm AUTHORS — reviewer findings, REFUTES verdicts and "
     "deterministic-lens findings for the panel; model-authored findings for the "
-    "baseline — and, within a finding, over its own prose only. The manuscript text a "
-    "finding quotes is committed beside it but never scored: the planted token sits in "
-    "the manuscript, so scoring the quote credited an arm for reproducing the perturbed "
-    "sentence, which is what every credited detection in the first committed records "
-    "turned out to be. THE HEADLINE IS 'detected' under rule "
-    f"'{DETECTION_RULE}': some sentence of the finding's own prose both names the "
-    "planted token and asserts that something is wrong, with a negation in the five "
-    "words before the assertion cue disqualifying it. It is the published number even "
-    "when it is 0. Beside it, 'named the token' is the older substring rule, published "
-    "as a LABELLED UPPER BOUND and never instead of the headline: every credited "
-    "assertion also named the token, so the gap between the two counts is restatement. "
-    "Both rules err in stated directions — the assertion rule does not credit a finding "
-    "that asserts the defect without naming the token, and does credit a cue used about "
-    "something else in the same sentence as the token; the substring rule credits a "
+    "baseline — and, within a finding, over that finding's own prose only, by two "
+    "strippings. First, the manuscript text a finding quotes is committed beside it but "
+    "never scored. Second, every sentence of what remains that is itself a verbatim "
+    "slice of the perturbed manuscript is dropped, because quotation reaches the scored "
+    "surface through a finding's text field as readily as through its quote field, and "
+    "crediting either counts an arm for reproducing the perturbed sentence — which is "
+    "what every credited detection in the first committed records turned out to be. The "
+    "residue each arm was actually scored on is committed as 'scored_texts' beside the "
+    "unstripped 'finding_texts', with 'quoted_sentences_dropped' counting the sentences "
+    "the second stripping removed; stripping can only remove text before an existential "
+    "rule sees it, so it can only lower a count, never raise one. THE HEADLINE IS "
+    f"'detected' under rule '{DETECTION_RULE}': some sentence of that residue both "
+    "names the planted token and asserts that something is wrong, and a negation "
+    "standing anywhere earlier in the cue's OWN CLAUSE — read from the start of the "
+    "sentence, or from the last ';', ':', 'but', 'however', 'although' or 'whereas' "
+    "before the cue, commas deliberately not counting as breaks — disqualifies that "
+    "cue. It is the published number even when it is 0. Beside it, 'named the token' is "
+    "the older substring rule, published as a LABELLED UPPER BOUND and never instead of "
+    "the headline: every credited assertion also named the token, so the gap between "
+    "the two counts is restatement. Both rules err in stated directions — the assertion "
+    "rule does not credit a finding that asserts the defect without naming the token, "
+    "and does credit a cue used about something else in the same sentence as the token; "
+    "clause-scoped negation also suppresses a REAL assertion, so 'Dcr2, not Dcr1, is "
+    "incorrect' earns nothing, and the rule is same-sentence only, so an assertion "
+    "split across two sentences earns nothing either; the substring rule credits a "
     "finding that names the token while asserting nothing. Every string either rule ran "
-    "over is committed in this record under finding_texts; read them."
+    "over is committed in this record under 'scored_texts', with the full text the arm "
+    "wrote beside it under 'finding_texts'; read them."
 )
+
+
+def scored_residue(texts: list[str], manuscript: str) -> tuple[list[str], int]:
+    """The strings an arm is actually scored on, and how many quoted sentences that cost.
+
+    ONE place computes the residue — the harness scores what this returns, and the
+    conformance test recomputes it from the committed `finding_texts` and compares. A
+    second implementation anywhere would be a second rule, which is how a record and
+    its description come apart.
+
+    `manuscript` must be the PERTURBED text every arm was shown: measured against the
+    unperturbed original, a quotation OF a planted sentence would survive, and that is
+    the exact class this removes. A finding that is entirely quotation contributes
+    nothing and is not carried in the residue at all — an empty string is not a string
+    the rules ran over. The drop count asks `own_prose` about each sentence rather than
+    re-splitting the joined residue, so the number and the text come from one authority.
+    """
+    kept: list[str] = []
+    dropped = 0
+    for text in texts:
+        residue = own_prose(text, manuscript)
+        if residue:
+            kept.append(residue)
+        dropped += sum(
+            1
+            for sentence in sentences(text)
+            if sentence.strip() and not own_prose(sentence, manuscript)
+        )
+    return kept, dropped
 
 
 def _budget_note(panel_tokens: int, baseline_tokens: dict[str, int], twin_in_corpus: bool) -> str:
@@ -278,8 +346,16 @@ def run_planted_eval(
     ) -> SystemResult:
         # BOTH rules, over the SAME strings, in the one place a score is computed:
         # the headline and its upper bound can never be derived from different text.
-        hit = [e.error_id for e in planted.errors if asserts(e, texts)]
-        named = [e.error_id for e in planted.errors if detect(e, texts)]
+        # That text is the RESIDUE — what the arm wrote minus what it copied out of the
+        # manuscript it was shown — so neither count can be minted by quotation.
+        # NOT `dropped` — that parameter is the INDEX's dropped-chunk count, and
+        # rebinding it here silently published the quoted-sentence count as the
+        # exclusion figure (caught by test_exclusion_state_cannot_contradict_itself,
+        # which exists because an earlier round found two exclusion numbers that could
+        # not disagree). Two different quantities, two different names.
+        scored, quoted_dropped = scored_residue(texts, planted.text)
+        hit = [e.error_id for e in planted.errors if asserts(e, scored)]
+        named = [e.error_id for e in planted.errors if detect(e, scored)]
         return SystemResult(
             system=name,
             detected=hit,
@@ -291,6 +367,8 @@ def run_planted_eval(
             excluded_docs=arm_excluded,
             dropped_chunks=dropped,
             finding_texts=texts,
+            scored_texts=scored,
+            quoted_sentences_dropped=quoted_dropped,
             model_calls=calls,
             unparsed_calls=unparsed,
             models=models,
@@ -392,9 +470,17 @@ def render_table(report: PlantedEvalReport) -> str:
     for result in report.results:
         asserted = [report.error_kinds[e] for e in result.detected]
         named = [report.error_kinds[e] for e in result.named_token]
+        dropped = result.quoted_sentences_dropped
+        plural = "" if dropped == 1 else "s"
+        # The residue is part of the run's conditions, not a footnote: an arm whose
+        # surface was mostly quotation earned its 0 differently from one that wrote
+        # its own prose and still asserted nothing, and the captured log should say
+        # which without opening the JSON.
         lines.append(
             f"  {result.system} asserted: {', '.join(asserted) or '(none)'} · "
-            f"named the token: {', '.join(named) or '(none)'}"
+            f"named the token: {', '.join(named) or '(none)'} · "
+            f"scored {len(result.scored_texts)} of {len(result.finding_texts)} strings "
+            f"after dropping {dropped} quoted sentence{plural}"
         )
     if report.skipped_kinds:
         lines.append("")

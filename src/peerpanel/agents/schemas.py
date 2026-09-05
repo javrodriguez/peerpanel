@@ -42,6 +42,20 @@ class ReviewerOutput(BaseModel):
     scores: dict[str, int]  # rubric dimension -> 1..5
     confidence: int  # 1..5
     findings: list[ReviewFinding]
+    # Citation ids the hygiene pass removed from the findings above: ids naming a chunk
+    # this reviewer was never given. Recorded because the removal leaves no trace in the
+    # finding it was removed from — RESULTS.md reads the surviving citations as reviewer
+    # behaviour ("of 16 findings in a run, 1 cites a retrieved chunk at all"), and
+    # without this a reviewer that cited nothing cannot be told apart from one whose
+    # citations this pass deleted. Required, no default: a 0 written by a default would
+    # be that same untellable number wearing a measurement's clothes.
+    unretrieved_citations_dropped: int
+    # Whole findings the hygiene pass discarded before the list above: not an object, no
+    # rubric dimension, or no text. Recorded for the reason `unparsed_calls` is
+    # (evals/planted_eval.py) — it silently lowers the count of findings a run is judged
+    # on, so the denominator of every per-finding number here is partly this filter's
+    # doing. Required for the same reason as the field above.
+    malformed_findings_dropped: int
     truncated: bool = False
 
 

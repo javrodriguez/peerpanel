@@ -20,6 +20,7 @@ import re
 from pathlib import Path
 
 import pytest
+from pydantic import ValidationError
 
 from peerpanel.agents.claims_verifier import (
     MIN_SWAP_N,
@@ -28,7 +29,7 @@ from peerpanel.agents.claims_verifier import (
     swap_consistency_by_source,
     swap_consistency_rate,
 )
-from peerpanel.agents.reviewer_base import MAX_FINDINGS
+from peerpanel.agents.reviewer_base import EXCERPT_WORDS, MAX_FINDINGS
 from peerpanel.agents.schemas import (
     RUBRIC_DIMENSIONS,
     VERDICT_NEI,
@@ -39,15 +40,17 @@ from peerpanel.agents.schemas import (
 )
 from peerpanel.embeddings.query_cache import CachedQueryEmbedder
 from peerpanel.evals.ablation import RUN_VARYING_FIELDS, run_ablation
-from peerpanel.evals.planted import DETECTION_RULE, asserts, detect
+from peerpanel.evals.planted import DETECTION_RULE, asserts, detect, plant_errors
 from peerpanel.evals.planted_eval import (
     BASELINE_MODELS,
     PANEL_SYSTEM,
     PlantedEvalReport,
     baseline_system,
+    scored_residue,
 )
 from peerpanel.evals.records import assert_run_conditions
 from peerpanel.graph.extract import EXTRACTION_PROVIDER_NAME
+from peerpanel.manuscripts.store import read_manuscript
 from peerpanel.orchestration.panel import detect_conflicts
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,7 +65,40 @@ def _panel(name: str) -> PanelReview:
 
 
 def _planted(name: str) -> PlantedEvalReport:
-    return PlantedEvalReport.model_validate_json((RESULTS / name).read_text())
+    """The record, or a failure that says what to do about it.
+
+    A record that predates a schema change is not a bug in the reader — it is a record
+    that has to be REGENERATED rather than hand-edited (D18), and the raw pydantic
+    traceback says which fields are missing but not that. Both are kept: the message
+    names the road, the original error is quoted underneath it.
+    """
+    try:
+        return PlantedEvalReport.model_validate_json((RESULTS / name).read_text())
+    except ValidationError as exc:
+        raise AssertionError(
+            f"{name} does not load under the current schema, so it was produced by "
+            "older code: regenerate it (`make eval`, `make eval SUBJECT=met17-auxotroph`) "
+            f"rather than editing the record.\n{exc}"
+        ) from exc
+
+
+def _perturbed_for(report: PlantedEvalReport) -> str:
+    """The perturbed manuscript this record's arms read, re-derived from the committed
+    manuscript by the committed generator.
+
+    Planting is seeded (`planted.SEED`), so this is reproducible rather than stored —
+    and the errors it produces must be the ones the record commits, or the record was
+    made from a different manuscript than the one in this tree and nothing downstream
+    of it means what it says.
+    """
+    _header, body = read_manuscript(ROOT / "manuscripts" / report.manuscript)
+    planted = plant_errors(body, report.manuscript, window_words=EXCERPT_WORDS)
+    assert planted.errors == report.errors, (
+        f"{report.manuscript}: re-planting this manuscript does not reproduce the "
+        "errors the record carries — the record and the manuscript in this tree "
+        "describe different runs"
+    )
+    return planted.text
 
 
 BUILD_RECORDS = sorted(p.name for p in RESULTS.glob("build-stats-*.json"))
@@ -177,10 +213,15 @@ class TestPlantedEvalRecords:
 
         Two counts, two rules, one direction between them. `detected` is the published
         headline and credits a finding whose own prose asserts the defect its planted
-        record names (`asserts`, rule `assertion-v1`); `named_token` is the labelled
+        record names (`asserts`, rule `DETECTION_RULE`); `named_token` is the labelled
         upper bound and credits a finding that merely names the token (`detect`). An
         assertion names the token by construction, so the headline can never exceed its
         own upper bound — a record where it does was produced by neither rule.
+
+        Both rules are re-run over `scored_texts`, the residue, because that is what the
+        harness scores under `assertion-v2`: `finding_texts` still holds everything the
+        arm wrote, and recomputing from it would credit the quotation the residue
+        removes — the round-4 defect this record shape exists to close.
         """
         report = _planted(name)
         assert report.detection_rule == DETECTION_RULE, (
@@ -191,9 +232,9 @@ class TestPlantedEvalRecords:
         assert report.n_errors == len(ids)
         assert report.error_kinds == {e.error_id: e.kind for e in report.errors}
         for arm in report.results:
-            detected = [e.error_id for e in report.errors if asserts(e, arm.finding_texts)]
-            missed = [e.error_id for e in report.errors if not asserts(e, arm.finding_texts)]
-            named = [e.error_id for e in report.errors if detect(e, arm.finding_texts)]
+            detected = [e.error_id for e in report.errors if asserts(e, arm.scored_texts)]
+            missed = [e.error_id for e in report.errors if not asserts(e, arm.scored_texts)]
+            named = [e.error_id for e in report.errors if detect(e, arm.scored_texts)]
             assert (arm.detected, arm.missed) == (detected, missed), arm.system
             assert arm.named_token == named, arm.system
             assert set(arm.detected) | set(arm.missed) == set(ids), arm.system
@@ -202,6 +243,36 @@ class TestPlantedEvalRecords:
                 f"{arm.system}: {sorted(set(arm.detected) - set(arm.named_token))} credited as "
                 "asserting a defect whose token the upper bound says no finding named"
             )
+
+    def test_the_scored_texts_are_the_committed_finding_texts_stripped(
+        self, name: str
+    ) -> None:
+        """The residue must be DERIVABLE from what the record already commits.
+
+        A record that simply asserted "these are the strings we scored" would be back
+        where round 4 found it: a description no reader can check. So every scored
+        string is re-derived here from the arm's own `finding_texts` and the perturbed
+        manuscript this tree's generator plants, through the same `scored_residue` the
+        harness used — one rule, two callers.
+        """
+        report = _planted(name)
+        perturbed = _perturbed_for(report)
+        for arm in report.results:
+            expected, dropped = scored_residue(arm.finding_texts, perturbed)
+            assert arm.scored_texts == expected, (
+                f"{arm.system}: the committed residue is not what stripping this "
+                "record's own finding_texts produces"
+            )
+            assert arm.quoted_sentences_dropped == dropped, arm.system
+            assert len(arm.scored_texts) <= len(arm.finding_texts), (
+                f"{arm.system}: stripping produced MORE strings than the arm wrote"
+            )
+            for error in report.errors:
+                if detect(error, arm.scored_texts):
+                    assert detect(error, arm.finding_texts), (
+                        f"{arm.system}: {error.error_id} is credited on the residue and "
+                        "not on the full text — stripping can only ever lower a count"
+                    )
 
     def test_a_kind_is_planted_or_skipped_never_both(self, name: str) -> None:
         report = _planted(name)

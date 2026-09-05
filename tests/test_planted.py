@@ -9,6 +9,7 @@ under. Nothing here talks to Ollama or the network.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -16,24 +17,37 @@ import pytest
 from numpy.typing import NDArray
 from pydantic import ValidationError
 
-from peerpanel.agents.reviewer_base import EXCERPT_WORDS
+from peerpanel.agents.reviewer_base import EXCERPT_WORDS, excerpt
 from peerpanel.agents.schemas import CallStats
 from peerpanel.evals.baseline import SCHEMA, run_baseline
-from peerpanel.evals.planted import DETECTION_RULE, SEED, PlantedError, detect, plant_errors
+from peerpanel.evals.planted import (
+    ASSERTION_CUES,
+    CLAUSE_BREAKS,
+    DETECTION_RULE,
+    NEGATION,
+    SEED,
+    PlantedError,
+    asserts,
+    detect,
+    plant_errors,
+)
 from peerpanel.evals.planted_eval import (
     BASELINE_MODELS,
     BASELINE_SYSTEM,
     PANEL_SYSTEM,
+    SCORING_NOTE,
     PlantedEvalReport,
     SystemResult,
     baseline_model_of,
     baseline_system,
     render_table,
     run_planted_eval,
+    scored_residue,
 )
 from peerpanel.manuscripts.store import read_manuscript
 from peerpanel.orchestration import PanelProviders
 from peerpanel.providers.base import ChatResponse, TokenLedger
+from peerpanel.text.chunks import sentences
 
 SAMPLE = "\n".join(
     [
@@ -263,6 +277,8 @@ def _arm(**overrides: object) -> dict[str, object]:
         "excluded_docs": [],
         "dropped_chunks": 0,
         "finding_texts": [],
+        "scored_texts": [],
+        "quoted_sentences_dropped": 0,
         "model_calls": _stats(),
         "unparsed_calls": 0,
         "models": {},
@@ -280,6 +296,22 @@ class TestTheRecordSchema:
         fields = dict(_arm())
         del fields["named_token"]
         with pytest.raises(ValidationError, match="named_token"):
+            SystemResult(**fields)  # type: ignore[arg-type]
+
+    def test_scored_texts_has_no_default(self) -> None:
+        """The residue is what the counts were computed over. A record that carries only
+        the unstripped `finding_texts` cannot be checked for the stripping, and round 4
+        found the un-checkable version of exactly this: 63% of the scored strings were
+        verbatim manuscript and nothing in the record said so."""
+        fields = dict(_arm())
+        del fields["scored_texts"]
+        with pytest.raises(ValidationError, match="scored_texts"):
+            SystemResult(**fields)  # type: ignore[arg-type]
+
+    def test_quoted_sentences_dropped_has_no_default(self) -> None:
+        fields = dict(_arm())
+        del fields["quoted_sentences_dropped"]
+        with pytest.raises(ValidationError, match="quoted_sentences_dropped"):
             SystemResult(**fields)  # type: ignore[arg-type]
 
     def test_detection_rule_has_no_default(self) -> None:
@@ -341,6 +373,31 @@ class TestTheRecordSchema:
             if line.strip().startswith(PANEL_SYSTEM) and "0/1" in line
         )
         assert panel_row.count("0/1") == 2, f"both counts must be printed: {panel_row}"
+
+    def test_render_table_says_how_much_of_each_arm_was_quotation(self) -> None:
+        """The captured `.log` is the surface a reader meets before the JSON, and an
+        arm that scored nothing because it quoted everything earned its 0 differently
+        from one that wrote its own prose and asserted nothing anyway."""
+        report = PlantedEvalReport(
+            manuscript="m.txt",
+            twin_in_corpus=False,
+            n_errors=0,
+            error_kinds={},
+            errors=[],
+            skipped_kinds={},
+            detection_rule=DETECTION_RULE,
+            results=[
+                SystemResult(  # type: ignore[arg-type]
+                    **_arm(
+                        finding_texts=["a quoted sentence.", "our own prose."],
+                        scored_texts=["our own prose."],
+                        quoted_sentences_dropped=1,
+                    )
+                )
+            ],
+            note="note",
+        )
+        assert "scored 1 of 2 strings after dropping 1 quoted sentence" in render_table(report)
 
 
 class _PanelStub:
@@ -411,6 +468,31 @@ class _BaselineStub:
         return ChatResponse(text=self._payload, model="stub", prompt_tokens=1, completion_tokens=1)
 
 
+class _QuotingStub:
+    """An arm whose whole finding is a sentence copied out of the manuscript it read.
+
+    This is not a hypothetical shape: round 4 measured 147 of the 235 committed scored
+    strings (63%) as verbatim slices of the perturbed manuscript, and every "named
+    token" credit the two records carried was one of them. `scored_text` closed the
+    `quote` route; this stub travels the OTHER one, `text`.
+    """
+
+    def __init__(self, name: str, quoted: str) -> None:
+        self.name = name
+        self._payload = json.dumps({"findings": [{"text": quoted, "quote": "unscored"}]})
+
+    def chat(
+        self,
+        *,
+        system: str,
+        user: str,
+        json_schema: object = None,
+        temperature: float = 0.0,
+        max_tokens: int = 2048,
+    ) -> ChatResponse:
+        return ChatResponse(text=self._payload, model="stub", prompt_tokens=1, completion_tokens=1)
+
+
 class _EmbedStub:
     """A constant, non-zero query vector: the ranking is not what these tests measure,
     and a zero vector would make cosine similarity undefined."""
@@ -422,6 +504,22 @@ class _EmbedStub:
         return np.full((len(texts), self.dim), 0.1, dtype=np.float32)
 
 
+class _QuotingBaselineStub(_BaselineStub):
+    """An arm that copies the manuscript instead of writing about it.
+
+    This is what the real local models mostly do — 63% of the committed scored strings
+    are pure quotation — so a harness test that only ever sees arms writing their own
+    prose is not testing the path the records actually take.
+    """
+
+    def __init__(self, name: str, quoted_sentence: str) -> None:
+        super().__init__(name, "unused", "unused")
+        self.name = name
+        self._payload = json.dumps(
+            {"findings": [{"text": quoted_sentence, "quote": "unscored"}]}
+        )
+
+
 def _tokens() -> tuple[str, str]:
     """The tokens the harness will plant, derived the same way the harness derives
     them — never retyped, so a change to the planting rule cannot leave this test
@@ -430,6 +528,82 @@ def _tokens() -> tuple[str, str]:
     planted = plant_errors(body, SUBJECT.name, window_words=EXCERPT_WORDS)
     by_kind = {e.kind: e.detection_token for e in planted.errors}
     return by_kind["fabricated_citation"], by_kind["gene_symbol_swap"]
+
+
+def _perturbed() -> str:
+    """The perturbed body the harness plants and every arm is shown — derived here the
+    same way the harness derives it, never retyped."""
+    _header, body = read_manuscript(SUBJECT)
+    return plant_errors(body, SUBJECT.name, window_words=EXCERPT_WORDS).text
+
+
+def _a_manuscript_sentence() -> str:
+    """One sentence of the perturbed excerpt that NAMES a planted token.
+
+    Taken from what an arm can actually see (`excerpt`), so the stub quotes what a real
+    arm could have quoted rather than text no model was shown; and carrying a token, so
+    the string is one the upper bound would credit if it reached the scored surface —
+    which is what makes the test below able to fail.
+    """
+    _header, body = read_manuscript(SUBJECT)
+    planted = plant_errors(body, SUBJECT.name, window_words=EXCERPT_WORDS)
+    tokens = [e.detection_token.lower() for e in planted.errors]
+    return next(
+        sentence
+        for sentence in sentences(excerpt(planted.text))
+        if len(sentence.split()) >= 12 and any(t in sentence.lower() for t in tokens)
+    )
+
+
+class TestQuotationNeverReachesTheScoredSurface:
+    """D-11: `scored_text` drops the `quote` field, and until round 4 the repository
+    published that as "only the finding's own prose is scored". It was not: nothing
+    stopped a model putting manuscript text in `text`. The residue closes that route,
+    and it can only ever lower a count — an arm that quotes and asserts nothing scores
+    nothing, which is what this proves end to end through the real harness."""
+
+    def _report(self) -> tuple[str, PlantedEvalReport]:
+        quoted = _a_manuscript_sentence()
+        panel = _PanelStub()
+        report = run_planted_eval(
+            ROOT,
+            SUBJECT,
+            PanelProviders(methods=panel, novelty=panel, verifier=panel, converger=panel),
+            baseline_providers=[
+                _QuotingStub(f"stub-wire:{model}", quoted) for model in BASELINE_MODELS
+            ],
+            embedder=_EmbedStub(),
+            corpus="ci",
+        )
+        return quoted, report
+
+    def test_a_finding_that_is_only_quotation_is_committed_but_not_scored(self) -> None:
+        quoted, report = self._report()
+        for model in BASELINE_MODELS:
+            arm = next(r for r in report.results if r.system == baseline_system(model))
+            assert arm.finding_texts == [quoted], (
+                f"{arm.system}: the record must still commit what the arm wrote"
+            )
+            assert arm.scored_texts == [], (
+                f"{arm.system}: verbatim manuscript reached the scored surface: "
+                f"{arm.scored_texts}"
+            )
+            assert arm.quoted_sentences_dropped == len(sentences(quoted)), arm.system
+            assert arm.detected == [] and arm.named_token == [], (
+                f"{arm.system}: a pure quotation minted a credit "
+                f"({arm.detected} / {arm.named_token})"
+            )
+
+    def test_the_same_quotation_would_have_been_credited_before_the_residue(self) -> None:
+        """Non-vacuity: this control can go red. The quoted sentence names a planted
+        token, so the OLD surface (the raw `finding_texts`) credits it under the upper
+        bound — the credit is removed by the residue, not by the string being harmless."""
+        quoted, report = self._report()
+        credited_raw = [e.error_id for e in report.errors if detect(e, [quoted])]
+        assert credited_raw, (
+            "the quoted sentence names no planted token, so this test would pass even "
+            "if the residue did nothing — pick a sentence carrying a planted token"
+        )
 
 
 class TestTheHarnessRunsThreeArms:
@@ -448,6 +622,71 @@ class TestTheHarnessRunsThreeArms:
             ],
             embedder=_EmbedStub(),
             corpus="ci",
+        )
+
+    def _report_with_a_quoting_arm(self) -> PlantedEvalReport:
+        """The same run, but one baseline arm writes a verbatim sentence of the body."""
+        asserted, named_only = _tokens()
+        quoted_sentence = next(
+            line.strip()
+            for line in _perturbed().splitlines()
+            if len(line.split()) > 12
+        )
+        panel = _PanelStub()
+        stubs = [_BaselineStub(f"stub-wire:{BASELINE_MODELS[0]}", asserted, named_only)]
+        stubs.append(_QuotingBaselineStub(f"stub-wire:{BASELINE_MODELS[1]}", quoted_sentence))
+        return run_planted_eval(
+            ROOT,
+            SUBJECT,
+            PanelProviders(methods=panel, novelty=panel, verifier=panel, converger=panel),
+            baseline_providers=stubs,
+            embedder=_EmbedStub(),
+            corpus="ci",
+        )
+
+    def test_the_exclusion_count_and_the_quotation_count_are_different_numbers(
+        self,
+    ) -> None:
+        """Two counts, two names — the one that shipped as the other.
+
+        `dropped_chunks` is what the arm's INDEX withheld; `quoted_sentences_dropped`
+        is how much of the arm's own writing was copied out of the manuscript. They
+        answer unrelated questions, and a regeneration published the second under the
+        first because a local rebound the parameter. The conformance suite caught it on
+        the committed records, an hour of model time after the mistake; this catches it
+        in a second, before anything is re-run.
+
+        The discriminating property is not that the two differ — they might coincide by
+        luck — but that they vary differently. Every arm searches the SAME index, so the
+        exclusion count is identical across arms; the quotation count is a property of
+        what each arm wrote, so it is not. Under the bug the exclusion count varied per
+        arm, which is the shape asserted against here.
+        """
+        report = self._report()
+        by_arm = {a.system: a.dropped_chunks for a in report.results}
+        assert len(set(by_arm.values())) == 1, (
+            f"the arms report different exclusion counts {by_arm} while searching one "
+            "index — dropped_chunks is carrying some per-arm quantity"
+        )
+        for arm in report.results:
+            assert (arm.dropped_chunks > 0) == bool(arm.excluded_docs), (
+                f"{arm.system}: dropped_chunks {arm.dropped_chunks} disagrees with "
+                f"excluded_docs {arm.excluded_docs}"
+            )
+        # The stubs above assert rather than quote, so nothing would be stripped and the
+        # quotation count would sit at 0 on every arm — a state in which this test could
+        # not tell the two quantities apart at all. Re-run it with an arm that DOES quote,
+        # using a real sentence out of the perturbed body every arm is shown.
+        quoting = self._report_with_a_quoting_arm()
+        by_arm = {a.system: a.dropped_chunks for a in quoting.results}
+        assert len(set(by_arm.values())) == 1, (
+            f"the arms report different exclusion counts {by_arm} once one of them "
+            "quotes — dropped_chunks is carrying the quotation count"
+        )
+        quoted = [a.quoted_sentences_dropped for a in quoting.results]
+        assert any(q > 0 for q in quoted), (
+            "the quoting arm dropped nothing, so this test still cannot tell the two "
+            f"counts apart: {quoted}"
         )
 
     def test_one_panel_row_and_one_row_per_baseline_model(self) -> None:
@@ -488,6 +727,19 @@ class TestTheHarnessRunsThreeArms:
         for error in report.errors:
             assert detect(error, arm.finding_texts) == (error.error_id in arm.named_token)
 
+    def test_the_record_commits_the_residue_its_counts_were_computed_over(self) -> None:
+        """`scored_texts` is derivable from `finding_texts` by the one shared rule, so a
+        reader can check the stripping instead of taking it on trust."""
+        report = self._report()
+        perturbed = _perturbed()
+        for arm in report.results:
+            expected, dropped = scored_residue(arm.finding_texts, perturbed)
+            assert arm.scored_texts == expected, arm.system
+            assert arm.quoted_sentences_dropped == dropped, arm.system
+            for error in report.errors:
+                assert asserts(error, arm.scored_texts) == (error.error_id in arm.detected)
+                assert detect(error, arm.scored_texts) == (error.error_id in arm.named_token)
+
     def test_the_note_derives_a_budget_clause_per_baseline_arm(self) -> None:
         report = self._report()
         for model in BASELINE_MODELS:
@@ -522,3 +774,173 @@ class TestTheHarnessRunsThreeArms:
                 corpus="ci",
             )
         assert panel.calls == 0
+
+
+# --------------------------------------------------------------------------------------
+# The note is pinned to the mechanism, not to a phrase.
+#
+# Round 4, unanimously (reports 1, 2 and 3): every committed record's `note` described the
+# negation test as "a negation in the five words before the assertion cue disqualifying
+# it" — the PRE-calibration mechanism, defeated by a control before the rule scored
+# anything and replaced by clause scope. The wrong sentence survived 559 green tests
+# because the only test that read `note` checked which arm names appeared in it.
+#
+# So this pins behaviour, not wording. The note has to SELECT a mechanism (clause scope,
+# or a fixed word window), and the mechanism it selects — re-implemented here, from the
+# note's own words, independently of `planted.py` — has to reach the same verdict as the
+# shipped code on every control below. A rewrite that changes the sentence but not the
+# rule stays green; a rewrite that describes a different rule goes red, and so does a
+# change to the rule that leaves the sentence behind.
+# --------------------------------------------------------------------------------------
+
+# The token every control names, so a control can be credited at all.
+_TOKEN = "Dcr2"
+_CONTROL_ERROR = PlantedError(
+    error_id="gene_symbol_swap-0",
+    kind="gene_symbol_swap",
+    original="Dcr1",
+    replacement="Dcr2",
+    detection_token=_TOKEN,
+    line_no=1,
+)
+
+# The controls. The first is the sentence that DEFEATED the five-word window before any
+# record was scored (DECISIONS D21); the second disagrees in the other direction; the
+# rest are the negation shapes the two mechanisms are most likely to split on, plus one
+# plain assertion both must credit.
+_CONTROLS = (
+    "Nothing about the Dcr2 reference is incorrect.",
+    "Dcr2 is not shown; it is incorrect.",
+    "The Dcr2 citation is incorrect.",
+    "Dcr2, not Dcr1, is incorrect.",
+    "No part of the Dcr2 annotation here is incorrect.",
+    "Neither of the two Dcr2 mentions is incorrect.",
+)
+
+# The clause the records shipped, verbatim from `results/planted-eval-*.json` at commit
+# b1f58dc. Kept as a literal rather than read from the records, because the records are
+# regenerated and the point of this control is that the pin catches THIS text.
+_SUPERSEDED_NOTE_CLAUSE = (
+    "some sentence of the finding's own prose both names the planted token and asserts "
+    "that something is wrong, with a negation in the five words before the assertion "
+    "cue disqualifying it."
+)
+
+_FIXED_WINDOW = re.compile(
+    r"\b(\w+)\s+words?\s+(?:before|back|preceding|in front of)\b|\b\w+-word\b", re.IGNORECASE
+)
+_CLAUSE_SCOPE = re.compile(r"\bclause\b", re.IGNORECASE)
+_NUMBER_WORDS = {
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9,
+    "ten": 10,
+}
+
+
+def _mechanism_the_note_describes(note: str) -> tuple[str, int | None]:
+    """Which negation mechanism does this prose describe — clause scope, or an N-word
+    window? A note that names both, or neither, describes nothing checkable."""
+    window = _FIXED_WINDOW.search(note)
+    clause = _CLAUSE_SCOPE.search(note)
+    assert bool(window) != bool(clause), (
+        "the note must name exactly one negation mechanism; it names "
+        f"{'both' if window and clause else 'neither'}: {note}"
+    )
+    if clause:
+        return "clause", None
+    assert window is not None
+    return "window", _NUMBER_WORDS.get((window.group(1) or "").lower(), 5)
+
+
+def _credited(sentence: str, *, window: int | None) -> bool:
+    """Score one control under a negation mechanism implemented HERE, not imported.
+
+    The cue alternation and the negation vocabulary are the code's (they are not what
+    drifted); the SCOPE is written out, because the scope is the thing the note has to
+    describe. `window=None` is clause scope — back to the sentence start or the last
+    clause break; `window=n` is a fixed n-word lookback.
+    """
+    if _TOKEN.lower() not in sentence.lower():
+        return False
+    for cue in ASSERTION_CUES.finditer(sentence):
+        before = sentence[: cue.start()]
+        if window is None:
+            breaks = list(CLAUSE_BREAKS.finditer(before))
+            if breaks:
+                before = before[breaks[-1].end() :]
+        else:
+            before = " ".join(before.split()[-window:])
+        if not NEGATION.search(before):
+            return True
+    return False
+
+
+def _assert_the_note_pins_the_mechanism(note: str) -> None:
+    """Every check this pin makes, over any candidate note — so the control below can
+    run the identical pin over the sentence that shipped and show it failing."""
+    _kind, window = _mechanism_the_note_describes(note)
+    disagreements = [
+        sentence
+        for sentence in _CONTROLS
+        if _credited(sentence, window=window) != asserts(_CONTROL_ERROR, [sentence])
+    ]
+    assert not disagreements, (
+        "the rule this note describes and the rule that runs reach different verdicts "
+        f"on {disagreements} — the record would misstate how its own number was made"
+    )
+    for word in re.findall(r"[a-z]{3,}", CLAUSE_BREAKS.pattern):
+        assert word in note, (
+            f"the code breaks a clause at {word!r} and the note never says so — a reader "
+            "re-scoring by hand would scan a different span"
+        )
+    for marker, limit in (
+        ("real assertion", "that a negation can suppress a REAL assertion"),
+        ("same-sentence only", "that the rule is same-sentence only"),
+    ):
+        assert marker.lower() in note.lower(), (
+            f"the note drops a limit the rule has and `asserts` discloses: {limit}"
+        )
+
+
+class TestTheNoteDescribesTheRuleThatRan:
+    def test_the_shipped_note_is_pinned_to_the_shipped_mechanism(self) -> None:
+        _assert_the_note_pins_the_mechanism(SCORING_NOTE)
+
+    def test_the_disclosed_limits_are_the_code_s_actual_behaviour(self) -> None:
+        """Disclosing a limit the rule does not have would be its own drift, so each
+        limit the note states is exercised against the code."""
+        assert not asserts(_CONTROL_ERROR, ["Dcr2, not Dcr1, is incorrect."]), (
+            "the note says a negation can suppress a real assertion; the code credited one"
+        )
+        assert not asserts(_CONTROL_ERROR, ["Dcr2 is named here. That symbol is incorrect."]), (
+            "the note says the rule is same-sentence only; the code crossed a boundary"
+        )
+
+    def test_the_two_mechanisms_genuinely_disagree_so_this_pin_can_fail(self) -> None:
+        """A control that cannot go red is worth nothing. The clause-scoped and
+        five-word readings must disagree on at least one control, and the code must
+        side with clause scope on all of them."""
+        split = [c for c in _CONTROLS if _credited(c, window=None) != _credited(c, window=5)]
+        assert "Nothing about the Dcr2 reference is incorrect." in split, split
+        for sentence in _CONTROLS:
+            assert _credited(sentence, window=None) == asserts(_CONTROL_ERROR, [sentence]), (
+                f"the clause-scoped reading and the shipped code disagree on {sentence!r}"
+            )
+
+    def test_the_sentence_that_shipped_fails_this_pin(self) -> None:
+        """The proof this test would have caught round 4's finding: the same pin, run
+        over the clause the two committed records carried."""
+        with pytest.raises(AssertionError, match=r"different verdicts"):
+            _assert_the_note_pins_the_mechanism(_SUPERSEDED_NOTE_CLAUSE)
+        assert _mechanism_the_note_describes(_SUPERSEDED_NOTE_CLAUSE) == ("window", 5)
+
+    def test_the_note_never_reads_as_a_fixed_window(self) -> None:
+        assert not _FIXED_WINDOW.search(SCORING_NOTE), (
+            "the note describes a fixed word window; the code scopes by clause"
+        )
+        assert "five words" not in SCORING_NOTE.lower()

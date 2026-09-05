@@ -24,7 +24,12 @@ from pydantic import BaseModel
 from peerpanel.text.chunks import sentences
 
 SEED = 20260831
-DETECTION_RULE = "assertion-v1"
+DETECTION_RULE = "assertion-v2"
+# v1 -> v2 because WHAT is scored changed, not how it is judged. Under v1 a finding's
+# whole `text` reached `asserts` and `detect`; under v2 only `own_prose(text, manuscript)`
+# does — the sentences of it that are not verbatim manuscript. `ASSERTION_CUES`, the
+# negation scope and the same-sentence clause are byte-identical to v1. The id is bumped
+# so no record can carry a v1 rule name over a v2 count.
 
 # The assertion rule, frozen before any control was run against it (plan D-1) and
 # implemented exactly as specified: one word-anchored alternation, in this order,
@@ -107,19 +112,94 @@ class PlantedManuscript(BaseModel):
 
 
 def scored_text(text: str, quote: str) -> str:
-    """The string a finding is scored on: its own prose, never the text it quotes.
+    """A finding's `text`, with the `quote` field dropped — the FIRST of two steps.
 
     ONE function for both arms, and it discards the quote on purpose. A `quote`
     is by definition a verbatim slice of the manuscript, and the planted token
     is planted INTO the manuscript — so scoring text + quote credited an arm for
     reproducing the perturbed sentence, which is what every credited detection
     in the first committed records turned out to be (round-3 review, all three
-    evaluators). What an arm wrote in its own words is the only thing that can
-    carry an assertion, so it is the only thing scored. The quote is still
-    collected and committed, so a reader can see what each finding pointed at.
+    evaluators). The quote is still collected and committed, so a reader can see
+    what each finding pointed at.
+
+    This closes ONE of quotation's two routes, and until round 4 the published
+    prose claimed it closed both. It does not: nothing stops a model putting
+    manuscript text in `text`, and these models mostly do. `own_prose` below is
+    the second step and the one that makes the claim true; read its docstring
+    for the measurement.
     """
     del quote  # collected for the record, deliberately not scored
     return text.strip()
+
+
+_WHITESPACE = re.compile(r"\s+")
+
+
+def _normalised(text: str) -> str:
+    """One shape for both sides of the quotation test: single spaces, case-folded."""
+    return _WHITESPACE.sub(" ", text).strip().casefold()
+
+
+def own_prose(text: str, manuscript: str) -> str:
+    """`text` with every sentence that is verbatim manuscript dropped — what v2 scores.
+
+    The residue, not the raw string, is what `asserts` and `detect` are given. The
+    text is cut on the SAME abbreviation-aware boundary the index uses
+    (`peerpanel.text.chunks.sentences`, never a second splitter — DECISIONS D19); a
+    sentence whose whitespace-normalised, case-folded form is a substring of the same
+    normalisation of `manuscript` is dropped; what is left is joined back with single
+    spaces. A finding that is entirely quotation returns `""`. A finding that appends
+    a real assertion to a quotation keeps the assertion and loses the quotation.
+
+    `manuscript` must be the PERTURBED text the arm was actually shown. Compared
+    against the unperturbed original, every quotation of a planted sentence would
+    survive — which is the exact string class this exists to remove.
+
+    Why it exists. `scored_text` drops the `quote` field, and the repository published
+    that as "only the finding's own prose is scored". Nothing stopped a model putting
+    manuscript text in `text`, and the review that found this measured how often they
+    do: **147 of the 235 scored strings — 63% — were verbatim slices of the perturbed
+    manuscript** in the records it judged, where all 8 of one panel reviewer's met17
+    findings had `text` byte-identical to their own `quote`, and every string that had
+    ever earned a `named token` credit was one of them. The published `named token`
+    column was therefore measuring quotation, not naming.
+
+    Those records have since been superseded, and the figure moves with the run because
+    it is a property of what the models wrote rather than of this code: the records
+    committed beside this file read **152 of 256, 59%**. Both numbers are recomputable —
+    `tests/test_planted_soundness.py` measures the committed share on every test run and
+    prints it per arm — and the one quoted second is the one a reader can check today.
+
+    Why this is a fix and not a tune. It can only ever LOWER a count, never raise one:
+    it only ever removes text before the two rules see it, and both are existential
+    (some sentence of some string), so anything credited on the residue would have been
+    credited on the raw string too. A post-hoc scoring change that is arithmetically
+    incapable of flattering the headline is the one shape of post-hoc change that
+    cannot be fitting to the result — which is why the cue list is untouched and only
+    the input to it moved.
+
+    Its limits, stated rather than hidden:
+
+    - it is a WHOLE-SENTENCE rule. A sentence that quotes the manuscript and adds three
+      words of its own survives intact, and so does one that quotes with a typo, a
+      dropped bracket or a reflowed dash. It under-removes, never over-removes, so a
+      count carried through it is still an upper bound on non-quotation;
+    - it inherits the shared splitter's boundaries, including the single-character rule
+      that keeps "conducted in R." joined to the sentence after it, so a quotation the
+      splitter cuts differently from the manuscript's own layout is compared as the
+      pieces it cut;
+    - a sentence that merely shares vocabulary with the manuscript is NOT quotation and
+      is kept. The test is substring, not similarity, on purpose: similarity would need
+      a threshold, and a threshold is exactly the knob this rule must not have.
+    """
+    body = _normalised(manuscript)
+    kept: list[str] = []
+    for sentence in sentences(text):
+        normalised = _normalised(sentence)
+        if not normalised or normalised in body:
+            continue
+        kept.append(sentence.strip())
+    return " ".join(kept)
 
 
 _GENE = re.compile(r"\b([A-Z][a-z]{2}[0-9]{1,2}|[A-Z]{2,6}[0-9]{1,2})\b")
@@ -325,7 +405,7 @@ def _is_negated(sentence: str, cue_start: int) -> bool:
 def asserts(error: PlantedError, finding_texts: list[str]) -> bool:
     """Did some finding ASSERT the defect this planted error records, in its own prose?
 
-    The rule (`DETECTION_RULE`, "assertion-v1"): a finding is credited iff ONE of its
+    The rule (`DETECTION_RULE`, "assertion-v2"): a finding is credited iff ONE of its
     sentences — cut on the abbreviation-aware boundary the index uses
     (`peerpanel.text.chunks.sentences`, never a second splitter), with parenthesised
     spans held whole — contains both the detection token (case-insensitive substring,
@@ -364,9 +444,16 @@ def asserts(error: PlantedError, finding_texts: list[str]) -> bool:
     and masked parentheticals, both string-agnostic. `DETECTION_RULE` keeps its name
     because no record was ever produced by the pre-calibration code.
 
+    What reaches it is the v2 change and the only one: the evaluation passes the
+    `own_prose` residue of each string, not the raw string, so a sentence that is
+    verbatim manuscript is gone before this function is called. The judgement below is
+    v1's, unchanged, and the substitution can only remove candidate sentences — see
+    `own_prose` for why that direction is the whole argument.
+
     Every string this rule scored is committed beside the number it produced, in the
-    record's `finding_texts`, so a reader can judge each decision rather than trust
-    the count. `detect` stays beside it as the "named the token" upper bound.
+    record's `finding_texts` (everything the arm wrote) and `scored_texts` (the residue
+    actually scored), so a reader can judge each decision rather than trust the count.
+    `detect` stays beside it as the "named the token" upper bound.
     """
     token = error.detection_token.lower()
     for text in finding_texts:

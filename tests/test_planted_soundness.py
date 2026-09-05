@@ -1,6 +1,6 @@
 """The planted-error benchmark must be able to earn the score it reports.
 
-Four ways a planted-error harness can report a number that means nothing, all
+Five ways a planted-error harness can report a number that means nothing, all
 of which this one did at some point:
 
 1. Plant errors where no reviewer looks. Both arms read a 900-word excerpt;
@@ -16,8 +16,14 @@ of which this one did at some point:
    "the excerpt mentions Dcr2" from "Dcr2 is the wrong symbol", and round 3 found
    that every credited catch in the first committed records was of the first kind
    — a verbatim quotation of the perturbed manuscript.
+5. Close one of quotation's two routes and publish that both are closed. Round 3
+   made `scored_text` drop a finding's `quote` field; nothing stopped a model
+   putting manuscript text in `text`, and round 4 measured that 147 of the 235
+   committed scored strings (63%) are verbatim slices of the perturbed manuscript,
+   including every string that ever earned a `named token` credit. `own_prose` is
+   the second route closed, and `TestOnlyOwnProseIsScored` below is its control.
 
-These tests pin all four as properties of the harness, so a future change that
+These tests pin all five as properties of the harness, so a future change that
 reintroduces any of them fails here rather than silently producing a number.
 
 The fourth is the reason for `asserts` and for the two controls it is held to:
@@ -36,6 +42,7 @@ The fourth is the reason for `asserts` and for the two controls it is held to:
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -51,6 +58,7 @@ from peerpanel.evals.planted import (
     PlantedError,
     asserts,
     detect,
+    own_prose,
     plant_errors,
 )
 from peerpanel.manuscripts.store import read_manuscript
@@ -58,6 +66,22 @@ from peerpanel.text.chunks import sentences
 
 ROOT = Path(__file__).resolve().parents[1]
 MANUSCRIPTS = ROOT / "manuscripts"
+RESULTS = ROOT / "results"
+PLANTED_RECORDS = sorted(RESULTS.glob("planted-eval-*.json"))
+MET17_RECORD = RESULTS / "planted-eval-met17-auxotroph.json"
+# The exact string both round-4 evaluators quote as the one that minted the panel's
+# `named token` credit on met17. It is asserted to be IN the committed record before it
+# is used, so this control is the repository's own text and not a reconstruction of it.
+# The reference ranges carry an EN DASH, written as an escape so the pin says which dash
+# it is rather than leaving a reader to tell two glyphs apart.
+CITED_MET17_QUOTATION = (
+    "The MET18 gene, also known as MET15 or MET25 [13\u201315], catalyzes homocysteine "
+    "synthesis by reacting H2S with O-acetyl homoserine (i.e. displaying OAH "
+    "sulfhydrylase activity) [16\u201318]."
+)
+# Word characters minus the underscore: "met17\u0394" is one word here, and case-folding
+# turns its delta lowercase, so a hand-written a-z class would silently drop it.
+_WORD = re.compile(r"[^\W_]+")
 SUBJECT = MANUSCRIPTS / "caprin-heterochromatin.txt"
 SUBJECT_STEMS = sorted(path.stem for path in MANUSCRIPTS.glob("*.txt"))
 FIXTURE = ROOT / "tests" / "fixtures" / "round3_scored_strings.json"
@@ -93,10 +117,40 @@ def _planted(path: Path = SUBJECT):  # type: ignore[no-untyped-def]
     return plant_errors(body, path.name, window_words=EXCERPT_WORDS)
 
 
+def _normalised(text: str) -> str:
+    """The quotation test's string shape, written out here rather than imported.
+
+    `own_prose` normalises whitespace and case-folds before testing for a substring;
+    this is that rule stated independently, so a test comparing against it is a check
+    and not a tautology.
+    """
+    return re.sub(r"\s+", " ", text).strip().casefold()
+
+
+def _record_and_manuscript(path: Path) -> tuple[dict[str, Any], str]:
+    """A committed planted-eval record beside the PERTURBED text its arms were shown.
+
+    The manuscript is re-planted here rather than assumed, and the planted errors are
+    compared with the record's own: if they differ, the text being tested for quotation
+    is not the text that produced these strings and every count below would be measuring
+    the wrong pair.
+    """
+    record: dict[str, Any] = json.loads(path.read_text())
+    source = MANUSCRIPTS / str(record["manuscript"])
+    _header, body = read_manuscript(source)
+    planted = plant_errors(body, source.name, window_words=EXCERPT_WORDS)
+    assert [error.model_dump() for error in planted.errors] == record["errors"], (
+        f"{path.name}: re-planting does not reproduce the record's errors — the perturbed "
+        "text compared against here is not the text its arms were shown"
+    )
+    return record, planted.text
+
+
 def _fixture() -> dict[str, Any]:
     if not FIXTURE.exists():  # pragma: no cover - the fixture is committed
         pytest.fail(f"{FIXTURE} is missing — the negative control cannot run without it")
-    return json.loads(FIXTURE.read_text())
+    fixture: dict[str, Any] = json.loads(FIXTURE.read_text())
+    return fixture
 
 
 def _errors_of(fixture: dict[str, Any], record: str) -> list[PlantedError]:
@@ -265,9 +319,14 @@ class TestTokensCannotBeMintedByAccident:
 
 class TestTheRuleIsFrozen:
     def test_the_cue_alternation_is_the_frozen_text(self) -> None:
-        """The instrument is frozen before the control runs; this pins the bytes."""
+        """The instrument is frozen before the control runs; this pins the bytes.
+
+        The rule id moved v1 -> v2 when `own_prose` changed WHAT is scored; the
+        alternation it is judged with did not move, and that is what this pins. A cue
+        list edited to make a control pass would fail here whatever the id says.
+        """
         assert ASSERTION_CUES.pattern == FROZEN_CUES
-        assert DETECTION_RULE == "assertion-v1"
+        assert DETECTION_RULE == "assertion-v2"
 
     def test_the_dropped_cues_stay_dropped(self) -> None:
         """Each dropped word is ordinary vocabulary here — proven against the real text."""
@@ -536,4 +595,199 @@ class TestScoringCreditsOnlyAssertions:
         )
         assert "review.summary" not in source.split("panel_texts")[1][:400], (
             "the converger's prose is not an assertion channel"
+        )
+
+
+class TestOnlyOwnProseIsScored:
+    """Round 4 (report 1 finding 2, report 3 finding 3): `text` was quotation's other route.
+
+    `scored_text` drops a finding's `quote`, and the repository published that as "only
+    the finding's own prose is scored". It was not: on met17 all 8 of the panel methods
+    reviewer's findings have `text` byte-identical to their own `quote`, and 63% of every
+    committed scored string is a verbatim slice of the perturbed manuscript. `own_prose`
+    removes those sentences before either rule sees them.
+
+    Every string in this class comes out of a committed record or a committed manuscript.
+    The one assertion sentence that is written here is written to be scored, not to be
+    quoted, and it is the only invented text in the class.
+    """
+
+    def _met17(self) -> tuple[dict[str, Any], str]:
+        if not MET17_RECORD.exists():  # pragma: no cover - the record is committed
+            pytest.fail(f"{MET17_RECORD} is missing — these controls have no source text")
+        return _record_and_manuscript(MET17_RECORD)
+
+    def _pure_quotation(self, record: dict[str, Any], perturbed: str) -> str:
+        """The first committed string of this record that is quotation and nothing else."""
+        for result in record["results"]:
+            for text in result["finding_texts"]:
+                if not own_prose(str(text), perturbed):
+                    return str(text)
+        pytest.fail(
+            "no committed string is pure quotation — this control would have to be "
+            "invented, and the defect it guards would be unmeasured"
+        )
+
+    def test_a_committed_pure_quotation_string_is_scored_on_nothing(self) -> None:
+        """A string that is only manuscript leaves no residue, so neither rule can fire."""
+        record, perturbed = self._met17()
+        quotation = self._pure_quotation(record, perturbed)
+        assert _normalised(quotation) in _normalised(perturbed), (
+            "the control string is not actually quotation"
+        )
+        residue = own_prose(quotation, perturbed)
+        assert residue == "", residue
+        for error in (PlantedError(**error) for error in record["errors"]):
+            assert not asserts(error, [residue]), f"{error.error_id}: {quotation[:160]!r}"
+            assert not detect(error, [residue]), f"{error.error_id}: {quotation[:160]!r}"
+
+    def test_an_assertion_appended_to_that_quotation_survives_and_scores(self) -> None:
+        """The stripping is surgical: the quotation goes, the arm's own claim stays.
+
+        Without this the change would be indistinguishable from scoring nothing at all,
+        which would also make the headline 0.
+        """
+        record, perturbed = self._met17()
+        quotation = self._pure_quotation(record, perturbed)
+        error = next(
+            PlantedError(**error)
+            for error in record["errors"]
+            if error["kind"] == "gene_symbol_swap"
+        )
+        assertion = (
+            f"The symbol {error.detection_token} here is incorrect; "
+            "the S. cerevisiae gene is MET17."
+        )
+        assert _normalised(assertion) not in _normalised(perturbed), (
+            "the assertion is itself manuscript text — it would be stripped for the "
+            "right reason and prove nothing"
+        )
+        combined = f"{quotation.strip()} {assertion}"
+        assert len(sentences(combined)) > len(sentences(quotation)), (
+            "the assertion did not become a sentence of its own — the control is vacuous"
+        )
+        residue = own_prose(combined, perturbed)
+        assert residue == assertion, residue
+        assert asserts(error, [residue]), residue
+        assert detect(error, [residue]), residue
+        assert asserts(error, [combined]), (
+            "v2 credits a string v1 did not — the change must only ever REMOVE candidates"
+        )
+
+    def test_the_met17_credit_the_evaluators_cite_is_no_longer_minted(self) -> None:
+        """The specific published cell round 4 named: `named token` 1/3, minted by a quote."""
+        record, perturbed = self._met17()
+        panel = next(result for result in record["results"] if result["system"] == "panel")
+        assert CITED_MET17_QUOTATION in panel["finding_texts"], (
+            "the cited string is not in the committed panel record — this control has "
+            "lost its provenance and would be testing invented text"
+        )
+        error = next(
+            PlantedError(**error)
+            for error in record["errors"]
+            if error["detection_token"] == "MET18"
+        )
+        assert detect(error, [CITED_MET17_QUOTATION]), (
+            "the defect itself: this string is what credited the panel under v1"
+        )
+        residue = own_prose(CITED_MET17_QUOTATION, perturbed)
+        assert residue == "", residue
+        assert not detect(error, [residue]), "the quotation still mints the named-token credit"
+        assert not asserts(error, [residue])
+
+    def test_sharing_the_manuscripts_vocabulary_is_not_quotation(self) -> None:
+        """The stripping is a substring test, not a similarity one — so it is not over-eager.
+
+        The survivor is chosen as the committed string with the HIGHEST share of
+        manuscript vocabulary that `own_prose` keeps whole: if the rule were fitting on
+        resemblance rather than identity, this is the string it would take first.
+        """
+        record, perturbed = self._met17()
+        vocabulary = set(_WORD.findall(perturbed.casefold()))
+        assert vocabulary, "the perturbed manuscript produced no vocabulary to share"
+        best: tuple[float, str] | None = None
+        for result in record["results"]:
+            for text in result["finding_texts"]:
+                if _normalised(own_prose(str(text), perturbed)) != _normalised(str(text)):
+                    continue
+                words = _WORD.findall(str(text).casefold())
+                if len(words) < 20:
+                    continue
+                share = sum(1 for word in words if word in vocabulary) / len(words)
+                if best is None or share > best[0]:
+                    best = (share, str(text))
+        assert best is not None, "every committed string was stripped — the rule is over-eager"
+        share, survivor = best
+        assert _normalised(survivor) not in _normalised(perturbed), survivor[:160]
+        assert share >= 0.8, (
+            f"the most manuscript-flavoured survivor shares only {share:.0%} of its words "
+            "with the manuscript — this control no longer proves the rule is not "
+            f"resemblance-based: {survivor[:160]!r}"
+        )
+        assert _normalised(own_prose(survivor, perturbed)) == _normalised(survivor), (
+            f"a string sharing {share:.0%} of the manuscript's vocabulary but quoting none "
+            f"of its sentences was stripped: {survivor[:200]!r}"
+        )
+
+    def test_stripping_quotation_can_only_lower_a_count(self) -> None:
+        """D-11's whole argument, measured rather than asserted: v2 never credits more.
+
+        A scoring change made after the results are known is a tune unless it is
+        arithmetically incapable of flattering the headline. Over every (planted error,
+        committed string) pair in both records, and for BOTH rules, a credit on the
+        `own_prose` residue must imply a credit on the raw string. A rule change that
+        could raise a published number fails here.
+        """
+        pairs = 0
+        raised: list[str] = []
+        for path in PLANTED_RECORDS:
+            record, perturbed = _record_and_manuscript(path)
+            errors = [PlantedError(**error) for error in record["errors"]]
+            for result in record["results"]:
+                for text in (str(text) for text in result["finding_texts"]):
+                    residue = own_prose(text, perturbed)
+                    for error in errors:
+                        pairs += 1
+                        for rule in (asserts, detect):
+                            if rule(error, [residue]) and not rule(error, [text]):
+                                raised.append(
+                                    f"{path.name} {result['system']} {error.error_id} "
+                                    f"{rule.__name__}: {text[:120]!r}"
+                                )
+        assert pairs > 0, "the sweep compared nothing"
+        assert not raised, "own_prose RAISED a credit:\n" + "\n".join(raised)
+
+    def test_how_much_of_the_committed_scored_surface_is_pure_quotation(self) -> None:
+        """The measurement, per arm, over every committed record — the number to publish.
+
+        Asserted non-zero so it cannot pass on an empty sweep, and reported per arm in the
+        assertion message and on stdout so the published figure is read off a test rather
+        than off a notebook nobody kept.
+        """
+        assert PLANTED_RECORDS, f"no planted-eval records under {RESULTS} to measure"
+        rows: list[str] = []
+        pure_total = 0
+        string_total = 0
+        for path in PLANTED_RECORDS:
+            record, perturbed = _record_and_manuscript(path)
+            subject = path.stem.removeprefix("planted-eval-")
+            for result in record["results"]:
+                texts = [str(text) for text in result["finding_texts"]]
+                pure = [text for text in texts if not own_prose(text, perturbed)]
+                rows.append(
+                    f"  {subject} · {result['system']}: {len(pure)}/{len(texts)} strings "
+                    "are pure quotation"
+                )
+                pure_total += len(pure)
+                string_total += len(texts)
+        assert string_total, "the sweep read no strings"
+        share = pure_total / string_total
+        report = (
+            f"pure quotation on the committed records: {pure_total}/{string_total} "
+            f"({share:.0%}) of scored strings leave no own prose\n" + "\n".join(rows)
+        )
+        print(report)
+        assert pure_total > 0, (
+            "not one committed string is pure quotation — either the records were "
+            f"regenerated or the sweep is measuring nothing:\n{report}"
         )

@@ -5,8 +5,8 @@ says what those lines must carry: the evaluation table with the assertion-only c
 and the cost per named local model, the panel-vs-single result *as the record shows
 it*, the sentence that this is a demonstration system, a link to the credibility map,
 and — for the review loop, whose record is private — the round count, the findings
-total and the pinned evaluator's sha256. Every number there is read from a named
-`results/` record by this file.
+total, how many rounds came back clean and the pinned evaluator's sha256. Every number
+there is read from a named `results/` record by this file.
 
 Structurally, and the word is load-bearing. Round 3's defect class was a guard that
 asserted a string appears SOMEWHERE in a document: it passes while the row it was
@@ -357,11 +357,35 @@ class TestTheEvaluationTableIsBound:
         )
 
 
+# How many rounds came back clean, as the page may honestly say it: the digit, or the
+# word a writer reaches for when the answer is none. The count must stand in the same
+# clause as `clean` (no `.`, `;` or `,` between them), so it is bound to the word it
+# qualifies rather than merely present in the paragraph — and `clean clone`, which is
+# how this page describes what an evaluator is handed, is not a clean round.
+_ZERO_WORDS = {"not one": 0, "nothing": 0, "none": 0, "never": 0, "zero": 0, "no": 0}
+_CLEAN_COUNT = re.compile(
+    r"\b(?P<count>not one|nothing|none|never|zero|no|\d+)\b[^.;,]{0,60}?\bclean\b(?!\s+clones?\b)",
+    re.IGNORECASE,
+)
+
+
+def _clean_counts(text: str) -> list[int]:
+    """Every clean-round count `text` states, in reading order."""
+    counts = []
+    for match in _CLEAN_COUNT.finditer(text):
+        token = match.group("count").lower()
+        counts.append(_ZERO_WORDS[token] if token in _ZERO_WORDS else int(token))
+    return counts
+
+
 class TestTheEvaluationLoopLine:
     """Requirement 10's second branch: a sentence about what the review loop found
     either links a committed verbatim excerpt, or says the record is private. This
     repository's gauntlet is private, so the line says so — and its numbers are still
-    bound, to `results/evaluation-loop.json`."""
+    bound, to `results/evaluation-loop.json`: the rounds completed, the findings they
+    filed, and how many of them came back clean — that last one because the record's
+    unflattering number is the one a page is tempted to leave out (round 4, report 1,
+    finding 3)."""
 
     def _loop(self) -> dict[str, object]:
         path = ROOT / "results" / "evaluation-loop.json"
@@ -413,6 +437,76 @@ class TestTheEvaluationLoopLine:
             "allows a sentence about what the loop found only if it links a committed "
             "verbatim excerpt or says the record is private."
         )
+
+    def _block(self, sha: str) -> str:
+        """The first-screen paragraph that states the loop.
+
+        The sha line and the lines contiguous with it: a first-screen line is capped at
+        160 characters, so the sentence may legitimately wrap and the physical line is
+        the wrong unit for a third number. What binds is not presence in the paragraph
+        but the count standing in the same clause as the word `clean`.
+        """
+        index = HEAD_LINES.index(self._line(sha))
+        start, end = index, index
+        while start > 0 and HEAD_LINES[start - 1].strip():
+            start -= 1
+        while end + 1 < len(HEAD_LINES) and HEAD_LINES[end + 1].strip():
+            end += 1
+        return "\n".join(HEAD_LINES[start : end + 1])
+
+    def test_the_loop_line_carries_the_clean_round_count(self) -> None:
+        """`rounds_clean`, bound the way `rounds_completed` and `findings_by_round` are.
+
+        Round 4 (report 1, finding 3): the record carries a stated success criterion —
+        "a round is clean only when all three reports end in the literal token CLEAN" —
+        a cap of 8 rounds, and a met-it-this-often count of 0, and the first screen
+        published the round count and the findings total but not that one. It is the
+        only self-assessment number in a committed record that the page left out, and
+        the only one that makes the sentence harsher rather than softer, which is the
+        direction this repository's own standard says must be published.
+        """
+        loop = self._loop()
+        assert "rounds_clean" in loop, (
+            "results/evaluation-loop.json no longer carries rounds_clean — the count of "
+            "rounds where all three reports ended in CLEAN, which its own _what defines. "
+            "The first screen states it, so the record must hold it."
+        )
+        clean = int(loop["rounds_clean"])  # type: ignore[call-overload]
+        completed = loop["rounds_completed"]
+        block = self._block(str(loop["evaluator_sha256"]))
+        asked = (
+            f"the first screen's loop sentence must say how many rounds came back clean "
+            f"— the record says {clean} of {completed} — in the same clause as the word "
+            f"'clean', e.g. '... and none of the {completed} has come back clean'. The "
+            "count may be written as a digit, or as none / no / zero / never when it is 0."
+        )
+        counts = _clean_counts(block)
+        assert counts, (
+            f"the loop paragraph states no clean-round count. {asked} It reads: {block!r}"
+        )
+        wrong = [n for n in counts if n != clean]
+        assert not wrong, (
+            f"the first screen says {wrong} rounds came back clean; "
+            f"results/evaluation-loop.json records rounds_clean = {clean} of {completed}"
+        )
+
+    def test_the_clean_count_rule_reads_the_shapes_it_claims_to(self) -> None:
+        """A control on the rule above, labelled as one: it is asserted to find a count
+        in the real paragraph, so a rule that matched nothing would otherwise read as
+        proof that the page was silent about clean rounds."""
+        assert _clean_counts(
+            "3 blind rounds have filed 78 findings against it, and none of the three has "
+            "come back clean (cap 8)."
+        ) == [0]
+        assert _clean_counts("2 of the 3 rounds came back clean") == [2]
+        assert _clean_counts("no round has ever come back clean") == [0]
+        # A clean CLONE is what an evaluator is handed, not a clean round; and a sentence
+        # that reports only rounds and findings states no clean count at all.
+        assert _clean_counts("evaluators handed a clean clone of one commit") == []
+        assert _clean_counts(
+            "3 blind rounds under a pinned evaluator prompt have filed 78 findings "
+            "against it; the reports are this project's private record."
+        ) == []
 
 
 class TestTheResultIsAsTheRecordShowsIt:

@@ -22,6 +22,11 @@ def _output(reviewer: str, soundness: int, findings: list[str] | None = None) ->
         model="stub",
         scores={"soundness": soundness, "presentation": 3, "contribution": 3},
         confidence=3,
+        # This stub builds clean output — nothing was filtered on the way in — so both
+        # hygiene counters are 0. They are required rather than defaulted (D18), which is
+        # why a fixture has to state them: a silent 0 is the untellable number again.
+        unretrieved_citations_dropped=0,
+        malformed_findings_dropped=0,
         findings=[
             ReviewFinding(dimension="soundness", severity="major", text=t, evidence_chunk_ids=[])
             for t in (findings or [])
@@ -152,6 +157,8 @@ def _mixed_output(reviewer: str) -> ReviewerOutput:
         model="stub",
         scores={"soundness": 3, "presentation": 3, "contribution": 3},
         confidence=3,
+        unretrieved_citations_dropped=0,
+        malformed_findings_dropped=0,
         findings=[
             ReviewFinding(
                 dimension="soundness",

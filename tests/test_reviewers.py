@@ -6,6 +6,8 @@ import json
 import re
 from pathlib import Path
 
+import pytest
+
 from peerpanel.agents.methods_reviewer import methods_queries
 from peerpanel.agents.novelty_reviewer import novelty_queries
 from peerpanel.agents.reviewer_base import (
@@ -16,6 +18,7 @@ from peerpanel.agents.reviewer_base import (
     excerpt,
     run_reviewer,
 )
+from peerpanel.agents.schemas import ReviewerOutput
 from peerpanel.providers.base import ChatResponse, TokenLedger
 
 # "You are a rigorous / expert / senior reviewer" is the persona shape the README
@@ -60,6 +63,46 @@ GOOD = (
 
 def _retrieve(query: str) -> list[tuple[str, str]]:
     return [("docA:0:aaaa0000", "Met4 activates sulfur metabolism " * 30)]
+
+
+# The one chunk `_retrieve` provides, and an id it never does: the whole hygiene
+# question is which of the two a finding cited.
+RETRIEVED = "docA:0:aaaa0000"
+NEVER_RETRIEVED = "docZ:9:ffff9999"
+
+
+def _payload(findings: list[object]) -> str:
+    return json.dumps(
+        {
+            "scores": {"soundness": 3, "presentation": 3, "contribution": 3},
+            "confidence": 3,
+            "findings": findings,
+        }
+    )
+
+
+def _a_finding(**over: object) -> dict[str, object]:
+    """A finding the hygiene pass keeps whole, unless a test breaks one field of it."""
+    base: dict[str, object] = {
+        "dimension": "soundness",
+        "severity": "minor",
+        "text": "A finding.",
+        "quote": "",
+        "evidence_chunk_ids": [],
+    }
+    base.update(over)
+    return base
+
+
+def _review(payload: str) -> ReviewerOutput:
+    return run_reviewer(
+        reviewer_name="test-lens",
+        provider=_StubChat(payload),  # type: ignore[arg-type]
+        manuscript_text="word " * 2000,
+        retrieve=_retrieve,
+        focus="testing",
+        queries=["q1"],
+    )
 
 
 class TestRunReviewer:
@@ -182,6 +225,147 @@ class TestRunReviewer:
     def test_a_non_object_payload_is_truncated_not_a_crash(self) -> None:
         out, _, _ = self._run("[1, 2, 3]")
         assert out.truncated  # type: ignore[attr-defined]
+
+
+class TestHygieneCounters:
+    """What the hygiene pass removed, on the record, per reviewer.
+
+    Round 4 finding 9: `results/RESULTS.md` publishes "of 16 findings in a run, 1
+    cites a retrieved chunk at all" and reads it as a fact about the reviewers, while
+    the pass that produced that 1 deleted citations to unprovided chunks and discarded
+    whole findings without counting either. From such a record it is impossible to
+    tell a reviewer that cited nothing from one whose citations this pass deleted.
+    These tests hold both counters to what the filter actually did.
+    """
+
+    def test_a_citation_to_a_chunk_never_retrieved_is_counted_and_the_finding_kept(
+        self,
+    ) -> None:
+        out = _review(_payload([_a_finding(evidence_chunk_ids=[NEVER_RETRIEVED])]))
+        assert out.unretrieved_citations_dropped == 1
+        assert out.malformed_findings_dropped == 0
+        # The finding survives — which is exactly why the drop needs a counter.
+        assert [f.text for f in out.findings] == ["A finding."]
+        assert out.findings[0].evidence_chunk_ids == []
+
+    def test_every_removed_id_is_counted_not_every_finding(self) -> None:
+        """Two unretrieved ids in one finding are two removals: the count is of
+        citations, so a finding citing three ghosts cannot read as one."""
+        out = _review(
+            _payload(
+                [_a_finding(evidence_chunk_ids=[NEVER_RETRIEVED, RETRIEVED, "docQ:1:0000ffff"])]
+            )
+        )
+        assert out.unretrieved_citations_dropped == 2
+        assert out.findings[0].evidence_chunk_ids == [RETRIEVED]
+
+    def test_a_bad_dimension_an_empty_text_and_a_non_object_are_each_a_dropped_finding(
+        self,
+    ) -> None:
+        out = _review(
+            _payload(
+                [
+                    _a_finding(dimension="vibes"),
+                    _a_finding(text="   "),
+                    "not even an object",
+                    _a_finding(text="The one that survives."),
+                ]
+            )
+        )
+        assert out.malformed_findings_dropped == 3
+        assert out.unretrieved_citations_dropped == 0
+        assert [f.text for f in out.findings] == ["The one that survives."]
+
+    def test_a_clean_run_counts_no_drops(self) -> None:
+        out = _review(
+            _payload(
+                [
+                    _a_finding(evidence_chunk_ids=[RETRIEVED]),
+                    _a_finding(dimension="presentation", text="Second.", evidence_chunk_ids=[]),
+                ]
+            )
+        )
+        assert out.unretrieved_citations_dropped == 0
+        assert out.malformed_findings_dropped == 0
+        assert len(out.findings) == 2
+
+    def test_a_citation_field_that_is_not_a_list_counts_as_one_removal(self) -> None:
+        """Constrained decoding binds on one wire; another can hand back a bare
+        string where the ids belong. That field is discarded whole, and counting it
+        0 would recreate the silent drop these counters exist to end. An ABSENT
+        field is not a removal — nothing was cited."""
+        bare_string = _review(_payload([_a_finding(evidence_chunk_ids=RETRIEVED)]))
+        assert bare_string.unretrieved_citations_dropped == 1
+        assert bare_string.findings[0].evidence_chunk_ids == []
+
+        absent = _a_finding()
+        del absent["evidence_chunk_ids"]
+        assert _review(_payload([absent])).unretrieved_citations_dropped == 0
+
+    def test_a_deleted_citation_is_visible_where_the_findings_are_identical(self) -> None:
+        """THE CONTROL. Two runs whose findings are identical — one reviewer cited
+        nothing, the other cited a chunk it was never given — must not produce the
+        same record. A counter hardcoded to 0, or one derived from the citations that
+        SURVIVED, is red here and green everywhere a fixed expectation is asserted."""
+        cited_nothing = _review(_payload([_a_finding(evidence_chunk_ids=[])]))
+        citation_deleted = _review(_payload([_a_finding(evidence_chunk_ids=[NEVER_RETRIEVED])]))
+        assert cited_nothing.findings == citation_deleted.findings  # indistinguishable there
+        assert cited_nothing.unretrieved_citations_dropped == 0
+        assert citation_deleted.unretrieved_citations_dropped == 1
+        assert cited_nothing != citation_deleted  # and distinguishable in the record
+
+    def test_a_discarded_finding_is_visible_where_the_findings_are_identical(self) -> None:
+        """The same control for the other drop: a reviewer that wrote one finding and
+        one that wrote two, one of them unusable, carry the same `findings` list."""
+        wrote_one = _review(_payload([_a_finding()]))
+        one_discarded = _review(_payload([_a_finding(), _a_finding(dimension="vibes")]))
+        assert wrote_one.findings == one_discarded.findings
+        assert wrote_one.malformed_findings_dropped == 0
+        assert one_discarded.malformed_findings_dropped == 1
+        assert wrote_one != one_discarded
+
+    def test_the_counters_describe_only_the_findings_the_record_carries(self) -> None:
+        """Past MAX_FINDINGS nothing is kept, and what the cap removed the cap is
+        answerable for (the record's `findings` length against the constant). The
+        hygiene counters must not absorb it and read as a hygiene problem."""
+        payload = _payload(
+            [_a_finding(text=f"f{i}") for i in range(MAX_FINDINGS)]
+            + [_a_finding(dimension="vibes"), _a_finding(evidence_chunk_ids=[NEVER_RETRIEVED])]
+        )
+        out = _review(payload)
+        assert len(out.findings) == MAX_FINDINGS
+        assert out.malformed_findings_dropped == 0
+        assert out.unretrieved_citations_dropped == 0
+
+    def test_an_unparsed_call_counts_no_drops(self) -> None:
+        """A reviewer whose JSON never parsed lost everything to `truncated`; the
+        hygiene counters must not borrow credit for measuring that."""
+        out = _review('{"scor')
+        assert out.truncated
+        assert out.unretrieved_citations_dropped == 0
+        assert out.malformed_findings_dropped == 0
+
+    def test_neither_counter_has_a_default(self) -> None:
+        """D18: a field whose absence changes a number's meaning has no default. A
+        reviewer output written before these existed cannot load as though the pass
+        had been measured and found nothing — which is the same untellable 0 the
+        finding is about, arriving through the schema instead of the filter."""
+        fields: dict[str, object] = {
+            "reviewer": "test-lens",
+            "model": "stub",
+            "scores": {"soundness": 3, "presentation": 3, "contribution": 3},
+            "confidence": 3,
+            "findings": [],
+        }
+        with pytest.raises(ValueError):
+            ReviewerOutput.model_validate(fields)
+        with pytest.raises(ValueError):
+            ReviewerOutput.model_validate({**fields, "unretrieved_citations_dropped": 0})
+        with pytest.raises(ValueError):
+            ReviewerOutput.model_validate({**fields, "malformed_findings_dropped": 0})
+        ReviewerOutput.model_validate(
+            {**fields, "unretrieved_citations_dropped": 0, "malformed_findings_dropped": 0}
+        )
 
 
 class TestStructuralQueries:
