@@ -9,6 +9,10 @@ protocol, and publishes what each arm asserted, what it cost and under what run 
 Only one of the two is held out: `caprin-heterochromatin` is absent from the retrieval corpus, while `met17-auxotroph`'s published twin *is* a corpus
 member, withheld from every arm at run time (26 chunks dropped on each) — a weaker guarantee, whose residue [LIMITATIONS.md](LIMITATIONS.md) measures.
 
+Built by **Javier Rodriguez** —
+[LinkedIn](https://www.linkedin.com/in/jrodriguezhernaez/) ·
+[Publications](https://www.ncbi.nlm.nih.gov/myncbi/1X137yzukYKAC/bibliography/public/)
+
 ## The headline: three defects planted per manuscript, and no arm asserted one
 
 A finding is credited only when one sentence of its **own prose** names the planted token **and asserts that something is wrong** — rule `assertion-v2`,
