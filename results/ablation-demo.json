@@ -1,6 +1,7 @@
 {
  "corpus_manifest": "corpus/demo.manifest.json",
- "run_utc": "2026-09-05T12:48:18+00:00",
+ "run_utc": "2026-09-06T14:10:23+00:00",
+ "load_average_1m": 18.49,
  "n_cases": 2,
  "skipped_cases": {
   "10.1101/2024.06.19.598224": "twin not a member of this corpus — no valid run"
@@ -12,7 +13,7 @@
   {
    "rung": "bm25",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 25.6,
+   "latency_ms": 26.0,
    "chunks_retrieved": 120,
    "docs_ranked": 30,
    "hits": [
@@ -56,7 +57,7 @@
   {
    "rung": "vector",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 0.4,
+   "latency_ms": 0.5,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [
@@ -100,7 +101,7 @@
   {
    "rung": "rrf-hybrid",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 25.3,
+   "latency_ms": 31.0,
    "chunks_retrieved": 120,
    "docs_ranked": 30,
    "hits": [
@@ -144,7 +145,7 @@
   {
    "rung": "graphrag-local",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 94.3,
+   "latency_ms": 143.9,
    "chunks_retrieved": 120,
    "docs_ranked": 30,
    "hits": [
@@ -188,7 +189,7 @@
   {
    "rung": "graphrag-global",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 5.9,
+   "latency_ms": 8.8,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [
@@ -232,7 +233,7 @@
   {
    "rung": "bm25",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 28.4,
+   "latency_ms": 41.2,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [
@@ -356,7 +357,7 @@
   {
    "rung": "vector",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 0.4,
+   "latency_ms": 0.7,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [
@@ -480,7 +481,7 @@
   {
    "rung": "rrf-hybrid",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 29.2,
+   "latency_ms": 41.7,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [
@@ -604,7 +605,7 @@
   {
    "rung": "graphrag-local",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 94.4,
+   "latency_ms": 180.6,
    "chunks_retrieved": 120,
    "docs_ranked": 30,
    "hits": [
@@ -728,7 +729,7 @@
   {
    "rung": "graphrag-global",
    "case_doi": "10.1101/2025.05.04.652101",
-   "latency_ms": 6.6,
+   "latency_ms": 17.9,
    "chunks_retrieved": 240,
    "docs_ranked": 30,
    "hits": [

@@ -32,7 +32,7 @@ What would be needed is a named question of interest with a real decision attach
 ## Step 4: Develop a Plan to Establish AI Model Credibility Within the Context of Use
 
 The evaluation protocol here is committed code rather than a description of one.
-`src/peerpanel/evals/planted.py` defines the defects planted into a held-out manuscript, the text a grader is allowed to score, and the rule that decides whether a finding counts as a catch — `assertion-v1`, named in the code and carried in every record it scored.
+`src/peerpanel/evals/planted.py` defines the defects planted into a held-out manuscript, the text a grader is allowed to score, and the rule that decides whether a finding counts as a catch — `assertion-v2`, named in the code and carried in every record it scored.
 That rule was written and frozen before it was run against anything, and `tests/test_planted_soundness.py` pins its cue list as frozen text, so changing what the rule credits means changing a test whose whole point is that the rule does not move.
 `tests/fixtures/round3_scored_strings.json` is the negative control it was frozen ahead of: all 230 strings the previous round's records scored, which that same test re-derives from those records at the named commit rather than trusting the fixture as a copy, and not one of which the rule may credit.
 The test then measures why that control is a floor rather than evidence — no assertion cue occurs in any of the 230 strings — so the weight is carried by controls built from real text instead: manuscript sentences containing phrases a careless rule would fire on, which must score nothing, and real record strings with a genuine assertion appended, which must score.
@@ -47,7 +47,7 @@ The run conditions are recorded per call rather than per run — the calls made,
 The raw capture of each run is committed beside it, at `results/planted-eval-caprin-heterochromatin.log` and `results/planted-eval-met17-auxotroph.log`, and the text of every finding a grader scored is committed inside the record rather than summarised, so a reader can re-score the run by hand.
 `results/panel-review-met17-auxotroph.json` and `results/panel-review-met17-auxotroph-run2.json` apply the same discipline to a full panel run on a real manuscript, `results/summaries-stats-demo.json` does it for the community-report layer the global retrieval rung reads, and `results/build-stats-ci.json` and `results/build-stats-demo.json` do it for the two index builds; every one of those records names the model and the wire that served its calls, alongside the same per-call window figures.
 `results/derived-fields.json` names the fields that were written by derivation rather than measured at the call, and the command that re-measures each, so a weaker field is labelled instead of passing as the rest.
-Every record under `results/` names the one command that regenerates it, in the table at the top of `results/RESULTS.md`.
+The table at the top of `results/RESULTS.md` accounts for all nineteen records under `results/`: sixteen name the one command that regenerates them, and the three that no command produces are marked hand-maintained there and name the test that reads them, rather than carrying an invented command.
 
 ## Step 6: Document the Results of the Credibility Assessment Plan and Discuss Deviations From the Plan
 

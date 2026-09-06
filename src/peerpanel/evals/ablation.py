@@ -18,6 +18,7 @@ place, and a field that stops being run-varying cannot stay quietly exempt.
 from __future__ import annotations
 
 import json
+import os
 import time
 from datetime import UTC, datetime
 from pathlib import Path
@@ -57,10 +58,20 @@ K = 10
 DOC_DEPTH_MULTIPLIER = 3  # the deeper list, in DOCUMENTS
 MAX_CHUNKS = 2000
 
-# Declared run-varying, at both levels of the schema: `latency_ms` on a rung row and
-# `run_utc` on the report. Anything else that moves between two runs over the same
-# committed bytes is a defect, not a timestamp.
-RUN_VARYING_FIELDS = ("latency_ms", "run_utc")
+# Declared run-varying, at both levels of the schema: `latency_ms` on a rung row, and
+# `run_utc` and `load_average_1m` on the report. Anything else that moves between two
+# runs over the same committed bytes is a defect, not a measurement of the machine.
+#
+# `load_average_1m` is here because the latency column kept being published under
+# conditions the record could not express. This ladder is model-free but CPU-bound, and
+# the same committed bytes have produced BM25 means from 20 ms to 74 ms depending on
+# what else the machine was doing; a reading taken beside a model run is real and is not
+# comparable to one taken quiet, and nothing in the record said which it was. Rather than
+# promise an idle machine — which is not something a laptop can be held to — the record
+# now carries the load it ran under, so a reader can weigh the number instead of
+# trusting it. That is this repository's own bar applied to itself: a record that cannot
+# expose the conditions its number was produced under is not evidence for that number.
+RUN_VARYING_FIELDS = ("latency_ms", "run_utc", "load_average_1m")
 
 
 class _SearchFn(Protocol):
@@ -87,12 +98,18 @@ class AblationReport(BaseModel):
     let a record carrying no timestamp load as though it carried one (D18 — a field
     whose absence changes a number's meaning has no default). It is written as
     ISO-8601 UTC to the second, and it is declared run-varying in
-    `RUN_VARYING_FIELDS` alongside `latency_ms`; those two are the only fields a
-    regeneration over identical bytes may move.
+    `RUN_VARYING_FIELDS` alongside `latency_ms` and `load_average_1m`; those three are
+    the only fields a regeneration over identical bytes may move.
+
+    `load_average_1m` is the one-minute load average as the run started, or None on a
+    platform that does not report one. It is required for the same reason `run_utc` is:
+    the latency column depends on the machine rather than the code, and a reading whose
+    conditions the record cannot state is not evidence for the number it carries.
     """
 
     corpus_manifest: str
     run_utc: str  # ISO-8601 UTC, seconds — run-varying by declaration
+    load_average_1m: float | None  # what else the machine was doing — run-varying
     n_cases: int
     skipped_cases: dict[str, str]  # doi -> reason (e.g. twin not a corpus member: no valid run)
     aggregate_relevant: int
@@ -171,6 +188,19 @@ def _reports_from_cache(
     return [r.model_dump() for r in reports]
 
 
+def _load_average() -> float | None:
+    """The one-minute load average, or None where the platform has none.
+
+    Windows has no `getloadavg`, so this is `float | None` rather than a number the
+    record would have to invent. A None says the machine's state is unknown, which is
+    honest; a 0.0 would say it was idle, which would not be.
+    """
+    getloadavg = getattr(os, "getloadavg", None)
+    if getloadavg is None:  # pragma: no cover - platform-dependent
+        return None
+    return round(float(getloadavg()[0]), 2)
+
+
 def run_ablation(
     root: Path, embedder: EmbedProvider, k: int = K, corpus: str = "ci"
 ) -> AblationReport:
@@ -245,6 +275,7 @@ def run_ablation(
         corpus_manifest=str(manifest_rel),
         # Stamped at the END of the run, so the value names a run that completed.
         run_utc=datetime.now(UTC).isoformat(timespec="seconds"),
+        load_average_1m=_load_average(),
         n_cases=len(cases),
         skipped_cases=skipped,
         aggregate_relevant=sum(len(c.relevant_docs) for c in cases),

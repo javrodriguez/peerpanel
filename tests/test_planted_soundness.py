@@ -1,6 +1,6 @@
 """The planted-error benchmark must be able to earn the score it reports.
 
-Five ways a planted-error harness can report a number that means nothing, all
+Six ways a planted-error harness can report a number that means nothing, all
 of which this one did at some point:
 
 1. Plant errors where no reviewer looks. Both arms read a 900-word excerpt;
@@ -22,8 +22,15 @@ of which this one did at some point:
    committed scored strings (63%) are verbatim slices of the perturbed manuscript,
    including every string that ever earned a `named token` credit. `own_prose` is
    the second route closed, and `TestOnlyOwnProseIsScored` below is its control.
+6. Close that route with a test a full stop defeats. `own_prose` dropped a sentence
+   only when it was a substring of the manuscript, so a clause copied out of a
+   paragraph and terminated with a period survived into the scored surface. Round 5
+   measured it: 68% rather than 59% of the characters written back are manuscript
+   slices, one arm's published "own prose 41%" is really about 16%, and two of the
+   five `named token` credits on the first screen existed only because a copied
+   sentence ended in a period. `TestTerminalPunctuationIsTolerated` is its control.
 
-These tests pin all five as properties of the harness, so a future change that
+These tests pin all six as properties of the harness, so a future change that
 reintroduces any of them fails here rather than silently producing a number.
 
 The fourth is the reason for `asserts` and for the two controls it is held to:
@@ -125,6 +132,19 @@ def _normalised(text: str) -> str:
     and not a tautology.
     """
     return re.sub(r"\s+", " ", text).strip().casefold()
+
+
+# The two punctuation runs `own_prose` takes off a sentence before the substring test,
+# written out here rather than imported for the same reason `_normalised` above is: a
+# control that borrowed the implementation's own characters would agree with it by
+# construction and could never catch the set drifting.
+TOLERATED_LEADING = "\"'([ "
+TOLERATED_TRAILING = ".,;:!?\"')] "
+
+
+def _trimmed(text: str) -> str:
+    """`_normalised`, then the punctuation `own_prose` tolerates taken off the ends."""
+    return _normalised(text).lstrip(TOLERATED_LEADING).rstrip(TOLERATED_TRAILING)
 
 
 def _record_and_manuscript(path: Path) -> tuple[dict[str, Any], str]:
@@ -758,36 +778,199 @@ class TestOnlyOwnProseIsScored:
         assert not raised, "own_prose RAISED a credit:\n" + "\n".join(raised)
 
     def test_how_much_of_the_committed_scored_surface_is_pure_quotation(self) -> None:
-        """The measurement, per arm, over every committed record — the number to publish.
+        """The measurement, per arm, over every committed record — the numbers to publish.
 
-        Asserted non-zero so it cannot pass on an empty sweep, and reported per arm in the
-        assertion message and on stdout so the published figure is read off a test rather
-        than off a notebook nobody kept.
+        Both measures, because the repository publishes both: the share of STRINGS that
+        leave no own prose at all, and the share of CHARACTERS written back that are
+        manuscript slices — which is the figure `results/RESULTS.md` puts in bold and the
+        per-arm "own prose, in characters" column it puts beside it. Reported per arm in
+        the assertion message and on stdout so every published figure is read off a test
+        rather than off a notebook nobody kept.
+
+        Asserted non-zero so it cannot pass on an empty sweep. The numbers move with the
+        run — they are a property of what the models wrote — so nothing here pins a
+        value; what is pinned is that the measurement exists and is per arm.
         """
         assert PLANTED_RECORDS, f"no planted-eval records under {RESULTS} to measure"
         rows: list[str] = []
         pure_total = 0
         string_total = 0
+        own_chars_total = 0
+        chars_total = 0
         for path in PLANTED_RECORDS:
             record, perturbed = _record_and_manuscript(path)
             subject = path.stem.removeprefix("planted-eval-")
             for result in record["results"]:
                 texts = [str(text) for text in result["finding_texts"]]
-                pure = [text for text in texts if not own_prose(text, perturbed)]
+                residues = [own_prose(text, perturbed) for text in texts]
+                pure = [residue for residue in residues if not residue]
+                own_chars = sum(len(residue) for residue in residues)
+                chars = sum(len(text.strip()) for text in texts)
+                own_share = own_chars / chars if chars else 0.0
                 rows.append(
                     f"  {subject} · {result['system']}: {len(pure)}/{len(texts)} strings "
-                    "are pure quotation"
+                    f"are pure quotation · own prose {own_chars}/{chars} characters "
+                    f"({own_share:.0%}), so {1 - own_share:.0%} of what it wrote back "
+                    "is manuscript"
                 )
                 pure_total += len(pure)
                 string_total += len(texts)
+                own_chars_total += own_chars
+                chars_total += chars
         assert string_total, "the sweep read no strings"
+        assert chars_total, "the sweep read no characters"
         share = pure_total / string_total
+        quoted_chars = chars_total - own_chars_total
+        char_share = quoted_chars / chars_total
         report = (
             f"pure quotation on the committed records: {pure_total}/{string_total} "
-            f"({share:.0%}) of scored strings leave no own prose\n" + "\n".join(rows)
+            f"({share:.0%}) of scored strings leave no own prose; "
+            f"{quoted_chars}/{chars_total} ({char_share:.0%}) of the characters written "
+            "back are slices of the manuscript\n" + "\n".join(rows)
         )
         print(report)
         assert pure_total > 0, (
             "not one committed string is pure quotation — either the records were "
             f"regenerated or the sweep is measuring nothing:\n{report}"
         )
+        assert quoted_chars > 0, (
+            f"not one character of the committed surface is quotation:\n{report}"
+        )
+
+
+class TestTerminalPunctuationIsTolerated:
+    """Round 5 (report 2 finding 2): a full stop defeated the quotation strip.
+
+    `own_prose` dropped a sentence only when its normalised form was a SUBSTRING of the
+    perturbed manuscript, so a clause copied out of the middle of a paragraph and
+    terminated with a period was not a substring and survived into the scored surface.
+    Twenty-four sentences across the two committed records are in that class, and they
+    carried published numbers: the manuscript share of the characters written back reads
+    68% rather than 59%, one arm's published "own prose 41%" on caprin is really about
+    16%, and the `named token` bound falls from 2/3 to 1/3 for both single-agent arms on
+    caprin. The `asserted` headline is 0 either way.
+
+    Every string here is derived from the committed records and manuscripts rather than
+    written out as a literal, because the records are regenerated whenever what is scored
+    changes and a pinned literal would then be testing text no arm wrote. A derivation
+    that finds nothing fails loudly rather than passing on an empty sweep.
+    """
+
+    def _saved_by_punctuation(self) -> tuple[Path, dict[str, Any], str, str]:
+        """A committed one-sentence string that is quotation ONLY once the ends are trimmed.
+
+        Returns the record's path, the record, the perturbed manuscript and the string.
+        One sentence on purpose: the controls below add words to it and read the residue
+        back, which is only unambiguous when the whole string is the sentence.
+        """
+        for path in PLANTED_RECORDS:
+            record, perturbed = _record_and_manuscript(path)
+            body = _normalised(perturbed)
+            for result in record["results"]:
+                for text in (str(text) for text in result["finding_texts"]):
+                    if len(sentences(text)) != 1:
+                        continue
+                    if _normalised(text) in body or _trimmed(text) not in body:
+                        continue
+                    return path, record, perturbed, text
+        pytest.fail(
+            "no committed string is quotation saved by its punctuation — either the "
+            "records were regenerated by an arm that never copies a terminated clause, "
+            "or this control is measuring nothing"
+        )
+
+    def test_a_committed_quotation_ending_in_punctuation_is_scored_on_nothing(self) -> None:
+        """The defect itself, on the repository's own text: it survived, it no longer does."""
+        path, record, perturbed, quotation = self._saved_by_punctuation()
+        assert _normalised(quotation) not in _normalised(perturbed), (
+            f"{path.name}: this string is a plain substring of the manuscript, so it was "
+            "already dropped and proves nothing about punctuation"
+        )
+        assert _trimmed(quotation) in _normalised(perturbed), (
+            f"{path.name}: this string is not quotation once trimmed — the control has "
+            "lost its subject"
+        )
+        residue = own_prose(quotation, perturbed)
+        assert residue == "", (
+            f"{path.name}: a copied sentence still reaches the scored surface because it "
+            f"ends in punctuation: {quotation[:200]!r} -> {residue[:200]!r}"
+        )
+        for error in (PlantedError(**error) for error in record["errors"]):
+            assert not asserts(error, [residue]), f"{error.error_id}: {quotation[:160]!r}"
+            assert not detect(error, [residue]), f"{error.error_id}: {quotation[:160]!r}"
+
+    def test_a_quotation_wrapped_in_quotation_marks_is_recognised(self) -> None:
+        """The leading half of the strip, pinned on a real string rather than left dormant.
+
+        No committed sentence starts with a quotation mark today — every one of the
+        twenty-four is terminal punctuation alone — so this control puts a committed
+        quotation in the marks a model uses when it says it is quoting, and nothing else.
+        """
+        _path, _record, perturbed, quotation = self._saved_by_punctuation()
+        quoted = f'"{quotation.strip()}"'
+        assert _normalised(quoted) not in _normalised(perturbed), (
+            "the wrapped string is a plain substring — the control is vacuous"
+        )
+        assert own_prose(quoted, perturbed) == "", own_prose(quoted, perturbed)
+
+    def test_adding_words_to_a_quotation_still_survives_with_its_own_prose(self) -> None:
+        """The tolerance strips punctuation, never words — the over-eagerness control.
+
+        The same committed quotation with words of the arm's own added: a clause after
+        it, a single word after it, and a single word in front of it. None of the three
+        is manuscript any more, trimmed or not, so each must survive WHOLE — the rule is
+        still a substring test on a whole sentence and did not become a resemblance test
+        that swallows the added words along with the copied ones.
+
+        The one-word variants are the ones that carry the weight. A strip that ate a word
+        as well as the punctuation would still pass a control that added a whole clause,
+        because the clause keeps the sentence off the manuscript by itself; it cannot
+        pass these, where the single added word is the only thing making the sentence the
+        arm's own.
+        """
+        _path, _record, perturbed, quotation = self._saved_by_punctuation()
+        opening = quotation.strip().rstrip(TOLERATED_TRAILING)
+        for added in (
+            f"{opening}, which this excerpt never shows.",
+            f"{opening} everywhere.",
+            f"Notably, {opening}.",
+        ):
+            assert len(sentences(added)) == 1, (
+                "the addition split into more than one sentence — the control no longer "
+                f"tests a single sentence: {added[:200]!r}"
+            )
+            assert _trimmed(added) not in _normalised(perturbed), (
+                f"the addition is itself manuscript text — {added[:200]!r} would be "
+                "dropped for the right reason and prove nothing"
+            )
+            residue = own_prose(added, perturbed)
+            assert residue == added.strip(), (
+                "a sentence that quotes the manuscript AND adds words of its own lost "
+                f"them: {added[:200]!r} -> {residue[:200]!r}"
+            )
+
+    def test_a_short_assertion_is_not_swallowed_by_the_strip(self) -> None:
+        """A short, punctuated, quote-wrapped assertion keeps every word and still scores.
+
+        The strip takes runs of punctuation off the ends, so the shape most at risk of
+        being trimmed to nothing is the shortest real assertion this benchmark can be
+        given: the planted token and a cue, in quotation marks, ending in a period. It
+        must survive whole and be credited by both rules — otherwise the repair would be
+        removing detections rather than removing quotation.
+        """
+        _path, record, perturbed, _quotation = self._saved_by_punctuation()
+        error = next(
+            PlantedError(**error)
+            for error in record["errors"]
+            if error["kind"] == "gene_symbol_swap"
+        )
+        assertion = f'"{error.detection_token} is incorrect."'
+        assert _trimmed(assertion), "the strip reduced a real assertion to nothing"
+        assert _trimmed(assertion) not in _normalised(perturbed), (
+            f"{assertion!r} is itself a slice of the manuscript — this control cannot "
+            "tell an over-eager strip from the substring rule working"
+        )
+        residue = own_prose(assertion, perturbed)
+        assert residue == assertion, f"{assertion!r} -> {residue!r}"
+        assert asserts(error, [residue]), residue
+        assert detect(error, [residue]), residue

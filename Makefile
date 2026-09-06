@@ -115,9 +115,9 @@ review:
 
 ## The headline measurement: planted errors, THREE arms — the panel (a two-family
 ## mixture) and one single-agent baseline per named local model (llama3.1:8b,
-## qwen2:7b), so there is a measured pass rate per model rather than one number over
+## qwen2:7b), so each named model carries its own count rather than one number over
 ## a mixture. Every arm publishes BOTH counts: `asserted` (the headline, rule
-## assertion-v1, published even at 0) and `named token` (the labelled upper bound).
+## assertion-v2, published even at 0) and `named token` (the labelled upper bound).
 ## SUBJECT=<stem>. Publishes results/planted-eval-<stem>.json and .log.
 SUBJECT ?= caprin-heterochromatin
 eval:

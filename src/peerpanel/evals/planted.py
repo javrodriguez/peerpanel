@@ -30,6 +30,15 @@ DETECTION_RULE = "assertion-v2"
 # does — the sentences of it that are not verbatim manuscript. `ASSERTION_CUES`, the
 # negation scope and the same-sentence clause are byte-identical to v1. The id is bumped
 # so no record can carry a v1 rule name over a v2 count.
+#
+# It stays "assertion-v2" through round 5's terminal-punctuation repair (`own_prose`,
+# below). That change corrects WHAT the v2 rule was already trying to remove — quotation
+# — rather than redefining what is scored or how it is judged: the rule is still "the
+# `own_prose` residue reaches `asserts` and `detect`", the cue list, the negation scope
+# and the same-sentence clause are all untouched, and the repair can only ever remove
+# more text before those rules run. A record carrying "assertion-v2" therefore still
+# describes the rule that produced its count; only the count moves, downwards, and the
+# regeneration that follows the repair is what makes every record agree with it again.
 
 # The assertion rule, frozen before any control was run against it (plan D-1) and
 # implemented exactly as specified: one word-anchored alternation, in this order,
@@ -140,6 +149,22 @@ def _normalised(text: str) -> str:
     return _WHITESPACE.sub(" ", text).strip().casefold()
 
 
+# The punctuation a quotation picks up on its way into a finding, and nothing else. A
+# model that copies a mid-paragraph clause and terminates it with a full stop writes a
+# string that is not a substring of the manuscript, and round 5 measured what that costs
+# (see `own_prose`). Both sets are plain characters, stripped as runs from the ends of
+# the SENTENCE only — never from the manuscript, never from anywhere inside the
+# sentence, and never per string. Nothing here is fuzzy: a word added to a quotation
+# still survives, because only these characters are removed.
+_QUOTATION_LEADING = "\"'([ "
+_QUOTATION_TRAILING = ".,;:!?\"')] "
+
+
+def _quotation_form(text: str) -> str:
+    """`_normalised`, then enclosing quotes/brackets and terminal punctuation removed."""
+    return _normalised(text).lstrip(_QUOTATION_LEADING).rstrip(_QUOTATION_TRAILING)
+
+
 def own_prose(text: str, manuscript: str) -> str:
     """`text` with every sentence that is verbatim manuscript dropped — what v2 scores.
 
@@ -150,6 +175,24 @@ def own_prose(text: str, manuscript: str) -> str:
     normalisation of `manuscript` is dropped; what is left is joined back with single
     spaces. A finding that is entirely quotation returns `""`. A finding that appends
     a real assertion to a quotation keeps the assertion and loses the quotation.
+
+    What the comparison tolerates, and why. Before the substring test the SENTENCE — never
+    the manuscript — has a run of `.,;:!?"')]` taken off its end and a run of `"'([` off
+    its front (`_quotation_form`). Nothing else: no fuzzy match, no similarity threshold,
+    no per-string case. Terminal punctuation is not an exotic edge; it is the single most
+    common difference between a copied clause and its source, and round 5 measured what
+    tolerating it is worth on the committed records. Twenty-four sentences are quotation
+    that the untolerant test kept, and the consequences reached two published numbers:
+    the share of written characters that are manuscript slices moves from **59% to 68%**
+    (29,325 of 43,416), the `single-agent-cot-sc:llama3.1:8b` arm's published "own prose,
+    in characters — 41%" on caprin is really about **16%**, and the labelled `named token`
+    bound on caprin falls from 2/3 to 1/3 for BOTH single-agent arms — two of the five
+    credits on the README's first screen existed only because a copied sentence ended in
+    a full stop. The `asserted` headline is 0 before and after, on every arm: the null is
+    untouched, and what changed is the column published beside it. The enclosing-bracket
+    half of the strip fires on no committed sentence today (all twenty-four are terminal
+    punctuation); it is here because a quotation wrapped in quotes is the same class of
+    string, and it is pinned by a control rather than left to a future run to discover.
 
     `manuscript` must be the PERTURBED text the arm was actually shown. Compared
     against the unperturbed original, every quotation of a planted sentence would
@@ -165,10 +208,12 @@ def own_prose(text: str, manuscript: str) -> str:
     column was therefore measuring quotation, not naming.
 
     Those records have since been superseded, and the figure moves with the run because
-    it is a property of what the models wrote rather than of this code: the records
-    committed beside this file read **152 of 256, 59%**. Both numbers are recomputable —
-    `tests/test_planted_soundness.py` measures the committed share on every test run and
-    prints it per arm — and the one quoted second is the one a reader can check today.
+    it is a property of what the models wrote rather than of this code: read with the
+    tolerance above, the records committed beside this file are **176 of 256 strings,
+    69%** pure quotation, and **68% of the characters written back**. Every one of these
+    numbers is recomputable — `tests/test_planted_soundness.py` measures the committed
+    share on every test run and prints it per arm, in strings and in characters — and the
+    ones quoted last are the ones a reader can check today.
 
     Why this is a fix and not a tune. It can only ever LOWER a count, never raise one:
     it only ever removes text before the two rules see it, and both are existential
@@ -180,10 +225,18 @@ def own_prose(text: str, manuscript: str) -> str:
 
     Its limits, stated rather than hidden:
 
-    - it is a WHOLE-SENTENCE rule. A sentence that quotes the manuscript and adds three
+    - it is STILL a whole-sentence rule and STILL a substring test, and the punctuation
+      tolerance narrows neither. A sentence that quotes the manuscript and adds three
       words of its own survives intact, and so does one that quotes with a typo, a
-      dropped bracket or a reflowed dash. It under-removes, never over-removes, so a
-      count carried through it is still an upper bound on non-quotation;
+      reflowed dash, or a bracket dropped from the middle rather than the end. It
+      under-removes, never over-removes, so a count carried through it is still an UPPER
+      bound on non-quotation — the direction is unchanged by the repair, only the size of
+      the gap is smaller than the previous docstring left a reader to assume;
+    - the tolerated characters are stripped as runs from the ends, so a sentence that is
+      punctuation alone normalises to nothing and is dropped. That removes no prose, and
+      a short assertion is not at risk: "MET18 is incorrect." keeps every word it has and
+      is only ever dropped if those words are themselves a slice of the manuscript, which
+      is the substring rule doing its job rather than the strip overreaching;
     - it inherits the shared splitter's boundaries, including the single-character rule
       that keeps "conducted in R." joined to the sentence after it, so a quotation the
       splitter cuts differently from the manuscript's own layout is compared as the
@@ -195,7 +248,7 @@ def own_prose(text: str, manuscript: str) -> str:
     body = _normalised(manuscript)
     kept: list[str] = []
     for sentence in sentences(text):
-        normalised = _normalised(sentence)
+        normalised = _quotation_form(sentence)
         if not normalised or normalised in body:
             continue
         kept.append(sentence.strip())

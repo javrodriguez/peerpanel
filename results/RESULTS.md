@@ -12,7 +12,7 @@ The CI-scale artifacts need neither a fetch nor a model.
 
 | file | what it is | regenerate with |
 |---|---|---|
-| `ablation-ci.json` | retrieval ladder, CI corpus | `make ablation-publish` (no model; only `latency_ms` and `run_utc` move) |
+| `ablation-ci.json` | retrieval ladder, CI corpus | `make ablation-publish` (no model; only `latency_ms`, `run_utc` and `load_average_1m` move) |
 | `ablation-demo.json` | retrieval ladder, demo corpus | `make ablation-demo-publish` (needs the fetched corpus; no model) |
 | `build-stats-ci.json` | CI index build: chunks, entities, edges, communities, run conditions, wall-clock | `make graph` after emptying `fixtures/extraction/ci` — the committed record is the cold build; on the committed cache the same target replays with no model calls and reports `cached_before` = 234 |
 | `build-stats-demo.json` | demo index build, same fields | `make demo-index` after emptying `fixtures/extraction/demo` |
@@ -37,15 +37,23 @@ The two wires report their window differently and say so in the record itself �
 
 ## What reproduces, and what does not
 
-**The retrieval ladder reproduces exactly, except for the clock.**
-`results/ablation-demo.json` has now been published from four separate runs in this repository's history, either side of a full regeneration of the community reports the graph rungs read.
-Every quality figure is identical in all four: the same hits, the same ranks, the same recall, the same NDCG, for every rung on every case.
-The two fields the schema declares run-varying — `latency_ms` and `run_utc`, named in `RUN_VARYING_FIELDS` in `src/peerpanel/evals/ablation.py` — are the only ones that moved, and the conformance test strips exactly those and requires the timestamp to have changed.
+**The retrieval ladder reproduces exactly, except for the clock and the machine.**
+`results/ablation-demo.json` has now been published from five separate runs in this repository's history, either side of a full regeneration of the community reports the graph rungs read.
+Every quality figure is identical in all five: the same hits, the same ranks, the same recall, the same NDCG, for every rung on every case.
+The three fields the schema declares run-varying — `latency_ms`, `run_utc` and `load_average_1m`, named in `RUN_VARYING_FIELDS` in `src/peerpanel/evals/ablation.py` — are the only ones that moved, and the conformance test strips exactly those and requires the timestamp to have changed.
 
-**The latency column is the one measurement here that depends on the machine rather than the code, and it moves a long way.**
-Across those five published runs BM25's mean read 30.8 ms, then 63.3 ms, then 30.9 ms, then 45.6 ms, then 27.0 ms, and GraphRAG local's read 97.2 ms, then 118.6 ms, then 99.6 ms, then 105.2 ms, then 94.3 ms — the second was taken while the GPU was saturated by a community-report regeneration, the fourth mid-chain between two model runs, and the fifth, committed here, on an otherwise idle machine.
-The ratio between the slowest graph rung and the lexical baseline has therefore read 3.16, then 1.87, then 3.22, then 2.31, then 3.49 on identical bytes — a spread of nearly two to one, on a column whose quality figures did not move by a digit across any of the five.
-What the record carries is the clock and not the machine: no field of `ablation-demo.json` says what else was running, so a reading cannot be told apart from the load it was taken under, and this repository's rule for the column (`DECISIONS.md` D23) is a discipline about when the ladders are republished rather than something the record itself proves.
+**The latency column is the one measurement here that depends on the machine rather than the code, and the record now states the machine it was measured on.**
+Every reading in the series below is one a reader can open — `git show 0fa86c1:results/ablation-demo.json`, then `c607ff4`, `b1f58dc`, `192e804`, and the record committed beside this page.
+Across those five runs BM25's mean read 30.8 ms, then 63.3 ms, then 30.9 ms, then 27.0 ms, then 33.6 ms, and GraphRAG local's read 97.2 ms, then 118.6 ms, then 99.6 ms, then 94.3 ms, then 162.2 ms.
+The ratio between the slowest graph rung and the lexical baseline has therefore read 3.16, then 1.87, then 3.22, then 3.49, then 4.83 on identical bytes — a spread of more than two and a half to one, on a column whose quality figures did not move by a digit across any of the five.
+An earlier version of this paragraph published a reading that no commit of this file holds — it was measured in a working tree and overwritten before it was committed — and reported four runs in one sentence and five four lines below it; the reading is withdrawn rather than described, and the count is now the same number in both places.
+
+**What that column is worth is a question about the machine, so the record now answers it.**
+`AblationReport` carries `load_average_1m` beside `run_utc`, declared run-varying with `latency_ms` and read as the run starts, and both ladders committed here name theirs: the demo ladder ran at a one-minute load average of 18.49 and the CI ladder at 19.43.
+Neither is a quiet machine, and the figure is published rather than the run repeated until it looked like one — so the 162.2 ms in the table below can be read for what it is, a busy laptop, which is more than any of the four readings before it allows.
+What those four say about their own conditions is prose written afterwards rather than a field in the file: `DECISIONS.md` D23 records that the second was taken while a community-report regeneration was saturating the GPU, and answered that with a rule about when the ladders are republished — a promise about the machine, which this record replaces with a measurement of it.
+This repository's bar for every other record is that a measurement whose conditions the record cannot state is not evidence for the number it carries, and the latency column was the one place that bar was kept as a rule about behaviour instead of as a field.
+It is now kept as a field, on the repository's own terms: an idle laptop is not something a laptop can be held to, and a reader who can see the load can weigh the number instead of trusting the promise.
 So this column supports the **ordering** of the rungs and nothing finer, every ratio drawn from it below is written as an approximation on purpose, and no conclusion on this page rests on a latency difference.
 
 **The panel reproduces byte for byte, across two rebuilds.**
@@ -54,7 +62,7 @@ The two committed runs of that same configuration differ from each other in `wal
 
 **The single-agent arm does not, and its record says why.**
 The baseline is chain-of-thought with self-consistency: 12 samples, the first at temperature 0 and the other 11 at 0.7 (`src/peerpanel/evals/baseline.py`), so it is a sampler and two runs of it are two samples rather than a reproduction.
-Re-running the planted evaluation on this commit moved its output — the `qwen2:7b` arm wrote 35 finding strings on `caprin-heterochromatin` where the run published at `edea64f` wrote 34, and the `llama3.1:8b` arm 87 where that run wrote 66.
+Re-running the planted evaluation on this commit moved its output — the `qwen2:7b` arm wrote 40 finding strings on `caprin-heterochromatin` where the run published at `192e804` wrote 35, and the `llama3.1:8b` arm 75 where that run wrote 87, so the count moved in both directions between two runs of one configuration.
 The panel's 16 strings per run did not move.
 Every conclusion drawn from the baseline arms below is therefore drawn from one sample of a stochastic system, and the section on the detection rule says where that mattered.
 
@@ -121,11 +129,11 @@ Two query manuscripts, 36 relevant documents between them, k = 10.
 
 | rung | found @10 | found @30 | recall@10 | ceiling | % of ceiling | NDCG@10 | mean latency |
 |---|---|---|---|---|---|---|---|
-| BM25 | 13 / 36 | 24 / 36 | 0.366 | 0.679 | 69% | 0.770 | 27.0 ms |
-| vector | 13 / 36 | 26 / 36 | 0.366 | 0.679 | 69% | 0.770 | 0.4 ms |
-| RRF hybrid | 13 / 36 | 25 / 36 | 0.366 | 0.679 | 69% | 0.770 | 27.2 ms |
-| GraphRAG local | 10 / 36 | 23 / 36 | 0.312 | 0.679 | 54% | 0.641 | 94.3 ms |
-| **GraphRAG global** | **14 / 36** | 25 / 36 | **0.473** | 0.679 | **76%** | **0.830** | 6.2 ms |
+| BM25 | 13 / 36 | 24 / 36 | 0.366 | 0.679 | 69% | 0.770 | 33.6 ms |
+| vector | 13 / 36 | 26 / 36 | 0.366 | 0.679 | 69% | 0.770 | 0.6 ms |
+| RRF hybrid | 13 / 36 | 25 / 36 | 0.366 | 0.679 | 69% | 0.770 | 36.4 ms |
+| GraphRAG local | 10 / 36 | 23 / 36 | 0.312 | 0.679 | 54% | 0.641 | 162.2 ms |
+| **GraphRAG global** | **14 / 36** | 25 / 36 | **0.473** | 0.679 | **76%** | **0.830** | 13.3 ms |
 
 Every rung is scored over a document list of the **same length**.
 That sounds obvious and an earlier version of this table did not do it: it retrieved a fixed 30 *chunks* per rung and then scored the *document* ranking those chunks happened to produce — 4 documents for RRF against 13 for GraphRAG local on the same query, both reported as "recall@10".
@@ -139,15 +147,15 @@ Two hit columns, both labelled, because they disagree and the disagreement is th
 **found @30** counts them inside a list three times as deep — where a rung with a long tail catches up.
 An earlier version of this table published only the deeper count under a `k = 10` heading, which flattered exactly the rung whose ranking is weakest.
 
-The vector rung's query embedding is served from the committed fixture, so its 0.4 ms is a lookup, not an encoding cost.
+The vector rung's query embedding is served from the committed fixture, so its 0.6 ms is a lookup, not an encoding cost.
 Latencies are means over the two cases, not medians.
 
 **Read this honestly, including the parts that do not flatter the graph:**
 
-- **Community-scoped graph search leads the aggregates; entity-scoped graph search is the worst rung on the page.** GraphRAG global has the highest found@10 (14 of 36), the highest recall@10 (0.473) and the highest NDCG (0.830). GraphRAG local has the lowest of all three (10 of 36, 0.312, 0.641) and the slowest mean latency (94.3 ms), and it has no aggregate win over any other rung.
+- **Community-scoped graph search leads the aggregates; entity-scoped graph search is the worst rung on the page.** GraphRAG global has the highest found@10 (14 of 36), the highest recall@10 (0.473) and the highest NDCG (0.830). GraphRAG local has the lowest of all three (10 of 36, 0.312, 0.641) and the slowest mean latency (162.2 ms), and it has no aggregate win over any other rung.
 - **The lexical, dense and hybrid rungs are indistinguishable on the reported rates.** BM25, vector and RRF hybrid return identical recall@10 and identical NDCG on both cases, because at k = 10 they surface the same relevant documents; they separate only at depth 30, where vector's longer tail reaches 26 of 36 against RRF's 25 and BM25's 24. Three rungs tying to four decimal places is a fact about a 36-document ground truth on a citation-seeded corpus, not evidence that the retrievers are equivalent.
-- **The graph's lead comes from the layer with the most machinery behind it, and the least deterministic.** GraphRAG global ranks over community reports written by a local model, whose regeneration is only 78-of-79 reproducible and whose cache carried the identity defect described above until this commit. The rung leads; the input it leads on is the softest input in the system, and that is stated here rather than left for a reader to discover.
-- **Speed: BM25 at 27.0 ms is the honest lexical baseline, and GraphRAG local runs about 3x BM25's latency.** That multiplier is deliberately imprecise. The same comparison on identical bytes has read 3.16, 1.87, 3.22, 2.31 and 3.49 across five published runs of this ladder, so the column carries the ordering and not a fine-grained ratio, and the spread is the reason the claim is written with a single significant figure. Vector's 0.4 ms is excluded from any cost claim: it is a fixture lookup with the encoder taken out.
+- **The graph's lead comes from the layer with the most machinery behind it, and the least deterministic.** GraphRAG global ranks over community reports written by a local model, whose regeneration is only 78-of-79 reproducible and whose cache carried the identity defect described above until `c607ff4`. The rung leads; the input it leads on is the softest input in the system, and that is stated here rather than left for a reader to discover.
+- **Speed: BM25 at 33.6 ms is the honest lexical baseline on this run, and GraphRAG local runs about 5x BM25's latency.** That multiplier is deliberately imprecise, and it is a reading of one machine under a load the record names (18.49) rather than a property of the two rungs. The same comparison on identical bytes has read 3.16, 1.87, 3.22, 3.49 and 4.83 across the five committed runs of this ladder, so the column carries the ordering and not a fine-grained ratio, and that spread is the reason the claim is written with a single significant figure. Vector's 0.6 ms is excluded from any cost claim: it is a fixture lookup with the encoder taken out.
 - **No rung reaches the ceiling.** The best recall@10 on the page, 0.473, is 76% of the 0.679 that a perfect ranking could have achieved at this depth; the ceiling is below 1.0 because one case has more relevant documents than k.
 - **n = 2, and the ordering reverses between the two cases — so this establishes behaviour, not a ranking.**
 
@@ -234,17 +242,18 @@ The same 16 findings are also both reviewers at `MAX_FINDINGS`, so what reproduc
 
 An earlier version of this page presented two runs as evidence of variability ("12 of 24, then 14 of 24").
 Whatever produced that spread, it is not present in this configuration, and two identical runs cannot support a claim about variance.
-What they do support is reproducibility, and that survived two rebuilds: the record regenerated on this commit matches the one published at `52238c8` in every field except wall-clock and the four fields the schema has gained since, and matches the one published at `edea64f` in every field except wall-clock and the two hygiene counters added in this commit.
+What they do support is reproducibility, and that survived two rebuilds: the record regenerated on this commit matches the one published at `52238c8` in every field except wall-clock and the four fields the schema has gained since, and matches the one published at `edea64f` in every field except wall-clock and the two hygiene counters added at `192e804`.
 
 ### What the run got wrong: nothing it quoted
 
-Across both runs, **0 of 32 reviewer findings quote text that is not in the manuscript.**
+In each committed run, **0 of 16 reviewer findings quote text that is not in the manuscript.**
 Every quote in every finding is real manuscript text.
+The count is published per run because the second run reproduces the first: adding the two gives 32, which is one population of 16 counted twice rather than a sample twice the size.
 
 An earlier version of this section reported three findings in sixteen describing a different paper — a reviewer attributing retrieved literature to the manuscript under review.
 That reviewer was reading a cut prompt: the excerpt's head was gone and the rubric with it, leaving retrieved literature as the most recent thing in its context.
 Read whole, the behaviour disappears entirely on this manuscript.
-One manuscript and 32 findings is not a licence to call the failure mode solved, and `tests/test_artifact_conformance.py` recomputes this count from the records on every run, so if it returns the number returns with it.
+One manuscript and 16 findings in a run is not a licence to call the failure mode solved, and `tests/test_artifact_conformance.py` recomputes this count from the records on every run, so if it returns the number returns with it.
 
 To reproduce: compare each finding's `quote` in `results/panel-review-met17-auxotroph.json` with `manuscripts/met17-auxotroph.txt` **after collapsing runs of whitespace in both**.
 A literal substring check on that record reports five apparent misses (ten across both runs), all of them paragraph breaks where the chunker joined two lines with a space; the conformance test normalises, and this instruction now says so.
@@ -254,7 +263,8 @@ A literal substring check on that record reports five apparent misses (ten acros
 A verdict's citation survives only if the chunk was actually retrieved **and** the quote is a substring of that chunk's own text, so a fabricated citation cannot pass the type system.
 Until the rebuild its yield across every committed run was exactly zero — 0 of 24 verdicts carried an evidence span — and this page said so, calling it an unfired safety check rather than a demonstrated capability.
 
-It fires now: **12 of 40 verdicts across the two committed runs carry a surviving evidence span**, 6 in each.
+It fires now: **6 of 20 verdicts carry a surviving evidence span in each of the two committed runs**.
+The population is 20 and not 40: the second run reproduces the first, so adding them counts one set of verdicts twice.
 The spans are real retrieved text that passed the substring check, and one of them is quoted above.
 
 Two things keep that from being a success story.
@@ -262,7 +272,7 @@ The verdicts carrying those spans are all `NOT_ENOUGH_INFO`, so the grounding de
 And the reviewers' own citations remain nearly absent: of 16 findings in a run, **1 cites a retrieved chunk at all**.
 That number is now readable as reviewer behaviour rather than as the filter's, because the filter publishes its own yield.
 A reviewer's citation to a chunk it was never given is deleted before the finding is recorded, and a finding with no rubric dimension or no text is discarded whole; both committed runs record **0 citations deleted and 0 findings discarded**, on every reviewer (`unretrieved_citations_dropped` and `malformed_findings_dropped` in each `reviewer_outputs` entry).
-Until this commit neither drop was counted anywhere, so a reviewer that cited nothing could not be told apart from one whose citations this pass had removed — and the mitigation `LIMITATIONS.md` lists was the one safeguard on this page with no published yield, while lens findings, conflicts, unparsed calls and verdict grounding all carried theirs.
+Until `192e804` neither drop was counted anywhere, so a reviewer that cited nothing could not be told apart from one whose citations this pass had removed — and the mitigation `LIMITATIONS.md` lists was the one safeguard on this page with no published yield, while lens findings, conflicts, unparsed calls and verdict grounding all carried theirs.
 0 is the informative answer here: the citations are missing because the reviewers never wrote them.
 The denominator is still the cap — 16 is `MAX_FINDINGS` twice over — so this is 1 in 16 capped findings rather than 1 in everything the reviewers had to say.
 The mechanism is proven; what it is attached to is not.
@@ -276,44 +286,53 @@ Two mechanisms this architecture advertises have still never fired on any commit
 
 Three errors were planted into each of two manuscripts — a swapped gene symbol (`Dcr1`→`Dcr2`), a reversed effect direction, and a fabricated citation — inside the 900-word window every arm reads.
 The two are not held out of the corpus in the same sense, and each record says which it is: `caprin-heterochromatin` has no published twin in this corpus at all (`twin_in_corpus: false`), while `met17-auxotroph` does, so its twin is withheld per run — `PMC10729969` and 26 chunks dropped on every arm.
-Three systems reviewed each manuscript: the **panel** (a two-family mixture — methods and verifier on `llama3.1:8b`, novelty and converger on `qwen2:7b`), and one single-agent chain-of-thought-with-self-consistency arm per named local model, so there is a measured rate per model rather than one number over a mixture.
+Three systems reviewed each manuscript: the **panel** (a two-family mixture — methods and verifier on `llama3.1:8b`, novelty and converger on `qwen2:7b`), and one single-agent chain-of-thought-with-self-consistency arm per named local model, so each named model carries its own count rather than one number over a mixture.
+Count, not rate: n = 3 planted errors on 2 manuscripts establishes behaviour, and this page says so wherever the number appears.
 
 **Under the committed detection rule, no arm asserted any planted defect on either manuscript.**
 
 | arm | caprin asserted | caprin named token | caprin tokens | caprin wall | met17 asserted | met17 named token | met17 tokens | met17 wall |
 |---|---|---|---|---|---|---|---|---|
-| **panel** (`llama3.1:8b` + `qwen2:7b`) | **0 / 3** | 1 / 3 | 240,852 | 1,383.5 s | **0 / 3** | 0 / 3 | 244,460 | 1,438.4 s |
-| single agent · `llama3.1:8b` | **0 / 3** | 2 / 3 | 36,577 | 330.5 s | **0 / 3** | 0 / 3 | 32,395 | 358.6 s |
-| single agent · `qwen2:7b` | **0 / 3** | 2 / 3 | 41,747 | 234.9 s | **0 / 3** | 0 / 3 | 29,737 | 122.5 s |
+| **panel** (`llama3.1:8b` + `qwen2:7b`) | **0 / 3** | 1 / 3 | 240,852 | 1,449.8 s | **0 / 3** | 0 / 3 | 244,460 | 1,594.5 s |
+| single agent · `llama3.1:8b` | **0 / 3** | 1 / 3 | 36,475 | 330.8 s | **0 / 3** | 0 / 3 | 31,914 | 338.1 s |
+| single agent · `qwen2:7b` | **0 / 3** | 1 / 3 | 39,462 | 232.2 s | **0 / 3** | 0 / 3 | 29,758 | 135.0 s |
 
 **asserted** is the headline, and it is published at 0.
 **named token** is a labelled upper bound printed beside it, never in its place: it counts planted errors that some finding named while asserting nothing about them.
-Since this commit that bound is computed over the same stripped residue as the headline, so it can no longer be minted by quoting the perturbed sentence back — which, measured below, is what three of the eight credits these records would otherwise carry turned out to be.
+Since `192e804` that bound has been computed over the same stripped residue as the headline, and it can no longer be minted by quoting the perturbed sentence back — which, measured below, is what five of the eight credits these records would otherwise carry turned out to be.
 Cost is tokens and wall-clock; no currency figure is published for this evaluation.
 Every arm of every run recorded 0 unparsed calls, so no count here is depressed by output that failed to parse — that field exists because an earlier run of this comparison was measured with one of the panel's two reviewers silently dead, contributing no findings, with nothing in the record saying so.
 
-On `caprin-heterochromatin` the panel spent 6.6x the tokens of the single-agent `llama3.1:8b` arm and 4.2x the wall-clock, to assert the same nothing.
-Against `qwen2:7b` the same run is 5.8x the tokens and 5.9x the wall-clock.
-On `met17-auxotroph` the gap against `llama3.1:8b` is 7.5x the tokens and 4.0x the wall-clock.
-The same run against `qwen2:7b` is 8.2x the tokens and 11.7x the wall-clock.
-The `llama3.1:8b` arm reached that result on 15% of the panel's tokens for the caprin run.
-The `qwen2:7b` arm used 17% of the panel's tokens on `caprin-heterochromatin` and 12% on `met17-auxotroph`.
+On `caprin-heterochromatin` the panel spent 6.6x the tokens of the single-agent `llama3.1:8b` arm and 4.4x the wall-clock, to assert the same nothing.
+Against `qwen2:7b` the same run is 6.1x the tokens and 6.2x the wall-clock.
+On `met17-auxotroph` the gap against `llama3.1:8b` is 7.7x the tokens and 4.7x the wall-clock.
+The same run against `qwen2:7b` is 8.2x the tokens and 11.8x the wall-clock.
+The `llama3.1:8b` arm reached that result on 15% of the panel's tokens for the caprin run, and 13% of them on `met17-auxotroph`.
+The `qwen2:7b` arm used 16% of the panel's tokens on `caprin-heterochromatin` and 12% on `met17-auxotroph`.
 Neither single-agent arm was given an equal budget: both hit their 12-sample ceiling before spending what the panel spent, so this is not an equal-compute comparison, and the direction of that inequality favours the panel.
-Each multiple is a ratio of two figures in the record beside this page, and `tests/test_planted_published_numbers.py` reads every one of them against the manuscript its own sentence names — a multiple true of one manuscript is false of the other, and until this commit the binding could not tell them apart.
+Each multiple is a ratio of two figures in the record beside this page, and `tests/test_planted_published_numbers.py` reads every one of them against the manuscript its own sentence names — a multiple true of one manuscript is false of the other, and until `192e804` the binding could not tell them apart.
 
 ### The rule, and what a 0 means under it
 
 The published count is produced by `asserts` in `src/peerpanel/evals/planted.py`, rule id `assertion-v2`, written into every record.
 A finding is credited only if one of its own sentences both names the planted detection token and carries an assertion cue — `incorrect`, `wrong`, `does not exist`, `should be`, `inconsistent`, `fabricated`, and about twenty more — that no negation in the cue's own clause stands in front of.
 
-**Only the finding's own prose is scored — and as of this commit that sentence is true, where before it was only stated.**
+**Only the finding's own prose is scored — and since `192e804` that sentence is true of the records, where before it was only stated.**
 The prose reaches the rule through two strippings.
 First, the `quote` field is dropped: a quote is a verbatim slice of the manuscript and the planted token was planted *into* the manuscript, so scoring it credits an arm for reproducing the perturbed sentence.
-Second, and new here, every sentence of what remains that is itself a verbatim slice of the perturbed manuscript is dropped as well — because nothing ever stopped a model putting manuscript text in the `text` field, and these models mostly do.
-Until this commit only the first stripping existed while this page claimed the guarantee both would give, which round 4 filed twice: what the code deleted was the quote FIELD, not quotation, and the sentence a reader was asked to trust was not true of the records beside it.
+Second, every sentence of what remains that is itself a verbatim slice of the perturbed manuscript is dropped as well — because nothing ever stopped a model putting manuscript text in the `text` field, and these models mostly do.
+That second stripping was added at `192e804`, after round 4 filed twice what the first one on its own did not do: the code deleted the quote FIELD, not quotation, and the sentence a reader was asked to trust was not true of the records beside it.
 The rule id moved from `assertion-v1` to `assertion-v2` for that reason and no other — the cue list, the negation scope and the same-sentence clause are byte-identical; what changed is what they are handed.
 The residue each arm was actually scored on is committed as `scored_texts` beside the unstripped `finding_texts`, with `quoted_sentences_dropped` counting what the second stripping removed, so a reader can see both and measure the difference.
 Stripping can only remove text before an existential rule sees it, so it can only lower a count and never raise one: a scoring change made after seeing the result that is arithmetically incapable of flattering the headline is the one shape of post-hoc change that cannot be fitted to it.
+
+**The sentence test now tolerates the punctuation a quotation picks up, which is the repair this commit makes.**
+A model that copies a mid-paragraph clause and ends it with a full stop writes a string that is not a substring of the manuscript, so until this commit that string survived the strip and was scored as prose the arm had written itself.
+`own_prose` now takes a run of `.,;:!?"')]` off the end of a sentence, and a run of `"'([` off its front, before the substring test — off the sentence only, never off the manuscript and never anywhere inside the sentence (`_quotation_form` in `src/peerpanel/evals/planted.py`).
+Nothing about it is fuzzy: a word added to a quotation still survives, because only those characters are removed.
+Like the stripping it belongs to, it removes text before an existential rule sees it, so it can only lower a count.
+The id stays `assertion-v2`, and the code says why where the constant is set: the repair corrects what v2 was already removing rather than changing what is scored or how it is judged.
+Both evaluations were re-run on this commit so that every record agrees with the repaired rule, which means the numbers below carry two changes at once — a stricter strip and a fresh draw from a sampler — and no sentence here attributes a movement to one of them alone.
 
 The rule errs in both directions and the record says which:
 
@@ -334,19 +353,21 @@ The second stripping is a measurement as well as a fix, and this is what it meas
 | arm | caprin: strings scored / written | caprin: own prose, in characters | met17: strings scored / written | met17: own prose, in characters |
 |---|---|---|---|---|
 | the two-family mixture | 10 / 16 | 70% | 8 / 16 | 62% |
-| `llama3.1:8b` alone | 37 / 87 | 41% | 22 / 72 | 33% |
-| `qwen2:7b` alone | 14 / 35 | 28% | 13 / 30 | 45% |
+| `llama3.1:8b` alone | 17 / 75 | 18% | 26 / 72 | 36% |
+| `qwen2:7b` alone | 14 / 40 | 32% | 11 / 33 | 38% |
 
-Across the six arms these systems wrote 256 finding strings; 104 of them keep any prose of their own, 168 sentences were dropped as verbatim manuscript, and **59% of the characters they wrote back were slices of the manuscript they were given**.
+Of the 252 finding strings these six arms wrote, 166 leave no prose of their own once verbatim manuscript sentences are taken out — two strings in three — and 175 sentences were dropped in all, so **64% of the characters they wrote back were slices of the manuscript they were given**.
 The two counts move independently because a finding string can hold more than one sentence: `quoted_sentences_dropped` counts sentences removed, and a string disappears from `scored_texts` only when every sentence in it was quotation.
 The counts in that table are the lengths of `scored_texts` and `finding_texts` in the record beside this page, and the percentages are those same two arrays measured in characters, so every cell can be recounted without running anything.
 On the two committed panel review runs the same behaviour is visible without any arithmetic at all: 8 of the 16 findings have a `text` field byte-identical to their own `quote`.
 
 **This strengthens the null rather than softening it.**
 The headline did not move: `asserted` is 0 under both the old input and the new one, on every arm of both manuscripts, so nothing was subtracted from detection.
-What moved is the labelled bound beside it.
-Run the substring rule over the raw strings, as the previous commit did, and it credits 8 of the 18 arm-and-error pairs; run it over the residue and it credits 5.
-All three lost credits are on `met17-auxotroph`, where the panel's single credit and both of the `llama3.1:8b` arm's were the perturbed sentence itself, quoted back — including *"The MET18 gene, also known as MET15 or MET25 [13–15], catalyzes homocysteine synthesis by reacting H2S with O-acetyl homoserine (i.e. displaying OAH sulfhydrylase activity) [16–18]."*, which names the planted token only because the planting put it there.
+What moved is the labelled bound beside it, including where a reader meets it first: the caprin column published 2 of 3 for both single-agent arms at `192e804` and reads 1 of 3 for every arm here.
+Run the substring rule over the raw strings and it credits 8 of the 18 arm-and-error pairs; run it over the residue and it credits 3.
+Three of the five credits it loses are on `met17-auxotroph` — the panel's single credit and both of the `llama3.1:8b` arm's — and two on `caprin-heterochromatin`, both of them the `qwen2:7b` arm's.
+Every one of the five was the perturbed sentence itself, quoted back — including *"The MET18 gene, also known as MET15 or MET25 [13–15], catalyzes homocysteine synthesis by reacting H2S with O-acetyl homoserine (i.e. displaying OAH sulfhydrylase activity) [16–18]."*, which names the planted token only because the planting put it there.
+The three that survive are all on `caprin-heterochromatin`, one per arm, and each one names its token in a sentence the arm wrote itself while asserting nothing about it — which is what the labelled bound is for.
 So the honest summary of these systems on this task is not that they looked and missed: given a manuscript with three defects in it, they mostly handed the manuscript back.
 
 ### The 0 is not an instrument that cannot move
@@ -356,10 +377,10 @@ A detection rule that credits nothing is worthless if it *could* not credit anyt
 | arm | caprin: strings / carrying an assertion cue | met17: strings / carrying an assertion cue |
 |---|---|---|
 | the two-family mixture | 16 / 0 | 16 / 0 |
-| `llama3.1:8b` alone | 87 / 0 | 72 / 0 |
-| `qwen2:7b` alone | 35 / 0 | 30 / 0 |
+| `llama3.1:8b` alone | 75 / 0 | 72 / 0 |
+| `qwen2:7b` alone | 40 / 0 | 33 / 0 |
 
-On these records the answer is stark: **not one of the 256 strings carries an assertion cue at all**, before or after the stripping.
+On these records the answer is stark: **not one of the 252 strings carries an assertion cue at all**, before or after the stripping.
 These arms did not write "incorrect", "wrong", "should be", "inconsistent" or any of the twenty-odd others — about the planted defects or about anything else.
 That is a fact about the arms, and on its own it cannot tell a silent system apart from a deaf instrument, so the instrument is evidenced separately.
 
@@ -389,11 +410,11 @@ A row was added rather than the claim softened, and row 13 now says at which lev
 | # | asymmetry | panel | single-agent arms | favours |
 |---|---|---|---|---|
 | 1 | task instruction | a structured pre-submission review scored on soundness, presentation and contribution | "reviewing a manuscript excerpt for errors and weaknesses… quote the exact problematic text" | **the baselines** — one arm is pointed at the task being measured |
-| 2 | token budget | 240,852 / 244,460 | 36,577 and 41,747 / 32,395 and 29,737 | **the panel** |
-| 3 | wall-clock | 1,383.5 s / 1,438.4 s | 330.5 and 234.9 s / 358.6 and 122.5 s | **the panel** — and its reviewers run in parallel while the baseline loop is serial, so the published multiple understates the gap |
-| 4 | model calls | 47 / 46 | 12 each, and 13 for `qwen2:7b` on caprin, where one sample took the single retry `call_json` allows and then parsed | **the panel** |
+| 2 | token budget | 240,852 / 244,460 | 36,475 and 39,462 / 31,914 and 29,758 | **the panel** |
+| 3 | wall-clock | 1,449.8 s / 1,594.5 s | 330.8 and 232.2 s / 338.1 and 135.0 s | **the panel** — and its reviewers run in parallel while the baseline loop is serial, so the published multiple understates the gap |
+| 4 | model calls | 47 / 46 | 12 on every arm of both manuscripts — the sampler's ceiling, and no sample needed the single retry `call_json` allows | **the panel** |
 | 5 | retrieval breadth | 2 reviewers × 3 queries × 3 chunks, plus per-claim retrieval on all 20 claims | one hybrid lookup on the title, 3 chunks | **the panel** |
-| 6 | scored surface, as it is now scored: after quotation is stripped | 10 strings, 3,234 chars / 8 strings, 2,063 chars | 13–37 strings, 1,402–5,241 chars | **not established** — 0.68 to 1.63 times the panel's own prose, in both directions on both manuscripts; credit is still an OR over strings, which favours whichever arm writes more of them |
+| 6 | scored surface, as it is now scored: after quotation is stripped | 10 strings, 3,234 chars / 8 strings, 2,063 chars | 11–26 strings, 1,544–3,424 chars | **not established** — 0.69 to 1.66 times the panel's own prose, above it on one arm and below it on the other three; credit is still an OR over strings, which favours whichever arm writes more of them |
 | 7 | output cap | `MAX_FINDINGS` 8 × 2 reviewers = 16 | 10 findings × 12 samples, deduped | **the baselines** |
 | 8 | aggregation | one deterministic pass per reviewer at temperature 0 | 12 samples, the first at temperature 0 and the rest at 0.7, findings unioned | **the baselines** — union is the recall-maximising aggregation, and the panel was not given an equivalent |
 | 9 | channels scored | three: reviewer findings, REFUTES verdicts, deterministic-lens findings | one: model-authored findings | **the panel** nominally, **the baselines** in practice — two of the panel's three channels produced nothing on any committed run |
@@ -410,7 +431,7 @@ The result to survive is now a null, not a ranking, and that changes what the as
 
 - **The null itself survives, and is the most robust thing on this page.** Every asymmetry that favours the baselines (1, 7, 8, and 9 in practice) is a reason a baseline might have asserted *more*, and every one that favours the panel (2, 3, 4, 5, and 16 on `met17-auxotroph`) is a reason the panel might have. All three arms asserted nothing, on both manuscripts. No asymmetry in this table turns a non-zero into a 0.
 - **Row 16 pushes the panel's way and the panel still asserted nothing.** On the one manuscript where the exclusion leaves residue, the arm carrying that residue — reports built over a corpus that includes the document stating every planted fact correctly — asserted 0 of 3, and its labelled naming bound there is 0 as well. A contaminated arm that finds nothing is a stronger null than a clean one, not a weaker one.
-- **The cost half survives.** The panel spent between 5.8 and 8.2 times the tokens of a single agent on identical inputs, metered through one ledger type on both arms, and asserted the same nothing. Asymmetries 2, 3, 4 and 5 all run the panel's way, so its spend is if anything understated relative to a fairer design.
+- **The cost half survives.** The panel spent between 6.1 and 8.2 times the tokens of a single agent on identical inputs, metered through one ledger type on both arms, and asserted the same nothing. Asymmetries 2, 3, 4 and 5 all run the panel's way, so its spend is if anything understated relative to a fairer design.
 - **The previous conclusion — that a single agent found twice what the panel found — does not survive, and is withdrawn.** It rested on a rule that credited quotation, over a scored surface several times larger for the arm that appeared to lead — most of that surface being, as row 6 now records, quotation itself — under a union aggregation the panel was not given. A one-error margin cannot carry two undisclosed confounds that both push the same way. The three-arm table above is what the records support instead.
 - **What is not settled by this measurement.** Whether a panel would assert more than a single agent under matched instructions, matched aggregation and matched scored surface is untested here; asymmetry 1 alone would justify running it. n = 3 errors on 2 manuscripts establishes behaviour, not a rate, and two of the five error kinds could not be planted inside the reviewed window at all and are recorded as skipped rather than quietly shrinking the denominator.
 
@@ -422,8 +443,8 @@ The literature predicts it: architectures of this kind "often fail to outperform
 Read only against the committed records, what the panel demonstrably has is narrower than the architecture promises, and each item is a number on this page rather than a description:
 
 - order-swapped claim verification whose disagreements are visible — 6 of 20 verdicts change with the evidence order, and the rate is published rather than smoothed;
-- evidence grounding enforced in code, which now fires on 12 of 40 verdicts where every run committed before the prompt-window fix carried none;
+- evidence grounding enforced in code, which now fires on 6 of 20 verdicts in each committed run where every run committed before the prompt-window fix carried none;
 - reproducibility at temperature 0: two runs and two rebuilds that differ only in wall-clock and in fields the schema gained afterwards.
 
-What it does not have, on this evidence, is a verdict it will commit to (0 SUPPORTS and 0 REFUTES across 40), a deterministic lens with any output at all (0 findings, everywhere), a conflict detector that has ever fired, or an advantage over one well-prompted local model at finding planted defects.
+What it does not have, on this evidence, is a verdict it will commit to (0 SUPPORTS and 0 REFUTES in either run), a deterministic lens with any output at all (0 findings, everywhere), a conflict detector that has ever fired, or an advantage over one well-prompted local model at finding planted defects.
 The honest summary is that assembling these parts into a panel did not, here, make it better at the task it was assembled for — and that a system's architecture has to earn its cost against the simplest thing that could work, every time, in public.

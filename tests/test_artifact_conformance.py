@@ -18,6 +18,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from typing import ClassVar
 
 import pytest
 from pydantic import ValidationError
@@ -458,30 +459,475 @@ class TestEveryPromptWasReadWhole:
         assert record["truncated_chunks"] == 0, f"{name}: a chunk recorded as truncated"
 
 
+# ======================================================================================
+# The published yields, and the populations they are published over.
+#
+# Round 5, report 3, Finding 1: `test_grounding_yield_is_stated_accurately` computed its
+# numerator and then asserted it only inside the `if grounded == 0:` branch, so while the
+# yield was non-zero the single live assertion was that the string "40" appeared SOMEWHERE
+# in RESULTS.md. An evaluator moved ten published numbers with all 594 tests green,
+# including this yield and the panel's verdict distribution. Every numerator below is now
+# asserted whatever its value.
+#
+# Round 5, report 1, Finding 4: the two committed panel runs are byte-identical apart from
+# `wall_s`, so "12 of 40" and "0 of 32" count ONE population twice. The arithmetic rule
+# accepts a doubled pair only as the exact sum of the runs; the presentation rule after it
+# requires a doubled form to say that it is a reproduction counted twice, or to be
+# restated per run. Neither rule invents a preferred wording — both roads are named in the
+# failure message, and the honest per-run figures are what is bound.
+#
+# Every check is a module-level function taking the prose as an argument, so a control can
+# hand it a mutated document and prove the check goes red (D16: a verification that cannot
+# fail is worth nothing). The controls are at the bottom of this file.
+# ======================================================================================
+
+_BULLET = re.compile(r"^\s*(?:[-*+]|\d+\.)\s")
+
+
+def _prose_units(text: str) -> list[str]:
+    """Prose paragraphs: table rows dropped, bullets kept apart, emphasis stripped.
+
+    Table cells are bound structurally in `test_published_numbers.py` (row label x column
+    header). Folding them in here would join eleven unrelated rows into one "sentence",
+    and a claim would then borrow the caveat of a row three lines away — the same reason
+    a bullet ends a sentence. Emphasis and backticks go because a claim wrapped in `**`
+    would otherwise never end a sentence.
+    """
+    units: list[str] = []
+    current: list[str] = []
+
+    def flush() -> None:
+        joined = re.sub(r"\s+", " ", " ".join(current)).strip()
+        if joined:
+            units.append(joined)
+        current.clear()
+
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("|") or stripped.startswith("#"):
+            flush()
+            continue
+        if _BULLET.match(line):
+            flush()
+        current.append(re.sub(r"[*`_]", "", line))
+    flush()
+    return units
+
+
+def _sentences(text: str) -> list[str]:
+    """Every prose sentence, in document order."""
+    return [sentence for _unit, sentence in _sentences_in_context(text)]
+
+
+def _sentences_in_context(text: str) -> list[tuple[str, str]]:
+    """(the paragraph a sentence sits in, the sentence).
+
+    Two scopes, deliberately. WHICH mechanism a number is about is often established one
+    sentence earlier — "Evidence grounding is enforced in code, and it now fires." then
+    "on the rebuilt index it is 12 of 40 verdicts" — so classification reads the
+    paragraph. Whether a claim is a superseded measurement, and whether a doubled figure
+    decomposes itself, are properties of the sentence making the claim: a paragraph must
+    never lend its disclaimer to a live figure three sentences later.
+    """
+    out: list[tuple[str, str]] = []
+    for unit in _prose_units(text):
+        for sentence in re.split(r"(?<=[.!?])\s+", unit):
+            if sentence.strip():
+                out.append((unit, sentence))
+    return out
+
+
+# A sentence that says it is reporting a superseded measurement is not bound to today's
+# records — that is the whole point of publishing the old number beside the correction.
+# The marker has to be IN the sentence making the claim, so a paragraph cannot lend its
+# disclaimer to a live figure three sentences later.
+_HISTORICAL = re.compile(
+    r"an earlier (?:version|run|record|reading)|a previous version|previous version of this|"
+    r"earlier version of this|until the rebuild|until this commit|before the rebuild|"
+    r"used to (?:say|read|report)|was once",
+    re.IGNORECASE,
+)
+
+# What makes a doubled population honest: it is named as one population counted twice, or
+# it is decomposed per run in the same sentence ("6 in each run", "eight findings each").
+_DECOMPOSED = re.compile(r"\beach\b|per run|counted twice|twice over|in both runs of", re.I)
+_REPRODUCTION = re.compile(r"reproduc\w+", re.IGNORECASE)
+_NOT_A_SAMPLE = re.compile(r"identical|independent sample|second sample|the same run", re.I)
+
+
+def _names_the_runs_as_one(text: str) -> bool:
+    """Does this document say anywhere that the second run reproduces the first?
+
+    Required of a document that publishes a doubled n. `RESULTS.md` says it in as many
+    words ("a second run is a reproduction, not an independent sample"); until this round
+    `README.md` said it nowhere while publishing 12 of 40 and 0 of 32.
+    """
+    return any(
+        _REPRODUCTION.search(s) and _NOT_A_SAMPLE.search(s) for s in _sentences(text)
+    )
+
+
+def _results_text() -> str:
+    return (RESULTS / "RESULTS.md").read_text()
+
+
+def _readme_text() -> str:
+    return (ROOT / "README.md").read_text()
+
+
+def _quotes_outside_the_manuscript(name: str, review: PanelReview) -> tuple[int, int]:
+    """(findings quoting text that is not in the manuscript, findings) for one run."""
+    # Two passes on purpose: "-run\d+$" cannot match while ".json" still trails, so a
+    # single alternation leaves "met17-auxotroph-run2" and looks for a manuscript by that
+    # name.
+    stem = re.sub(r"-run\d+$", "", Path(name).stem.replace("panel-review-", "", 1))
+    manuscript = _normalise((ROOT / "manuscripts" / f"{stem}.txt").read_text())
+    offending = total = 0
+    for output in review.reviewer_outputs:
+        for finding in output.findings:
+            total += 1
+            if finding.quote and _normalise(finding.quote) not in manuscript:
+                offending += 1
+    return offending, total
+
+
+def _per_run_yields() -> dict[str, list[tuple[int, int]]]:
+    """{kind: [(numerator, denominator), one pair per committed run]}.
+
+    Per run, never summed: the runs are a reproduction of one another, and the sum is a
+    presentation of that pair rather than an n. The sum is derived where a claim uses it,
+    by `_allowed_pairs`, so the two forms can never disagree.
+    """
+    kinds: dict[str, list[tuple[int, int]]] = {
+        "grounding": [],
+        "order-change": [],
+        "hallucination": [],
+        "reviewer citations": [],
+    }
+    for name in PANEL_RECORDS:
+        review = _panel(name)
+        kinds["grounding"].append(
+            (sum(1 for v in review.verdicts if v.evidence), len(review.verdicts))
+        )
+        kinds["order-change"].append(
+            (sum(1 for v in review.verdicts if not v.swap_consistent), review.n_swap_checked)
+        )
+        kinds["hallucination"].append(_quotes_outside_the_manuscript(name, review))
+        findings = [f for o in review.reviewer_outputs for f in o.findings]
+        kinds["reviewer citations"].append(
+            (sum(1 for f in findings if f.evidence_chunk_ids), len(findings))
+        )
+    return kinds
+
+
+def _allowed_pairs(per_run: list[tuple[int, int]]) -> dict[tuple[int, int], str]:
+    """{(numerator, denominator): how it is arrived at} — per run, and the doubled sum."""
+    allowed = {pair: "one run" for pair in per_run}
+    if len(per_run) > 1:
+        doubled = (sum(n for n, _ in per_run), sum(d for _, d in per_run))
+        allowed.setdefault(doubled, "every committed run added together")
+    return allowed
+
+
+def _lens_findings_per_run() -> list[int]:
+    return [len(_panel(name).deterministic_findings) for name in PANEL_RECORDS]
+
+
+_KIND_VOCABULARY = {
+    "grounding": re.compile(r"evidence span|surviving evidence|grounding|grounded", re.I),
+    "order-change": re.compile(r"evidence order|order[- ]swapped|swap|reversed", re.I),
+}
+_HALLUCINATION = re.compile(r"quot\w+", re.IGNORECASE)
+_VERDICT_PAIR = re.compile(r"(\d[\d,]*)\s+of\s+(\d[\d,]*)\s+verdicts?", re.IGNORECASE)
+_BARE_PAIR = re.compile(r"(\d[\d,]*)\s+of\s+(\d[\d,]*)")
+
+
+def _int(token: str) -> int:
+    return int(token.replace(",", ""))
+
+
+def _claims(results_text: str, readme_text: str) -> list[tuple[str, str, str, int, int]]:
+    """Every live population claim in the two documents, as
+    (kind, where, sentence, numerator, denominator).
+
+    A claim naming a verdict population but no mechanism this test knows is an ERROR
+    rather than a skip: an unclassifiable claim is an unbound claim, which is the defect
+    this section exists to close.
+    """
+    found: list[tuple[str, str, str, int, int]] = []
+    for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
+        for unit, sentence in _sentences_in_context(text):
+            if _HISTORICAL.search(sentence):
+                continue
+            for match in _VERDICT_PAIR.finditer(sentence):
+                kinds = [k for k, vocab in _KIND_VOCABULARY.items() if vocab.search(unit)]
+                assert kinds, (
+                    f"{where}: {match.group(0)!r} publishes a verdict population, and the "
+                    "sentence around it names no mechanism this binding can recompute it "
+                    f"from ({sorted(_KIND_VOCABULARY)}). Say which mechanism the number is "
+                    f"about, or the number is unbound.\n  {sentence}"
+                )
+                for kind in kinds:
+                    found.append(
+                        (kind, where, sentence, _int(match.group(1)), _int(match.group(2)))
+                    )
+            if _HALLUCINATION.search(sentence) and "manuscript" in sentence.lower():
+                for match in _BARE_PAIR.finditer(sentence):
+                    found.append(
+                        (
+                            "hallucination",
+                            where,
+                            sentence,
+                            _int(match.group(1)),
+                            _int(match.group(2)),
+                        )
+                    )
+    return found
+
+
+def _check_published_populations_recompute(results_text: str, readme_text: str) -> int:
+    """Every live "N of M" claim about the panel, numerator included, against the records.
+
+    A claim naming several mechanisms is allowed to match any one of them; a claim naming
+    one must match that one exactly.
+    """
+    yields = _per_run_yields()
+    checked = 0
+    by_claim: dict[tuple[str, str, int, int], list[str]] = {}
+    for kind, where, sentence, numerator, denominator in _claims(results_text, readme_text):
+        by_claim.setdefault((where, sentence, numerator, denominator), []).append(kind)
+    for (where, sentence, numerator, denominator), kinds in by_claim.items():
+        allowed: dict[tuple[int, int], str] = {}
+        for kind in kinds:
+            allowed |= _allowed_pairs(yields[kind])
+        assert (numerator, denominator) in allowed, (
+            f"{where} publishes {numerator} of {denominator} as the "
+            f"{' or '.join(sorted(kinds))} yield; the committed runs give "
+            + " and ".join(f"{n} of {d}" for n, d in yields[kinds[0]])
+            + f" ({', '.join(f'{n} of {d} — {how}' for (n, d), how in sorted(allowed.items()))}).\n"
+            f"  {sentence}"
+        )
+        checked += 1
+    assert checked >= 4, (
+        f"only {checked} population claims matched in README.md and results/RESULTS.md. "
+        "This binding is bound to nothing, which is round 3's dead-guard class (F6): the "
+        "grounding yield, the order-change rate and the hallucination count are each "
+        "published in both files, so a shape this regex cannot read is a shape that has "
+        "gone unbound."
+    )
+    return checked
+
+
+def _check_a_doubled_population_says_so(results_text: str, readme_text: str) -> None:
+    """A figure counted over both runs is one population counted twice, and says so.
+
+    Round 5, report 1, Finding 4. The records are byte-identical apart from `wall_s`, so
+    "12 of 40" and "0 of 32" state the sample size at twice its true value — in the same
+    documents that withhold a rate below an n gate and say "a second run is a
+    reproduction, not an independent sample". Two roads out, and this rule takes either:
+    restate the figure per run, or keep the doubled form and attach its own caveat.
+
+    Every violation is collected and reported together. A rule that stops at the first
+    one makes a prose pass into a queue of single failures, and the writer cannot see the
+    shape of what they are fixing.
+    """
+    yields = _per_run_yields()
+    problems: list[str] = []
+    for kind, where, sentence, numerator, denominator in _claims(results_text, readme_text):
+        per_run = yields[kind]
+        if len(per_run) < 2 or (numerator, denominator) in set(per_run):
+            continue
+        if (numerator, denominator) != (sum(n for n, _ in per_run), sum(d for _, d in per_run)):
+            continue  # the arithmetic rule owns a pair that is neither
+        text = results_text if where.endswith("RESULTS.md") else readme_text
+        detail = (
+            f"{where} publishes {numerator} of {denominator} for the {kind} yield. That "
+            f"denominator is {len(per_run)} runs added together, and the runs are "
+            "byte-identical apart from wall-clock, so it is one population counted twice "
+            f"rather than a sample of {denominator}. Per run the records give "
+            + " and ".join(f"{n} of {d}" for n, d in per_run)
+            + ".\n  "
+            + sentence
+        )
+        if not _DECOMPOSED.search(sentence):
+            problems.append(
+                detail + "\n  Either restate it per run, or decompose it in the same "
+                'sentence ("6 in each run", "eight findings each").'
+            )
+        elif not _names_the_runs_as_one(text):
+            problems.append(
+                detail + f"\n  {where} nowhere says the second run reproduces the first, "
+                "so a reader sees two samples. Say it in this document (results/RESULTS.md "
+                'says "a second run is a reproduction, not an independent sample"), or '
+                "publish the per-run figure here."
+            )
+    assert not problems, (
+        f"{len(problems)} doubled population(s) are published as an n:\n\n"
+        + "\n\n".join(problems)
+    )
+
+
+_VERDICT_IN_PROSE = re.compile(
+    r"(\d[\d,]*)\s+(SUPPORTS|REFUTES|NOT_ENOUGH_INFO|abstentions?)", re.IGNORECASE
+)
+_POPULATION = re.compile(r"(?:across|of|out of)\s+(\d[\d,]*)", re.IGNORECASE)
+
+
+def _check_the_verdict_distribution_in_prose(results_text: str, readme_text: str) -> None:
+    """"0 SUPPORTS, 0 REFUTES, 20 abstentions per run", against the records.
+
+    The table cell carrying the same distribution is bound by row label and column in
+    `test_published_numbers.py`; this is the sentence that repeats it. The evaluator's
+    mutation was exactly this — two abstentions turned into two SUPPORTS — and it is the
+    most load-bearing honest number on the page: the section "the verifier decides
+    nothing" is built on it.
+
+    A doubled population is accepted here without the caveat the "N of M" rule asks for,
+    because round 5 filed the doubled-n finding against the six sentences it enumerated
+    and this is not one of them. The COUNT is bound either way.
+    """
+    counts = [
+        {
+            verdict: sum(1 for v in _panel(name).verdicts if v.verdict == verdict)
+            for verdict in VERDICTS
+        }
+        for name in PANEL_RECORDS
+    ]
+    assert all(c == counts[0] for c in counts), (
+        f"the committed runs publish different verdict distributions {counts}; a single "
+        "published distribution cannot describe them"
+    )
+    per_run = counts[0]
+    doubled = {verdict: total * len(counts) for verdict, total in per_run.items()}
+    totals = {sum(per_run.values()), sum(doubled.values())}
+    seen = 0
+    for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
+        for _unit, sentence in _sentences_in_context(text):
+            if _HISTORICAL.search(sentence):
+                continue
+            claims = _VERDICT_IN_PROSE.findall(sentence)
+            if len({verdict.upper() for _n, verdict in claims}) < 2:
+                continue  # a lone "20 abstentions" is a count, not the distribution
+            seen += 1
+            for shown, word in claims:
+                verdict = VERDICT_NEI if word.lower().startswith("abstention") else word.upper()
+                claimed = _int(shown)
+                assert claimed in {per_run[verdict], doubled[verdict]}, (
+                    f"{where} publishes {shown} {word}; the committed runs record "
+                    f"{per_run[verdict]} per run ({doubled[verdict]} over "
+                    f"{len(counts)} runs).\n  {sentence}"
+                )
+            for population in _POPULATION.findall(sentence):
+                assert _int(population) in totals, (
+                    f"{where} states the verdict distribution over a population of "
+                    f"{population}; the committed runs judged "
+                    f"{sorted(totals)[0]} claims per run.\n  {sentence}"
+                )
+    assert seen, (
+        "no verdict-distribution sentence matched in README.md or results/RESULTS.md, so "
+        f"this guard covers nothing (round 3's F6). The records say {per_run}, and both "
+        "files state it in prose beside the table."
+    )
+
+
+def _check_the_lens_yield(results_text: str, readme_text: str) -> None:
+    """The deterministic lens's count, wherever it is stated, whatever it is."""
+    per_run = _lens_findings_per_run()
+    assert len(set(per_run)) == 1, (
+        f"the committed runs disagree on the lens count {per_run}; a single published "
+        "figure cannot describe them"
+    )
+    found = per_run[0]
+    seen = 0
+    for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
+        for sentence in _sentences(text):
+            if "lens" not in sentence.lower() or _HISTORICAL.search(sentence):
+                continue
+            for match in re.finditer(r"(\d[\d,]*|no|zero)\s+findings", sentence, re.IGNORECASE):
+                seen += 1
+                shown = match.group(1).lower()
+                claimed = 0 if shown in {"no", "zero"} else _int(shown)
+                assert claimed == found, (
+                    f"{where} says {match.group(0)!r} of the deterministic lens; the "
+                    f"committed runs record {found} on every run.\n  {sentence}"
+                )
+    assert seen, (
+        "no deterministic-lens count matched in README.md or results/RESULTS.md, so this "
+        f"guard covers nothing (round 3's F6). The records say {found} findings on every "
+        "committed run, and both files describe the lens as a mechanism that has never "
+        "fired — a description that has to carry the number it rests on."
+    )
+    if found == 0:
+        assert "0 findings" in results_text, (
+            "results/RESULTS.md must state the lens yield as a zero: a mechanism with no "
+            "output on any committed run is a gap, and this page says so in numbers"
+        )
+
+
+def _check_the_reviewer_citation_yield(results_text: str, readme_text: str) -> None:
+    """"1 reviewer finding in 16 cites a retrieved chunk" — both numbers, from the records.
+
+    Deliberately shape-agnostic: the two live sentences write the pair in opposite orders
+    ("of 16 findings in a run, 1 cites…" and "only 1 reviewer finding in 16 cites…"), so
+    this requires both numbers to be PRESENT in the sentence rather than pinning an order.
+    It therefore catches a moved value and not a transposed one; the panel table's
+    per-reviewer findings row binds the 16 by position.
+    """
+    per_run = _per_run_yields()["reviewer citations"]
+    assert len(set(per_run)) == 1, f"the committed runs disagree on citing findings: {per_run}"
+    citing, findings = per_run[0]
+    seen = 0
+    for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
+        for sentence in _sentences(text):
+            if "cites a retrieved chunk" not in sentence.lower() or _HISTORICAL.search(sentence):
+                continue
+            seen += 1
+            numbers = {_int(n) for n in re.findall(r"\d[\d,]*", sentence)}
+            assert {citing, findings} <= numbers, (
+                f"{where} states the reviewer-citation yield without the numbers the "
+                f"records carry: {citing} of {findings} findings in a run cite a "
+                f"retrieved chunk, and this sentence carries {sorted(numbers)}.\n  {sentence}"
+            )
+    assert seen, (
+        "no reviewer-citation claim matched in either file; the records say "
+        f"{citing} of {findings} and both documents publish it, so this guard has gone "
+        "dead rather than the claim having gone away"
+    )
+
+
 class TestClaimedYieldsMatchTheRecords:
     """Two capabilities are described in prose as strengths. Their measured yield
-    is bound here so the description can never drift from the artifacts again."""
+    is bound here so the description can never drift from the artifacts again.
 
-    def _panel_runs(self) -> list[PanelReview]:
-        return [_panel(n) for n in PANEL_RECORDS]
+    Every method delegates to a module-level checker taking the two documents as text,
+    so `TestTheseYieldBindingsCanGoRed` below can run the same rule over a mutated copy
+    and prove the rule fires.
+    """
 
     def test_grounding_yield_is_stated_accurately(self) -> None:
-        grounded = sum(1 for r in self._panel_runs() for v in r.verdicts if v.evidence)
-        total = sum(len(r.verdicts) for r in self._panel_runs())
-        results_text = (RESULTS / "RESULTS.md").read_text()
-        readme = (ROOT / "README.md").read_text()
+        """The numerator, unconditionally — the assertion Finding 1 found missing."""
+        results_text, readme = _results_text(), _readme_text()
+        grounded = sum(n for n, _ in _per_run_yields()["grounding"])
+        total = sum(d for _, d in _per_run_yields()["grounding"])
         if grounded == 0:
             for text, where in ((results_text, "RESULTS.md"), (readme, "README.md")):
                 assert "never" in text.lower() and "zero" in text.lower(), (
                     f"{where} must say the grounding yield is zero while it is "
                     f"({grounded}/{total} spans across committed runs)"
                 )
-        assert f"{total}" in results_text, "the verdict population should be published"
+        _check_published_populations_recompute(results_text, readme)
+
+    def test_a_doubled_population_is_published_as_a_reproduction(self) -> None:
+        _check_a_doubled_population_says_so(_results_text(), _readme_text())
+
+    def test_the_verdict_distribution_in_prose_matches_the_records(self) -> None:
+        _check_the_verdict_distribution_in_prose(_results_text(), _readme_text())
 
     def test_deterministic_lens_yield(self) -> None:
-        found = sum(len(r.deterministic_findings) for r in self._panel_runs())
-        if found == 0:
-            assert "0 findings" in (RESULTS / "RESULTS.md").read_text()
+        _check_the_lens_yield(_results_text(), _readme_text())
+
+    def test_reviewer_citation_yield(self) -> None:
+        _check_the_reviewer_citation_yield(_results_text(), _readme_text())
 
     def test_the_hallucination_count_is_the_records_own_count(self) -> None:
         """The one number the prose reports AGAINST itself, and the only one that was
@@ -489,19 +935,9 @@ class TestClaimedYieldsMatchTheRecords:
         manuscript under review. Recomputed here from the records, both files required to
         state it, so the count can never be softened by a rewrite or left behind by a
         re-run."""
-        offending = total = 0
-        for name in PANEL_RECORDS:
-            review = _panel(name)
-            # Two passes on purpose: "-run\d+$" cannot match while ".json" still trails,
-            # so a single alternation leaves "met17-auxotroph-run2" and looks for a
-            # manuscript by that name.
-            stem = re.sub(r"-run\d+$", "", Path(name).stem.replace("panel-review-", "", 1))
-            manuscript = _normalise((ROOT / "manuscripts" / f"{stem}.txt").read_text())
-            for output in review.reviewer_outputs:
-                for finding in output.findings:
-                    total += 1
-                    if finding.quote and _normalise(finding.quote) not in manuscript:
-                        offending += 1
+        per_run = _per_run_yields()["hallucination"]
+        offending = sum(n for n, _ in per_run)
+        total = sum(d for _, d in per_run)
         # The claim must be found AS a claim, not as a digit loose in the prose: every
         # digit from 1 to 10 appears somewhere in both files, so a substring test passes
         # whatever the records say. The first version of this test did exactly that —
@@ -512,8 +948,8 @@ class TestClaimedYieldsMatchTheRecords:
         # dead-guard class round 3 filed three of.
         claim = re.compile(r"(\w+)\s+hallucinated\s+findings?\s+in\s+(\w+)")
         for where, text in (
-            ("RESULTS.md", (RESULTS / "RESULTS.md").read_text()),
-            ("README.md", (ROOT / "README.md").read_text()),
+            ("RESULTS.md", _results_text()),
+            ("README.md", _readme_text()),
         ):
             found = claim.search(text)
             if offending == 0:
@@ -532,3 +968,179 @@ class TestClaimedYieldsMatchTheRecords:
             assert (_as_number(found.group(1)), _as_number(found.group(2))) == (offending, total), (
                 f"{where} says '{found.group(0)}'; the records say {offending} of {total}"
             )
+        # The shape the prose actually uses ("0 of 32 reviewer findings quote text that is
+        # not in the manuscript") went unbound while the regex above looked for a wording
+        # neither file uses. It is bound with the rest of the population claims.
+        _check_published_populations_recompute(_results_text(), _readme_text())
+
+
+class TestTheseYieldBindingsCanGoRed:
+    """A control per binding, over the REAL documents, mutated in memory.
+
+    Round 4 wrote the rule these obey: a verification that cannot fail is worth nothing.
+    So each control asserts the string it moves is present in the file as committed (a
+    control over a string that is not there proves nothing), mutates it, and requires the
+    checker to fail with the message that names the figure — not merely to fail, which any
+    unrelated breakage would satisfy.
+    """
+
+    # Each row: (the file, the committed text, what an evaluator changed it to, the
+    # message the binding must answer with). The first two rows are verbatim from round
+    # 5's report 3, Finding 1 — the mutations that passed 594 green tests.
+    MUTATIONS: ClassVar[list[tuple[str, str, str, str]]] = [
+        (
+            # Re-pointed when the README moved to the per-run lead (D-15). The row is
+            # still round 5's mutation — the same figure moved by the same amount — but
+            # the needle has to be text the page actually carries, or the control
+            # mutates nothing and its green means nothing.
+            "README.md",
+            "12 of 40 verdicts counts the same 20 twice",
+            "19 of 40 verdicts counts the same 20 twice",
+            r"README\.md publishes 19 of 40",
+        ),
+        (
+            "results/RESULTS.md",
+            "**6 of 20 verdicts carry a surviving evidence span in each of the two "
+            "committed runs**",
+            "**9 of 20 verdicts carry a surviving evidence span in each of the two "
+            "committed runs**",
+            r"publishes 9 of 20",
+        ),
+        (
+            "results/RESULTS.md",
+            "0 of 16 reviewer findings quote text that is not in the manuscript",
+            "3 of 16 reviewer findings quote text that is not in the manuscript",
+            r"publishes 3 of 16",
+        ),
+        (
+            "results/RESULTS.md",
+            "6 of 20 verdicts change with the evidence order",
+            "9 of 20 verdicts change with the evidence order",
+            r"publishes 9 of 20",
+        ),
+    ]
+
+    @pytest.mark.parametrize(("where", "original", "mutated", "message"), MUTATIONS)
+    def test_moving_a_published_yield_fails(
+        self, where: str, original: str, mutated: str, message: str
+    ) -> None:
+        results_text, readme = _results_text(), _readme_text()
+        text = results_text if where.endswith("RESULTS.md") else readme
+        assert original in text, (
+            f"{where} no longer contains {original!r}, so this control moves a string that "
+            "is not there and proves nothing. Re-point it at the sentence that carries the "
+            "figure now."
+        )
+        if where.endswith("RESULTS.md"):
+            results_text = results_text.replace(original, mutated, 1)
+        else:
+            readme = readme.replace(original, mutated, 1)
+        with pytest.raises(AssertionError, match=message):
+            _check_published_populations_recompute(results_text, readme)
+
+    def test_moving_the_lens_count_fails(self) -> None:
+        results_text, readme = _results_text(), _readme_text()
+        original = "The deterministic lens: 0 findings"
+        assert original in results_text, (
+            f"results/RESULTS.md no longer contains {original!r}; re-point this control"
+        )
+        with pytest.raises(AssertionError, match=r"3 findings"):
+            _check_the_lens_yield(
+                results_text.replace(original, "The deterministic lens: 3 findings", 1), readme
+            )
+
+    def test_moving_the_reviewer_citation_count_fails(self) -> None:
+        results_text, readme = _results_text(), _readme_text()
+        original = "1 cites a retrieved chunk at all"
+        assert original in results_text, (
+            f"results/RESULTS.md no longer contains {original!r}; re-point this control"
+        )
+        with pytest.raises(AssertionError, match=r"reviewer-citation yield"):
+            _check_the_reviewer_citation_yield(
+                results_text.replace(original, "4 cites a retrieved chunk at all", 1), readme
+            )
+
+    def test_an_unclassifiable_verdict_population_fails(self) -> None:
+        """A new sentence publishing "N of M verdicts" about nothing this test can
+        recompute is an unbound number, and unbound is what Finding 1 is about."""
+        readme = _readme_text() + "\n\nThe panel settled 7 of 20 verdicts on a Tuesday.\n"
+        with pytest.raises(AssertionError, match=r"names no mechanism"):
+            _check_published_populations_recompute(_results_text(), readme)
+
+    def test_moving_the_verdict_distribution_fails(self) -> None:
+        """The evaluator's own mutation, in the prose copy of the distribution."""
+        results_text, readme = _results_text(), _readme_text()
+        original = "0 SUPPORTS, 0 REFUTES, 20 abstentions per run"
+        assert original in readme, (
+            f"README.md no longer contains {original!r}; re-point this control at the "
+            "sentence that carries the distribution now"
+        )
+        mutated = readme.replace(original, "2 SUPPORTS, 0 REFUTES, 18 abstentions per run", 1)
+        with pytest.raises(AssertionError, match=r"publishes 2 SUPPORTS"):
+            _check_the_verdict_distribution_in_prose(results_text, mutated)
+
+    def test_the_doubled_rule_passes_on_a_compliant_document(self) -> None:
+        """The other direction, and the one that matters while the prose is still wrong.
+
+        A rule that is red on the documents it was written for has to be shown capable
+        of green, or a prose fix cannot be told apart from a broken checker. RESULTS.md
+        now takes the first road the rule names and states both figures per run, so the
+        SECOND road is demonstrated here: the per-run sentences are written back as the
+        doubled form with its decomposition attached, the README gains the sentence that
+        names the reproduction, and the rule is required to pass on the result.
+        """
+        results_text, readme = _results_text(), _readme_text()
+        edits = [
+            (
+                "README.md",
+                "## What the panel measurably does, and does not do",
+                "## What the panel measurably does, and does not do\n\nThe two committed "
+                "runs are identical apart from wall-clock, so the second is a reproduction "
+                "rather than an independent sample.",
+            ),
+            (
+                "results/RESULTS.md",
+                "In each committed run, **0 of 16 reviewer findings quote text that is "
+                "not in the manuscript.**",
+                "Across both runs, **0 of 32 reviewer findings quote text that is not in "
+                "the manuscript** — 0 in each run.",
+            ),
+            (
+                "results/RESULTS.md",
+                "which now fires on 6 of 20 verdicts in each committed run where every "
+                "run committed",
+                "which now fires on 12 of 40 verdicts, 6 in each run, where every run "
+                "committed",
+            ),
+        ]
+        for where, original, replacement in edits:
+            text = results_text if where.endswith("RESULTS.md") else readme
+            assert original in text, (
+                f"{where} no longer contains {original!r}, so this control demonstrates a "
+                "fix to a sentence that is not there. Re-point it, or drop the row if the "
+                "sentence has been restated per run already."
+            )
+            if where.endswith("RESULTS.md"):
+                results_text = results_text.replace(original, replacement, 1)
+            else:
+                readme = readme.replace(original, replacement, 1)
+        _check_a_doubled_population_says_so(results_text, readme)
+
+    def test_a_doubled_population_with_no_caveat_fails(self) -> None:
+        """And the red direction, on a document the rule currently passes."""
+        results_text = _results_text()
+        original = (
+            "It fires now: **6 of 20 verdicts carry a surviving evidence span in each of "
+            "the two committed runs**."
+        )
+        assert original in results_text, (
+            f"results/RESULTS.md no longer contains {original!r}; re-point this control "
+            "at the sentence that carries the grounding yield now"
+        )
+        stripped = results_text.replace(
+            original,
+            "It fires now: **12 of 40 verdicts carry a surviving evidence span**.",
+            1,
+        )
+        with pytest.raises(AssertionError, match=r"one population counted twice"):
+            _check_a_doubled_population_says_so(stripped, _readme_text())

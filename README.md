@@ -1,7 +1,8 @@
 # PeerPanel
 
 **A scientific-review system built so that its own measurements can be checked.**
-Every number on this page is read out of a committed record under [results/](results/) by a test in this repository — including the numbers that look bad.
+Every number on this page is read out of a committed record under [results/](results/) by a test in this repository — including the numbers
+that look bad — apart from the wall-clock timings beside the commands below, which are measured on one laptop and come from no record.
 
 This repository is a **demonstration system**. It plants known defects into two manuscripts, runs a review panel and single agents over them under one
 protocol, and publishes what each arm asserted, what it cost and under what run conditions — so a reader can check the headline, not take it.
@@ -16,20 +17,22 @@ field as readily as the `quote` field: counting quotation as detection was the o
 
 | arm | caprin asserted | caprin named token | caprin tokens | caprin wall | met17 asserted | met17 named token | met17 tokens | met17 wall |
 |---|---|---|---|---|---|---|---|---|
-| **panel** (llama3.1:8b + qwen2:7b) | **0 / 3** | 1 / 3 | 240,852 | 1,383.5 s | **0 / 3** | 0 / 3 | 244,460 | 1,438.4 s |
-| **single agent** llama3.1:8b | **0 / 3** | 2 / 3 | 36,577 | 330.5 s | **0 / 3** | 0 / 3 | 32,395 | 358.6 s |
-| **single agent** qwen2:7b | **0 / 3** | 2 / 3 | 41,747 | 234.9 s | **0 / 3** | 0 / 3 | 29,737 | 122.5 s |
+| **panel** (llama3.1:8b + qwen2:7b) | **0 / 3** | 1 / 3 | 240,852 | 1,449.8 s | **0 / 3** | 0 / 3 | 244,460 | 1,594.5 s |
+| **single agent** llama3.1:8b | **0 / 3** | 1 / 3 | 36,475 | 330.8 s | **0 / 3** | 0 / 3 | 31,914 | 338.1 s |
+| **single agent** qwen2:7b | **0 / 3** | 1 / 3 | 39,462 | 232.2 s | **0 / 3** | 0 / 3 | 29,758 | 135.0 s |
 
 **Asserted is the headline, and it reads 0 for every arm on both manuscripts: a null result.** The `named token` column beside it is the older
 substring rule, kept as a labelled upper bound only — the gap between the two columns is restatement, not detection.
 
-That upper bound used to be higher, and it fell because quotation stopped counting rather than because any arm got worse. Sentences an arm copies from
-the manuscript are now dropped before either rule sees them: the panel's caprin arm was scored on 10 of the 16 strings it wrote, and every record
-publishes the residue it was scored on (`scored_texts`) beside the count of quoted sentences removed (`quoted_sentences_dropped`). Stripping only ever
-removes text before the rule reads it, so it can only lower a count — which is how a scoring change made after the fact can be told apart from a tune.
+That upper bound used to be higher, and it fell twice because quotation stopped counting, never because an arm got worse: once when quoted sentences
+began to be stripped, and again when the strip stopped being defeated by a trailing full stop, which had been letting a quoted sentence ending in
+`.` through. Sentences an arm copies from the manuscript are dropped before either rule sees them: the panel's caprin arm was scored on 10 of the 16
+strings it wrote, and every record publishes the residue it was scored on (`scored_texts`) beside the count of quoted sentences removed
+(`quoted_sentences_dropped`). Stripping only ever removes text before the rule reads it, so it can only lower a count — which is how a scoring
+change made after the fact can be told apart from a tune.
 
-The panel spent 6.6x the tokens of the llama3.1:8b single agent on caprin and 7.5x the tokens of that arm on met17.
-Against qwen2:7b it spent 5.8x the tokens on caprin and 8.2x the tokens on met17 — for the same asserted count as the cheapest arm: none.
+The panel spent 6.6x the tokens of the llama3.1:8b single agent on caprin and 7.7x the tokens of that arm on met17.
+Against qwen2:7b it spent 6.1x the tokens on caprin and 8.2x the tokens on met17 — for the same asserted count as the cheapest arm: none.
 
 Every committed model-run record names the model and wire that served it, how many calls it made, the margin between each prompt and the window that
 call was given, and where that window figure was read from — so a reader can tell from the record alone that no prompt was silently truncated.
@@ -127,27 +130,29 @@ three verdicts in ten change when the evidence order is reversed, which is posit
 exactly what the literature says it does. A judge that cannot say SUPPORTS is not a judge, and this
 one is currently an expensive way to produce abstentions.
 
-**Evidence grounding is enforced in code, and it now fires.** A verdict's citation survives only
-if the chunk was actually retrieved *and* the quote is a substring of that chunk, so a fabricated
+**Evidence grounding is enforced in code, and it now fires.** A verdict's citation survives only if
+the chunk was actually retrieved *and* the quote is a substring of that chunk, so a fabricated
 citation cannot pass the type system. Its yield was zero across every run this project had shipped
-until 2 September 2026; on the rebuilt index it is **12 of 40 verdicts**, 6 in each run. What that
-buys is smaller than it sounds: every verdict carrying a span is still an abstention, so the
-grounding works and the judge it feeds ignores it, and only 1 reviewer finding in 16 cites a
-retrieved chunk at all. That 16 is a ceiling, not an output: each reviewer returned exactly 8
-findings, which is `MAX_FINDINGS`, the hard cap in `src/peerpanel/agents/reviewer_base.py`, and both
-runs record `malformed_findings_dropped: 0` and `unretrieved_citations_dropped: 0`, so the cap is
-what set the denominator and how much more either reviewer would have written is unmeasured. The
-same ceiling sets the 32 below.
+until 2 September 2026; on the rebuilt index it is **6 of 20 verdicts in each of the two committed
+runs** — the second run is a reproduction of the first, not an independent sample, so the combined
+12 of 40 verdicts counts the same 20 twice. What that buys is smaller than it sounds: every verdict
+carrying a span is still an abstention, so the grounding works and the judge it feeds ignores it,
+and only 1 reviewer finding in 16 cites a retrieved chunk at all. That 16 is a ceiling, not an
+output: each reviewer returned exactly 8 findings, which is `MAX_FINDINGS`, the hard cap in
+`src/peerpanel/agents/reviewer_base.py`, and both runs record `malformed_findings_dropped: 0` and
+`unretrieved_citations_dropped: 0`, so the cap is what set the denominator and how much more either
+reviewer would have written is unmeasured. The same ceiling sets the 32 below.
 
 **The deterministic lens has no positive evidence at all.** It finds **0 findings on every committed
 run**, and fires only on the constructed cases in `tests/test_deterministic_lens.py`. It is a
 mechanism this repository ships and has never seen catch anything — not a demonstrated strength.
 
-**One earlier self-report was itself wrong, and this is the correction.** A previous version of this
-page reported that three of sixteen reviewer findings quoted text absent from the manuscript. Read
-whole, no reviewer finding in either committed run quotes text that is not in the manuscript (0 of
-32 — two runs, two reviewers, eight findings each, the cap again), and the swap rate is exact rather
-than a bound because each verdict now records whether it was really judged twice.
+**One earlier self-report was itself wrong, and this is the correction.** A previous version of
+this page reported that three of sixteen reviewer findings quoted text absent from the manuscript.
+Read whole, no reviewer finding in either committed run quotes text that is not in the manuscript —
+0 of 16 in a run, and 0 of 32 across both only because the second run repeats the first (two
+reviewers, eight findings each, the cap again) — and the swap rate is exact rather than a bound
+because each verdict now records whether it was really judged twice.
 
 The null result above is the same shape the literature reports for architectures that "often fail to
 outperform simple single-agent baselines… even when consuming significantly more inference-time

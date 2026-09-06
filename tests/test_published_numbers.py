@@ -43,9 +43,11 @@ import json
 import re
 from collections import defaultdict
 from pathlib import Path
+from typing import Any, ClassVar
 
 import pytest
 
+from peerpanel.agents.schemas import RUBRIC_DIMENSIONS, VERDICTS
 from peerpanel.corpus.models import CorpusManifest
 from peerpanel.manuscripts.store import read_manuscript
 
@@ -579,3 +581,600 @@ class TestIndexTableMatchesBuildStats:
             f"the index table has no row for {missing}; a build record's field with no "
             "published row is a measurement nobody reads"
         )
+
+
+# ======================================================================================
+# The panel run's own table — round 5, report 3, Finding 1.
+#
+# `results/RESULTS.md`'s panel table was published unbound. An evaluator changed
+# `0 SUPPORTS · 0 REFUTES · **20 NOT_ENOUGH_INFO**` to `2 SUPPORTS · 0 REFUTES ·
+# **18 NOT_ENOUGH_INFO**` — the single most load-bearing honest number on the page, the
+# one the section "the verifier decides nothing" is built on — and all 594 tests passed.
+# Nine other published figures moved the same way.
+#
+# So this table is bound the way the index table above is: each row located by its LABEL,
+# each value recomputed from `results/panel-review-*.json`, and a row the table gains that
+# this test does not know about is a failure rather than a silence. Every figure is the
+# figure ONE run produced: the two committed runs are byte-identical apart from wall-clock
+# (report 1, Finding 4), so a table cell that summed them would state its n at twice its
+# true value. Where the runs disagree, this fails and says so — one column cannot describe
+# two different runs.
+#
+# Every checker takes the document as an argument so `TestThePanelTableBindingsCanGoRed`
+# can run it over a mutated copy in memory and prove it fires. The repository's own rule,
+# from round 4: a verification that cannot fail is worth nothing.
+# ======================================================================================
+
+
+def _panel_runs() -> list[tuple[str, dict[str, Any]]]:
+    """(run label, record) for every committed panel run, ordered by run number.
+
+    The first run's record carries no `-runN` suffix, so it is run 1 by construction —
+    the same convention `make review` and `make review RUN=2` write.
+    """
+    runs: list[tuple[str, dict[str, Any]]] = []
+    for path in PANEL_RECORDS:
+        match = re.search(r"-run(\d+)$", path.stem)
+        runs.append((match.group(1) if match else "1", json.loads(path.read_text())))
+    labels = [label for label, _ in runs]
+    assert len(set(labels)) == len(labels), (
+        f"two committed panel records claim to be the same run: {labels}"
+    )
+    return sorted(runs, key=lambda run: int(run[0]))
+
+
+def _agreed(figure: str, values: list[Any]) -> Any:
+    """The one value every committed run produced, or a failure naming the disagreement.
+
+    A single published cell describes every run. If the runs ever stop agreeing, the table
+    has to grow a column before any number in it can be believed — so this fails rather
+    than silently reporting the first run's figure.
+    """
+    distinct: list[Any] = []
+    for value in values:  # by equality, not by hash: a scores mapping is not hashable
+        if value not in distinct:
+            distinct.append(value)
+    assert len(distinct) == 1, (
+        f"the committed panel runs disagree on {figure} ({values}); results/RESULTS.md "
+        "publishes one value for all of them, so either the table needs a column per run "
+        "or one of the records does not belong to this configuration"
+    )
+    return distinct[0]
+
+
+def _verdict_counts(record: dict[str, Any]) -> dict[str, int]:
+    return {v: sum(1 for row in record["verdicts"] if row["verdict"] == v) for v in VERDICTS}
+
+
+def _reviewer_scores(record: dict[str, Any]) -> dict[str, tuple[int, ...]]:
+    return {
+        str(output["reviewer"]): tuple(int(output["scores"][d]) for d in RUBRIC_DIMENSIONS)
+        for output in record["reviewer_outputs"]
+    }
+
+
+# {binding: a pattern matching the row label that carries it}. Anchored where a looser
+# word would match two rows: three labels contain "findings", and only one of them is the
+# per-reviewer count.
+_PANEL_ROWS = {
+    "reviewers": r"^reviewers$",
+    "findings per reviewer": r"^findings$",
+    "unparsed findings": r"unparseable|failed to parse",
+    "citations dropped": r"citations? (?:deleted|dropped|removed)",
+    "malformed findings": r"malformed",
+    "rubric scores": r"^scores$",
+    "claims verified": r"claims verified",
+    "verdict distribution": r"^verdicts$",
+    "grounded verdicts": r"evidence span",
+    "conflicts": r"conflicts",
+    "deterministic lens": r"lens",
+}
+
+
+def _panel_table(text: str) -> list[list[str]]:
+    """The panel table: the label/value table whose rows include the verdict distribution.
+
+    Located by shape and by content, never by position — the document has ten other pipe
+    tables and gains one most rounds.
+    """
+    found = [
+        rows
+        for header, rows in _tables(text)
+        if len(header) == 2
+        and not any(_norm(c) for c in header)
+        and any(re.fullmatch(r"verdicts", _norm(row[0])) for row in rows if row)
+    ]
+    assert len(found) == 1, (
+        f"expected exactly one panel table in results/RESULTS.md (two unheaded columns, a "
+        f"row labelled 'verdicts'); found {len(found)}. That table is where the verdict "
+        "distribution, the grounding yield and both hygiene counters are published."
+    )
+    return found[0]
+
+
+def _check_the_panel_table(text: str) -> None:
+    """Every row of the panel table, by label, against every committed panel record."""
+    runs = _panel_runs()
+    rows = _panel_table(text)
+    bound: dict[str, str] = {}
+    for row in rows:
+        label = _norm(row[0])
+        matched = [name for name, pattern in _PANEL_ROWS.items() if re.search(pattern, label)]
+        assert len(matched) == 1, (
+            f"the panel row {row[0]!r} matches {matched or 'no'} binding(s); every row of "
+            f"this table is recomputed from the panel records, and the bindings this test "
+            f"carries are {sorted(_PANEL_ROWS)}. An unbound row in a bound table is the "
+            "drift shape wearing a green tick."
+        )
+        assert len(row) >= 2, f"the panel row {row[0]!r} has no value cell"
+        assert matched[0] not in bound, f"two panel rows bind {matched[0]!r}"
+        bound[matched[0]] = row[1]
+    missing = sorted(set(_PANEL_ROWS) - set(bound))
+    assert not missing, (
+        f"the panel table has no row for {missing}. Each of those is a figure the records "
+        "carry and the prose leans on; a row that leaves the table stops being checked."
+    )
+
+    def numbers(binding: str) -> list[float]:
+        return _numbers(bound[binding])
+
+    def expect(binding: str, expected: tuple[float, ...], how: str) -> None:
+        shown = tuple(numbers(binding))
+        assert shown == pytest.approx(expected), (
+            f"panel table, {binding}: the table says {bound[binding]!r}, the committed "
+            f"records say {expected} ({how})"
+        )
+
+    expect(
+        "reviewers",
+        (float(_agreed("reviewer count", [len(r["reviewer_outputs"]) for _, r in runs])),),
+        "reviewer_outputs",
+    )
+    expect(
+        "findings per reviewer",
+        (
+            float(
+                _agreed(
+                    "findings per reviewer",
+                    [len(o["findings"]) for _, r in runs for o in r["reviewer_outputs"]],
+                )
+            ),
+        ),
+        "len(findings) on every reviewer of every run — the cell says 'each', so a run "
+        "whose reviewers wrote different numbers cannot be published this way",
+    )
+    expect(
+        "unparsed findings",
+        (
+            float(
+                _agreed(
+                    "unparsed reviewers",
+                    [sum(1 for o in r["reviewer_outputs"] if o["truncated"]) for _, r in runs],
+                )
+            ),
+        ),
+        "reviewer_outputs[].truncated",
+    )
+    for binding, field in (
+        ("citations dropped", "unretrieved_citations_dropped"),
+        ("malformed findings", "malformed_findings_dropped"),
+    ):
+        expect(
+            binding,
+            (float(_agreed(field, [o[field] for _, r in runs for o in r["reviewer_outputs"]])),),
+            f"{field} on every reviewer of every run",
+        )
+    expect(
+        "claims verified",
+        (float(_agreed("verdict count", [len(r["verdicts"]) for _, r in runs])),),
+        "len(verdicts) in one run",
+    )
+    expect(
+        "grounded verdicts",
+        (
+            float(
+                _agreed(
+                    "grounded verdicts",
+                    [sum(1 for v in r["verdicts"] if v["evidence"]) for _, r in runs],
+                )
+            ),
+            float(_agreed("verdict count", [len(r["verdicts"]) for _, r in runs])),
+        ),
+        "verdicts carrying an evidence span, of the verdicts in ONE run — the pair the "
+        "records support; 12 of 40 counts the same 20 verdicts twice",
+    )
+    expect(
+        "conflicts",
+        (float(_agreed("conflicts", [len(r["conflicts"]) for _, r in runs])),),
+        "len(conflicts)",
+    )
+    expect(
+        "deterministic lens",
+        (float(_agreed("lens findings", [len(r["deterministic_findings"]) for _, r in runs])),),
+        "len(deterministic_findings)",
+    )
+
+    # The claims-verified cell also promises every claim was judged twice. That is a
+    # property of the rows, not a number, so it is checked against them rather than left
+    # as a sentence nobody reads.
+    if "twice" in _norm(bound["claims verified"]):
+        for label, record in runs:
+            unswapped = [v["claim_id"] for v in record["verdicts"] if not v["swapped"]]
+            assert not unswapped, (
+                f"the panel table says every claim was judged twice; run {label} records "
+                f"{len(unswapped)} verdict(s) that were not swapped ({unswapped[:3]})"
+            )
+            assert record["n_swap_checked"] == len(record["verdicts"]), (
+                f"run {label}: n_swap_checked is {record['n_swap_checked']} over "
+                f"{len(record['verdicts'])} verdicts, so 'every one judged twice' is not "
+                "what the record says"
+            )
+
+    _check_the_verdict_distribution_cell(bound["verdict distribution"], runs)
+    _check_the_rubric_scores_cell(bound["rubric scores"], runs)
+
+
+def _check_the_verdict_distribution_cell(cell: str, runs: list[tuple[str, dict[str, Any]]]) -> None:
+    """`0 SUPPORTS · 0 REFUTES · **20 NOT_ENOUGH_INFO**` — the cell the evaluator moved.
+
+    Every verdict the schema allows must appear with its count, so a class cannot be
+    dropped from the table the moment it goes to zero — or, as the mutation did, moved
+    into another class. The names are the code's own constants, matched case-sensitively:
+    `VERDICTS` is what the records are validated against.
+    """
+    published = {
+        verdict: int(shown.replace(",", ""))
+        for shown, verdict in re.findall(r"(\d[\d,]*)\s*\**\s*(" + "|".join(VERDICTS) + r")", cell)
+    }
+    assert set(published) == set(VERDICTS), (
+        f"the verdict row reads {cell!r}; it must publish a count for every verdict this "
+        f"code can emit ({list(VERDICTS)}), because a class that leaves the table when it "
+        f"reaches zero takes its number with it. Read: {sorted(published)}"
+    )
+    for verdict in VERDICTS:
+        expected = _agreed(f"{verdict} count", [_verdict_counts(r)[verdict] for _, r in runs])
+        assert published[verdict] == expected, (
+            f"the verdict row says {published[verdict]} {verdict}; every committed panel "
+            f"record says {expected} in one run. The row reads {cell!r}"
+        )
+
+
+def _check_the_rubric_scores_cell(cell: str, runs: list[tuple[str, dict[str, Any]]]) -> None:
+    """`methods 4/4/4 · novelty 4/4/**3**` — each reviewer's scores, in rubric order."""
+    scores = _agreed("reviewer scores", [_reviewer_scores(record) for _, record in runs])
+    parts = [part for part in re.split(r"[·|;]", cell) if _numbers(part)]
+    seen: set[str] = set()
+    for part in parts:
+        word = _norm(part).split()[0]
+        matched = [name for name in scores if word in name.lower()]
+        assert len(matched) == 1, (
+            f"the scores cell segment {part.strip()!r} opens with {word!r}, which names "
+            f"{matched or 'no'} reviewer of {sorted(scores)}"
+        )
+        shown = tuple(_numbers(part))
+        assert shown == pytest.approx(tuple(float(v) for v in scores[matched[0]])), (
+            f"the scores cell says {part.strip()!r}; {matched[0]} recorded "
+            f"{scores[matched[0]]} for {RUBRIC_DIMENSIONS}"
+        )
+        seen.add(matched[0])
+    assert seen == set(scores), (
+        f"the scores cell publishes {sorted(seen)}; the records carry {sorted(scores)}, "
+        "and a reviewer whose scores leave the table stops being checked"
+    )
+
+
+def _swap_table(text: str) -> tuple[list[str], list[list[str]]]:
+    """The per-run swap table: header names a run column and a swap-consistency column."""
+    found = [
+        ([_norm(c) for c in header], rows)
+        for header, rows in _tables(text)
+        if any(_norm(c) == "run" for c in header)
+        and any("swap" in _norm(c) for c in header)
+    ]
+    assert len(found) == 1, (
+        f"expected exactly one per-run swap table in results/RESULTS.md (a 'run' column "
+        f"and a swap-consistency column); found {len(found)}"
+    )
+    return found[0]
+
+
+def _check_the_swap_table(text: str) -> None:
+    """Every run's own row — the honest per-run form of the figures the prose doubles.
+
+    Report 1's Finding 4: `12 of 40` and `0 of 32` count one population twice. This table
+    is where the repository already does it right, one row per run, so it is bound row by
+    row and every committed record must have a row: a run that is published in aggregate
+    and nowhere per run is exactly the shape the finding is about.
+    """
+    header, rows = _swap_table(text)
+    runs = dict(_panel_runs())
+    columns = {
+        key: index
+        for key, words in (
+            ("consistent", ("swap-consistent",)),
+            ("abstain", ("abstain",)),
+            ("rate", ("rate",)),
+            ("tokens", ("tokens",)),
+            ("wall", ("wall",)),
+        )
+        for index, cell in enumerate(header)
+        if all(word in cell for word in words)
+    }
+    missing = sorted({"consistent", "abstain", "rate", "tokens", "wall"} - set(columns))
+    assert not missing, f"the swap table has no column for {missing}; its headers are {header}"
+
+    published: set[str] = set()
+    for row in rows:
+        label = _numbers(row[0])
+        assert len(label) == 1, f"the swap row {row[0]!r} does not name one run"
+        run = str(int(label[0]))
+        assert run in runs, (
+            f"the swap table publishes a row for run {run}; the committed records are "
+            f"{sorted(runs)}. A published run with no record is a number from nowhere."
+        )
+        published.add(run)
+        record = runs[run]
+        verdicts = record["verdicts"]
+        consistent = sum(1 for v in verdicts if v["swap_consistent"])
+        checked = int(record["n_swap_checked"])
+        for key, expected in (
+            ("consistent", (float(consistent), float(checked))),
+            ("abstain", (float(len(verdicts) - consistent), float(checked))),
+            ("tokens", (float(record["total_tokens"]),)),
+        ):
+            shown = tuple(_numbers(row[columns[key]]))
+            assert shown == pytest.approx(expected), (
+                f"swap table, run {run}, {key}: the table says "
+                f"{row[columns[key]]!r}, the record says {expected}"
+            )
+        shown_rate = re.search(r"\d+(?:\.\d+)?", _norm(row[columns["rate"]]))
+        assert shown_rate, f"swap table, run {run}: no rate in {row[columns['rate']]!r}"
+        assert float(shown_rate.group(0)) == pytest.approx(
+            float(record["swap_consistency_rate"]), abs=_slack(shown_rate.group(0))
+        ), (
+            f"swap table, run {run}: the table says swap-consistency "
+            f"{shown_rate.group(0)}, the record says {record['swap_consistency_rate']}"
+        )
+        wall = tuple(_numbers(row[columns["wall"]]))
+        assert wall == pytest.approx((float(record["wall_s"]),), abs=0.05), (
+            f"swap table, run {run}: the table says {row[columns['wall']]!r}, the record's "
+            f"wall_s is {record['wall_s']}"
+        )
+    assert published == set(runs), (
+        f"the swap table publishes runs {sorted(published)}; the committed records are "
+        f"{sorted(runs)}. Every run this repository ships gets its own row, because the "
+        "aggregate over two byte-identical runs is a reproduction, not a sample."
+    )
+
+
+_CHUNKS = re.compile(r"(\d[\d,]*)\s+chunks", re.IGNORECASE)
+
+
+def _dropped_chunks_by_subject() -> dict[str, set[int]]:
+    """{manuscript stem: the chunk counts exclusion dropped}, over every committed record.
+
+    Both record families carry it — the panel run per run, the planted evaluation per arm
+    — and the prose quotes the figure in both places ("26 chunks dropped, recorded in the
+    record", "26 chunks dropped on every arm").
+    """
+    counts: dict[str, set[int]] = defaultdict(set)
+    for path in PANEL_RECORDS:
+        stem = re.sub(r"-run\d+$", "", path.stem.replace("panel-review-", "", 1))
+        counts[stem].add(int(json.loads(path.read_text())["dropped_chunks"]))
+    for path in sorted((ROOT / "results").glob("planted-eval-*.json")):
+        record = json.loads(path.read_text())
+        stem = Path(str(record["manuscript"])).stem
+        for arm in record["results"]:
+            counts[stem].add(int(arm["dropped_chunks"]))
+    assert counts, "no committed record carries an exclusion figure"
+    return dict(counts)
+
+
+def _check_the_exclusion_figures(results_text: str, readme_text: str) -> None:
+    """"26 chunks dropped" — the self-exclusion figure, wherever either file states it.
+
+    Bound to the manuscript the sentence names where it names one; where it does not, the
+    number still has to be one a committed record produced. That is weaker, and it is
+    weaker in the one direction that cannot hide a wrong number: the evaluator's `26` ->
+    `46` fails either way.
+    """
+    by_subject = _dropped_chunks_by_subject()
+    everything = {count for counts in by_subject.values() for count in counts}
+    seen = 0
+    for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
+        for match in _CHUNKS.finditer(text):
+            window = text[max(0, match.start() - 200) : match.end() + 120].lower()
+            if "drop" not in window and "withheld" not in window:
+                continue
+            seen += 1
+            shown = int(match.group(1).replace(",", ""))
+            named = [stem for stem in by_subject if stem.split("-")[0].lower() in window]
+            expected = by_subject[named[0]] if len(named) == 1 else everything
+            assert shown in expected, (
+                f"{where} says {match.group(0)!r} were dropped"
+                + (f" for {named[0]}" if len(named) == 1 else "")
+                + f"; the committed records say {sorted(expected)}.\n  "
+                + re.sub(r"\s+", " ", text[max(0, match.start() - 120) : match.end() + 80])
+            )
+    assert seen, (
+        "no exclusion figure matched in README.md or results/RESULTS.md, so this guard "
+        f"covers nothing (round 3's F6). The records carry {by_subject}, and self-exclusion "
+        "is one of the four mechanisms both documents present as working."
+    )
+
+
+class TestPanelTableMatchesTheRecords:
+    def test_every_row_of_the_panel_table_is_bound(self) -> None:
+        _check_the_panel_table(RESULTS)
+
+    def test_every_run_has_its_own_swap_row(self) -> None:
+        _check_the_swap_table(RESULTS)
+
+    def test_the_exclusion_figures_are_bound(self) -> None:
+        _check_the_exclusion_figures(RESULTS, README)
+
+
+class TestThePanelTableBindingsCanGoRed:
+    """One control per bound figure, over the REAL document, mutated in memory.
+
+    The first two rows are the evaluator's own, verbatim from round 5's report 3, Finding
+    1: they passed 594 green tests. Each control asserts the string it moves is in the
+    committed file (a control over a string that is not there proves nothing), then
+    requires the checker to fail with the message that NAMES the figure — not merely to
+    fail, which any unrelated breakage would satisfy.
+    """
+
+    PANEL_MUTATIONS: ClassVar[list[tuple[str, str, str]]] = [
+        (
+            "| verdicts | 0 SUPPORTS · 0 REFUTES · **20 NOT_ENOUGH_INFO** |",
+            "| verdicts | 2 SUPPORTS · 0 REFUTES · **18 NOT_ENOUGH_INFO** |",
+            r"the verdict row says 2 SUPPORTS",
+        ),
+        (
+            "| verdicts carrying an evidence span | 6 of 20 |",
+            "| verdicts carrying an evidence span | 9 of 20 |",
+            r"panel table, grounded verdicts",
+        ),
+        (
+            "| conflicts detected | 0 |",
+            "| conflicts detected | 1 |",
+            r"panel table, conflicts",
+        ),
+        (
+            "| deterministic lens | 0 findings |",
+            "| deterministic lens | 2 findings |",
+            r"panel table, deterministic lens",
+        ),
+        (
+            "| citations deleted by the hygiene pass | 0 on every reviewer of both runs |",
+            "| citations deleted by the hygiene pass | 3 on every reviewer of both runs |",
+            r"panel table, citations dropped",
+        ),
+        (
+            "| whole findings discarded as malformed | 0 on every reviewer of both runs |",
+            "| whole findings discarded as malformed | 4 on every reviewer of both runs |",
+            r"panel table, malformed findings",
+        ),
+        (
+            "| findings lost to unparseable output | 0: neither reviewer failed to parse |",
+            "| findings lost to unparseable output | 1: neither reviewer failed to parse |",
+            r"panel table, unparsed findings",
+        ),
+        (
+            "| reviewers | 2, blind and parallel",
+            "| reviewers | 3, blind and parallel",
+            r"panel table, reviewers",
+        ),
+        (
+            "| claims verified | 20 verdicts, every one judged twice",
+            "| claims verified | 24 verdicts, every one judged twice",
+            r"panel table, claims verified",
+        ),
+        (
+            "| scores | methods 4/4/4 · novelty 4/4/**3**",
+            "| scores | methods 4/4/4 · novelty 4/4/**1**",
+            r"the scores cell says",
+        ),
+        (
+            "| findings | 8 each",
+            "| findings | 6 each",
+            r"panel table, findings per reviewer",
+        ),
+    ]
+
+    @pytest.mark.parametrize(("original", "mutated", "message"), PANEL_MUTATIONS)
+    def test_moving_a_panel_table_cell_fails(
+        self, original: str, mutated: str, message: str
+    ) -> None:
+        assert original in RESULTS, (
+            f"results/RESULTS.md no longer contains {original!r}, so this control moves a "
+            "row that is not there and proves nothing. Re-point it at the row as it reads "
+            "now, or the figure has left the table and the binding above will say so."
+        )
+        with pytest.raises(AssertionError, match=message):
+            _check_the_panel_table(RESULTS.replace(original, mutated, 1))
+
+    def test_dropping_a_bound_row_from_the_panel_table_fails(self) -> None:
+        """A figure does not stop being published by leaving the table."""
+        original = "| conflicts detected | 0 |\n"
+        assert original in RESULTS
+        with pytest.raises(AssertionError, match=r"has no row for \['conflicts'\]"):
+            _check_the_panel_table(RESULTS.replace(original, "", 1))
+
+    def test_dropping_a_verdict_class_from_the_distribution_fails(self) -> None:
+        """The mutation a rewrite makes without noticing: a zero class quietly deleted."""
+        original = "| verdicts | 0 SUPPORTS · 0 REFUTES · **20 NOT_ENOUGH_INFO** |"
+        assert original in RESULTS
+        mutated = "| verdicts | 0 REFUTES · **20 NOT_ENOUGH_INFO** |"
+        with pytest.raises(AssertionError, match=r"count for every verdict this code can emit"):
+            _check_the_panel_table(RESULTS.replace(original, mutated, 1))
+
+    SWAP_MUTATIONS: ClassVar[list[tuple[str, str, str]]] = [
+        (
+            "| 1 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,297.9 s |",
+            "| 1 | 16 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,297.9 s |",
+            r"swap table, run 1, consistent",
+        ),
+        (
+            "| 2 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,296.7 s |",
+            "| 2 | 14 / 20 | 4 / 20 | swap-consistency 0.70 | 226,585 | 1,296.7 s |",
+            r"swap table, run 2, abstain",
+        ),
+        (
+            "| 1 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,297.9 s |",
+            "| 1 | 14 / 20 | 6 / 20 | swap-consistency 0.85 | 226,585 | 1,297.9 s |",
+            r"swap table, run 1: the table says swap-consistency 0.85",
+        ),
+        (
+            "| 1 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,297.9 s |",
+            "| 1 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 326,585 | 1,297.9 s |",
+            r"swap table, run 1, tokens",
+        ),
+        (
+            "| 1 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,297.9 s |",
+            "| 1 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,097.9 s |",
+            r"swap table, run 1: the table says '1,097.9 s'",
+        ),
+    ]
+
+    @pytest.mark.parametrize(("original", "mutated", "message"), SWAP_MUTATIONS)
+    def test_moving_a_swap_table_cell_fails(
+        self, original: str, mutated: str, message: str
+    ) -> None:
+        assert original in RESULTS, (
+            f"results/RESULTS.md no longer contains {original!r}; re-point this control"
+        )
+        with pytest.raises(AssertionError, match=message):
+            _check_the_swap_table(RESULTS.replace(original, mutated, 1))
+
+    def test_dropping_a_run_from_the_swap_table_fails(self) -> None:
+        original = "| 2 | 14 / 20 | 6 / 20 | swap-consistency 0.70 | 226,585 | 1,296.7 s |\n"
+        assert original in RESULTS
+        message = r"Every run this repository ships gets its own row"
+        with pytest.raises(AssertionError, match=message):
+            _check_the_swap_table(RESULTS.replace(original, "", 1))
+
+    def test_moving_the_exclusion_figure_fails(self) -> None:
+        """The evaluator's own: `26 chunks dropped` -> `46 chunks dropped`, in both files."""
+        for where, original, mutated in (
+            (
+                "results/RESULTS.md",
+                "26 chunks dropped, recorded in the record",
+                "46 chunks dropped, recorded in the record",
+            ),
+            (
+                "README.md",
+                "(26 chunks dropped on each)",
+                "(36 chunks dropped on each)",
+            ),
+        ):
+            in_results = where.endswith("RESULTS.md")
+            text = RESULTS if in_results else README
+            assert original in text, (
+                f"{where} no longer contains {original!r}; re-point this control"
+            )
+            mutation = text.replace(original, mutated, 1)
+            results_text = mutation if in_results else RESULTS
+            readme = README if in_results else mutation
+            with pytest.raises(AssertionError, match=r"were dropped"):
+                _check_the_exclusion_figures(results_text, readme)

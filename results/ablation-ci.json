@@ -1,6 +1,7 @@
 {
  "corpus_manifest": "corpus/ci.manifest.json",
- "run_utc": "2026-09-05T12:52:46+00:00",
+ "run_utc": "2026-09-06T14:10:12+00:00",
+ "load_average_1m": 19.43,
  "n_cases": 1,
  "skipped_cases": {
   "10.1101/2024.06.19.598224": "twin not a member of this corpus — no valid run",
@@ -13,7 +14,7 @@
   {
    "rung": "bm25",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 4.1,
+   "latency_ms": 7.4,
    "chunks_retrieved": 3840,
    "docs_ranked": 14,
    "hits": [],
@@ -35,7 +36,7 @@
   {
    "rung": "rrf-hybrid",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 4.4,
+   "latency_ms": 8.7,
    "chunks_retrieved": 3840,
    "docs_ranked": 14,
    "hits": [],
@@ -46,7 +47,7 @@
   {
    "rung": "graphrag-local",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 33.9,
+   "latency_ms": 35.5,
    "chunks_retrieved": 3840,
    "docs_ranked": 14,
    "hits": [],
@@ -57,7 +58,7 @@
   {
    "rung": "graphrag-global",
    "case_doi": "10.1101/2023.05.18.541364",
-   "latency_ms": 2.4,
+   "latency_ms": 2.3,
    "chunks_retrieved": 3840,
    "docs_ranked": 14,
    "hits": [],
