@@ -181,18 +181,31 @@ def own_prose(text: str, manuscript: str) -> str:
     its front (`_quotation_form`). Nothing else: no fuzzy match, no similarity threshold,
     no per-string case. Terminal punctuation is not an exotic edge; it is the single most
     common difference between a copied clause and its source, and round 5 measured what
-    tolerating it is worth on the committed records. Twenty-four sentences are quotation
-    that the untolerant test kept, and the consequences reached two published numbers:
-    the share of written characters that are manuscript slices moves from **59% to 68%**
-    (29,325 of 43,416), the `single-agent-cot-sc:llama3.1:8b` arm's published "own prose,
-    in characters — 41%" on caprin is really about **16%**, and the labelled `named token`
-    bound on caprin falls from 2/3 to 1/3 for BOTH single-agent arms — two of the five
-    credits on the README's first screen existed only because a copied sentence ended in
-    a full stop. The `asserted` headline is 0 before and after, on every arm: the null is
-    untouched, and what changed is the column published beside it. The enclosing-bracket
-    half of the strip fires on no committed sentence today (all twenty-four are terminal
-    punctuation); it is here because a quotation wrapped in quotes is the same class of
-    string, and it is pinned by a control rather than left to a future run to discover.
+    tolerating it is worth. On the records committed beside this file, **thirteen**
+    sentences are quotation the untolerant test kept, and dropping them moves the share of
+    written characters that are manuscript slices from **59.1% to 64.0%** (25,249 to
+    27,353 of 42,750), takes the `single-agent-cot-sc:llama3.1:8b` arm's own prose on
+    caprin from 24% of the characters it wrote to the **18%** `results/RESULTS.md`
+    publishes for that cell, and takes the labelled `named token` bound from **5 credits
+    to 3** across the six arms. The whole of that last fall is one arm: `qwen2:7b` on
+    caprin goes 3/3 to 1/3, because two of its three credits were the perturbed sentence
+    quoted back with a full stop on the end. The `asserted` headline is 0 before and
+    after, on every arm: the null is untouched, and what changed is the column published
+    beside it. The enclosing-bracket half of the strip fires on no committed sentence
+    today (all thirteen are terminal punctuation); it is here because a quotation wrapped
+    in quotes is the same class of string, and it is pinned by a control rather than left
+    to a future run to discover.
+
+    Those figures replace a set that was right when it was written and wrong by the time
+    anyone could read it. Until round 6 this paragraph said twenty-four sentences, 59% to
+    68% (29,325 of 43,416), "really about 16%", and a fall from 2/3 to 1/3 on BOTH
+    single-agent arms. Not one of them was an arithmetic error: all four are exact
+    readings of the records committed at `192e804`, and `C7.5` re-ran both evaluations in
+    the same pass that added this tolerance, so the paragraph went on describing a pair of
+    files that no longer existed — in the present tense, as "the committed records". What
+    moved is what the models wrote on the new run: here the tolerance leaves the
+    `llama3.1:8b` arm at 1/3 either way and moves only `qwen2:7b`, which is why the
+    both-arms sentence is gone rather than renumbered.
 
     `manuscript` must be the PERTURBED text the arm was actually shown. Compared
     against the unperturbed original, every quotation of a planted sentence would
@@ -207,13 +220,18 @@ def own_prose(text: str, manuscript: str) -> str:
     ever earned a `named token` credit was one of them. The published `named token`
     column was therefore measuring quotation, not naming.
 
-    Those records have since been superseded, and the figure moves with the run because
-    it is a property of what the models wrote rather than of this code: read with the
-    tolerance above, the records committed beside this file are **176 of 256 strings,
-    69%** pure quotation, and **68% of the characters written back**. Every one of these
-    numbers is recomputable — `tests/test_planted_soundness.py` measures the committed
-    share on every test run and prints it per arm, in strings and in characters — and the
-    ones quoted last are the ones a reader can check today.
+    Those records have since been superseded twice, and the figure moves with the run
+    because it is a property of what the models wrote rather than of this code: read with
+    the tolerance above, the records committed beside this file are **166 of 252 strings,
+    66%** pure quotation, and **64% of the characters written back**. This sentence
+    published 176 of 256, 69% and 68% until round 6 — the reading of the superseded
+    `192e804` records, left standing in the present tense about their replacements. Every
+    one of these numbers is recomputable, and `tests/test_planted_soundness.py` measures
+    the committed share on every test run and prints it per arm, in strings and in
+    characters. It prints them; no test asserts any figure in this docstring, so nothing
+    in the suite goes red when this prose and the records disagree — which is how both
+    paragraphs above stayed wrong for a full round, and is worth knowing before trusting
+    a number here over the record beside it.
 
     Why this is a fix and not a tune. It can only ever LOWER a count, never raise one:
     it only ever removes text before the two rules see it, and both are existential

@@ -1,4 +1,5 @@
 {
+ "_closed": "The loop was stopped after six rounds by the repository owner rather than run to its eight-round cap. The reason is in the record: the finding count had plateaued while the severity collapsed \u2014 rounds 3 and 4 found wrong numbers, round 5 found a false guarantee about the numbers, and round 6 found no wrong number at all. Every round-6 finding is closed or carried as a named limitation on this page's sister documents.",
  "_record_note": "The reports and their convergence logs live in a nested git repository that is never part of this repo and never travels with it. Kept private on purpose: an evaluator that expects to be published writes for an audience, and the value of the round is that it does not.",
  "_streak_note": "A finding count is not a defect count: findings overlap across the three independent reports of a round, and a round's number is the sum of what each evaluator filed, not a deduplicated total.",
  "_what": "The adversarial evaluation loop that judges this repository, summarised. Three fresh evaluators per round, each given a clean clone of one named commit and the same pinned prompt, none of them shown the builder's work, the other evaluators, or any prior round. A round is clean only when all three reports end in the literal token CLEAN.",
@@ -9,9 +10,11 @@
   21,
   30,
   27,
-  11
+  11,
+  12,
+  12
  ],
  "record": "private",
  "rounds_clean": 0,
- "rounds_completed": 4
+ "rounds_completed": 6
 }

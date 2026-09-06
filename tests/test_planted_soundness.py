@@ -25,10 +25,12 @@ of which this one did at some point:
 6. Close that route with a test a full stop defeats. `own_prose` dropped a sentence
    only when it was a substring of the manuscript, so a clause copied out of a
    paragraph and terminated with a period survived into the scored surface. Round 5
-   measured it: 68% rather than 59% of the characters written back are manuscript
-   slices, one arm's published "own prose 41%" is really about 16%, and two of the
-   five `named token` credits on the first screen existed only because a copied
-   sentence ended in a period. `TestTerminalPunctuationIsTolerated` is its control.
+   measured it on the records it judged. Those figures are not restated here: the
+   evaluations were re-run when the strip was repaired, so any number quoted for them
+   would describe records this file no longer sits beside — which is the defect the
+   repair itself was found to have caused one file over. The live measurement is
+   printed by the measurement test below and stated in `own_prose`'s own docstring.
+   `TestTerminalPunctuationIsTolerated` is the control.
 
 These tests pin all six as properties of the harness, so a future change that
 reintroduces any of them fails here rather than silently producing a number.
@@ -844,11 +846,14 @@ class TestTerminalPunctuationIsTolerated:
     `own_prose` dropped a sentence only when its normalised form was a SUBSTRING of the
     perturbed manuscript, so a clause copied out of the middle of a paragraph and
     terminated with a period was not a substring and survived into the scored surface.
-    Twenty-four sentences across the two committed records are in that class, and they
-    carried published numbers: the manuscript share of the characters written back reads
-    68% rather than 59%, one arm's published "own prose 41%" on caprin is really about
-    16%, and the `named token` bound falls from 2/3 to 1/3 for both single-agent arms on
-    caprin. The `asserted` headline is 0 either way.
+    Sentences in that class carried published numbers — a manuscript share of the
+    characters written back, one arm's own-prose share, and part of the `named token`
+    bound. The counts are deliberately not repeated in this docstring: the evaluations
+    were re-run when the strip was repaired, so a figure written here would describe
+    superseded records, and a docstring that states a count nothing checks is how the
+    same mistake survived a whole round one file over. `own_prose`'s docstring carries
+    the live figures, and the measurement test below recomputes and prints them. The
+    `asserted` headline is 0 before and after, on every arm.
 
     Every string here is derived from the committed records and manuscripts rather than
     written out as a literal, because the records are regenerated whenever what is scored

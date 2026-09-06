@@ -4,7 +4,12 @@ PeerPanel is a demonstration system. This page is the part of the repo most wort
 carefully: it says what the design does not do, what the numbers do not prove, and which known
 failure modes of multi-agent LLM review it mitigates, measures, or simply carries.
 
-Every figure this page measures about this system is recomputed from committed bytes: most by `tests/test_limitations_numbers.py` or `tests/test_run_graph.py`, so a number that drifts from the measurement fails the suite rather than sitting here unread; the two counts in the quotation bullet further down are lengths of lists committed inside the planted-evaluation records, recomputed from those records by `tests/test_planted_soundness.py`, which measures the share per arm, and by `tests/test_artifact_conformance.py`, which recomputes each record's scored residue from the unstripped text the arm wrote.
+Every figure this page measures about this system is recomputed from committed bytes, and most of them are also held to this prose by a test, so a number that drifts from the measurement fails the suite rather than sitting here unread: the corpus, attribution, graph and twin-residue figures by `tests/test_limitations_numbers.py`, the rebuild's own residue on the CI corpus by `tests/test_published_numbers.py`, and the rebuild mechanism behind both by `tests/test_run_graph.py`.
+Until this commit that promise was written as though the suite caught every figure on the page, and it did not: three figures in the exclusion bullet below were pinned in test docstrings only, so moving them left the suite green — round 6 demonstrated it — and several more, listed next, were never bound at all.
+Those three are bound now and this sentence is narrowed to what it can carry, because a page that overstates its own discipline is the exact failure it spends the rest of its length warning about.
+What is **not** bound, and is a figure for a reader to check rather than one the suite checks: the four counts in the quotation bullet further down, the 26 chunks the MET17 twin takes with it, the 7,697-entity index total quoted in the reproduce recipe, the 4,333 relation-carrying edges beside the co-mention share, and the two durations written as approximations.
+The quotation counts are lengths of lists committed inside the planted-evaluation records — `finding_texts` and `scored_texts`, summed over the six arms — so a reader can recount them from the records directly; `tests/test_planted_soundness.py` measures and prints the same share per arm on every run without asserting any value, and `tests/test_artifact_conformance.py` recomputes each record's scored residue from the unstripped text the arm wrote, which binds the rule rather than these numbers.
+Round 6 found all four of them a round stale, in the understating direction, which is what an unbound self-critical figure costs.
 The demo-corpus figures are recomputed offline, by merging the per-chunk extractions in `fixtures/extraction/demo`, with no network, no model and no fetched corpus text.
 The percentages in the failure-mode table further down are other people's published measurements, cited to their source.
 
@@ -137,12 +142,24 @@ manuscripts to language models, and this system would do exactly that.
 
 - **These models mostly quote the manuscript rather than assert anything about it, and the naming
   column has to be read knowing that.**
-  Of the 256 strings the six arms wrote across the two committed evaluations, 104 carry anything of
-  the arm's own once verbatim manuscript sentences are taken out, so 152 of them — 59% — are
+  Of the 252 strings the six arms wrote across the two committed evaluations, 86 carry anything of
+  the arm's own once verbatim manuscript sentences are taken out, so 166 of them — 66% — are
   entirely copied text with nothing of the arm's in them at all.
-  Round 4 measured the same quantity at 63% (147 of 235) on the records it judged, and these records
-  are a re-run of the same six arms, so the two readings are one measurement on two samples rather
-  than a change.
+  The four figures published until this commit — 256, 104, 152 and 59% — were an exact reading of the
+  records committed at `192e804` under the stripping rule as it stood there, and by this commit
+  neither the records nor the rule were still in place: `C7.5` re-ran both evaluations and, in the
+  same pass, taught the rule to ignore the punctuation on the end of a copied sentence.
+  Both changes push this figure up, and the second is a repair working rather than a number
+  wandering — a clause lifted out of a paragraph and closed with a full stop is now counted as the
+  quotation it is.
+  So the page had been understating the weakness it exists to disclose: 59% published against 66%
+  measured, four strings in ten credited with something of the arm's own where the measurement is
+  closer to one in three.
+  Round 4 measured 63% (147 of 235) on the records it judged, and this page set that beside its own
+  figure as one measurement on two samples; that comparison was loose, because the rule moved between
+  the two readings as well as the records.
+  Held to one rule at a time the reading is stable: today's rule reads 65% (152 of 235) on round 4's
+  records and 66% here, and round 4's rule reads 63% there and 61% (153 of 252) here.
   Since that round, a sentence that is a verbatim slice of the manuscript is dropped before either
   scoring rule sees it (`planted.own_prose`, rule `assertion-v2`), and every record commits the
   residue it was actually scored on as `scored_texts` beside the unstripped `finding_texts`.

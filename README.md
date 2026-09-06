@@ -38,8 +38,12 @@ Every committed model-run record names the model and wire that served it, how ma
 call was given, and where that window figure was read from — so a reader can tell from the record alone that no prompt was silently truncated.
 
 This repository is also judged from outside, by evaluators handed a clean clone of one commit and a pinned prompt and nothing else:
-4 blind rounds under a pinned evaluator prompt (sha256 `6e1bcda6…`) have filed 89 findings against it; the reports are this project's private record.
-None of the four has come back clean; the bar is all three reports of a round ending in the literal token CLEAN, and the loop's cap is 8 rounds.
+6 blind rounds under a pinned evaluator prompt (sha256 `6e1bcda6…`) have filed 113 findings against it; the reports are this project's private record.
+None of the six came back clean — the bar is two consecutive rounds in which all three reports end in the literal token CLEAN — and the loop did not
+run to its cap of 8: this repository's owner stopped it after round 6, because the count of findings had plateaued while their severity fell away.
+Rounds 3 and 4 found wrong numbers, round 5 found a false guarantee about the numbers, and round 6 found no wrong measurement at all — its twelve
+findings were descriptions that had outlived the records they describe. The per-round counts (21, 30, 27, 11, 12, 12), the cap, and the stop and its
+reason are in [results/evaluation-loop.json](results/evaluation-loop.json).
 
 Where this evaluation design does and does not line up with the seven-step credibility framework in FDA's draft guidance on AI in regulatory decision-making:
 **[CREDIBILITY.md](CREDIBILITY.md)** — a mapping onto that vocabulary, never a claim about this system's regulatory standing.
@@ -115,11 +119,16 @@ is in retrieval scope, rubric and model — things that can be inspected.
 reversed. Agreement stands; disagreement forces `NOT_ENOUGH_INFO`. The rate ships with its n, and is
 withheld when n is too small to mean anything.
 
-**A manuscript can never retrieve itself.** Several of these papers exist in the corpus in
-published form. When one is reviewed, its twin's chunks leave the index and the knowledge graph is
-*rebuilt* with that document's extractions withheld — removing not just its entities but the edge
-weight it contributed between surviving ones. The mechanism is defended by tests that drive the
-real orchestration and fail when it is disabled.
+**A manuscript's own text never reaches a reviewer.** Several of these papers exist in the corpus
+in published form. When one is reviewed, its twin's chunks leave the index and the knowledge graph
+is *rebuilt* with that document's extractions withheld — removing not just its entities but the
+edge weight it contributed between surviving ones. That much is exact, and defended by tests that
+drive the real orchestration and fail when it is disabled. What exclusion does not reach is the
+community-report *text*: those summaries are generated once over the whole corpus and are not
+rebuilt per run, so `graphrag-global`, the rung that ranks over them, can still be influenced by a
+document it cannot retrieve. On `met17-auxotroph`, 101 twin-only entities reach that ranking —
+asymmetry row 16 in [results/RESULTS.md](results/RESULTS.md), and [LIMITATIONS.md](LIMITATIONS.md)
+measures the residue with an offline recipe that prints `101 101 5`.
 
 ## What the panel measurably does, and does not do
 
@@ -180,7 +189,8 @@ a fresh model. Concretely, it fails when:
 - the knowledge graph rebuilt from the committed extractions no longer has the entity, edge and
   community counts in `results/build-stats-*.json`;
 - the retrieval ladder no longer regenerates its record byte-for-byte apart from the fields the code
-  itself declares run-varying (`latency_ms`, `run_utc`);
+  itself declares run-varying in `RUN_VARYING_FIELDS` (`src/peerpanel/evals/ablation.py`) — the
+  same constant the conformance test strips, and the declaration to hold a regenerated diff to;
 - a published detection count is not what the committed rule produces when re-run over the committed
   finding texts, or a record under `results/` cannot state its own run conditions;
 - a number in this README, in `results/RESULTS.md` or in `LIMITATIONS.md` stops matching the record

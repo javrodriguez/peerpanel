@@ -537,6 +537,45 @@ def _sentences_in_context(text: str) -> list[tuple[str, str]]:
     return out
 
 
+# ======================================================================================
+# Reading a quantity out of prose — the rule round 6 wrote (report 1, finding 2).
+#
+# A guard keyed to a SENTENCE is evaded by rewriting the sentence. The previous version
+# of the reviewer-citation guard selected on the literal `cites a retrieved chunk`, so
+# pluralising the subject — "4 reviewer findings in 16 CITE a retrieved chunk" — moved a
+# published value past 664 green tests, because the selector no longer matched and the
+# sentence was skipped in silence. Every rule below therefore keys on the NUMBER and the
+# ROLE it plays: the role is a stem or a noun the claim cannot lose and still be the
+# claim, the value is read in digits or in words wherever the role puts it, and a live
+# sentence that plays the role while stating a value this rule cannot read FAILS as
+# unreadable. `seen` is counted PER DOCUMENT, never in aggregate: results/RESULTS.md's
+# sibling sentence kept the README's dead guard looking alive for a whole round.
+# ======================================================================================
+
+# The words a page writes a small count with, beside the digits. `no` is here because a
+# zero yield is the number this repository is most often obliged to publish.
+_ZERO_WORDS = {"no": 0}
+_COUNT_WORDS = {**_WORD_NUMBERS, **_ZERO_WORDS}
+_QUANTITY = "(?:\\d[\\d,]*|" + "|".join(sorted(_COUNT_WORDS, key=len, reverse=True)) + ")"
+
+
+def _count_of(token: str) -> int:
+    """One quantity token as its value — `16`, `1,024`, `sixteen`, `no`."""
+    token = token.strip().lower()
+    return int(token.replace(",", "")) if token[0].isdigit() else _COUNT_WORDS[token]
+
+
+def _quantities_in(text: str) -> set[int]:
+    """Every quantity a sentence states, digits and words alike."""
+    found = {int(t.replace(",", "")) for t in re.findall(r"\d[\d,]*", text)}
+    found |= {
+        _COUNT_WORDS[word.lower()]
+        for word in re.findall(r"[A-Za-z]+", text)
+        if word.lower() in _COUNT_WORDS
+    }
+    return found
+
+
 # A sentence that says it is reporting a superseded measurement is not bound to today's
 # records — that is the whole point of publishing the old number beside the correction.
 # The marker has to be IN the sentence making the claim, so a paragraph cannot lend its
@@ -693,6 +732,7 @@ def _check_published_populations_recompute(results_text: str, readme_text: str) 
     """
     yields = _per_run_yields()
     checked = 0
+    per_file: dict[str, int] = {"results/RESULTS.md": 0, "README.md": 0}
     by_claim: dict[tuple[str, str, int, int], list[str]] = {}
     for kind, where, sentence, numerator, denominator in _claims(results_text, readme_text):
         by_claim.setdefault((where, sentence, numerator, denominator), []).append(kind)
@@ -708,12 +748,16 @@ def _check_published_populations_recompute(results_text: str, readme_text: str) 
             f"  {sentence}"
         )
         checked += 1
-    assert checked >= 4, (
-        f"only {checked} population claims matched in README.md and results/RESULTS.md. "
-        "This binding is bound to nothing, which is round 3's dead-guard class (F6): the "
+        per_file[where] = per_file.get(where, 0) + 1
+    starved = sorted(where for where, count in per_file.items() if count < 2)
+    assert not starved and checked >= 4, (
+        f"population claims matched per file: {per_file}. This binding is bound to "
+        "nothing where the count is low, which is round 3's dead-guard class (F6): the "
         "grounding yield, the order-change rate and the hallucination count are each "
         "published in both files, so a shape this regex cannot read is a shape that has "
-        "gone unbound."
+        "gone unbound. Counted per file deliberately — across both, one document's "
+        "sentences keep the other document's guard looking alive, which is the half of "
+        "round 6's finding 2 that had nothing to do with the regex."
     )
     return checked
 
@@ -767,10 +811,31 @@ def _check_a_doubled_population_says_so(results_text: str, readme_text: str) -> 
     )
 
 
+# `_prose_units` strips the underscores out of a constant, so `NOT_ENOUGH_INFO` reaches
+# this rule as `NOTENOUGHINFO`; and the count beside a verdict class is written as a word
+# as readily as a digit ("no SUPPORTS", "twenty abstentions"). Both are read, because a
+# distribution stated in a form the rule cannot parse is a distribution nothing binds.
+_VERDICT_WORDS = "|".join(v.replace("_", "_?") for v in VERDICTS)
 _VERDICT_IN_PROSE = re.compile(
-    r"(\d[\d,]*)\s+(SUPPORTS|REFUTES|NOT_ENOUGH_INFO|abstentions?)", re.IGNORECASE
+    rf"({_QUANTITY})\s+({_VERDICT_WORDS}|abstentions?)", re.IGNORECASE
 )
 _POPULATION = re.compile(r"(?:across|of|out of)\s+(\d[\d,]*)", re.IGNORECASE)
+
+
+def _verdict_named(word: str) -> str:
+    """The verdict class a prose word names, whatever the page did to its underscores.
+
+    "abstentions" is this page's English for NOT_ENOUGH_INFO, and `_prose_units` strips
+    the underscore out of the constant itself, so `NOTENOUGHINFO` has to read back as the
+    class it is or a reworded distribution would classify as two counts of nothing.
+    """
+    if word.lower().startswith("abstention"):
+        return VERDICT_NEI
+    squashed = word.upper().replace("_", "")
+    for verdict in VERDICTS:
+        if verdict.replace("_", "") == squashed:
+            return verdict
+    raise AssertionError(f"{word!r} names no verdict class this code can emit ({VERDICTS})")
 
 
 def _check_the_verdict_distribution_in_prose(results_text: str, readme_text: str) -> None:
@@ -800,18 +865,19 @@ def _check_the_verdict_distribution_in_prose(results_text: str, readme_text: str
     per_run = counts[0]
     doubled = {verdict: total * len(counts) for verdict, total in per_run.items()}
     totals = {sum(per_run.values()), sum(doubled.values())}
-    seen = 0
     for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
+        seen = 0
         for _unit, sentence in _sentences_in_context(text):
             if _HISTORICAL.search(sentence):
                 continue
             claims = _VERDICT_IN_PROSE.findall(sentence)
-            if len({verdict.upper() for _n, verdict in claims}) < 2:
+            named = {_verdict_named(word) for _n, word in claims}
+            if len(named) < 2:
                 continue  # a lone "20 abstentions" is a count, not the distribution
             seen += 1
             for shown, word in claims:
-                verdict = VERDICT_NEI if word.lower().startswith("abstention") else word.upper()
-                claimed = _int(shown)
+                verdict = _verdict_named(word)
+                claimed = _count_of(shown)
                 assert claimed in {per_run[verdict], doubled[verdict]}, (
                     f"{where} publishes {shown} {word}; the committed runs record "
                     f"{per_run[verdict]} per run ({doubled[verdict]} over "
@@ -823,40 +889,57 @@ def _check_the_verdict_distribution_in_prose(results_text: str, readme_text: str
                     f"{population}; the committed runs judged "
                     f"{sorted(totals)[0]} claims per run.\n  {sentence}"
                 )
-    assert seen, (
-        "no verdict-distribution sentence matched in README.md or results/RESULTS.md, so "
-        f"this guard covers nothing (round 3's F6). The records say {per_run}, and both "
-        "files state it in prose beside the table."
-    )
+        assert seen, (
+            f"{where} states the verdict distribution in no form this rule can read, so "
+            f"the guard covers nothing here (round 3's F6). The records say {per_run}, "
+            "and this file states it in prose beside the table. Write each class with "
+            "its count beside it — a digit or the word for it, 'no SUPPORTS' as readily "
+            "as '0 SUPPORTS' — because a class stated in a form nothing parses is a "
+            "class that has left the distribution unnoticed."
+        )
 
 
 def _check_the_lens_yield(results_text: str, readme_text: str) -> None:
-    """The deterministic lens's count, wherever it is stated, whatever it is."""
+    """The deterministic lens's count, wherever it is stated, whatever it is.
+
+    Scoped by the subject a paragraph OPENS with, and counted per document — round 6's
+    finding 2 one step out. The README states the mechanism in one sentence ("The
+    deterministic lens has no positive evidence at all.") and its yield in the next ("It
+    finds 0 findings on every committed run"), so a sentence-scoped rule read the second
+    one only because the file name `tests/test_deterministic_lens.py` happens to sit in
+    it and contains the word. Drop that link and the README's figure goes unbound with
+    the guard green, kept alive by results/RESULTS.md's own sentence: the dead-guard
+    shape exactly. So a sentence is in scope when it names the lens itself, or when the
+    sentence its paragraph OPENS with does — the opening sentence is what sets a
+    paragraph's subject. A paragraph that mentions the lens in passing halfway through
+    ("while lens findings, conflicts, unparsed calls and verdict grounding all carried
+    theirs") does not lend its subject to the citation yield three sentences earlier.
+    """
     per_run = _lens_findings_per_run()
     assert len(set(per_run)) == 1, (
         f"the committed runs disagree on the lens count {per_run}; a single published "
         "figure cannot describe them"
     )
     found = per_run[0]
-    seen = 0
     for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
-        for sentence in _sentences(text):
-            if "lens" not in sentence.lower() or _HISTORICAL.search(sentence):
+        seen = 0
+        for unit, sentence in _sentences_in_context(text):
+            subject = re.split(r"(?<=[.!?])\s+", unit, maxsplit=1)[0]
+            if "lens" not in f"{subject} {sentence}".lower() or _HISTORICAL.search(sentence):
                 continue
-            for match in re.finditer(r"(\d[\d,]*|no|zero)\s+findings", sentence, re.IGNORECASE):
+            for match in _ANY_FINDING_COUNT.finditer(sentence):
                 seen += 1
-                shown = match.group(1).lower()
-                claimed = 0 if shown in {"no", "zero"} else _int(shown)
-                assert claimed == found, (
-                    f"{where} says {match.group(0)!r} of the deterministic lens; the "
-                    f"committed runs record {found} on every run.\n  {sentence}"
+                assert _count_of(match.group("n")) == found, (
+                    f"{where} says {match.group(0).strip()!r} of the deterministic lens; "
+                    f"the committed runs record {found} on every run.\n  {sentence}"
                 )
-    assert seen, (
-        "no deterministic-lens count matched in README.md or results/RESULTS.md, so this "
-        f"guard covers nothing (round 3's F6). The records say {found} findings on every "
-        "committed run, and both files describe the lens as a mechanism that has never "
-        "fired — a description that has to carry the number it rests on."
-    )
+        assert seen, (
+            f"{where} states no deterministic-lens count this rule can read, so the guard "
+            f"covers nothing here (round 3's F6). The records say {found} findings on "
+            "every committed run, and this file describes the lens as a mechanism that "
+            "has never fired — a description that has to carry the number it rests on, "
+            "written beside the word 'findings' so it can be bound."
+        )
     if found == 0:
         assert "0 findings" in results_text, (
             "results/RESULTS.md must state the lens yield as a zero: a mechanism with no "
@@ -864,35 +947,163 @@ def _check_the_lens_yield(results_text: str, readme_text: str) -> None:
         )
 
 
+# The reviewer-citation yield's role, as a claim cannot lose it and still be the claim:
+# something CITES (any inflection) a RETRIEVED CHUNK (singular or plural). Round 6 moved
+# this number by pluralising the verb past a selector that spelled it `cites`.
+_CITES = re.compile(r"\bcit(?:e|es|ed|ing|ation|ations)\b", re.IGNORECASE)
+_RETRIEVED_CHUNK = re.compile(r"\bretrieved chunks?\b", re.IGNORECASE)
+
+
 def _check_the_reviewer_citation_yield(results_text: str, readme_text: str) -> None:
     """"1 reviewer finding in 16 cites a retrieved chunk" — both numbers, from the records.
 
-    Deliberately shape-agnostic: the two live sentences write the pair in opposite orders
-    ("of 16 findings in a run, 1 cites…" and "only 1 reviewer finding in 16 cites…"), so
-    this requires both numbers to be PRESENT in the sentence rather than pinning an order.
-    It therefore catches a moved value and not a transposed one; the panel table's
-    per-reviewer findings row binds the 16 by position.
+    Round 6, report 1, finding 2(a). The previous version selected sentences by the
+    literal substring `cites a retrieved chunk`, so changing the value to any number but
+    one makes the sentence plural — "4 reviewer findings in 16 **cite** a retrieved
+    chunk" — the selector stopped matching, the sentence was skipped in silence, and the
+    whole suite stayed green. `seen` did not catch it either, because results/RESULTS.md
+    carries a sibling sentence in the singular that kept the guard looking alive.
+
+    So the selector is now the ROLE — a citation stem beside the retrieved-chunk noun,
+    every inflection of it in scope — the value is read in digits or in words, and `seen`
+    is required PER DOCUMENT. A page that states the claim in a form with neither of
+    those two role words in it fails here as unreadable rather than passing silently.
+
+    Deliberately shape-agnostic about ORDER: the two live sentences write the pair in
+    opposite orders ("of 16 findings in a run, 1 cites…" and "only 1 reviewer finding in
+    16 cites…"), so this requires both numbers to be PRESENT in the sentence rather than
+    pinning an order. It therefore catches a moved value and not a transposed one; the
+    panel table's per-reviewer findings row binds the 16 by position.
     """
     per_run = _per_run_yields()["reviewer citations"]
     assert len(set(per_run)) == 1, f"the committed runs disagree on citing findings: {per_run}"
     citing, findings = per_run[0]
-    seen = 0
     for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
+        seen = 0
         for sentence in _sentences(text):
-            if "cites a retrieved chunk" not in sentence.lower() or _HISTORICAL.search(sentence):
+            if _HISTORICAL.search(sentence):
+                continue
+            if not (_CITES.search(sentence) and _RETRIEVED_CHUNK.search(sentence)):
                 continue
             seen += 1
-            numbers = {_int(n) for n in re.findall(r"\d[\d,]*", sentence)}
+            numbers = _quantities_in(sentence)
             assert {citing, findings} <= numbers, (
                 f"{where} states the reviewer-citation yield without the numbers the "
                 f"records carry: {citing} of {findings} findings in a run cite a "
                 f"retrieved chunk, and this sentence carries {sorted(numbers)}.\n  {sentence}"
             )
-    assert seen, (
-        "no reviewer-citation claim matched in either file; the records say "
-        f"{citing} of {findings} and both documents publish it, so this guard has gone "
-        "dead rather than the claim having gone away"
+        assert seen, (
+            f"{where} states the reviewer-citation yield in no form this rule can read. "
+            f"The records say {citing} of {findings} reviewer findings in a run cite a "
+            "retrieved chunk, and this document publishes it. Write the claim as one "
+            "sentence carrying both numbers, a citation word and the retrieved chunk it "
+            "is about — any wording, any inflection — because a number stated in a form "
+            "no rule can read is a number bound by nothing (round 6, finding 2)."
+        )
+
+
+# The per-reviewer output cap. `_prose_units` strips the underscore out of a constant,
+# so the marker has to read `MAX_FINDINGS` and `MAXFINDINGS` alike. Case-sensitive: the
+# constant is what is being named, not the English words "max findings".
+_MAX_FINDINGS_NAME = re.compile(r"\bMAX_?FINDINGS\b")
+# "…findings", with up to two words of the writer's own in front of the noun
+# ("16 capped findings", "0 of 16 reviewer findings").
+_FINDINGS_NOUN = r"(?:\w+\s+){0,2}?findings?\b"
+# Every shape that states a PER-REVIEWER count. Each one names the role in a word the
+# claim cannot drop and still be about one reviewer's output, and reads the value in
+# digits or in words.
+_PER_REVIEWER_CLAIMS = (
+    re.compile(rf"(?P<n>{_QUANTITY})\s+{_FINDINGS_NOUN}[^.;]{{0,40}}?\b(?:each|apiece)\b", re.I),
+    re.compile(
+        rf"\b(?:each|every|per)\s+reviewers?\b[^.;]{{0,60}}?\b(?P<n>{_QUANTITY})\s+"
+        rf"{_FINDINGS_NOUN}",
+        re.I,
+    ),
+    re.compile(
+        rf"\breviewers?\b[^.;]{{0,40}}?\beach\b[^.;]{{0,40}}?\b(?P<n>{_QUANTITY})\s+"
+        rf"{_FINDINGS_NOUN}",
+        re.I,
+    ),
+    re.compile(rf"\bMAX_?FINDINGS\b\s*(?:=|is|of)?\s*(?P<n>{_QUANTITY})\b"),
+)
+_ANY_FINDING_COUNT = re.compile(rf"(?P<n>{_QUANTITY})\s+{_FINDINGS_NOUN}", re.I)
+
+
+def _check_the_per_reviewer_finding_cap(results_text: str, readme_text: str) -> None:
+    """How many findings ONE reviewer returned — `MAX_FINDINGS`, and what the records show.
+
+    Round 6, report 1, finding 2(b): "each reviewer returned exactly 8 findings, which is
+    `MAX_FINDINGS`" was read by no test at all, and 8 -> 7 passed 664 green tests. The 8
+    is not decoration — the same paragraph uses it to argue that the 16 beside it is a
+    ceiling rather than an output, which is the load-bearing caveat on the grounding
+    yield, and the 32 below it is the same ceiling doubled.
+
+    Bound to the constant AND to the records: the cap the code declares and the number of
+    findings every reviewer of every committed run actually wrote must agree before
+    either is published. Then the value is read wherever the page states it — "8
+    findings", "eight findings each", "MAX_FINDINGS = 8" — never by the sentence around
+    it. Inside a sentence that names the constant a findings count may also be the cap
+    over both reviewers ("16 findings in a run is two reviewers at their ceiling"), so
+    those two values are allowed there and nothing else is, and a sentence naming the
+    constant while stating a count this rule cannot read fails as unreadable.
+    """
+    runs = [_panel(name) for name in PANEL_RECORDS]
+    written = {len(output.findings) for review in runs for output in review.reviewer_outputs}
+    assert written == {MAX_FINDINGS}, (
+        f"MAX_FINDINGS is {MAX_FINDINGS} and the committed runs record {sorted(written)} "
+        "findings per reviewer; the page publishes one number for both, so it cannot be "
+        "published at all while they disagree — the cap stopped being what set the "
+        "denominator, and that is a finding rather than a number to update"
     )
+    reviewers = {len(review.reviewer_outputs) for review in runs}
+    assert len(reviewers) == 1, (
+        f"the committed runs disagree on how many reviewers ran ({sorted(reviewers)}), so "
+        "the per-run findings ceiling is not one number"
+    )
+    per_run_total = MAX_FINDINGS * reviewers.pop()
+    for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
+        seen = 0
+        for sentence in _sentences(text):
+            if _HISTORICAL.search(sentence):
+                continue
+            claimed = [
+                match
+                for pattern in _PER_REVIEWER_CLAIMS
+                for match in pattern.finditer(sentence)
+            ]
+            for match in claimed:
+                assert _count_of(match.group("n")) == MAX_FINDINGS, (
+                    f"{where} says {match.group(0).strip()!r}; every reviewer of every "
+                    f"committed run returned {MAX_FINDINGS} findings, which is "
+                    f"MAX_FINDINGS in src/peerpanel/agents/reviewer_base.py.\n  {sentence}"
+                )
+            seen += len(claimed)
+            if not _MAX_FINDINGS_NAME.search(sentence):
+                continue
+            counts = list(_ANY_FINDING_COUNT.finditer(sentence))
+            assert counts or claimed, (
+                f"{where} names MAX_FINDINGS and states no findings count this rule can "
+                f"read. The cap is {MAX_FINDINGS} per reviewer and {per_run_total} over "
+                "the run; write the number beside the word 'findings' — in digits or in "
+                "words — so it is bound to the constant rather than to this sentence."
+                f"\n  {sentence}"
+            )
+            for match in counts:
+                assert _count_of(match.group("n")) in {MAX_FINDINGS, per_run_total}, (
+                    f"{where} says {match.group(0).strip()!r} in a sentence about "
+                    f"MAX_FINDINGS; the cap is {MAX_FINDINGS} findings per reviewer and "
+                    f"{per_run_total} over the {per_run_total // MAX_FINDINGS} reviewers "
+                    f"of one run.\n  {sentence}"
+                )
+        assert seen, (
+            f"{where} states the per-reviewer findings cap in no form this rule can read. "
+            f"MAX_FINDINGS is {MAX_FINDINGS}, every reviewer of every committed run "
+            "returned exactly that many, and this document publishes it as the reason the "
+            f"{per_run_total} beside it is a ceiling rather than an output. Write it so "
+            "the number stands beside the role — 'each reviewer returned 8 findings', "
+            "'eight findings each', 'MAX_FINDINGS = 8' — because a ceiling nothing binds "
+            "cannot carry the caveat the grounding yield rests on."
+        )
 
 
 class TestClaimedYieldsMatchTheRecords:
@@ -928,6 +1139,10 @@ class TestClaimedYieldsMatchTheRecords:
 
     def test_reviewer_citation_yield(self) -> None:
         _check_the_reviewer_citation_yield(_results_text(), _readme_text())
+
+    def test_the_per_reviewer_finding_cap(self) -> None:
+        """The 8 no test read until round 6 (report 1, finding 2b)."""
+        _check_the_per_reviewer_finding_cap(_results_text(), _readme_text())
 
     def test_the_hallucination_count_is_the_records_own_count(self) -> None:
         """The one number the prose reports AGAINST itself, and the only one that was
@@ -972,6 +1187,17 @@ class TestClaimedYieldsMatchTheRecords:
         # not in the manuscript") went unbound while the regex above looked for a wording
         # neither file uses. It is bound with the rest of the population claims.
         _check_published_populations_recompute(_results_text(), _readme_text())
+
+
+def _reflowed(needle: str) -> re.Pattern[str]:
+    """A published claim as a pattern that survives a re-wrap.
+
+    These pages wrap at about a hundred columns, so a control pinned to the line break
+    inside a sentence moves a string that is not there the moment the paragraph reflows —
+    and a control that mutates nothing proves nothing. The words are pinned; the
+    whitespace between them is not.
+    """
+    return re.compile(r"\s+".join(re.escape(word) for word in needle.split()))
 
 
 class TestTheseYieldBindingsCanGoRed:
@@ -1059,6 +1285,114 @@ class TestTheseYieldBindingsCanGoRed:
             _check_the_reviewer_citation_yield(
                 results_text.replace(original, "4 cites a retrieved chunk at all", 1), readme
             )
+
+    # Round 6's own two experiments, kept as controls. Each guard is handed the real
+    # page twice: once with the value moved and the sentence left alone, and once with
+    # the sentence REWRITTEN around the moved value — the second form is the one that
+    # passed 664 green tests, and it is the form a guard keyed to prose cannot catch.
+    REWORDINGS: ClassVar[list[tuple[str, str, str, str]]] = [
+        (
+            "README.md",
+            "only 1 reviewer finding in 16 cites a retrieved chunk at all",
+            "only 4 reviewer findings in 16 cite a retrieved chunk at all",
+            r"reviewer-citation yield",
+        ),
+        (
+            "results/RESULTS.md",
+            "of 16 findings in a run, **1 cites a retrieved chunk at all**",
+            "of 16 findings in a run, **4 cite a retrieved chunk at all**",
+            r"reviewer-citation yield",
+        ),
+        (
+            "README.md",
+            "each reviewer returned exactly 8 findings",
+            "each reviewer returned exactly 7 findings",
+            r"committed run returned 8 findings",
+        ),
+        (
+            "README.md",
+            "each reviewer returned exactly 8 findings",
+            "the reviewers each returned 7 findings",
+            r"committed run returned 8 findings",
+        ),
+        (
+            "README.md",
+            "two\nreviewers, eight findings each",
+            "two\nreviewers, seven findings apiece",
+            r"committed run returned 8 findings",
+        ),
+        (
+            "results/RESULTS.md",
+            "`MAX_FINDINGS = 8` in `src/peerpanel/agents/reviewer_base.py`",
+            "`MAX_FINDINGS = 7` in `src/peerpanel/agents/reviewer_base.py`",
+            r"committed run returned 8 findings",
+        ),
+        (
+            "README.md",
+            "It finds **0 findings on every committed\nrun**",
+            "It finds **2 findings on every committed\nrun**",
+            r"of the deterministic lens",
+        ),
+        (
+            "README.md",
+            "0 SUPPORTS, 0 REFUTES, 20 abstentions per run",
+            "no SUPPORTS, no REFUTES, 18 abstentions per run",
+            r"publishes 18 abstentions",
+        ),
+    ]
+
+    CHECKERS: ClassVar[dict[str, str]] = {
+        r"reviewer-citation yield": "citation",
+        r"committed run returned 8 findings": "cap",
+        r"of the deterministic lens": "lens",
+        r"publishes 18 abstentions": "verdicts",
+    }
+
+    @pytest.mark.parametrize(("where", "original", "mutated", "message"), REWORDINGS)
+    def test_a_reworded_sentence_cannot_walk_past_its_binding(
+        self, where: str, original: str, mutated: str, message: str
+    ) -> None:
+        """Round 6's rule, as a test: a guard keyed to a sentence is evaded by rewriting
+        the sentence, so each of these moves the value AND the wording around it."""
+        results_text, readme = _results_text(), _readme_text()
+        text = results_text if where.endswith("RESULTS.md") else readme
+        changed = _reflowed(original).sub(mutated, text, count=1)
+        assert changed != text, (
+            f"{where} no longer contains {original!r}, so this control mutates nothing "
+            "and its green proves nothing. Re-point it at the sentence that carries the "
+            "figure now."
+        )
+        if where.endswith("RESULTS.md"):
+            results_text = changed
+        else:
+            readme = changed
+        checker = {
+            "citation": _check_the_reviewer_citation_yield,
+            "cap": _check_the_per_reviewer_finding_cap,
+            "lens": _check_the_lens_yield,
+            "verdicts": _check_the_verdict_distribution_in_prose,
+        }[self.CHECKERS[message]]
+        with pytest.raises(AssertionError, match=message):
+            checker(results_text, readme)
+
+    def test_a_claim_removed_from_one_file_fails_in_that_file(self) -> None:
+        """The other half of round 6's finding: `seen` counted in aggregate let
+        results/RESULTS.md's sibling sentence keep the README's dead guard alive."""
+        results_text, readme = _results_text(), _readme_text()
+        original = "only 1 reviewer finding in 16 cites a retrieved chunk at all"
+        assert original in readme, f"README.md no longer contains {original!r}"
+        stripped = readme.replace(original, "reviewer citations are nearly absent", 1)
+        with pytest.raises(AssertionError, match=r"README\.md states the reviewer-citation"):
+            _check_the_reviewer_citation_yield(results_text, stripped)
+
+    def test_an_unreadable_cap_sentence_fails(self) -> None:
+        """A findings count in a MAX_FINDINGS sentence that no rule can parse must fail
+        as unreadable — never pass because the parser shrugged."""
+        readme = _readme_text() + (
+            "\n\nEvery reviewer stopped at MAX_FINDINGS, whatever that turns out to be.\n"
+        )
+        with pytest.raises(AssertionError, match=r"states no findings count this rule can read"):
+            _check_the_per_reviewer_finding_cap(_results_text(), readme)
 
     def test_an_unclassifiable_verdict_population_fails(self) -> None:
         """A new sentence publishing "N of M verdicts" about nothing this test can

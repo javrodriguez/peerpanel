@@ -35,6 +35,17 @@ measured 3.2x.
 
 The planted-evaluation bindings live in `test_planted_published_numbers.py` —
 they moved out when two owners needed to edit this file at once.
+
+Round 6 added two more pages to this file's reach, for the same reason it exists.
+`LIMITATIONS.md:7` promises that a figure that drifts fails the suite, and three of
+its own figures were pinned in test DOCSTRINGS only (report 1, finding 3) — a claim
+about the repository's verification discipline that the repository did not keep, on
+the page the README calls the one most worth reading carefully. And `results/
+RESULTS.md`'s model-layer drift figure had no artifact, no test and no offline route
+(finding 4). Both are bound below: the first to the graph rebuilt from
+`fixtures/extraction/ci`, the second as far as it CAN be bound offline — its
+population to the committed reports, its numerator to an attribution a reader can
+follow, because no committed byte can reproduce a second cold model generation.
 """
 
 from __future__ import annotations
@@ -42,6 +53,7 @@ from __future__ import annotations
 import json
 import re
 from collections import defaultdict
+from functools import cache
 from pathlib import Path
 from typing import Any, ClassVar
 
@@ -49,11 +61,13 @@ import pytest
 
 from peerpanel.agents.schemas import RUBRIC_DIMENSIONS, VERDICTS
 from peerpanel.corpus.models import CorpusManifest
+from peerpanel.graph.run_graph import build_run_graph
 from peerpanel.manuscripts.store import read_manuscript
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = (ROOT / "results" / "RESULTS.md").read_text()
 README = (ROOT / "README.md").read_text()
+LIMITATIONS = (ROOT / "LIMITATIONS.md").read_text()
 
 # Globbed, never hardcoded: these files were renamed once already, and a hardcoded name
 # turns into an unconditional FileNotFoundError that reads like a broken test rather than
@@ -948,6 +962,10 @@ def _check_the_swap_table(text: str) -> None:
 
 
 _CHUNKS = re.compile(r"(\d[\d,]*)\s+chunks", re.IGNORECASE)
+# What the page cannot stop saying and still be describing the exclusion. Keyed on the
+# stem rather than on `drop`/`withheld` as written, so "26 chunks were removed" stays in
+# scope — round 6's rule: a guard keyed to a sentence is evaded by rewriting it.
+_EXCLUSION_VERB = re.compile(r"drop|withh|withheld|exclu|remov", re.IGNORECASE)
 
 
 def _dropped_chunks_by_subject() -> dict[str, set[int]]:
@@ -980,11 +998,11 @@ def _check_the_exclusion_figures(results_text: str, readme_text: str) -> None:
     """
     by_subject = _dropped_chunks_by_subject()
     everything = {count for counts in by_subject.values() for count in counts}
-    seen = 0
     for where, text in (("results/RESULTS.md", results_text), ("README.md", readme_text)):
+        seen = 0
         for match in _CHUNKS.finditer(text):
             window = text[max(0, match.start() - 200) : match.end() + 120].lower()
-            if "drop" not in window and "withheld" not in window:
+            if not _EXCLUSION_VERB.search(window):
                 continue
             seen += 1
             shown = int(match.group(1).replace(",", ""))
@@ -996,11 +1014,355 @@ def _check_the_exclusion_figures(results_text: str, readme_text: str) -> None:
                 + f"; the committed records say {sorted(expected)}.\n  "
                 + re.sub(r"\s+", " ", text[max(0, match.start() - 120) : match.end() + 80])
             )
-    assert seen, (
-        "no exclusion figure matched in README.md or results/RESULTS.md, so this guard "
-        f"covers nothing (round 3's F6). The records carry {by_subject}, and self-exclusion "
-        "is one of the four mechanisms both documents present as working."
+        assert seen, (
+            f"{where} states the exclusion figure in no form this rule can read, so the "
+            f"guard covers nothing here (round 3's F6). The records carry {by_subject}, "
+            "and self-exclusion is one of the four mechanisms both documents present as "
+            "working. `seen` is counted per document deliberately: counted across both, "
+            "one file's sentence keeps the other file's guard looking alive, which is "
+            "the half of round 6's finding 2 that had nothing to do with the regex."
+        )
+
+
+# ======================================================================================
+# Two pages whose promises outran their bindings (round 6, report 1, findings 3 and 4).
+#
+# Round 6's rule, and the reason both rules below are written the way they are: a guard
+# keyed to a SENTENCE is evaded by rewriting the sentence, so each of these keys on the
+# NUMBER and the ROLE it plays — a count of entities the rebuild removed, a population of
+# committed reports — and reads it wherever the page puts it. A page that states one of
+# these figures in a form the rule cannot read fails here as unreadable; it never passes
+# in silence, which is the whole point of the repair.
+# ======================================================================================
+
+# A sentence break: a full stop followed by something that starts a sentence. Naive
+# splitting on `[.!?]\s+` cuts `tests/test_run_graph.py verifies…` in half, and half a
+# sentence is half a scope.
+_SENTENCE_BREAK = re.compile(r"(?<=[.!?])\s+(?=[A-Z(\[\"'])")
+_HISTORICAL_CLAIM = re.compile(
+    r"an earlier (?:version|run|record|reading)|a previous version|previous version of this|"
+    r"the figure published until this commit|used to (?:say|read|report)|was once",
+    re.IGNORECASE,
+)
+
+
+def _live_sentences(text: str) -> list[tuple[str, str]]:
+    """(the paragraph a sentence sits in, the sentence) — for the live claims only.
+
+    Two scopes, for the reason `test_artifact_conformance.py` gives: a VALUE is a
+    property of the sentence making the claim, so a paragraph must never lend a figure
+    three sentences away its caveat; but where a number came FROM is often established
+    one sentence later, so a provenance is looked for in the paragraph.
+
+    Formatting goes (a figure wrapped in `**` would otherwise never end a sentence), and
+    a sentence that says in so many words that it is reporting a superseded reading is
+    not bound to today's records — publishing the old number beside the correction is
+    something this repository does on purpose.
+    """
+    flat = re.sub(r"[*`]", "", text)
+    out: list[tuple[str, str]] = []
+    for block in re.split(r"\n\s*\n", flat):
+        joined = re.sub(r"\s+", " ", block).strip()
+        if not joined:
+            continue
+        out += [
+            (joined, sentence)
+            for sentence in _SENTENCE_BREAK.split(joined)
+            if sentence.strip() and not _HISTORICAL_CLAIM.search(sentence)
+        ]
+    return out
+
+
+def _the_excluded_twin() -> str:
+    """The published twin the committed runs withhold, read from the records.
+
+    Never hardcoded: the id is what `excluded_docs` says, so a corpus that changed its
+    twin moves this binding with it rather than measuring the wrong document silently.
+    """
+    named = {
+        doc
+        for path in PANEL_RECORDS
+        for doc in json.loads(path.read_text())["excluded_docs"]
+    }
+    assert len(named) == 1, (
+        f"the committed panel runs withhold {sorted(named)}; LIMITATIONS.md publishes one "
+        "rebuild residue, and that is only one measurement while there is one twin"
     )
+    return str(named.pop())
+
+
+@cache
+def _ci_rebuild_residue() -> tuple[int, int, float]:
+    """(entities removed, edges lightened, weight stripped) on the CI corpus.
+
+    Recomputed offline from `fixtures/extraction/ci` by the same route
+    `tests/test_run_graph.py` drives — a pure merge over cached extractions, no model and
+    no network. That file proves the rebuild is CORRECT by deriving its expectation from
+    an independent mechanism and deliberately pins no constant; this one binds the
+    published PROSE to what the rebuild actually does, which is the half `LIMITATIONS.md:7`
+    promises and round 6 found missing. Cached: two graph builds serve every assertion.
+    """
+    twin = _the_excluded_twin()
+    full, _fa, withheld_none = build_run_graph(ROOT, "ci", set())
+    run, _ra, withheld = build_run_graph(ROOT, "ci", {twin})
+    assert withheld_none == 0 and withheld > 0, (
+        f"the CI rebuild withheld {withheld} chunks for {twin}: the residue this page "
+        "measures is the residue of an exclusion that happened, so a rebuild that "
+        "withholds nothing is a finding rather than a figure to publish"
+    )
+    lighter = [
+        (a, b) for a, b in run.edges() if run.edges[a, b]["weight"] < full.edges[a, b]["weight"]
+    ]
+    stripped = sum(
+        full.edges[a, b]["weight"] - run.edges[a, b]["weight"] for a, b in lighter
+    )
+    return len(set(full) - set(run)), len(lighter), float(stripped)
+
+
+# Each role, as the page cannot state the figure without naming it. The value is read
+# wherever the role puts it — "removes 142 entities", "142 entities are removed",
+# "strips 27.25 units … from 48 edges" — never by the sentence around it.
+_RESIDUE_ROLES = (
+    ("entities removed", re.compile(r"(?P<n>\d[\d,]*)\s+entit(?:y|ies)\b", re.IGNORECASE)),
+    ("edges lightened", re.compile(r"(?P<n>\d[\d,]*)\s+edges?\b", re.IGNORECASE)),
+    (
+        "weight stripped",
+        re.compile(r"(?P<n>\d[\d,]*(?:\.\d+)?)\s+units?\b", re.IGNORECASE),
+    ),
+)
+# The claim is about the rebuild on the CI corpus. Both halves have to be in the
+# sentence: the page measures a second residue on the MET17 run ("101 graph entities
+# exist only because of the excluded twin"), and a scope that swept every "N entities"
+# would bind that one to this measurement.
+_CI_SCALE = re.compile(r"\bCI corpus\b|corpus/ci\b", re.IGNORECASE)
+_REBUILD_VERB = re.compile(r"remov\w*|strip\w*|withh\w*|exclud\w*", re.IGNORECASE)
+
+
+def _locate_residue_claim(text: str, role: str) -> tuple[int, int, str] | None:
+    """(start, end, value) of the first in-scope statement of `role` on the real page.
+
+    The controls below mutate what the rule ACTUALLY reads, found the way the rule finds
+    it, so a control can never move a string the page has stopped carrying and call the
+    green that follows a proof.
+    """
+    pattern = dict(_RESIDUE_ROLES)[role]
+    flat_sentences = [sentence for _paragraph, sentence in _live_sentences(text)]
+    for sentence in flat_sentences:
+        if not (_CI_SCALE.search(sentence) and _REBUILD_VERB.search(sentence)):
+            continue
+        match = pattern.search(sentence)
+        if not match:
+            continue
+        # Back to the real bytes: the sentence is whitespace-collapsed, the file is not.
+        needle = re.compile(
+            r"\b" + re.escape(match.group("n")).replace(r"\ ", r"\s+") + r"\s+"
+            + match.group(0).split(maxsplit=1)[1].replace(" ", r"\s+")
+        )
+        located = needle.search(text)
+        if located:
+            value = re.match(r"\S+", located.group(0))
+            assert value is not None
+            return located.start(), located.start() + len(value.group(0)), value.group(0)
+    return None
+
+
+def _check_the_ci_exclusion_residue(limitations_text: str) -> int:
+    """LIMITATIONS.md's 142 / 48 / 27.25, against the graph rebuilt from committed bytes.
+
+    Round 6, report 1, finding 3. `LIMITATIONS.md:7` promises that "a number that drifts
+    from the measurement fails the suite rather than sitting here unread"; these three
+    were carried in `tests/test_run_graph.py`'s DOCSTRINGS only, so 142 -> 143 and
+    27.25 -> 27.75 both left the suite green. All three values were correct — what was
+    wrong was the page's account of its own discipline, in the bullet describing the
+    residue exclusion cannot reach, on the page the README calls the one most worth
+    reading carefully.
+    """
+    removed, lightened, stripped = _ci_rebuild_residue()
+    expected = {
+        "entities removed": float(removed),
+        "edges lightened": float(lightened),
+        "weight stripped": stripped,
+    }
+    seen: dict[str, int] = {role: 0 for role, _pattern in _RESIDUE_ROLES}
+    for _paragraph, sentence in _live_sentences(limitations_text):
+        if not (_CI_SCALE.search(sentence) and _REBUILD_VERB.search(sentence)):
+            continue
+        for role, pattern in _RESIDUE_ROLES:
+            for match in pattern.finditer(sentence):
+                seen[role] += 1
+                shown = match.group("n")
+                assert float(shown.replace(",", "")) == pytest.approx(
+                    expected[role], abs=_slack(shown)
+                ), (
+                    f"LIMITATIONS.md says {match.group(0).strip()!r}; rebuilding the CI "
+                    f"graph from fixtures/extraction/ci with {_the_excluded_twin()} "
+                    f"withheld gives {role} = {expected[role]:g}.\n  {sentence}"
+                )
+    missing = sorted(role for role, count in seen.items() if not count)
+    assert not missing, (
+        f"LIMITATIONS.md states {missing} in no form this rule can read, so the figure(s) "
+        "it publishes for the CI rebuild are bound by nothing — which is the finding this "
+        "rule closes, not a reason to pass. The rebuild removes "
+        f"{removed} entities and strips {stripped:g} units of twin-contributed weight "
+        f"from {lightened} edges; write each number beside its noun, in a sentence that "
+        "names the CI corpus and what the rebuild does to it."
+    )
+    return sum(seen.values())
+
+
+# The output cap where RESULTS.md restates it inside a TABLE. `test_artifact_conformance`
+# binds the cap in prose and cannot reach here: it reads prose units, and a table row is
+# deliberately not one of them (folding eleven unrelated cells into a "sentence" would let
+# a claim borrow the caveat of a row three lines away). So the same number is bound here,
+# per cell, by the constant it names — the asymmetry table's "MAX_FINDINGS 8 x 2
+# reviewers = 16" restates three record values and was read by nothing.
+_MAX_FINDINGS_CELL = re.compile(r"MAX_FINDINGS")
+
+
+def _cap_cells(text: str) -> list[str]:
+    """Every table cell that names the cap, as the rule below finds them."""
+    return [
+        cell
+        for _header, rows in _tables(text)
+        for row in rows
+        for cell in row
+        if _MAX_FINDINGS_CELL.search(cell)
+    ]
+
+
+def _check_the_cap_where_a_table_restates_it(results_text: str) -> int:
+    """Every cell naming `MAX_FINDINGS` carries the cap, the reviewer count, or their
+    product — and nothing else."""
+    runs = _panel_runs()
+    cap = _agreed(
+        "findings per reviewer",
+        [len(o["findings"]) for _label, r in runs for o in r["reviewer_outputs"]],
+    )
+    reviewers = _agreed("reviewer count", [len(r["reviewer_outputs"]) for _label, r in runs])
+    allowed = {float(cap), float(reviewers), float(cap * reviewers)}
+    seen = 0
+    for _header, rows in _tables(results_text):
+        for row in rows:
+            for cell in row:
+                if not _MAX_FINDINGS_CELL.search(cell):
+                    continue
+                seen += 1
+                shown = _numbers(cell)
+                assert shown, (
+                    f"a results/RESULTS.md cell names MAX_FINDINGS and states no number "
+                    f"this rule can read: {cell!r}. The cap is {cap} findings per "
+                    f"reviewer over {reviewers} reviewers; write the figure beside the "
+                    "constant, or the restatement is bound by nothing."
+                )
+                unexpected = [n for n in shown if n not in allowed]
+                assert not unexpected, (
+                    f"a results/RESULTS.md cell restating MAX_FINDINGS carries "
+                    f"{unexpected}: {cell!r}. The committed runs give {cap} findings per "
+                    f"reviewer, {reviewers} reviewers and {cap * reviewers} in a run."
+                )
+    assert seen, (
+        "no results/RESULTS.md table cell names MAX_FINDINGS, so this rule covers nothing "
+        "(round 3's F6). The panel table publishes the cap as its findings row and the "
+        "asymmetry table restates it as the output ceiling; a cell that leaves the table "
+        "stops being checked, and that is what has to be noticed."
+    )
+    return seen
+
+
+# The demo community reports, as committed. `README.md` in that directory is the
+# fixture's own note, not a report — the population is the records themselves.
+def _committed_demo_reports() -> int:
+    reports = sorted((ROOT / "fixtures" / "summaries" / "demo").glob("*.json"))
+    assert reports, (
+        "fixtures/summaries/demo holds no committed community report, so the population "
+        "results/RESULTS.md states its model-drift figure over has nothing behind it"
+    )
+    return len(reports)
+
+
+_DRIFT_SUBJECT = re.compile(r"communit\w*\s+reports?|summar(?:y|ies|iser)", re.IGNORECASE)
+_DRIFT_ACT = re.compile(r"regenerat\w*|\bcold\b|reproducib\w*|reproduce[sd]?\b", re.IGNORECASE)
+_PAIR = re.compile(r"(?P<num>\d[\d,]*)\s+of\s+(?P<den>\d[\d,]*)\b")
+_REPORT_POPULATION = re.compile(
+    r"(?P<n>\d[\d,]*)\s+(?:\w+\s+){0,2}?communit\w*\s+reports?\b", re.IGNORECASE
+)
+# What a reader can follow to the measurement itself. Either two commits they can
+# `git show` — the two generations being compared — or a committed record naming the
+# reports. Nothing else is a route, and the numerator is not recomputable offline: a
+# second cold generation is a fresh draw from the model, not a replay.
+_COMMITISH = r"\b(?=[0-9a-f]*\d)[0-9a-f]{7,40}\b"
+_ATTRIBUTION = (
+    re.compile(rf"{_COMMITISH}[^.]{{0,300}}?{_COMMITISH}"),
+    re.compile(r"results/[\w.-]+\.json"),
+)
+
+
+def _check_the_model_drift_figure(results_text: str) -> int:
+    """"1 of 79" — the measured size of the model-layer reproducibility gap.
+
+    Round 6, report 1, finding 4. The README sends a reader here for THE answer to what
+    no replay can catch, and `results/RESULTS.md:3` promises every number on the page is
+    read from the JSON record beside it. This one was read from no record: only one
+    generation of the 79 reports is committed, no test mentioned the figure, and the only
+    named route (`make demo-summaries`) needs Ollama and is the stochastic process being
+    measured rather than a check of this reading.
+
+    Half of it binds and half of it cannot, and this rule is exactly that honest. The
+    POPULATION is a committed artifact — `fixtures/summaries/demo` — so it is recomputed
+    here and a drift in it fails. The NUMERATOR is a comparison against a generation this
+    repository does not commit, so no offline route can reproduce it; what this rule
+    requires instead is the route a reader CAN follow — the two commits the comparison
+    was made between, which `git show` will hand them, or a committed record that carries
+    it. That is the shape `results/evaluation-loop.json` already uses for the one other
+    number an outsider cannot recompute, and the page says so in the sentence that uses
+    it. An unattributed number under a page-wide binding promise is the finding.
+    """
+    reports = _committed_demo_reports()
+    checked = 0
+    for paragraph, sentence in _live_sentences(results_text):
+        if not (_DRIFT_SUBJECT.search(sentence) and _DRIFT_ACT.search(sentence)):
+            continue
+        pairs = list(_PAIR.finditer(sentence))
+        populations = list(_REPORT_POPULATION.finditer(sentence))
+        if not pairs and not populations:
+            continue
+        for match in populations:
+            assert int(match.group("n").replace(",", "")) == reports, (
+                f"results/RESULTS.md says {match.group(0).strip()!r}; "
+                f"fixtures/summaries/demo commits {reports} community reports.\n  {sentence}"
+            )
+        for match in pairs:
+            assert int(match.group("den").replace(",", "")) == reports, (
+                f"results/RESULTS.md states the model-layer drift as "
+                f"{match.group(0).strip()!r}; fixtures/summaries/demo commits {reports} "
+                f"community reports, so that is the population.\n  {sentence}"
+            )
+            checked += 1
+            assert any(pattern.search(paragraph) for pattern in _ATTRIBUTION), (
+                "results/RESULTS.md publishes "
+                f"{match.group(0).strip()!r} as the measured size of the model-layer "
+                "reproducibility gap, and no committed byte can reproduce it: only one "
+                f"generation of the {reports} demo community reports is committed, and "
+                "regenerating them is a fresh draw from the model rather than a replay. "
+                "The page opens by promising every number on it is read from the record "
+                "beside it, so this number needs the route a reader can actually take, "
+                "in the paragraph that states it — the two commits the two generations "
+                "were compared between, so `git show <a>:fixtures/summaries/demo/<file>` "
+                "and `git show <b>:…` settle it (at this commit `git diff --name-only "
+                "52238c8 c607ff4 -- fixtures/summaries/demo` returns exactly the one "
+                "file that moved), or a committed `results/*.json` record carrying the "
+                "comparison. Attribution is the honest road here, the way "
+                "results/evaluation-loop.json labels the one other number an outsider "
+                f"cannot recompute.\n  {sentence}"
+            )
+    assert checked, (
+        "results/RESULTS.md states the model-layer drift figure in no form this rule can "
+        f"read. The committed population is {reports} demo community reports; write the "
+        "figure as 'N of M' in a sentence that names the reports and the regeneration, "
+        "so the population is bound and the claim is visible — a number stated in a form "
+        "no rule can read is bound by nothing, which is round 6's finding 2."
+    )
+    return checked
 
 
 class TestPanelTableMatchesTheRecords:
@@ -1012,6 +1374,137 @@ class TestPanelTableMatchesTheRecords:
 
     def test_the_exclusion_figures_are_bound(self) -> None:
         _check_the_exclusion_figures(RESULTS, README)
+
+
+class TestTheLimitationsFiguresAreBound:
+    """LIMITATIONS.md:7 says a figure that drifts fails the suite. Now three more do."""
+
+    def test_the_ci_rebuild_residue_is_bound(self) -> None:
+        assert _check_the_ci_exclusion_residue(LIMITATIONS) >= 3
+
+    @pytest.mark.parametrize("role", [role for role, _pattern in _RESIDUE_ROLES])
+    def test_a_moved_residue_figure_fails(self, role: str) -> None:
+        """The evaluator's own mutations, from round 6, report 1, finding 3 — 142 -> 143
+        and 27.25 -> 27.75 each left the whole suite green before this binding existed.
+
+        The figure is LOCATED by the rule's own reader rather than pasted in as a string,
+        so a control can never quietly mutate a sentence the page no longer carries: the
+        first in-scope occurrence of this role is found on the real page and bumped.
+        """
+        found = _locate_residue_claim(LIMITATIONS, role)
+        assert found, (
+            f"LIMITATIONS.md states no {role} figure this rule can read, so this control "
+            "mutates nothing; the binding above says so too, and that is the finding"
+        )
+        start, end, shown = found
+        moved = f"{float(shown) + 1:g}" if "." not in shown else f"{float(shown) + 0.5:g}"
+        with pytest.raises(AssertionError, match=r"rebuilding the CI graph"):
+            _check_the_ci_exclusion_residue(LIMITATIONS[:start] + moved + LIMITATIONS[end:])
+
+    def test_a_residue_figure_written_unreadably_fails(self) -> None:
+        """Round 6's rule: a figure written in a form the rule cannot read must fail as
+        unreadable, never pass because the parser shrugged. Here the number is deleted
+        from the claim and its noun left standing."""
+        found = _locate_residue_claim(LIMITATIONS, "entities removed")
+        assert found, "LIMITATIONS.md states no entity-removal figure to erase"
+        start, end, _shown = found
+        with pytest.raises(AssertionError, match=r"in no form this rule can read"):
+            _check_the_ci_exclusion_residue(LIMITATIONS[:start] + "some" + LIMITATIONS[end:])
+
+
+class TestTheCapIsBoundWhereATableRestatesIt:
+    """`MAX_FINDINGS` restated in a table cell — the reach `test_artifact_conformance`'s
+    prose rule structurally does not have."""
+
+    def test_every_cell_naming_the_cap_is_bound(self) -> None:
+        assert _check_the_cap_where_a_table_restates_it(RESULTS) >= 2
+
+    @pytest.mark.parametrize("index", [0, 1])
+    def test_a_moved_cap_in_a_table_fails(self, index: int) -> None:
+        """Each cell that restates the cap, mutated where the rule actually reads it.
+
+        The cell is LOCATED on the real page rather than pasted in as a literal, so this
+        control cannot quietly move a row the document no longer carries — and it does
+        not have to spell the asymmetry table's multiplication sign back at it.
+        """
+        cells = _cap_cells(RESULTS)
+        assert len(cells) > index, (
+            f"results/RESULTS.md restates MAX_FINDINGS in {len(cells)} table cell(s); "
+            "this control needs the cell it was written for, so re-point it or drop it"
+        )
+        cell = cells[index]
+        digits = re.search(r"\d+", cell)
+        assert digits, f"the cell {cell!r} carries no number to move"
+        moved = cell[: digits.start()] + str(int(digits.group(0)) + 1) + cell[digits.end() :]
+        with pytest.raises(AssertionError, match=r"restating MAX_FINDINGS carries"):
+            _check_the_cap_where_a_table_restates_it(RESULTS.replace(cell, moved, 1))
+
+    def test_a_cap_cell_with_no_number_fails(self) -> None:
+        """A restatement written in words is a restatement nothing can read."""
+        cell = _cap_cells(RESULTS)[0]
+        wordy = re.sub(r"\d+", "a few", cell)
+        assert wordy != cell, f"the cell {cell!r} carries no number to erase"
+        with pytest.raises(AssertionError, match=r"states no number this rule can read"):
+            _check_the_cap_where_a_table_restates_it(RESULTS.replace(cell, wordy, 1))
+
+
+class TestTheModelDriftFigureIsBacked:
+    """results/RESULTS.md's "1 of 79" — bound where it can be, attributed where it
+    cannot (round 6, report 1, finding 4)."""
+
+    def test_the_drift_figure_is_bound_and_attributed(self) -> None:
+        assert _check_the_model_drift_figure(RESULTS) >= 1
+
+    def test_a_moved_population_fails(self) -> None:
+        original = "1 of 79**"
+        assert original in RESULTS, f"results/RESULTS.md no longer contains {original!r}"
+        with pytest.raises(AssertionError, match=r"community reports, so that is the"):
+            _check_the_model_drift_figure(RESULTS.replace(original, "1 of 78**", 1))
+
+    def test_a_moved_report_count_fails(self) -> None:
+        original = "all 79 demo community reports"
+        assert original in RESULTS, f"results/RESULTS.md no longer contains {original!r}"
+        with pytest.raises(AssertionError, match=r"commits 79 community reports"):
+            _check_the_model_drift_figure(
+                RESULTS.replace(original, "all 78 demo community reports", 1)
+            )
+
+    def test_the_prescribed_attribution_satisfies_this_rule(self) -> None:
+        """A red that cannot be answered is worse than no red at all, so the sentence
+        the failure asks for is proven to satisfy the rule rather than promised to.
+
+        Both accepted roads are shown: the two commits a reader can `git show`, and a
+        committed record carrying the comparison.
+        """
+        original = (
+            "That is the whole of the drift, and it is why the model layers are "
+            "described as reproducing the protocol rather than the bytes."
+        )
+        assert original in RESULTS, (
+            f"results/RESULTS.md no longer contains {original!r}; re-point this control "
+            "at the sentence that closes the drift paragraph now"
+        )
+        for attribution in (
+            "The two generations are committed at `52238c8` and `c607ff4`, so "
+            "`git diff --name-only 52238c8 c607ff4 -- fixtures/summaries/demo` names the "
+            "one report that moved.",
+            "The comparison is carried in `results/summary-drift.json`.",
+        ):
+            assert _check_the_model_drift_figure(
+                RESULTS.replace(original, f"{original} {attribution}", 1)
+            )
+
+    def test_an_unattributed_figure_fails(self) -> None:
+        """The finding itself: a number no committed byte reproduces, published under a
+        page-wide promise that every number is read from the record beside it."""
+        stripped = re.sub(_COMMITISH, "that run", RESULTS)
+        stripped = re.sub(r"results/[\w.-]+\.json", "the record", stripped)
+        assert stripped != RESULTS, (
+            "this control removed no attribution from results/RESULTS.md, so its red "
+            "proves nothing; re-derive it from the page"
+        )
+        with pytest.raises(AssertionError, match=r"no committed byte can reproduce it"):
+            _check_the_model_drift_figure(stripped)
 
 
 class TestThePanelTableBindingsCanGoRed:

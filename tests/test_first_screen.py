@@ -853,13 +853,20 @@ def _bind_restated_values_are_readable(text: str) -> int:
 # from the records rather than asserting it means a genuinely independent second run
 # would relax the rule on its own.
 PANEL_RUN_VARYING = ("wall_s",)
+# Round 6, report 1, finding 2: a guard keyed to a SENTENCE is evaded by rewriting the
+# sentence. Both readers below therefore key on the number and the role it plays — a
+# per-run figure is one stated "in each / in every / in both … runs", whatever verb or
+# noun the writer chooses around it, and the combined figure is any other N-of-M pair in
+# the same block. `verdicts` used to be mandatory in the combined reader, which meant
+# dropping one word — "the combined **18 of 40** counts the same 20 twice" — moved the
+# figure past this file AND past test_artifact_conformance.py with 664 tests green.
 _YIELD_PER_RUN = re.compile(
     r"(?P<num>\d[\d,]*)(?:\s+of\s+(?P<den>\d[\d,]*))?(?:\s+verdicts?)?"
-    r"\s+in each\b[^.;]{0,60}?\bruns?\b",
+    r"\s+(?:in|on)\s+(?:each|every|both)\b[^.;]{0,60}?\bruns?\b",
     re.IGNORECASE,
 )
 _YIELD_TOTAL = re.compile(
-    r"(?P<num>\d[\d,]*)\s+of\s+(?P<den>\d[\d,]*)\s+verdicts\b", re.IGNORECASE
+    r"(?P<num>\d[\d,]*)\s+of\s+(?P<den>\d[\d,]*)(?:\s+verdicts?)?\b", re.IGNORECASE
 )
 # Either form says the same thing: the second run repeats the first, so the combined
 # figure is one population counted twice. The prose may say it in its own words; these
@@ -945,11 +952,24 @@ def _bind_grounding_yield(text: str) -> int:
             )
         bound += 1
 
+    # The combined figure is read only inside a block that also publishes the per-run
+    # one. Without the noun to anchor it, `N of M` is a shape the whole page uses (the
+    # evaluation table's "0 / 3", the exclusion's "1 of 79"), and a reader that swept
+    # the page would bind unrelated pairs to the grounding yield. The block is the
+    # scope the claim is actually made in — and it is the block a rewrite of this
+    # paragraph stays inside.
     per_run_spans = [m.span() for m in claims]
+    grounding_blocks = [
+        (start, end)
+        for start, end, block in _blocks(text)
+        if any(start <= _line_of(text, a) <= end for a, _b in per_run_spans)
+    ]
     for match in _YIELD_TOTAL.finditer(text):
         if any(a <= match.start() and match.end() <= b for a, b in per_run_spans):
             continue
         line = _line_of(text, match.start())
+        if not any(start <= line <= end for start, end in grounding_blocks):
+            continue
         shown = int(match.group("num").replace(",", ""))
         denominator = int(match.group("den").replace(",", ""))
         expected_num = sum(g for g, _ in per_run.values())
@@ -1050,17 +1070,23 @@ def _bind_the_promise_is_scoped(text: str) -> int:
 
 
 def _mutated(old: str, new: str) -> str:
-    """The page with one published string changed — the evaluator's own experiment.
+    r"""The page with one published string changed — the evaluator's own experiment.
 
     The mutation is asserted to have applied. A control that silently changed nothing
     proves only that the binding still passes on the file it already passed on, which
     is the shape of green this repository keeps finding under its own claims.
+
+    The needle is matched across a line break (`\s+` between its words): this page wraps
+    at about a hundred columns, so a control pinned to where the wrap happens to fall
+    stops mutating anything the first time the paragraph is re-flowed — and then its
+    green is the very thing this file exists to refuse.
     """
-    assert old in README_PATH.read_text(), (
+    pattern = re.compile(r"\s+".join(re.escape(word) for word in old.split()))
+    assert pattern.search(README_PATH.read_text()), (
         f"README.md no longer carries {old!r}, so this control mutates nothing; "
         "re-derive it from the page before trusting the green beside it"
     )
-    changed = README.replace(old, new, 1)
+    changed = pattern.sub(new, README, count=1)
     assert changed != README, f"the control mutation {old!r} -> {new!r} changed nothing"
     return changed
 
@@ -1188,6 +1214,30 @@ class TestTheGroundingYieldIsBound:
         with pytest.raises(AssertionError, match="summed over the"):
             _bind_grounding_yield(
                 _mutated("12 of 40 verdicts counts", "19 of 40 verdicts counts")
+            )
+
+    def test_a_reworded_combined_yield_cannot_walk_past_this_rule(self) -> None:
+        """Round 6's rule, as a control: the value moved AND the sentence rewritten.
+
+        Until this commit the combined reader required the literal noun `verdicts` after
+        the pair, so dropping one word carried a changed value past this binding and past
+        `test_artifact_conformance.py` alike, with 664 tests green. The noun is now
+        optional and the pair is read inside the block that publishes the per-run figure.
+        """
+        with pytest.raises(AssertionError, match="summed over the"):
+            _bind_grounding_yield(
+                _mutated("the combined\n12 of 40 verdicts counts", "the combined\n18 of 40 counts")
+            )
+
+    def test_a_reworded_per_run_yield_is_still_read(self) -> None:
+        """The other direction of the same rule: a rewrite this reader CAN follow must
+        keep binding, or the rule punishes honest prose instead of catching drift."""
+        with pytest.raises(AssertionError, match="every committed panel run grounds"):
+            _bind_grounding_yield(
+                _mutated(
+                    "**6 of 20 verdicts in each of the two committed\nruns**",
+                    "**9 of 20 verdicts on every one of the two committed\nruns**",
+                )
             )
 
     def test_the_prescribed_sentence_satisfies_this_rule(self) -> None:

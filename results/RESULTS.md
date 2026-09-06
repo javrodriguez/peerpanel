@@ -69,6 +69,8 @@ Every conclusion drawn from the baseline arms below is therefore drawn from one 
 **The summariser is nearly, but not perfectly, reproducible at temperature 0, and here is the number.**
 Regenerating all 79 demo community reports cold, same prompt, same model, same wire, changed the wording of exactly **1 of 79**: one cluster's summary prose came back differently phrased, with its title, its member list and every other report unchanged.
 That is the whole of the drift, and it is why the model layers are described as reproducing the protocol rather than the bytes.
+This number is the one figure on this page a reader cannot recompute from the bytes beside it, because only one of the two generations is committed and re-running the second is a fresh draw from the model rather than a replay — so it is attributed instead of asserted: the two generations are the ones committed at `52238c8` and at `c607ff4`, and `git diff --name-only 52238c8 c607ff4 -- fixtures/summaries/demo` returns exactly one file, `f79186b5d7a3d1784af1699c.json`, whose summary prose is the only field that moved.
+Reading `git show 52238c8:fixtures/summaries/demo/f79186b5d7a3d1784af1699c.json` against `git show c607ff4:…` settles it without trusting this sentence.
 
 **One field on two records is derived rather than measured, and is disclosed as such.**
 `build-stats-ci.json` and `build-stats-demo.json` predate the window-source field.
